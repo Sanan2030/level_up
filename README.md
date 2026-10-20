@@ -46,6 +46,8 @@ All questions are independently written educational practice, **not official exa
 
 Exam details live in `data/exams/`, with source links, verification status, and a verification date. Fields marked `TODO: VERIFY` or `needs-verification` must be checked against the linked official sources before being presented as current exam facts. A missing or unpublished pass threshold remains `null`; it is never guessed. Certification eligibility must be checked with the awarding organization.
 
+ECBA, CCBA, and CBAP formats, question counts, durations, and blueprint weights were verified against official IIBA pages/documents on 2026-10-20. The current English ECBA uses the nine-domain blueprint. Numerical passing thresholds were not confirmed and remain null. Scrum.org assessment pages returned a website challenge, so PSPO exam settings remain unverified. See [source provenance](data/exams/SOURCES.md).
+
 Full-length mock mode is enabled only when the format is verified, required configuration is present, and the bank has enough unique questions with the required domain coverage. A small practice bank is not represented as a full official-format mock. Written answers use a self-review rubric and are excluded from automatic scoring. Pausing is a learning convenience, not a claim about official exam rules. Readiness and practice results do not predict an official exam result.
 
 ## Project structure

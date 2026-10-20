@@ -204,6 +204,33 @@ test('rejects malformed progress imports without overwriting current progress', 
   expect(after).toBe(before);
 });
 
+test('shows verified IIBA facts and keeps undersized or unverified mocks unavailable', async ({
+  page,
+}) => {
+  await page.goto('/en/practice');
+  await page.getByRole('combobox', { name: 'Learning track', exact: true }).selectOption('ecba');
+  await page.getByText('Exam sources and configuration notes', { exact: true }).click();
+  await expect(
+    page.getByText('Verified against official sources · 2026-10-20', { exact: true }),
+  ).toBeVisible();
+  await expect(page.getByText('50', { exact: true })).toBeVisible();
+  await expect(page.getByText('75 minutes', { exact: true })).toBeVisible();
+  await page.getByRole('radio', { name: /^Timed mock/ }).check();
+  await expect(
+    page.getByText(
+      'The bank does not yet contain enough unique questions for a full mock. Short practice sessions are available.',
+    ),
+  ).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Start practicing' })).toBeDisabled();
+  await page.getByRole('combobox', { name: 'Learning track', exact: true }).selectOption('pspo1');
+  await expect(
+    page.getByText(
+      'The official format has not been verified from its source. TODO: VERIFY. Practice remains available.',
+    ),
+  ).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Start practicing' })).toBeDisabled();
+});
+
 test('exports progress and imports it only after confirmation', async ({ page }) => {
   await page.goto('/en/lessons/stakeholder-mapping');
   await page.getByRole('button', { name: 'Mark as completed' }).click();

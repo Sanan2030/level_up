@@ -1,56 +1,62 @@
 {
   "id": "cbap",
   "name": "Certified Business Analysis Professional (CBAP)",
-  "format": null,
-  "questionCount": null,
-  "durationMinutes": null,
+  "format": "selected-response",
+  "questionCount": 120,
+  "durationMinutes": 210,
   "passPercent": null,
   "domains": [
     {
       "id": "planning-monitoring",
       "title": {
-        "en": "Analysis planning and monitoring",
+        "en": "Business Analysis Planning and Monitoring",
         "az": "Təhlilin planlaşdırılması və izlənməsi"
-      }
+      },
+      "weight": 14
     },
     {
       "id": "elicitation-collaboration",
       "title": {
         "en": "Elicitation and collaboration",
         "az": "Tələblərin toplanması və əməkdaşlıq"
-      }
+      },
+      "weight": 12
     },
     {
       "id": "requirements-life-cycle",
       "title": {
         "en": "Requirements life-cycle management",
         "az": "Tələblərin həyat dövrünün idarəsi"
-      }
+      },
+      "weight": 15
     },
     {
       "id": "strategy-analysis",
       "title": {
         "en": "Strategy analysis",
         "az": "Strategiya təhlili"
-      }
+      },
+      "weight": 15
     },
     {
       "id": "requirements-design",
       "title": {
-        "en": "Requirements analysis and design",
+        "en": "Requirements Analysis and Design Definition",
         "az": "Tələblərin təhlili və dizayn"
-      }
+      },
+      "weight": 30
     },
     {
       "id": "solution-evaluation",
       "title": {
         "en": "Solution evaluation",
         "az": "Həllin qiymətləndirilməsi"
-      }
+      },
+      "weight": 14
     }
   ],
-  "verificationStatus": "needs-verification",
-  "verifiedAt": null,
+  "verificationStatus": "verified",
+  "verifiedAt": "2026-10-20",
   "sources": [
     {
       "title": "Certified Business Analysis Professional (CBAP) — official certification page",
@@ -62,7 +68,7 @@
     }
   ],
   "notes": {
-    "en": "TODO: VERIFY the current official exam format, question count, duration, pass policy, syllabus and domain coverage. Official-source requests were blocked by the cloud network policy during authoring. Numeric exam facts are deliberately unset. Domain groups here organize original learning practice; they are not a verified official exam blueprint. Practice scores do not establish eligibility or predict an official result. Timed practice is not an official-format mock exam.",
-    "az": "TODO: VERIFY — cari rəsmi imtahan formatını, sual sayını, müddətini, keçid siyasətini, proqramını və domen əhatəsini yoxlayın. Hazırlanma zamanı rəsmi mənbələrə sorğular bulud şəbəkə siyasəti tərəfindən bloklanıb. Rəqəmsal imtahan faktları qəsdən boş saxlanıb. Buradakı domenlər orijinal öyrənmə məşqini qruplaşdırır; təsdiqlənmiş rəsmi imtahan planı deyil. Məşq balları uyğunluğu təsdiq etmir və rəsmi nəticəni proqnozlaşdırmır. Vaxtlı məşq rəsmi formatlı sınaq imtahanı deyil."
+    "en": "Format, 120-question count, 210-minute duration and six BABOK knowledge-area weights verified against the official IIBA certification page on 2026-10-20. The consulted page does not give a numeric passing threshold: passPercent stays null (TODO: VERIFY passing policy). These are original practice questions. The 30-question seed bank cannot supply a full-length mock.",
+    "az": "Format, 120 sual, 210 dəqiqə və altı BABOK bilik sahəsinin çəkisi 2026-10-20 tarixində IIBA-nın rəsmi sertifikasiya səhifəsindən yoxlanılıb. Mənbədə rəqəmlə keçid həddi göstərilmir: passPercent null qalır (TODO: VERIFY keçid qaydası). Suallar orijinal məşq üçündür. 30 suallıq baza tam həcmli sınaq imtahanı üçün kifayət etmir."
   }
 }

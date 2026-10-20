@@ -4,11 +4,24 @@ All questions in `../questions/` are original educational practice. They are not
 
 ## Verification status — 2026-10-20
 
-Requests to the official IIBA and Scrum.org sites returned a policy-denied `CONNECT 403` from the cloud egress proxy. No official exam format, question count, duration, pass score, domain weights, or current syllabus has therefore been asserted as verified. These facts are intentionally `null`, `verifiedAt` is `null`, and every configuration is `needs-verification`.
+Initial requests were denied by the cloud proxy. A later connectivity recheck reached the official IIBA pages and PDFs, allowing the following facts to be verified. Scrum.org assessment pages still return HTTP 202 with an AWS WAF challenge and no usable assessment content.
+
+| Certification               | Verified format and duration                                         | Blueprint                                                     |
+| --------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| ECBA (current English exam) | 50 standard/situation-based multiple-choice questions, 75 minutes    | Nine domains, using official blueprint v1.1 and 2026 handbook |
+| CCBA                        | 130 scenario-based multiple-choice questions, 180 minutes            | Six BABOK knowledge areas with published weights              |
+| CBAP                        | 120 case-study/scenario-based multiple-choice questions, 210 minutes | Six BABOK knowledge areas with published weights              |
+| PSPO I, II, III             | Unverified; format/count/duration remain null                        | Editorial practice groups only; no asserted official weights  |
+
+The IIBA configurations record `verifiedAt: 2026-10-20`, source URLs, and the published domain weights. A numerical passing threshold was not confirmed in the consulted material and remains null with `TODO: VERIFY`. No passing score is invented. The 30-question banks remain too small for full-length IIBA mocks.
+
+The current English ECBA blueprint uses nine domains, including six core concepts, rather than the older knowledge-area grouping. Original ECBA practice questions have been editorially tagged against those domains; these tags are not an official question mapping. Consult IIBA about other language versions.
 
 Each JSON file includes the canonical official certification page to consult. Scrum-related content should be checked against the [official Scrum Guide](https://scrumguides.org/scrum-guide.html), including the 2020 edition specified by this project. BA content should be checked against official IIBA certification materials and a lawfully accessed BABOK Guide v3; do not copy the guide into this repository.
 
-The `domains` lists currently represent editorial groups for practice navigation, not a verified official blueprint. They have no invented weighting. `format` remains `null`; written PSPO III exercises are an educational practice choice, not a verified claim about the current provider assessment.
+The official Scrum Guide HTML was accessible and identifies the November 2020 edition. This supports the Scrum framework references; it does not verify PSPO assessment statistics or a passing score.
+
+The PSPO `domains` lists represent editorial groups for practice navigation, not a verified official blueprint. They have no invented weighting. PSPO `format` remains `null`; written PSPO III exercises are an educational practice choice, not a verified claim about the current provider assessment.
 
 ## Safe update procedure
 

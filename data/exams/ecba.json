@@ -1,63 +1,86 @@
 {
   "id": "ecba",
   "name": "Entry Certificate in Business Analysis (ECBA)",
-  "format": null,
-  "questionCount": null,
-  "durationMinutes": null,
+  "format": "selected-response",
+  "questionCount": 50,
+  "durationMinutes": 75,
   "passPercent": null,
   "domains": [
     {
-      "id": "foundations",
+      "id": "understanding-business-analysis",
       "title": {
-        "en": "Business analysis foundations",
-        "az": "Biznes təhlilinin əsasları"
-      }
+        "en": "Understanding Business Analysis",
+        "az": "Biznes analizini anlama"
+      },
+      "weight": 20
     },
     {
-      "id": "planning-monitoring",
+      "id": "mindset",
       "title": {
-        "en": "Analysis planning and monitoring",
-        "az": "Təhlilin planlaşdırılması və izlənməsi"
-      }
+        "en": "Mindset for Effective Business Analysis",
+        "az": "Səmərəli biznes analizi üçün düşüncə tərzi"
+      },
+      "weight": 14
     },
     {
-      "id": "elicitation-collaboration",
+      "id": "implementing-business-analysis",
       "title": {
-        "en": "Elicitation and collaboration",
-        "az": "Tələblərin toplanması və əməkdaşlıq"
-      }
+        "en": "Implementing Business Analysis",
+        "az": "Biznes analizinin tətbiqi"
+      },
+      "weight": 6
     },
     {
-      "id": "requirements-life-cycle",
+      "id": "change",
       "title": {
-        "en": "Requirements life-cycle management",
-        "az": "Tələblərin həyat dövrünün idarəsi"
-      }
+        "en": "Change",
+        "az": "Dəyişiklik"
+      },
+      "weight": 10
     },
     {
-      "id": "strategy-analysis",
+      "id": "need",
       "title": {
-        "en": "Strategy analysis",
-        "az": "Strategiya təhlili"
-      }
+        "en": "Need",
+        "az": "Ehtiyac"
+      },
+      "weight": 10
     },
     {
-      "id": "requirements-design",
+      "id": "solution",
       "title": {
-        "en": "Requirements analysis and design",
-        "az": "Tələblərin təhlili və dizayn"
-      }
+        "en": "Solution",
+        "az": "Həll"
+      },
+      "weight": 10
     },
     {
-      "id": "solution-evaluation",
+      "id": "stakeholder",
       "title": {
-        "en": "Solution evaluation",
-        "az": "Həllin qiymətləndirilməsi"
-      }
+        "en": "Stakeholder",
+        "az": "Maraqlı tərəf"
+      },
+      "weight": 10
+    },
+    {
+      "id": "value",
+      "title": {
+        "en": "Value",
+        "az": "Dəyər"
+      },
+      "weight": 10
+    },
+    {
+      "id": "context",
+      "title": {
+        "en": "Context",
+        "az": "Kontekst"
+      },
+      "weight": 10
     }
   ],
-  "verificationStatus": "needs-verification",
-  "verifiedAt": null,
+  "verificationStatus": "verified",
+  "verifiedAt": "2026-10-20",
   "sources": [
     {
       "title": "Entry Certificate in Business Analysis (ECBA) — official certification page",
@@ -66,10 +89,18 @@
     {
       "title": "BABOK Guide — official IIBA resource",
       "url": "https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/"
+    },
+    {
+      "title": "ECBA Exam Blueprint v1.1 — official IIBA PDF",
+      "url": "https://www.iiba.org/globalassets/certification/ecba/files/ecba-exam-blueprint.pdf"
+    },
+    {
+      "title": "ECBA Handbook — official IIBA PDF (2026)",
+      "url": "https://www.iiba.org/globalassets/certification/ecba/files/ecba-handbook.pdf"
     }
   ],
   "notes": {
-    "en": "TODO: VERIFY the current official exam format, question count, duration, pass policy, syllabus and domain coverage. Official-source requests were blocked by the cloud network policy during authoring. Numeric exam facts are deliberately unset. Domain groups here organize original learning practice; they are not a verified official exam blueprint. Practice scores do not establish eligibility or predict an official result. Timed practice is not an official-format mock exam.",
-    "az": "TODO: VERIFY — cari rəsmi imtahan formatını, sual sayını, müddətini, keçid siyasətini, proqramını və domen əhatəsini yoxlayın. Hazırlanma zamanı rəsmi mənbələrə sorğular bulud şəbəkə siyasəti tərəfindən bloklanıb. Rəqəmsal imtahan faktları qəsdən boş saxlanıb. Buradakı domenlər orijinal öyrənmə məşqini qruplaşdırır; təsdiqlənmiş rəsmi imtahan planı deyil. Məşq balları uyğunluğu təsdiq etmir və rəsmi nəticəni proqnozlaşdırmır. Vaxtlı məşq rəsmi formatlı sınaq imtahanı deyil."
+    "en": "The current English ECBA blueprint v1.1 and 2026 handbook confirm 50 standard/situation-based multiple-choice questions, 75 minutes, and nine weighted domains. Verified 2026-10-20. This differs from the earlier knowledge-area grouping. Passing percentage was not confirmed in the consulted documents: passPercent is null (TODO: VERIFY passing policy). Domain tagging is our editorial mapping of original practice questions. The 30-question seed bank is too small for a full-length mock. Other language versions may differ; consult IIBA.",
+    "az": "Cari ingilisdilli ECBA blueprint v1.1 və 2026 təlimatı 50 standart/situasiya əsaslı çoxvariantlı sualı, 75 dəqiqəni və doqquz çəkili sahəni təsdiqləyir. Yoxlama tarixi: 2026-10-20. Bu quruluş əvvəlki bilik sahələri qruplaşmasından fərqlənir. Mənbələrdən keçid faizi təsdiqlənməyib: passPercent null qalır (TODO: VERIFY keçid qaydası). Orijinal məşq suallarının sahələrə bölgüsü redaksiya seçimimizdir. 30 suallıq baza tam həcmli sınaq üçün azdır. Digər dil versiyaları fərqlənə bilər; IIBA ilə yoxla."
   }
 }

@@ -3,7 +3,7 @@
     "id": "ecba-001",
     "trackId": "ecba",
     "type": "single",
-    "domain": "foundations",
+    "domain": "understanding-business-analysis",
     "difficulty": 1,
     "text": {
       "en": "A bank asks for a chatbot because support costs are rising. What should a BA clarify first?",
@@ -56,7 +56,7 @@
     "id": "ecba-002",
     "trackId": "ecba",
     "type": "single",
-    "domain": "planning-monitoring",
+    "domain": "stakeholder",
     "difficulty": 1,
     "text": {
       "en": "A payment change affects branch staff, compliance, and merchants. What helps plan participation?",
@@ -109,7 +109,7 @@
     "id": "ecba-003",
     "trackId": "ecba",
     "type": "single",
-    "domain": "elicitation-collaboration",
+    "domain": "need",
     "difficulty": 1,
     "text": {
       "en": "A warehouse procedure says all orders follow one path, but staff mention frequent workarounds. What is the strongest next elicitation step?",
@@ -162,7 +162,7 @@
     "id": "ecba-004",
     "trackId": "ecba",
     "type": "single",
-    "domain": "elicitation-collaboration",
+    "domain": "stakeholder",
     "difficulty": 1,
     "text": {
       "en": "Sales and risk teams interpret “verified customer” differently. How should the BA surface and reconcile the definitions?",
@@ -215,7 +215,7 @@
     "id": "ecba-005",
     "trackId": "ecba",
     "type": "single",
-    "domain": "elicitation-collaboration",
+    "domain": "need",
     "difficulty": 1,
     "text": {
       "en": "An interviewer wants to understand why shoppers abandon checkout. Which approach avoids steering the participant toward a preferred feature?",
@@ -268,7 +268,7 @@
     "id": "ecba-006",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "implementing-business-analysis",
     "difficulty": 1,
     "text": {
       "en": "A transfer must finish within two seconds for a defined load. How should this be classified and specified?",
@@ -321,7 +321,7 @@
     "id": "ecba-007",
     "trackId": "ecba",
     "type": "single",
-    "domain": "foundations",
+    "domain": "value",
     "difficulty": 1,
     "text": {
       "en": "The sponsor wants to reduce manual refund handling by half. What expresses the business requirement?",
@@ -374,7 +374,7 @@
     "id": "ecba-008",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "change",
     "difficulty": 1,
     "text": {
       "en": "Old account records must be migrated and employees trained before launch. What kind of needs should the BA record?",
@@ -427,7 +427,7 @@
     "id": "ecba-009",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "solution",
     "difficulty": 1,
     "text": {
       "en": "A story says customers can reset a password. What makes successful behavior testable?",
@@ -480,7 +480,7 @@
     "id": "ecba-010",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-life-cycle",
+    "domain": "change",
     "difficulty": 1,
     "text": {
       "en": "A regulation changes after tests have been designed. What helps find all affected requirements and tests?",
@@ -533,7 +533,7 @@
     "id": "ecba-011",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-life-cycle",
+    "domain": "change",
     "difficulty": 1,
     "text": {
       "en": "A stakeholder requests an extra approval step during development. What should precede the change decision?",
@@ -586,7 +586,7 @@
     "id": "ecba-012",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "context",
     "difficulty": 1,
     "text": {
       "en": "Orders wait between sales and fulfillment with no clear owner. Which model is most useful to start investigating the handoff?",
@@ -639,7 +639,7 @@
     "id": "ecba-013",
     "trackId": "ecba",
     "type": "single",
-    "domain": "strategy-analysis",
+    "domain": "need",
     "difficulty": 1,
     "text": {
       "en": "Support proposes more reminder emails because invoices are late. What should the BA do before accepting that remedy?",
@@ -692,7 +692,7 @@
     "id": "ecba-014",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "solution",
     "difficulty": 1,
     "text": {
       "en": "Users disagree about a new loan application screen. How can the team check understanding cheaply?",
@@ -745,7 +745,7 @@
     "id": "ecba-015",
     "trackId": "ecba",
     "type": "single",
-    "domain": "solution-evaluation",
+    "domain": "solution",
     "difficulty": 1,
     "text": {
       "en": "A system passes technical tests but branch workers cannot complete a real refund. What would have exposed the problem?",
@@ -798,7 +798,7 @@
     "id": "ecba-016",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "context",
     "difficulty": 1,
     "text": {
       "en": "One customer may own several accounts and each account has one owner. Which data-model rule captures this?",
@@ -851,7 +851,7 @@
     "id": "ecba-017",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "context",
     "difficulty": 1,
     "text": {
       "en": "An analyst needs the total purchase amount for each customer from many transaction rows. What is the appropriate query approach?",
@@ -904,7 +904,7 @@
     "id": "ecba-018",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "context",
     "difficulty": 1,
     "text": {
       "en": "A courier API returns success in a demo, but the delivery team cannot handle rejected requests. What needs clarification?",
@@ -957,7 +957,7 @@
     "id": "ecba-019",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-life-cycle",
+    "domain": "value",
     "difficulty": 1,
     "text": {
       "en": "A release has limited capacity and many requested features. How can MoSCoW help?",
@@ -1010,7 +1010,7 @@
     "id": "ecba-020",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-life-cycle",
+    "domain": "value",
     "difficulty": 1,
     "text": {
       "en": "Two improvements have different audiences, expected effects, uncertainty, and effort. What should a RICE comparison make explicit?",
@@ -1063,7 +1063,7 @@
     "id": "ecba-021",
     "trackId": "ecba",
     "type": "single",
-    "domain": "strategy-analysis",
+    "domain": "change",
     "difficulty": 1,
     "text": {
       "en": "A retailer wants same-day delivery but currently batches orders overnight. What should a gap analysis compare?",
@@ -1116,7 +1116,7 @@
     "id": "ecba-022",
     "trackId": "ecba",
     "type": "single",
-    "domain": "planning-monitoring",
+    "domain": "solution",
     "difficulty": 1,
     "text": {
       "en": "Different teams assume loyalty rewards are included in a checkout project. What should the BA make explicit?",
@@ -1169,7 +1169,7 @@
     "id": "ecba-023",
     "trackId": "ecba",
     "type": "single",
-    "domain": "elicitation-collaboration",
+    "domain": "need",
     "difficulty": 1,
     "text": {
       "en": "After an interview, the BA is unsure whether “customer” means the payer or recipient. What is the best next action?",
@@ -1222,7 +1222,7 @@
     "id": "ecba-024",
     "trackId": "ecba",
     "type": "single",
-    "domain": "solution-evaluation",
+    "domain": "value",
     "difficulty": 1,
     "text": {
       "en": "A new queue system is live. How should the BA determine whether it improved the branch experience?",
@@ -1275,7 +1275,7 @@
     "id": "ecba-025",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "context",
     "difficulty": 1,
     "text": {
       "en": "An insurance claim cannot be paid before approval and may be reopened after rejection. What model clarifies these rules?",
@@ -1328,7 +1328,7 @@
     "id": "ecba-026",
     "trackId": "ecba",
     "type": "single",
-    "domain": "requirements-design",
+    "domain": "solution",
     "difficulty": 1,
     "text": {
       "en": "A booking can succeed, fail for no availability, or fail for payment. What should a useful use case capture?",
@@ -1381,7 +1381,7 @@
     "id": "ecba-027",
     "trackId": "ecba",
     "type": "single",
-    "domain": "foundations",
+    "domain": "mindset",
     "difficulty": 1,
     "text": {
       "en": "A research summary includes names and unsupported claims that make the proposal look stronger. What is the ethical response?",
@@ -1434,7 +1434,7 @@
     "id": "ecba-028",
     "trackId": "ecba",
     "type": "single",
-    "domain": "planning-monitoring",
+    "domain": "implementing-business-analysis",
     "difficulty": 1,
     "text": {
       "en": "A team starts many requests but completes very few. Which approach can expose the flow constraint?",
@@ -1487,7 +1487,7 @@
     "id": "ecba-029",
     "trackId": "ecba",
     "type": "single",
-    "domain": "foundations",
+    "domain": "understanding-business-analysis",
     "difficulty": 1,
     "text": {
       "en": "A brief mixes revenue targets, user needs, system behavior, and availability. How should the BA organize it?",
@@ -1540,7 +1540,7 @@
     "id": "ecba-030",
     "trackId": "ecba",
     "type": "multiple",
-    "domain": "elicitation-collaboration",
+    "domain": "stakeholder",
     "difficulty": 2,
     "text": {
       "en": "A workshop produced an agreed term, but a remote stakeholder could not attend. Which two actions improve understanding before baselining? Select two.",
