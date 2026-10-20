@@ -1,0 +1,1592 @@
+[
+  {
+    "id": "ecba-001",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "foundations",
+    "difficulty": 1,
+    "text": {
+      "en": "A bank asks for a chatbot because support costs are rising. What should a BA clarify first?",
+      "az": "Bank dəstək xərcləri artdığı üçün çatbot istəyir. BA əvvəlcə nəyi dəqiqləşdirməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Clarify the business problem and desired outcome.",
+          "az": "Biznes problemini və gözlənilən nəticəni dəqiqləşdirmək."
+        },
+        "explanation": {
+          "en": "Understanding the need prevents selecting a solution before the problem is understood.",
+          "az": "Ehtiyacın anlaşılması problem aydın olmadan həll seçilməsinin qarşısını alır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Implement the requested interface before investigating the need.",
+          "az": "Ehtiyacı araşdırmadan istənilən interfeysi hazırlamaq."
+        },
+        "explanation": {
+          "en": "This commits to a solution before evidence establishes which problem should be solved.",
+          "az": "Bu, hansı problemin həll edilməli olduğu sübut edilmədən həllə öhdəlik yaradır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Copy a competitor’s feature without checking the customer problem.",
+          "az": "Müştəri problemini yoxlamadan rəqibin funksiyasını təkrarlamaq."
+        },
+        "explanation": {
+          "en": "Competitor behavior does not establish whether the same solution addresses this product’s users or strategy.",
+          "az": "Rəqibin davranışı eyni həllin bu məhsulun istifadəçilərinə və ya strategiyasına uyğun olduğunu sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Understanding the need prevents selecting a solution before the problem is understood.",
+      "az": "Ehtiyacın anlaşılması problem aydın olmadan həll seçilməsinin qarşısını alır."
+    },
+    "lessonId": "ba-role",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-002",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "planning-monitoring",
+    "difficulty": 1,
+    "text": {
+      "en": "A payment change affects branch staff, compliance, and merchants. What helps plan participation?",
+      "az": "Ödəniş dəyişikliyi filial əməkdaşlarına, uyğunluq bölməsinə və satıcılara təsir edir. İştirakı planlamağa nə kömək edər?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Map affected stakeholders, their influence, and their needs.",
+          "az": "Təsirlənən maraqlı tərəfləri, təsirlərini və ehtiyaclarını xəritələmək."
+        },
+        "explanation": {
+          "en": "A stakeholder map reveals whose input and participation are needed.",
+          "az": "Maraqlı tərəflərin xəritəsi kimin rəyinə və iştirakına ehtiyac olduğunu göstərir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Use only the sponsor’s opinion and exclude affected users.",
+          "az": "Yalnız sponsorun rəyindən istifadə edib təsirlənən istifadəçiləri kənarda saxlamaq."
+        },
+        "explanation": {
+          "en": "One opinion cannot establish all affected needs, workflows, or impacts.",
+          "az": "Bir rəy bütün təsirlənən ehtiyacları, iş axınlarını və təsirləri müəyyən edə bilməz."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Give the loudest stakeholder permanent priority.",
+          "az": "Ən çox israr edən tərəfə daimi üstünlük vermək."
+        },
+        "explanation": {
+          "en": "Influence alone is not evidence of customer value, urgency, or alignment with the product goal.",
+          "az": "Təsir gücü təkbaşına müştəri dəyəri, təcililik və ya məhsul məqsədinə uyğunluq sübutu deyil."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A stakeholder map reveals whose input and participation are needed.",
+      "az": "Maraqlı tərəflərin xəritəsi kimin rəyinə və iştirakına ehtiyac olduğunu göstərir."
+    },
+    "lessonId": "stakeholder-mapping",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-003",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "elicitation-collaboration",
+    "difficulty": 1,
+    "text": {
+      "en": "A warehouse procedure says all orders follow one path, but staff mention frequent workarounds. What is the strongest next elicitation step?",
+      "az": "Anbar proseduru bütün sifarişlər üçün bir yol göstərir, amma əməkdaşlar tez-tez alternativ yoldan danışırlar. Ən uyğun növbəti tələb toplama addımı hansıdır?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Observe the work and ask users to explain exceptions.",
+          "az": "İş prosesini müşahidə edib istifadəçilərdən istisnaları izah etmələrini istəmək."
+        },
+        "explanation": {
+          "en": "Observation reveals actual behavior and workarounds that may be absent from written procedures.",
+          "az": "Müşahidə yazılı prosedurlarda görünməyən real davranışı və alternativ yolları üzə çıxarır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Describe only the successful path and ignore failures.",
+          "az": "Yalnız uğurlu yolu təsvir edib xətaları nəzərə almamaq."
+        },
+        "explanation": {
+          "en": "Important business rules and recovery needs often appear in alternative and failure paths.",
+          "az": "Vacib biznes qaydaları və bərpa ehtiyacları çox vaxt alternativ və xəta yollarında görünür."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Measure success only by the number of documents produced.",
+          "az": "Uğuru yalnız hazırlanan sənədlərin sayı ilə ölçmək."
+        },
+        "explanation": {
+          "en": "Document volume does not establish understanding, business outcomes, or solution fitness.",
+          "az": "Sənəd həcmi anlayışı, biznes nəticəsini və ya həllin uyğunluğunu sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Observation reveals actual behavior and workarounds that may be absent from written procedures.",
+      "az": "Müşahidə yazılı prosedurlarda görünməyən real davranışı və alternativ yolları üzə çıxarır."
+    },
+    "lessonId": "elicitation",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-004",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "elicitation-collaboration",
+    "difficulty": 1,
+    "text": {
+      "en": "Sales and risk teams interpret “verified customer” differently. How should the BA surface and reconcile the definitions?",
+      "az": "Satış və risk komandaları “yoxlanılmış müştəri” anlayışını fərqli başa düşürlər. BA tərifləri necə üzə çıxarıb uyğunlaşdırmalıdır?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Facilitate a workshop with the affected groups.",
+          "az": "Təsirlənən qruplarla birgə iş sessiyası keçirmək."
+        },
+        "explanation": {
+          "en": "A facilitated discussion exposes conflicting assumptions and helps participants agree on an outcome.",
+          "az": "İdarə olunan müzakirə ziddiyyətli fərziyyələri göstərir və ortaq nəticə əldə etməyə kömək edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Use only the sponsor’s opinion and exclude affected users.",
+          "az": "Yalnız sponsorun rəyindən istifadə edib təsirlənən istifadəçiləri kənarda saxlamaq."
+        },
+        "explanation": {
+          "en": "One opinion cannot establish all affected needs, workflows, or impacts.",
+          "az": "Bir rəy bütün təsirlənən ehtiyacları, iş axınlarını və təsirləri müəyyən edə bilməz."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Freeze the original plan regardless of new evidence.",
+          "az": "Yeni sübutdan asılı olmayaraq ilkin planı dəyişməz saxlamaq."
+        },
+        "explanation": {
+          "en": "Ignoring new evidence prevents adapting to a better understanding of the need or situation.",
+          "az": "Yeni sübutun nəzərə alınmaması ehtiyac və ya vəziyyətin daha yaxşı anlaşılmasına uyğunlaşmağa mane olur."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A facilitated discussion exposes conflicting assumptions and helps participants agree on an outcome.",
+      "az": "İdarə olunan müzakirə ziddiyyətli fərziyyələri göstərir və ortaq nəticə əldə etməyə kömək edir."
+    },
+    "lessonId": "facilitation-conflict",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-005",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "elicitation-collaboration",
+    "difficulty": 1,
+    "text": {
+      "en": "An interviewer wants to understand why shoppers abandon checkout. Which approach avoids steering the participant toward a preferred feature?",
+      "az": "Müsahibəçi alıcıların ödənişi niyə yarımçıq saxladığını anlamaq istəyir. Hansı yanaşma iştirakçını arzu olunan funksiyaya yönləndirmir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Ask an open question about the last real occurrence.",
+          "az": "Son real hadisə haqqında açıq sual vermək."
+        },
+        "explanation": {
+          "en": "Concrete past behavior provides more useful evidence than a leading question about a proposed solution.",
+          "az": "Keçmiş real davranış təklif olunan həll barədə yönləndirici sualdan daha faydalı sübut verir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Implement the requested interface before investigating the need.",
+          "az": "Ehtiyacı araşdırmadan istənilən interfeysi hazırlamaq."
+        },
+        "explanation": {
+          "en": "This commits to a solution before evidence establishes which problem should be solved.",
+          "az": "Bu, hansı problemin həll edilməli olduğu sübut edilmədən həllə öhdəlik yaradır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat stated purchase intention as guaranteed future payment.",
+          "az": "Bildirilən alış niyyətini gələcək ödənişə zəmanət saymaq."
+        },
+        "explanation": {
+          "en": "Hypothetical intention is weaker evidence than observed behavior in a realistic choice.",
+          "az": "Fərziyyəvi niyyət real seçimdə müşahidə olunan davranışdan daha zəif sübutdur."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Concrete past behavior provides more useful evidence than a leading question about a proposed solution.",
+      "az": "Keçmiş real davranış təklif olunan həll barədə yönləndirici sualdan daha faydalı sübut verir."
+    },
+    "lessonId": "elicitation",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-006",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "A transfer must finish within two seconds for a defined load. How should this be classified and specified?",
+      "az": "Köçürmə müəyyən yük altında iki saniyə ərzində tamamlanmalıdır. Bu necə təsnif və təsvir edilməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Record a measurable quality requirement.",
+          "az": "Ölçülə bilən keyfiyyət tələbini qeyd etmək."
+        },
+        "explanation": {
+          "en": "Response time, availability, accessibility, and capacity describe how well the service must operate.",
+          "az": "Cavab vaxtı, əlçatanlıq və tutum xidmətin hansı keyfiyyətlə işləməli olduğunu təsvir edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Write “the system must be fast and user-friendly.”",
+          "az": "“Sistem sürətli və istifadəsi rahat olmalıdır” yazmaq."
+        },
+        "explanation": {
+          "en": "Undefined adjectives provide no agreed threshold or observable acceptance evidence.",
+          "az": "Müəyyən edilməmiş sifətlər razılaşdırılmış hədd və müşahidə olunan qəbul sübutu vermir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Measure success only by the number of documents produced.",
+          "az": "Uğuru yalnız hazırlanan sənədlərin sayı ilə ölçmək."
+        },
+        "explanation": {
+          "en": "Document volume does not establish understanding, business outcomes, or solution fitness.",
+          "az": "Sənəd həcmi anlayışı, biznes nəticəsini və ya həllin uyğunluğunu sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Response time, availability, accessibility, and capacity describe how well the service must operate.",
+      "az": "Cavab vaxtı, əlçatanlıq və tutum xidmətin hansı keyfiyyətlə işləməli olduğunu təsvir edir."
+    },
+    "lessonId": "requirement-types",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-007",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "foundations",
+    "difficulty": 1,
+    "text": {
+      "en": "The sponsor wants to reduce manual refund handling by half. What expresses the business requirement?",
+      "az": "Sponsor geri ödənişlərin əl ilə emalını yarıya endirmək istəyir. Biznes tələbini nə ifadə edir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "State the organizational outcome and how it will be measured.",
+          "az": "Təşkilati nəticəni və onun necə ölçüləcəyini göstərmək."
+        },
+        "explanation": {
+          "en": "Business requirements express the result the organization needs, rather than a particular interface behavior.",
+          "az": "Biznes tələbləri konkret interfeys davranışından çox təşkilatın ehtiyac duyduğu nəticəni ifadə edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Implement the requested interface before investigating the need.",
+          "az": "Ehtiyacı araşdırmadan istənilən interfeysi hazırlamaq."
+        },
+        "explanation": {
+          "en": "This commits to a solution before evidence establishes which problem should be solved.",
+          "az": "Bu, hansı problemin həll edilməli olduğu sübut edilmədən həllə öhdəlik yaradır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Write “the system must be fast and user-friendly.”",
+          "az": "“Sistem sürətli və istifadəsi rahat olmalıdır” yazmaq."
+        },
+        "explanation": {
+          "en": "Undefined adjectives provide no agreed threshold or observable acceptance evidence.",
+          "az": "Müəyyən edilməmiş sifətlər razılaşdırılmış hədd və müşahidə olunan qəbul sübutu vermir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Business requirements express the result the organization needs, rather than a particular interface behavior.",
+      "az": "Biznes tələbləri konkret interfeys davranışından çox təşkilatın ehtiyac duyduğu nəticəni ifadə edir."
+    },
+    "lessonId": "requirement-types",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-008",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "Old account records must be migrated and employees trained before launch. What kind of needs should the BA record?",
+      "az": "Buraxılışdan əvvəl köhnə hesab məlumatları köçürülməli və əməkdaşlar öyrədilməlidir. BA hansı ehtiyacları qeyd etməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Document the temporary migration and training requirements.",
+          "az": "Müvəqqəti miqrasiya və təlim tələblərini sənədləşdirmək."
+        },
+        "explanation": {
+          "en": "Transition requirements support moving from the current situation to the future situation and can cease afterward.",
+          "az": "Keçid tələbləri cari vəziyyətdən gələcək vəziyyətə keçidi dəstəkləyir və sonra qüvvədən düşə bilər."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Describe only the successful path and ignore failures.",
+          "az": "Yalnız uğurlu yolu təsvir edib xətaları nəzərə almamaq."
+        },
+        "explanation": {
+          "en": "Important business rules and recovery needs often appear in alternative and failure paths.",
+          "az": "Vacib biznes qaydaları və bərpa ehtiyacları çox vaxt alternativ və xəta yollarında görünür."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Transition requirements support moving from the current situation to the future situation and can cease afterward.",
+      "az": "Keçid tələbləri cari vəziyyətdən gələcək vəziyyətə keçidi dəstəkləyir və sonra qüvvədən düşə bilər."
+    },
+    "lessonId": "requirement-types",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-009",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "A story says customers can reset a password. What makes successful behavior testable?",
+      "az": "Hekayədə müştərinin şifrəni yeniləyə bilməsi yazılıb. Uğurlu davranışı yoxlanılan edən nədir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Describe observable examples of acceptable behavior.",
+          "az": "Qəbul edilən davranışı müşahidə olunan nümunələrlə təsvir etmək."
+        },
+        "explanation": {
+          "en": "Acceptance criteria make the intended behavior testable without prescribing every implementation detail.",
+          "az": "Qəbul meyarları bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Write “the system must be fast and user-friendly.”",
+          "az": "“Sistem sürətli və istifadəsi rahat olmalıdır” yazmaq."
+        },
+        "explanation": {
+          "en": "Undefined adjectives provide no agreed threshold or observable acceptance evidence.",
+          "az": "Müəyyən edilməmiş sifətlər razılaşdırılmış hədd və müşahidə olunan qəbul sübutu vermir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Acceptance criteria make the intended behavior testable without prescribing every implementation detail.",
+      "az": "Qəbul meyarları bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
+    },
+    "lessonId": "stories-gherkin",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-010",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-life-cycle",
+    "difficulty": 1,
+    "text": {
+      "en": "A regulation changes after tests have been designed. What helps find all affected requirements and tests?",
+      "az": "Testlər hazırlandıqdan sonra qayda dəyişir. Təsirlənən bütün tələbləri və testləri tapmağa nə kömək edir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Link the need, requirement, implementation, and test.",
+          "az": "Ehtiyacı, tələbi, tətbiqi və testi əlaqələndirmək."
+        },
+        "explanation": {
+          "en": "Traceability supports coverage checks and analysis of the consequences of a change.",
+          "az": "İzlənəbilənlik əhatəni və dəyişikliyin nəticələrini təhlil etməyə imkan verir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Measure success only by the number of documents produced.",
+          "az": "Uğuru yalnız hazırlanan sənədlərin sayı ilə ölçmək."
+        },
+        "explanation": {
+          "en": "Document volume does not establish understanding, business outcomes, or solution fitness.",
+          "az": "Sənəd həcmi anlayışı, biznes nəticəsini və ya həllin uyğunluğunu sübut etmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Reject every change because the requirements were previously approved.",
+          "az": "Tələblər əvvəldən təsdiqləndiyi üçün bütün dəyişiklikləri rədd etmək."
+        },
+        "explanation": {
+          "en": "Previous approval does not remove the need to evaluate a legitimate change and its consequences.",
+          "az": "Əvvəlki təsdiq əsaslı dəyişiklik və nəticələrini qiymətləndirmək ehtiyacını aradan qaldırmır."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Traceability supports coverage checks and analysis of the consequences of a change.",
+      "az": "İzlənəbilənlik əhatəni və dəyişikliyin nəticələrini təhlil etməyə imkan verir."
+    },
+    "lessonId": "traceability",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-011",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-life-cycle",
+    "difficulty": 1,
+    "text": {
+      "en": "A stakeholder requests an extra approval step during development. What should precede the change decision?",
+      "az": "İnkişaf zamanı tərəf əlavə təsdiq addımı istəyir. Dəyişiklik qərarından əvvəl nə edilməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Assess effects on value, scope, dependencies, cost, and risk.",
+          "az": "Dəyərə, əhatəyə, asılılıqlara, xərcə və riskə təsiri qiymətləndirmək."
+        },
+        "explanation": {
+          "en": "Impact analysis makes a change decision informed rather than automatic.",
+          "az": "Təsir təhlili dəyişiklik qərarını avtomatik deyil, məlumatlı edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Reject every change because the requirements were previously approved.",
+          "az": "Tələblər əvvəldən təsdiqləndiyi üçün bütün dəyişiklikləri rədd etmək."
+        },
+        "explanation": {
+          "en": "Previous approval does not remove the need to evaluate a legitimate change and its consequences.",
+          "az": "Əvvəlki təsdiq əsaslı dəyişiklik və nəticələrini qiymətləndirmək ehtiyacını aradan qaldırmır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Give the loudest stakeholder permanent priority.",
+          "az": "Ən çox israr edən tərəfə daimi üstünlük vermək."
+        },
+        "explanation": {
+          "en": "Influence alone is not evidence of customer value, urgency, or alignment with the product goal.",
+          "az": "Təsir gücü təkbaşına müştəri dəyəri, təcililik və ya məhsul məqsədinə uyğunluq sübutu deyil."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Impact analysis makes a change decision informed rather than automatic.",
+      "az": "Təsir təhlili dəyişiklik qərarını avtomatik deyil, məlumatlı edir."
+    },
+    "lessonId": "scope-change",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-012",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "Orders wait between sales and fulfillment with no clear owner. Which model is most useful to start investigating the handoff?",
+      "az": "Sifarişlər satışla icra arasında aydın məsul şəxs olmadan gözləyir. Ötürməni araşdırmaq üçün hansı model faydalıdır?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Model the current flow, handoffs, and exception paths.",
+          "az": "Cari axını, ötürmələri və istisna yollarını modelləşdirmək."
+        },
+        "explanation": {
+          "en": "A process model makes delays and responsibility boundaries visible.",
+          "az": "Proses modeli gecikmələri və məsuliyyət sərhədlərini görünən edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Implement the requested interface before investigating the need.",
+          "az": "Ehtiyacı araşdırmadan istənilən interfeysi hazırlamaq."
+        },
+        "explanation": {
+          "en": "This commits to a solution before evidence establishes which problem should be solved.",
+          "az": "Bu, hansı problemin həll edilməli olduğu sübut edilmədən həllə öhdəlik yaradır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A process model makes delays and responsibility boundaries visible.",
+      "az": "Proses modeli gecikmələri və məsuliyyət sərhədlərini görünən edir."
+    },
+    "lessonId": "bpmn-process",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-013",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "strategy-analysis",
+    "difficulty": 1,
+    "text": {
+      "en": "Support proposes more reminder emails because invoices are late. What should the BA do before accepting that remedy?",
+      "az": "Dəstək gecikən hesab-fakturalar üçün daha çox xatırlatma e-poçtu təklif edir. BA bu həlli qəbul etməzdən əvvəl nə etməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Investigate evidence behind the symptom before choosing a remedy.",
+          "az": "Həll seçməzdən əvvəl simptomun arxasındakı sübutu araşdırmaq."
+        },
+        "explanation": {
+          "en": "Treating a symptom alone can leave the underlying cause unchanged.",
+          "az": "Yalnız simptomun aradan qaldırılması əsas səbəbi dəyişməyə bilər."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Copy a competitor’s feature without checking the customer problem.",
+          "az": "Müştəri problemini yoxlamadan rəqibin funksiyasını təkrarlamaq."
+        },
+        "explanation": {
+          "en": "Competitor behavior does not establish whether the same solution addresses this product’s users or strategy.",
+          "az": "Rəqibin davranışı eyni həllin bu məhsulun istifadəçilərinə və ya strategiyasına uyğun olduğunu sübut etmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Implement the requested interface before investigating the need.",
+          "az": "Ehtiyacı araşdırmadan istənilən interfeysi hazırlamaq."
+        },
+        "explanation": {
+          "en": "This commits to a solution before evidence establishes which problem should be solved.",
+          "az": "Bu, hansı problemin həll edilməli olduğu sübut edilmədən həllə öhdəlik yaradır."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Treating a symptom alone can leave the underlying cause unchanged.",
+      "az": "Yalnız simptomun aradan qaldırılması əsas səbəbi dəyişməyə bilər."
+    },
+    "lessonId": "gap-root-cause",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-014",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "Users disagree about a new loan application screen. How can the team check understanding cheaply?",
+      "az": "İstifadəçilər yeni kredit müraciəti ekranı barədə razılaşmırlar. Komanda anlayışı az xərclə necə yoxlaya bilər?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Test a low-cost prototype with representative users.",
+          "az": "Təmsilçi istifadəçilərlə az xərcli prototipi yoxlamaq."
+        },
+        "explanation": {
+          "en": "A prototype helps test understanding and usability before expensive implementation.",
+          "az": "Prototip bahalı tətbiqdən əvvəl anlayışı və istifadə rahatlığını yoxlamağa kömək edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Freeze the original plan regardless of new evidence.",
+          "az": "Yeni sübutdan asılı olmayaraq ilkin planı dəyişməz saxlamaq."
+        },
+        "explanation": {
+          "en": "Ignoring new evidence prevents adapting to a better understanding of the need or situation.",
+          "az": "Yeni sübutun nəzərə alınmaması ehtiyac və ya vəziyyətin daha yaxşı anlaşılmasına uyğunlaşmağa mane olur."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A prototype helps test understanding and usability before expensive implementation.",
+      "az": "Prototip bahalı tətbiqdən əvvəl anlayışı və istifadə rahatlığını yoxlamağa kömək edir."
+    },
+    "lessonId": "wireframes",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-015",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "solution-evaluation",
+    "difficulty": 1,
+    "text": {
+      "en": "A system passes technical tests but branch workers cannot complete a real refund. What would have exposed the problem?",
+      "az": "Sistem texniki testlərdən keçir, amma filial əməkdaşları real geri ödənişi tamamlaya bilmirlər. Problemi nə aşkar edə bilərdi?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Use realistic business scenarios and agreed acceptance criteria.",
+          "az": "Real biznes ssenarilərindən və razılaşdırılmış qəbul meyarlarından istifadə etmək."
+        },
+        "explanation": {
+          "en": "User acceptance testing evaluates fitness for business use rather than only technical correctness.",
+          "az": "İstifadəçi qəbul testi yalnız texniki düzgünlüyü deyil, biznes istifadəsinə uyğunluğu qiymətləndirir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "User acceptance testing evaluates fitness for business use rather than only technical correctness.",
+      "az": "İstifadəçi qəbul testi yalnız texniki düzgünlüyü deyil, biznes istifadəsinə uyğunluğu qiymətləndirir."
+    },
+    "lessonId": "uat",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-016",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "One customer may own several accounts and each account has one owner. Which data-model rule captures this?",
+      "az": "Bir müştərinin bir neçə hesabı ola bilər və hər hesabın bir sahibi var. Bunu hansı məlumat modeli qaydası göstərir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Define how many instances may participate in each relationship.",
+          "az": "Hər əlaqədə neçə obyekt nümunəsinin iştirak edə biləcəyini müəyyən etmək."
+        },
+        "explanation": {
+          "en": "Cardinality distinguishes one-to-one, one-to-many, and many-to-many relationships.",
+          "az": "Kardinallıq birə-bir, birə-çox və çoxa-çox əlaqələri fərqləndirir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Describe only the successful path and ignore failures.",
+          "az": "Yalnız uğurlu yolu təsvir edib xətaları nəzərə almamaq."
+        },
+        "explanation": {
+          "en": "Important business rules and recovery needs often appear in alternative and failure paths.",
+          "az": "Vacib biznes qaydaları və bərpa ehtiyacları çox vaxt alternativ və xəta yollarında görünür."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Write “the system must be fast and user-friendly.”",
+          "az": "“Sistem sürətli və istifadəsi rahat olmalıdır” yazmaq."
+        },
+        "explanation": {
+          "en": "Undefined adjectives provide no agreed threshold or observable acceptance evidence.",
+          "az": "Müəyyən edilməmiş sifətlər razılaşdırılmış hədd və müşahidə olunan qəbul sübutu vermir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Cardinality distinguishes one-to-one, one-to-many, and many-to-many relationships.",
+      "az": "Kardinallıq birə-bir, birə-çox və çoxa-çox əlaqələri fərqləndirir."
+    },
+    "lessonId": "data-modeling",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-017",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "An analyst needs the total purchase amount for each customer from many transaction rows. What is the appropriate query approach?",
+      "az": "Analitik çoxlu əməliyyat sətirindən hər müştərinin ümumi alış məbləğini tapmalıdır. Uyğun sorğu yanaşması hansıdır?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Group transactions by customer and aggregate the amounts.",
+          "az": "Əməliyyatları müştəriyə görə qruplaşdırıb məbləğləri toplamaq."
+        },
+        "explanation": {
+          "en": "Grouping with aggregation produces one total for each customer instead of one row for each transaction.",
+          "az": "Qruplaşdırma və aqreqasiya hər əməliyyat üçün sətir əvəzinə hər müştəri üçün yekun verir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Measure success only by the number of documents produced.",
+          "az": "Uğuru yalnız hazırlanan sənədlərin sayı ilə ölçmək."
+        },
+        "explanation": {
+          "en": "Document volume does not establish understanding, business outcomes, or solution fitness.",
+          "az": "Sənəd həcmi anlayışı, biznes nəticəsini və ya həllin uyğunluğunu sübut etmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Describe only the successful path and ignore failures.",
+          "az": "Yalnız uğurlu yolu təsvir edib xətaları nəzərə almamaq."
+        },
+        "explanation": {
+          "en": "Important business rules and recovery needs often appear in alternative and failure paths.",
+          "az": "Vacib biznes qaydaları və bərpa ehtiyacları çox vaxt alternativ və xəta yollarında görünür."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Grouping with aggregation produces one total for each customer instead of one row for each transaction.",
+      "az": "Qruplaşdırma və aqreqasiya hər əməliyyat üçün sətir əvəzinə hər müştəri üçün yekun verir."
+    },
+    "lessonId": "sql-basics",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-018",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "A courier API returns success in a demo, but the delivery team cannot handle rejected requests. What needs clarification?",
+      "az": "Kuryer API-si nümayişdə uğur qaytarır, amma çatdırılma komandası rədd edilən sorğuları idarə edə bilmir. Nə dəqiqləşdirilməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Clarify request fields, responses, errors, and authorization.",
+          "az": "Sorğu sahələrini, cavabları, xətaları və səlahiyyətləri dəqiqləşdirmək."
+        },
+        "explanation": {
+          "en": "An interface contract must describe failure and security behavior as well as a successful response.",
+          "az": "İnterfeys müqaviləsi uğurlu cavabla yanaşı xəta və təhlükəsizlik davranışını da təsvir etməlidir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Describe only the successful path and ignore failures.",
+          "az": "Yalnız uğurlu yolu təsvir edib xətaları nəzərə almamaq."
+        },
+        "explanation": {
+          "en": "Important business rules and recovery needs often appear in alternative and failure paths.",
+          "az": "Vacib biznes qaydaları və bərpa ehtiyacları çox vaxt alternativ və xəta yollarında görünür."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "An interface contract must describe failure and security behavior as well as a successful response.",
+      "az": "İnterfeys müqaviləsi uğurlu cavabla yanaşı xəta və təhlükəsizlik davranışını da təsvir etməlidir."
+    },
+    "lessonId": "rest-apis",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-019",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-life-cycle",
+    "difficulty": 1,
+    "text": {
+      "en": "A release has limited capacity and many requested features. How can MoSCoW help?",
+      "az": "Buraxılışın imkanları məhduddur və çox funksiya istənilir. MoSCoW necə kömək edə bilər?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Separate necessary release needs from negotiable preferences.",
+          "az": "Buraxılış üçün zəruri ehtiyacları razılaşdırıla bilən istəklərdən ayırmaq."
+        },
+        "explanation": {
+          "en": "MoSCoW classification is useful when the team agrees what makes a requirement essential to the release.",
+          "az": "MoSCoW təsnifatı komanda tələbin buraxılış üçün niyə zəruri olduğunu razılaşdırdıqda faydalıdır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Label every request as mandatory without comparing consequences.",
+          "az": "Nəticələri müqayisə etmədən hər istəyi məcburi saymaq."
+        },
+        "explanation": {
+          "en": "If everything is essential, the classification offers no useful basis for trade-offs.",
+          "az": "Hər şey zəruridirsə, təsnifat seçimlər üçün faydalı əsas vermir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Give the loudest stakeholder permanent priority.",
+          "az": "Ən çox israr edən tərəfə daimi üstünlük vermək."
+        },
+        "explanation": {
+          "en": "Influence alone is not evidence of customer value, urgency, or alignment with the product goal.",
+          "az": "Təsir gücü təkbaşına müştəri dəyəri, təcililik və ya məhsul məqsədinə uyğunluq sübutu deyil."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "MoSCoW classification is useful when the team agrees what makes a requirement essential to the release.",
+      "az": "MoSCoW təsnifatı komanda tələbin buraxılış üçün niyə zəruri olduğunu razılaşdırdıqda faydalıdır."
+    },
+    "lessonId": "prioritization",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-020",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-life-cycle",
+    "difficulty": 1,
+    "text": {
+      "en": "Two improvements have different audiences, expected effects, uncertainty, and effort. What should a RICE comparison make explicit?",
+      "az": "İki təkmilləşdirmənin auditoriyası, gözlənilən təsiri, qeyri-müəyyənliyi və səyi fərqlidir. RICE müqayisəsi nəyi açıq göstərməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Compare reach, impact, confidence, and effort using consistent assumptions.",
+          "az": "Əhatə, təsir, əminlik və səyi uyğun fərziyyələrlə müqayisə etmək."
+        },
+        "explanation": {
+          "en": "RICE supports comparison, but uncertain estimates still require judgment.",
+          "az": "RICE müqayisəni dəstəkləyir, lakin qeyri-müəyyən təxminlər yenə də mühakimə tələb edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Give the loudest stakeholder permanent priority.",
+          "az": "Ən çox israr edən tərəfə daimi üstünlük vermək."
+        },
+        "explanation": {
+          "en": "Influence alone is not evidence of customer value, urgency, or alignment with the product goal.",
+          "az": "Təsir gücü təkbaşına müştəri dəyəri, təcililik və ya məhsul məqsədinə uyğunluq sübutu deyil."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "RICE supports comparison, but uncertain estimates still require judgment.",
+      "az": "RICE müqayisəni dəstəkləyir, lakin qeyri-müəyyən təxminlər yenə də mühakimə tələb edir."
+    },
+    "lessonId": "prioritization",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-021",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "strategy-analysis",
+    "difficulty": 1,
+    "text": {
+      "en": "A retailer wants same-day delivery but currently batches orders overnight. What should a gap analysis compare?",
+      "az": "Pərakəndə satıcı eyni gün çatdırılma istəyir, amma sifarişləri gecə qruplaşdırır. Boşluq təhlili nəyi müqayisə etməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Compare the current capabilities with the capabilities required for the desired state.",
+          "az": "Cari imkanları arzu olunan vəziyyət üçün lazım olan imkanlarla müqayisə etmək."
+        },
+        "explanation": {
+          "en": "Gap analysis identifies what must change between the current and desired situations.",
+          "az": "Boşluq təhlili cari və arzu olunan vəziyyət arasında nəyin dəyişməli olduğunu göstərir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Copy a competitor’s feature without checking the customer problem.",
+          "az": "Müştəri problemini yoxlamadan rəqibin funksiyasını təkrarlamaq."
+        },
+        "explanation": {
+          "en": "Competitor behavior does not establish whether the same solution addresses this product’s users or strategy.",
+          "az": "Rəqibin davranışı eyni həllin bu məhsulun istifadəçilərinə və ya strategiyasına uyğun olduğunu sübut etmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Write “the system must be fast and user-friendly.”",
+          "az": "“Sistem sürətli və istifadəsi rahat olmalıdır” yazmaq."
+        },
+        "explanation": {
+          "en": "Undefined adjectives provide no agreed threshold or observable acceptance evidence.",
+          "az": "Müəyyən edilməmiş sifətlər razılaşdırılmış hədd və müşahidə olunan qəbul sübutu vermir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Gap analysis identifies what must change between the current and desired situations.",
+      "az": "Boşluq təhlili cari və arzu olunan vəziyyət arasında nəyin dəyişməli olduğunu göstərir."
+    },
+    "lessonId": "gap-root-cause",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-022",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "planning-monitoring",
+    "difficulty": 1,
+    "text": {
+      "en": "Different teams assume loyalty rewards are included in a checkout project. What should the BA make explicit?",
+      "az": "Müxtəlif komandalar loyallıq mükafatlarının ödəniş layihəsinə daxil olduğunu düşünür. BA nəyi açıq göstərməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Make included work, exclusions, and decision authority explicit.",
+          "az": "Daxil edilən işi, istisnaları və qərar səlahiyyətini açıq göstərmək."
+        },
+        "explanation": {
+          "en": "Explicit boundaries help stakeholders identify scope changes and who should decide about them.",
+          "az": "Aydın sərhədlər əhatə dəyişikliklərini və onlar barədə kimin qərar verməli olduğunu göstərir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Use only the sponsor’s opinion and exclude affected users.",
+          "az": "Yalnız sponsorun rəyindən istifadə edib təsirlənən istifadəçiləri kənarda saxlamaq."
+        },
+        "explanation": {
+          "en": "One opinion cannot establish all affected needs, workflows, or impacts.",
+          "az": "Bir rəy bütün təsirlənən ehtiyacları, iş axınlarını və təsirləri müəyyən edə bilməz."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Label every request as mandatory without comparing consequences.",
+          "az": "Nəticələri müqayisə etmədən hər istəyi məcburi saymaq."
+        },
+        "explanation": {
+          "en": "If everything is essential, the classification offers no useful basis for trade-offs.",
+          "az": "Hər şey zəruridirsə, təsnifat seçimlər üçün faydalı əsas vermir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Explicit boundaries help stakeholders identify scope changes and who should decide about them.",
+      "az": "Aydın sərhədlər əhatə dəyişikliklərini və onlar barədə kimin qərar verməli olduğunu göstərir."
+    },
+    "lessonId": "scope-change",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-023",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "elicitation-collaboration",
+    "difficulty": 1,
+    "text": {
+      "en": "After an interview, the BA is unsure whether “customer” means the payer or recipient. What is the best next action?",
+      "az": "Müsahibədən sonra BA “müştəri”nin ödəyici, yoxsa alıcı olduğunu bilmir. Ən uyğun növbəti addım nədir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Play back the interpretation and seek stakeholder confirmation.",
+          "az": "Anlayışı maraqlı tərəfə yenidən izah edib təsdiq almaq."
+        },
+        "explanation": {
+          "en": "Confirmation tests whether the analyst understood the elicited information as intended.",
+          "az": "Təsdiqləmə analitikin toplanmış məlumatı nəzərdə tutulduğu kimi anlayıb-anlamadığını yoxlayır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Implement the requested interface before investigating the need.",
+          "az": "Ehtiyacı araşdırmadan istənilən interfeysi hazırlamaq."
+        },
+        "explanation": {
+          "en": "This commits to a solution before evidence establishes which problem should be solved.",
+          "az": "Bu, hansı problemin həll edilməli olduğu sübut edilmədən həllə öhdəlik yaradır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Remove conflicting evidence from the report to simplify the decision.",
+          "az": "Qərarı sadələşdirmək üçün ziddiyyətli sübutu hesabatdan silmək."
+        },
+        "explanation": {
+          "en": "Hiding evidence misleads decision makers and conceals uncertainty.",
+          "az": "Sübutu gizlətmək qərar verənləri yanıltmaqla qeyri-müəyyənliyi ört-basdır edir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Confirmation tests whether the analyst understood the elicited information as intended.",
+      "az": "Təsdiqləmə analitikin toplanmış məlumatı nəzərdə tutulduğu kimi anlayıb-anlamadığını yoxlayır."
+    },
+    "lessonId": "elicitation",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-024",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "solution-evaluation",
+    "difficulty": 1,
+    "text": {
+      "en": "A new queue system is live. How should the BA determine whether it improved the branch experience?",
+      "az": "Yeni növbə sistemi işləyir. BA onun filial təcrübəsini yaxşılaşdırdığını necə müəyyən etməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Compare observed outcomes with the agreed success measures.",
+          "az": "Müşahidə olunan nəticələri razılaşdırılmış uğur göstəriciləri ilə müqayisə etmək."
+        },
+        "explanation": {
+          "en": "Solution evaluation looks for achieved value and limitations after a solution is used.",
+          "az": "Həllin qiymətləndirilməsi istifadə zamanı əldə olunan dəyəri və məhdudiyyətləri araşdırır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Solution evaluation looks for achieved value and limitations after a solution is used.",
+      "az": "Həllin qiymətləndirilməsi istifadə zamanı əldə olunan dəyəri və məhdudiyyətləri araşdırır."
+    },
+    "lessonId": "solution-evaluation",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-025",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "An insurance claim cannot be paid before approval and may be reopened after rejection. What model clarifies these rules?",
+      "az": "Sığorta tələbi təsdiqdən əvvəl ödənilə bilməz və rədddən sonra yenidən açıla bilər. Hansı model bu qaydaları aydınlaşdırır?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Model allowed states and the events that cause transitions.",
+          "az": "İcazə verilən vəziyyətləri və keçid yaradan hadisələri modelləşdirmək."
+        },
+        "explanation": {
+          "en": "A state model clarifies lifecycle rules, including transitions that must be rejected.",
+          "az": "Vəziyyət modeli rədd edilməli keçidlər daxil olmaqla həyat dövrü qaydalarını aydınlaşdırır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Write “the system must be fast and user-friendly.”",
+          "az": "“Sistem sürətli və istifadəsi rahat olmalıdır” yazmaq."
+        },
+        "explanation": {
+          "en": "Undefined adjectives provide no agreed threshold or observable acceptance evidence.",
+          "az": "Müəyyən edilməmiş sifətlər razılaşdırılmış hədd və müşahidə olunan qəbul sübutu vermir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Describe only the successful path and ignore failures.",
+          "az": "Yalnız uğurlu yolu təsvir edib xətaları nəzərə almamaq."
+        },
+        "explanation": {
+          "en": "Important business rules and recovery needs often appear in alternative and failure paths.",
+          "az": "Vacib biznes qaydaları və bərpa ehtiyacları çox vaxt alternativ və xəta yollarında görünür."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A state model clarifies lifecycle rules, including transitions that must be rejected.",
+      "az": "Vəziyyət modeli rədd edilməli keçidlər daxil olmaqla həyat dövrü qaydalarını aydınlaşdırır."
+    },
+    "lessonId": "uml-models",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-026",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "requirements-design",
+    "difficulty": 1,
+    "text": {
+      "en": "A booking can succeed, fail for no availability, or fail for payment. What should a useful use case capture?",
+      "az": "Rezervasiya uğurlu ola, yer olmamasına və ya ödənişə görə uğursuz ola bilər. Faydalı istifadə halı nəyi əhatə etməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Describe actor goals, the main flow, and alternative outcomes.",
+          "az": "İştirakçı məqsədlərini, əsas axını və alternativ nəticələri təsvir etmək."
+        },
+        "explanation": {
+          "en": "A use case explains interaction to achieve a goal and accounts for important alternatives.",
+          "az": "İstifadə halı məqsədə çatmaq üçün qarşılıqlı əlaqəni və vacib alternativləri izah edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Describe only the successful path and ignore failures.",
+          "az": "Yalnız uğurlu yolu təsvir edib xətaları nəzərə almamaq."
+        },
+        "explanation": {
+          "en": "Important business rules and recovery needs often appear in alternative and failure paths.",
+          "az": "Vacib biznes qaydaları və bərpa ehtiyacları çox vaxt alternativ və xəta yollarında görünür."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A use case explains interaction to achieve a goal and accounts for important alternatives.",
+      "az": "İstifadə halı məqsədə çatmaq üçün qarşılıqlı əlaqəni və vacib alternativləri izah edir."
+    },
+    "lessonId": "use-cases",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-027",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "foundations",
+    "difficulty": 1,
+    "text": {
+      "en": "A research summary includes names and unsupported claims that make the proposal look stronger. What is the ethical response?",
+      "az": "Araşdırma xülasəsində təklifi daha güclü göstərən adlar və əsassız iddialar var. Etik reaksiya nədir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Disclose the uncertainty and protect sensitive participant information.",
+          "az": "Qeyri-müəyyənliyi açıqlamaq və iştirakçıların həssas məlumatlarını qorumaq."
+        },
+        "explanation": {
+          "en": "Honest evidence and appropriate data handling are necessary for trustworthy analysis.",
+          "az": "Dürüst sübut və düzgün məlumat emalı etibarlı təhlil üçün zəruridir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Remove conflicting evidence from the report to simplify the decision.",
+          "az": "Qərarı sadələşdirmək üçün ziddiyyətli sübutu hesabatdan silmək."
+        },
+        "explanation": {
+          "en": "Hiding evidence misleads decision makers and conceals uncertainty.",
+          "az": "Sübutu gizlətmək qərar verənləri yanıltmaqla qeyri-müəyyənliyi ört-basdır edir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Honest evidence and appropriate data handling are necessary for trustworthy analysis.",
+      "az": "Dürüst sübut və düzgün məlumat emalı etibarlı təhlil üçün zəruridir."
+    },
+    "lessonId": "analysis-governance",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-028",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "planning-monitoring",
+    "difficulty": 1,
+    "text": {
+      "en": "A team starts many requests but completes very few. Which approach can expose the flow constraint?",
+      "az": "Komanda çox istəyə başlayır, amma azını bitirir. Hansı yanaşma axın məhdudiyyətini göstərə bilər?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Visualize work and limit work in progress.",
+          "az": "İşi görünən etmək və eyni vaxtda görülən işi məhdudlaşdırmaq."
+        },
+        "explanation": {
+          "en": "Work-in-progress limits help reveal bottlenecks and encourage finishing before starting more work.",
+          "az": "Eyni vaxtda görülən işin məhdudlaşdırılması dar boğazları göstərir və yeni işdən əvvəl mövcud işi bitirməyə təşviq edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Keep every specialist fully busy even if work accumulates unfinished.",
+          "az": "Bitməmiş iş yığılsa da hər mütəxəssisi tam məşğul saxlamaq."
+        },
+        "explanation": {
+          "en": "Local utilization can increase queues and delay the completion of valuable work.",
+          "az": "Yerli məşğulluq növbələri artıra və dəyərli işin tamamlanmasını gecikdirə bilər."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Work-in-progress limits help reveal bottlenecks and encourage finishing before starting more work.",
+      "az": "Eyni vaxtda görülən işin məhdudlaşdırılması dar boğazları göstərir və yeni işdən əvvəl mövcud işi bitirməyə təşviq edir."
+    },
+    "lessonId": "agile-analysis",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-029",
+    "trackId": "ecba",
+    "type": "single",
+    "domain": "foundations",
+    "difficulty": 1,
+    "text": {
+      "en": "A brief mixes revenue targets, user needs, system behavior, and availability. How should the BA organize it?",
+      "az": "Tapşırıq gəlir hədəflərini, istifadəçi ehtiyaclarını, sistem davranışını və əlçatanlığı qarışdırır. BA bunu necə təşkil etməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Distinguish the business need, stakeholder need, behavior, and quality.",
+          "az": "Biznes ehtiyacını, tərəf ehtiyacını, davranışı və keyfiyyəti fərqləndirmək."
+        },
+        "explanation": {
+          "en": "Different requirement types answer different questions and can be linked without treating them as interchangeable.",
+          "az": "Müxtəlif tələb növləri fərqli suallara cavab verir və eyniləşdirilmədən əlaqələndirilə bilər."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Write “the system must be fast and user-friendly.”",
+          "az": "“Sistem sürətli və istifadəsi rahat olmalıdır” yazmaq."
+        },
+        "explanation": {
+          "en": "Undefined adjectives provide no agreed threshold or observable acceptance evidence.",
+          "az": "Müəyyən edilməmiş sifətlər razılaşdırılmış hədd və müşahidə olunan qəbul sübutu vermir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Measure success only by the number of documents produced.",
+          "az": "Uğuru yalnız hazırlanan sənədlərin sayı ilə ölçmək."
+        },
+        "explanation": {
+          "en": "Document volume does not establish understanding, business outcomes, or solution fitness.",
+          "az": "Sənəd həcmi anlayışı, biznes nəticəsini və ya həllin uyğunluğunu sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Different requirement types answer different questions and can be linked without treating them as interchangeable.",
+      "az": "Müxtəlif tələb növləri fərqli suallara cavab verir və eyniləşdirilmədən əlaqələndirilə bilər."
+    },
+    "lessonId": "requirement-types",
+    "practiceOnly": true
+  },
+  {
+    "id": "ecba-030",
+    "trackId": "ecba",
+    "type": "multiple",
+    "domain": "elicitation-collaboration",
+    "difficulty": 2,
+    "text": {
+      "en": "A workshop produced an agreed term, but a remote stakeholder could not attend. Which two actions improve understanding before baselining? Select two.",
+      "az": "İş sessiyasında termin razılaşdırılıb, amma uzaqdakı tərəf iştirak edə bilməyib. İlkin versiyanı təsdiqləməzdən əvvəl hansı iki addım anlayışı yaxşılaşdırar? İkisini seçin."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Play back the interpretation and seek stakeholder confirmation.",
+          "az": "Anlayışı maraqlı tərəfə yenidən izah edib təsdiq almaq."
+        },
+        "explanation": {
+          "en": "Confirmation tests whether the analyst understood the elicited information as intended.",
+          "az": "Təsdiqləmə analitikin toplanmış məlumatı nəzərdə tutulduğu kimi anlayıb-anlamadığını yoxlayır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Map affected stakeholders, their influence, and their needs.",
+          "az": "Təsirlənən maraqlı tərəfləri, təsirlərini və ehtiyaclarını xəritələmək."
+        },
+        "explanation": {
+          "en": "A stakeholder map reveals whose input and participation are needed.",
+          "az": "Maraqlı tərəflərin xəritəsi kimin rəyinə və iştirakına ehtiyac olduğunu göstərir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Use only the sponsor’s opinion and exclude affected users.",
+          "az": "Yalnız sponsorun rəyindən istifadə edib təsirlənən istifadəçiləri kənarda saxlamaq."
+        },
+        "explanation": {
+          "en": "One opinion cannot establish all affected needs, workflows, or impacts.",
+          "az": "Bir rəy bütün təsirlənən ehtiyacları, iş axınlarını və təsirləri müəyyən edə bilməz."
+        }
+      }
+    ],
+    "correct": ["a", "b"],
+    "explanation": {
+      "en": "Confirmation tests whether the analyst understood the elicited information as intended.",
+      "az": "Təsdiqləmə analitikin toplanmış məlumatı nəzərdə tutulduğu kimi anlayıb-anlamadığını yoxlayır."
+    },
+    "lessonId": "stakeholder-mapping",
+    "practiceOnly": true
+  }
+]

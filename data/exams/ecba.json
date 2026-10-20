@@ -1,0 +1,75 @@
+{
+  "id": "ecba",
+  "name": "Entry Certificate in Business Analysis (ECBA)",
+  "format": null,
+  "questionCount": null,
+  "durationMinutes": null,
+  "passPercent": null,
+  "domains": [
+    {
+      "id": "foundations",
+      "title": {
+        "en": "Business analysis foundations",
+        "az": "Biznes təhlilinin əsasları"
+      }
+    },
+    {
+      "id": "planning-monitoring",
+      "title": {
+        "en": "Analysis planning and monitoring",
+        "az": "Təhlilin planlaşdırılması və izlənməsi"
+      }
+    },
+    {
+      "id": "elicitation-collaboration",
+      "title": {
+        "en": "Elicitation and collaboration",
+        "az": "Tələblərin toplanması və əməkdaşlıq"
+      }
+    },
+    {
+      "id": "requirements-life-cycle",
+      "title": {
+        "en": "Requirements life-cycle management",
+        "az": "Tələblərin həyat dövrünün idarəsi"
+      }
+    },
+    {
+      "id": "strategy-analysis",
+      "title": {
+        "en": "Strategy analysis",
+        "az": "Strategiya təhlili"
+      }
+    },
+    {
+      "id": "requirements-design",
+      "title": {
+        "en": "Requirements analysis and design",
+        "az": "Tələblərin təhlili və dizayn"
+      }
+    },
+    {
+      "id": "solution-evaluation",
+      "title": {
+        "en": "Solution evaluation",
+        "az": "Həllin qiymətləndirilməsi"
+      }
+    }
+  ],
+  "verificationStatus": "needs-verification",
+  "verifiedAt": null,
+  "sources": [
+    {
+      "title": "Entry Certificate in Business Analysis (ECBA) — official certification page",
+      "url": "https://www.iiba.org/business-analysis-certifications/ecba/"
+    },
+    {
+      "title": "BABOK Guide — official IIBA resource",
+      "url": "https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/"
+    }
+  ],
+  "notes": {
+    "en": "TODO: VERIFY the current official exam format, question count, duration, pass policy, syllabus and domain coverage. Official-source requests were blocked by the cloud network policy during authoring. Numeric exam facts are deliberately unset. Domain groups here organize original learning practice; they are not a verified official exam blueprint. Practice scores do not establish eligibility or predict an official result. Timed practice is not an official-format mock exam.",
+    "az": "TODO: VERIFY — cari rəsmi imtahan formatını, sual sayını, müddətini, keçid siyasətini, proqramını və domen əhatəsini yoxlayın. Hazırlanma zamanı rəsmi mənbələrə sorğular bulud şəbəkə siyasəti tərəfindən bloklanıb. Rəqəmsal imtahan faktları qəsdən boş saxlanıb. Buradakı domenlər orijinal öyrənmə məşqini qruplaşdırır; təsdiqlənmiş rəsmi imtahan planı deyil. Məşq balları uyğunluğu təsdiq etmir və rəsmi nəticəni proqnozlaşdırmır. Vaxtlı məşq rəsmi formatlı sınaq imtahanı deyil."
+  }
+}

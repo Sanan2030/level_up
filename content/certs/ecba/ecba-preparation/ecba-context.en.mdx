@@ -1,0 +1,154 @@
+---
+id: ecba-context
+locale: en
+title: 'Business analysis concepts and context'
+objectives:
+  - 'Relate change, need, solution, stakeholder, value and context in a scenario.'
+  - 'Apply the topic to a customer self-service change; justify the decision and identify missing evidence.'
+---
+
+## 1. Learning objectives
+
+Explain change, need, solution, stakeholder, value and context through a single initiative. Distinguish a business problem from a proposed feature, identify evidence gaps and communicate an original analysis recommendation.
+
+## 2. Why it matters
+
+A retail bank asks for a new loan-application dashboard because applications take too long. A dashboard might help employees see delays, but it might also leave the underlying delay untouched. Business analysis begins by understanding what needs to improve, who is affected and how value could be assessed.
+
+This lesson introduces foundational concepts used in business analysis. It is original educational material for the ECBA learning path, not a reproduction of a copyrighted guide or a claim about the current examination format.
+
+## 3. Core theory
+
+A **need** is a problem or opportunity that matters in a situation. **Change** is the movement from the current situation toward something different. A **solution** is a way of meeting needs in that situation. **Stakeholders** are people or groups with relevant interests, influence or exposure. **Value** is the benefit or importance of an outcome to those stakeholders. **Context** includes circumstances that shape the decision, such as regulations, capabilities, timing and constraints.
+
+The six ideas inform one another. A feature is not automatically a need. An efficiency improvement for one group may create a burden for another. A solution that works in one context may be unsuitable in a different context. Describe these relationships rather than memorizing isolated labels.
+
+Evidence can include observed work, customer interviews, operational records and credible constraints. Separate what is observed, what is inferred and what remains unknown. When recommending a change, state the decision it supports and how you would inspect whether it helped.
+
+## 4. Worked example: loan processing delays
+
+| Concept            | Scenario interpretation                                                                      |
+| ------------------ | -------------------------------------------------------------------------------------------- |
+| Need               | Customers and staff experience avoidable delays in processing complete loan applications     |
+| Change             | Improve how missing information and hand-offs are handled                                    |
+| Possible solutions | Clear document guidance, better validation, queue visibility or a different hand-off process |
+| Stakeholders       | Applicants, branch staff, credit operations, risk specialists, support and platform teams    |
+| Value              | Faster informed decisions, fewer repeated contacts and maintained risk controls              |
+| Context            | Regulated lending, existing systems, privacy obligations and limited delivery capacity       |
+
+The analyst observes that many applications wait for a missing document, but the customer is not told which document. A queue dashboard would expose the delay to staff; clearer requests and validation might prevent it. Neither option should be selected solely because a senior sponsor proposed it.
+
+A useful recommendation is to validate the dominant delay reasons, test clearer document guidance with a small group and compare complete-application processing time and repeated contacts. Preserve appropriate risk and privacy controls. The scenario does not supply enough evidence to promise a numerical improvement.
+
+## 5. Diagram
+
+<Diagram
+  chart={
+    'flowchart TD; N[Need] --> C[Change]; C --> S[Possible solution]; S --> V[Value to inspect]; H[Stakeholders] --> N; H --> V; X[Context and constraints] --> C; X --> S; V --> N;'
+  }
+/>
+
+The diagram shows relationships rather than a mandatory sequence. Stakeholders help interpret needs and value, while context shapes which changes and solutions are feasible.
+
+## 6. Interactive evidence check
+
+The sponsor says “everyone knows the dashboard will reduce delays.” Decide how to respond.
+
+<details>
+<summary>Record the dashboard as the business need</summary>
+
+This confuses a proposed solution with the need. It may prevent discovery of cheaper or more effective options. Record the dashboard as a candidate and investigate what causes the delay.
+
+</details>
+
+<details>
+<summary>Ask which delays matter, inspect examples and compare possible changes</summary>
+
+This preserves the sponsor’s idea while improving the decision. Ask whose experience should improve, which evidence supports the claim and what constraints any solution must respect.
+
+</details>
+
+<details>
+<summary>Reject all dashboards because analysis must never consider solutions</summary>
+
+This is also unhelpful. Analysis can evaluate solutions; it should connect them to needs and evidence instead of accepting or rejecting them automatically.
+
+</details>
+
+## 7. Common mistakes and best practices
+
+- **Treating a feature as a need:** ask what problem it should solve and for whom.
+- **Assuming value is identical for everyone:** discuss benefit, burden and risk with different groups.
+- **Ignoring context:** make relevant regulations, capabilities and constraints visible.
+- **Confusing activity with outcome:** a completed report does not by itself demonstrate improved loan processing.
+- **Inventing confidence:** document evidence gaps and recommend proportionate learning steps.
+- **Studying only terminology:** practice explaining a scenario and why one action is more useful than another.
+
+## 8. Practice exercise and sample solution
+
+**Exercise:** A telecom provider requests a mobile chatbot to reduce support costs. Write a short analysis using all six concepts. Include one evidence gap and two possible solution approaches.
+
+<details>
+<summary>Reveal a sample solution</summary>
+
+**Need:** customers struggle to resolve common service questions, creating repeated contact and avoidable cost. **Change:** improve first-contact resolution while keeping accessible human support. **Solutions:** improve self-service explanations or test an assistant for a narrow question type. **Stakeholders:** customers, support staff, service operations, security and accessibility specialists. **Value:** fewer unresolved issues and less repeated work without hiding customer problems. **Context:** multiple languages, personal account data and existing support channels. **Evidence gap:** which question types create repeat contact and why? Investigate this before claiming a chatbot is the best investment.
+
+</details>
+
+## 9. Mini-quiz
+
+**1. “Build a dashboard” is best treated initially as what?**
+
+A. A proposed solution. B. Proof of business value. C. A complete statement of the underlying need.
+
+<details>
+<summary>Answer and explanation</summary>
+
+**A.** It describes a possible way to act. B assumes an outcome before evidence. C omits the problem, affected people and desired improvement.
+
+</details>
+
+**2. Why can two stakeholders assess the same change differently?**
+
+A. Value and consequences can differ with their situation. B. Only the sponsor’s view can be relevant. C. Any disagreement means analysis has failed.
+
+<details>
+<summary>Answer and explanation</summary>
+
+**A.** Benefits, costs and exposure may differ. B excludes important evidence. C mistakes a normal difference in interests for a reason to stop learning.
+
+</details>
+
+**3. Which example primarily describes context?**
+
+A. A proposed notification screen. B. The organization’s regulatory obligations and existing system constraints. C. A claim that every user will be happier.
+
+<details>
+<summary>Answer and explanation</summary>
+
+**B.** These circumstances shape feasible decisions. A is a possible solution element. C is an unsupported claim about value.
+
+</details>
+
+**4. The team lacks evidence about why applications wait. What is a useful next step?**
+
+A. Promise a precise improvement anyway. B. Implement every proposed feature. C. Inspect representative cases and classify delay reasons with affected people.
+
+<details>
+<summary>Answer and explanation</summary>
+
+**C.** It targets the evidence gap. A invents certainty. B increases work without clarifying the cause or best option.
+
+</details>
+
+## 10. One-page cheat sheet
+
+**Need:** what problem or opportunity matters? **Change:** what should become different? **Solution:** what options could meet the need? **Stakeholders:** whose interests, decisions and experience matter? **Value:** what benefits and trade-offs should be inspected? **Context:** what circumstances shape the decision? **Analysis habit:** distinguish observation, inference and uncertainty, then recommend the smallest useful next action.
+
+## 11. Further reading
+
+- [IIBA: What is business analysis?](https://www.iiba.org/professional-development/career-centre/what-is-business-analysis/)
+- [IIBA: Entry Certificate in Business Analysis](https://www.iiba.org/business-analysis-certifications/ecba/)
+- [IIBA: Business Analysis Standard](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/business-analysis/the-business-analysis-standard/)
+
+Check official IIBA sources for current certification scope, format and eligibility. This lesson contains original practice material and does not reproduce official examination questions.

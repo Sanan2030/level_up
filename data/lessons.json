@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "ba-role",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-foundations",
+    "title": {
+      "az": "Biznes analitikin töhfəsi",
+      "en": "The business analyst’s contribution"
+    },
+    "summary": {
+      "az": "Biznes ehtiyacını, təklif edilən həlli və ölçülə bilən dəyəri ayır.",
+      "en": "Separate a business need, a proposed solution and measurable value."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["The business analyst’s contribution", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "sdlc",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-foundations",
+    "title": {
+      "az": "SDLC boyunca analiz",
+      "en": "Analysis throughout the SDLC"
+    },
+    "summary": {
+      "az": "Analiz fəaliyyətlərini kəşf, hazırlama, buraxılış və dəstəyə uyğunlaşdır.",
+      "en": "Adapt analysis activities to discovery, delivery, release and support."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Analysis throughout the SDLC", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "stakeholder-mapping",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-foundations",
+    "title": {
+      "az": "Maraqlı tərəflərin xəritələnməsi",
+      "en": "Stakeholder mapping"
+    },
+    "summary": {
+      "az": "Təsirə məruz qalan insanları tap və təsir gücü ilə ehtiyacları əlaqə planına çevir.",
+      "en": "Identify affected people and turn influence and needs into an engagement plan."
+    },
+    "minutes": 25,
+    "status": "published",
+    "topics": ["Stakeholder mapping", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "elicitation",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-requirements",
+    "title": {
+      "az": "Müsahibə, seminar və müşahidə",
+      "en": "Interviews, workshops and observation"
+    },
+    "summary": {
+      "az": "Lazım olan sübut üçün müsahibə, seminar, sorğu, sənəd analizi və müşahidəni seç.",
+      "en": "Choose interviews, workshops, surveys, document analysis and observation for the evidence needed."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Interviews, workshops and observation", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "requirement-types",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-requirements",
+    "title": {
+      "az": "Biznes, maraqlı tərəf və həll tələbləri",
+      "en": "Business, stakeholder and solution requirements"
+    },
+    "summary": {
+      "az": "Biznes, maraqlı tərəf, funksional, keyfiyyət və keçid tələblərini fərqləndir.",
+      "en": "Distinguish business, stakeholder, functional, quality and transition requirements."
+    },
+    "minutes": 35,
+    "status": "published",
+    "topics": ["Business, stakeholder and solution requirements", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "stories-gherkin",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-requirements",
+    "title": {
+      "az": "İstifadəçi hekayələri və qəbul meyarları",
+      "en": "User stories and acceptance criteria"
+    },
+    "summary": {
+      "az": "İstifadəçi ehtiyacını xəta yolları daxil olmaqla müşahidə edilən qəbul nümunələrinə bağla.",
+      "en": "Connect a user need to observable acceptance examples, including failure paths."
+    },
+    "minutes": 35,
+    "status": "published",
+    "topics": ["User stories and acceptance criteria", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "use-cases",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-requirements",
+    "title": {
+      "az": "İstifadə halları və istisna axınları",
+      "en": "Use cases and exception flows"
+    },
+    "summary": {
+      "az": "Aktorları, başlanğıc hadisəsini, ilkin şərtləri, əsas və alternativ axınları təsvir et.",
+      "en": "Describe actors, triggers, preconditions, main flow and alternatives."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Use cases and exception flows", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "requirements-documents",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-requirements",
+    "title": {
+      "az": "Təkrarsız BRD, FRD və SRS",
+      "en": "BRD, FRD and SRS without duplication"
+    },
+    "summary": {
+      "az": "Sənədin dərinliyini və sahibliyini auditoriya və riskə uyğun seç.",
+      "en": "Choose document depth and ownership according to audience and risk."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["BRD, FRD and SRS without duplication", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "bpmn-process",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-visuals",
+    "title": {
+      "az": "BPMN üslubunda proses modelləşdirməsi",
+      "en": "BPMN-style process modeling"
+    },
+    "summary": {
+      "az": "Hadisə, tapşırıq, qərar və ötürmələri aydın başlanğıc və sonla modelləşdir.",
+      "en": "Model events, tasks, decisions and hand-offs with a clear start and end."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["BPMN-style process modeling", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "uml-models",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-visuals",
+    "title": {
+      "az": "Uyğun UML görünüşünü seç",
+      "en": "Choose the right UML view"
+    },
+    "summary": {
+      "az": "İstifadə halı, fəaliyyət, ardıcıllıq, sinif və vəziyyət diaqramlarını müqayisə et.",
+      "en": "Compare use case, activity, sequence, class and state diagrams."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Choose the right UML view", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "wireframes",
+    "trackId": "ba",
+    "level": "junior",
+    "moduleId": "ba-visuals",
+    "title": {
+      "az": "Vayrfreym və yoxlanıla bilən prototiplər",
+      "en": "Wireframing and testable prototypes"
+    },
+    "summary": {
+      "az": "Fərziyyəni aşağı detallı axına və istifadəyə yararlılıq sualına çevir.",
+      "en": "Turn an assumption into a low-fidelity flow and a usability question."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Wireframing and testable prototypes", "BA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "prioritization",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-control",
+    "title": {
+      "az": "MoSCoW, Kano və RICE",
+      "en": "MoSCoW, Kano and RICE"
+    },
+    "summary": {
+      "az": "Prioritetləşdirmə üsulu seç və fərziyyələrini görünən et.",
+      "en": "Select a prioritization technique and make its assumptions visible."
+    },
+    "minutes": 35,
+    "status": "published",
+    "topics": ["MoSCoW, Kano and RICE", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "traceability",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-control",
+    "title": {
+      "az": "Tələblərin izlənilməsi",
+      "en": "Requirements traceability"
+    },
+    "summary": {
+      "az": "Ehtiyac, tələb, dizayn, test və dəyər sübutunu əlaqələndir.",
+      "en": "Link needs, requirements, designs, tests and evidence of value."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Requirements traceability", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "scope-change",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-control",
+    "title": {
+      "az": "Əhatə sərhədləri və dəyişiklik nəzarəti",
+      "en": "Scope boundaries and change control"
+    },
+    "summary": {
+      "az": "Əhatə dəyişikliyini qəbul etməzdən əvvəl təsiri və qərar sahibini qiymətləndir.",
+      "en": "Assess impact and decision ownership before accepting a scope change."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Scope boundaries and change control", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "gap-root-cause",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-control",
+    "title": {
+      "az": "Boşluq analizi, SWOT və əsas səbəblər",
+      "en": "Gap analysis, SWOT and root causes"
+    },
+    "summary": {
+      "az": "Əlamətləri səbəblərdən ayır, cari və arzuolunan imkanları müqayisə et.",
+      "en": "Separate symptoms from causes and compare current and desired capabilities."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Gap analysis, SWOT and root causes", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "data-modeling",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-technical",
+    "title": {
+      "az": "Obyektlər, əlaqələr və məlumat keyfiyyəti",
+      "en": "Entities, relationships and data quality"
+    },
+    "summary": {
+      "az": "ERD-də obyektləri, açarları, əlaqə sayını və keyfiyyət məhdudiyyətlərini müəyyən et.",
+      "en": "Define entities, keys, cardinality and quality constraints in an ERD."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Entities, relationships and data quality", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "sql-basics",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-technical",
+    "title": {
+      "az": "Biznes sualları üçün SQL",
+      "en": "SQL for business questions"
+    },
+    "summary": {
+      "az": "Sübutu yoxlamaq üçün SELECT, filtr, birləşdirmə, qruplaşdırma və null emalından istifadə et.",
+      "en": "Use SELECT, filters, joins, grouping and null handling to inspect evidence."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["SQL for business questions", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "rest-apis",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-technical",
+    "title": {
+      "az": "REST, JSON, XML və API müqavilələri",
+      "en": "REST, JSON, XML and API contracts"
+    },
+    "summary": {
+      "az": "Postman üslubunda nümunələrlə metod, status kodu, məlumat paketi və OpenAPI spesifikasiyasını oxu.",
+      "en": "Read methods, status codes, payloads and OpenAPI specifications using Postman-style examples."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["REST, JSON, XML and API contracts", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "integration-basics",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-technical",
+    "title": {
+      "az": "İnteqrasiya və asinxron sərhədlər",
+      "en": "Integration and asynchronous boundaries"
+    },
+    "summary": {
+      "az": "Təkrar cəhd, dublikat və idempotentlik daxil olmaqla sinxron çağırışları və hadisələri müqayisə et.",
+      "en": "Compare synchronous calls and events, including retries, duplicates and idempotency."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Integration and asynchronous boundaries", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "uat",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-technical",
+    "title": {
+      "az": "Test halları və UAT",
+      "en": "Test cases and UAT"
+    },
+    "summary": {
+      "az": "Qəbul meyarlarını real biznes qəbul ssenarilərinə çevir.",
+      "en": "Translate acceptance criteria into realistic business acceptance scenarios."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Test cases and UAT", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "agile-analysis",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-delivery",
+    "title": {
+      "az": "Agile, Scrum, Kanban və SAFe konteksti",
+      "en": "Agile, Scrum, Kanban and SAFe context"
+    },
+    "summary": {
+      "az": "Universal çərçivə təyin etmədən analiz işini iterasiya, axın və çoxkomandalı əlaqələndirməyə uyğunlaşdır.",
+      "en": "Adapt analysis work to iteration, flow and multi-team coordination without prescribing a universal framework."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Agile, Scrum, Kanban and SAFe context", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "jira-confluence",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-delivery",
+    "title": {
+      "az": "Jira, Confluence və sənədləşdirmə standartları",
+      "en": "Jira, Confluence and documentation standards"
+    },
+    "summary": {
+      "az": "Sahiblik, dəyişiklik tarixçəsi və faydalı keçidlərlə əlçatan əsas mənbə qur.",
+      "en": "Design an accessible source of truth with ownership, change history and useful links."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Jira, Confluence and documentation standards", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "solution-evaluation",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-delivery",
+    "title": {
+      "az": "Buraxılışdan sonra həlli qiymətləndir",
+      "en": "Evaluate solutions after release"
+    },
+    "summary": {
+      "az": "Məhdudiyyət və yan təsirləri nəzərə alaraq faktiki nəticəni gözlənilən fayda ilə müqayisə et.",
+      "en": "Compare actual outcomes to intended benefits while considering limitations and side effects."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Evaluate solutions after release", "BA", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "babok-map",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-leadership",
+    "title": {
+      "az": "BABOK bilik sahələri üzrə öyrənmə xəritəsi",
+      "en": "BABOK knowledge areas as a study map"
+    },
+    "summary": {
+      "az": "Planlama, ehtiyac toplama, həyat dövrü idarəsi, strategiya, müəyyənləşdirmə və qiymətləndirməni əlaqələndir.",
+      "en": "Connect planning, elicitation, lifecycle management, strategy, definition and evaluation activities."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["BABOK knowledge areas as a study map", "BA", "lead"],
+    "prerequisites": []
+  },
+  {
+    "id": "ba-techniques-perspectives",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-leadership",
+    "title": {
+      "az": "Üsullar, səriştələr və perspektivlər",
+      "en": "Techniques, competencies and perspectives"
+    },
+    "summary": {
+      "az": "Kontekstə görə üsul seç və əsas səriştələri qiymətləndir.",
+      "en": "Select techniques for context and reflect on underlying competencies."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Techniques, competencies and perspectives", "BA", "lead"],
+    "prerequisites": []
+  },
+  {
+    "id": "analysis-governance",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-leadership",
+    "title": {
+      "az": "Analiz idarəetməsi və keyfiyyəti",
+      "en": "Analysis governance and quality"
+    },
+    "summary": {
+      "az": "Uyğun qərar səlahiyyəti, keyfiyyət yoxlaması və mentorluq təcrübələri qur.",
+      "en": "Set proportionate decision rights, quality checks and coaching practices."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Analysis governance and quality", "BA", "lead"],
+    "prerequisites": []
+  },
+  {
+    "id": "facilitation-conflict",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-leadership",
+    "title": {
+      "az": "Fasilitasiya, danışıqlar və münaqişə",
+      "en": "Facilitation, negotiation and conflict"
+    },
+    "summary": {
+      "az": "Maraqları mövqelərdən ayır və məlumatlı qərarlar üçün şərait yarat.",
+      "en": "Separate interests from positions and create conditions for informed decisions."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Facilitation, negotiation and conflict", "BA", "lead"],
+    "prerequisites": []
+  },
+  {
+    "id": "storytelling-time",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-leadership",
+    "title": {
+      "az": "Məlumatla hekayə və davamlı liderlik",
+      "en": "Storytelling with data and sustainable leadership"
+    },
+    "summary": {
+      "az": "Qeyri-müəyyənliyi izah et, diqqəti idarə et və müstəqil analiz üçün başqalarına mentorluq et.",
+      "en": "Communicate uncertainty, manage attention and coach others toward independent analysis."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Storytelling with data and sustainable leadership", "BA", "lead"],
+    "prerequisites": []
+  },
+  {
+    "id": "product-goal",
+    "trackId": "po",
+    "level": "junior",
+    "moduleId": "po-foundations",
+    "title": {
+      "az": "Məhsul vizyonundan Məhsul Məqsədinə",
+      "en": "From product vision to Product Goal"
+    },
+    "summary": {
+      "az": "Geniş istiqaməti ölçülə bilən növbəti məhsul nəticəsinə çevir.",
+      "en": "Turn a broad direction into a measurable next product outcome."
+    },
+    "minutes": 25,
+    "status": "published",
+    "topics": ["From product vision to Product Goal", "PO", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "scrum-framework",
+    "trackId": "po",
+    "level": "junior",
+    "moduleId": "po-foundations",
+    "title": {
+      "az": "Empirik çərçivə kimi Scrum",
+      "en": "Scrum as an empirical framework"
+    },
+    "summary": {
+      "az": "Şəffaflıq, yoxlama və uyğunlaşmanı məsuliyyət, tədbir və artefaktlarla əlaqələndir.",
+      "en": "Relate transparency, inspection and adaptation to accountabilities, events and artifacts."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Scrum as an empirical framework", "PO", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "product-backlog",
+    "trackId": "po",
+    "level": "junior",
+    "moduleId": "po-foundations",
+    "title": {
+      "az": "Məhsul İş Siyahısına sahiblik və dəqiqləşdirmə",
+      "en": "Product Backlog ownership and refinement"
+    },
+    "summary": {
+      "az": "İşi Məhsul Məqsədinə uyğun sırala və əməkdaşlıqla dəqiqləşdir.",
+      "en": "Order work toward a Product Goal and refine it collaboratively."
+    },
+    "minutes": 35,
+    "status": "published",
+    "topics": ["Product Backlog ownership and refinement", "PO", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "good-pbis",
+    "trackId": "po",
+    "level": "junior",
+    "moduleId": "po-foundations",
+    "title": {
+      "az": "Faydalı Məhsul İş Siyahısı elementləri",
+      "en": "Useful Product Backlog Items"
+    },
+    "summary": {
+      "az": "İş elementlərini başadüşülən, müzakirə üçün yetərincə kiçik və istifadəçi dəyəri ilə bağlı et.",
+      "en": "Make backlog items understandable, small enough to discuss and connected to user value."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Useful Product Backlog Items", "PO", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "jtbd-research",
+    "trackId": "po",
+    "level": "junior",
+    "moduleId": "po-discovery",
+    "title": {
+      "az": "JTBD və yönləndirməyən müsahibələr",
+      "en": "JTBD and non-leading interviews"
+    },
+    "summary": {
+      "az": "Müştərinin vəziyyətini, istədiyi irəliləyişi və mövcud alternativləri araşdır.",
+      "en": "Explore a customer’s situation, desired progress and existing alternatives."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["JTBD and non-leading interviews", "PO", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "personas",
+    "trackId": "po",
+    "level": "junior",
+    "moduleId": "po-discovery",
+    "title": {
+      "az": "Sübuta əsaslanan personalar",
+      "en": "Evidence-based personas"
+    },
+    "summary": {
+      "az": "Stereotipləri araşdırma ilə əvəz etmədən əhəmiyyətli davranış nümunələrini ümumiləşdir.",
+      "en": "Summarize meaningful behavior patterns without substituting stereotypes for research."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Evidence-based personas", "PO", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "story-mapping",
+    "trackId": "po",
+    "level": "junior",
+    "moduleId": "po-discovery",
+    "title": {
+      "az": "Hekayə xəritəsi və kəşf dövrləri",
+      "en": "Story mapping and discovery loops"
+    },
+    "summary": {
+      "az": "İstifadəçi səyahətini xəritələ və riskli fərziyyəni yoxlamaq üçün kiçik hissə seç.",
+      "en": "Map a user journey and choose a thin slice to test a risky assumption."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Story mapping and discovery loops", "PO", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "product-strategy",
+    "trackId": "po",
+    "level": "mid",
+    "moduleId": "po-strategy",
+    "title": {
+      "az": "Məhsul strategiyası və nəticə yol xəritələri",
+      "en": "Product strategy and outcome roadmaps"
+    },
+    "summary": {
+      "az": "Harada rəqabət aparılacağını, hansı ehtiyaclara xidmət ediləcəyini və hansı seçimlərin təxirə salınacağını izah et.",
+      "en": "Explain where to compete, which needs to serve and which choices to defer."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Product strategy and outcome roadmaps", "PO", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "okrs",
+    "trackId": "po",
+    "level": "mid",
+    "moduleId": "po-strategy",
+    "title": {
+      "az": "OKR və qərara çevrilən ölçülər",
+      "en": "OKRs and actionable measures"
+    },
+    "summary": {
+      "az": "Məqsədləri, ölçülən nəticələri və təşəbbüsləri ayır.",
+      "en": "Separate objectives, measurable results and initiatives."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["OKRs and actionable measures", "PO", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "product-metrics",
+    "trackId": "po",
+    "level": "mid",
+    "moduleId": "po-strategy",
+    "title": {
+      "az": "AARRR, HEART və Əsas İstiqamət göstəriciləri",
+      "en": "AARRR, HEART and North Star metrics"
+    },
+    "summary": {
+      "az": "Səthi artım yerinə müştəri davranışını və dəyərini göstərən ölçülər seç.",
+      "en": "Choose metrics that reveal customer behavior and value rather than vanity growth."
+    },
+    "minutes": 35,
+    "status": "published",
+    "topics": ["AARRR, HEART and North Star metrics", "PO", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "ebm",
+    "trackId": "po",
+    "level": "mid",
+    "moduleId": "po-strategy",
+    "title": {
+      "az": "Sübuta əsaslanan idarəetmə",
+      "en": "Evidence-Based Management"
+    },
+    "summary": {
+      "az": "Cari dəyəri, reallaşmamış dəyəri, bazara çıxma vaxtını və innovasiya qabiliyyətini yoxla.",
+      "en": "Inspect current value, unrealized value, time to market and ability to innovate."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Evidence-Based Management", "PO", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "po-prioritization",
+    "trackId": "po",
+    "level": "mid",
+    "moduleId": "po-strategy",
+    "title": {
+      "az": "Dəyər, xərc, risk və fürsət",
+      "en": "Value, cost, risk and opportunity"
+    },
+    "summary": {
+      "az": "Məhdudiyyətlər daxilində fürsətləri müqayisə et və iş sırasının səbəbini izah et.",
+      "en": "Compare opportunities under constraints and communicate why work is ordered."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Value, cost, risk and opportunity", "PO", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "forecast-release",
+    "trackId": "po",
+    "level": "mid",
+    "moduleId": "po-delivery",
+    "title": {
+      "az": "Proqnozlaşdırma və buraxılış planlaması",
+      "en": "Forecasting and release planning"
+    },
+    "summary": {
+      "az": "Proqnozu vəd kimi qəbul etmək əvəzinə axın sübutu və qeyri-müəyyənlik aralığından istifadə et.",
+      "en": "Use throughput evidence and uncertainty ranges instead of treating forecasts as promises."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Forecasting and release planning", "PO", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "po-teamwork",
+    "trackId": "po",
+    "level": "mid",
+    "moduleId": "po-delivery",
+    "title": {
+      "az": "Tərtibatçılar və Scrum Master ilə iş",
+      "en": "Working with Developers and Scrum Master"
+    },
+    "summary": {
+      "az": "Məhsul kontekstini paylaşarkən və qərar gecikməsini azaldarkən məsuliyyətlərə hörmət et.",
+      "en": "Respect accountabilities while sharing product context and removing decision delays."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Working with Developers and Scrum Master", "PO", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "pricing-gtm",
+    "trackId": "po",
+    "level": "mid",
+    "moduleId": "po-delivery",
+    "title": {
+      "az": "Qiymətləndirmə və bazara çıxış fərziyyələri",
+      "en": "Pricing and go-to-market hypotheses"
+    },
+    "summary": {
+      "az": "Müştəri seqmentini, ödəmə istəyini, kanalları və buraxılışdan öyrənməni əlaqələndir.",
+      "en": "Connect customer segments, willingness to pay, channels and launch learning."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Pricing and go-to-market hypotheses", "PO", "mid"],
+    "prerequisites": []
+  },
+  {
+    "id": "scaling-products",
+    "trackId": "po",
+    "level": "lead",
+    "moduleId": "po-leadership",
+    "title": {
+      "az": "Çox komanda, vahid məhsul istiqaməti",
+      "en": "Multiple teams, one product direction"
+    },
+    "summary": {
+      "az": "Komandaları ortaq məqsədlər, inteqrasiya və aydın məhsul sərhədləri ətrafında əlaqələndir.",
+      "en": "Coordinate teams around shared goals, integration and clear product boundaries."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Multiple teams, one product direction", "PO", "lead"],
+    "prerequisites": []
+  },
+  {
+    "id": "portfolio-lifecycle",
+    "trackId": "po",
+    "level": "lead",
+    "moduleId": "po-leadership",
+    "title": {
+      "az": "Məhsul həyat dövrü və portfel düşüncəsi",
+      "en": "Product lifecycle and portfolio thinking"
+    },
+    "summary": {
+      "az": "Sübut və fürsət xərcinə əsasən sərmayə, davam və dayandırma qərarları ver.",
+      "en": "Make investment, continuation and retirement decisions using evidence and opportunity cost."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Product lifecycle and portfolio thinking", "PO", "lead"],
+    "prerequisites": []
+  },
+  {
+    "id": "product-ethics",
+    "trackId": "po",
+    "level": "lead",
+    "moduleId": "po-leadership",
+    "title": {
+      "az": "Etika, inklüzivlik və məhsul seçimləri",
+      "en": "Ethics, inclusion and product trade-offs"
+    },
+    "summary": {
+      "az": "Aldadıcı nümunələri, məxfilik risklərini, əlçatanlıq boşluqlarını və zidd stimulları tanı.",
+      "en": "Recognize deceptive patterns, privacy risks, accessibility gaps and conflicting incentives."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Ethics, inclusion and product trade-offs", "PO", "lead"],
+    "prerequisites": []
+  },
+  {
+    "id": "po-negotiation",
+    "trackId": "po",
+    "level": "lead",
+    "moduleId": "po-leadership",
+    "title": {
+      "az": "Liderlik, danışıqlar və maraqlı tərəf uyğunluğu",
+      "en": "Leadership, negotiation and stakeholder alignment"
+    },
+    "summary": {
+      "az": "Rəhbərlər məhsul dəyərində razılaşmadıqda qərar aydınlığı yarat.",
+      "en": "Create decision clarity when executives disagree about product value."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Leadership, negotiation and stakeholder alignment", "PO", "lead"],
+    "prerequisites": []
+  },
+  {
+    "id": "ecba-context",
+    "trackId": "ecba",
+    "level": "junior",
+    "moduleId": "ecba-preparation",
+    "title": {
+      "az": "Biznes analizi anlayışları və kontekst",
+      "en": "Business analysis concepts and context"
+    },
+    "summary": {
+      "az": "Ssenaridə dəyişiklik, ehtiyac, həll, maraqlı tərəf, dəyər və konteksti əlaqələndir.",
+      "en": "Relate change, need, solution, stakeholder, value and context in a scenario."
+    },
+    "minutes": 35,
+    "status": "published",
+    "topics": ["Business analysis concepts and context", "ECBA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "ecba-knowledge-areas",
+    "trackId": "ecba",
+    "level": "junior",
+    "moduleId": "ecba-preparation",
+    "title": {
+      "az": "Analiz işinə əlaqəli baxış",
+      "en": "A connected view of analysis work"
+    },
+    "summary": {
+      "az": "Kiçik dəyişiklik boyunca analiz fəaliyyətlərinin bir-birini necə məlumatlandırdığını izah et.",
+      "en": "Explain how analysis activities inform each other across a small change."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["A connected view of analysis work", "ECBA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "ecba-techniques",
+    "trackId": "ecba",
+    "level": "junior",
+    "moduleId": "ecba-preparation",
+    "title": {
+      "az": "Analiz üsulunun seçilməsi",
+      "en": "Choosing an analysis technique"
+    },
+    "summary": {
+      "az": "Ehtiyac toplama və modelləşdirmə üsullarını qərara və mövcud sübuta uyğunlaşdır.",
+      "en": "Match elicitation and modeling techniques to the decision and available evidence."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Choosing an analysis technique", "ECBA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "ccba-planning",
+    "trackId": "ccba",
+    "level": "junior",
+    "moduleId": "ccba-preparation",
+    "title": {
+      "az": "Real təşəbbüs üçün analizi planlaşdır",
+      "en": "Plan analysis for a real initiative"
+    },
+    "summary": {
+      "az": "Maraqlı tərəf əlaqəsini, məlumat idarəsini və qərar yanaşmasını layihə riskinə uyğunlaşdır.",
+      "en": "Adapt stakeholder engagement, information management and decision approaches to project risk."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Plan analysis for a real initiative", "CCBA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "ccba-elicitation",
+    "trackId": "ccba",
+    "level": "junior",
+    "moduleId": "ccba-preparation",
+    "title": {
+      "az": "Sübutu topla və təsdiqlə",
+      "en": "Elicit and confirm evidence"
+    },
+    "summary": {
+      "az": "Məlumat toplamağı onun mənasını təsirə məruz qalanlarla təsdiqləməkdən ayır.",
+      "en": "Distinguish gathering information from confirming its meaning with affected people."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Elicit and confirm evidence", "CCBA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "ccba-lifecycle",
+    "trackId": "ccba",
+    "level": "junior",
+    "moduleId": "ccba-preparation",
+    "title": {
+      "az": "Tələb dəyişikliklərini idarə et",
+      "en": "Manage requirement changes"
+    },
+    "summary": {
+      "az": "İzlənilmə, saxlanma, prioritetləşdirmə və təsir analizindən birlikdə istifadə et.",
+      "en": "Use traceability, maintenance, prioritization and impact analysis together."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Manage requirement changes", "CCBA", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "cbap-strategy",
+    "trackId": "cbap",
+    "level": "junior",
+    "moduleId": "cbap-preparation",
+    "title": {
+      "az": "Qeyri-müəyyənlikdə strateji analiz",
+      "en": "Strategic analysis under uncertainty"
+    },
+    "summary": {
+      "az": "Cari vəziyyət məhdudiyyətlərini, gələcək seçimləri və dəyişiklik strategiyalarını müqayisə et.",
+      "en": "Compare current-state constraints, future-state options and change strategies."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Strategic analysis under uncertainty", "CBAP", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "cbap-design",
+    "trackId": "cbap",
+    "level": "junior",
+    "moduleId": "cbap-preparation",
+    "title": {
+      "az": "Tələblər və dizayn seçimləri",
+      "en": "Requirements and design options"
+    },
+    "summary": {
+      "az": "Qarşılıqlı asılı tələblər üzrə uyğunluğu, tamlığı, dəyəri və riski qiymətləndir.",
+      "en": "Assess consistency, completeness, value and risk across interdependent requirements."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Requirements and design options", "CBAP", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "cbap-evaluation",
+    "trackId": "cbap",
+    "level": "junior",
+    "moduleId": "cbap-preparation",
+    "title": {
+      "az": "Müəssisə həllinin dəyərini qiymətləndir",
+      "en": "Evaluate enterprise solution value"
+    },
+    "summary": {
+      "az": "Həll məhdudiyyətlərini təşkilati məhdudiyyətlərdən ayır və tədbir tövsiyə et.",
+      "en": "Separate solution limitations from organizational constraints and recommend action."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Evaluate enterprise solution value", "CBAP", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "scrum-accountabilities",
+    "trackId": "pspo1",
+    "level": "junior",
+    "moduleId": "pspo1-preparation",
+    "title": {
+      "az": "Scrum məsuliyyətləri praktikada",
+      "en": "Scrum accountabilities in practice"
+    },
+    "summary": {
+      "az": "Məhsul Sahibi, Scrum Master və Tərtibatçıları qərarlar və əməkdaşlıqla fərqləndir.",
+      "en": "Distinguish Product Owner, Scrum Master and Developers through decisions and collaboration."
+    },
+    "minutes": 25,
+    "status": "published",
+    "topics": ["Scrum accountabilities in practice", "PSPO1", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo1-events",
+    "trackId": "pspo1",
+    "level": "junior",
+    "moduleId": "pspo1-preparation",
+    "title": {
+      "az": "Tədbirlər geribildirim fürsəti kimi",
+      "en": "Events as feedback opportunities"
+    },
+    "summary": {
+      "az": "Hər Scrum tədbirinin niyə yoxlama və uyğunlaşma imkanı yaratdığını izah et.",
+      "en": "Explain why each Scrum event creates a chance to inspect and adapt."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Events as feedback opportunities", "PSPO1", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo1-artifacts",
+    "trackId": "pspo1",
+    "level": "junior",
+    "moduleId": "pspo1-preparation",
+    "title": {
+      "az": "Artefaktlar və onların öhdəlikləri",
+      "en": "Artifacts and their commitments"
+    },
+    "summary": {
+      "az": "Məhsul İş Siyahısını, Sprint İş Siyahısını və İnkrementi ortaq öhdəliklərlə əlaqələndir.",
+      "en": "Relate the Product Backlog, Sprint Backlog and Increment to shared commitments."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Artifacts and their commitments", "PSPO1", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo2-strategy",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Empirik məhsul strategiyası",
+      "en": "Empirical product strategy"
+    },
+    "summary": {
+      "az": "Prioritetlər toqquşduqda məhsul məqsədləri, eksperimentlər və sübutlardan istifadə et.",
+      "en": "Use product goals, experiments and evidence when priorities conflict."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Empirical product strategy", "PSPO2", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo2-value",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Çətin vəziyyətlərdə dəyər qərarları",
+      "en": "Value decisions in difficult situations"
+    },
+    "summary": {
+      "az": "Maraqlı tərəf tələblərini, riski, keyfiyyəti və nəticə sübutunu tarazlaşdır.",
+      "en": "Balance stakeholder demands, risk, quality and outcome evidence."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Value decisions in difficult situations", "PSPO2", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo2-facilitation",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Məhsul qərarlarına vasitəçilik et",
+      "en": "Facilitate product decisions"
+    },
+    "summary": {
+      "az": "Qərar sahibliyini aydın et və konstruktiv fikir ayrılığına yer ver.",
+      "en": "Make decision ownership explicit and invite constructive disagreement."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Facilitate product decisions", "PSPO2", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo3-written-case",
+    "trackId": "pspo3",
+    "level": "junior",
+    "moduleId": "pspo3-preparation",
+    "title": {
+      "az": "Məhsul ssenarisini əsaslandır",
+      "en": "Reason through a product case"
+    },
+    "summary": {
+      "az": "Kontekst, seçim, qərar və yoxlamanı bağlayan aydın cavab yaz.",
+      "en": "Write a clear response that connects context, options, decision and inspection."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Reason through a product case", "PSPO3", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo3-complexity",
+    "trackId": "pspo3",
+    "level": "junior",
+    "moduleId": "pspo3-preparation",
+    "title": {
+      "az": "Mürəkkəb kontekstdə məhsul sahibliyi",
+      "en": "Product ownership in complex contexts"
+    },
+    "summary": {
+      "az": "Məhsul məsuliyyətindən imtina etmədən sübut dəyişdikcə qərarları uyğunlaşdır.",
+      "en": "Adapt decisions as evidence changes without abandoning product accountability."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Product ownership in complex contexts", "PSPO3", "junior"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo3-reflection",
+    "trackId": "pspo3",
+    "level": "junior",
+    "moduleId": "pspo3-preparation",
+    "title": {
+      "az": "Düşün, yoxla və təkmilləşdir",
+      "en": "Reflect, inspect and improve"
+    },
+    "summary": {
+      "az": "Öz əsaslandırmanı tənqid et, fərziyyələri tap və növbəti mənalı sübutu təklif et.",
+      "en": "Critique your own reasoning, identify assumptions and propose meaningful next evidence."
+    },
+    "minutes": 35,
+    "status": "planned",
+    "topics": ["Reflect, inspect and improve", "PSPO3", "junior"],
+    "prerequisites": []
+  }
+]

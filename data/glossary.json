@@ -1,0 +1,470 @@
+[
+  {
+    "id": "business-analysis",
+    "term": {
+      "az": "Biznes analizi",
+      "en": "Business analysis"
+    },
+    "definition": {
+      "az": "Ehtiyacları anlamaq və kontekstdə dəyər yarada biləcək dəyişiklikləri tövsiyə etmək fəaliyyəti.",
+      "en": "A practice of understanding needs and recommending changes that can create value in context."
+    },
+    "relatedLessonId": "ba-role"
+  },
+  {
+    "id": "stakeholder",
+    "term": {
+      "az": "Maraqlı tərəf",
+      "en": "Stakeholder"
+    },
+    "definition": {
+      "az": "Dəyişikliklə marağı, ona təsir gücü və ya ondan təsirlənməsi olan insan və ya qrup.",
+      "en": "A person or group with an interest in, influence over or exposure to a change."
+    },
+    "relatedLessonId": "stakeholder-mapping"
+  },
+  {
+    "id": "elicitation",
+    "term": {
+      "az": "Ehtiyacların toplanması",
+      "en": "Elicitation"
+    },
+    "definition": {
+      "az": "İnsanlar, sübut və müşahidə vasitəsilə məlumat, ehtiyac və fərziyyələri üzə çıxaran fəaliyyətlər.",
+      "en": "Activities that uncover information, needs and assumptions through people, evidence and observation."
+    },
+    "relatedLessonId": "elicitation"
+  },
+  {
+    "id": "requirement",
+    "term": {
+      "az": "Tələb",
+      "en": "Requirement"
+    },
+    "definition": {
+      "az": "Biznes və ya maraqlı tərəf nəticəsini dəstəkləyən ehtiyacın və ya şərtin təsviri.",
+      "en": "A representation of a need or condition that supports a business or stakeholder outcome."
+    },
+    "relatedLessonId": "requirement-types"
+  },
+  {
+    "id": "functional-requirement",
+    "term": {
+      "az": "Funksional tələb",
+      "en": "Functional requirement"
+    },
+    "definition": {
+      "az": "Həllin təmin etməli olduğu davranış və ya imkan haqqında bəyanat.",
+      "en": "A statement of a behavior or capability the solution must provide."
+    },
+    "relatedLessonId": "requirement-types"
+  },
+  {
+    "id": "quality-requirement",
+    "term": {
+      "az": "Keyfiyyət tələbi",
+      "en": "Quality requirement"
+    },
+    "definition": {
+      "az": "Həllin necə işləməli olduğuna dair əlçatanlıq və ya cavab vaxtı kimi ölçülən şərt.",
+      "en": "A measurable condition about how well a solution should operate, such as accessibility or response time."
+    },
+    "relatedLessonId": "requirement-types"
+  },
+  {
+    "id": "acceptance-criteria",
+    "term": {
+      "az": "Qəbul meyarları",
+      "en": "Acceptance criteria"
+    },
+    "definition": {
+      "az": "Konkret işin razılaşdırılmış ehtiyacı ödəyib-ödəmədiyini müəyyən edən müşahidə edilən şərtlər.",
+      "en": "Observable conditions used to judge whether a specific item meets the agreed need."
+    },
+    "relatedLessonId": "stories-gherkin"
+  },
+  {
+    "id": "gherkin",
+    "term": {
+      "az": "Gherkin",
+      "en": "Gherkin"
+    },
+    "definition": {
+      "az": "Kontekst, addım və nəticəni təsvir etmək üçün adətən Given, When və Then işlədən strukturlaşdırılmış nümunə yazılışı.",
+      "en": "A structured example notation commonly using Given, When and Then to describe context, action and result."
+    },
+    "relatedLessonId": "stories-gherkin"
+  },
+  {
+    "id": "use-case",
+    "term": {
+      "az": "İstifadə halı",
+      "en": "Use case"
+    },
+    "definition": {
+      "az": "Məqsədə çatmaq üçün aktor və sistemin alternativ və istisnalar daxil olmaqla qarşılıqlı fəaliyyətinin təsviri.",
+      "en": "A description of how an actor and a system interact to achieve a goal, including alternatives and exceptions."
+    },
+    "relatedLessonId": "use-cases"
+  },
+  {
+    "id": "traceability",
+    "term": {
+      "az": "İzlənilmə",
+      "en": "Traceability"
+    },
+    "definition": {
+      "az": "Ehtiyac, tələb, dizayn, test və digər sübutları bağlayan qeyd edilmiş əlaqələr.",
+      "en": "Recorded relationships that connect needs, requirements, designs, tests and other evidence."
+    },
+    "relatedLessonId": "traceability"
+  },
+  {
+    "id": "scope",
+    "term": {
+      "az": "Əhatə",
+      "en": "Scope"
+    },
+    "definition": {
+      "az": "Problem, həll və ya işin xaricdə qalanlar daxil olmaqla razılaşdırılmış sərhədi.",
+      "en": "The agreed boundary of a problem, solution or work effort, including what is outside it."
+    },
+    "relatedLessonId": "scope-change"
+  },
+  {
+    "id": "bpmn",
+    "term": {
+      "az": "BPMN",
+      "en": "BPMN"
+    },
+    "definition": {
+      "az": "Hadisə, fəaliyyət, qərar və qarşılıqlı əlaqələri çatdırmaq üçün biznes prosesi modelləşdirmə yazılışı.",
+      "en": "A business process modeling notation for communicating events, activities, decisions and interactions."
+    },
+    "relatedLessonId": "bpmn-process"
+  },
+  {
+    "id": "uml",
+    "term": {
+      "az": "UML",
+      "en": "UML"
+    },
+    "definition": {
+      "az": "Sistemlərin müxtəlif struktur və davranış görünüşlərini təsvir edən modelləşdirmə yazılışları ailəsi.",
+      "en": "A family of modeling notations used to describe different structural and behavioral views of systems."
+    },
+    "relatedLessonId": "uml-models"
+  },
+  {
+    "id": "erd",
+    "term": {
+      "az": "Obyekt–əlaqə diaqramı",
+      "en": "Entity–relationship diagram"
+    },
+    "definition": {
+      "az": "Məlumat obyektləri, atributları və əlaqə sayı daxil olmaqla əlaqələrinin modeli.",
+      "en": "A model of data entities, their attributes and relationships, including cardinality."
+    },
+    "relatedLessonId": "data-modeling"
+  },
+  {
+    "id": "api",
+    "term": {
+      "az": "API",
+      "en": "API"
+    },
+    "definition": {
+      "az": "Proqram hissələrinin imkan və məlumat istədiyi və ya mübadilə etdiyi müəyyən edilmiş interfeys.",
+      "en": "A defined interface through which software components request or exchange capabilities and data."
+    },
+    "relatedLessonId": "rest-apis"
+  },
+  {
+    "id": "idempotency",
+    "term": {
+      "az": "İdempotentlik",
+      "en": "Idempotency"
+    },
+    "definition": {
+      "az": "Eyni əməliyyatın təkrarının onu bir dəfə etməklə eyni nəzərdə tutulan təsir yaratması xüsusiyyəti.",
+      "en": "A property in which repeating the same operation has the same intended effect as performing it once."
+    },
+    "relatedLessonId": "integration-basics"
+  },
+  {
+    "id": "uat",
+    "term": {
+      "az": "İstifadəçi qəbul testi",
+      "en": "User acceptance testing"
+    },
+    "definition": {
+      "az": "Həllin razılaşdırılmış real ehtiyac və qəbul şərtlərini dəstəkləməsinin biznes yönümlü yoxlanılması.",
+      "en": "Business-oriented validation that a solution supports agreed real-world needs and acceptance conditions."
+    },
+    "relatedLessonId": "uat"
+  },
+  {
+    "id": "rice",
+    "term": {
+      "az": "RICE",
+      "en": "RICE"
+    },
+    "definition": {
+      "az": "Əhatə, təsir, inam və səyi nəzərə alan prioritetləşdirmə üsulu; qiymətləndirmə və fərziyyələr aydın qalmalıdır.",
+      "en": "A prioritization heuristic considering reach, impact, confidence and effort; estimates and assumptions should remain explicit."
+    },
+    "relatedLessonId": "prioritization"
+  },
+  {
+    "id": "moscow",
+    "term": {
+      "az": "MoSCoW",
+      "en": "MoSCoW"
+    },
+    "definition": {
+      "az": "Razılaşdırılmış vaxt və ya əhatədə mütləq, vacib, mümkün və olmayacaq prioritetləri müzakirə üsulu.",
+      "en": "A way to discuss must, should, could and will-not-have priorities within an agreed time or scope boundary."
+    },
+    "relatedLessonId": "prioritization"
+  },
+  {
+    "id": "product-goal",
+    "term": {
+      "az": "Məhsul Məqsədi",
+      "en": "Product Goal"
+    },
+    "definition": {
+      "az": "Scrum Komandasına planlama istiqaməti verən və Məhsul İş Siyahısının öhdəliyi olan gələcək məhsul vəziyyəti.",
+      "en": "A future state of the product that gives the Scrum Team a direction for planning and is a commitment for the Product Backlog."
+    },
+    "relatedLessonId": "product-goal"
+  },
+  {
+    "id": "sprint-goal",
+    "term": {
+      "az": "Sprint Məqsədi",
+      "en": "Sprint Goal"
+    },
+    "definition": {
+      "az": "Seçilmiş işin niyə vacib olduğunu izah edən Sprint üçün vahid istiqamət.",
+      "en": "A single coherent objective for a Sprint that explains why the selected work matters."
+    },
+    "relatedLessonId": "product-goal"
+  },
+  {
+    "id": "product-backlog",
+    "term": {
+      "az": "Məhsul İş Siyahısı",
+      "en": "Product Backlog"
+    },
+    "definition": {
+      "az": "Məhsulu yaxşılaşdırmaq üçün lazım olanların inkişaf edən və sıralanmış siyahısı.",
+      "en": "An emergent, ordered list of what is needed to improve the product."
+    },
+    "relatedLessonId": "product-backlog"
+  },
+  {
+    "id": "increment",
+    "term": {
+      "az": "İnkrement",
+      "en": "Increment"
+    },
+    "definition": {
+      "az": "Bitmişlik Tərifinə cavab verən və əvvəlki inkrementlərlə birləşən istifadəyə yararlı məhsul əlavəsi.",
+      "en": "A usable addition to the product that meets the Definition of Done and combines with previous increments."
+    },
+    "relatedLessonId": "scrum-accountabilities"
+  },
+  {
+    "id": "definition-of-done",
+    "term": {
+      "az": "Bitmişlik Tərifi",
+      "en": "Definition of Done"
+    },
+    "definition": {
+      "az": "İşin nə vaxt istifadəyə yararlı İnkrementin hissəsi olduğunu müəyyən edən ortaq keyfiyyət təsviri.",
+      "en": "A shared quality description that establishes when work is part of a usable Increment."
+    },
+    "relatedLessonId": "scrum-accountabilities"
+  },
+  {
+    "id": "product-owner",
+    "term": {
+      "az": "Məhsul Sahibi",
+      "en": "Product Owner"
+    },
+    "definition": {
+      "az": "Məhsul dəyərinin maksimumlaşdırılması və Məhsul İş Siyahısının səmərəli idarəsinə yönələn Scrum məsuliyyəti.",
+      "en": "The Scrum accountability focused on maximizing product value and effective Product Backlog management."
+    },
+    "relatedLessonId": "scrum-accountabilities"
+  },
+  {
+    "id": "scrum-master",
+    "term": {
+      "az": "Scrum Master",
+      "en": "Scrum Master"
+    },
+    "definition": {
+      "az": "Scrum-un müəyyən edildiyi kimi qurulması və komanda səmərəliliyinin dəstəklənməsinə yönələn məsuliyyət.",
+      "en": "The Scrum accountability focused on establishing Scrum as defined and supporting team effectiveness."
+    },
+    "relatedLessonId": "scrum-accountabilities"
+  },
+  {
+    "id": "developers",
+    "term": {
+      "az": "Tərtibatçılar",
+      "en": "Developers"
+    },
+    "definition": {
+      "az": "Scrum Komandasında yararlı İnkrement yaratmağa və planı Sprint Məqsədinə uyğunlaşdırmağa cavabdeh insanlar.",
+      "en": "People in a Scrum Team accountable for creating a usable Increment and adapting their plan toward the Sprint Goal."
+    },
+    "relatedLessonId": "scrum-accountabilities"
+  },
+  {
+    "id": "empiricism",
+    "term": {
+      "az": "Empirizm",
+      "en": "Empiricism"
+    },
+    "definition": {
+      "az": "Şəffaflıq, yoxlama və uyğunlaşma ilə təcrübədən öyrənmək və müşahidə olunan sübuta əsasən qərar vermək.",
+      "en": "Learning from experience and making decisions using observed evidence, with transparency, inspection and adaptation."
+    },
+    "relatedLessonId": "scrum-framework"
+  },
+  {
+    "id": "refinement",
+    "term": {
+      "az": "İş siyahısının dəqiqləşdirilməsi",
+      "en": "Backlog refinement"
+    },
+    "definition": {
+      "az": "İş elementlərini daha yaxşı anlamaq üçün hissələrə ayırmaq və aydınlaşdırmaq üzrə davamlı iş.",
+      "en": "Ongoing work to break down and clarify backlog items so they are better understood."
+    },
+    "relatedLessonId": "product-backlog"
+  },
+  {
+    "id": "jtbd",
+    "term": {
+      "az": "Görülməli işlər yanaşması",
+      "en": "Jobs to Be Done"
+    },
+    "definition": {
+      "az": "İnsanın müəyyən vəziyyətdə istədiyi irəliləyişi və istifadə etdiyi alternativləri araşdırmaq üçün baxış.",
+      "en": "A lens for investigating the progress a person seeks in a particular situation and the alternatives they use."
+    },
+    "relatedLessonId": "jtbd-research"
+  },
+  {
+    "id": "okr",
+    "term": {
+      "az": "Məqsədlər və Açar Nəticələr",
+      "en": "Objectives and Key Results"
+    },
+    "definition": {
+      "az": "Nəticəni təşəbbüsdən ayıraraq istiqaməti ölçülən nəticələrə bağlayan məqsədqoyma yanaşması.",
+      "en": "A goal-setting approach that connects a direction with measurable results, separating results from initiatives."
+    },
+    "relatedLessonId": "okrs"
+  },
+  {
+    "id": "north-star",
+    "term": {
+      "az": "Əsas İstiqamət göstəricisi",
+      "en": "North Star metric"
+    },
+    "definition": {
+      "az": "Məhsul qərarlarını əlaqələndirən təkrarlanan müştəri dəyəri ölçüsü; qoruyucu göstəricilər yenə lazımdır.",
+      "en": "A candidate measure of recurring customer value that helps coordinate product decisions; it still needs guardrails."
+    },
+    "relatedLessonId": "product-metrics"
+  },
+  {
+    "id": "guardrail",
+    "term": {
+      "az": "Qoruyucu göstərici",
+      "en": "Guardrail metric"
+    },
+    "definition": {
+      "az": "Əsas nəticəni izləyərkən qəbuledilməz yan təsirləri müşahidə etmək üçün ölçü.",
+      "en": "A measure used to observe unacceptable side effects while pursuing a primary outcome."
+    },
+    "relatedLessonId": "product-goal"
+  },
+  {
+    "id": "ebm",
+    "term": {
+      "az": "Sübuta əsaslanan idarəetmə",
+      "en": "Evidence-Based Management"
+    },
+    "definition": {
+      "az": "Məqsəd, eksperiment, nəticə və təşkilati qabiliyyət sübutu ilə dəyəri yaxşılaşdıran yanaşma.",
+      "en": "An approach to improving value through goals, experiments and evidence about outcomes and organizational capability."
+    },
+    "relatedLessonId": "ebm"
+  },
+  {
+    "id": "forecast",
+    "term": {
+      "az": "Proqnoz",
+      "en": "Forecast"
+    },
+    "definition": {
+      "az": "Qeyri-müəyyənlik və fərziyyələri görünən etməli olan gələcək nəticənin sübut əsaslı qiymətləndirilməsi.",
+      "en": "An evidence-based estimate of a future outcome that should make uncertainty and assumptions visible."
+    },
+    "relatedLessonId": "forecast-release"
+  },
+  {
+    "id": "opportunity-cost",
+    "term": {
+      "az": "Fürsət xərci",
+      "en": "Opportunity cost"
+    },
+    "definition": {
+      "az": "Məhdud resursdan istifadə seçimi ediləndə imtina olunan ən yaxşı alternativin dəyəri.",
+      "en": "The value of the best alternative forgone when choosing how to use limited resources."
+    },
+    "relatedLessonId": "portfolio-lifecycle"
+  },
+  {
+    "id": "accessibility",
+    "term": {
+      "az": "Əlçatanlıq",
+      "en": "Accessibility"
+    },
+    "definition": {
+      "az": "Fərqli qabiliyyətli insanların xidməti qavraya, anlaya və istifadə edə bilməsi üçün dizayn və qiymətləndirmə.",
+      "en": "Designing and evaluating a service so people with different abilities can perceive, understand and use it."
+    },
+    "relatedLessonId": "product-ethics"
+  },
+  {
+    "id": "hypothesis",
+    "term": {
+      "az": "Fərziyyə",
+      "en": "Hypothesis"
+    },
+    "definition": {
+      "az": "Yeni sübutla sorğulana bilən, yoxlanıla bilən izah və ya proqnoz.",
+      "en": "A testable explanation or prediction that could be challenged by new evidence."
+    },
+    "relatedLessonId": "jtbd-research"
+  },
+  {
+    "id": "readiness",
+    "term": {
+      "az": "Öyrənmə hazırlığı",
+      "en": "Learning readiness"
+    },
+    "definition": {
+      "az": "İzlənilən məşq və ya özünüqiymətləndirməyə əsaslanan tədris göstəricisi; imtahan uğuru və ya uyğunluq zəmanəti deyil.",
+      "en": "An educational indicator based on tracked practice or self-assessment, not a guarantee of exam success or eligibility."
+    },
+    "relatedLessonId": "product-goal"
+  }
+]

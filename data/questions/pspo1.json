@@ -1,0 +1,1592 @@
+[
+  {
+    "id": "pspo1-001",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 1,
+    "text": {
+      "en": "A stakeholder says the Product Owner’s job is to relay requests unchanged. Which responsibility should guide the response?",
+      "az": "Maraqlı tərəf Məhsul Sahibinin işinin istəkləri dəyişmədən ötürmək olduğunu deyir. Cavabı hansı məsuliyyət yönləndirməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Maximize product value and make product decisions transparent.",
+          "az": "Məhsul dəyərini artırmaq və məhsul qərarlarını şəffaf etmək."
+        },
+        "explanation": {
+          "en": "Product ownership concerns value and product direction, not merely processing requests.",
+          "az": "Məhsul sahibliyi yalnız istəkləri emal etmək deyil, dəyər və məhsul istiqaməti ilə bağlıdır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Have the Product Owner assign individual technical tasks.",
+          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+        },
+        "explanation": {
+          "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Make a committee collectively accountable as the Product Owner.",
+          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+        },
+        "explanation": {
+          "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
+          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Product ownership concerns value and product direction, not merely processing requests.",
+      "az": "Məhsul sahibliyi yalnız istəkləri emal etmək deyil, dəyər və məhsul istiqaməti ilə bağlıdır."
+    },
+    "lessonId": "scrum-accountabilities",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-002",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "product-strategy",
+    "difficulty": 1,
+    "text": {
+      "en": "A backlog is full of unrelated ideas and nobody can explain the product direction. What would create a useful longer-term focus?",
+      "az": "Bekloq əlaqəsiz ideyalarla doludur və məhsul istiqamətini heç kim izah edə bilmir. Uzunmüddətli faydalı diqqəti nə yaradar?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Create a clear longer-term objective for the product.",
+          "az": "Məhsul üçün aydın uzunmüddətli məqsəd yaratmaq."
+        },
+        "explanation": {
+          "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
+          "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Label every request as mandatory without comparing consequences.",
+          "az": "Nəticələri müqayisə etmədən hər istəyi məcburi saymaq."
+        },
+        "explanation": {
+          "en": "If everything is essential, the classification offers no useful basis for trade-offs.",
+          "az": "Hər şey zəruridirsə, təsnifat seçimlər üçün faydalı əsas vermir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Use higher story-point velocity as the primary proof of product value.",
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+        },
+        "explanation": {
+          "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
+          "az": "Sürət komandanın iş təxminlərinə aiddir və müştəri və ya biznes nəticələrini göstərmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
+      "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+    },
+    "lessonId": "product-goal",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-003",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "Several departments demand the top position in the backlog. Which approach fits Product Ownership?",
+      "az": "Bir neçə bölmə bekloqda birinci yeri tələb edir. Məhsul Sahibliyinə hansı yanaşma uyğundur?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Order the Product Backlog using value, risk, and learning.",
+          "az": "Məhsul Bekloqunu dəyər, risk və öyrənməyə əsasən sıralamaq."
+        },
+        "explanation": {
+          "en": "Ordering is a product decision; a single transparent order supports coherent choices.",
+          "az": "Sıralama məhsul qərarıdır; vahid şəffaf sıra uyğun seçimləri dəstəkləyir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Give the loudest stakeholder permanent priority.",
+          "az": "Ən çox israr edən tərəfə daimi üstünlük vermək."
+        },
+        "explanation": {
+          "en": "Influence alone is not evidence of customer value, urgency, or alignment with the product goal.",
+          "az": "Təsir gücü təkbaşına müştəri dəyəri, təcililik və ya məhsul məqsədinə uyğunluq sübutu deyil."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Ask the Scrum Master to own Product Backlog ordering.",
+          "az": "Məhsul Bekloqunun sıralanmasına Scrum Masterin sahib olmasını istəmək."
+        },
+        "explanation": {
+          "en": "The Product Owner remains accountable for effective Product Backlog management, including ordering.",
+          "az": "Məhsul Sahibi sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Ordering is a product decision; a single transparent order supports coherent choices.",
+      "az": "Sıralama məhsul qərarıdır; vahid şəffaf sıra uyğun seçimləri dəstəkləyir."
+    },
+    "lessonId": "product-backlog",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-004",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "The Product Owner starts assigning database tasks to individual Developers. What should change?",
+      "az": "Məhsul Sahibi fərdi Tərtibatçılara verilənlər bazası tapşırıqları paylamağa başlayır. Nə dəyişməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Let Developers decide how to create the Increment.",
+          "az": "İnkrementin necə yaradılacağına Tərtibatçıların qərar verməsinə imkan yaratmaq."
+        },
+        "explanation": {
+          "en": "Developers own the implementation plan and adapt it as they learn.",
+          "az": "Tərtibatçılar tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Have the Product Owner assign individual technical tasks.",
+          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+        },
+        "explanation": {
+          "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Make a committee collectively accountable as the Product Owner.",
+          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+        },
+        "explanation": {
+          "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
+          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Developers own the implementation plan and adapt it as they learn.",
+      "az": "Tərtibatçılar tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
+    },
+    "lessonId": "scrum-accountabilities",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-005",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "Sprint Planning produces only a list of unrelated tasks. What would establish why this Sprint is worthwhile?",
+      "az": "Sprint Planlaması yalnız əlaqəsiz tapşırıq siyahısı yaradır. Sprintin niyə dəyərli olduğunu nə müəyyən edər?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Collaborate on one Sprint Goal that explains the purpose.",
+          "az": "Məqsədi izah edən vahid Sprint Məqsədi üzərində əməkdaşlıq etmək."
+        },
+        "explanation": {
+          "en": "The Sprint Goal creates focus while allowing flexibility in the exact work needed.",
+          "az": "Sprint Məqsədi diqqəti cəmləyir və tələb olunan konkret işdə çevikliyə imkan verir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Let unrelated requests replace any shared Sprint purpose.",
+          "az": "Əlaqəsiz istəklərin ortaq Sprint məqsədini əvəz etməsinə imkan vermək."
+        },
+        "explanation": {
+          "en": "Without a shared purpose, work loses focus and the Sprint Goal cannot guide adaptation.",
+          "az": "Ortaq məqsəd olmadan iş diqqətini itirir və Sprint Məqsədi uyğunlaşmaya istiqamət verə bilmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Use higher story-point velocity as the primary proof of product value.",
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+        },
+        "explanation": {
+          "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
+          "az": "Sürət komandanın iş təxminlərinə aiddir və müştəri və ya biznes nəticələrini göstərmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "The Sprint Goal creates focus while allowing flexibility in the exact work needed.",
+      "az": "Sprint Məqsədi diqqəti cəmləyir və tələb olunan konkret işdə çevikliyə imkan verir."
+    },
+    "lessonId": "pspo1-events",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-006",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "Developers discover that one planned task is unnecessary to achieve the Sprint Goal. What is an appropriate response?",
+      "az": "Tərtibatçılar planlaşdırılan işlərdən birinin Sprint Məqsədi üçün lazımsız olduğunu aşkar edirlər. Uyğun reaksiya nədir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Discuss and renegotiate scope with the Product Owner while protecting the Sprint Goal.",
+          "az": "Sprint Məqsədini qoruyaraq Məhsul Sahibi ilə əhatəni müzakirə edib yenidən razılaşdırmaq."
+        },
+        "explanation": {
+          "en": "Learning can change the implementation scope without abandoning the Sprint Goal.",
+          "az": "Öyrənmə Sprint Məqsədindən imtina etmədən tətbiq əhatəsini dəyişə bilər."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Freeze the original plan regardless of new evidence.",
+          "az": "Yeni sübutdan asılı olmayaraq ilkin planı dəyişməz saxlamaq."
+        },
+        "explanation": {
+          "en": "Ignoring new evidence prevents adapting to a better understanding of the need or situation.",
+          "az": "Yeni sübutun nəzərə alınmaması ehtiyac və ya vəziyyətin daha yaxşı anlaşılmasına uyğunlaşmağa mane olur."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Let unrelated requests replace any shared Sprint purpose.",
+          "az": "Əlaqəsiz istəklərin ortaq Sprint məqsədini əvəz etməsinə imkan vermək."
+        },
+        "explanation": {
+          "en": "Without a shared purpose, work loses focus and the Sprint Goal cannot guide adaptation.",
+          "az": "Ortaq məqsəd olmadan iş diqqətini itirir və Sprint Məqsədi uyğunlaşmaya istiqamət verə bilmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Learning can change the implementation scope without abandoning the Sprint Goal.",
+      "az": "Öyrənmə Sprint Məqsədindən imtina etmədən tətbiq əhatəsini dəyişə bilər."
+    },
+    "lessonId": "pspo1-events",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-007",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "A feature is coded but its agreed security checks are unfinished. How should it be treated?",
+      "az": "Funksiya kodlanıb, amma razılaşdırılmış təhlükəsizlik yoxlamaları bitməyib. Bu iş necə qiymətləndirilməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Apply the shared Definition of Done before counting work as part of an Increment.",
+          "az": "İşi İnkrementə daxil etməzdən əvvəl ortaq Hazır Olma Tərifini tətbiq etmək."
+        },
+        "explanation": {
+          "en": "Work that does not meet the Definition of Done is not a usable part of the Increment.",
+          "az": "Hazır Olma Tərifinə uyğun olmayan iş İnkrementin istifadə edilə bilən hissəsi sayılmır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Lower the Definition of Done to show more completed work.",
+          "az": "Daha çox işi bitmiş göstərmək üçün Hazır Olma Tərifini zəiflətmək."
+        },
+        "explanation": {
+          "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Work that does not meet the Definition of Done is not a usable part of the Increment.",
+      "az": "Hazır Olma Tərifinə uyğun olmayan iş İnkrementin istifadə edilə bilən hissəsi sayılmır."
+    },
+    "lessonId": "pspo1-artifacts",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-008",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "empiricism",
+    "difficulty": 1,
+    "text": {
+      "en": "A Sprint Review becomes a slide presentation with no stakeholder discussion. What is missing?",
+      "az": "Sprint İcmalı tərəflərlə müzakirəsiz slayd təqdimatına çevrilir. Nə çatışmır?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Inspect the outcome with stakeholders and adapt future work.",
+          "az": "Nəticəni maraqlı tərəflərlə yoxlayıb gələcək işi uyğunlaşdırmaq."
+        },
+        "explanation": {
+          "en": "The Sprint Review is an opportunity to inspect progress and decide useful adaptations together.",
+          "az": "Sprint İcmalı irəliləyişi yoxlamaq və faydalı uyğunlaşmaları birlikdə seçmək imkanıdır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "The Sprint Review is an opportunity to inspect progress and decide useful adaptations together.",
+      "az": "Sprint İcmalı irəliləyişi yoxlamaq və faydalı uyğunlaşmaları birlikdə seçmək imkanıdır."
+    },
+    "lessonId": "pspo1-events",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-009",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "Repeated integration failures frustrate the Scrum Team. Which action fits the Sprint Retrospective?",
+      "az": "Təkrar inteqrasiya xətaları Scrum Komandasını narahat edir. Sprint Retrospektivinə hansı addım uyğundur?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Agree a concrete improvement to quality or effectiveness.",
+          "az": "Keyfiyyət və ya effektivlik üçün konkret təkmilləşdirmə razılaşdırmaq."
+        },
+        "explanation": {
+          "en": "The Sprint Retrospective improves how the Scrum Team works, including its interactions and practices.",
+          "az": "Sprint Retrospektivi qarşılıqlı əlaqə və təcrübələr daxil olmaqla Scrum Komandasının işini yaxşılaşdırır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Remove conflicting evidence from the report to simplify the decision.",
+          "az": "Qərarı sadələşdirmək üçün ziddiyyətli sübutu hesabatdan silmək."
+        },
+        "explanation": {
+          "en": "Hiding evidence misleads decision makers and conceals uncertainty.",
+          "az": "Sübutu gizlətmək qərar verənləri yanıltmaqla qeyri-müəyyənliyi ört-basdır edir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Make the Daily Scrum a status report to the Product Owner.",
+          "az": "Gündəlik Scrumu Məhsul Sahibinə status hesabatına çevirmək."
+        },
+        "explanation": {
+          "en": "The Daily Scrum serves the Developers’ inspection and planning toward the Sprint Goal.",
+          "az": "Gündəlik Scrum Tərtibatçıların Sprint Məqsədinə doğru yoxlama və planlaşdırmasına xidmət edir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "The Sprint Retrospective improves how the Scrum Team works, including its interactions and practices.",
+      "az": "Sprint Retrospektivi qarşılıqlı əlaqə və təcrübələr daxil olmaqla Scrum Komandasının işini yaxşılaşdırır."
+    },
+    "lessonId": "pspo1-events",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-010",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "At the Daily Scrum, Developers only recite yesterday’s tasks to a manager. What should the event help them do?",
+      "az": "Gündəlik Scrumda Tərtibatçılar yalnız dünənin işlərini rəhbərə sadalayırlar. Tədbir onlara nə etməyə kömək etməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Inspect progress toward the Sprint Goal and adapt the plan.",
+          "az": "Sprint Məqsədinə doğru irəliləyişi yoxlayıb planı uyğunlaşdırmaq."
+        },
+        "explanation": {
+          "en": "The Daily Scrum helps Developers coordinate and plan the next working day.",
+          "az": "Gündəlik Scrum Tərtibatçıların işi əlaqələndirməsinə və növbəti iş gününü planlaşdırmasına kömək edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Make the Daily Scrum a status report to the Product Owner.",
+          "az": "Gündəlik Scrumu Məhsul Sahibinə status hesabatına çevirmək."
+        },
+        "explanation": {
+          "en": "The Daily Scrum serves the Developers’ inspection and planning toward the Sprint Goal.",
+          "az": "Gündəlik Scrum Tərtibatçıların Sprint Məqsədinə doğru yoxlama və planlaşdırmasına xidmət edir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Have the Product Owner assign individual technical tasks.",
+          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+        },
+        "explanation": {
+          "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "The Daily Scrum helps Developers coordinate and plan the next working day.",
+      "az": "Gündəlik Scrum Tərtibatçıların işi əlaqələndirməsinə və növbəti iş gününü planlaşdırmasına kömək edir."
+    },
+    "lessonId": "pspo1-events",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-011",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "A usable urgent fix meets the Definition of Done before the Sprint Review. What is true about releasing it?",
+      "az": "Təcili düzəliş Sprint İcmalından əvvəl Hazır Olma Tərifinə uyğundur. Onun buraxılışı barədə nə doğrudur?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Release a usable Increment when it is valuable; the Sprint Review is not a release gate.",
+          "az": "Faydalı olduqda istifadəyə hazır İnkrementi buraxmaq; Sprint İcmalı buraxılış qapısı deyil."
+        },
+        "explanation": {
+          "en": "A usable Increment can be delivered before the Sprint ends; review timing does not define releasability.",
+          "az": "İstifadəyə hazır İnkrement Sprint bitmədən təqdim edilə bilər; icmalın vaxtı buraxılışa yararlılığı müəyyən etmir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Require the Sprint Review before any usable Increment can be released.",
+          "az": "İstifadəyə hazır İnkrement buraxılmazdan əvvəl mütləq Sprint İcmalı tələb etmək."
+        },
+        "explanation": {
+          "en": "The Sprint Review is for inspection and adaptation; it is not a mandatory release approval gate.",
+          "az": "Sprint İcmalı yoxlama və uyğunlaşma üçündür; məcburi buraxılış təsdiqi qapısı deyil."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Lower the Definition of Done to show more completed work.",
+          "az": "Daha çox işi bitmiş göstərmək üçün Hazır Olma Tərifini zəiflətmək."
+        },
+        "explanation": {
+          "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A usable Increment can be delivered before the Sprint ends; review timing does not define releasability.",
+      "az": "İstifadəyə hazır İnkrement Sprint bitmədən təqdim edilə bilər; icmalın vaxtı buraxılışa yararlılığı müəyyən etmir."
+    },
+    "lessonId": "forecast-release",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-012",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "A legal change makes the current Sprint Goal irrelevant. Who may cancel the Sprint on that basis?",
+      "az": "Qanun dəyişikliyi cari Sprint Məqsədini mənasız edir. Bu əsasla Sprinti kim ləğv edə bilər?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The Product Owner may cancel the Sprint if its goal becomes obsolete.",
+          "az": "Sprint Məqsədi aktuallığını itirərsə Məhsul Sahibi Sprinti ləğv edə bilər."
+        },
+        "explanation": {
+          "en": "Cancellation addresses an obsolete Sprint Goal rather than normal uncertainty about individual tasks.",
+          "az": "Ləğv etmə ayrı-ayrı işlərdə adi qeyri-müəyyənliyi deyil, aktuallığını itirmiş Sprint Məqsədini həll edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Ask the Scrum Master to own Product Backlog ordering.",
+          "az": "Məhsul Bekloqunun sıralanmasına Scrum Masterin sahib olmasını istəmək."
+        },
+        "explanation": {
+          "en": "The Product Owner remains accountable for effective Product Backlog management, including ordering.",
+          "az": "Məhsul Sahibi sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Make a committee collectively accountable as the Product Owner.",
+          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+        },
+        "explanation": {
+          "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
+          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Cancellation addresses an obsolete Sprint Goal rather than normal uncertainty about individual tasks.",
+      "az": "Ləğv etmə ayrı-ayrı işlərdə adi qeyri-müəyyənliyi deyil, aktuallığını itirmiş Sprint Məqsədini həll edir."
+    },
+    "lessonId": "scrum-accountabilities",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-013",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "Upcoming backlog items are too broad to discuss sensibly in Sprint Planning. What ongoing activity helps?",
+      "az": "Qarşıdakı bekloq elementləri Sprint Planlamasında müzakirə üçün çox genişdir. Hansı davamlı fəaliyyət kömək edir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Break down and clarify Product Backlog items continuously.",
+          "az": "Məhsul Bekloqu elementlərini davamlı şəkildə bölmək və dəqiqləşdirmək."
+        },
+        "explanation": {
+          "en": "Refinement increases understanding and makes upcoming items suitable for discussion and selection.",
+          "az": "Dəqiqləşdirmə anlayışı artırır və qarşıdakı elementləri müzakirə və seçim üçün uyğun edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Freeze the original plan regardless of new evidence.",
+          "az": "Yeni sübutdan asılı olmayaraq ilkin planı dəyişməz saxlamaq."
+        },
+        "explanation": {
+          "en": "Ignoring new evidence prevents adapting to a better understanding of the need or situation.",
+          "az": "Yeni sübutun nəzərə alınmaması ehtiyac və ya vəziyyətin daha yaxşı anlaşılmasına uyğunlaşmağa mane olur."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Label every request as mandatory without comparing consequences.",
+          "az": "Nəticələri müqayisə etmədən hər istəyi məcburi saymaq."
+        },
+        "explanation": {
+          "en": "If everything is essential, the classification offers no useful basis for trade-offs.",
+          "az": "Hər şey zəruridirsə, təsnifat seçimlər üçün faydalı əsas vermir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Refinement increases understanding and makes upcoming items suitable for discussion and selection.",
+      "az": "Dəqiqləşdirmə anlayışı artırır və qarşıdakı elementləri müzakirə və seçim üçün uyğun edir."
+    },
+    "lessonId": "product-backlog",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-014",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "A Product Owner delegates interview scheduling and backlog editing. What remains true about accountability?",
+      "az": "Məhsul Sahibi müsahibə vaxtlarının təyinini və bekloqun redaktəsini həvalə edir. Hesabatlılıq barədə nə doğrudur?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Keep one Product Owner accountable while involving others in the work.",
+          "az": "Başqalarını işə cəlb edərək bir Məhsul Sahibinin hesabatlılığını saxlamaq."
+        },
+        "explanation": {
+          "en": "Delegating backlog work does not distribute the Product Owner accountability to a committee.",
+          "az": "Bekloq işinin həvalə edilməsi Məhsul Sahibinin hesabatlılığını komitəyə bölmür."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Make a committee collectively accountable as the Product Owner.",
+          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+        },
+        "explanation": {
+          "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
+          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Ask the Scrum Master to own Product Backlog ordering.",
+          "az": "Məhsul Bekloqunun sıralanmasına Scrum Masterin sahib olmasını istəmək."
+        },
+        "explanation": {
+          "en": "The Product Owner remains accountable for effective Product Backlog management, including ordering.",
+          "az": "Məhsul Sahibi sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Delegating backlog work does not distribute the Product Owner accountability to a committee.",
+      "az": "Bekloq işinin həvalə edilməsi Məhsul Sahibinin hesabatlılığını komitəyə bölmür."
+    },
+    "lessonId": "scrum-accountabilities",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-015",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "stakeholder-leadership",
+    "difficulty": 1,
+    "text": {
+      "en": "A Scrum Team expects the Scrum Master to distribute all daily tasks. What support is more appropriate?",
+      "az": "Scrum Komandası bütün gündəlik tapşırıqları Scrum Masterin paylamasını gözləyir. Hansı dəstək daha uyğundur?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Ask the Scrum Master to coach the team in self-management and Scrum.",
+          "az": "Scrum Masterdən özünüidarəetmə və Scrum üzrə komandaya dəstək istəmək."
+        },
+        "explanation": {
+          "en": "The Scrum Master helps improve Scrum effectiveness rather than acting as the team task dispatcher.",
+          "az": "Scrum Master işləri paylayan şəxs olmaqdan çox Scrum-un effektivliyini artırmağa kömək edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Have the Product Owner assign individual technical tasks.",
+          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+        },
+        "explanation": {
+          "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Make the Daily Scrum a status report to the Product Owner.",
+          "az": "Gündəlik Scrumu Məhsul Sahibinə status hesabatına çevirmək."
+        },
+        "explanation": {
+          "en": "The Daily Scrum serves the Developers’ inspection and planning toward the Sprint Goal.",
+          "az": "Gündəlik Scrum Tərtibatçıların Sprint Məqsədinə doğru yoxlama və planlaşdırmasına xidmət edir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "The Scrum Master helps improve Scrum effectiveness rather than acting as the team task dispatcher.",
+      "az": "Scrum Master işləri paylayan şəxs olmaqdan çox Scrum-un effektivliyini artırmağa kömək edir."
+    },
+    "lessonId": "scrum-accountabilities",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-016",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "empiricism",
+    "difficulty": 1,
+    "text": {
+      "en": "The market is uncertain and the initial plan is based on assumptions. Which decision approach best fits Scrum?",
+      "az": "Bazar qeyri-müəyyəndir və ilkin plan fərziyyələrə əsaslanır. Scrum-a hansı qərar yanaşması uyğundur?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Make the work transparent, inspect evidence, and adapt.",
+          "az": "İşi şəffaf etmək, sübutları yoxlamaq və uyğunlaşmaq."
+        },
+        "explanation": {
+          "en": "Empirical decisions use observed results rather than treating forecasts as certainty.",
+          "az": "Empirik qərarlar proqnozu qəti həqiqət saymaq əvəzinə müşahidə olunan nəticələrdən istifadə edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Freeze the original plan regardless of new evidence.",
+          "az": "Yeni sübutdan asılı olmayaraq ilkin planı dəyişməz saxlamaq."
+        },
+        "explanation": {
+          "en": "Ignoring new evidence prevents adapting to a better understanding of the need or situation.",
+          "az": "Yeni sübutun nəzərə alınmaması ehtiyac və ya vəziyyətin daha yaxşı anlaşılmasına uyğunlaşmağa mane olur."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Guarantee the original scope and date despite unresolved uncertainty.",
+          "az": "Həll edilməmiş qeyri-müəyyənliyə baxmayaraq ilkin əhatə və tarixə zəmanət vermək."
+        },
+        "explanation": {
+          "en": "An unsupported guarantee conceals uncertainty instead of supporting an informed decision.",
+          "az": "Əsası olmayan zəmanət məlumatlı qərarı dəstəkləmək əvəzinə qeyri-müəyyənliyi gizlədir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Empirical decisions use observed results rather than treating forecasts as certainty.",
+      "az": "Empirik qərarlar proqnozu qəti həqiqət saymaq əvəzinə müşahidə olunan nəticələrdən istifadə edir."
+    },
+    "lessonId": "scrum-framework",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-017",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "empiricism",
+    "difficulty": 1,
+    "text": {
+      "en": "A stakeholder asks whether a large uncertain feature will definitely be delivered by a date. What should the Product Owner communicate?",
+      "az": "Maraqlı tərəf böyük və qeyri-müəyyən funksiyanın müəyyən tarixə mütləq hazır olub-olmayacağını soruşur. Məhsul Sahibi nə bildirməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Describe a forecast with assumptions and uncertainty.",
+          "az": "Proqnozu fərziyyə və qeyri-müəyyənliklə birlikdə təqdim etmək."
+        },
+        "explanation": {
+          "en": "A forecast communicates likely outcomes without pretending a complex future is guaranteed.",
+          "az": "Proqnoz mürəkkəb gələcəyi zəmanətli saymadan ehtimal olunan nəticələri bildirir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Guarantee the original scope and date despite unresolved uncertainty.",
+          "az": "Həll edilməmiş qeyri-müəyyənliyə baxmayaraq ilkin əhatə və tarixə zəmanət vermək."
+        },
+        "explanation": {
+          "en": "An unsupported guarantee conceals uncertainty instead of supporting an informed decision.",
+          "az": "Əsası olmayan zəmanət məlumatlı qərarı dəstəkləmək əvəzinə qeyri-müəyyənliyi gizlədir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Remove conflicting evidence from the report to simplify the decision.",
+          "az": "Qərarı sadələşdirmək üçün ziddiyyətli sübutu hesabatdan silmək."
+        },
+        "explanation": {
+          "en": "Hiding evidence misleads decision makers and conceals uncertainty.",
+          "az": "Sübutu gizlətmək qərar verənləri yanıltmaqla qeyri-müəyyənliyi ört-basdır edir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A forecast communicates likely outcomes without pretending a complex future is guaranteed.",
+      "az": "Proqnoz mürəkkəb gələcəyi zəmanətli saymadan ehtimal olunan nəticələri bildirir."
+    },
+    "lessonId": "forecast-release",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-018",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "stakeholder-leadership",
+    "difficulty": 1,
+    "text": {
+      "en": "Developers need to clarify a user’s workflow. The Product Owner insists every sentence pass through them. What is a better approach?",
+      "az": "Tərtibatçılar istifadəçinin iş axınını dəqiqləşdirməlidirlər. Məhsul Sahibi hər sözün onun vasitəsilə keçməsini istəyir. Daha yaxşı yanaşma hansıdır?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Invite direct collaboration between stakeholders and the Scrum Team.",
+          "az": "Maraqlı tərəflərlə Scrum Komandası arasında birbaşa əməkdaşlığı təşviq etmək."
+        },
+        "explanation": {
+          "en": "Useful collaboration improves understanding; the Product Owner need not act as a message bottleneck.",
+          "az": "Faydalı əməkdaşlıq anlayışı artırır; Məhsul Sahibi məlumat ötürülməsində dar boğaz olmamalıdır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Use only the sponsor’s opinion and exclude affected users.",
+          "az": "Yalnız sponsorun rəyindən istifadə edib təsirlənən istifadəçiləri kənarda saxlamaq."
+        },
+        "explanation": {
+          "en": "One opinion cannot establish all affected needs, workflows, or impacts.",
+          "az": "Bir rəy bütün təsirlənən ehtiyacları, iş axınlarını və təsirləri müəyyən edə bilməz."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Make a committee collectively accountable as the Product Owner.",
+          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+        },
+        "explanation": {
+          "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
+          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Useful collaboration improves understanding; the Product Owner need not act as a message bottleneck.",
+      "az": "Faydalı əməkdaşlıq anlayışı artırır; Məhsul Sahibi məlumat ötürülməsində dar boğaz olmamalıdır."
+    },
+    "lessonId": "po-teamwork",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-019",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "A deadline is near and a stakeholder suggests skipping essential tests to call more items done. What should guide the response?",
+      "az": "Son tarix yaxınlaşır və tərəf daha çox işi bitmiş adlandırmaq üçün vacib testləri keçməyi təklif edir. Cavabı nə yönləndirməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Preserve quality while adapting scope and delivery choices.",
+          "az": "Əhatə və çatdırılma seçimlərini uyğunlaşdırarkən keyfiyyəti qorumaq."
+        },
+        "explanation": {
+          "en": "Lowering quality conceals risk and undermines a genuinely usable Increment.",
+          "az": "Keyfiyyətin azaldılması riski gizlədir və həqiqətən istifadə edilə bilən İnkrementi zəiflədir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Lower the Definition of Done to show more completed work.",
+          "az": "Daha çox işi bitmiş göstərmək üçün Hazır Olma Tərifini zəiflətmək."
+        },
+        "explanation": {
+          "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Lowering quality conceals risk and undermines a genuinely usable Increment.",
+      "az": "Keyfiyyətin azaldılması riski gizlədir və həqiqətən istifadə edilə bilən İnkrementi zəiflədir."
+    },
+    "lessonId": "pspo1-artifacts",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-020",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "The Product Owner disagrees with an estimate and wants to impose a smaller number. Who should size the work?",
+      "az": "Məhsul Sahibi təxminlə razı deyil və daha kiçik rəqəm qoymaq istəyir. İşi kim ölçməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Let the Developers who will do the work size it.",
+          "az": "İşi görəcək Tərtibatçıların onu ölçməsinə imkan yaratmaq."
+        },
+        "explanation": {
+          "en": "The people performing the work are responsible for sizing and can discuss trade-offs with the Product Owner.",
+          "az": "İşi icra edənlər ölçməyə cavabdehdirlər və Məhsul Sahibi ilə alternativləri müzakirə edə bilərlər."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Have the Product Owner assign individual technical tasks.",
+          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+        },
+        "explanation": {
+          "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Ask the Scrum Master to own Product Backlog ordering.",
+          "az": "Məhsul Bekloqunun sıralanmasına Scrum Masterin sahib olmasını istəmək."
+        },
+        "explanation": {
+          "en": "The Product Owner remains accountable for effective Product Backlog management, including ordering.",
+          "az": "Məhsul Sahibi sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "The people performing the work are responsible for sizing and can discuss trade-offs with the Product Owner.",
+      "az": "İşi icra edənlər ölçməyə cavabdehdirlər və Məhsul Sahibi ilə alternativləri müzakirə edə bilərlər."
+    },
+    "lessonId": "scrum-accountabilities",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-021",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 1,
+    "text": {
+      "en": "Stakeholders believe their requests disappear without explanation. What transparency would help?",
+      "az": "Maraqlı tərəflər istəklərinin izahsız itdiyini düşünürlər. Hansı şəffaflıq kömək edər?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Make Product Backlog ordering and decisions visible and understood.",
+          "az": "Məhsul Bekloqunun sırasını və qərarlarını görünən və anlaşılan etmək."
+        },
+        "explanation": {
+          "en": "Transparency lets stakeholders challenge assumptions and understand why work is ordered as it is.",
+          "az": "Şəffaflıq tərəflərə fərziyyələri sorğulamağa və işin niyə belə sıralandığını anlamağa imkan verir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Remove conflicting evidence from the report to simplify the decision.",
+          "az": "Qərarı sadələşdirmək üçün ziddiyyətli sübutu hesabatdan silmək."
+        },
+        "explanation": {
+          "en": "Hiding evidence misleads decision makers and conceals uncertainty.",
+          "az": "Sübutu gizlətmək qərar verənləri yanıltmaqla qeyri-müəyyənliyi ört-basdır edir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Give the loudest stakeholder permanent priority.",
+          "az": "Ən çox israr edən tərəfə daimi üstünlük vermək."
+        },
+        "explanation": {
+          "en": "Influence alone is not evidence of customer value, urgency, or alignment with the product goal.",
+          "az": "Təsir gücü təkbaşına müştəri dəyəri, təcililik və ya məhsul məqsədinə uyğunluq sübutu deyil."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Transparency lets stakeholders challenge assumptions and understand why work is ordered as it is.",
+      "az": "Şəffaflıq tərəflərə fərziyyələri sorğulamağa və işin niyə belə sıralandığını anlamağa imkan verir."
+    },
+    "lessonId": "product-backlog",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-022",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "Three Scrum Teams develop one product but maintain competing departmental backlogs. What would support a shared product focus?",
+      "az": "Üç Scrum Komandası bir məhsul hazırlayır, amma rəqabət aparan bölmə bekloqları saxlayır. Ortaq diqqəti nə dəstəkləyər?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Maintain one Product Backlog for one product.",
+          "az": "Bir məhsul üçün vahid Məhsul Bekloqu saxlamaq."
+        },
+        "explanation": {
+          "en": "A single backlog helps teams working on the same product focus on a shared product direction.",
+          "az": "Vahid bekloq eyni məhsul üzərində işləyən komandaların ortaq istiqamətə yönəlməsinə kömək edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Make a committee collectively accountable as the Product Owner.",
+          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+        },
+        "explanation": {
+          "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
+          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Give the loudest stakeholder permanent priority.",
+          "az": "Ən çox israr edən tərəfə daimi üstünlük vermək."
+        },
+        "explanation": {
+          "en": "Influence alone is not evidence of customer value, urgency, or alignment with the product goal.",
+          "az": "Təsir gücü təkbaşına müştəri dəyəri, təcililik və ya məhsul məqsədinə uyğunluq sübutu deyil."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A single backlog helps teams working on the same product focus on a shared product direction.",
+      "az": "Vahid bekloq eyni məhsul üzərində işləyən komandaların ortaq istiqamətə yönəlməsinə kömək edir."
+    },
+    "lessonId": "scaling-products",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-023",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "en": "During a Sprint, Developers learn a better implementation sequence. How should they regard the Sprint Backlog?",
+      "az": "Sprint zamanı Tərtibatçılar daha yaxşı tətbiq ardıcıllığı öyrənirlər. Sprint Bekloquna necə yanaşmalıdırlar?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Treat the Sprint Backlog as the Developers’ evolving plan.",
+          "az": "Sprint Bekloqunu Tərtibatçıların dəyişən planı kimi qəbul etmək."
+        },
+        "explanation": {
+          "en": "The Sprint Backlog is adapted as Developers learn what is required to reach the Sprint Goal.",
+          "az": "Tərtibatçılar Sprint Məqsədinə çatmaq üçün nə lazım olduğunu öyrəndikcə Sprint Bekloqu uyğunlaşdırılır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Freeze the original plan regardless of new evidence.",
+          "az": "Yeni sübutdan asılı olmayaraq ilkin planı dəyişməz saxlamaq."
+        },
+        "explanation": {
+          "en": "Ignoring new evidence prevents adapting to a better understanding of the need or situation.",
+          "az": "Yeni sübutun nəzərə alınmaması ehtiyac və ya vəziyyətin daha yaxşı anlaşılmasına uyğunlaşmağa mane olur."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Have the Product Owner assign individual technical tasks.",
+          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+        },
+        "explanation": {
+          "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "The Sprint Backlog is adapted as Developers learn what is required to reach the Sprint Goal.",
+      "az": "Tərtibatçılar Sprint Məqsədinə çatmaq üçün nə lazım olduğunu öyrəndikcə Sprint Bekloqu uyğunlaşdırılır."
+    },
+    "lessonId": "pspo1-artifacts",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-024",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "stakeholder-leadership",
+    "difficulty": 1,
+    "text": {
+      "en": "Team members hide a risk because they fear disagreement. Which behavior supports Scrum values?",
+      "az": "Komanda üzvləri fikir ayrılığından qorxduqları üçün riski gizlədirlər. Hansı davranış Scrum dəyərlərini dəstəkləyir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Make respect, openness, courage, focus, and commitment visible in behavior.",
+          "az": "Hörmət, açıqlıq, cəsarət, diqqət və öhdəliyi davranışda göstərmək."
+        },
+        "explanation": {
+          "en": "Scrum values support honest collaboration and inspection, including speaking about difficult evidence.",
+          "az": "Scrum dəyərləri çətin sübutları müzakirə etmək daxil olmaqla dürüst əməkdaşlığı və yoxlamanı dəstəkləyir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Remove conflicting evidence from the report to simplify the decision.",
+          "az": "Qərarı sadələşdirmək üçün ziddiyyətli sübutu hesabatdan silmək."
+        },
+        "explanation": {
+          "en": "Hiding evidence misleads decision makers and conceals uncertainty.",
+          "az": "Sübutu gizlətmək qərar verənləri yanıltmaqla qeyri-müəyyənliyi ört-basdır edir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat a manager’s signature as sufficient proof that the need is satisfied.",
+          "az": "Rəhbərin imzasını ehtiyacın ödənilməsinin kifayət qədər sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Authorization alone does not demonstrate observable business behavior or achieved value.",
+          "az": "Təkcə icazə müşahidə olunan biznes davranışını və ya əldə olunan dəyəri göstərmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Scrum values support honest collaboration and inspection, including speaking about difficult evidence.",
+      "az": "Scrum dəyərləri çətin sübutları müzakirə etmək daxil olmaqla dürüst əməkdaşlığı və yoxlamanı dəstəkləyir."
+    },
+    "lessonId": "po-teamwork",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-025",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 1,
+    "text": {
+      "en": "The team delivers many features, but no one checks whether customers use them. What should the Product Owner add?",
+      "az": "Komanda çox funksiya verir, amma müştərilərin istifadə edib-etmədiyini heç kim yoxlamır. Məhsul Sahibi nə əlavə etməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Measure a change in customer behavior or benefit.",
+          "az": "Müştəri davranışında və ya faydasında dəyişikliyi ölçmək."
+        },
+        "explanation": {
+          "en": "Outcome measures connect product work to the effect it is intended to create.",
+          "az": "Nəticə göstəriciləri məhsul işini yaratmalı olduğu təsirlə əlaqələndirir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Use higher story-point velocity as the primary proof of product value.",
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+        },
+        "explanation": {
+          "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
+          "az": "Sürət komandanın iş təxminlərinə aiddir və müştəri və ya biznes nəticələrini göstərmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Outcome measures connect product work to the effect it is intended to create.",
+      "az": "Nəticə göstəriciləri məhsul işini yaratmalı olduğu təsirlə əlaqələndirir."
+    },
+    "lessonId": "product-metrics",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-026",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "empiricism",
+    "difficulty": 1,
+    "text": {
+      "en": "A team wants to know whether a simplified registration flow actually helps new users. What should be decided before testing?",
+      "az": "Komanda sadələşdirilmiş qeydiyyatın yeni istifadəçilərə kömək edib-etmədiyini bilmək istəyir. Testdən əvvəl nə müəyyən edilməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "State a falsifiable hypothesis and define evidence before the experiment.",
+          "az": "Yoxlanıla bilən fərziyyəni və təcrübədən əvvəl sübut meyarını müəyyən etmək."
+        },
+        "explanation": {
+          "en": "Predefined evidence reduces the temptation to reinterpret any result as success.",
+          "az": "Əvvəlcədən müəyyən edilən sübut istənilən nəticəni uğur kimi yozmaq meylini azaldır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Count delivered features as proof of customer benefit.",
+          "az": "Təqdim olunan funksiyaların sayını müştəri faydasının sübutu saymaq."
+        },
+        "explanation": {
+          "en": "Output volume does not establish adoption, benefit, or a changed business outcome.",
+          "az": "Çıxış həcmi qəbul, fayda və ya dəyişmiş biznes nəticəsini sübut etmir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat stated purchase intention as guaranteed future payment.",
+          "az": "Bildirilən alış niyyətini gələcək ödənişə zəmanət saymaq."
+        },
+        "explanation": {
+          "en": "Hypothetical intention is weaker evidence than observed behavior in a realistic choice.",
+          "az": "Fərziyyəvi niyyət real seçimdə müşahidə olunan davranışdan daha zəif sübutdur."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Predefined evidence reduces the temptation to reinterpret any result as success.",
+      "az": "Əvvəlcədən müəyyən edilən sübut istənilən nəticəni uğur kimi yozmaq meylini azaldır."
+    },
+    "lessonId": "story-mapping",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-027",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 1,
+    "text": {
+      "en": "The Product Goal is still useful, but evidence suggests a different feature would serve it better. What approach fits product ownership?",
+      "az": "Məhsul Məqsədi hələ faydalıdır, amma sübut başqa funksiyanın ona daha yaxşı xidmət edəcəyini göstərir. Hansı yanaşma uyğundur?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Order the Product Backlog using value, risk, and learning.",
+          "az": "Məhsul Bekloqunu dəyər, risk və öyrənməyə əsasən sıralamaq."
+        },
+        "explanation": {
+          "en": "Ordering is a product decision; a single transparent order supports coherent choices.",
+          "az": "Sıralama məhsul qərarıdır; vahid şəffaf sıra uyğun seçimləri dəstəkləyir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Freeze the original plan regardless of new evidence.",
+          "az": "Yeni sübutdan asılı olmayaraq ilkin planı dəyişməz saxlamaq."
+        },
+        "explanation": {
+          "en": "Ignoring new evidence prevents adapting to a better understanding of the need or situation.",
+          "az": "Yeni sübutun nəzərə alınmaması ehtiyac və ya vəziyyətin daha yaxşı anlaşılmasına uyğunlaşmağa mane olur."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Label every request as mandatory without comparing consequences.",
+          "az": "Nəticələri müqayisə etmədən hər istəyi məcburi saymaq."
+        },
+        "explanation": {
+          "en": "If everything is essential, the classification offers no useful basis for trade-offs.",
+          "az": "Hər şey zəruridirsə, təsnifat seçimlər üçün faydalı əsas vermir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Ordering is a product decision; a single transparent order supports coherent choices.",
+      "az": "Sıralama məhsul qərarıdır; vahid şəffaf sıra uyğun seçimləri dəstəkləyir."
+    },
+    "lessonId": "product-backlog",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-028",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "empiricism",
+    "difficulty": 1,
+    "text": {
+      "en": "The Sprint Review reveals customers no longer need a planned capability. What should the team do with this information?",
+      "az": "Sprint İcmalı müştərilərin planlaşdırılan imkana artıq ehtiyacı olmadığını göstərir. Komanda bu məlumatla nə etməlidir?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Inspect the outcome with stakeholders and adapt future work.",
+          "az": "Nəticəni maraqlı tərəflərlə yoxlayıb gələcək işi uyğunlaşdırmaq."
+        },
+        "explanation": {
+          "en": "The Sprint Review is an opportunity to inspect progress and decide useful adaptations together.",
+          "az": "Sprint İcmalı irəliləyişi yoxlamaq və faydalı uyğunlaşmaları birlikdə seçmək imkanıdır."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Continue because the organization has already spent heavily.",
+          "az": "Təşkilat artıq çox xərc çəkdiyi üçün davam etmək."
+        },
+        "explanation": {
+          "en": "Past spending cannot be recovered by making an additional poor investment.",
+          "az": "Əlavə zəif sərmayə keçmiş xərci geri qaytara bilməz."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Remove conflicting evidence from the report to simplify the decision.",
+          "az": "Qərarı sadələşdirmək üçün ziddiyyətli sübutu hesabatdan silmək."
+        },
+        "explanation": {
+          "en": "Hiding evidence misleads decision makers and conceals uncertainty.",
+          "az": "Sübutu gizlətmək qərar verənləri yanıltmaqla qeyri-müəyyənliyi ört-basdır edir."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "The Sprint Review is an opportunity to inspect progress and decide useful adaptations together.",
+      "az": "Sprint İcmalı irəliləyişi yoxlamaq və faydalı uyğunlaşmaları birlikdə seçmək imkanıdır."
+    },
+    "lessonId": "pspo1-events",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-029",
+    "trackId": "pspo1",
+    "type": "multiple",
+    "domain": "scrum-application",
+    "difficulty": 2,
+    "text": {
+      "en": "Work appears finished in each team but fails when combined into one product. Which two actions directly help? Select two.",
+      "az": "İş hər komandada bitmiş görünür, amma vahid məhsulda birləşəndə işləmir. Hansı iki addım birbaşa kömək edər? İkisini seçin."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Agree an integrated Definition of Done across teams on one product.",
+          "az": "Bir məhsul üzərindəki komandalar üçün inteqrasiya olunmuş Hazır Olma Tərifini razılaşdırmaq."
+        },
+        "explanation": {
+          "en": "An integrated Increment requires compatible quality standards and attention to cross-team integration.",
+          "az": "İnteqrasiya olunmuş İnkrement uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Preserve quality while adapting scope and delivery choices.",
+          "az": "Əhatə və çatdırılma seçimlərini uyğunlaşdırarkən keyfiyyəti qorumaq."
+        },
+        "explanation": {
+          "en": "Lowering quality conceals risk and undermines a genuinely usable Increment.",
+          "az": "Keyfiyyətin azaldılması riski gizlədir və həqiqətən istifadə edilə bilən İnkrementi zəiflədir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Lower the Definition of Done to show more completed work.",
+          "az": "Daha çox işi bitmiş göstərmək üçün Hazır Olma Tərifini zəiflətmək."
+        },
+        "explanation": {
+          "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+        }
+      }
+    ],
+    "correct": ["a", "b"],
+    "explanation": {
+      "en": "An integrated Increment requires compatible quality standards and attention to cross-team integration.",
+      "az": "İnteqrasiya olunmuş İnkrement uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
+    },
+    "lessonId": "scaling-products",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-030",
+    "trackId": "pspo1",
+    "type": "multiple",
+    "domain": "product-strategy",
+    "difficulty": 2,
+    "text": {
+      "en": "A product team is busy but cannot connect its backlog to a meaningful destination. Which two choices create direction and inspectable value? Select two.",
+      "az": "Məhsul komandası məşğuldur, amma bekloqunu mənalı istiqamətlə bağlaya bilmir. Hansı iki seçim istiqamət və yoxlanıla bilən dəyər yaradar? İkisini seçin."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Create a clear longer-term objective for the product.",
+          "az": "Məhsul üçün aydın uzunmüddətli məqsəd yaratmaq."
+        },
+        "explanation": {
+          "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
+          "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Measure a change in customer behavior or benefit.",
+          "az": "Müştəri davranışında və ya faydasında dəyişikliyi ölçmək."
+        },
+        "explanation": {
+          "en": "Outcome measures connect product work to the effect it is intended to create.",
+          "az": "Nəticə göstəriciləri məhsul işini yaratmalı olduğu təsirlə əlaqələndirir."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Use higher story-point velocity as the primary proof of product value.",
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+        },
+        "explanation": {
+          "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
+          "az": "Sürət komandanın iş təxminlərinə aiddir və müştəri və ya biznes nəticələrini göstərmir."
+        }
+      }
+    ],
+    "correct": ["a", "b"],
+    "explanation": {
+      "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
+      "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+    },
+    "lessonId": "product-goal",
+    "practiceOnly": true
+  }
+]

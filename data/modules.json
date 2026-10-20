@@ -1,0 +1,302 @@
+[
+  {
+    "id": "ba-foundations",
+    "trackId": "ba",
+    "level": "junior",
+    "title": {
+      "az": "Problemi anla",
+      "en": "Understand the problem"
+    },
+    "description": {
+      "az": "Sorğunun arxasındakı insanları və nəticələri müəyyən et.",
+      "en": "Find the people and outcomes behind a request."
+    },
+    "lessonIds": ["ba-role", "sdlc", "stakeholder-mapping"],
+    "estimatedMinutes": 95,
+    "prerequisites": []
+  },
+  {
+    "id": "ba-requirements",
+    "trackId": "ba",
+    "level": "junior",
+    "title": {
+      "az": "Söhbətdən tələblərə",
+      "en": "From conversations to requirements"
+    },
+    "description": {
+      "az": "Ehtiyacları topla, təsnif et və yoxlanıla bilən şəkildə sənədləşdir.",
+      "en": "Elicit, classify and document testable needs."
+    },
+    "lessonIds": [
+      "elicitation",
+      "requirement-types",
+      "stories-gherkin",
+      "use-cases",
+      "requirements-documents"
+    ],
+    "estimatedMinutes": 175,
+    "prerequisites": []
+  },
+  {
+    "id": "ba-visuals",
+    "trackId": "ba",
+    "level": "junior",
+    "title": {
+      "az": "Sistemi görünən et",
+      "en": "Make the system visible"
+    },
+    "description": {
+      "az": "Qeyri-müəyyənliyi diaqram və ya prototiplə aradan qaldır.",
+      "en": "Use a diagram or prototype to resolve ambiguity."
+    },
+    "lessonIds": ["bpmn-process", "uml-models", "wireframes"],
+    "estimatedMinutes": 105,
+    "prerequisites": []
+  },
+  {
+    "id": "ba-control",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "az": "Əhatəni və qərarları idarə et",
+      "en": "Manage scope and decisions"
+    },
+    "description": {
+      "az": "Dəyişən tələbləri uyğun və izlənilə bilən saxla.",
+      "en": "Keep changing requirements coherent and traceable."
+    },
+    "lessonIds": ["prioritization", "traceability", "scope-change", "gap-root-cause"],
+    "estimatedMinutes": 140,
+    "prerequisites": []
+  },
+  {
+    "id": "ba-technical",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "az": "Sistemlərin dilində danış",
+      "en": "Speak the language of systems"
+    },
+    "description": {
+      "az": "Məlumat, API və inteqrasiya xətalarını təhlil et.",
+      "en": "Reason about data, APIs and integration failures."
+    },
+    "lessonIds": ["data-modeling", "sql-basics", "rest-apis", "integration-basics", "uat"],
+    "estimatedMinutes": 175,
+    "prerequisites": []
+  },
+  {
+    "id": "ba-delivery",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "az": "Çatdırılma komandalarında analiz",
+      "en": "Analysis in delivery teams"
+    },
+    "description": {
+      "az": "Sənədləşməni, axını və qiymətləndirməni komanda üçün faydalı et.",
+      "en": "Make documentation, flow and evaluation useful to the team."
+    },
+    "lessonIds": ["agile-analysis", "jira-confluence", "solution-evaluation"],
+    "estimatedMinutes": 105,
+    "prerequisites": []
+  },
+  {
+    "id": "ba-leadership",
+    "trackId": "ba",
+    "level": "lead",
+    "title": {
+      "az": "Məqsədli analiz liderliyi",
+      "en": "Lead analysis with intent"
+    },
+    "description": {
+      "az": "Strategiyanı, idarəetməni və insanları əlaqələndir.",
+      "en": "Connect strategy, governance and people."
+    },
+    "lessonIds": [
+      "babok-map",
+      "ba-techniques-perspectives",
+      "analysis-governance",
+      "facilitation-conflict",
+      "storytelling-time"
+    ],
+    "estimatedMinutes": 175,
+    "prerequisites": []
+  },
+  {
+    "id": "po-foundations",
+    "trackId": "po",
+    "level": "junior",
+    "title": {
+      "az": "Nəticəyə sahib çıx",
+      "en": "Own an outcome"
+    },
+    "description": {
+      "az": "Scrum məsuliyyətlərini və məqsədli iş siyahısı qərarlarını öyrən.",
+      "en": "Learn Scrum accountabilities and purposeful backlog decisions."
+    },
+    "lessonIds": ["product-goal", "scrum-framework", "product-backlog", "good-pbis"],
+    "estimatedMinutes": 130,
+    "prerequisites": []
+  },
+  {
+    "id": "po-discovery",
+    "trackId": "po",
+    "level": "junior",
+    "title": {
+      "az": "Qərardan əvvəl kəşf et",
+      "en": "Discover before deciding"
+    },
+    "description": {
+      "az": "İnsanlardan öyrən və məhsul fərziyyələrini aşkar et.",
+      "en": "Learn from people and expose product assumptions."
+    },
+    "lessonIds": ["jtbd-research", "personas", "story-mapping"],
+    "estimatedMinutes": 105,
+    "prerequisites": []
+  },
+  {
+    "id": "po-strategy",
+    "trackId": "po",
+    "level": "mid",
+    "title": {
+      "az": "Strategiyanı seçimlərə çevir",
+      "en": "Translate strategy into choices"
+    },
+    "description": {
+      "az": "İstiqamət, kəşf, göstərici və iqtisadi qərarları əlaqələndir.",
+      "en": "Connect direction, discovery, metrics and economic decisions."
+    },
+    "lessonIds": ["product-strategy", "okrs", "product-metrics", "ebm", "po-prioritization"],
+    "estimatedMinutes": 175,
+    "prerequisites": []
+  },
+  {
+    "id": "po-delivery",
+    "trackId": "po",
+    "level": "mid",
+    "title": {
+      "az": "Çatdırılma boyu əməkdaşlıq et",
+      "en": "Collaborate through delivery"
+    },
+    "description": {
+      "az": "Proqnoz və kommersiya qərarlarını sübuta əsaslandır.",
+      "en": "Make forecasts and commercial decisions with evidence."
+    },
+    "lessonIds": ["forecast-release", "po-teamwork", "pricing-gtm"],
+    "estimatedMinutes": 105,
+    "prerequisites": []
+  },
+  {
+    "id": "po-leadership",
+    "trackId": "po",
+    "level": "lead",
+    "title": {
+      "az": "Məhsul sisteminə liderlik et",
+      "en": "Lead a product system"
+    },
+    "description": {
+      "az": "Müstəqilliyi, iqtisadiyyatı və məsuliyyətli məhsul qərarlarını tarazlaşdır.",
+      "en": "Balance autonomy, economics and responsible product decisions."
+    },
+    "lessonIds": ["scaling-products", "portfolio-lifecycle", "product-ethics", "po-negotiation"],
+    "estimatedMinutes": 140,
+    "prerequisites": []
+  },
+  {
+    "id": "ecba-preparation",
+    "trackId": "ecba",
+    "level": "junior",
+    "title": {
+      "az": "ECBA əsasları",
+      "en": "ECBA foundations"
+    },
+    "description": {
+      "az": "Orijinal öyrənmə ssenariləri; rəsmi imtahan məlumatları ayrıca saxlanılır.",
+      "en": "Original study scenarios; official exam details are maintained separately."
+    },
+    "lessonIds": ["ecba-context", "ecba-knowledge-areas", "ecba-techniques"],
+    "estimatedMinutes": 105,
+    "prerequisites": []
+  },
+  {
+    "id": "ccba-preparation",
+    "trackId": "ccba",
+    "level": "junior",
+    "title": {
+      "az": "CCBA tətbiqi analiz",
+      "en": "CCBA applied analysis"
+    },
+    "description": {
+      "az": "Orijinal öyrənmə ssenariləri; rəsmi imtahan məlumatları ayrıca saxlanılır.",
+      "en": "Original study scenarios; official exam details are maintained separately."
+    },
+    "lessonIds": ["ccba-planning", "ccba-elicitation", "ccba-lifecycle"],
+    "estimatedMinutes": 105,
+    "prerequisites": []
+  },
+  {
+    "id": "cbap-preparation",
+    "trackId": "cbap",
+    "level": "junior",
+    "title": {
+      "az": "CBAP mürəkkəb qərarlar",
+      "en": "CBAP complex decisions"
+    },
+    "description": {
+      "az": "Orijinal öyrənmə ssenariləri; rəsmi imtahan məlumatları ayrıca saxlanılır.",
+      "en": "Original study scenarios; official exam details are maintained separately."
+    },
+    "lessonIds": ["cbap-strategy", "cbap-design", "cbap-evaluation"],
+    "estimatedMinutes": 105,
+    "prerequisites": []
+  },
+  {
+    "id": "pspo1-preparation",
+    "trackId": "pspo1",
+    "level": "junior",
+    "title": {
+      "az": "PSPO I məhsul əsasları",
+      "en": "PSPO I product foundations"
+    },
+    "description": {
+      "az": "Orijinal öyrənmə ssenariləri; rəsmi imtahan məlumatları ayrıca saxlanılır.",
+      "en": "Original study scenarios; official exam details are maintained separately."
+    },
+    "lessonIds": ["scrum-accountabilities", "pspo1-events", "pspo1-artifacts"],
+    "estimatedMinutes": 95,
+    "prerequisites": []
+  },
+  {
+    "id": "pspo2-preparation",
+    "trackId": "pspo2",
+    "level": "junior",
+    "title": {
+      "az": "PSPO II tətbiqi sahiblik",
+      "en": "PSPO II applied ownership"
+    },
+    "description": {
+      "az": "Orijinal öyrənmə ssenariləri; rəsmi imtahan məlumatları ayrıca saxlanılır.",
+      "en": "Original study scenarios; official exam details are maintained separately."
+    },
+    "lessonIds": ["pspo2-strategy", "pspo2-value", "pspo2-facilitation"],
+    "estimatedMinutes": 105,
+    "prerequisites": []
+  },
+  {
+    "id": "pspo3-preparation",
+    "trackId": "pspo3",
+    "level": "junior",
+    "title": {
+      "az": "PSPO III düşünülmüş sahiblik",
+      "en": "PSPO III reflective ownership"
+    },
+    "description": {
+      "az": "Orijinal öyrənmə ssenariləri; rəsmi imtahan məlumatları ayrıca saxlanılır.",
+      "en": "Original study scenarios; official exam details are maintained separately."
+    },
+    "lessonIds": ["pspo3-written-case", "pspo3-complexity", "pspo3-reflection"],
+    "estimatedMinutes": 105,
+    "prerequisites": []
+  }
+]
