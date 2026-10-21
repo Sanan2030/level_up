@@ -10,7 +10,7 @@ import { getTrack } from '@/lib/tracks';
 import type { Locale } from '@/lib/types';
 
 export function RoadmapView({ locale }: { locale: Locale }) {
-  const { progress, ready } = useProgress();
+  const { progress, ready, update } = useProgress();
   const t = copy[locale];
   const az = locale === 'az';
   if (!ready) return <p role="status">{t.loading}</p>;
@@ -108,85 +108,135 @@ export function RoadmapView({ locale }: { locale: Locale }) {
           </Link>
         </div>
       )}
-      <div className="roadmap-timeline">
-        {roadmap.modules.map((module, index) => {
-          const entries = module.lessonIds
-            .map((id) => lessons.find((lesson) => lesson.id === id))
-            .filter((lesson) => !!lesson);
-          const complete =
-            entries.length > 0 && entries.every((lesson) => !!progress.completedLessons[lesson.id]);
-          return (
-            <section className="roadmap-module" key={module.id}>
-              <div
-                className={`roadmap-marker ${complete ? 'is-complete' : ''}`}
-                aria-label={complete ? t.completed : `${az ? 'Modul' : 'Module'} ${index + 1}`}
-              >
-                {complete ? <Check size={18} /> : String(index + 1).padStart(2, '0')}
-              </div>
-              <div className="card stack">
-                <div>
-                  <p className="eyebrow">
-                    {t[module.level]} · {entries.length} {az ? 'mövzu' : 'topics'}
-                  </p>
-                  <h2 className="section-title">{localize(module.title, locale)}</h2>
-                  <p className="muted">{localize(module.description, locale)}</p>
+      <div className="roadmap-columns">
+        <div className="roadmap-timeline">
+          {roadmap.modules.map((module, index) => {
+            const entries = module.lessonIds
+              .map((id) => lessons.find((lesson) => lesson.id === id))
+              .filter((lesson) => !!lesson);
+            const complete =
+              entries.length > 0 &&
+              entries.every((lesson) => !!progress.completedLessons[lesson.id]);
+            return (
+              <section className="roadmap-module" key={module.id}>
+                <div
+                  className={`roadmap-marker ${complete ? 'is-complete' : ''}`}
+                  aria-label={complete ? t.completed : `${az ? 'Modul' : 'Module'} ${index + 1}`}
+                >
+                  {complete ? <Check size={18} /> : String(index + 1).padStart(2, '0')}
                 </div>
-                <div className="lesson-rows">
-                  {entries.map((lesson) => (
-                    <Link
-                      href={`/${locale}/lessons/${lesson.id}`}
-                      key={lesson.id}
-                      className="lesson-row"
-                    >
-                      {progress.completedLessons[lesson.id] ? (
-                        <CheckCircle2 className="success" size={20} />
-                      ) : (
-                        <Circle size={20} className="muted" />
-                      )}
-                      <span>
-                        <strong>{localize(lesson.title, locale)}</strong>
-                        <small className="muted">
-                          {lesson.minutes} {t.minutes}
-                          {lesson.status === 'planned'
-                            ? ` · ${az ? 'Məzmun planı' : 'Curriculum outline'}`
-                            : ''}
-                        </small>
-                      </span>
-                      {lesson.status === 'planned' ? (
-                        <span className="badge">{t.planned}</span>
-                      ) : (
-                        <ArrowRight size={17} />
-                      )}
-                    </Link>
-                  ))}
+                <div className="card stack">
+                  <div>
+                    <p className="eyebrow">
+                      {t[module.level]} · {entries.length} {az ? 'mövzu' : 'topics'}
+                    </p>
+                    <h2 className="section-title">{localize(module.title, locale)}</h2>
+                    <p className="muted">{localize(module.description, locale)}</p>
+                  </div>
+                  <div className="lesson-rows">
+                    {entries.map((lesson) => (
+                      <Link
+                        href={`/${locale}/lessons/${lesson.id}`}
+                        key={lesson.id}
+                        className="lesson-row"
+                      >
+                        {progress.completedLessons[lesson.id] ? (
+                          <CheckCircle2 className="success" size={20} />
+                        ) : (
+                          <Circle size={20} className="muted" />
+                        )}
+                        <span>
+                          <strong>{localize(lesson.title, locale)}</strong>
+                          <small className="muted">
+                            {lesson.minutes} {t.minutes}
+                            {lesson.status === 'planned'
+                              ? ` · ${az ? 'Məzmun planı' : 'Curriculum outline'}`
+                              : ''}
+                          </small>
+                        </span>
+                        {lesson.status === 'planned' ? (
+                          <span className="badge">{t.planned}</span>
+                        ) : (
+                          <ArrowRight size={17} />
+                        )}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
+              </section>
+            );
+          })}
+        </div>
+        {targetCompetency ? (
+          <aside className="stack">
+            <section className="card stack">
+              <div>
+                <p className="eyebrow">{az ? 'HƏDƏF SƏVİYYƏ' : 'AT YOUR TARGET LEVEL'}</p>
+                <h2 className="section-title">
+                  {az ? 'Nəyi bacarmalısan?' : 'What should you be able to do?'}
+                </h2>
               </div>
+              <ul className="checklist">
+                {targetCompetency.checklist.map((item) => (
+                  <li key={item.id}>
+                    <label className="roadmap-skill">
+                      <input
+                        type="checkbox"
+                        checked={progress.assessedSkills.includes(item.id)}
+                        onChange={(event) =>
+                          update((p) => ({
+                            ...p,
+                            assessedSkills: event.target.checked
+                              ? [...new Set([...p.assessedSkills, item.id])]
+                              : p.assessedSkills.filter((id) => id !== item.id),
+                          }))
+                        }
+                      />
+                      <span>{localize(item.text, locale)}</span>
+                    </label>
+                  </li>
+                ))}
+              </ul>
+              <Link className="text-link" href={`/${locale}/competencies`}>
+                {az ? 'Özünü qiymətləndir' : 'Assess your skills'}
+                <ArrowRight size={16} />
+              </Link>
             </section>
-          );
-        })}
+            <section className="card roadmap-changes">
+              <h2 className="section-title">{az ? 'Nə dəyişir?' : 'What changes?'}</h2>
+              <p>{targetCompetency.changes[locale]}</p>
+            </section>
+            <section className="card stack">
+              <h2 className="section-title">{az ? 'Müsahibə məşqi' : 'Interview practice'}</h2>
+              {targetCompetency.interviews.map((item) => (
+                <details key={item.question.en}>
+                  <summary>{item.question[locale]}</summary>
+                  <p className="muted">{item.answer[locale]}</p>
+                </details>
+              ))}
+            </section>
+          </aside>
+        ) : (
+          <aside className="card stack">
+            <p className="eyebrow">{az ? 'ÖYRƏN · TƏTBİQ ET' : 'LEARN · APPLY'}</p>
+            <h2 className="section-title">{track.name[locale]}</h2>
+            <p className="muted">
+              {az
+                ? 'Dərsləri oxu, mənbələri yoxla və izahlı məşq et. Nəticələrin paneldə saxlanılır.'
+                : 'Read lessons, check the sources, and practice with explanations. Your results are saved on the dashboard.'}
+            </p>
+            <Link
+              className="button button-primary"
+              href={`/${locale}/practice?track=${profile.trackId}`}
+            >
+              {az ? 'Biliklərini yoxla' : 'Practice this track'}
+            </Link>
+            <Link className="text-link" href={`/${locale}/sources`}>
+              {az ? 'Mənbələrə bax' : 'Read source notes'}
+            </Link>
+          </aside>
+        )}
       </div>
-      {targetCompetency && (
-        <section className="card stack">
-          <div>
-            <p className="eyebrow">{az ? 'HƏDƏF SƏVİYYƏ' : 'AT YOUR TARGET LEVEL'}</p>
-            <h2 className="section-title">
-              {az ? 'Nəyi bacarmalısan?' : 'What should you be able to do?'}
-            </h2>
-          </div>
-          <ul className="checklist">
-            {targetCompetency.checklist.map((item) => (
-              <li key={item.id}>
-                <CheckCircle2 size={18} />
-                {localize(item.text, locale)}
-              </li>
-            ))}
-          </ul>
-          <Link className="text-link" href={`/${locale}/competencies`}>
-            {az ? 'Özünü qiymətləndir' : 'Assess your skills'}
-            <ArrowRight size={16} />
-          </Link>
-        </section>
-      )}
     </div>
   );
 }

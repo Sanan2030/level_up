@@ -3,63 +3,68 @@ id: pspo1-artifacts
 locale: az
 title: 'Artefaktlar və onların öhdəlikləri'
 objectives:
-  - 'Məhsul İş Siyahısını, Sprint İş Siyahısını və İnkrementi ortaq öhdəliklərlə əlaqələndir.'
-  - 'Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.'
+  - 'Üç artefaktı düzgün öhdəliklə əlaqələndir.'
+  - 'Done, qəbul meyarı və refinement arasındakı fərqi tətbiq et.'
 ---
 
-> **Kurikulum planı — tam dərs hələ dərc edilməyib.** Bu səhifə planlaşdırılan öyrənmə fəaliyyətlərini təsvir edir. Planı oxumaq mövzunu mənimsəmək demək deyil.
+## Anlayış
 
-## Öyrənmə məqsədləri
-
-- Məhsul İş Siyahısını, Sprint İş Siyahısını və İnkrementi ortaq öhdəliklərlə əlaqələndir.
-- Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.
+Product Backlog məhsulu yaxşılaşdırmaq üçün lazım olan işin yaranan, sıralanmış siyahısıdır. Öhdəliyi Product Goal-dur: məhsulun gələcək vəziyyəti. Komanda bir məqsədi yerinə yetirməli və ya ondan imtina etməlidir ki, növbətisini götürsün. Refinement elementləri bölmək, daha dəqiq etmək və ölçüləndirmək üçün davam edən fəaliyyətdir; ayrıca rəsmi tədbir deyil.
 
 ## Niyə vacibdir
 
-Planlaşdırılan dərs **Artefaktlar və onların öhdəlikləri** mövzusunun komandaya nə vaxt kömək etdiyini konkret qərarla göstərəcək. Fərziyyələr və təsirlənən tərəflər aydın qeyd ediləcək.
+Sprint Backlog Sprint Goal-u (niyə), seçilmiş elementləri (nə) və hərəkət planını (necə) birləşdirir. Öhdəliyi Sprint Goal-dur. Plan Developers üçündür və onlar tərəfindən hazırlanır; öyrəndikcə yenilənir. Məqsədi təhlükəyə atmadan əhatə Product Owner ilə yenidən müzakirə edilə bilər. Sprint Backlog dəyişməz müqavilə deyil.
 
-## Əsas nəzəriyyə: dərs planı
+## Qərar qaydaları
 
-1. Mövzunun əsas terminlərini müəyyən et.
-2. Məhsul İş Siyahısını, Sprint İş Siyahısını və İnkrementi ortaq öhdəliklərlə əlaqələndir.
-3. Faydalı tətbiqi inandırıcı, amma yanlış istifadə ilə müqayisə et.
-4. Qərarı dəyişə biləcək sübutu müəyyən et.
+İnkrement əvvəlkilərə əlavə olunan, birlikdə yoxlanmış və istifadə edilə bilən addımdır. Öhdəliyi Definition of Done-dur. Qəbul meyarları konkret elementin davranışını izah edə bilər, amma ortaq keyfiyyət meyarını əvəz etmir. Done olmayan iş İnkrement deyil, Review-da təqdim və ya buraxılış edilə bilməz; gələcək baxış üçün Product Backlog-a qayıdır. Eyni məhsul üzərində komandalar eyni Done tərifinə əməl edir.
 
-## İşlənmiş nümunə: dərs planı
+## Vizual model
 
-Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et. Tam nümunədə kontekst, məhdudiyyətlər, alternativlər, qərar və nəticənin yoxlanılması olacaq.
+<Diagram
+  chart={
+    'flowchart TD\n  A["Product Backlog"] --> B["Product Goal"]\n  C["Sprint Backlog"] --> D["Sprint Goal"]\n  E["Increment"] --> F["Definition of Done"]'
+  }
+/>
 
-## Diaqram: dərs planı
+Bu model tədris xülasəsidir; mənbənin şəklinin surəti deyil.
 
-Planlaşdırılan vizual: **Artefaktlar və onların öhdəlikləri** mövzusunda iştirakçılar, qərarlar və sübutların işarələnmiş görünüşü. Diaqramın mətn izahı da veriləcək.
+## Praktik vəziyyət
 
-## İnteraktiv məşq: dərs planı
+Rezervasiya düyməsi işləyir, amma ortaq Done tərifindəki təhlükəsizlik yoxlaması keçilməyib. Product Owner bunu yarımçıq dəyər kimi Review-da göstərmək istəyir.
 
-Planlaşdırılan fəaliyyət: ssenari üçün addım seç, nəticəsini aç və yeni sübut gəldikdə seçimi yenilə. Klaviatura ilə işləyən alternativ olacaq.
+## Qərarın əsaslandırılması
 
-## Tipik səhvlər və yaxşı təcrübələr
+İşi Done İnkrement kimi göstərmə. Problemi şəffaf et və elementi gələcək baxış üçün Product Backlog-a qaytar. Qəbul meyarının ödənməsi ortaq təhlükəsizlik keyfiyyətini ləğv etmir.
 
-- Şablonu və ya çərçivəni sübutla qarışdırma.
-- Addım tövsiyə etməzdən əvvəl konteksti və qərar sahibini göstər.
-- Sənəd və ya funksiya sayını deyil, nəticələri müqayisə et.
+## Yayılmış səhvlər
 
-## Praktik tapşırıq və nümunə həll planı
+Done tərifini son gün zəiflətmək; refinement-i təsdiq qapısına çevirmək; Scrum-un user story və story point tələb etdiyini düşünmək.
 
-**Tapşırıq:** Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.
+## Tətbiq məşqi
 
-**Nümunə həll planı:** problemi yaz, fərziyyələri sadala, seçimləri müqayisə et, addımı əsaslandır və növbəti yoxlanışı müəyyən et. Tam dərslə birlikdə işlənmiş cavab əlavə ediləcək.
+Product Goal, Sprint Goal və Definition of Done üçün rezervasiya məhsulundan bir nümunə yaz. Bir elementin qəbul meyarını ayrıca göstər.
 
-## Mini-test: dərs planı
+## İzahlı həll
 
-Tam dərsdə terminlər, ssenarinin tətbiqi və seçimlər üzrə orijinal suallar, düzgün və yanlış cavabların izahı olacaq. Bu planda dərs testi hələ dərc edilməyib.
+<details>
+<summary>İzahlı həlli aç</summary>
 
-## Bir səhifəlik xülasə planı
+Product Goal: təkrar zəng etmədən rezervasiya etmək. Sprint Goal: istifadəçi boş vaxtı görüb rezervasiya edə bilsin. Done: inteqrasiya, avtomatlaşdırılmış testlər və təhlükəsizlik yoxlaması. Konkret meyar: dolu saat seçiləndə izahlı xəbərdarlıq göstərilir. Bunlar tədris nümunələridir.
 
-Yekun yaddaş vərəqi mövzunun məqsədini, girişlərini, qərarlarını, çıxışlarını və baxış siyahısını ümumiləşdirəcək.
+</details>
 
-## Əlavə oxu
+## Özünü yoxla və yadda saxla
 
-- [Scrum Guide, rəsmi mənbə](https://scrumguides.org/scrum-guide.html)
-- [IIBA biznes analizi resursları](https://www.iiba.org/business-analysis-blogs/)
+Product Backlog → Product Goal; Sprint Backlog → Sprint Goal; Increment → Definition of Done. Hazır olmaq Done olmaq deyil.
 
-İstiqamətinə uyğun mənbədən istifadə et. Rəsmi sertifikasiya formatı və uyğunluq şərtləri ayrıca yoxlanmalıdır.
+<LessonCheck />
+
+## Mənbələr və əhatə
+
+Scrum Guide 2020: Scrum Artifacts və hər artefaktın Commitment bölməsi. Kitab: fəsil 7, Done və Ready.
+
+- [The Scrum Guide — Ken Schwaber & Jeff Sutherland (November 2020)](https://scrumguides.org/scrum-guide.html)
+- [The Professional Product Owner — Don McGreal & Ralph Jocham (2018), ISBN 9780134686479](https://www.informit.com/store/professional-product-owner-leveraging-scrum-as-a-competitive-9780134686479)
+
+İzahlar və nümunələr bu platforma üçün yenidən yazılıb. Rəsmi test sualları köçürülməyib. İmtahan formatı ayrıca yoxlanır; bu mövzu bölgüsü rəsmi blueprint deyil.

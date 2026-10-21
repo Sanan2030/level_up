@@ -3,139 +3,68 @@ id: scrum-accountabilities
 locale: en
 title: 'Scrum accountabilities in practice'
 objectives:
-  - 'Distinguish Product Owner, Scrum Master and Developers through decisions and collaboration.'
-  - 'Apply the concept to a realistic case and explain a decision.'
+  - 'Distinguish Product Owner accountability from delegated work.'
+  - 'Identify decision ownership while preserving self-management.'
 ---
 
-## 1. Learning objectives
+## Concept
 
-Explain the distinct accountabilities of Product Owner, Scrum Master and Developers; distinguish delegation from accountability; and reason through a realistic interruption without inventing a project-manager role inside Scrum.
+A Scrum Team has one Product Owner, one Scrum Master and Developers, with no sub-teams or internal hierarchies. The whole team is accountable for a valuable, useful Increment each Sprint. The Product Owner is accountable for maximizing product value and effective Product Backlog management; this does not require personally writing every item.
 
-## 2. Why it matters
+## Why it matters
 
-A team building a bank’s card-freeze feature receives an urgent request directly from a senior sales manager. One developer is told to drop the current Sprint work. The Product Owner is unaware, and the Scrum Master is asked to approve the code design. Confused accountability produces hidden work and weakens the team’s ability to inspect progress.
+The Product Owner develops the Product Goal and ensures items are understood and ordered. Work can be delegated, while accountability remains. Developers own sizing, selection of Sprint work and the implementation plan. The Scrum Master establishes Scrum and enables team effectiveness rather than allocating technical tasks.
 
-## 3. Core theory
+## Decision principles
 
-In the Scrum Guide 2020, one Scrum Team contains a Product Owner, a Scrum Master and Developers. These are accountabilities, not a required mapping to employment titles. The team is cross-functional and self-managing.
+Chapter 1 of the book explains delays when Product Owners act merely as scribes or proxies. Product decisions need authority and access to customers. These types are the authors’ explanatory model, not extra Scrum accountabilities. The book’s older Development Team terminology is updated here to Developers from the 2020 Guide.
 
-**Product Owner:** accountable for maximizing the product’s value and for effective Product Backlog management. This includes communicating the Product Goal, making backlog items understandable, ordering the backlog and ensuring transparency. Work can be delegated; accountability is retained. The Product Owner is one person, not a committee.
-
-**Developers:** accountable for creating a usable Increment each Sprint, creating the Sprint Backlog plan, maintaining quality through the Definition of Done, adapting their daily plan toward the Sprint Goal and holding each other accountable as professionals. “Developers” includes people with the skills needed to create the Increment, not only programmers.
-
-**Scrum Master:** accountable for establishing Scrum as described in the guide and for the Scrum Team’s effectiveness. The Scrum Master coaches self-management, helps remove impediments and supports the team, Product Owner and organization in using Scrum effectively. This is not a default assignment authority or a code-approval gate.
-
-Collaboration is essential. Distinct accountability does not mean working in silos. The whole team shares product context and inspects outcomes.
-
-## 4. Worked example: an urgent card-freeze request
-
-The developer makes the request visible rather than accepting secret work. The Product Owner clarifies the customer impact and urgency with the requester. Developers explain the current Sprint Goal, available options and technical implications. The team collaborates on any necessary scope adaptation without endangering the Sprint Goal.
-
-If the Sprint Goal has become obsolete, only the Product Owner has authority to cancel the Sprint. Cancellation is not a routine shortcut for every urgent request. The Scrum Master helps the organization understand the accountabilities and prevents repeated hidden assignment from becoming normal.
-
-| Decision                                          | Primary accountability                           | Useful collaboration                                     |
-| ------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------- |
-| Product Backlog ordering                          | Product Owner                                    | Users, stakeholders and Developers supply evidence       |
-| How selected work is turned into an Increment     | Developers                                       | Product Owner clarifies value and trade-offs             |
-| Coaching the organization in Scrum                | Scrum Master                                     | Leaders and the whole team participate                   |
-| Inspecting product progress and future adaptation | Scrum Team and stakeholders in the Sprint Review | Product Owner discusses progress toward the Product Goal |
-
-## 5. Diagram
+## Visual model
 
 <Diagram
   chart={
-    'flowchart TD; G[Shared Product Goal] --> P[Product Owner: value and backlog]; G --> D[Developers: usable Increment and plan]; G --> S[Scrum Master: Scrum and effectiveness]; P --> C[Collaborate and inspect]; D --> C; S --> C; C --> G;'
+    'flowchart LR\n  A["Goal"] --> B["Evidence and choice"]\n  B --> C["Small step"]\n  C --> D["Inspect and adapt"]\n  D --> B'
   }
 />
 
-The three branches show distinct accountabilities connected by shared product direction and collaboration. No branch turns another accountability into a subordinate role.
+This is a teaching summary, not a reproduction of a source figure.
 
-## 6. Interactive explainer
+## Worked scenario
 
-Walk through the cycle and name which accountability contributes at each point. More than one usually contributes; ask what each is accountable for rather than who is allowed to attend.
+In a booking product, an analyst writes backlog items. Sales wants the Product Owner to allocate developers’ daily tasks. Developers propose a smaller technical solution.
 
-<ConceptStepper />
+## Decision reasoning
+
+The analyst may keep drafting; the Product Owner retains accountability for direction, ordering and transparency. Agree goals and quality boundaries with Developers and let them plan implementation. Hear sales’ needs without turning Product Ownership into a committee.
+
+## Common pitfalls
+
+Making the Product Owner the only channel to users; treating the Scrum Master as a project manager; confusing delegation with transferred accountability.
+
+## Application exercise
+
+Allocate three decisions: item ordering, technical solution, and improving team collaboration. Name collaborators for each.
+
+## Explained solution
 
 <details>
-<summary>Can the Product Owner ask someone else to refine a backlog item?</summary>
+<summary>Show explained solution</summary>
 
-Yes. Work may be delegated, and refinement is collaborative. The Product Owner remains accountable for effective Product Backlog management. Delegating a task does not distribute the Product Owner accountability across a committee.
+The Product Owner is accountable for ordering, Developers own technical planning, and the Scrum Master helps improve effectiveness. Relevant experts collaborate without erasing decision ownership.
 
 </details>
 
-## 7. Common mistakes and best practices
+## Check understanding and remember
 
-- **Mistake:** “Developers” means programmers only. **Improve:** include the skills required to create a usable Increment.
-- **Mistake:** the Scrum Master assigns everyone’s daily tasks. **Improve:** coach self-management and help address impediments.
-- **Mistake:** the Product Owner must write every backlog item alone. **Improve:** collaborate while keeping accountability clear.
-- **Mistake:** an influential stakeholder can silently replace Sprint work. **Improve:** make the need visible and discuss adaptation and the Sprint Goal.
-- **Mistake:** quality can be suspended to meet a date. **Improve:** inspect scope and options while respecting the Definition of Done.
+One Product Owner; work may be delegated; accountability remains; Developers plan their work; Scrum Master enables effectiveness.
 
-## 8. Practice exercise and sample solution
+<LessonCheck />
 
-**Exercise:** A compliance specialist identifies a risk in a payment feature during a Sprint. Describe what the Product Owner, Developers and Scrum Master could do. Avoid assigning all decisions to one person.
+## Sources and scope
 
-<details>
-<summary>Reveal a sample solution</summary>
+Scrum Guide 2020: Scrum Team, Developers, Product Owner, Scrum Master. Book: chapter 1, The Product Owner.
 
-The Product Owner clarifies impact, customer value and urgency with compliance and makes any backlog decision transparent. Developers inspect the technical implications and adapt the plan with the Product Owner while considering the Sprint Goal and Definition of Done. The Scrum Master helps the team and stakeholders collaborate effectively and addresses organizational obstacles. If the Sprint Goal is obsolete, the Product Owner can cancel the Sprint. The correct response depends on evidence; “ignore compliance until the next Sprint” and “automatically restart every Sprint” are both poor blanket rules.
+- [The Scrum Guide — Ken Schwaber & Jeff Sutherland (November 2020)](https://scrumguides.org/scrum-guide.html)
+- [The Professional Product Owner — Don McGreal & Ralph Jocham (2018), ISBN 9780134686479](https://www.informit.com/store/professional-product-owner-leveraging-scrum-as-a-competitive-9780134686479)
 
-</details>
-
-## 9. Mini-quiz
-
-**1. Who is accountable for effective Product Backlog management?**
-
-A. The Product Owner. B. A stakeholder committee. C. The Scrum Master by default.
-
-<details>
-<summary>Answer and explanation</summary>
-
-**A.** Others can contribute, but the Product Owner retains accountability. B replaces the single accountable person with a committee. C confuses coaching Scrum with owning product ordering.
-
-</details>
-
-**2. Which statement about Developers is correct?**
-
-A. They only implement specifications and never adapt their plan. B. They create a usable Increment and adapt their plan toward the Sprint Goal. C. They are exclusively programmers.
-
-<details>
-<summary>Answer and explanation</summary>
-
-**B.** Developers own the plan and quality of creating the Increment. A removes self-management. C narrows the accountability to a job title.
-
-</details>
-
-**3. A Scrum Master’s default job is to assign daily tasks. True or false?**
-
-A. True. B. False.
-
-<details>
-<summary>Answer and explanation</summary>
-
-**B, false.** The Scrum Master supports effectiveness and self-management. A introduces a command-and-control assignment role that the Scrum Guide does not prescribe.
-
-</details>
-
-**4. What happens when the Product Owner delegates work on a backlog item?**
-
-A. Accountability automatically transfers to the person doing the work. B. Product Owner accountability remains with the Product Owner. C. The Product Owner becomes a committee.
-
-<details>
-<summary>Answer and explanation</summary>
-
-**B.** Delegation and accountability are different. A confuses doing a task with retaining accountability. C contradicts the single Product Owner accountability.
-
-</details>
-
-## 10. One-page cheat sheet
-
-**Product Owner:** product value, Product Goal and effective Product Backlog management. **Developers:** usable Increment, Sprint Backlog plan, quality and daily adaptation. **Scrum Master:** Scrum as defined and team effectiveness. **Whole Scrum Team:** cross-functional, self-managing collaboration. **Interruption response:** make the need visible, clarify urgency, inspect options and protect coherent decision-making. **Study habit:** explain a scenario in your own words and link your reasoning to the official guide.
-
-## 11. Further reading
-
-- [The Scrum Guide, official 2020 guide](https://scrumguides.org/scrum-guide.html)
-- [Scrum.org: understanding and applying the Scrum framework](https://www.scrum.org/resources/understanding-and-applying-scrum-framework)
-- [Scrum.org: Professional Scrum Product Owner I](https://www.scrum.org/assessments/professional-scrum-product-owner-i-certification)
-
-This is original practice material. The questions are not real examination questions. Consult the editable exam configuration and official certification page for current format and eligibility information.
+Explanations and examples are original teaching material. Official test questions are not reproduced. Exam formats are verified separately; these topic groups are not an official blueprint.

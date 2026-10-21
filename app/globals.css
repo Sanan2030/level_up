@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/dm-sans';
-@import '@fontsource-variable/manrope';
 
 @custom-variant dark (&:where(.dark, .dark *));
 .sidebar .sidebar-close {
@@ -49,7 +47,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'DM Sans Variable', 'Segoe UI', sans-serif;
+  font-family: 'Inter Variable', 'Segoe UI', sans-serif;
   font-size: 14px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -68,7 +66,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Manrope Variable', 'Segoe UI', sans-serif;
+  font-family: 'Bricolage Grotesque Variable', 'Segoe UI', sans-serif;
   line-height: 1.35;
   letter-spacing: -0.035em;
 }
@@ -198,7 +196,7 @@ hr {
   align-items: center;
   gap: 10px;
   padding: 0 10px;
-  font-family: 'Manrope Variable', sans-serif;
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
   font-weight: 850;
   letter-spacing: -1.5px;
   font-size: 29px;
@@ -1092,7 +1090,7 @@ hr {
   color: #9b82b2;
 }
 .stat-value {
-  font-family: 'Manrope Variable', sans-serif;
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: -1px;
@@ -1100,7 +1098,7 @@ hr {
   margin: 0 0 2px;
 }
 .stat-value > span {
-  font-family: 'DM Sans Variable', sans-serif;
+  font-family: 'Inter Variable', sans-serif;
   font-size: 10px;
   font-weight: 400;
   color: var(--muted);
@@ -1263,7 +1261,7 @@ hr {
   margin-top: 24px;
 }
 .activity-total > strong {
-  font-family: 'Manrope Variable', sans-serif;
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.4;
@@ -1637,7 +1635,7 @@ hr {
 }
 .daily-note > p {
   font-size: 13px;
-  font-family: 'Manrope Variable', sans-serif;
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
   line-height: 1.7;
   letter-spacing: -0.3px;
   font-weight: 600;
@@ -1865,7 +1863,7 @@ hr {
   font-size: 34px;
   font-weight: 750;
   color: var(--accent);
-  font-family: 'Manrope Variable', sans-serif;
+  font-family: 'Bricolage Grotesque Variable', sans-serif;
 }
 .icon-title {
   display: flex;

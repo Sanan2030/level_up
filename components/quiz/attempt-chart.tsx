@@ -74,8 +74,8 @@ export function AttemptChart({ attempts, locale }: { attempts: QuizAttempt[]; lo
       </div>
       <p className="muted" style={{ fontSize: '.8rem' }}>
         {locale === 'az'
-          ? 'Hər məşqin dəqiq nəticəsi aşağıdakı siyahıdadır.'
-          : 'Exact results for each session are available in the list below.'}
+          ? 'Məşq bölməsində hər sessiyanın dəqiq nəticəsinə baxa bilərsən.'
+          : 'See the Practice section for exact results for each session.'}
       </p>
     </figure>
   );

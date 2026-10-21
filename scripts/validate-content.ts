@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { competencies, glossary, lessons, modules } from '../lib/catalog';
 import { getExams, getQuestions } from '../lib/assessments';
 import { contentRoot, frontmatterSchema, walkFiles, parseMdxSource } from '../lib/content';
+import { sources } from '../lib/sources';
 import { tracks } from '../lib/tracks';
 
 async function validate() {
@@ -14,6 +15,8 @@ async function validate() {
   };
   const unique = (items: { id: string }[], label: string) =>
     check(new Set(items.map((item) => item.id)).size === items.length, `${label}: duplicate id`);
+  unique(sources, 'Sources');
+  const sourceIds = new Set(sources.filter((s) => s.status === 'read').map((s) => s.id));
   unique(lessons, 'Lessons');
   unique(modules, 'Modules');
   unique(competencies, 'Competencies');
@@ -22,6 +25,8 @@ async function validate() {
   const moduleIds = new Set(modules.map((m) => m.id));
   const fileKeys = new Set<string>();
   for (const lesson of lessons) {
+    for (const id of lesson.sourceIds)
+      check(sourceIds.has(id), `${lesson.id}: source not read or missing: ${id}`);
     check(moduleIds.has(lesson.moduleId), `${lesson.id}: missing module`);
     check(
       modules.find((m) => m.id === lesson.moduleId)?.lessonIds.includes(lesson.id),
@@ -126,6 +131,13 @@ async function validate() {
       );
   }
   for (const q of questions) {
+    for (const id of q.sourceIds)
+      check(sourceIds.has(id), `${q.id}: source not read or missing: ${id}`);
+    if (q.sourceIds.length)
+      check(
+        lessons.find((l) => l.id === q.lessonId)?.status === 'published',
+        `${q.id}: source-backed practice must link to a complete lesson`,
+      );
     check(lessonIds.has(q.lessonId), `${q.id}: linked lesson missing`);
     check(
       new Set(q.options.map((o) => o.id)).size === q.options.length,

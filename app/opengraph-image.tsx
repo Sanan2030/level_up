@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-export const alt = 'Level Up — From curiosity to capability';
+export const alt = 'Mərhələ — BA & PO learning';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 export default function Image() {
@@ -8,7 +8,7 @@ export default function Image() {
       style={{
         width: '100%',
         height: '100%',
-        background: '#f8f6f2',
+        background: '#f5f7f5',
         display: 'flex',
         flexDirection: 'column',
         padding: '90px',
@@ -16,8 +16,8 @@ export default function Image() {
         color: '#29382f',
       }}
     >
-      <div style={{ display: 'flex', fontSize: 38, fontWeight: 800, color: '#d97757' }}>
-        levelup.
+      <div style={{ display: 'flex', fontSize: 38, fontWeight: 800, color: '#0f766e' }}>
+        Mərhələ
       </div>
       <div
         style={{ display: 'flex', fontSize: 76, fontWeight: 800, marginTop: 60, lineHeight: 1.15 }}

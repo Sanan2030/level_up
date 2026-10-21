@@ -102,7 +102,7 @@
       "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
       "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
     },
-    "lessonId": "product-goal",
+    "lessonId": "pspo1-artifacts",
     "practiceOnly": true
   },
   {
@@ -155,7 +155,7 @@
       "en": "Ordering is a product decision; a single transparent order supports coherent choices.",
       "az": "Sıralama məhsul qərarıdır; vahid şəffaf sıra uyğun seçimləri dəstəkləyir."
     },
-    "lessonId": "product-backlog",
+    "lessonId": "pspo1-product-value",
     "practiceOnly": true
   },
   {
@@ -579,7 +579,7 @@
       "en": "A usable Increment can be delivered before the Sprint ends; review timing does not define releasability.",
       "az": "İstifadəyə hazır İnkrement Sprint bitmədən təqdim edilə bilər; icmalın vaxtı buraxılışa yararlılığı müəyyən etmir."
     },
-    "lessonId": "forecast-release",
+    "lessonId": "pspo1-events",
     "practiceOnly": true
   },
   {
@@ -685,7 +685,7 @@
       "en": "Refinement increases understanding and makes upcoming items suitable for discussion and selection.",
       "az": "Dəqiqləşdirmə anlayışı artırır və qarşıdakı elementləri müzakirə və seçim üçün uyğun edir."
     },
-    "lessonId": "product-backlog",
+    "lessonId": "pspo1-product-value",
     "practiceOnly": true
   },
   {
@@ -844,7 +844,7 @@
       "en": "Empirical decisions use observed results rather than treating forecasts as certainty.",
       "az": "Empirik qərarlar proqnozu qəti həqiqət saymaq əvəzinə müşahidə olunan nəticələrdən istifadə edir."
     },
-    "lessonId": "scrum-framework",
+    "lessonId": "scrum-accountabilities",
     "practiceOnly": true
   },
   {
@@ -897,7 +897,7 @@
       "en": "A forecast communicates likely outcomes without pretending a complex future is guaranteed.",
       "az": "Proqnoz mürəkkəb gələcəyi zəmanətli saymadan ehtimal olunan nəticələri bildirir."
     },
-    "lessonId": "forecast-release",
+    "lessonId": "pspo1-events",
     "practiceOnly": true
   },
   {
@@ -950,7 +950,7 @@
       "en": "Useful collaboration improves understanding; the Product Owner need not act as a message bottleneck.",
       "az": "Faydalı əməkdaşlıq anlayışı artırır; Məhsul Sahibi məlumat ötürülməsində dar boğaz olmamalıdır."
     },
-    "lessonId": "po-teamwork",
+    "lessonId": "scrum-accountabilities",
     "practiceOnly": true
   },
   {
@@ -1109,7 +1109,7 @@
       "en": "Transparency lets stakeholders challenge assumptions and understand why work is ordered as it is.",
       "az": "Şəffaflıq tərəflərə fərziyyələri sorğulamağa və işin niyə belə sıralandığını anlamağa imkan verir."
     },
-    "lessonId": "product-backlog",
+    "lessonId": "pspo1-product-value",
     "practiceOnly": true
   },
   {
@@ -1162,7 +1162,7 @@
       "en": "A single backlog helps teams working on the same product focus on a shared product direction.",
       "az": "Vahid bekloq eyni məhsul üzərində işləyən komandaların ortaq istiqamətə yönəlməsinə kömək edir."
     },
-    "lessonId": "scaling-products",
+    "lessonId": "pspo1-artifacts",
     "practiceOnly": true
   },
   {
@@ -1268,7 +1268,7 @@
       "en": "Scrum values support honest collaboration and inspection, including speaking about difficult evidence.",
       "az": "Scrum dəyərləri çətin sübutları müzakirə etmək daxil olmaqla dürüst əməkdaşlığı və yoxlamanı dəstəkləyir."
     },
-    "lessonId": "po-teamwork",
+    "lessonId": "scrum-accountabilities",
     "practiceOnly": true
   },
   {
@@ -1321,7 +1321,7 @@
       "en": "Outcome measures connect product work to the effect it is intended to create.",
       "az": "Nəticə göstəriciləri məhsul işini yaratmalı olduğu təsirlə əlaqələndirir."
     },
-    "lessonId": "product-metrics",
+    "lessonId": "pspo1-product-value",
     "practiceOnly": true
   },
   {
@@ -1374,7 +1374,7 @@
       "en": "Predefined evidence reduces the temptation to reinterpret any result as success.",
       "az": "Əvvəlcədən müəyyən edilən sübut istənilən nəticəni uğur kimi yozmaq meylini azaldır."
     },
-    "lessonId": "story-mapping",
+    "lessonId": "pspo1-product-value",
     "practiceOnly": true
   },
   {
@@ -1427,7 +1427,7 @@
       "en": "Ordering is a product decision; a single transparent order supports coherent choices.",
       "az": "Sıralama məhsul qərarıdır; vahid şəffaf sıra uyğun seçimləri dəstəkləyir."
     },
-    "lessonId": "product-backlog",
+    "lessonId": "pspo1-product-value",
     "practiceOnly": true
   },
   {
@@ -1533,7 +1533,7 @@
       "en": "An integrated Increment requires compatible quality standards and attention to cross-team integration.",
       "az": "İnteqrasiya olunmuş İnkrement uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
     },
-    "lessonId": "scaling-products",
+    "lessonId": "pspo1-artifacts",
     "practiceOnly": true
   },
   {
@@ -1586,7 +1586,439 @@
       "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
       "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
     },
-    "lessonId": "product-goal",
+    "lessonId": "pspo1-artifacts",
+    "practiceOnly": true
+  },
+  {
+    "id": "scrum-accountabilities-source-1",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "az": "Analitik bütün backlog elementlərini yazır. Kim effektiv idarəçiliyə hesabatlıdır?",
+      "en": "An analyst writes every backlog item. Who remains accountable for effective management?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Product Owner",
+          "en": "Product Owner"
+        },
+        "explanation": {
+          "az": "Scrum Guide: iş həvalə edilə bilər, hesabatlılıq Product Owner-də qalır.",
+          "en": "Scrum Guide: work may be delegated; accountability remains with the Product Owner."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Analitik",
+          "en": "The analyst"
+        },
+        "explanation": {
+          "az": "Yazmaq hesabatlılığı avtomatik ötürmür.",
+          "en": "Drafting does not transfer accountability."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Satış komitəsi",
+          "en": "A sales committee"
+        },
+        "explanation": {
+          "az": "Product Owner bir şəxsdir.",
+          "en": "The Product Owner is one person."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Scrum Guide: iş həvalə edilə bilər, hesabatlılıq Product Owner-də qalır.",
+      "en": "Scrum Guide: work may be delegated; accountability remains with the Product Owner."
+    },
+    "lessonId": "scrum-accountabilities",
+    "sourceIds": ["scrum-2020", "professional-po-2018"],
+    "practiceOnly": true
+  },
+  {
+    "id": "scrum-accountabilities-source-2",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "az": "Product Owner hər proqramçının gündəlik texniki tapşırığını seçmək istəyir. Hansı cavab uyğundur?",
+      "en": "The Product Owner wants to choose each developer’s daily technical tasks. What fits Scrum?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Məqsədi aydınlaşdır, planı Developers qursun.",
+          "en": "Clarify the goal and let Developers build the plan."
+        },
+        "explanation": {
+          "az": "Developers necə işləyəcəyini özü müəyyən edir.",
+          "en": "Developers determine how to do the work."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Scrum Master işi paylasın.",
+          "en": "Have the Scrum Master allocate work."
+        },
+        "explanation": {
+          "az": "Scrum Master tapşırıq paylayan rəhbər deyil.",
+          "en": "Task allocation is not a Scrum Master accountability."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Satış rəhbəri planı təsdiqləsin.",
+          "en": "Have sales approve the plan."
+        },
+        "explanation": {
+          "az": "Kənar təsdiq özünüidarəetməni əvəz edir.",
+          "en": "External approval replaces self-management."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Developers necə işləyəcəyini özü müəyyən edir.",
+      "en": "Developers determine how to do the work."
+    },
+    "lessonId": "scrum-accountabilities",
+    "sourceIds": ["scrum-2020", "professional-po-2018"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-events-source-1",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "az": "Done İnkrement Sprint-in ortasında hazırdır. Scrum nəyi tələb edir?",
+      "en": "A Done Increment is ready halfway through a Sprint. What does Scrum require?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Review-u buraxılış qapısı saymamağı.",
+          "en": "Do not treat Review as a release gate."
+        },
+        "explanation": {
+          "az": "Scrum Guide: İnkrement Sprint bitmədən təqdim oluna bilər.",
+          "en": "Scrum Guide: an Increment may be delivered before the Sprint ends."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Review təsdiqini gözləməyi.",
+          "en": "Wait for Review approval."
+        },
+        "explanation": {
+          "az": "Review-un məqsədi yoxlama və uyğunlaşmadır.",
+          "en": "Review is for inspection and adaptation."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Yeni Sprint açmağı.",
+          "en": "Start a new Sprint."
+        },
+        "explanation": {
+          "az": "İnkrement yaranması Sprint-i bitirmir.",
+          "en": "Creating an Increment does not end the Sprint."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Scrum Guide: İnkrement Sprint bitmədən təqdim oluna bilər.",
+      "en": "Scrum Guide: an Increment may be delivered before the Sprint ends."
+    },
+    "lessonId": "pspo1-events",
+    "sourceIds": ["scrum-2020"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-events-source-2",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "az": "Daily Scrum-da Product Owner hamıdan status istəyir. Daha uyğun fokus hansıdır?",
+      "en": "At Daily Scrum the Product Owner requests individual status reports. What is a better focus?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Sprint Goal-a irəliləyişi yoxlayıb planı uyğunlaşdırmaq.",
+          "en": "Inspect progress toward the Sprint Goal and adapt the plan."
+        },
+        "explanation": {
+          "az": "Daily Developers üçün 15 dəqiqəlik plan uyğunlaşdırmasıdır.",
+          "en": "Daily is a 15-minute planning adaptation for Developers."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Hər elementin qəbulunu səsə qoymaq.",
+          "en": "Vote on accepting each item."
+        },
+        "explanation": {
+          "az": "Daily qəbul komitəsi deyil.",
+          "en": "Daily is not an acceptance committee."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Gələn ilin bütün backlog-unu yazmaq.",
+          "en": "Write the entire backlog for next year."
+        },
+        "explanation": {
+          "az": "Bu fokus cari Sprint Goal-dan uzaqdır.",
+          "en": "That focus is detached from the current Sprint Goal."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Daily Developers üçün 15 dəqiqəlik plan uyğunlaşdırmasıdır.",
+      "en": "Daily is a 15-minute planning adaptation for Developers."
+    },
+    "lessonId": "pspo1-events",
+    "sourceIds": ["scrum-2020"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-artifacts-source-1",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "az": "İki komanda eyni məhsulu hazırlayır. Done yanaşması necə olmalıdır?",
+      "en": "Two teams develop the same product. How should they approach Done?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Ortaq Definition of Done müəyyən edib ona əməl etmək.",
+          "en": "Mutually define and comply with the same Definition of Done."
+        },
+        "explanation": {
+          "az": "Scrum Guide eyni məhsul üçün ortaq Done tələb edir.",
+          "en": "Scrum Guide requires shared Done for the same product."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Hər komanda uyğun gəlməyən ayrı standart seçsin.",
+          "en": "Use incompatible standards for each team."
+        },
+        "explanation": {
+          "az": "Ayrı uyğunsuz standart inteqrasiyanı qeyri-şəffaf edir.",
+          "en": "Incompatible standards obscure integration."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Product Owner keyfiyyəti hər dəfə şifahi seçsin.",
+          "en": "Let the Product Owner choose quality verbally each time."
+        },
+        "explanation": {
+          "az": "Done ortaq və şəffaf tərifdir.",
+          "en": "Done is a shared, transparent definition."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Scrum Guide eyni məhsul üçün ortaq Done tələb edir.",
+      "en": "Scrum Guide requires shared Done for the same product."
+    },
+    "lessonId": "pspo1-artifacts",
+    "sourceIds": ["scrum-2020", "professional-po-2018"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-artifacts-source-2",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 1,
+    "text": {
+      "az": "Sprint-in gedişində yeni məlumat gəldi. Məqsəd aktualdır, amma bir element dəyişməlidir. Nə etmək olar?",
+      "en": "New information changes an item during a Sprint, while the goal remains valid. What can happen?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Developers əhatəni Product Owner ilə yenidən müzakirə edə bilər.",
+          "en": "Developers can renegotiate scope with the Product Owner."
+        },
+        "explanation": {
+          "az": "Məqsəd qorunmaqla əhatə öyrənməyə uyğun dəyişə bilər.",
+          "en": "Scope can adapt to learning while protecting the goal."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Sprint Backlog heç vaxt dəyişə bilməz.",
+          "en": "The Sprint Backlog can never change."
+        },
+        "explanation": {
+          "az": "Sprint Backlog öyrənmə ilə yenilənən plandır.",
+          "en": "Sprint Backlog is an evolving plan."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Definition of Done avtomatik ləğv edilir.",
+          "en": "The Definition of Done is automatically waived."
+        },
+        "explanation": {
+          "az": "Keyfiyyət azalmır.",
+          "en": "Quality does not decrease."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Məqsəd qorunmaqla əhatə öyrənməyə uyğun dəyişə bilər.",
+      "en": "Scope can adapt to learning while protecting the goal."
+    },
+    "lessonId": "pspo1-artifacts",
+    "sourceIds": ["scrum-2020", "professional-po-2018"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-product-value-source-1",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 1,
+    "text": {
+      "az": "Ayda 30 yeni funksiya buraxılıb. Bu nəyi birbaşa göstərir?",
+      "en": "Thirty new features ship in a month. What does this directly demonstrate?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Çıxış həcmini.",
+          "en": "Output volume."
+        },
+        "explanation": {
+          "az": "EBM 2024: funksiya məhsul çıxışıdır; fayda ayrıca ölçülür.",
+          "en": "EBM 2024: a feature is output; benefit requires separate evidence."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Müştəri faydasının artmasını.",
+          "en": "Increased customer benefit."
+        },
+        "explanation": {
+          "az": "Buraxılış faydanı avtomatik sübut etmir.",
+          "en": "Shipping does not automatically prove benefit."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Bütün fərziyyələrin təsdiqini.",
+          "en": "Validation of every hypothesis."
+        },
+        "explanation": {
+          "az": "Fərziyyələr istifadə və nəticə ilə yoxlanır.",
+          "en": "Hypotheses are tested through use and outcomes."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "EBM 2024: funksiya məhsul çıxışıdır; fayda ayrıca ölçülür.",
+      "en": "EBM 2024: a feature is output; benefit requires separate evidence."
+    },
+    "lessonId": "pspo1-product-value",
+    "sourceIds": ["professional-po-2018", "scrum-2020", "ebm-2024"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo1-product-value-source-2",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 1,
+    "text": {
+      "az": "Hansı sıralama yanaşması kitabdakı tövsiyəyə uyğundur?",
+      "en": "Which ordering approach fits the book’s guidance?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Dəyər, risk, ölçü və asılılıqları birlikdə yoxlamaq.",
+          "en": "Examine value, risk, size and dependencies together."
+        },
+        "explanation": {
+          "az": "7-ci fəsil bu ölçülər üzrə düşünməyi tövsiyə edir.",
+          "en": "Chapter 7 considers these dimensions."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Yalnız elementlərin yaşına baxmaq.",
+          "en": "Use only item age in the backlog."
+        },
+        "explanation": {
+          "az": "Yaş təkbaşına təsiri göstərmir.",
+          "en": "Age alone does not establish impact."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Scrum-un məcburi ROI formulunu tətbiq etmək.",
+          "en": "Apply Scrum’s mandatory ROI formula."
+        },
+        "explanation": {
+          "az": "Scrum belə məcburi formula müəyyən etmir.",
+          "en": "Scrum prescribes no such mandatory formula."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "7-ci fəsil bu ölçülər üzrə düşünməyi tövsiyə edir.",
+      "en": "Chapter 7 considers these dimensions."
+    },
+    "lessonId": "pspo1-product-value",
+    "sourceIds": ["professional-po-2018", "scrum-2020", "ebm-2024"],
     "practiceOnly": true
   }
 ]

@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       '',
       '/lessons',
       '/glossary',
+      '/sources',
       ...lessons.filter((l) => l.status === 'published').map((l) => `/lessons/${l.id}`),
     ].map((route) => ({
       url: `${site}/${locale}${route}`,

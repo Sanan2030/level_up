@@ -3,63 +3,69 @@ id: pspo3-complexity
 locale: az
 title: 'Mürəkkəb kontekstdə məhsul sahibliyi'
 objectives:
-  - 'Məhsul məsuliyyətindən imtina etmədən sübut dəyişdikcə qərarları uyğunlaşdır.'
-  - 'Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.'
+  - 'Mürəkkəb mühitdə proqnozu zəmanətdən ayır.'
+  - 'Məqsəd, keyfiyyət və öyrənməni çoxkomandalı qərarda qoru.'
 ---
 
-> **Kurikulum planı — tam dərs hələ dərc edilməyib.** Bu səhifə planlaşdırılan öyrənmə fəaliyyətlərini təsvir edir. Planı oxumaq mövzunu mənimsəmək demək deyil.
+## Anlayış
 
-## Öyrənmə məqsədləri
-
-- Məhsul məsuliyyətindən imtina etmədən sübut dəyişdikcə qərarları uyğunlaşdır.
-- Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.
+Mürəkkəb məhsul işində bütün səbəb və nəticələri əvvəlcədən bilmək olmur. Scrum empirizm və lean düşüncəsinə əsaslanır; görünən faktı yoxlayıb davranışı uyğunlaşdırır. Kitabın Empiricism fəslində mürəkkəbliyi anlamaq üçün modellər var, amma həmin modellər Scrum-un əlavə qaydaları deyil. Kiçik yoxlanıla bilən addımlar böyük səhv investisiyanın riskini məhdudlaşdırmağa kömək edir.
 
 ## Niyə vacibdir
 
-Planlaşdırılan dərs **Mürəkkəb kontekstdə məhsul sahibliyi** mövzusunun komandaya nə vaxt kömək etdiyini konkret qərarla göstərəcək. Fərziyyələr və təsirlənən tərəflər aydın qeyd ediləcək.
+Kitabın 8-ci fəslində tarixi Done işindən proqnoz vermək və qeyri-müəyyənliyi göstərmək tövsiyə edilir. Proqnoz çatdırılma haqqında məlumat verir, dəyər barədə tam sübut deyil. Yeni asılılıq və ya işin ölçüsü dəyişərsə proqnozu yenilə. Sabit tarixdə əhatəni müzakirə etmək olar, amma keyfiyyəti azaltmaq və ya Done olmayan işi tamamlanmış saymaq olmaz.
 
-## Əsas nəzəriyyə: dərs planı
+## Qərar qaydaları
 
-1. Mövzunun əsas terminlərini müəyyən et.
-2. Məhsul məsuliyyətindən imtina etmədən sübut dəyişdikcə qərarları uyğunlaşdır.
-3. Faydalı tətbiqi inandırıcı, amma yanlış istifadə ilə müqayisə et.
-4. Qərarı dəyişə biləcək sübutu müəyyən et.
+Bir məhsula bir neçə Scrum Team xidmət edəndə eyni Product Goal, Product Backlog və Product Owner paylaşılır. Birgə işləyən İnkrement üçün ortaq Definition of Done olmalıdır. Hər komandanın yerli çıxışını artırmaq məhsulun bütün axınını sürətləndirməyə bilər. EBM-də T2M və A2I bu maneələri görünən etmək üçün istifadə edilə bilər.
 
-## İşlənmiş nümunə: dərs planı
+## Vizual model
 
-Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et. Tam nümunədə kontekst, məhdudiyyətlər, alternativlər, qərar və nəticənin yoxlanılması olacaq.
+<Diagram
+  chart={
+    'flowchart LR\n  A["Məqsəd"] --> B["Sübut və seçim"]\n  B --> C["Kiçik addım"]\n  C --> D["Yoxla və uyğunlaşdır"]\n  D --> B'
+  }
+/>
 
-## Diaqram: dərs planı
+Bu model tədris xülasəsidir; mənbənin şəklinin surəti deyil.
 
-Planlaşdırılan vizual: **Mürəkkəb kontekstdə məhsul sahibliyi** mövzusunda iştirakçılar, qərarlar və sübutların işarələnmiş görünüşü. Diaqramın mətn izahı da veriləcək.
+## Praktik vəziyyət
 
-## İnteraktiv məşq: dərs planı
+Üç komanda öz komponentini bitmiş sayır, amma inteqrasiya iki həftə çəkir. Müştəri buraxılış tarixini soruşur.
 
-Planlaşdırılan fəaliyyət: ssenari üçün addım seç, nəticəsini aç və yeni sübut gəldikdə seçimi yenilə. Klaviatura ilə işləyən alternativ olacaq.
+## Qərarın əsaslandırılması
 
-## Tipik səhvlər və yaxşı təcrübələr
+İnteqrasiya olmadan məhsulun Done vəziyyətini iddia etmə. Ortaq keyfiyyət sərhədi və inteqrasiya maneəsini görünən et. Müqayisə oluna bilən inteqrasiya olunmuş işə əsaslanan proqnoz ver, ehtimal və fərziyyələri izah et, daha kiçik dəyərli əhatəni araşdır.
 
-- Şablonu və ya çərçivəni sübutla qarışdırma.
-- Addım tövsiyə etməzdən əvvəl konteksti və qərar sahibini göstər.
-- Sənəd və ya funksiya sayını deyil, nəticələri müqayisə et.
+## Yayılmış səhvlər
 
-## Praktik tapşırıq və nümunə həll planı
+Komponent nəticələrini məhsul dəyəri saymaq; tarix üçün Done-u zəiflətmək; çox adam əlavə etməyi avtomatik sürət artımı saymaq.
 
-**Tapşırıq:** Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.
+## Tətbiq məşqi
 
-**Nümunə həll planı:** problemi yaz, fərziyyələri sadala, seçimləri müqayisə et, addımı əsaslandır və növbəti yoxlanışı müəyyən et. Tam dərslə birlikdə işlənmiş cavab əlavə ediləcək.
+Müştəriyə üç cümləlik proqnoz yaz: mövcud sübut, qeyri-müəyyənlik və növbəti yenilənmə.
 
-## Mini-test: dərs planı
+## İzahlı həll
 
-Tam dərsdə terminlər, ssenarinin tətbiqi və seçimlər üzrə orijinal suallar, düzgün və yanlış cavabların izahı olacaq. Bu planda dərs testi hələ dərc edilməyib.
+<details>
+<summary>İzahlı həlli aç</summary>
 
-## Bir səhifəlik xülasə planı
+Əvvəlki inteqrasiya olunmuş iş intervalı baza ola bilər. Yeni asılılıq bu intervalı dəyişə bilər. Növbəti Done İnkrementdən sonra proqnozu yeniləyəcəyik. Mənbədə olmayan dəqiq tarix uydurulmur.
 
-Yekun yaddaş vərəqi mövzunun məqsədini, girişlərini, qərarlarını, çıxışlarını və baxış siyahısını ümumiləşdirəcək.
+</details>
 
-## Əlavə oxu
+## Özünü yoxla və yadda saxla
 
-- [Scrum Guide, rəsmi mənbə](https://scrumguides.org/scrum-guide.html)
-- [IIBA biznes analizi resursları](https://www.iiba.org/business-analysis-blogs/)
+İnteqrasiya olunmuş sübut; ortaq Done; aydın qeyri-müəyyənlik; yenilənən proqnoz.
 
-İstiqamətinə uyğun mənbədən istifadə et. Rəsmi sertifikasiya formatı və uyğunluq şərtləri ayrıca yoxlanmalıdır.
+<ConceptStepper />
+
+## Mənbələr və əhatə
+
+Scrum Guide: Scrum Theory, Scrum Team, Definition of Done. Kitab: fəsillər 5 və 8 (Forecasting). EBM 2024: T2M və A2I.
+
+- [The Scrum Guide — Ken Schwaber & Jeff Sutherland (November 2020)](https://scrumguides.org/scrum-guide.html)
+- [Evidence-Based Management Guide — Scrum.org (2024)](https://www.scrum.org/resources/evidence-based-management-guide)
+- [The Professional Product Owner — Don McGreal & Ralph Jocham (2018), ISBN 9780134686479](https://www.informit.com/store/professional-product-owner-leveraging-scrum-as-a-competitive-9780134686479)
+
+İzahlar və nümunələr bu platforma üçün yenidən yazılıb. Rəsmi test sualları köçürülməyib. İmtahan formatı ayrıca yoxlanır; bu mövzu bölgüsü rəsmi blueprint deyil.

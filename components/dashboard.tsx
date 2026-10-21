@@ -1,55 +1,76 @@
 'use client';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import {
-  ArrowRight,
-  ArrowUpRight,
-  BookOpen,
-  Check,
-  CheckCircle2,
-  Clock3,
-  Compass,
-  Flame,
-  GraduationCap,
-  Lightbulb,
-  Play,
-  Sparkles,
-  Target,
-  Trophy,
-} from 'lucide-react';
+import { BookOpen, Check, Compass, Flame, GraduationCap } from 'lucide-react';
 import { lessons, modules, competencies } from '@/lib/catalog';
 import { getTrack } from '@/lib/tracks';
-import type { Locale } from '@/lib/types';
+import type { Locale, TrackId } from '@/lib/types';
 import { activityDate, streakDays } from '@/lib/storage';
 import { generateRoadmap } from '@/lib/roadmap';
+import { dueReviews } from '@/lib/spaced-repetition';
 import { useProgress } from './providers';
-const ProgressChart = dynamic(() => import('./progress-chart'), {
+const AttemptChart = dynamic(() => import('./quiz/attempt-chart').then((m) => m.AttemptChart), {
   ssr: false,
-  loading: () => <div className="chart-placeholder" />,
 });
+const ProgressChart = dynamic(() => import('./progress-chart'), { ssr: false });
 
 export function Dashboard({ locale }: { locale: Locale }) {
   const az = locale === 'az';
   const { progress, ready } = useProgress();
   const track = getTrack(progress.activeTrack);
   const profile = progress.profiles[track.id];
-  const available = lessons.filter((l) => l.trackId === track.id && l.status === 'published');
-  const completed = lessons.filter(
-    (l) => l.trackId === track.id && progress.completedLessons[l.id],
-  );
-  const allForTrack = lessons.filter((l) => l.trackId === track.id);
   const roadmap = profile
     ? generateRoadmap(profile, modules, lessons, progress.completedLessons)
     : null;
+  const available = lessons.filter((l) => l.trackId === track.id && l.status === 'published');
   const next = roadmap
     ? roadmap.nextLesson
     : available.find((l) => !progress.completedLessons[l.id]);
-  const featured = ['stakeholder-mapping', 'product-goal', 'scrum-accountabilities']
-    .map((id) => lessons.find((l) => l.id === id)!)
-    .filter(Boolean);
-  const percent = allForTrack.length
-    ? Math.round((completed.length / allForTrack.length) * 100)
-    : 0;
+  const selectedModules = roadmap?.modules ?? modules.filter((m) => m.trackId === track.id);
+  const completeModules = selectedModules.filter((m) =>
+    m.lessonIds.every((id) => progress.completedLessons[id]),
+  ).length;
+  const streak = streakDays(progress.activity);
+  const due = dueReviews(progress.reviews).length;
+  const attempts = progress.attempts.filter((a) => a.trackId === track.id);
+  const scored = attempts.filter((a) => a.total > 0);
+  const last = scored.at(-1);
+  const relevantTracks = [
+    ...new Set([
+      progress.activeTrack,
+      ...Object.keys(progress.profiles),
+      ...progress.attempts.map((a) => a.trackId),
+    ]),
+  ] as TrackId[];
+  const recent = [
+    ...Object.entries(progress.completedLessons).flatMap(([id, date]) => {
+      const l = lessons.find((item) => item.id === id);
+      return l
+        ? [
+            {
+              id: `lesson-${id}`,
+              date,
+              label: l.title[locale],
+              detail: az ? 'Dərs tamamlandı' : 'Lesson completed',
+              href: `/${locale}/lessons/${id}`,
+            },
+          ]
+        : [];
+    }),
+    ...progress.attempts.map((a) => ({
+      id: a.id,
+      date: a.completedAt,
+      label: `${az ? 'Məşq' : 'Practice'}: ${getTrack(a.trackId).name[locale]}`,
+      detail: a.total
+        ? `${a.score}/${a.total} ${az ? 'düzgün cavab' : 'correct answers'}`
+        : az
+          ? 'Yazılı refleksiya'
+          : 'Written reflection',
+      href: `/${locale}/practice#attempt-history`,
+    })),
+  ]
+    .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+    .slice(0, 5);
   const today = activityDate();
   const todayMinutes = lessons
     .filter(
@@ -57,73 +78,21 @@ export function Dashboard({ locale }: { locale: Locale }) {
         progress.completedLessons[l.id] &&
         activityDate(new Date(progress.completedLessons[l.id])) === today,
     )
-    .reduce((a, l) => a + l.minutes, 0);
-  const dailyGoal = profile?.dailyMinutes ?? 30;
-  const skills = competencies
-    .filter((c) => c.trackId === track.id && c.level === (profile?.targetLevel ?? 'junior'))
-    .flatMap((c) => c.checklist);
-  const readiness = skills.length
-    ? Math.round(
-        (skills.filter((s) => progress.assessedSkills.includes(s.id)).length / skills.length) * 100,
-      )
-    : 0;
-  const scoredAttempts = progress.attempts
-    .filter((a) => a.trackId === track.id && a.total > 0)
-    .slice(-5);
-  const practiceTotal = scoredAttempts.reduce((sum, a) => sum + a.total, 0);
-  const practiceAccuracy = practiceTotal
-    ? Math.round((scoredAttempts.reduce((sum, a) => sum + a.score, 0) / practiceTotal) * 100)
-    : 0;
-  const writtenTrack = track.id === 'pspo3';
-  const recentActivity = [
-    ...Object.entries(progress.completedLessons).flatMap(([id, date]) => {
-      const lesson = lessons.find((l) => l.id === id);
-      return lesson
-        ? [
-            {
-              id: `lesson-${id}`,
-              date,
-              label: lesson.title[locale],
-              detail: az ? 'Dərs tamamlandı' : 'Lesson completed',
-              href: `/${locale}/lessons/${id}`,
-            },
-          ]
-        : [];
-    }),
-    ...progress.attempts.map((attempt) => ({
-      id: attempt.id,
-      date: attempt.completedAt,
-      label: getTrack(attempt.trackId).name[locale],
-      detail: attempt.total
-        ? `${attempt.score}/${attempt.total} ${az ? 'düzgün cavab' : 'correct answers'}`
-        : az
-          ? 'Yazılı məşq tamamlandı'
-          : 'Written reflection completed',
-      href: `/${locale}/practice#attempt-history`,
-    })),
-  ]
-    .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
-    .slice(0, 5);
+    .reduce((sum, l) => sum + l.minutes, 0);
   const week = Array.from({ length: 7 }, (_, i) => {
     const d = new Date();
     d.setDate(d.getDate() - 6 + i);
-    const key = activityDate(d);
     return {
       day: d.toLocaleDateString(az ? 'az-AZ' : 'en-GB', { weekday: 'short' }),
       minutes: lessons
         .filter(
           (l) =>
             progress.completedLessons[l.id] &&
-            activityDate(new Date(progress.completedLessons[l.id])) === key,
+            activityDate(new Date(progress.completedLessons[l.id])) === activityDate(d),
         )
-        .reduce((a, l) => a + l.minutes, 0),
+        .reduce((sum, l) => sum + l.minutes, 0),
     };
   });
-  const firstModule = roadmap ? roadmap.modules[0] : modules.find((m) => m.trackId === track.id);
-  const moduleComplete = modules.some((m) =>
-    m.lessonIds.every((id) => !!progress.completedLessons[id]),
-  );
-  const firstQuiz = progress.attempts.length > 0;
   const badges = [
     {
       icon: Compass,
@@ -132,11 +101,15 @@ export function Dashboard({ locale }: { locale: Locale }) {
     },
     {
       icon: BookOpen,
-      label: az ? 'İlk dərs' : 'First lesson',
-      earned: Object.keys(progress.completedLessons).length > 0,
+      label: az ? 'İlk modul' : 'First module',
+      earned: modules.some((m) => m.lessonIds.every((id) => progress.completedLessons[id])),
     },
-    { icon: Trophy, label: az ? 'Modul ustası' : 'Module explorer', earned: moduleComplete },
-    { icon: GraduationCap, label: az ? 'Məşqə hazıram' : 'Practice starter', earned: firstQuiz },
+    { icon: Flame, label: az ? '7 günlük seriya' : '7-day streak', earned: streak >= 7 },
+    {
+      icon: GraduationCap,
+      label: az ? 'İlk məşq' : 'First practice',
+      earned: progress.attempts.length > 0,
+    },
   ];
   if (!ready)
     return (
@@ -151,308 +124,252 @@ export function Dashboard({ locale }: { locale: Locale }) {
       </div>
     );
   return (
-    <div className="dashboard stack-lg">
-      <div className="page-heading">
-        <div>
-          <div className="eyebrow">
-            <span className="tiny-spark">✦</span>
-            {az ? 'HƏR GÜN BİR ADDIM İRƏLİ' : 'A LITTLE BETTER, EVERY DAY'}
-          </div>
-          <h1 className="page-title">
-            {az ? 'Xoş gəldin, gələcəyin analitiki' : 'Welcome, future changemaker'}
-            <span className="wave"> ✺</span>
-          </h1>
-          <p className="muted">
-            {az
-              ? 'Yeni bacarıqlar, aydın istiqamət və sənə uyğun bir öyrənmə yolu.'
-              : 'New skills, a clear direction, and a learning path that feels like you.'}
-          </p>
-        </div>
-        <Link href={`/${locale}/onboarding`} className="button button-secondary">
-          <Compass size={16} />
-          {az ? 'Planımı fərdiləşdir' : 'Personalize my path'}
-        </Link>
-      </div>
-      <section className="welcome-banner">
-        <div className="welcome-content">
-          <span className="hero-pill">
-            <span />
-            {az ? 'SƏNİN TEMPİN. SƏNİN YOLUN.' : 'YOUR PACE. YOUR POSSIBILITIES.'}
+    <div className="merhele-dashboard stack-lg">
+      <header className="page-heading">
+        <h1 className="page-title">
+          {az ? 'Salam, bu gün hardan davam edək?' : 'Hello. Where shall we continue today?'}
+        </h1>
+        <p className="muted">
+          {profile
+            ? az
+              ? `${relevantTracks.length} istiqamət üzrə öyrənməni izləyirsən. Növbəti addımlarını və nəticələrini aşağıda gör.`
+              : `You are learning across ${relevantTracks.length} track${relevantTracks.length === 1 ? '' : 's'}. Find your next steps and results below.`
+            : az
+              ? 'Hədəfini seç, öyrənmə planını qur və irəliləyişini burada izlə.'
+              : 'Choose your destination, build a learning plan, and follow your progress here.'}
+        </p>
+      </header>
+      <div className="dashboard-top">
+        <section className="recommended-card">
+          <span className="eyebrow">
+            {az ? 'NÖVBƏTİ TÖVSİYƏ OLUNAN DƏRS' : 'YOUR NEXT RECOMMENDED LESSON'}
           </span>
           <h2>
-            {az ? (
-              <>
-                Növbəti səviyyənə
-                <br />
-                bir addım daha yaxın.
-              </>
-            ) : (
-              <>
-                Big ambitions.
-                <br />
-                Meet small, daily steps.
-              </>
-            )}
+            {next?.title[locale] ??
+              (az ? 'Növbəti mərhələni planlaşdır' : 'Plan your next chapter')}
           </h2>
           <p>
-            {az
-              ? 'Biznes analizi və məhsul idarəçiliyini addım-addım öyrən. Bildiklərini real bacarığa çevir.'
-              : 'Build confidence in business analysis and product ownership. Turn what you learn into what you can do.'}
+            {next
+              ? `${getTrack(next.trackId).name[locale]} · ${next.minutes} ${az ? 'dəqiqə' : 'minutes'}. ${next.summary[locale]}`
+              : az
+                ? 'Hədəfinə uyğun planı nəzərdən keçir və ya yeni istiqamət seç. Mövcud irəliləyişin saxlanır.'
+                : 'Review the plan for your target or choose another direction. Your progress stays with you.'}
           </p>
-          <Link
-            href={
-              profile
-                ? next
-                  ? `/${locale}/lessons/${next.id}`
-                  : `/${locale}/roadmap`
-                : `/${locale}/onboarding`
-            }
-            className="button button-dark"
-          >
-            {profile
-              ? az
-                ? 'Öyrənməyə davam et'
-                : 'Keep the momentum'
-              : az
-                ? 'Öyrənmə yolumu qur'
-                : 'Build my learning path'}
-            <ArrowRight size={17} />
-          </Link>
-          <div className="hero-caption">
-            <span className="mini-check">
-              <Check size={11} />
-            </span>
-            {az ? 'Praktik dərslər' : 'Practical lessons'}
-            <span>·</span>
-            {az ? 'Öz tempinlə' : 'At your own pace'}
-            <span>·</span>
-            {az ? 'Həmişə irəli' : 'Always forward'}
-          </div>
-        </div>
-        <LearningIllustration locale={locale} />
-      </section>
-      <section
-        className="stats-grid"
-        aria-label={az ? 'Öyrənmə göstəriciləri' : 'Learning at a glance'}
-      >
-        <Stat
-          icon={<BookOpen size={21} />}
-          tone="peach"
-          label={az ? 'Tamamlanan dərslər' : 'Lessons completed'}
-          value={String(completed.length).padStart(2, '0')}
-          detail={`${allForTrack.length} ${az ? 'dərsdən' : 'in your track'}`}
-          suffix={<span className="stat-trend">{percent}%</span>}
-        />
-        <Stat
-          icon={<Target size={21} />}
-          tone="sage"
-          label={
-            track.category === 'career'
-              ? az
-                ? 'Bacarıq hazırlığı'
-                : 'Skill readiness'
-              : az
-                ? 'Məşq nəticələri'
-                : 'Practice accuracy'
-          }
-          value={
-            writtenTrack ? '—' : `${track.category === 'career' ? readiness : practiceAccuracy}%`
-          }
-          detail={
-            writtenTrack
-              ? az
-                ? 'Rubrik ilə özünüqiymətləndirmə'
-                : 'Rubric-based self-review'
-              : track.category === 'career'
-                ? az
-                  ? 'Özünüqiymətləndirmə əsasında'
-                  : 'Based on your self-assessment'
-                : az
-                  ? 'Son 5 qiymətləndirilmiş məşq'
-                  : 'Last 5 scored practice sessions'
-          }
-          suffix={
-            <span className="mini-bar">
-              <span
-                style={{ width: `${track.category === 'career' ? readiness : practiceAccuracy}%` }}
-              />
-            </span>
-          }
-        />
-        <Stat
-          icon={<Flame size={21} />}
-          tone="gold"
-          label={az ? 'Öyrənmə seriyası' : 'Learning streak'}
-          value={String(streakDays(progress.activity)).padStart(2, '0')}
-          detail={az ? 'ardıcıl aktiv gün' : 'consecutive active days'}
-          suffix={<span className="stat-encouragement">{az ? 'Davam et!' : 'Keep it going!'}</span>}
-        />
-        <Stat
-          icon={<Clock3 size={21} />}
-          tone="lilac"
-          label={az ? 'Bu günün hədəfi' : 'Today’s learning goal'}
-          value={String(todayMinutes)}
-          unit={`/ ${dailyGoal} ${az ? 'dəq' : 'min'}`}
-          detail={
-            az ? 'Tamamlanan dərslərin təxmini vaxtı' : 'Estimated minutes in completed lessons'
-          }
-          suffix={
-            <span className="mini-bar lilac">
-              <span style={{ width: `${Math.min(100, (todayMinutes / dailyGoal) * 100)}%` }} />
-            </span>
-          }
-        />
-      </section>
-      <div className="dashboard-middle">
-        <section className="card path-card">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">{az ? 'SƏNİN İSTİQAMƏTİN' : 'YOUR NEXT CHAPTER'}</span>
-              <h2>{az ? 'Öyrənmə yolun' : 'Your learning path'}</h2>
-            </div>
-            <Link href={`/${locale}/roadmap`} className="text-link">
-              {az ? 'Bütün plan' : 'View roadmap'}
-              <ArrowUpRight size={15} />
-            </Link>
-          </div>
-          <div className="path-track">
-            <span className="course-icon peach">
-              <BookOpen size={24} />
-            </span>
-            <div>
-              <h3>{track.name[locale]}</h3>
-              <p>
-                {profile
-                  ? `${profile.currentLevel === 'zero' ? (az ? 'Sıfırdan' : 'Starting fresh') : profile.currentLevel} → ${profile.targetLevel === 'lead' ? 'Lead / Senior' : profile.targetLevel}`
-                  : az
-                    ? 'İlk addımdan peşəkarlığa'
-                    : 'From first steps to real expertise'}
-              </p>
-            </div>
-            <span className="badge badge-sage">{az ? 'Öz tempinlə' : 'Self-paced'}</span>
-          </div>
-          <div className="path-progress-label">
-            <span>{az ? 'Ümumi irəliləyiş' : 'Overall progress'}</span>
-            <strong>{percent}%</strong>
-          </div>
-          <div className="progress-track">
-            <div style={{ width: `${percent}%` }} />
-          </div>
-          <div className="path-module">
-            <span className="module-number">01</span>
-            <div>
-              <small>{az ? 'NÖVBƏTİ ADDIM' : 'UP NEXT'}</small>
-              <h4>
-                {next?.title[locale] ??
-                  firstModule?.title[locale] ??
-                  (az ? 'İstiqamətini seç' : 'Choose your direction')}
-              </h4>
-              <span>
-                <Clock3 size={12} />
-                {next?.minutes ?? firstModule?.estimatedMinutes ?? 0} {az ? 'dəq' : 'min'}
-                <span className="dot-separator">·</span>
-                {az ? 'Əsas biliklər' : 'The foundations'}
-              </span>
-            </div>
+          <div className="button-row">
             <Link
-              href={next ? `/${locale}/lessons/${next.id}` : `/${locale}/roadmap`}
-              className="play-button"
-              aria-label={az ? 'Növbəti dərsi aç' : 'Open next lesson'}
+              href={next ? `/${locale}/lessons/${next.id}` : `/${locale}/onboarding`}
+              className="button button-gold"
             >
-              <Play size={16} fill="currentColor" />
+              {next
+                ? az
+                  ? 'Dərsə davam et'
+                  : 'Continue lesson'
+                : az
+                  ? 'Hədəf seç'
+                  : 'Choose a goal'}
+            </Link>
+            <Link href={`/${locale}/roadmap`} className="button button-outline">
+              {az ? 'Yol xəritəsinə bax' : 'View roadmap'}
             </Link>
           </div>
         </section>
-        <section className="card activity-card">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">{az ? 'ARDICILLIQ ÖNƏMLİDİR' : 'CONSISTENCY ADDS UP'}</span>
-              <h2>{az ? 'Öyrənmə ritmin' : 'Your learning rhythm'}</h2>
+        <div className="dashboard-small-grid">
+          <section className="card dashboard-small-stat">
+            <span>{az ? 'Seriya' : 'Learning streak'}</span>
+            <strong>
+              {streak} {az ? 'gün' : 'days'}
+            </strong>
+            <p>{az ? 'Hər gün bir az' : 'A little every day'}</p>
+          </section>
+          <section className="card dashboard-small-stat">
+            <span>{az ? 'Tamamlanan modul' : 'Completed modules'}</span>
+            <strong>
+              {completeModules} / {selectedModules.length}
+            </strong>
+            <p>{track.name[locale]}</p>
+          </section>
+          <aside className="review-callout">
+            <h3>
+              {az ? `Təkrar növbəsində ${due} sual var` : `${due} questions are ready for review`}
+            </h3>
+            <p>
+              {az
+                ? 'Əvvəl səhv etdiyin suallar aralıqlı təkrarla qayıdır.'
+                : 'Missed questions return on a spaced review schedule.'}
+            </p>
+            <Link href={`/${locale}/practice?mode=review&track=${track.id}`} className="button">
+              {az ? 'Təkrara başla' : 'Start reviewing'}
+            </Link>
+          </aside>
+        </div>
+      </div>
+      <section
+        className="card padded"
+        aria-label={az ? 'Hazırlıq göstəriciləri' : 'Learning at a glance'}
+      >
+        <h2>{az ? 'Hazırlıq səviyyəsi' : 'Your learning readiness'}</h2>
+        <div className="readiness-grid">
+          {relevantTracks.slice(0, 3).map((id) => {
+            const tr = getTrack(id);
+            const target = progress.profiles[id]?.targetLevel ?? 'junior';
+            const skills = competencies
+              .filter((c) => c.trackId === id && c.level === target)
+              .flatMap((c) => c.checklist);
+            const latest = progress.attempts.filter((a) => a.trackId === id && a.total > 0).at(-1);
+            const percent =
+              tr.category === 'career'
+                ? skills.length
+                  ? Math.round(
+                      (skills.filter((s) => progress.assessedSkills.includes(s.id)).length /
+                        skills.length) *
+                        100,
+                    )
+                  : 0
+                : latest
+                  ? Math.round((latest.score / latest.total) * 100)
+                  : 0;
+            const written = id === 'pspo3';
+            return (
+              <div key={id} className="readiness-item">
+                <div>
+                  <span>{tr.name[locale]}</span>
+                  <strong>{written ? '—' : `${percent}%`}</strong>
+                </div>
+                <div className="progress-track">
+                  <div style={{ width: `${percent}%` }} />
+                </div>
+                <p>
+                  {written
+                    ? az
+                      ? 'Rubrik ilə özünüqiymətləndirmə'
+                      : 'Rubric-based reflection'
+                    : tr.category === 'career'
+                      ? az
+                        ? 'Bacarıq siyahısındakı özünüqiymətləndirmən'
+                        : 'Your competency self-assessment'
+                      : az
+                        ? 'Son qiymətləndirilmiş məşqin nəticəsi'
+                        : 'Latest scored practice result'}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="dashboard-extra-stats" style={{ marginTop: 22 }}>
+          <span>
+            {Object.keys(progress.completedLessons).length}{' '}
+            {az ? 'tamamlanmış dərs' : 'completed lessons'}
+          </span>
+          <span>
+            {az ? 'Bu gün' : 'Today'}: {todayMinutes} / {profile?.dailyMinutes ?? 30}{' '}
+            {az ? 'dəq · dərs vaxtı təxmini' : 'min · estimated lesson time'}
+          </span>
+          <Link href={`/${locale}/onboarding`} className="text-link">
+            {az ? 'Hədəfləri dəyiş' : 'Edit your goals'}
+          </Link>
+        </div>
+      </section>
+      <div className="dashboard-pair">
+        <section className="card">
+          <h2>
+            {track.name[locale]} · {az ? 'məşq nəticələri' : 'practice results'}
+          </h2>
+          {scored.length ? (
+            <>
+              <AttemptChart attempts={scored.slice(-6)} locale={locale} />
+              <Link href={`/${locale}/practice#attempt-history`} className="text-link">
+                {az ? 'Bütün cəhdlərə bax' : 'View every attempt'}
+              </Link>
+            </>
+          ) : (
+            <div className="empty-state">
+              <GraduationCap size={34} />
+              <p className="muted">
+                {az
+                  ? 'İlk məşqindən sonra nəticələrin və inkişafın burada görünəcək.'
+                  : 'Your results and progress will appear here after your first practice session.'}
+              </p>
+              <Link href={`/${locale}/practice`} className="button button-outline">
+                {az ? 'Məşqə başla' : 'Start practicing'}
+              </Link>
             </div>
-            <span className="badge">{az ? 'Son 7 gün' : 'Last 7 days'}</span>
-          </div>
-          <div className="activity-total">
-            <strong>{week.reduce((a, d) => a + d.minutes, 0)}</strong>
-            <span>{az ? 'dəqiqə öyrənmə' : 'minutes of learning'}</span>
-            <span className="activity-caption">
-              {az ? 'Kiçik addımlar da sayılır.' : 'Every small step counts.'}
-            </span>
-          </div>
-          <ProgressChart data={week} locale={locale} />
+          )}
+        </section>
+        <section className="card">
+          <h2>{az ? 'Domen üzrə nəticə' : 'Results by domain'}</h2>
+          {last ? (
+            <div className="domain-breakdown">
+              {Object.entries(last.domainScores).map(([domain, result]) => {
+                const percent = Math.round((result.correct / result.total) * 100);
+                return (
+                  <div key={domain}>
+                    <div>
+                      <span>{domain.replaceAll('-', ' ')}</span>
+                      <span>
+                        {percent < 70 && (
+                          <span className="badge">{az ? 'Təkrar et' : 'Review'}</span>
+                        )}{' '}
+                        {percent}%
+                      </span>
+                    </div>
+                    <div className="progress-track">
+                      <div
+                        className={percent < 70 ? 'weak' : ''}
+                        style={{ width: `${percent}%` }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <p className="muted">
+              {az
+                ? 'Məşq tamamlandıqdan sonra güclü və zəif sahələrin burada görünəcək.'
+                : 'Complete a practice session to see your strengths and areas to revisit.'}
+            </p>
+          )}
+          <Link className="button button-outline" href={`/${locale}/practice#attempt-history`}>
+            {az ? 'Zəif sahələr üçün dərslərə bax' : 'Explore lessons for weak areas'}
+          </Link>
         </section>
       </div>
-      <section>
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">
-              {az ? 'MARAĞINI BACARIĞA ÇEVİR' : 'FOLLOW YOUR CURIOSITY'}
-            </span>
-            <h2>{az ? 'Sənin üçün seçdiklərimiz' : 'A good place to begin'}</h2>
-          </div>
-          <Link href={`/${locale}/lessons`} className="text-link">
-            {az ? 'Dərs kitabxanası' : 'Explore all lessons'}
-            <ArrowRight size={15} />
-          </Link>
-        </div>
-        <div className="course-grid">
-          {featured.map((lesson, i) => (
-            <Link
-              href={`/${locale}/lessons/${lesson.id}`}
-              key={lesson.id}
-              className="card course-card"
-            >
-              <div className={`course-art course-art-${i}`}>
-                <CourseArt index={i} />
-                <span className="course-category">{getTrack(lesson.trackId).name[locale]}</span>
-                {progress.completedLessons[lesson.id] && (
-                  <span className="course-complete">
-                    <CheckCircle2 size={18} />
-                  </span>
-                )}
-              </div>
-              <div className="course-body">
-                <div className="course-meta">
-                  <span>{az ? 'BAŞLANĞIC' : 'FOUNDATIONS'}</span>
-                  <span>
-                    <Clock3 size={12} />
-                    {lesson.minutes} {az ? 'dəq' : 'min'}
-                  </span>
-                </div>
-                <h3>{lesson.title[locale]}</h3>
-                <p>{lesson.summary[locale]}</p>
-                <div className="course-bottom">
-                  <span>{az ? 'Dərsə keç' : 'Explore lesson'}</span>
-                  <ArrowUpRight size={18} />
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-      <div className="dashboard-bottom">
-        <section className="card milestones">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">
-                {az ? 'HƏR UĞUR BİR ADDIMDIR' : 'CELEBRATE THE SMALL WINS'}
-              </span>
-              <h2>{az ? 'Uğur nişanların' : 'Your milestones'}</h2>
-            </div>
-            <Trophy size={20} className="muted" />
-          </div>
-          <div className="milestone-grid">
+      <div className="dashboard-pair">
+        <section className="card recent-activity">
+          <h2>{az ? 'Son fəaliyyət' : 'Recent activity'}</h2>
+          {recent.length ? (
+            <ul>
+              {recent.map((item) => (
+                <li key={item.id}>
+                  <Link href={item.href}>
+                    <strong>{item.label}</strong>
+                    <small>{item.detail}</small>
+                  </Link>
+                  <time dateTime={item.date}>
+                    {new Date(item.date).toLocaleDateString(az ? 'az-AZ' : 'en-GB', {
+                      day: 'numeric',
+                      month: 'short',
+                    })}
+                  </time>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="muted">
+              {az
+                ? 'İlk dərsini tamamla və ya məşqə başla. Atacağın hər addım burada görünəcək.'
+                : 'Complete a lesson or try a practice session. Your next small win will appear here.'}
+            </p>
+          )}
+        </section>
+        <section className="card">
+          <h2>{az ? 'Nişanlar' : 'Milestones'}</h2>
+          <div className="dashboard-milestones">
             {badges.map(({ icon: Icon, label, earned }) => (
-              <div key={label} className={`milestone ${earned ? 'earned' : ''}`}>
-                <span>
-                  <Icon size={26} />
-                  {earned && (
-                    <i>
-                      <Check size={10} />
-                    </i>
-                  )}
-                </span>
+              <div key={label} className={earned ? 'earned' : ''}>
+                <span>{earned ? <Check size={24} /> : <Icon size={24} />}</span>
                 <strong>{label}</strong>
-                <small>
+                <p>
                   {earned
                     ? az
                       ? 'Qazanıldı'
@@ -460,185 +377,21 @@ export function Dashboard({ locale }: { locale: Locale }) {
                     : az
                       ? 'Səni gözləyir'
                       : 'Yours to unlock'}
-                </small>
+                </p>
               </div>
             ))}
           </div>
         </section>
-        <aside className="daily-note">
-          <span className="note-icon">
-            <Lightbulb size={21} />
-          </span>
-          <span className="eyebrow">{az ? 'BU GÜNÜN FİKRİ' : 'A THOUGHT TO TAKE WITH YOU'}</span>
-          <p>
-            {az
-              ? 'Yaxşı analitik bütün cavabları bilmir. O, düzgün sualları verməyi bacarır.'
-              : 'A great analyst doesn’t have every answer. They know how to ask a better question.'}
-          </p>
-          <span className="note-signature">
-            {az ? 'Maraqla öyrən. İnamla tətbiq et.' : 'Stay curious. Grow with purpose.'}
-            <Sparkles size={14} />
-          </span>
-        </aside>
       </div>
-      <section className="card recent-activity">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">{az ? 'ATDIĞIN ADDIMLAR' : 'THE STEPS YOU’VE TAKEN'}</span>
-            <h2>{az ? 'Son fəaliyyət' : 'Recent activity'}</h2>
-          </div>
-          <Clock3 size={20} className="muted" />
-        </div>
-        {recentActivity.length ? (
-          <ul>
-            {recentActivity.map((item) => (
-              <li key={item.id}>
-                <span className="recent-activity-icon">
-                  <CheckCircle2 size={17} />
-                </span>
-                <Link href={item.href}>
-                  <strong>{item.label}</strong>
-                  <small>{item.detail}</small>
-                </Link>
-                <time dateTime={item.date}>
-                  {new Date(item.date).toLocaleDateString(az ? 'az-AZ' : 'en-GB', {
-                    day: 'numeric',
-                    month: 'short',
-                  })}
-                </time>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="muted">
-            {az
-              ? 'İlk dərsini tamamla və ya məşqə başla. Atacağın hər addım burada görünəcək.'
-              : 'Complete a lesson or try a practice session. Your next small win will appear here.'}
-          </p>
-        )}
-      </section>
-    </div>
-  );
-}
-function Stat({
-  icon,
-  tone,
-  label,
-  value,
-  unit,
-  detail,
-  suffix,
-}: {
-  icon: React.ReactNode;
-  tone: string;
-  label: string;
-  value: string;
-  unit?: string;
-  detail: string;
-  suffix: React.ReactNode;
-}) {
-  return (
-    <div className="card stat-card">
-      <div className="stat-top">
-        <span className={`stat-icon ${tone}`}>{icon}</span>
-        <span>{label}</span>
-      </div>
-      <div className="stat-value">
-        {value}
-        <span>{unit}</span>
-      </div>
-      <div className="stat-bottom">
-        <small>{detail}</small>
-        {suffix}
-      </div>
-    </div>
-  );
-}
-function LearningIllustration({ locale }: { locale: Locale }) {
-  return (
-    <div className="learning-illustration" aria-hidden="true">
-      <span className="orbit orbit-one" />
-      <span className="orbit orbit-two" />
-      <span className="illustration-star star-one">✦</span>
-      <span className="illustration-star star-two">✧</span>
-      <div className="floating-badge badge-bottom">
-        <CheckCircle2 size={19} />
-        <div>
-          <strong>{locale === 'az' ? 'Yeni bacarıq' : 'New skill unlocked'}</strong>
-          <small>{locale === 'az' ? 'Bir addım daha irəli' : 'One step closer'}</small>
-        </div>
-      </div>
-      <div className="illustration-card card-back" />
-      <div className="illustration-card card-front">
-        <span className="illustration-label">YOUR NEXT LEVEL</span>
-        <div className="illustration-chart">
-          <span />
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
-        <span className="illustration-card-line" />
-        <span className="illustration-card-line short" />
-        <span className="illustration-check">
-          <Check size={22} />
-        </span>
-      </div>
-      <div className="floating-badge badge-top">
-        <span className="floating-trophy">
-          <Trophy size={23} />
-        </span>
-        <div>
-          <strong>{locale === 'az' ? 'Gələcəyinə yatırım' : 'Invest in your future'}</strong>
-          <small>{locale === 'az' ? 'Kiçik addımlarla' : 'One day at a time'}</small>
-        </div>
-      </div>
-      <span className="illustration-dot dot-one" />
-      <span className="illustration-dot dot-two" />
-    </div>
-  );
-}
-function CourseArt({ index }: { index: number }) {
-  return (
-    <div className="course-art-visual" aria-hidden="true">
-      {index === 0 ? (
-        <>
-          <div className="visual-person p1" />
-          <div className="visual-person p2" />
-          <div className="visual-person p3" />
-          <div className="visual-center">
-            <Target size={30} />
-          </div>
-          <span className="visual-connector c1" />
-          <span className="visual-connector c2" />
-          <span className="visual-connector c3" />
-        </>
-      ) : index === 1 ? (
-        <>
-          <span className="visual-road r1" />
-          <span className="visual-road r2" />
-          <span className="visual-road r3" />
-          <div className="visual-flag">
-            <Target size={33} />
-          </div>
-          <span className="visual-step s1" />
-          <span className="visual-step s2" />
-          <span className="visual-step s3" />
-        </>
-      ) : (
-        <>
-          <div className="visual-scrum-circle" />
-          <div className="visual-scrum-icon si1">
-            <Compass size={22} />
-          </div>
-          <div className="visual-scrum-icon si2">
-            <BookOpen size={22} />
-          </div>
-          <div className="visual-scrum-icon si3">
-            <GraduationCap size={22} />
-          </div>
-        </>
-      )}
+      <details className="card padded">
+        <summary>{az ? 'Öyrənmə ritmi · son 7 gün' : 'Learning rhythm · last 7 days'}</summary>
+        <p className="muted" style={{ marginTop: 15 }}>
+          {az
+            ? 'Dəqiqələr tamamladığın dərslərin təxmini müddətidir.'
+            : 'Minutes are estimates based on the lessons you completed.'}
+        </p>
+        <ProgressChart data={week} locale={locale} />
+      </details>
     </div>
   );
 }

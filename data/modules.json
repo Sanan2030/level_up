@@ -263,8 +263,13 @@
       "az": "Orijinal öyrənmə ssenariləri; rəsmi imtahan məlumatları ayrıca saxlanılır.",
       "en": "Original study scenarios; official exam details are maintained separately."
     },
-    "lessonIds": ["scrum-accountabilities", "pspo1-events", "pspo1-artifacts"],
-    "estimatedMinutes": 95,
+    "lessonIds": [
+      "scrum-accountabilities",
+      "pspo1-events",
+      "pspo1-artifacts",
+      "pspo1-product-value"
+    ],
+    "estimatedMinutes": 80,
     "prerequisites": []
   },
   {
@@ -279,8 +284,8 @@
       "az": "Orijinal öyrənmə ssenariləri; rəsmi imtahan məlumatları ayrıca saxlanılır.",
       "en": "Original study scenarios; official exam details are maintained separately."
     },
-    "lessonIds": ["pspo2-strategy", "pspo2-value", "pspo2-facilitation"],
-    "estimatedMinutes": 105,
+    "lessonIds": ["pspo2-strategy", "pspo2-value", "pspo2-facilitation", "pspo2-kanban"],
+    "estimatedMinutes": 80,
     "prerequisites": []
   },
   {
@@ -296,7 +301,7 @@
       "en": "Original study scenarios; official exam details are maintained separately."
     },
     "lessonIds": ["pspo3-written-case", "pspo3-complexity", "pspo3-reflection"],
-    "estimatedMinutes": 105,
+    "estimatedMinutes": 60,
     "prerequisites": []
   }
 ]

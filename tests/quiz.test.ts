@@ -21,6 +21,7 @@ import {
 
 const l = { az: 'Mətn', en: 'Text' };
 const question: QuizQuestion = {
+  sourceIds: [],
   id: 'q1',
   trackId: 'ecba',
   type: 'single',

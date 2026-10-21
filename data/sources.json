@@ -1,0 +1,134 @@
+[
+  {
+    "id": "scrum-2020",
+    "title": "The Scrum Guide — Ken Schwaber & Jeff Sutherland (November 2020)",
+    "url": "https://scrumguides.org/scrum-guide.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "İstifadəçinin PDF faylı və paylaşdığı mətn oxunub. Scrum qaydaları üçün əsas mənbə. Uyğunlaşdırılmış izahlar: CC BY-SA 4.0.",
+      "en": "User-supplied PDF and pasted text read. Primary authority for Scrum rules. Adapted explanations: CC BY-SA 4.0."
+    }
+  },
+  {
+    "id": "kanban-2021",
+    "title": "The Kanban Guide for Scrum Teams — Scrum.org, Daniel Vacanti & Yuval Yeret (January 2021)",
+    "url": "https://www.scrum.org/resources/kanban-guide-scrum-teams",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "Yüklənmiş 9 səhifəlik PDF: axın metrikləri, WIP, SLE və Scrum tədbirləri. Bu, Scrum komandaları üçün bələdçidir. Uyğunlaşdırmalar: CC BY-SA 4.0.",
+      "en": "Uploaded nine-page PDF: flow metrics, WIP, SLE and Scrum events. Specifically the guide for Scrum Teams. Adaptations: CC BY-SA 4.0."
+    }
+  },
+  {
+    "id": "ebm-2024",
+    "title": "Evidence-Based Management Guide — Scrum.org (2024)",
+    "url": "https://www.scrum.org/resources/evidence-based-management-guide",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "İstifadəçinin PDF faylı oxunub: məqsədlər, eksperimentlər, CV, UV, T2M və A2I. Dərslərdə öz sözlərimizlə izah və yeni nümunələr verilir.",
+      "en": "User-supplied PDF read: goals, experiments, CV, UV, T2M and A2I. Lessons use original explanations and new examples."
+    }
+  },
+  {
+    "id": "professional-po-2018",
+    "title": "The Professional Product Owner — Don McGreal & Ralph Jocham (2018), ISBN 9780134686479",
+    "url": "https://www.informit.com/store/professional-product-owner-leveraging-scrum-as-a-competitive-9780134686479",
+    "kind": "book",
+    "status": "read",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "Yüklənmiş kitabdan fəsillər 1–5, 7–8 üzrə məhsul düşüncəsi, Vision/Value/Validation, sıralama və proqnozlaşdırma işlənib. Kitabın Scrum terminləri 2020 Guide ilə yenilənib; EBM üçün 2024 Guide əsasdır. Kitabın mətni və testləri köçürülmür.",
+      "en": "Uploaded book consulted, chapters 1–5 and 7–8: product mindset, Vision/Value/Validation, ordering and forecasting. Scrum terminology follows the 2020 Guide; EBM follows the 2024 Guide. Book text and quizzes are not reproduced."
+    }
+  },
+  {
+    "id": "po-open",
+    "title": "Scrum.org — Product Owner Open",
+    "url": "https://www.scrum.org/open-assessments/product-owner-open",
+    "kind": "assessment",
+    "status": "challenge",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "2026-10-21: HTTP 202, WAF yoxlaması. Rəsmi testin sualları bu mühitdə görülməyib. Rəsmi məşq üçün keçidi aç.",
+      "en": "2026-10-21: HTTP 202 WAF challenge. Official test questions could not be viewed here. Follow the link for official practice."
+    }
+  },
+  {
+    "id": "classmarker",
+    "title": "ClassMarker — user-shared quiz",
+    "url": "https://www.classmarker.com/online-test/start/?quiz=krm5fac7bab6cc20",
+    "kind": "assessment",
+    "status": "blocked",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "2026-10-21: şəbəkə proksisi girişi bloklayır. Testin məzmunu və rəsmi statusu yoxlanmayıb.",
+      "en": "2026-10-21: access blocked by network proxy. Test content and official status have not been verified."
+    }
+  },
+  {
+    "id": "pspo1-forum",
+    "title": "Scrum.org community forum — PSPO I curriculum",
+    "url": "https://www.scrum.org/node/28848",
+    "kind": "community",
+    "status": "challenge",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "Forum tövsiyəsi; rəsmi imtahan planı deyil. Paylaşımın mətni avtomatik giriş yoxlaması səbəbindən oxunmayıb.",
+      "en": "Community recommendation, not an official exam blueprint. Post text unavailable behind an automated access challenge."
+    }
+  },
+  {
+    "id": "pspo2-forum",
+    "title": "Scrum.org community forum — PSPO II / Kanban Guide",
+    "url": "https://www.scrum.org/node/85094",
+    "kind": "community",
+    "status": "challenge",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "Forum mətni açılmayıb. Kanban dərsi ayrıca yüklənmiş 2021 bələdçisinə əsaslanır.",
+      "en": "Forum text unavailable. The Kanban lesson uses the separately uploaded 2021 guide."
+    }
+  },
+  {
+    "id": "babok-announcement",
+    "title": "Modern Analyst — IIBA launches BABOK Guide v3",
+    "url": "https://www.modernanalyst.com/Resources/News/tabid/177/ID/3243/IIBA-LAUNCHES-THE-ESSENTIAL-STANDARD-FOR-BUSINESS-ANALYSIS.aspx",
+    "kind": "announcement",
+    "status": "blocked",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "Buraxılış xəbəri tam BABOK məzmununu əvəz etmir. Səhifəyə giriş bloklanıb.",
+      "en": "A release announcement does not replace the BABOK text. Page access blocked."
+    }
+  },
+  {
+    "id": "babok-listing",
+    "title": "AbeBooks — BABOK Guide description",
+    "url": "https://www.abebooks.com/Guide-Business-Analysis-Body-Knowledge-BABOK/32132225230/bd",
+    "kind": "listing",
+    "status": "blocked",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "Satış təsviri; tam kitab oxunmayıb. Bu mənbədən BABOK-a əsaslanan yeni dərs yazıldığı iddia edilmir.",
+      "en": "Book listing; full book not read. No new BABOK-based lessons are attributed to this listing."
+    }
+  },
+  {
+    "id": "iiba-official",
+    "title": "IIBA — certification information and ECBA blueprint",
+    "url": "https://www.iiba.org/business-analysis-certifications/",
+    "kind": "exam",
+    "status": "read",
+    "checkedAt": "2026-10-20",
+    "notes": {
+      "az": "Əvvəlki yoxlama: 2026-10-20. ECBA, CCBA və CBAP formatları ayrıca imtahan konfiqurasiyalarında sənədləşdirilib.",
+      "en": "Previous verification: 2026-10-20. ECBA, CCBA and CBAP formats are documented in the separate exam configurations."
+    }
+  }
+]

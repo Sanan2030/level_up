@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import {
   ArrowRight,
   BookOpen,
@@ -26,7 +27,11 @@ export function LibraryView({
 }) {
   const { progress, ready, update } = useProgress();
   const [query, setQuery] = useState(initialQuery);
-  const [track, setTrack] = useState('all');
+  const params = useSearchParams();
+  const initialTrack = params.get('track');
+  const [track, setTrack] = useState(
+    initialTrack && tracks.some((t) => t.id === initialTrack) ? initialTrack : 'all',
+  );
   const [status, setStatus] = useState('all');
   const [bookmarksOnly, setBookmarksOnly] = useState(false);
   const t = copy[locale];

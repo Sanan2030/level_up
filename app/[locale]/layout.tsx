@@ -4,6 +4,7 @@ import { ProgressProvider } from '@/components/providers';
 import { AppShell } from '@/components/app-shell';
 import { localeSchema } from '@/lib/types';
 import '../globals.css';
+import '../merhele.css';
 const site =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
@@ -11,13 +12,13 @@ const site =
     : 'https://level-up.example');
 export const metadata: Metadata = {
   metadataBase: new URL(site),
-  title: { default: 'Level Up — Your next chapter', template: '%s | Level Up' },
+  title: { default: 'Mərhələ — BA və PO öyrənmə platforması', template: '%s | Mərhələ' },
   description:
     'A guided learning space for business analysts and product owners. Original lessons, practical roadmaps, and certification practice in Azerbaijani and English.',
   openGraph: {
     type: 'website',
-    siteName: 'Level Up',
-    title: 'Level Up — Grow with purpose',
+    siteName: 'Mərhələ',
+    title: 'Mərhələ — Səviyyəni seç, hədəfi göstər',
     description:
       'From curiosity to capability. Learn business analysis and product ownership, one step at a time.',
     images: ['/opengraph-image'],

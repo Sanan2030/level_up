@@ -3,63 +3,68 @@ id: pspo1-artifacts
 locale: en
 title: 'Artifacts and their commitments'
 objectives:
-  - 'Relate the Product Backlog, Sprint Backlog and Increment to shared commitments.'
-  - 'Apply the topic to a customer self-service change; justify the decision and identify missing evidence.'
+  - 'Connect each artifact to its commitment.'
+  - 'Apply the distinctions between Done, acceptance criteria and refinement.'
 ---
 
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
+## Concept
 
-## Learning objectives
-
-- Relate the Product Backlog, Sprint Backlog and Increment to shared commitments.
-- Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+The Product Backlog is an emergent, ordered list of work needed to improve the product. Its commitment is the Product Goal, a future state of the product. A team fulfills or abandons one Product Goal before taking on the next. Refinement continuously breaks down and clarifies items; it is not a separate prescribed event.
 
 ## Why it matters
 
-The planned lesson uses a concrete delivery decision to show when **Artifacts and their commitments** helps a team. It will make assumptions and affected stakeholders explicit.
+The Sprint Backlog combines Sprint Goal (why), selected items (what) and an actionable plan (how). Its commitment is the Sprint Goal. It is a plan by and for Developers, updated as they learn. Scope can be renegotiated with the Product Owner without endangering the goal; it is not an immutable contract.
 
-## Core theory: planned outline
+## Decision principles
 
-1. Define the essential terms in the topic.
-2. Relate the Product Backlog, Sprint Backlog and Increment to shared commitments.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+An Increment is an additive, integrated, verified and usable step. Its commitment is Definition of Done. Acceptance criteria describe item-specific behavior but do not replace shared quality measures. Work that is not Done is not part of the Increment and cannot be released or presented at Review; it returns to the Product Backlog. Teams on the same product share a Definition of Done.
 
-## Worked example: planned outline
+## Visual model
 
-Apply the topic to a customer self-service change; justify the decision and identify missing evidence. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+<Diagram
+  chart={
+    'flowchart TD\n  A["Product Backlog"] --> B["Product Goal"]\n  C["Sprint Backlog"] --> D["Sprint Goal"]\n  E["Increment"] --> F["Definition of Done"]'
+  }
+/>
 
-## Diagram: planned outline
+This is a teaching summary, not a reproduction of a source figure.
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **Artifacts and their commitments**. The diagram will include a text explanation.
+## Worked scenario
 
-## Interactive practice: planned outline
+A booking button works, but the security check in the shared Definition of Done has failed. The Product Owner wants to show it as partial value at Review.
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+## Decision reasoning
 
-## Common mistakes and best practices
+Do not present the item as a Done Increment. Make the problem transparent and return it to the Product Backlog for future consideration. Meeting item-specific acceptance criteria does not waive shared security quality.
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+## Common pitfalls
 
-## Practice exercise and sample-solution plan
+Weakening Done on the last day; making refinement an approval gate; assuming Scrum mandates user stories or story points.
 
-**Exercise:** Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+## Application exercise
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+Write a booking-product example for Product Goal, Sprint Goal and Definition of Done, plus separate acceptance criteria for one item.
 
-## Mini-quiz: planned outline
+## Explained solution
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+<details>
+<summary>Show explained solution</summary>
 
-## One-page summary plan
+Product Goal: book without follow-up calls. Sprint Goal: let users see availability and reserve. Done: integration, automated tests and security checks. Item criterion: show an explanatory message for unavailable slots. These are teaching examples.
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+</details>
 
-## Further reading
+## Check understanding and remember
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+Product Backlog → Product Goal; Sprint Backlog → Sprint Goal; Increment → Definition of Done. Ready does not mean Done.
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+<LessonCheck />
+
+## Sources and scope
+
+Scrum Guide 2020: Scrum Artifacts and each Commitment section. Book: chapter 7, Done and Ready.
+
+- [The Scrum Guide — Ken Schwaber & Jeff Sutherland (November 2020)](https://scrumguides.org/scrum-guide.html)
+- [The Professional Product Owner — Don McGreal & Ralph Jocham (2018), ISBN 9780134686479](https://www.informit.com/store/professional-product-owner-leveraging-scrum-as-a-competitive-9780134686479)
+
+Explanations and examples are original teaching material. Official test questions are not reproduced. Exam formats are verified separately; these topic groups are not an official blueprint.

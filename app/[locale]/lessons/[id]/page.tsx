@@ -3,6 +3,10 @@ import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight, BookOpen, Check, Clock3 } from 'lucide-react';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
+import type { ComponentProps } from 'react';
+import { LessonCheck } from '@/components/lesson/lesson-check';
+import { SourceLinks } from '@/components/source-links';
+import { getQuestions } from '@/lib/assessments';
 import { lessons } from '@/lib/catalog';
 import { getContent } from '@/lib/content';
 import { getLocale } from '@/lib/i18n';
@@ -37,19 +41,33 @@ export default async function LessonPage({
   const data = getContent(id, locale);
   if (!data) notFound();
   const { lesson, body, metadata, fallback } = data;
+  const sections = [...body.matchAll(/^## (.+)$/gm)].map((match, index) => ({
+    title: match[1],
+    id: `section-${index + 1}`,
+  }));
+  const checks = getQuestions()
+    .filter(
+      (q) => q.lessonId === id && q.sourceIds.length && ['single', 'multiple'].includes(q.type),
+    )
+    .slice(0, 4);
   const { content } = await compileMDX({
     source: body,
     options: { blockJS: false, blockDangerousJS: true, mdxOptions: { remarkPlugins: [remarkGfm] } },
     components: {
+      h2: (props: ComponentProps<'h2'>) => (
+        <h2 {...props} id={sections.find((s) => s.title === props.children)?.id} />
+      ),
+      LessonCheck: () => <LessonCheck questions={checks} locale={locale} />,
       Diagram: ({ chart }: { chart: string }) => (
         <Diagram chart={chart} locale={locale} title={lesson.title[locale]} />
       ),
       ConceptStepper: () => <ConceptStepper locale={locale} />,
     },
   });
-  const next = lessons.find(
-    (l) => l.trackId === lesson.trackId && l.status === 'published' && l.id !== lesson.id,
+  const trackLessons = lessons.filter(
+    (l) => l.trackId === lesson.trackId && l.status === 'published',
   );
+  const next = trackLessons[trackLessons.findIndex((l) => l.id === id) + 1];
   return (
     <div className="lesson-page stack-lg">
       <Link className="text-link" href={`/${locale}/lessons`}>
@@ -108,6 +126,19 @@ export default async function LessonPage({
           </div>
         </article>
         <aside className="lesson-sidebar stack">
+          <nav className="card padded lesson-toc" aria-label={az ? 'Bu dərsdə' : 'In this lesson'}>
+            <p className="eyebrow">{az ? 'BU DƏRSDƏ' : 'IN THIS LESSON'}</p>
+            <ol>
+              {sections.map((section) => (
+                <li key={section.id}>
+                  <a href={`#${section.id}`}>{section.title}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+          <div className="card padded">
+            <SourceLinks ids={lesson.sourceIds} locale={locale} />
+          </div>
           <div className="card padded">
             <p className="eyebrow">{az ? 'ÖYRƏN, SONRA TƏTBİQ ET' : 'MAKE IT STICK'}</p>
             <h3>{az ? 'Bir az düşün. Bir az sına.' : 'Pause. Reflect. Put it to work.'}</h3>
@@ -129,7 +160,10 @@ export default async function LessonPage({
                 ? 'Məşq sualları ilə güclü və zəif tərəflərini kəşf et.'
                 : 'Use original practice questions to discover your strengths and your next opportunity.'}
             </p>
-            <Link className="button button-secondary" href={`/${locale}/practice`}>
+            <Link
+              className="button button-secondary"
+              href={`/${locale}/practice?track=${lesson.trackId}&lesson=${lesson.id}`}
+            >
               {az ? 'Məşqə başla' : 'Explore practice'}
               <ArrowRight size={15} />
             </Link>

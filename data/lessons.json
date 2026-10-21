@@ -1020,10 +1020,11 @@
       "az": "Məhsul Sahibi, Scrum Master və Tərtibatçıları qərarlar və əməkdaşlıqla fərqləndir.",
       "en": "Distinguish Product Owner, Scrum Master and Developers through decisions and collaboration."
     },
-    "minutes": 25,
+    "minutes": 20,
     "status": "published",
     "topics": ["Scrum accountabilities in practice", "PSPO1", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["scrum-2020", "professional-po-2018"]
   },
   {
     "id": "pspo1-events",
@@ -1038,10 +1039,11 @@
       "az": "Hər Scrum tədbirinin niyə yoxlama və uyğunlaşma imkanı yaratdığını izah et.",
       "en": "Explain why each Scrum event creates a chance to inspect and adapt."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 20,
+    "status": "published",
     "topics": ["Events as feedback opportunities", "PSPO1", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["scrum-2020"]
   },
   {
     "id": "pspo1-artifacts",
@@ -1056,10 +1058,11 @@
       "az": "Məhsul İş Siyahısını, Sprint İş Siyahısını və İnkrementi ortaq öhdəliklərlə əlaqələndir.",
       "en": "Relate the Product Backlog, Sprint Backlog and Increment to shared commitments."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 20,
+    "status": "published",
     "topics": ["Artifacts and their commitments", "PSPO1", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["scrum-2020", "professional-po-2018"]
   },
   {
     "id": "pspo2-strategy",
@@ -1074,10 +1077,11 @@
       "az": "Prioritetlər toqquşduqda məhsul məqsədləri, eksperimentlər və sübutlardan istifadə et.",
       "en": "Use product goals, experiments and evidence when priorities conflict."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 20,
+    "status": "published",
     "topics": ["Empirical product strategy", "PSPO2", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["professional-po-2018", "ebm-2024", "scrum-2020"]
   },
   {
     "id": "pspo2-value",
@@ -1092,10 +1096,11 @@
       "az": "Maraqlı tərəf tələblərini, riski, keyfiyyəti və nəticə sübutunu tarazlaşdır.",
       "en": "Balance stakeholder demands, risk, quality and outcome evidence."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 20,
+    "status": "published",
     "topics": ["Value decisions in difficult situations", "PSPO2", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["ebm-2024", "professional-po-2018"]
   },
   {
     "id": "pspo2-facilitation",
@@ -1110,10 +1115,11 @@
       "az": "Qərar sahibliyini aydın et və konstruktiv fikir ayrılığına yer ver.",
       "en": "Make decision ownership explicit and invite constructive disagreement."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 20,
+    "status": "published",
     "topics": ["Facilitate product decisions", "PSPO2", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["scrum-2020", "professional-po-2018"]
   },
   {
     "id": "pspo3-written-case",
@@ -1128,10 +1134,11 @@
       "az": "Kontekst, seçim, qərar və yoxlamanı bağlayan aydın cavab yaz.",
       "en": "Write a clear response that connects context, options, decision and inspection."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 20,
+    "status": "published",
     "topics": ["Reason through a product case", "PSPO3", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["ebm-2024", "scrum-2020", "professional-po-2018"]
   },
   {
     "id": "pspo3-complexity",
@@ -1146,10 +1153,11 @@
       "az": "Məhsul məsuliyyətindən imtina etmədən sübut dəyişdikcə qərarları uyğunlaşdır.",
       "en": "Adapt decisions as evidence changes without abandoning product accountability."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 20,
+    "status": "published",
     "topics": ["Product ownership in complex contexts", "PSPO3", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["scrum-2020", "ebm-2024", "professional-po-2018"]
   },
   {
     "id": "pspo3-reflection",
@@ -1164,9 +1172,48 @@
       "az": "Öz əsaslandırmanı tənqid et, fərziyyələri tap və növbəti mənalı sübutu təklif et.",
       "en": "Critique your own reasoning, identify assumptions and propose meaningful next evidence."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 20,
+    "status": "published",
     "topics": ["Reflect, inspect and improve", "PSPO3", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["ebm-2024", "scrum-2020", "professional-po-2018"]
+  },
+  {
+    "id": "pspo1-product-value",
+    "trackId": "pspo1",
+    "level": "junior",
+    "moduleId": "pspo1-preparation",
+    "title": {
+      "az": "Məhsul dəyəri və backlog qərarları",
+      "en": "Product value and backlog decisions"
+    },
+    "summary": {
+      "az": "Vision, Value və Validation ilə ehtiyacı, nəticəni və sıralamanı bağla.",
+      "en": "Connect needs, outcomes and ordering through Vision, Value and Validation."
+    },
+    "minutes": 20,
+    "status": "published",
+    "topics": ["Product value and backlog decisions", "PSPO", "pspo1"],
+    "prerequisites": [],
+    "sourceIds": ["professional-po-2018", "scrum-2020", "ebm-2024"]
+  },
+  {
+    "id": "pspo2-kanban",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Kanban ilə dəyər axını",
+      "en": "Flow of value with Kanban"
+    },
+    "summary": {
+      "az": "WIP, Cycle Time, Work Item Age, Throughput və SLE ilə axını yoxla.",
+      "en": "Inspect flow with WIP, Cycle Time, Work Item Age, Throughput and SLE."
+    },
+    "minutes": 20,
+    "status": "published",
+    "topics": ["Flow of value with Kanban", "PSPO", "pspo2"],
+    "prerequisites": [],
+    "sourceIds": ["kanban-2021", "scrum-2020"]
   }
 ]

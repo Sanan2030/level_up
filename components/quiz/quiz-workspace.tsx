@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { SourceLinks } from '@/components/source-links';
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
@@ -268,8 +270,14 @@ function removeSession(sessions: Record<string, unknown>) {
 export function QuizWorkspace({ locale, questions, exams }: Props) {
   const t = text[locale];
   const { progress, ready, update } = useProgress();
-  const [selectedTrack, setSelectedTrack] = useState<TrackId | null>(null);
-  const [mode, setMode] = useState<QuizMode>('practice');
+  const params = useSearchParams();
+  const requestedTrack = params.get('track');
+  const [selectedTrack, setSelectedTrack] = useState<TrackId | null>(
+    tracks.find((t) => t.id === requestedTrack)?.id ?? null,
+  );
+  const [mode, setMode] = useState<QuizMode>(
+    params.get('mode') === 'review' ? 'review' : 'practice',
+  );
   const [domain, setDomain] = useState('all');
   const [count, setCount] = useState(10);
   const [practiceTimer, setPracticeTimer] = useState(false);
@@ -278,7 +286,17 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
   const [resultId, setResultId] = useState<string | null>(null);
   const [now, setNow] = useState(() => Date.now());
   const trackId = selectedTrack ?? progress.activeTrack;
-  const bank = useMemo(() => questions.filter((q) => q.trackId === trackId), [questions, trackId]);
+  const requestedLesson = params.get('lesson');
+  const lessonFilter = lessons.some((l) => l.id === requestedLesson && l.trackId === trackId)
+    ? requestedLesson
+    : null;
+  const bank = useMemo(
+    () =>
+      questions.filter(
+        (q) => q.trackId === trackId && (!lessonFilter || q.lessonId === lessonFilter),
+      ),
+    [questions, trackId, lessonFilter],
+  );
   const questionMap = useMemo(() => new Map(questions.map((q) => [q.id, q])), [questions]);
   const exam = exams.find((item) => item.id === trackId);
   const domains = [...new Set(bank.map((q) => q.domain))];
@@ -473,8 +491,8 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
           }}
         />
       ) : session && current ? (
-        <>
-          <section className="card" aria-label={t.mode}>
+        <div className="quiz-session-layout">
+          <section className="card quiz-session-toolbar" aria-label={t.mode}>
             <div
               style={{
                 display: 'flex',
@@ -540,7 +558,10 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
               </button>
             </section>
           ) : (
-            <section className="card" style={{ display: 'grid', gap: '1.25rem' }}>
+            <section
+              className="card quiz-session-question"
+              style={{ display: 'grid', gap: '1.25rem' }}
+            >
               <div
                 style={{
                   display: 'flex',
@@ -643,7 +664,8 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
             </section>
           )}
 
-          <section className="card" aria-label={t.navigator}>
+          <section className="card quiz-session-navigation" aria-label={t.navigator}>
+            <h2>{t.navigator}</h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '.5rem' }}>
               {session.questionIds.map((id, index) => (
                 <button
@@ -687,9 +709,42 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
               {t.saved}
             </p>
           </section>
-        </>
+        </div>
       ) : (
         <section className="card" style={{ display: 'grid', gap: '1.5rem' }}>
+          {lessonFilter && (
+            <div className="notice">
+              <p>
+                {locale === 'az' ? 'Dərs üzrə məşq: ' : 'Lesson practice: '}
+                {lessons.find((l) => l.id === lessonFilter)?.title[locale]}
+              </p>
+              <Link className="text-link" href={`/${locale}/practice?track=${trackId}`}>
+                {locale === 'az' ? 'Bütün mövzular' : 'All topics'}
+              </Link>
+            </div>
+          )}
+          {trackId.startsWith('pspo') && (
+            <div className="notice official-practice">
+              <p>
+                {locale === 'az'
+                  ? 'Rəsmi məşqi Scrum.org-da et. Burada isə göndərilən bələdçilər əsasında orijinal sualları izahlarla öyrən.'
+                  : 'Try official practice on Scrum.org. Here, study original explained questions based on the supplied guides.'}
+              </p>
+              <a
+                className="text-link"
+                href="https://www.scrum.org/open-assessments/product-owner-open"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Product Owner Open ↗
+              </a>
+              <Link className="text-link" href={`/${locale}/sources`}>
+                {locale === 'az'
+                  ? 'Mənbələr və yoxlama vəziyyəti'
+                  : 'Sources and verification status'}
+              </Link>
+            </div>
+          )}
           <label style={{ display: 'grid', gap: '.5rem' }}>
             <span style={{ fontWeight: 600 }}>{t.track}</span>
             <select
@@ -1134,6 +1189,7 @@ function AnswerFeedback({
         {correct === null ? t.reflection : correct ? t.correct : t.incorrect}
       </strong>
       <p>{localize(question.explanation, locale)}</p>
+      <SourceLinks ids={question.sourceIds} locale={locale} />
       {question.type === 'written' ? (
         <ul>
           {question.rubric?.map((criterion, i) => (

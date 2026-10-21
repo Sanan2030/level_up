@@ -49,7 +49,7 @@
       "en": "Cohort analysis can separate real customer value from aggregate growth that masks churn.",
       "az": "Kohort təhlili real müştəri dəyərini müştəri itkisini gizlədən ümumi artımdan ayıra bilər."
     },
-    "lessonId": "product-metrics",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -102,7 +102,7 @@
       "en": "Discovery tests whether a meaningful problem exists for a specific group.",
       "az": "Kəşf konkret qrup üçün əhəmiyyətli problemin olub-olmadığını yoxlayır."
     },
-    "lessonId": "jtbd-research",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -155,7 +155,7 @@
       "en": "Jobs-to-be-Done analysis looks beyond requested features to the circumstances and outcomes behind demand.",
       "az": "Jobs-to-be-Done təhlili tələb olunan funksiyadan kənara çıxaraq tələbin səbəblərini və nəticələrini araşdırır."
     },
-    "lessonId": "jtbd-research",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -208,7 +208,7 @@
       "en": "A focused experiment can reduce uncertainty before committing a large investment.",
       "az": "Fokuslanmış təcrübə böyük sərmayədən əvvəl qeyri-müəyyənliyi azalda bilər."
     },
-    "lessonId": "story-mapping",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -314,7 +314,7 @@
       "en": "A time-sensitive opportunity may lose value quickly even when its implementation is larger.",
       "az": "Vaxta həssas imkan tətbiqi daha böyük olsa da tez dəyər itirə bilər."
     },
-    "lessonId": "po-prioritization",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -367,7 +367,7 @@
       "en": "Guardrails reveal when a local improvement damages trust, safety, accessibility, or another important outcome.",
       "az": "Qoruyucu göstəricilər yerli yaxşılaşmanın etimada, təhlükəsizliyə, əlçatanlığa və ya başqa nəticəyə zərər vurduğunu göstərir."
     },
-    "lessonId": "product-ethics",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -420,7 +420,7 @@
       "en": "An average can conceal groups with different problems and willingness to adopt or pay.",
       "az": "Orta göstərici fərqli problemləri və qəbul və ya ödəniş istəyi olan qrupları gizlədə bilər."
     },
-    "lessonId": "personas",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -473,7 +473,7 @@
       "en": "An outcome-oriented roadmap communicates direction while allowing solutions to change as evidence develops.",
       "az": "Nəticəyönlü yol xəritəsi istiqaməti bildirir və sübut dəyişdikcə həllərin dəyişməsinə imkan verir."
     },
-    "lessonId": "product-strategy",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -526,7 +526,7 @@
       "en": "Negotiating the underlying interests can resolve competing requests without promising everything.",
       "az": "Əsas maraqların razılaşdırılması hər şeyi vəd etmədən rəqabət aparan istəkləri həll edə bilər."
     },
-    "lessonId": "po-negotiation",
+    "lessonId": "pspo2-facilitation",
     "practiceOnly": true
   },
   {
@@ -579,7 +579,7 @@
       "en": "Opportunity cost recognizes value forgone when one option consumes constrained capacity.",
       "az": "Fürsət xərci məhdud imkanları bir seçimə ayırarkən itirilən alternativ dəyəri nəzərə alır."
     },
-    "lessonId": "po-prioritization",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -632,7 +632,7 @@
       "en": "A product cannot learn reliably from an experiment without trustworthy measurement.",
       "az": "Məhsul etibarlı ölçmə olmadan təcrübədən düzgün nəticə çıxara bilməz."
     },
-    "lessonId": "product-metrics",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -685,7 +685,7 @@
       "en": "A change after a release does not by itself prove that the release caused the change.",
       "az": "Buraxılışdan sonra dəyişiklik həmin buraxılışın səbəb olduğunu öz-özünə sübut etmir."
     },
-    "lessonId": "product-metrics",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -738,7 +738,7 @@
       "en": "An early indicator supports adaptation, while the later outcome checks whether the intended benefit occurred.",
       "az": "Erkən göstərici uyğunlaşmanı dəstəkləyir, sonrakı nəticə isə faydanın yaranıb-yaranmadığını yoxlayır."
     },
-    "lessonId": "product-metrics",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -791,7 +791,7 @@
       "en": "Inclusive research reduces the risk of optimizing only for the easiest participants to reach.",
       "az": "İnklüziv araşdırma yalnız ən asan əlçatan iştirakçılar üçün optimallaşdırma riskini azaldır."
     },
-    "lessonId": "product-ethics",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -844,7 +844,7 @@
       "en": "Strategy guides trade-offs by identifying where the product will focus and what it will not pursue.",
       "az": "Strategiya məhsulun diqqətini hara yönəldəcəyini və nədən imtina edəcəyini göstərərək seçimlərə istiqamət verir."
     },
-    "lessonId": "product-strategy",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -897,7 +897,7 @@
       "en": "Technical debt can constrain future value and delivery; it is relevant to product decisions.",
       "az": "Texniki borc gələcək dəyəri və çatdırılmanı məhdudlaşdıra bilər; məhsul qərarları üçün əhəmiyyətlidir."
     },
-    "lessonId": "ebm",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -950,7 +950,7 @@
       "en": "An integrated Increment requires compatible quality standards and attention to cross-team integration.",
       "az": "İnteqrasiya olunmuş İnkrement uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
     },
-    "lessonId": "scaling-products",
+    "lessonId": "pspo2-facilitation",
     "practiceOnly": true
   },
   {
@@ -1003,7 +1003,7 @@
       "en": "Probabilistic forecasts communicate uncertainty better than a single date presented as a promise.",
       "az": "Ehtimallı proqnozlar qeyri-müəyyənliyi vəd kimi təqdim olunan tək tarixdən daha düzgün bildirir."
     },
-    "lessonId": "forecast-release",
+    "lessonId": "pspo2-kanban",
     "practiceOnly": true
   },
   {
@@ -1056,7 +1056,7 @@
       "en": "A pricing decision needs evidence about customer value and purchasing behavior, not only development cost.",
       "az": "Qiymət qərarı yalnız inkişaf xərcinə deyil, müştəri dəyəri və alış davranışına dair sübuta ehtiyac duyur."
     },
-    "lessonId": "pricing-gtm",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -1109,7 +1109,7 @@
       "en": "A mature product may need maintenance, renewal, or retirement rather than endless feature expansion.",
       "az": "Yetkin məhsula sonsuz funksiya artımı əvəzinə saxlanma, yenilənmə və ya dayandırılma lazım ola bilər."
     },
-    "lessonId": "portfolio-lifecycle",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -1162,7 +1162,7 @@
       "en": "A product decision should consider privacy and avoid collecting data simply because it is available.",
       "az": "Məhsul qərarı məxfiliyi nəzərə almalı və məlumatı yalnız mövcud olduğu üçün toplamamalıdır."
     },
-    "lessonId": "product-ethics",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -1215,7 +1215,7 @@
       "en": "Collaborative challenge improves the decision while keeping product accountability clear.",
       "az": "Birgə sorğulama məhsul hesabatlılığını aydın saxlayaraq qərarı yaxşılaşdırır."
     },
-    "lessonId": "po-teamwork",
+    "lessonId": "pspo2-facilitation",
     "practiceOnly": true
   },
   {
@@ -1268,7 +1268,7 @@
       "en": "A thin journey slice supports early learning about a usable experience rather than isolated technical layers.",
       "az": "Kiçik başdan-başa hissə ayrı texniki qatlar əvəzinə istifadə edilə bilən təcrübə barədə erkən öyrənməni dəstəkləyir."
     },
-    "lessonId": "story-mapping",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -1321,7 +1321,7 @@
       "en": "Key results should show movement toward an objective rather than merely completion of planned activities.",
       "az": "Əsas nəticələr yalnız planlaşdırılmış işin bitməsini deyil, məqsədə doğru irəliləyişi göstərməlidir."
     },
-    "lessonId": "okrs",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -1374,7 +1374,7 @@
       "en": "A balanced view avoids optimizing a single measure while other constraints prevent value creation.",
       "az": "Balanslı baxış digər məhdudiyyətlər dəyər yaratmağa mane olarkən tək göstəricinin optimallaşdırılmasının qarşısını alır."
     },
-    "lessonId": "ebm",
+    "lessonId": "pspo2-value",
     "practiceOnly": true
   },
   {
@@ -1427,7 +1427,7 @@
       "en": "Honest evidence and appropriate data handling are necessary for trustworthy analysis.",
       "az": "Dürüst sübut və düzgün məlumat emalı etibarlı təhlil üçün zəruridir."
     },
-    "lessonId": "product-ethics",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -1480,7 +1480,7 @@
       "en": "Strategy guides trade-offs by identifying where the product will focus and what it will not pursue.",
       "az": "Strategiya məhsulun diqqətini hara yönəldəcəyini və nədən imtina edəcəyini göstərərək seçimlərə istiqamət verir."
     },
-    "lessonId": "product-strategy",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -1533,7 +1533,7 @@
       "en": "Predefined evidence reduces the temptation to reinterpret any result as success.",
       "az": "Əvvəlcədən müəyyən edilən sübut istənilən nəticəni uğur kimi yozmaq meylini azaldır."
     },
-    "lessonId": "product-ethics",
+    "lessonId": "pspo2-strategy",
     "practiceOnly": true
   },
   {
@@ -1586,7 +1586,439 @@
       "en": "Outcome measures connect product work to the effect it is intended to create.",
       "az": "Nəticə göstəriciləri məhsul işini yaratmalı olduğu təsirlə əlaqələndirir."
     },
-    "lessonId": "ebm",
+    "lessonId": "pspo2-value",
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo2-strategy-source-1",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "product-strategy",
+    "difficulty": 2,
+    "text": {
+      "az": "MVP-dən sonra nəticə dəyişməyib. Növbəti addım hansıdır?",
+      "en": "An MVP produces no outcome improvement. What next?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Fərziyyəni və sübutun keyfiyyətini yoxlayıb yanaşmanı dəyişmək.",
+          "en": "Inspect the hypothesis and evidence quality, then adapt."
+        },
+        "explanation": {
+          "az": "EBM eksperiment dövrü nəticədən öyrənməyi tələb edir.",
+          "en": "EBM’s experiment loop calls for learning from results."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Sərf edilmiş büdcəyə görə eyni həlli böyütmək.",
+          "en": "Expand the same solution because money was spent."
+        },
+        "explanation": {
+          "az": "Keçmiş xərc gələcək faydanın sübutu deyil.",
+          "en": "Sunk cost does not prove future benefit."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Başlanğıc ölçünü silmək.",
+          "en": "Delete the baseline."
+        },
+        "explanation": {
+          "az": "Başlanğıc ölçünü silmək yoxlamanı zəiflədir.",
+          "en": "Deleting the baseline undermines inspection."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "EBM eksperiment dövrü nəticədən öyrənməyi tələb edir.",
+      "en": "EBM’s experiment loop calls for learning from results."
+    },
+    "lessonId": "pspo2-strategy",
+    "sourceIds": ["professional-po-2018", "ebm-2024", "scrum-2020"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo2-strategy-source-2",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "product-strategy",
+    "difficulty": 2,
+    "text": {
+      "az": "Roadmap funksiyaları dəqiq tarixlə vəd edir, amma müştəri ehtiyacı dəyişib. Daha yaxşı qərar hansıdır?",
+      "en": "A roadmap promises dated features, but customer needs changed. What is a better response?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Məqsədi, fərziyyələri və seçimlərin nəticəsini yenidən yoxlamaq.",
+          "en": "Reinspect the goal, assumptions and consequences of options."
+        },
+        "explanation": {
+          "az": "Empirik strategiya yeni məlumatla uyğunlaşdırılır.",
+          "en": "Empirical strategy adapts to new information."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Köhnə planı sübutdan asılı olmayaraq saxlamaq.",
+          "en": "Keep the old plan regardless of evidence."
+        },
+        "explanation": {
+          "az": "Planın icrası məqsədin dəyərli qalmasını sübut etmir.",
+          "en": "Executing a plan does not prove the goal remains valuable."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Maraqlı tərəflərdən sübutu gizlətmək.",
+          "en": "Hide the evidence from stakeholders."
+        },
+        "explanation": {
+          "az": "Şəffaflıq uyğunlaşmanın əsasıdır.",
+          "en": "Transparency enables adaptation."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Empirik strategiya yeni məlumatla uyğunlaşdırılır.",
+      "en": "Empirical strategy adapts to new information."
+    },
+    "lessonId": "pspo2-strategy",
+    "sourceIds": ["professional-po-2018", "ebm-2024", "scrum-2020"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo2-value-source-1",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 2,
+    "text": {
+      "az": "Müştəri indiki təcrübə ilə istədiyi nəticə arasındakı boşluğu izah edir. Hansı KVA birbaşa uyğundur?",
+      "en": "A customer describes the gap between current experience and desired outcome. Which KVA directly fits?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Unrealized Value (UV).",
+          "en": "Unrealized Value (UV)."
+        },
+        "explanation": {
+          "az": "EBM-də UV qarşılanmayan nəticədən yaranan fürsəti araşdırır.",
+          "en": "UV examines opportunities from unmet outcomes in EBM."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Yalnız buraxılış sayı.",
+          "en": "Release count alone."
+        },
+        "explanation": {
+          "az": "Buraxılış sayı təcrübə boşluğunu ölçmür.",
+          "en": "Release count does not measure the experience gap."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Yalnız görülən iş saatı.",
+          "en": "Hours worked alone."
+        },
+        "explanation": {
+          "az": "İş saatı fəaliyyət göstəricisidir.",
+          "en": "Hours worked measure activity."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "EBM-də UV qarşılanmayan nəticədən yaranan fürsəti araşdırır.",
+      "en": "UV examines opportunities from unmet outcomes in EBM."
+    },
+    "lessonId": "pspo2-value",
+    "sourceIds": ["ebm-2024", "professional-po-2018"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo2-value-source-2",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 2,
+    "text": {
+      "az": "Yeni imkanlara vaxt qalmır, çünki komanda çoxsaylı köhnə versiyaları saxlayır. Hansı perspektiv faydalıdır?",
+      "en": "Supporting many old versions leaves little capacity for new capabilities. Which perspective helps?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Ability to Innovate (A2I).",
+          "en": "Ability to Innovate (A2I)."
+        },
+        "explanation": {
+          "az": "EBM A2I innovasiyaya mane olan yükü araşdırır.",
+          "en": "EBM A2I examines constraints on delivering new capabilities."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Funksiya sayını dəyər saymaq.",
+          "en": "Treat feature count as value."
+        },
+        "explanation": {
+          "az": "Funksiya sayı bu maneəni izah etmir.",
+          "en": "Feature count does not explain the constraint."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "UV-ni avtomatik sıfır saymaq.",
+          "en": "Automatically assume UV is zero."
+        },
+        "explanation": {
+          "az": "Versiya yükü qarşılanmamış ehtiyacın olmadığını sübut etmir.",
+          "en": "Version burden does not prove the absence of unmet needs."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "EBM A2I innovasiyaya mane olan yükü araşdırır.",
+      "en": "EBM A2I examines constraints on delivering new capabilities."
+    },
+    "lessonId": "pspo2-value",
+    "sourceIds": ["ebm-2024", "professional-po-2018"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo2-facilitation-source-1",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "stakeholder-leadership",
+    "difficulty": 2,
+    "text": {
+      "az": "Üç sponsor fərqli sıralama istəyir. Kim Product Backlog-un effektiv idarəsinə hesabatlı qalır?",
+      "en": "Three sponsors demand different ordering. Who remains accountable for effective Product Backlog management?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Product Owner.",
+          "en": "Product Owner."
+        },
+        "explanation": {
+          "az": "Bir Product Owner var; fikirlər qərara töhfə verir.",
+          "en": "There is one Product Owner; contributions inform the decision."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Ən çox səs alan sponsor.",
+          "en": "The sponsor with the most votes."
+        },
+        "explanation": {
+          "az": "Scrum səs çoxluğunu hesabatlılıq kimi müəyyən etmir.",
+          "en": "Scrum does not define a voting majority as the accountability."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Hər Sprint dəyişən komitə.",
+          "en": "A committee that changes each Sprint."
+        },
+        "explanation": {
+          "az": "Komitə vahid hesabatlılığı əvəz etmir.",
+          "en": "A committee does not replace the single accountability."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Bir Product Owner var; fikirlər qərara töhfə verir.",
+      "en": "There is one Product Owner; contributions inform the decision."
+    },
+    "lessonId": "pspo2-facilitation",
+    "sourceIds": ["scrum-2020", "professional-po-2018"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo2-facilitation-source-2",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "stakeholder-leadership",
+    "difficulty": 2,
+    "text": {
+      "az": "Review-da hamı təqdimatı bəyəndi. Bazar dəyəri barədə nə demək olar?",
+      "en": "Everyone likes the Review presentation. What can be concluded about market value?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Geribildirim faydalıdır; real istifadə nəticəsi hələ yoxlanmalıdır.",
+          "en": "Feedback helps; real usage outcomes still need validation."
+        },
+        "explanation": {
+          "az": "Kitab Review geribildirimi ilə bazar yoxlamasını ayırır.",
+          "en": "The book distinguishes stakeholder feedback from market validation."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Dəyər tam sübut olunub.",
+          "en": "Value is fully proven."
+        },
+        "explanation": {
+          "az": "Daxili razılıq müştəri davranışını sübut etmir.",
+          "en": "Internal approval does not prove customer behavior."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "İstifadəçi ilə daha danışmaq lazım deyil.",
+          "en": "No further user contact is needed."
+        },
+        "explanation": {
+          "az": "Validation davam edən öyrənmədir.",
+          "en": "Validation is ongoing learning."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Kitab Review geribildirimi ilə bazar yoxlamasını ayırır.",
+      "en": "The book distinguishes stakeholder feedback from market validation."
+    },
+    "lessonId": "pspo2-facilitation",
+    "sourceIds": ["scrum-2020", "professional-po-2018"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo2-kanban-source-1",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 2,
+    "text": {
+      "az": "İş hələ bitməyib. Başlanandan indiyə 6 gün keçib. Hansı metrikdir?",
+      "en": "An unfinished item started six days ago. Which metric is this?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Work Item Age.",
+          "en": "Work Item Age."
+        },
+        "explanation": {
+          "az": "Kanban Guide: Age yalnız hələ davam edən işə aiddir.",
+          "en": "Kanban Guide: Age applies to work still in progress."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Tamamlanmış Cycle Time.",
+          "en": "Completed Cycle Time."
+        },
+        "explanation": {
+          "az": "Cycle Time üçün bitmə nöqtəsi lazımdır.",
+          "en": "Cycle Time needs a finish point."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Throughput.",
+          "en": "Throughput."
+        },
+        "explanation": {
+          "az": "Throughput zaman vahidində bitən iş sayıdır.",
+          "en": "Throughput is the count finished per unit of time."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "Kanban Guide: Age yalnız hələ davam edən işə aiddir.",
+      "en": "Kanban Guide: Age applies to work still in progress."
+    },
+    "lessonId": "pspo2-kanban",
+    "sourceIds": ["kanban-2021", "scrum-2020"],
+    "practiceOnly": true
+  },
+  {
+    "id": "pspo2-kanban-source-2",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 2,
+    "text": {
+      "az": "SLE: işlərin 85%-i 8 gün və ya az vaxtda bitir. Bu nə deməkdir?",
+      "en": "SLE: 85% of items finish within eight days. What does it mean?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "az": "Tarixi məlumatla ehtimallı proqnozdur.",
+          "en": "A probabilistic forecast informed by history."
+        },
+        "explanation": {
+          "az": "SLE müddət və ehtimaldan ibarətdir.",
+          "en": "An SLE has a time range and probability."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "az": "Hər iş üçün 8 günlük zəmanətdir.",
+          "en": "A guaranteed eight-day deadline for every item."
+        },
+        "explanation": {
+          "az": "85% bütün işlər üçün zəmanət deyil.",
+          "en": "85% is not a guarantee for every item."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "az": "Sprint-in rəsmi müddətidir.",
+          "en": "The prescribed Sprint duration."
+        },
+        "explanation": {
+          "az": "Kanban SLE-si Scrum Sprint müddətini müəyyən etmir.",
+          "en": "A Kanban SLE does not prescribe Sprint length."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "az": "SLE müddət və ehtimaldan ibarətdir.",
+      "en": "An SLE has a time range and probability."
+    },
+    "lessonId": "pspo2-kanban",
+    "sourceIds": ["kanban-2021", "scrum-2020"],
     "practiceOnly": true
   }
 ]

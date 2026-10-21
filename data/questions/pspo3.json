@@ -15,7 +15,7 @@
       "az": "Buraxılmış funksiyaları satıcılar üçün nəticələrdən ayırın. Məhsuldan ayrılan satıcılarla danışın, saxlanmanı kohortlar üzrə ölçün və üzləşdirmə əməyinin çoxluğu kimi yoxlanıla bilən səbəb seçin. Kiçik müdaxiləni prioritetləşdirin, gözlənilən dəyişikliyi və müşahidə müddətini yazın, genişləndirmədən əvvəl nəticə və mümkün zərəri yoxlayın.",
       "en": "Separate delivery output from merchant outcomes. Interview merchants who leave, segment retention by cohort, and identify a testable cause such as reconciliation effort. Reorder work around a small intervention, state the expected retention change and observation window, and inspect both results and possible harm before expanding it."
     },
-    "lessonId": "ebm",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -48,7 +48,7 @@
       "az": "Müştəri təsirini, kommersiya riskini, zəhməti və Məhsul məqsədi ilə əlaqəni görünən edin. Seçimləri maraqlı tərəfin vəzifəsinə görə deyil, ortaq fərziyyələrə görə müqayisə edin, daha kiçik ixrac həllini araşdırın və texniki mümkünlüyə Tərtibatçıları cəlb edin. Məhsul sahibi sıralama qərarını verir, güzəşti və qeyri-müəyyənliyi izah edir, hansı yeni sübutun qərarı dəyişəcəyini göstərir.",
       "en": "Make the customer impact, commercial exposure, risks, effort, and relationship to the Product Goal visible. Compare options using common assumptions rather than stakeholder rank, explore a smaller export solution, and involve Developers in feasibility. The Product Owner decides the ordering, explains the trade-off and uncertainty, and specifies which new evidence would change it."
     },
-    "lessonId": "po-negotiation",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -114,7 +114,7 @@
       "az": "Məhsul üzrə ortaq Məhsul məqsədini və vahid sıralanmış Məhsul iş siyahısını şəffaf edin; dəyərə görə bir Məhsul sahibi cavabdeh olsun. Komandalar inteqrasiya olunmuş, istifadəyə yararlı İnkrement yaradan qarşılıqlı razılaşdırılmış Tamamlanma tərifinə ehtiyac duyur. Sadəcə üç hesabat siyahısını uyğunlaşdırmaq əvəzinə texniki əməkdaşlığı və asılılıqların azaldılmasını dəstəkləyin.",
       "en": "Create transparency around a shared Product Goal and a single ordered Product Backlog for the product, with one Product Owner accountable for value. The teams need a mutually agreed Definition of Done that enables an integrated, usable Increment. Facilitate technical collaboration and dependency reduction rather than merely synchronizing three reporting lists."
     },
-    "lessonId": "scaling-products",
+    "lessonId": "pspo3-complexity",
     "practiceOnly": true,
     "rubric": [
       {
@@ -147,7 +147,7 @@
       "az": "Rəqibin addımını məlumat kimi qəbul edin, müştəri dəyərinin avtomatik sübutu kimi deyil. Hədəf seqmenti, müştəri problemini, fərqlənməni və Məhsul məqsədini nəzərdən keçirin; funksiyanın hansı fərziyyəni yoxlayacağını müəyyən edin. Uyğun müştərilərlə danışın və ya kiçik tələb sınağı aparın, alternativ xərcini müqayisə edin və strategiyanı sübut əsaslandırdıqda dəyişin.",
       "en": "Treat the competitor move as information, not automatic evidence of customer value. Revisit the target segment, customer problem, differentiation, and Product Goal; identify what assumption the feature would test. Speak to relevant customers or run a small demand experiment, compare opportunity cost, and adapt strategy only when the evidence justifies it."
     },
-    "lessonId": "product-strategy",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -180,7 +180,7 @@
       "az": "Təkcə konversiyanı deyil, xalis müştəri və biznes dəyərini qiymətləndirin. Nəticələri seqmentləşdirin, çaşdırıcı dizaynın təsadüfi alış yaratmasını yoxlayın, sonrakı xərci və etimada təsiri hesablayın. Razılaşdırılmış qoruyucu hədlərdən istifadə edin; zərər faydanı üstələyirsə dəyişikliyi geri qaytarın və ya düzəldin, sonra daha aydın alternativi sınaqdan keçirin.",
       "en": "Evaluate net customer and business value rather than conversion alone. Segment the results, inspect whether confusing design caused accidental purchases, and estimate downstream cost and trust effects. Use agreed guardrail thresholds; revert or adjust the change if harm outweighs benefit, then test a clearer alternative."
     },
-    "lessonId": "product-metrics",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -213,7 +213,7 @@
       "az": "Vacib sübutun gizlədilməsinin məlumatlı investisiya qərarına mane olduğunu ayrıca söhbətdə izah edin. Mənfi rəyi onun məhdudiyyətləri, müsbət sübut, mümkün səbəblər və məhdud öyrənmə təklifi ilə birlikdə təqdim edin. Faktları dəyişmədən sponsoru riskə cavabın qurulmasına cəlb edin; nəticələri təhrif etmək tələbi davam edərsə uyğun idarəetmə kanalına çıxarın.",
       "en": "Explain privately that concealing material evidence prevents an informed investment decision. Present the negative feedback with its limits, positive evidence, plausible causes, and a bounded learning proposal. Invite the sponsor to shape the response to the risk without changing the facts, and escalate a persistent request to misrepresent results through appropriate governance."
     },
-    "lessonId": "product-ethics",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -279,7 +279,7 @@
       "az": "Sprint məqsədini qoruyaraq təcililiyi və alternativləri Tərtibatçılarla müzakirə edin; öyrənmə zamanı işin həcmi dəqiqləşdirilə və yenidən razılaşdırıla bilər. Vəzifə səlahiyyəti ilə iş əlavə etməyin və keyfiyyəti azaltmayın. Sprint məqsədi aktuallığını itiribsə Məhsul sahibi Sprinti ləğv edə bilər; əlavə tələb təkbaşına məqsədin köhnəldiyini göstərmir.",
       "en": "Discuss urgency and alternatives with Developers while protecting the Sprint Goal; scope can be clarified and renegotiated as learning occurs. Do not insert work by authority or reduce quality. If the Sprint Goal has become obsolete, the Product Owner may cancel the Sprint; an additional request alone does not establish obsolescence."
     },
-    "lessonId": "pspo1-events",
+    "lessonId": "pspo3-complexity",
     "practiceOnly": true,
     "rubric": [
       {
@@ -312,7 +312,7 @@
       "az": "Hər iki seqmentin iqtisadiyyatını, qarşılanmamış ehtiyaclarını, strateji uyğunluğunu və məhdudiyyətlərini araşdırın. Zidd vədləri birləşdirmək əvəzinə yaxın dövr nəticəsi və əsas faydalanan barədə açıq seçim edin. Seçimdən kənar qalanları izah edin, dəyərli ortaq imkanları müəyyən edin və seqment strategiyasına yenidən baxmağa səbəb olacaq sübutu yazın.",
       "en": "Investigate the economics, unmet needs, strategic fit, and constraints of both segments. Make an explicit choice about the near-term outcome and primary beneficiary instead of combining conflicting promises. Explain exclusions, identify reusable capabilities where valuable, and define evidence that would trigger reconsideration of the segment strategy."
     },
-    "lessonId": "personas",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -345,7 +345,7 @@
       "az": "Avtomatlaşdırmanı bərpa müddəti, buraxılış riski və dəyərli ideyaları yoxlama gecikməsi kimi ölçülən məhdudiyyətlərlə əlaqələndirin. Cari məhdudiyyətin xərcini qiymətləndirin və kiçik avtomatlaşdırma investisiyasını alternativlərlə müqayisə edin. Təkmilləşmənin çatdırılma qabiliyyətini və nəticədə müştəri nəticələrini dəyişib-dəyişmədiyini izləyin; hər texniki təkmilləşdirməni avtomatik ən yaxşı investisiya saymayın.",
       "en": "Connect automation to measurable constraints such as recovery time, release risk, and delay in testing valuable ideas. Estimate the cost of the current constraint and compare a small automation investment with alternative opportunities. Track whether the improvement changes delivery capability and ultimately customer outcomes; do not assume every technical improvement is automatically the best investment."
     },
-    "lessonId": "ebm",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -378,7 +378,7 @@
       "az": "Müqavilə öhdəliklərini birtərəfli pozmadan öyrənilənləri görünən edin. Müştərini və kommersiya və ya hüquq mütəxəssislərini bərabər dəyərli həcm dəyişimini, mərhələli qəbulu və ya razılaşdırılmış dəyişikliyi araşdırmağa cəlb edin. Konkret nəticə sübutlarını və güzəştləri göstərin, şəffaf iş siyahısını qoruyun və yenilənmiş öhdəlikləri sənədləşdirin.",
       "en": "Make the learning visible without unilaterally breaching contractual obligations. Engage the customer and commercial or legal specialists to explore equivalent-value scope exchanges, staged acceptance, or an agreed change. Show concrete outcome evidence and trade-offs, retain a transparent backlog, and document any revised commitments."
     },
-    "lessonId": "po-negotiation",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -411,7 +411,7 @@
       "az": "Uyğunsuzluğu öyrənmə fürsəti kimi qəbul edin. İnsanların dediyini real kontekst və davranışla müqayisə edin: məlumatlılıq, giriş, istifadə rahatlığı, keçid xərci və problemin kifayət qədər tez-tez baş verməsi. İstifadəçilərin nəzərdə tutulan işi görməsini müşahidə edin, ölçmə alətlərini yoxlayın və daha çox funksiyaya başlamazdan əvvəl ən riskli izahı sınayın.",
       "en": "Treat the discrepancy as a learning opportunity. Compare what people said with their actual context and behavior: awareness, access, usability, switching costs, and whether the problem occurs often enough. Observe users completing the intended job, inspect instrumentation, and test the riskiest explanation before committing to more features."
     },
-    "lessonId": "jtbd-research",
+    "lessonId": "pspo3-reflection",
     "practiceOnly": true,
     "rubric": [
       {
@@ -444,7 +444,7 @@
       "az": "Nəticəni, sıralamanı və məhdudiyyətləri dəqiqləşdirin, planın və texniki işin idarəsini Tərtibatçılara buraxın. Maneələri görünən edin və təkrarlanan əngəlləri aradan qaldırmaq üçün Scrum Master və təşkilatla işləyin. Özünüidarəni fərdi tapşırıq bölgüsü ilə əvəz etmək əvəzinə əməkdaşlıq və asılılıq nümunələrini araşdırın.",
       "en": "Clarify the outcome, ordering, and constraints while leaving the Developers to manage their plan and technical work. Make blockers visible and work with the Scrum Master and the organization to remove recurring impediments. Inspect collaboration and dependency patterns instead of replacing self-management with individual task assignment."
     },
-    "lessonId": "scrum-accountabilities",
+    "lessonId": "pspo3-complexity",
     "practiceOnly": true,
     "rubric": [
       {
@@ -477,7 +477,7 @@
       "az": "Müştəri problemi, ödəniş istəyi, çatımlılıq və mümkünlüklə bağlı ən riskli fərziyyələri müəyyən edin. Açıq sübut hədləri və qərar tarixi olan etik sınaqlara məhdud investisiya təklif edin. Dəqiq illik öhdəlik uydurmaq əvəzinə qeyri-müəyyənliyi bildirərək yaxın dövr öyrənməsi və sonrakı ümumi seçimlərlə nəticəyönümlü yol xəritəsi göstərin.",
       "en": "Identify the riskiest assumptions about the customer problem, willingness to pay, access, and feasibility. Propose a limited investment in ethical experiments with explicit evidence thresholds and a decision date. Show an outcome-oriented roadmap with near-term learning and broader later options, while stating uncertainty rather than inventing a precise annual commitment."
     },
-    "lessonId": "product-strategy",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -510,7 +510,7 @@
       "az": "Qiymətləndirməni fəaliyyət hədəfinə çevirən təşviqləri aradan qaldırın. Müştəri nəticələrini müzakirə edin, gözləmə müddəti, davam edən iş və keyfiyyət kimi axın göstəricilərini birlikdə yoxlayın; bunları komanda sıralaması deyil, öyrənmə üçün istifadə edin. Bir darboğaz seçin, kiçik dəyişiklik sınayın və nəticə ilə axın sübutunu zaman üzrə müqayisə edin.",
       "en": "Remove incentives that turn estimates into performance targets. Discuss customer outcomes and inspect flow measures such as lead time, work in progress, and quality together, using them for learning rather than team ranking. Select one bottleneck, try a small change, and compare outcome and flow evidence over time."
     },
-    "lessonId": "product-metrics",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -543,7 +543,7 @@
       "az": "Analitiklə birlikdə həvalə edilmiş işləri və qərar sərhədlərini izah edin. Onun təcrübəsini qəbul edin, kontekstə çıxış verin və təkliflərin Məhsul sahibinə necə çatdığını müəyyən edin. İşin həvaləsi Məhsul sahibinin dəyər və Məhsul iş siyahısının səmərəli idarəsi üzrə cavabdehliyini aradan qaldırmır; hər kiçik dəqiqləşdirməyə gizli təsdiq zənciri yaratmayın.",
       "en": "Explain the delegated activities and decision boundaries together with the analyst. Recognize the analyst’s expertise, provide access to context, and establish how proposals reach the Product Owner. Delegating work does not remove the Product Owner’s accountability for value and effective Product Backlog management; avoid creating a hidden approval chain for every small clarification."
     },
-    "lessonId": "scrum-accountabilities",
+    "lessonId": "pspo3-complexity",
     "practiceOnly": true,
     "rubric": [
       {
@@ -576,7 +576,7 @@
       "az": "Davranış dəyişikliyi nəticəsi çıxarmazdan əvvəl ölçməni yoxlayın. İtən və ya yenidən təsnif olunan hadisələri tapmaq üçün server hadisələrini, müştəri rəylərini, əvvəlki hadisə təriflərini və kiçik müşahidə nümunəsini müqayisə edin. Hər iki fərziyyəni sübut və təsirlə izah edin, lazım gəlsə ölçməni düzəldin, yalnız sonra məhsul dəyişikliyinin əsaslı olub-olmadığını qərarlaşdırın.",
       "en": "Validate the measurement before attributing a behavioral change. Compare server events, customer reports, historical event definitions, and a small observed sample to identify missing or reclassified events. Communicate both hypotheses with evidence and impact, repair the measurement if needed, and only then decide whether a product change is warranted."
     },
-    "lessonId": "product-metrics",
+    "lessonId": "pspo3-reflection",
     "practiceOnly": true,
     "rubric": [
       {
@@ -609,7 +609,7 @@
       "az": "İcmalı məhsul nəticəsini və dəyişən konteksti maraqlı tərəflərlə yoxlamaq üçün iş fürsəti kimi təqdim edin. Məhsul iş siyahısının növbəti uyğunlaşmalarını müzakirə etmək üçün istifadəyə yararlı İnkrementdən, müştəri sübutundan, bazar dəyişikliklərindən və açıq fərziyyələrdən istifadə edin. Maraqlı tərəfin təsdiqini İnkrementi Tamamlanmış edən mexanizm saymaq əvəzinə keyfiyyəti Tamamlanma tərifi ilə şəffaf edin.",
       "en": "Reframe the Review as a working opportunity to inspect the product outcome and changing context with stakeholders. Use the usable Increment, customer evidence, market changes, and unresolved assumptions to discuss next adaptations to the Product Backlog. Keep quality transparent through the Definition of Done rather than treating stakeholder approval as the mechanism that creates a Done Increment."
     },
-    "lessonId": "pspo1-events",
+    "lessonId": "pspo3-complexity",
     "practiceOnly": true,
     "rubric": [
       {
@@ -642,7 +642,7 @@
       "az": "Uyğun mütəxəssislərlə məcburi öhdəlikləri aydınlaşdırın, gözlənilən dəyəri, riski və qalan xərci yeniləyin. Artıq çəkilmiş xərclərin qərara hakim olmasına yol vermədən mümkün alternativləri məhsul baxışı, müştəri ehtiyacları və strateji məhdudiyyətlərlə müqayisə edin. Məqsəd qərarını şəffaf edin, sübutu izah edin, iş siyahısını və təsirlənən öhdəlikləri yeniləyin.",
       "en": "Clarify mandatory obligations with appropriate experts and update expected value, risk, and remaining cost. Compare feasible alternatives against the product vision, customer needs, and strategic constraints without letting sunk costs dominate. Make the goal decision transparent, explain the evidence, and update the backlog and affected commitments accordingly."
     },
-    "lessonId": "product-strategy",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -675,7 +675,7 @@
       "az": "Yalnız gəliri optimallaşdırmaq əvəzinə ədaləti, etimadı, hüquqi tələbləri və uzunmüddətli müştəri dəyərini qiymətləndirməyə daxil edin. Uyğun mütəxəssislər və təsirlənən istifadəçilərlə qeyri-bərabər təsiri araşdırın, şəffaf alternativləri nəzərdən keçirin və icra olunan qoruyucu hədlər qurun. Faydalı məlumat verə bilər deyə insanları qəbuledilməz zərərə məruz qoyan sınaq aparmayın.",
       "en": "Include fairness, trust, legal requirements, and long-term customer value in the assessment rather than optimizing revenue alone. Examine disparate effects with relevant experts and affected users, consider transparent alternatives, and establish enforceable guardrails. Do not run an experiment that exposes people to unacceptable harm simply because it might produce useful data."
     },
-    "lessonId": "product-ethics",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -708,7 +708,7 @@
       "az": "Tərtibatçıları günahlandırmadan məqsədlərə, axına və proqnozlaşdırmaya təsiri görünən edin. Həqiqi fövqəladə hallar üçün açıq yol daxil olmaqla rəhbərləri vahid Məhsul iş siyahısı üzrə şəffaf tələb qəbulu və qərar qaydasında razılaşdırın. Özünüidarəni və Məhsul sahibinin sıralama qərarlarını dəstəkləmək üçün Scrum Master və rəhbərliklə işləyin, yeni razılaşmaya əməl olunmasını yoxlayın.",
       "en": "Expose the impact on goals, flow, and predictability without blaming Developers. Align executives on transparent intake and decision-making around one Product Backlog, including an explicit path for genuine emergencies. Work with the Scrum Master and leadership to support self-management and the Product Owner’s ordering decisions, and inspect whether the new agreement is respected."
     },
-    "lessonId": "po-negotiation",
+    "lessonId": "pspo3-complexity",
     "practiceOnly": true,
     "rubric": [
       {
@@ -774,7 +774,7 @@
       "az": "Kəşfiyyat və çatdırılmanın eyni nəticəyə xidmət etməsi üçün ortaq Məhsul məqsədi və şəffaf Məhsul iş siyahısını qoruyun. Tərtibatçıları, mütəxəssisi və istifadəçiləri birlikdə öyrənməyə təşviq edin, qabaqcadan yığılan işi məhdudlaşdırın və müşahidələri tez geri qaytarın. İxtisaslaşmanı guya son tələblərlə məcburi mərhələ qapısı deyil, komandanın qabiliyyətinə töhfə kimi istifadə edin.",
       "en": "Keep a shared Product Goal and transparent Product Backlog so discovery and delivery serve the same outcome. Encourage Developers, the specialist, and users to learn together, limiting work ahead and feeding observations back quickly. Use specialization as a contribution to the team’s capability rather than a compulsory phase gate with supposedly final requirements."
     },
-    "lessonId": "product-backlog",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -807,7 +807,7 @@
       "az": "Hər iki tərəfdə iştirak, seçim, əməliyyat keyfiyyəti və dayanıqlı iqtisadiyyat arasındakı qarşılıqlı əlaqəni modelləşdirin. Təkcə haqq deyil, ümumi dəyər barədə fərziyyə yazın və müqavilə ilə ədalətə uyğun məhdud sınaq seçin. Uyğun müddətdə satıcı saxlanmasını, alıcı nəticələrini, bazar likvidliyini və marjanı izləyin, aydın geri qaytarma meyarları qurun.",
       "en": "Model the interdependence between participation, selection, transaction quality, and sustainable economics on both sides. State a hypothesis about total value, not fees alone, and choose a bounded test consistent with contracts and fairness. Monitor seller retention, buyer outcomes, liquidity, and margin over a suitable period, with clear rollback criteria."
     },
-    "lessonId": "product-strategy",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -840,7 +840,7 @@
       "az": "Məcburi nəzarətləri və çətinliyin real mənbəyini müəyyən etmək üçün təhlükəsizlik və risk mütəxəssislərini cəlb edin. Riskə əsaslanan yoxlamalar kimi daha təhlükəsiz alternativləri müqayisə edin, dələduzluq və giriş üzrə qoruyucu hədlər müəyyən edin və yalnız qəbuledilən risk daxilində sınayın. Konversiya artımını kifayət qədər dəyər sübutu saymaq əvəzinə seqmentlər üzrə xalis nəticələri qiymətləndirin.",
       "en": "Engage security and risk specialists to identify non-negotiable controls and the actual source of friction. Compare safer alternatives such as risk-based challenges, define fraud and access guardrails, and test only within acceptable exposure. Evaluate net outcomes across segments rather than treating a conversion gain as sufficient evidence of value."
     },
-    "lessonId": "product-ethics",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {
@@ -873,7 +873,7 @@
       "az": "Proqnoza ehtiyac duyan qərarı və ən kiçik dəyərli həcmi dəqiqləşdirin. İnterval və ya etimad səviyyəli proqnoz üçün uyğun tarixi axın məlumatından və açıq asılılıq fərziyyələrindən istifadə edin, sonra onu nəyin dəyişə biləcəyini izah edin. Həcm və ardıcıllıq seçimləri verin, sübut dəyişdikcə proqnozu yeniləyin və proqnozu müqavilə öhdəliyindən ayırın.",
       "en": "Clarify the decision that needs the forecast and the smallest valuable scope. Use relevant historical flow data and explicit dependency assumptions to show a range or confidence-based forecast, then explain what could move it. Offer scope and sequencing choices, update the forecast as evidence changes, and distinguish a forecast from a contractual commitment."
     },
-    "lessonId": "forecast-release",
+    "lessonId": "pspo3-complexity",
     "practiceOnly": true,
     "rubric": [
       {
@@ -939,7 +939,7 @@
       "az": "Ödənilməyən keyfiyyət meyarlarını görünən edin və natamam işi Tamamlanmış İnkrement kimi təqdim etməyin. Tamamlanma tərifini ödəmək üçün Tərtibatçılar və uyğun mütəxəssislərlə əməkdaşlıq edin, buraxılış riskini açıqlayın və məcburi keyfiyyəti azaltmaq əvəzinə həcmi və ya vaxtı razılaşdırın. Yoxlamaların niyə təxirə salındığını araşdırın və əlçatanlığın prosesə daxil olduğu iş axını qurun.",
       "en": "Make the unmet quality criteria visible and do not describe incomplete work as a Done Increment. Collaborate with Developers and relevant specialists to meet the Definition of Done, expose the release risk, and negotiate scope or timing rather than lowering mandatory quality. Inspect why checks were deferred and improve the workflow so accessibility is integrated."
     },
-    "lessonId": "pspo1-artifacts",
+    "lessonId": "pspo3-complexity",
     "practiceOnly": true,
     "rubric": [
       {
@@ -972,7 +972,7 @@
       "az": "Əldə edilmiş nəticəni, gözlənilməz təsirləri, qalan qarşılanmamış ehtiyacları və bazar dəyişikliklərini yoxlayın. Növbəti fürsətləri məhsul baxışı və mövcud imkanlarla müqayisə edin, sonra irəliləyişin ölçülən sübutu olan aydın növbəti Məhsul məqsədi seçin. Sadəcə yeni funksiya dəsti əlavə etmək əvəzinə yol xəritəsini və iş siyahısını məqsədə uyğunlaşdırın, kənara qoyulan ideyaları və fərziyyələri izah edin.",
       "en": "Inspect the achieved outcome, unintended effects, remaining unmet needs, and changes in the market. Compare the next opportunities against the product vision and available capacity, then choose a clear next Product Goal with measurable evidence of progress. Adapt the roadmap and backlog to that goal, explaining displaced ideas and assumptions rather than merely adding another feature batch."
     },
-    "lessonId": "product-goal",
+    "lessonId": "pspo3-written-case",
     "practiceOnly": true,
     "rubric": [
       {

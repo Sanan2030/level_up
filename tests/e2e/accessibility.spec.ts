@@ -2,13 +2,17 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
 const pages = [
-  { name: 'dashboard', path: '/en' },
+  { name: 'landing', path: '/en' },
+  { name: 'dashboard', path: '/en/dashboard' },
+  { name: 'sources', path: '/en/sources' },
+  { name: 'source-backed lesson', path: '/en/lessons/pspo2-kanban', diagram: true },
   { name: 'published lesson with diagram', path: '/en/lessons/stakeholder-mapping', diagram: true },
   { name: 'onboarding', path: '/en/onboarding' },
   { name: 'practice setup', path: '/en/practice' },
-  { name: 'dark dashboard', path: '/en', dark: true },
+  { name: 'dark landing', path: '/en', dark: true },
+  { name: 'dark dashboard', path: '/en/dashboard', dark: true },
   { name: 'dark lesson', path: '/en/lessons/stakeholder-mapping', diagram: true, dark: true },
-  { name: 'Azerbaijani dashboard', path: '/az' },
+  { name: 'Azerbaijani landing', path: '/az' },
 ] as const;
 
 for (const pageCase of pages) {

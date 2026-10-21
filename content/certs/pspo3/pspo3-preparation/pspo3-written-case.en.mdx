@@ -3,63 +3,69 @@ id: pspo3-written-case
 locale: en
 title: 'Reason through a product case'
 objectives:
-  - 'Write a clear response that connects context, options, decision and inspection.'
-  - 'Apply the topic to a customer self-service change; justify the decision and identify missing evidence.'
+  - 'Write a reasoned product response from context to inspection.'
+  - 'Make alternative costs and uncertainty explicit.'
 ---
 
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
+## Concept
 
-## Learning objectives
-
-- Write a clear response that connects context, options, decision and inspection.
-- Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+This is a written product-reasoning exercise, not an official grading rubric. A strong answer separates facts, assumptions and missing information. In EBM 2024, shipping a feature is not a customer outcome. Establish the audience and valuable outcome first; a merchant completing reconciliation may be more informative than feature count.
 
 ## Why it matters
 
-The planned lesson uses a concrete delivery decision to show when **Reason through a product case** helps a team. It will make assumptions and affected stakeholders explicit.
+Compare at least two plausible options and their costs. Chapter 7’s value, risk, size and dependencies help structure the comparison. Make a concrete recommendation: what now, what later, and why? The Product Owner retains ordering accountability, while Developers own sizing and technical planning. Describing collaboration need not avoid a decision.
 
-## Core theory: planned outline
+## Decision principles
 
-1. Define the essential terms in the topic.
-2. Write a clear response that connects context, options, decision and inspection.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+End with an inspection plan: baseline, expected outcome, observation window, guardrail and evidence that would change the decision. Do not invent missing numbers; explain how to gather them. This structure is our teaching aid. Length and terminology alone do not establish sound judgment.
 
-## Worked example: planned outline
+## Visual model
 
-Apply the topic to a customer self-service change; justify the decision and identify missing evidence. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+<Diagram
+  chart={
+    'flowchart LR\n  A["Goal"] --> B["Evidence and choice"]\n  B --> C["Small step"]\n  C --> D["Inspect and adapt"]\n  D --> B'
+  }
+/>
 
-## Diagram: planned outline
+This is a teaching summary, not a reproduction of a source figure.
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **Reason through a product case**. The diagram will include a text explanation.
+## Worked scenario
 
-## Interactive practice: planned outline
+A payments product ships all planned features while merchant retention falls. The team proposes a larger dashboard.
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+## Decision reasoning
 
-## Common mistakes and best practices
+Do not immediately expand the dashboard. Investigate needs with departing merchants, form a testable hypothesis such as reconciliation friction, and compare the impact of a smaller solution. Track retention alongside operational errors and update the decision from outcomes.
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+## Common pitfalls
 
-## Practice exercise and sample-solution plan
+Inventing facts; omitting alternatives; saying “I would discuss it” without a decision or inspection plan.
 
-**Exercise:** Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+## Application exercise
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+Respond in 150–250 words. Mark the fact, options, decision and inspection sentences. This length is a practice suggestion only.
 
-## Mini-quiz: planned outline
+## Explained solution
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+<details>
+<summary>Show explained solution</summary>
 
-## One-page summary plan
+One answer: retention decline is a fact; the cause remains an assumption. Compare a full dashboard with a smaller reconciliation improvement. First choose limited research to validate the problem. Then inspect retention and errors for comparable users; change the approach if evidence fails to support it.
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+</details>
 
-## Further reading
+## Check understanding and remember
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+Fact → alternatives → reasoned decision → inspection. Make unknowns explicit.
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+<ConceptStepper />
+
+## Sources and scope
+
+EBM 2024: Understanding What is Valuable and Experiment Loop, pp. 5–7. Book: chapter 7. Scrum Guide: Product Owner.
+
+- [Evidence-Based Management Guide — Scrum.org (2024)](https://www.scrum.org/resources/evidence-based-management-guide)
+- [The Scrum Guide — Ken Schwaber & Jeff Sutherland (November 2020)](https://scrumguides.org/scrum-guide.html)
+- [The Professional Product Owner — Don McGreal & Ralph Jocham (2018), ISBN 9780134686479](https://www.informit.com/store/professional-product-owner-leveraging-scrum-as-a-competitive-9780134686479)
+
+Explanations and examples are original teaching material. Official test questions are not reproduced. Exam formats are verified separately; these topic groups are not an official blueprint.

@@ -46,6 +46,7 @@ const modules: LearningModule[] = [
   },
 ];
 const lessons: Lesson[] = ['a', 'b', 'c', 'd'].map((id, i) => ({
+  sourceIds: [],
   id,
   trackId: i === 3 ? 'po' : 'ba',
   level: i === 0 ? 'junior' : i === 1 ? 'mid' : 'lead',

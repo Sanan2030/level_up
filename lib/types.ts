@@ -29,6 +29,7 @@ export const moduleSchema = z.object({
 });
 export type LearningModule = z.infer<typeof moduleSchema>;
 export const lessonSchema = z.object({
+  sourceIds: z.array(z.string()).default([]),
   id: z.string(),
   trackId: trackIdSchema,
   level: levelSchema,
@@ -57,6 +58,7 @@ export const competencySchema = z.object({
 });
 export type Competency = z.infer<typeof competencySchema>;
 export const questionSchema = z.object({
+  sourceIds: z.array(z.string()).default([]),
   id: z.string(),
   trackId: trackIdSchema,
   type: z.enum(['single', 'multiple', 'ordering', 'matching', 'written']),

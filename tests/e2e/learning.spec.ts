@@ -5,25 +5,29 @@ import lessonData from '../../data/lessons.json' with { type: 'json' };
 const storageKey = 'level-up.progress.v1';
 
 async function openDashboard(page: Page) {
-  await page.goto('/en');
+  await page.goto('/en/dashboard');
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    'Welcome, future changemaker',
+    'Hello. Where shall we continue today?',
   );
   await expect(page.locator('.page-skeleton')).toHaveCount(0);
 }
 
-test('defaults to Azerbaijani and renders the English dashboard', async ({ page }) => {
+test('defaults to Azerbaijani and opens the English dashboard from the new landing', async ({
+  page,
+}) => {
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('/');
   await expect(page).toHaveURL(/\/az\/?$/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'az');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Xoş gəldin');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Səviyyəni seç');
   await page.getByRole('link', { name: 'Switch to English' }).click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    'Welcome, future changemaker',
+    'Choose your level. Set your goal.',
   );
+  await page.getByRole('link', { name: 'My dashboard', exact: true }).click();
+  await expect(page).toHaveURL(/\/en\/dashboard$/);
   await expect(page.getByRole('region', { name: 'Learning at a glance' })).toBeVisible();
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({ path: '/tmp/level-up-desktop.png', fullPage: true });
@@ -299,14 +303,14 @@ test('keeps the mobile layout within the viewport and supports keyboard navigati
   await page.screenshot({ path: '/tmp/level-up-mobile.png', fullPage: true });
   await page.getByRole('button', { name: 'Open navigation', exact: true }).focus();
   await page.keyboard.press('Enter');
-  await expect(page.locator('.sidebar')).toHaveClass(/sidebar-open/);
+  await expect(page.locator('.merhele-nav')).toHaveClass(/is-open/);
   const roadmap = page
     .getByRole('navigation', { name: 'Main navigation' })
-    .getByRole('link', { name: 'My learning path' });
+    .getByRole('link', { name: 'My roadmap' });
   await roadmap.focus();
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(/\/en\/roadmap$/);
-  await expect(page.locator('.sidebar')).not.toHaveClass(/sidebar-open/);
+  await expect(page.locator('.merhele-nav')).not.toHaveClass(/is-open/);
   await page.getByRole('button', { name: 'Toggle color theme' }).click();
   await expect(page.locator('html')).toHaveClass(/dark/);
   await page.reload();
