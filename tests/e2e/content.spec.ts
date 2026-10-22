@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import lessonData from '../../data/lessons.json' with { type: 'json' };
 
-for (const locale of ['az', 'en'] as const) {
+for (const locale of ['en'] as const) {
   test(`every complete ${locale} lesson renders its diagram and original content`, async ({
     page,
   }) => {
@@ -17,7 +17,7 @@ for (const locale of ['az', 'en'] as const) {
       await expect(page.locator('.prose h2')).toHaveCount(11);
       await expect(
         page.getByRole('button', {
-          name: locale === 'az' ? 'Dərsi tamamladım' : 'Mark as completed',
+          name: 'Mark as completed',
         }),
       ).toBeEnabled();
     }

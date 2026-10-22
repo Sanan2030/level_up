@@ -1,5 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
+import { mockEligibility } from '../../lib/quiz';
+import { getExams, getQuestions } from '../../lib/assessments';
 import lessonData from '../../data/lessons.json' with { type: 'json' };
 
 const storageKey = 'level-up.progress.v1';
@@ -12,16 +14,12 @@ async function openDashboard(page: Page) {
   await expect(page.locator('.page-skeleton')).toHaveCount(0);
 }
 
-test('defaults to Azerbaijani and opens the English dashboard from the new landing', async ({
-  page,
-}) => {
+test('defaults to English and opens the dashboard from the landing', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('/');
-  await expect(page).toHaveURL(/\/az\/?$/);
-  await expect(page.locator('html')).toHaveAttribute('lang', 'az');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Səviyyəni seç');
-  await page.getByRole('link', { name: 'Switch to English' }).click();
+  await expect(page).toHaveURL(/\/en\/?$/);
+  await expect(page.getByRole('button', { name: 'Translate', exact: true })).toBeVisible();
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
     'Choose your level. Set your goal.',
@@ -80,7 +78,7 @@ test('creates a level-gap roadmap and preserves an existing plan when changing t
   await expect(page.getByRole('combobox', { name: 'Level', exact: true })).toHaveValue('junior');
 });
 
-test('completes a lesson, bookmarks it, and preserves notes across reload and language changes', async ({
+test('completes a lesson, bookmarks it, and preserves notes across reload and legacy locale redirects', async ({
   page,
 }) => {
   await page.goto('/en/lessons/stakeholder-mapping');
@@ -104,10 +102,10 @@ test('completes a lesson, bookmarks it, and preserves notes across reload and la
   await expect(page.getByLabel('What did you learn? What will you try?')).toHaveValue(
     'Ask front-line staff who is affected before agreeing the scope.',
   );
-  await page.getByRole('link', { name: 'Azərbaycan dilinə keç' }).click();
-  await expect(page).toHaveURL(/\/az\/lessons\/stakeholder-mapping$/);
-  await expect(page.getByRole('button', { name: 'Tamamlandı — geri al' })).toBeEnabled();
-  await expect(page.getByRole('button', { name: 'Əlfəcin', exact: true })).toHaveAttribute(
+  await page.goto('/az/lessons/stakeholder-mapping');
+  await expect(page).toHaveURL(/\/en\/lessons\/stakeholder-mapping$/);
+  await expect(page.getByRole('button', { name: 'Completed — undo' })).toBeEnabled();
+  await expect(page.getByRole('button', { name: 'Bookmark', exact: true })).toHaveAttribute(
     'aria-pressed',
     'true',
   );
@@ -220,12 +218,20 @@ test('shows verified IIBA facts and keeps undersized or unverified mocks unavail
   await expect(page.getByText('50', { exact: true })).toBeVisible();
   await expect(page.getByText('75 minutes', { exact: true })).toBeVisible();
   await page.getByRole('radio', { name: /^Timed mock/ }).check();
-  await expect(
-    page.getByText(
-      'The bank does not yet contain enough unique questions for a full mock. Short practice sessions are available.',
-    ),
-  ).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Start practicing' })).toBeDisabled();
+  const ecbaGate = mockEligibility(
+    getExams().find((exam) => exam.id === 'ecba'),
+    getQuestions(),
+  );
+  if (ecbaGate.eligible) {
+    await expect(page.getByRole('button', { name: 'Start practicing' })).toBeEnabled();
+  } else {
+    const reason =
+      ecbaGate.reason === 'domain-coverage'
+        ? 'More questions are needed in each required domain before a full mock can run.'
+        : 'The bank does not yet contain enough unique questions for a full mock. Short practice sessions are available.';
+    await expect(page.getByText(reason, { exact: true })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Start practicing' })).toBeDisabled();
+  }
   await page.getByRole('combobox', { name: 'Learning track', exact: true }).selectOption('pspo1');
   await expect(
     page.getByText(

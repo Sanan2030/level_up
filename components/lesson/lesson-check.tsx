@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { gradeAnswer } from '@/lib/quiz';
+import { gradeAnswer, lessonOptionOrder } from '@/lib/quiz';
 import { SourceLinks } from '@/components/source-links';
 import type { Locale, QuizQuestion } from '@/lib/types';
 export function LessonCheck({ questions, locale }: { questions: QuizQuestion[]; locale: Locale }) {
@@ -15,7 +15,7 @@ export function LessonCheck({ questions, locale }: { questions: QuizQuestion[]; 
             <legend>
               {index + 1}. {q.text[locale]}
             </legend>
-            {q.options.map((o) => (
+            {lessonOptionOrder(q).map((o) => (
               <label key={o.id} className="knowledge-option">
                 <input
                   type={q.type === 'multiple' ? 'checkbox' : 'radio'}

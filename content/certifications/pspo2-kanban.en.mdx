@@ -19,6 +19,10 @@ WIP counts started but unfinished items. Cycle Time is elapsed time from start t
 
 An SLE combines elapsed time and probability, for example 85% of items finish within eight days. It is a forecast based on historical Cycle Time, not a guarantee for every item. Without history, start with a guess and adapt. Little’s Law relates average Cycle Time to average WIP divided by average Throughput; consistent boundaries and stable long-run flow assumptions matter. It is not an individual-item deadline calculator.
 
+### Turn flow information into a decision
+
+A queue of items in one state may be a signal to stop starting, not start more. Inspect what prevents completion: scarce expertise, external approval or large batches may be involved. The Kanban Guide suggests considering lower WIP first; writing a limit alone does not replace active management. Comparing age with SLE can prompt investigation without assuming every aging item has the same cause. Inspecting throughput alongside quality helps avoid hiding rework while optimizing speed.
+
 ## Visual model
 
 <Diagram
@@ -68,3 +72,5 @@ Kanban Guide for Scrum Teams 2021: pp. 3–8; metrics p. 4, SLE p. 6.
 - [The Scrum Guide — Ken Schwaber & Jeff Sutherland (November 2020)](https://scrumguides.org/scrum-guide.html)
 
 Explanations and examples are original teaching material. Official test questions are not reproduced. Exam formats are verified separately; these topic groups are not an official blueprint.
+
+Additional scope reference: [Professional Scrum Competencies](https://www.scrum.org/professional-scrum-competencies). The user-supplied text was read; the competency taxonomy does not establish official exam weights.

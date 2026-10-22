@@ -6,6 +6,7 @@ import pspoQuestions from '@/data/questions/pspo1.json';
 import writtenQuestions from '@/data/questions/pspo3.json';
 import {
   createQuizSession,
+  lessonOptionOrder,
   domainQuotas,
   gradeAnswer,
   mockEligibility,
@@ -156,7 +157,12 @@ describe('mock safety and randomization', () => {
 describe('authored question banks and storage integration', () => {
   it('scores real selected-response banks by their stable option IDs', () => {
     const questions = [...ecbaQuestions, ...pspoQuestions].map((q) => questionSchema.parse(q));
-    const answers = Object.fromEntries(questions.map((q) => [q.id, [...q.correct].reverse()]));
+    const answers = Object.fromEntries(
+      questions.map((q) => [
+        q.id,
+        q.type === 'single' || q.type === 'multiple' ? [...q.correct].reverse() : [...q.correct],
+      ]),
+    );
     const result = scoreQuiz(questions, answers);
     expect(questions.some((q) => q.type === 'multiple')).toBe(true);
     expect(questions.length).toBeGreaterThanOrEqual(60);
@@ -221,5 +227,31 @@ describe('persistent clocks', () => {
     const resumed = resumeSession(paused, 900_000);
     expect(remainingTime(resumed, 905_000)).toBe(45);
     expect(remainingTime(createQuizSession([question], 'practice'), 999_999)).toBeNull();
+  });
+});
+
+describe('learning presentation and exam format boundaries', () => {
+  it('keeps lesson options deterministic without leaving every first answer in the same position', () => {
+    const original = JSON.stringify(question.options);
+    const positions = new Set<number>();
+    for (let index = 0; index < 20; index++) {
+      const item = { ...question, id: `source-check-${index}` };
+      const first = lessonOptionOrder(item);
+      expect(first).toEqual(lessonOptionOrder(item));
+      expect(new Set(first.map((option) => option.id))).toEqual(
+        new Set(item.options.map((option) => option.id)),
+      );
+      positions.add(first.findIndex((option) => option.id === item.correct[0]));
+    }
+    expect(positions.size).toBeGreaterThan(1);
+    expect(JSON.stringify(question.options)).toBe(original);
+  });
+  it('does not count matching or ordering exercises toward a selected-response mock', () => {
+    const mixed = [
+      { ...question, id: 'only-single', domain: 'a' },
+      { ...question, id: 'ordering', domain: 'a', type: 'ordering' as const },
+      { ...question, id: 'matching', domain: 'b', type: 'matching' as const },
+    ];
+    expect(mockEligibility(exam, mixed).reason).toBe('insufficient-bank');
   });
 });

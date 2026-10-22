@@ -14,6 +14,18 @@ export function shuffle<T>(items: readonly T[], random: () => number = Math.rand
   return result;
 }
 
+/** Stable per-question presentation prevents answer-position shortcuts without hydration differences. */
+export function lessonOptionOrder(question: QuizQuestion): QuizQuestion['options'] {
+  let state = 2166136261;
+  for (const character of question.id) state = Math.imul(state ^ character.charCodeAt(0), 16777619);
+  return shuffle(question.options, () => {
+    state = (state + 0x6d2b79f5) | 0;
+    let value = Math.imul(state ^ (state >>> 15), 1 | state);
+    value ^= value + Math.imul(value ^ (value >>> 7), 61 | value);
+    return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
+  });
+}
+
 /** Written work is deliberately ungraded; a rubric supports human reflection. */
 export function gradeAnswer(question: QuizQuestion, answer: readonly string[]): boolean | null {
   if (question.type === 'written') return null;
@@ -78,7 +90,9 @@ export function mockEligibility(
     return { eligible: false, reason: 'missing-rules' };
   const bank = [
     ...new Map(
-      questions.filter((q) => q.trackId === exam.id && q.type !== 'written').map((q) => [q.id, q]),
+      questions
+        .filter((q) => q.trackId === exam.id && (q.type === 'single' || q.type === 'multiple'))
+        .map((q) => [q.id, q]),
     ).values(),
   ];
   if (bank.length < exam.questionCount) return { eligible: false, reason: 'insufficient-bank' };
@@ -133,7 +147,9 @@ export function selectMockQuestions(
   if (!eligibility.eligible) throw new Error(`Mock unavailable: ${eligibility.reason}`);
   const bank = [
     ...new Map(
-      questions.filter((q) => q.trackId === exam.id && q.type !== 'written').map((q) => [q.id, q]),
+      questions
+        .filter((q) => q.trackId === exam.id && (q.type === 'single' || q.type === 'multiple'))
+        .map((q) => [q.id, q]),
     ).values(),
   ];
   const quotas = domainQuotas(exam);

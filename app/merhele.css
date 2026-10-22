@@ -1789,3 +1789,230 @@ h3 {
 .roadmap-columns .roadmap-module {
   display: block;
 }
+
+.practice-filters {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+}
+.practice-filters legend {
+  padding: 0 8px;
+  font-weight: 650;
+}
+.practice-filters label {
+  display: grid;
+  gap: 8px;
+}
+.practice-filters .practice-unseen {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.practice-unseen input {
+  accent-color: #0f766e;
+}
+.study-group {
+  scroll-margin-top: 20px;
+}
+.study-focus {
+  border-top: 1px solid var(--line);
+  padding: 20px 0;
+}
+.study-focus h3 {
+  margin-bottom: 8px;
+}
+.study-focus .text-link {
+  margin-right: 16px;
+}
+.study-group-header {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+}
+.study-group-header > span {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.study-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.merhele-utilities .translate-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  padding: 9px 12px;
+  font-size: 12px;
+}
+.translate-dialog {
+  position: fixed;
+  inset: 0;
+  width: min(760px, calc(100vw - 32px));
+  max-height: calc(100dvh - 40px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 30px 100px #051a1540;
+  overflow: auto;
+}
+.translate-dialog::backdrop {
+  background: #071c18a6;
+  backdrop-filter: blur(3px);
+}
+.translate-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 28px 16px;
+}
+.translate-dialog-header h2 {
+  font-size: 28px;
+  margin: 0;
+}
+.translate-dialog-header .icon-button {
+  flex-shrink: 0;
+}
+.translate-dialog > #translate-description {
+  padding: 0 28px;
+}
+.translate-search {
+  padding: 20px 28px;
+  display: grid;
+  gap: 8px;
+}
+.translate-search > label {
+  font-weight: 650;
+}
+.translate-search-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+.translate-search-row .input {
+  min-width: 0;
+  flex: 1;
+}
+.translate-search-row button {
+  white-space: nowrap;
+}
+.translate-result {
+  margin: 0 28px 24px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+  border-radius: 18px;
+}
+.translate-result h3 {
+  margin: 0;
+  font-size: 25px;
+}
+.translate-language-block {
+  margin-top: 18px;
+}
+.translate-language-block h4,
+.translate-examples h4 {
+  font-family: 'Inter Variable', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+.translate-language-block p {
+  font-size: 15px;
+  margin: 0;
+}
+.translate-examples {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.translate-examples p {
+  margin: 5px 0;
+}
+.translate-suggestions {
+  padding: 0 28px 24px;
+}
+.translate-suggestions h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.translate-suggestions .button {
+  font-size: 12px;
+  padding: 7px 11px;
+}
+.translate-external-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 0 28px 24px;
+}
+.translate-dialog > .notice,
+.translate-status {
+  margin: 0 28px 20px;
+}
+.translate-spinner {
+  animation: translate-spin 1s linear infinite;
+}
+@keyframes translate-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .translate-spinner {
+    animation: none;
+  }
+}
+@media (max-width: 650px) {
+  .merhele-utilities {
+    gap: 6px;
+  }
+  .merhele-utilities .translate-trigger {
+    font-size: 11px;
+    padding: 8px;
+    gap: 5px;
+  }
+  .translate-dialog {
+    width: calc(100vw - 20px);
+    max-height: calc(100dvh - 20px);
+    border-radius: 20px;
+  }
+  .translate-dialog-header {
+    padding: 20px 18px 12px;
+    gap: 8px;
+  }
+  .translate-dialog-header h2 {
+    font-size: 23px;
+  }
+  .translate-dialog > #translate-description,
+  .translate-search,
+  .translate-suggestions {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .translate-result {
+    margin-left: 18px;
+    margin-right: 18px;
+    padding: 18px;
+  }
+  .translate-search-row {
+    flex-wrap: wrap;
+  }
+  .translate-search-row .input {
+    flex-basis: 100%;
+  }
+  .translate-search-row button {
+    width: 100%;
+  }
+  .translate-external-links {
+    padding: 0 18px 20px;
+  }
+}

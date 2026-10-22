@@ -3,63 +3,77 @@ id: ecba-knowledge-areas
 locale: en
 title: 'A connected view of analysis work'
 objectives:
-  - 'Explain how analysis activities inform each other across a small change.'
-  - 'Apply the topic to a customer self-service change; justify the decision and identify missing evidence.'
+  - 'Match the six knowledge areas to scenario decisions.'
+  - 'Distinguish knowledge areas from a mandatory lifecycle sequence.'
 ---
 
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
+## Core concept
 
-## Learning objectives
-
-- Explain how analysis activities inform each other across a small change.
-- Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+In BABOK v3, a knowledge area groups related tasks. It does not instruct people to perform those tasks only once or in a particular month. Planning, elicitation, requirements work and value assessment may repeatedly inform each other during one change. Identify a task by the purpose of the present decision rather than the name of a document or department.
 
 ## Why it matters
 
-The planned lesson uses a concrete delivery decision to show when **A connected view of analysis work** helps a team. It will make assumptions and affected stakeholders explicit.
+A team that stops interviews because the “analysis phase” is finished may miss a newly discovered need. Another team may turn every comment into a requirement without clarifying decision authority. A connected view exposes omitted work and unnecessary duplication. A finding during user testing can require additional elicitation, a requirement change and reconsideration of expected value. Finishing one deliverable does not make all related questions permanently settled.
 
-## Core theory: planned outline
+## Theory and distinctions
 
-1. Define the essential terms in the topic.
-2. Explain how analysis activities inform each other across a small change.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+**Planning and Monitoring** organizes the analysis approach, engagement, governance, information and improvement of analysis work. **Elicitation and Collaboration** obtains information, confirms it, communicates it and maintains shared understanding. **Requirements Life Cycle Management** manages relationships, maintenance, priorities and changes to requirements and designs from inception to retirement.
 
-## Worked example: planned outline
+**Strategy Analysis** explores the need, current and future states, risk and the approach to change. **Requirements Analysis and Design Definition** models information, checks quality and alignment with value, and compares design options and potential value. **Solution Evaluation** assesses an actual solution’s performance and constraints on value. The solution need not be a final rollout: an operating pilot or prototype can also be evaluated.
 
-Apply the topic to a customer self-service change; justify the decision and identify missing evidence. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+These are complementary views. A revised change strategy may alter planning; confirmed information can reveal a risk; operational measures can expose a new need. A methodology changes sequencing and formality, but does not eliminate the need to understand value or information quality. Select the task that addresses the present information gap.
 
-## Diagram: planned outline
+A useful distinction within analysis/design is verification versus validation: verification checks whether a requirement representation is sufficiently clear and usable; validation checks alignment with the need and expected value. A well-written requirement can still describe the wrong capability. Approval is a separate authorized decision.
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **A connected view of analysis work**. The diagram will include a text explanation.
+## Worked example
 
-## Interactive practice: planned outline
+A municipality introduces an online request service. The analyst agrees decision authority and information storage, observes current work, and investigates why citizens enter inaccurate addresses. The team defines a desired service outcome and compares a simpler form with assisted-service options.
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+During a pilot, submissions increase but address errors do not fall. The initiative need not be described as “returning to an earlier phase.” Analysis interprets measures, investigates the actual limitation, elicits more information and assesses related requirement changes. Decisions follow the agreed governance approach. Several knowledge areas contribute to the same problem without becoming interchangeable.
 
-## Common mistakes and best practices
+## Visual model
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+<Diagram
+  chart={
+    'flowchart LR\n P["Plan and coordinate"] --> E["Elicit and confirm"]\n E --> A["Analyze requirements and options"]\n S["Analyze strategy"] --> A\n A --> L["Manage relationships and changes"]\n L --> V["Evaluate actual solution"]\n V --> E\n V --> S\n V --> P'
+  }
+/>
 
-## Practice exercise and sample-solution plan
+Arrows show how findings can inform other analysis work. This is an original teaching model, not a reproduction of a BABOK process diagram or a required sequence.
 
-**Exercise:** Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+## Decision practice
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+For “the pilot did not reduce waiting,” ask whether the measure is credible, whether a limitation lies within the solution, or whether the enterprise uses it differently from expected. Solution Evaluation directs that inquiry. If a new requirement emerges, use lifecycle management to assess its effects. Obtaining missing evidence is elicitation. These are distinct activities contributing to one decision.
 
-## Mini-quiz: planned outline
+## Common mistakes and better practice
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+- Avoid treating the areas as six mandatory phases.
+- Separate collecting elicitation results from confirming their accuracy.
+- Do not treat a passed technical test as proof of customer value.
+- Do not discard useful requirement information after release.
+- Avoid creating a new document for every question; identify the information and its consumer.
 
-## One-page summary plan
+## Application exercise and explained answer
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+**Exercise:** Match four questions: “Who may approve?”, “Were interview findings recorded accurately?”, “Which tests are affected by this change?”, and “Why is the operating solution not delivering benefit?”
 
-## Further reading
+**Explained answer:** These concern governance within planning, confirmation of elicitation results, lifecycle impact analysis, and solution evaluation. The impact analysis may need requirement relationships and implementation expertise. Selecting the best-fitting knowledge area does not forbid using information from others. Explain the immediate decision and the evidence it requires instead of merely memorizing a label.
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+## Mini-quiz
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+State the missing activity’s purpose in one sentence, then choose the area. Several areas may be relevant, but a question about one task calls for the most direct fit.
+
+<LessonCheck />
+
+## Cheat sheet
+
+Planning organizes work; elicitation obtains information and checks understanding; lifecycle work manages relationships and changes; strategy frames need and the change approach; analysis/design refines requirements and options; evaluation examines actual value.
+
+## Sources and scope
+
+BABOK Guide v3, 2015: knowledge-area introductions, pp. 21–22, 53–54, 75–76, 99–100, 133–134, 163–164; §4.3, pp. 65–66; §5.4, pp. 91–93. This grouping is the book’s professional framework; verify the current ECBA blueprint separately. Verification/validation distinction: §§7.2–7.3, pp. 141–146.
+
+- [IIBA — BABOK Guide and business analysis resources](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/)
+- [IIBA — certification information](https://www.iiba.org/business-analysis-certifications/)
+
+Explanations and examples are original teaching material. The uploaded member PDF is not distributed on this site. Practice questions are independently authored and are not official exam questions.

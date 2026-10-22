@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { competencies, glossary, lessons, modules } from '../lib/catalog';
 import { getExams, getQuestions } from '../lib/assessments';
 import { contentRoot, frontmatterSchema, walkFiles, parseMdxSource } from '../lib/content';
+import { scrumCompetencies } from '../lib/study-guide';
 import { sources } from '../lib/sources';
 import { tracks } from '../lib/tracks';
 
@@ -22,6 +23,16 @@ async function validate() {
   unique(competencies, 'Competencies');
   unique(glossary, 'Glossary');
   const lessonIds = new Set(lessons.map((l) => l.id));
+  check(
+    scrumCompetencies.length === 5,
+    'Professional Scrum framework requires five competency groups',
+  );
+  const focusAreas = scrumCompetencies.flatMap((group) => group.areas);
+  unique(focusAreas, 'Scrum focus areas');
+  check(focusAreas.length === 28, 'Professional Scrum framework requires 28 focus areas');
+  for (const area of focusAreas)
+    for (const id of area.lessonIds)
+      check(lessonIds.has(id), `${area.id}: unknown study guide lesson ${id}`);
   const moduleIds = new Set(modules.map((m) => m.id));
   const fileKeys = new Set<string>();
   for (const lesson of lessons) {
@@ -80,7 +91,7 @@ async function validate() {
         blockDangerousJS: true,
         mdxOptions: { remarkPlugins: [remarkGfm] },
       });
-      if (lesson?.status === 'published') {
+      if (lesson?.status === 'published' && meta.locale === 'en') {
         check(
           (parsed.content.match(/^## /gm)?.length ?? 0) >= 10,
           `${key}: complete lesson needs template sections`,
@@ -93,7 +104,7 @@ async function validate() {
     }
   }
   for (const lesson of lessons)
-    for (const locale of ['az', 'en'])
+    for (const locale of ['en'])
       check(fileKeys.has(`${lesson.id}.${locale}`), `Missing translation ${lesson.id}.${locale}`);
   for (const term of glossary)
     check(lessonIds.has(term.relatedLessonId), `${term.id}: glossary lesson missing`);
@@ -173,7 +184,7 @@ async function validate() {
   }
   if (errors.length) throw new Error(errors.join('\n'));
   console.log(
-    `Validated ${lessons.length} lessons (${lessons.filter((l) => l.status === 'published').length} complete), ${files.length} MDX translations, ${modules.length} modules, ${competencies.length} competency matrices, ${glossary.length} terms, ${questions.length} original questions, ${exams.length} exam configs.`,
+    `Validated ${lessons.length} lessons (${lessons.filter((l) => l.status === 'published').length} complete), ${files.length} MDX source files, ${modules.length} modules, ${competencies.length} competency matrices, ${glossary.length} terms, ${questions.length} original questions, ${exams.length} exam configs.`,
   );
 }
 validate().catch((error) => {

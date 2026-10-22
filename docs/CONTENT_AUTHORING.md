@@ -15,7 +15,7 @@ content/ba/junior/requirements/acceptance-criteria.en.mdx
 
 The other roots are `content/po/` and `content/certs/`. For certification content, use the certification ID for the level-or-certification directory, for example `content/certs/pspo1/scrum/`. Track IDs are `ba`, `po`, `ecba`, `ccba`, `cbap`, `pspo1`, `pspo2`, and `pspo3`. Career level IDs are `zero`, `junior`, `mid`, and `lead`; `lead` is displayed as Lead/Senior where appropriate.
 
-The filename must be `<id>.<locale>.mdx`. Each language has its own body and objectives, while both files refer to the same metadata ID. The loader can label an English fallback if an Azerbaijani file is unavailable; publish both translations to deliver a complete bilingual lesson.
+The filename must be `<id>.<locale>.mdx`. Each language has its own body and objectives, while both files refer to the same metadata ID. The loader can label an English fallback if an Azerbaijani file is unavailable; publish the complete English lesson. AZ source files may remain as editorial archives; the public site is English only.
 
 ## Add a lesson
 
@@ -43,7 +43,7 @@ The filename must be `<id>.<locale>.mdx`. Each language has its own body and obj
    ```
 
 2. Add the ID to the appropriate module's `lessonIds` in `data/modules.json`. A module identifies its track, level, localized title and description, estimated minutes, and prerequisite **module IDs**. Lesson prerequisites use **lesson IDs**. Keep relationships valid and acyclic; do not use titles as references. Recalculate module estimates when its lesson list changes.
-3. Add both MDX files. Start each with YAML frontmatter:
+3. Add the English MDX file. An AZ editorial archive is optional. Start each with YAML frontmatter:
 
    ```mdx
    ---
@@ -61,9 +61,9 @@ The filename must be `<id>.<locale>.mdx`. Each language has its own body and obj
    write examples a team can verify.
    ```
 
-4. Write the content using the complete lesson structure below. If the file is an outline, say so explicitly and include a useful learning sequence and practice plan. Keep `status: "planned"` until the complete lesson is ready in both languages. `published` means a complete lesson, not simply a file that exists.
+4. Write the content using the complete lesson structure below. If the file is an outline, say so explicitly and include a useful learning sequence and practice plan. Keep `status: "planned"` until the complete lesson is ready in English. `published` means a complete lesson, not simply a file that exists.
 5. Add relevant glossary entries or questions if needed. Update related references using the stable lesson ID.
-6. Run content validation, formatting, tests, and a production build. Review the rendered lesson in both languages and at a narrow viewport. Submit a pull request; CI must pass before merge.
+6. Run content validation, formatting, tests, and a production build. Review the rendered English lesson and its terminology support at a narrow viewport. Submit a pull request; CI must pass before merge.
 
 The canonical field definitions are Zod schemas in `lib/types.ts`. The frontmatter schema is in `lib/content.ts`. Validation checks metadata and content relationships; a valid schema does not replace educational or factual review. Do not silently weaken validation to make a content change pass.
 
@@ -99,7 +99,7 @@ The lesson renderer supplies `Diagram` and `ConceptStepper`; lesson authors do n
 <ConceptStepper locale="en" />
 ```
 
-Use `locale="az"` for Azerbaijani. `ConceptStepper` currently explains understanding a goal, choosing a small step, testing, and adapting; use it where that cycle fits the topic. Do not label it as a different simulator or imply that it models every framework.
+The public renderer uses English; Azerbaijani meanings and explanations belong in the Translate dictionary. `ConceptStepper` currently explains understanding a goal, choosing a small step, testing, and adapting; use it where that cycle fits the topic. Do not label it as a different simulator or imply that it models every framework.
 
 Keep chart labels short and provide an adjacent text explanation of the relationship, so the lesson remains useful if a diagram cannot render or is not visually accessible. Mermaid uses strict rendering security. Motion must respect the learner's reduced-motion preference. Use standard Markdown headings, lists, links, tables, and fenced code blocks. Give images meaningful alt text; avoid conveying an answer only through color.
 
@@ -125,7 +125,7 @@ Preserve option IDs when translating or shuffling; array positions are not answe
 
 ## Exam facts and verification
 
-`data/exams/` contains exam settings, official source URLs, `verificationStatus`, and `verifiedAt`. Check the awarding organization's current pages for the exact certification, format, duration, question count, thresholds, and syllabus before changing these fields. Use official IIBA, Scrum.org, and Scrum Guide sources rather than third-party recollections. Record the verification date and any important qualifications in the localized notes.
+`data/exams/` contains exam settings, official source URLs, `verificationStatus`, and `verifiedAt`. Check the awarding organization's current pages for the exact certification, format, duration, question count, thresholds, and syllabus before changing these fields. Use official IIBA, Scrum.org, and Scrum Guide sources. Candidate experiences may inform study advice only when actually read and clearly labeled as anecdotes; they do not establish exam rules. Record the verification date and any important qualifications in the localized notes.
 
 If a fact cannot be verified, keep it `null` where the schema allows, set `verificationStatus: "needs-verification"`, and explain `TODO: VERIFY` in the notes. Do not turn an undisclosed pass score into an invented number. Distinguish a question bank's editorial domain organization from an officially verified exam blueprint.
 
@@ -142,4 +142,12 @@ npm test
 npm run build
 ```
 
-Before merging, verify that both translations render, planned content is clearly labeled, diagrams have a readable text explanation, referenced lessons exist, and the lesson's estimate is reasonable. Review source accuracy and teaching quality separately from automated checks.
+Before merging, verify that the English lesson renders, planned content is clearly labeled, diagrams have a readable text explanation, referenced lessons exist, and the lesson's estimate is reasonable. Review source accuracy and teaching quality separately from automated checks.
+
+## Terminology helper
+
+`data/dictionary.json` contains curated terms and multiword phrases with an English definition, Azerbaijani meaning, Azerbaijani explanation, bilingual example, context and aliases. Keep technical distinctions explicit (for example verification versus validation, or product-user onboarding versus employee induction). Extend this dictionary for important new lesson vocabulary. Unknown-word services are a fallback and their output must be labeled as machine translated.
+
+## Source locators
+
+Add only genuinely read sources to `data/sources.json`. Use stable `sourceIds` on lesson/question metadata and precise chapter/section locators in the lesson text and explanations. A member PDF may be used as supplied source material without being distributed in the repository or product. Unavailable links must retain their blocked/challenge status.

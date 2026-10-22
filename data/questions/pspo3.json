@@ -988,5 +988,385 @@
         "en": "Adapts the roadmap with explicit trade-offs"
       }
     ]
+  },
+  {
+    "id": "pspo3-source-031",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "product-strategy",
+    "difficulty": 3,
+    "text": {
+      "en": "One Scrum Team is allocated to six product initiatives. Every sponsor calls their work urgent, started work accumulates, and nothing reaches users. Explain how you would make an investment decision and create a more useful learning cadence.",
+      "az": "Bir Scrum Team altı məhsul təşəbbüsünə bölünüb. Bütün sponsorlar işi təcili sayır, başlanmış iş yığılır və istifadəçiyə nəticə çatmır. İnvestisiya qərarını və öyrənmə ritmini necə dəyişərdin?"
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "Make competing outcomes, capacity and dependencies visible. Compare initiatives by expected customer value and risk, agree a smaller active investment set, and finish integrated work before starting more. Inspect elapsed time to usable feedback as well as customer outcomes. This applies the book’s chapter 8 portfolio discussion and EBM T2M/A2I perspectives; it does not prescribe one universal portfolio formula.",
+      "az": "Rəqabət aparan nəticələri, imkanları və asılılıqları görünən et. Müştəri dəyəri və risk üzrə müqayisə apar, fəal investisiyaların sayını azalt və yeni işdən əvvəl inteqrasiya edilmiş işi bitir. Geribildirimə qədər vaxtı və müştəri nəticələrini yoxla. Bu, kitabın 8-ci fəslinə və EBM T2M/A2I yanaşmasına əsaslanır."
+    },
+    "lessonId": "pspo3-complexity",
+    "sourceIds": ["professional-po-2018", "ebm-2024"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Makes capacity and competing outcomes explicit",
+        "az": "İmkanları və rəqabət aparan nəticələri aydınlaşdırır"
+      },
+      {
+        "en": "Explains a defensible investment trade-off",
+        "az": "Əsaslandırılmış investisiya seçimi verir"
+      },
+      {
+        "en": "Reduces parallel work without assuming an automatic value increase",
+        "az": "Paralel işi azaldır, amma avtomatik dəyər artımı iddia etmir"
+      },
+      {
+        "en": "Defines feedback and outcome measures",
+        "az": "Geribildirim və nəticə ölçülərini müəyyən edir"
+      }
+    ]
+  },
+  {
+    "id": "pspo3-source-032",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "product-value",
+    "difficulty": 3,
+    "text": {
+      "en": "A profitable mature product has satisfied customers and little remaining unmet need in its current segment. A new segment has a large satisfaction gap but uncertain willingness to adopt. How would you compare the next investments without treating current revenue as the only answer?",
+      "az": "Yetkin məhsul gəlirlidir və cari seqmentdə müştərilər razıdır. Yeni seqmentdə böyük ehtiyac boşluğu var, amma qəbul qeyri-müəyyəndir. Növbəti investisiyaları necə müqayisə edərdin?"
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "Use CV and UV together: current profitability does not establish the size of an untapped opportunity. Compare maintenance obligations, customer outcomes, risk and a small test in the new segment. Form a hypothesis with an observation window and inspect whether actual customer experience improves before scaling. See EBM 2024, Current Value and Unrealized Value, pp. 9–10.",
+      "az": "CV və UV-ni birlikdə istifadə et: cari gəlirlilik yeni fürsətin ölçüsünü müəyyən etmir. Saxlama öhdəliklərini, nəticələri və riski müqayisə edib yeni seqmentdə kiçik sınaq qur. Genişləndirmədən əvvəl real təcrübənin yaxşılaşmasını yoxla. EBM 2024, səh. 9–10."
+    },
+    "lessonId": "pspo3-written-case",
+    "sourceIds": ["ebm-2024", "professional-po-2018"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Distinguishes current value from unrealized opportunity",
+        "az": "Cari dəyəri reallaşmamış fürsətdən ayırır"
+      },
+      {
+        "en": "Compares risk and maintenance commitments",
+        "az": "Risk və saxlama öhdəliklərini müqayisə edir"
+      },
+      {
+        "en": "Proposes a limited learning investment",
+        "az": "Məhdud öyrənmə investisiyası təklif edir"
+      },
+      {
+        "en": "Defines evidence that would change the decision",
+        "az": "Qərarı dəyişən sübutu göstərir"
+      }
+    ]
+  },
+  {
+    "id": "pspo3-source-033",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "empiricism",
+    "difficulty": 3,
+    "text": {
+      "en": "A new feature is used frequently, but the customer task takes no less time and support demand increases. The sponsor points to usage as proof of success. Write a response that distinguishes evidence, value and the next decision.",
+      "az": "Yeni funksiya çox istifadə edilir, amma müştəri işi daha tez bitirmir və dəstək yükü artır. Sponsor istifadəni uğur sübutu sayır. Sübutu, dəyəri və növbəti qərarı ayıran cavab yaz."
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "Usage can inform investigation but is not the intended outcome by itself. Revisit the original hypothesis, inspect task completion and harm, and compare changing, stopping or further testing the feature. Record what is known and uncertain. EBM 2024 pp. 5–7 distinguishes outputs, outcomes and impacts and describes adapting from experiments.",
+      "az": "İstifadə araşdırmaya kömək edir, amma gözlənilən nəticəni təkbaşına sübut etmir. İlkin fərziyyəni, işin tamamlanmasını və zərəri yoxla; dəyişmək, dayandırmaq və ya əlavə sınaq variantlarını müqayisə et. EBM 2024, səh. 5–7."
+    },
+    "lessonId": "pspo3-reflection",
+    "sourceIds": ["ebm-2024", "professional-po-2018"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Separates usage from the desired customer outcome",
+        "az": "İstifadəni arzu olunan müştəri nəticəsindən ayırır"
+      },
+      {
+        "en": "Inspects negative effects as well as favorable metrics",
+        "az": "Müsbət metriklə yanaşı mənfi təsiri yoxlayır"
+      },
+      {
+        "en": "Compares more than one next action",
+        "az": "Bir neçə növbəti addımı müqayisə edir"
+      },
+      {
+        "en": "Makes unknowns and adaptation criteria explicit",
+        "az": "Bilinməyənləri və uyğunlaşma meyarını göstərir"
+      }
+    ]
+  },
+  {
+    "id": "pspo3-source-034",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "scrum-application",
+    "difficulty": 3,
+    "text": {
+      "en": "The team’s SLE is 85% within eight days. Two critical unfinished items are already nine days old and the WIP limit is full. Sales asks you to guarantee that a new item will finish within eight days. Explain a responsible product response.",
+      "az": "SLE işlərin 85%-i üçün səkkiz gündür. İki vacib açıq iş artıq doqquz günlükdür və WIP limiti doludur. Satış yeni işə səkkiz günlük zəmanət istəyir. Məsuliyyətli cavab yaz."
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "An SLE is probabilistic, not a guarantee for a specific item. Expose aging work, blocked states and capacity before pulling additional work. Collaborate on the most useful unblocking or ordering decision and communicate forecast assumptions. Keep the Sprint Goal and Definition of Done intact. See Kanban Guide 2021, metrics p. 4, active management and SLE p. 6.",
+      "az": "SLE konkret iş üçün zəmanət deyil, ehtimallı proqnozdur. Yeni işdən əvvəl yaşlanan işi, bloklanmanı və imkanı görünən et. Blokun açılması və sıralama qərarında əməkdaşlıq et, proqnoz fərziyyələrini izah et. Sprint Goal və Done qorunur. Kanban Guide 2021, səh. 4 və 6."
+    },
+    "lessonId": "pspo3-complexity",
+    "sourceIds": ["kanban-2021", "scrum-2020"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Distinguishes an SLE forecast from a guarantee",
+        "az": "SLE proqnozunu zəmanətdən ayırır"
+      },
+      {
+        "en": "Uses Work Item Age and WIP correctly",
+        "az": "Work Item Age və WIP-i düzgün istifadə edir"
+      },
+      {
+        "en": "Proposes active management before indiscriminate starting",
+        "az": "Yeni işi kor-koranə başlamaq əvəzinə fəal idarəetmə təklif edir"
+      },
+      {
+        "en": "Communicates uncertainty without weakening quality",
+        "az": "Keyfiyyəti azaltmadan qeyri-müəyyənliyi izah edir"
+      }
+    ]
+  },
+  {
+    "id": "pspo3-source-035",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "scrum-application",
+    "difficulty": 3,
+    "text": {
+      "en": "A stakeholder requests an urgent change mid-Sprint. Developers say the added scope would endanger the Sprint Goal, while the original goal remains valuable. Explain your options and distinguish scope negotiation from cancelling the Sprint.",
+      "az": "Sprint-in ortasında təcili dəyişiklik istənir. Developers əlavə əhatənin Sprint Goal-u təhlükəyə atacağını deyir; ilkin məqsəd hələ dəyərlidir. Əhatə danışıqlarını Sprint-in ləğvindən ayıraraq variantları izah et."
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "Clarify the urgency and compare options with Developers. Scope may be renegotiated with the Product Owner without endangering the Sprint Goal; adding every request is not required. A Sprint may be cancelled if its goal becomes obsolete, and only the Product Owner has that authority. The scenario does not establish that the goal is obsolete. See Scrum Guide 2020, The Sprint and Sprint Goal.",
+      "az": "Təcililiyi aydınlaşdır və Developers ilə seçimləri müqayisə et. Məqsədi təhlükəyə atmadan əhatə yenidən razılaşdırıla bilər; hər istəyi əlavə etmək tələb olunmur. Sprint Goal köhnələndə yalnız Product Owner Sprint-i ləğv edə bilər. Bu ssenari məqsədin köhnəldiyini göstərmir. Scrum Guide 2020."
+    },
+    "lessonId": "pspo3-complexity",
+    "sourceIds": ["scrum-2020"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Protects the Sprint Goal while exploring options",
+        "az": "Variantları araşdırarkən Sprint Goal-u qoruyur"
+      },
+      {
+        "en": "Preserves Developers’ ownership of planning",
+        "az": "Planlaşdırmaya Developers sahibliyini saxlayır"
+      },
+      {
+        "en": "States the cancellation condition and authority accurately",
+        "az": "Ləğv şərtini və səlahiyyətini düzgün göstərir"
+      },
+      {
+        "en": "Avoids inventing urgency or obsolescence facts",
+        "az": "Ssenaridə olmayan təcililik və köhnəlmə faktı uydurmur"
+      }
+    ]
+  },
+  {
+    "id": "pspo3-source-036",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "stakeholder-leadership",
+    "difficulty": 3,
+    "text": {
+      "en": "Stakeholders want the Sprint Review to approve releases. A usable Done Increment is available earlier, but market feedback is slow. Explain how you would improve both the event and the feedback loop.",
+      "az": "Maraqlı tərəflər Sprint Review-u buraxılış təsdiqi üçün istifadə etmək istəyir. Done İnkrement daha tez hazırdır, amma bazar geribildirimi gecikir. Tədbiri və geribildirim dövrünü necə yaxşılaşdırardın?"
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "Explain that Review inspects the outcome and determines future adaptations; it is not a release gate. Consider earlier delivery subject to actual operational constraints and gather evidence from real usage. Use Review to collaborate on the Product Goal and what has changed, rather than only collecting approvals. Sources: Scrum Guide, Sprint Review and Increment; book chapter 4, stakeholder and marketplace feedback.",
+      "az": "Review nəticəni yoxlayır və gələcək uyğunlaşmanı müəyyən edir; buraxılış qapısı deyil. Real əməliyyat şərtlərini nəzərə alıb daha tez çatdırmanı və istifadə sübutunu araşdır. Review-da Product Goal və dəyişən şərait üzrə əməkdaşlıq et. Scrum Guide və kitabın 4-cü fəsli."
+    },
+    "lessonId": "pspo3-written-case",
+    "sourceIds": ["scrum-2020", "professional-po-2018"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Explains the Review purpose correctly",
+        "az": "Review məqsədini düzgün izah edir"
+      },
+      {
+        "en": "Distinguishes Done from proven market value",
+        "az": "Done vəziyyətini sübut edilmiş bazar dəyərindən ayırır"
+      },
+      {
+        "en": "Respects actual operational constraints",
+        "az": "Real əməliyyat məhdudiyyətlərini nəzərə alır"
+      },
+      {
+        "en": "Proposes useful stakeholder and customer feedback",
+        "az": "Faydalı maraqlı tərəf və müştəri geribildirimi təklif edir"
+      }
+    ]
+  },
+  {
+    "id": "pspo3-source-037",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "stakeholder-leadership",
+    "difficulty": 3,
+    "text": {
+      "en": "A Product Owner believes a backlog item is overestimated and assigns individual implementation tasks to force a smaller estimate. The team has important feasibility information the Product Owner has not heard. How would you reset the decision?",
+      "az": "Product Owner elementi böyük qiymətləndirilmiş sayır və təxmini azaltmaq üçün fərdi texniki tapşırıqlar verir. Komandada Product Owner-in eşitmədiyi mümkünlük məlumatı var. Qərarı necə yenidən qurardın?"
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "Bring the feasibility evidence into an open discussion. Developers doing the work are responsible for sizing and implementation planning; the Product Owner can clarify value and trade-offs. Explore smaller valuable slices rather than imposing a number or technical plan. Sources: Scrum Guide, Developers, Sprint Planning and Product Backlog; book chapter 7, ordering and refinement.",
+      "az": "Mümkünlük sübutunu açıq müzakirəyə gətir. Ölçüləndirmə və texniki plan işi görən Developers-ə aiddir; Product Owner dəyəri və güzəştləri aydınlaşdırır. Rəqəmi məcbur etmək əvəzinə daha kiçik dəyərli dilimləri araşdır. Scrum Guide və kitabın 7-ci fəsli."
+    },
+    "lessonId": "pspo3-complexity",
+    "sourceIds": ["scrum-2020", "professional-po-2018"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Uses feasibility evidence instead of authority alone",
+        "az": "Yalnız səlahiyyətə deyil, mümkünlük sübutuna baxır"
+      },
+      {
+        "en": "Keeps sizing and planning ownership clear",
+        "az": "Ölçüləndirmə və plan sahibliyini aydın saxlayır"
+      },
+      {
+        "en": "Explores smaller valuable scope",
+        "az": "Daha kiçik dəyərli əhatəni araşdırır"
+      },
+      {
+        "en": "Makes the product trade-off explicit",
+        "az": "Məhsul güzəştini aydınlaşdırır"
+      }
+    ]
+  },
+  {
+    "id": "pspo3-source-038",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "product-strategy",
+    "difficulty": 3,
+    "text": {
+      "en": "A discovery group maintains a separate priority list and hands detailed requirements to delivery once a month. Teams rarely meet customers and rework is growing. Explain how to retain useful expertise without creating a handoff factory.",
+      "az": "Discovery qrupu ayrıca prioritet siyahısı saxlayır və ayda bir dəfə tələbləri delivery-yə ötürür. Komandalar müştərini az görür və təkrar iş artır. Faydalı ixtisaslaşmanı saxlayaraq ötürmə problemini necə həll edərdin?"
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "Make the product outcome and ordering transparent across specialists. Bring learning and implementation together through direct collaboration and smaller experiments, preserving one Product Backlog for the product’s Scrum Team work. Research findings are evidence, not a guarantee of useful value or Done work. Sources: Scrum Guide Product Backlog; EBM experiment loop; book chapter 4 Validation.",
+      "az": "Məhsul nəticəsini və sıralamanı mütəxəssislər arasında şəffaf et. Birbaşa əməkdaşlıq və kiçik eksperimentlərlə öyrənmə ilə tətbiqi bağla; məhsul işində vahid Product Backlog saxla. Tədqiqat nəticəsi faydalı dəyərə və ya Done-a zəmanət deyil. Scrum Guide, EBM və kitabın 4-cü fəsli."
+    },
+    "lessonId": "pspo3-written-case",
+    "sourceIds": ["scrum-2020", "ebm-2024", "professional-po-2018"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Connects research to a shared product goal and ordering",
+        "az": "Tədqiqatı ortaq məqsəd və sıralama ilə bağlayır"
+      },
+      {
+        "en": "Preserves useful expertise and direct collaboration",
+        "az": "Faydalı ixtisaslaşma və birbaşa əməkdaşlığı saxlayır"
+      },
+      {
+        "en": "Distinguishes learning evidence from delivery status",
+        "az": "Öyrənmə sübutunu çatdırılma vəziyyətindən ayırır"
+      },
+      {
+        "en": "Defines a smaller feedback loop",
+        "az": "Daha kiçik geribildirim dövrü müəyyən edir"
+      }
+    ]
+  },
+  {
+    "id": "pspo3-source-039",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "scrum-application",
+    "difficulty": 3,
+    "text": {
+      "en": "Two teams share a product but defer accessibility and integration checks until a final release phase. Both report high output. A fixed deadline approaches. Explain the quality, transparency and investment decisions you would make.",
+      "az": "İki komanda ortaq məhsulda əlçatanlıq və inteqrasiya yoxlamalarını son mərhələyə saxlayır. Hər ikisi yüksək iş çıxışı bildirir. Sabit tarix yaxınlaşır. Keyfiyyət, şəffaflıq və investisiya qərarlarını izah et."
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "Expose which work actually meets the shared Definition of Done and which does not. Multiple teams on one product must mutually define and comply with the same Done definition. Do not lower quality to inflate output; compare a smaller Done scope with the consequences of date changes. EBM A2I/T2M can help inspect systemic quality and integration delays. Sources: Scrum Guide Definition of Done; EBM 2024 KVAs.",
+      "az": "Ortaq Done-a hansı işin çatdığını və çatmadığını görünən et. Eyni məhsulda komandalar ortaq Done tərifini müəyyən edib ona əməl etməlidir. Çıxışı şişirtmək üçün keyfiyyəti azaltma; daha kiçik Done əhatəni və tarix dəyişməsinin nəticəsini müqayisə et. Scrum Guide və EBM 2024."
+    },
+    "lessonId": "pspo3-complexity",
+    "sourceIds": ["scrum-2020", "ebm-2024"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Makes incomplete work transparent",
+        "az": "Tamamlanmamış işi şəffaf edir"
+      },
+      {
+        "en": "Applies shared Done accurately",
+        "az": "Ortaq Done-u düzgün tətbiq edir"
+      },
+      {
+        "en": "Compares scope/date consequences without lowering quality",
+        "az": "Keyfiyyəti azaltmadan əhatə və tarix nəticələrini müqayisə edir"
+      },
+      {
+        "en": "Inspects systemic capability constraints",
+        "az": "Sistem səviyyəsində imkan məhdudiyyətlərini yoxlayır"
+      }
+    ]
+  },
+  {
+    "id": "pspo3-source-040",
+    "trackId": "pspo3",
+    "type": "written",
+    "domain": "empiricism",
+    "difficulty": 3,
+    "text": {
+      "en": "A pilot improves an average satisfaction score, but one customer segment loses access to an important workflow. The sponsor says the average is enough to justify full rollout. Explain a responsible decision and the evidence you would request.",
+      "az": "Pilot orta məmnunluq balını artırır, amma bir müştəri seqmenti vacib iş axınına çıxışı itirir. Sponsor orta göstəricini geniş yayım üçün kifayət sayır. Məsuliyyətli qərarı və tələb etdiyin sübutu izah et."
+    },
+    "options": [],
+    "correct": [],
+    "explanation": {
+      "en": "Inspect outcomes for the affected segment as well as the aggregate. Clarify the intended beneficiaries and the downside before scaling. Compare a modified pilot, staged rollout or stopping the harmful change; define success and guardrail measures in advance. EBM 2024 pp. 5–7 addresses outcomes, possible negative outcomes and experiment inspection; the book’s chapter 3 cautions against misleading metrics.",
+      "az": "Ümumi nəticə ilə yanaşı təsirlənən seqmenti yoxla. Genişləndirmədən əvvəl faydalananı və mənfi təsiri aydınlaşdır. Dəyişdirilmiş pilot, mərhələli yayım və ya zərərli dəyişikliyin dayandırılmasını müqayisə et. Uğur və zərər sərhədini əvvəlcədən yaz. EBM 2024 səh. 5–7 və kitabın 3-cü fəsli."
+    },
+    "lessonId": "pspo3-reflection",
+    "sourceIds": ["ebm-2024", "professional-po-2018"],
+    "practiceOnly": true,
+    "rubric": [
+      {
+        "en": "Recognizes that an average can hide harm",
+        "az": "Orta göstəricinin zərəri gizlədə biləcəyini tanıyır"
+      },
+      {
+        "en": "Requests segment-specific outcome evidence",
+        "az": "Seqment üzrə nəticə sübutu istəyir"
+      },
+      {
+        "en": "Compares realistic rollout alternatives",
+        "az": "Real yayım alternativlərini müqayisə edir"
+      },
+      {
+        "en": "Defines success and harm guardrails before further testing",
+        "az": "Əlavə sınaqdan əvvəl uğur və zərər sərhədi müəyyən edir"
+      }
+    ]
   }
 ]

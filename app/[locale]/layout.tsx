@@ -12,13 +12,13 @@ const site =
     : 'https://level-up.example');
 export const metadata: Metadata = {
   metadataBase: new URL(site),
-  title: { default: 'Mərhələ — BA və PO öyrənmə platforması', template: '%s | Mərhələ' },
+  title: { default: 'Mərhələ — Business Analysis & Product Ownership', template: '%s | Mərhələ' },
   description:
-    'A guided learning space for business analysts and product owners. Original lessons, practical roadmaps, and certification practice in Azerbaijani and English.',
+    'A guided learning space for business analysts and product owners. Original lessons, practical roadmaps, and certification practice in English, with an English–Azerbaijani term helper.',
   openGraph: {
     type: 'website',
     siteName: 'Mərhələ',
-    title: 'Mərhələ — Səviyyəni seç, hədəfi göstər',
+    title: 'Mərhələ — Choose your level. Set your goal.',
     description:
       'From curiosity to capability. Learn business analysis and product ownership, one step at a time.',
     images: ['/opengraph-image'],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image' },
 };
 export function generateStaticParams() {
-  return [{ locale: 'az' }, { locale: 'en' }];
+  return [{ locale: 'en' }];
 }
 export default async function LocaleLayout({
   children,
@@ -37,13 +37,13 @@ export default async function LocaleLayout({
 }) {
   const { locale: raw } = await params;
   const parsed = localeSchema.safeParse(raw);
-  if (!parsed.success) notFound();
+  if (!parsed.success || parsed.data !== 'en') notFound();
   const locale = parsed.data;
   return (
     <html lang={locale} suppressHydrationWarning>
       <body>
         <a href="#main-content" className="skip-link">
-          {locale === 'az' ? 'Məzmuna keç' : 'Skip to content'}
+          Skip to content
         </a>
         <ProgressProvider>
           <AppShell locale={locale}>{children}</AppShell>

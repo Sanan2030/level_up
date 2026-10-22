@@ -31,8 +31,8 @@
     "status": "read",
     "checkedAt": "2026-10-21",
     "notes": {
-      "az": "İstifadəçinin PDF faylı oxunub: məqsədlər, eksperimentlər, CV, UV, T2M və A2I. Dərslərdə öz sözlərimizlə izah və yeni nümunələr verilir.",
-      "en": "User-supplied PDF read: goals, experiments, CV, UV, T2M and A2I. Lessons use original explanations and new examples."
+      "az": "İstifadəçinin PDF faylı oxunub: məqsədlər, eksperimentlər, CV, UV, T2M və A2I. Dərslərdə öz sözlərimizlə izah və yeni nümunələr verilir. Uyğunlaşdırılmış izahlar CC BY-SA 4.0 ilə paylaşılır; müəllif: Scrum.org, may 2024.",
+      "en": "User-supplied PDF read: goals, experiments, CV, UV, T2M and A2I. Lessons use original explanations and new examples. Adapted explanations are shared under CC BY-SA 4.0; attribution: Scrum.org, May 2024."
     }
   },
   {
@@ -129,6 +129,42 @@
     "notes": {
       "az": "Əvvəlki yoxlama: 2026-10-20. ECBA, CCBA və CBAP formatları ayrıca imtahan konfiqurasiyalarında sənədləşdirilib.",
       "en": "Previous verification: 2026-10-20. ECBA, CCBA and CBAP formats are documented in the separate exam configurations."
+    }
+  },
+  {
+    "id": "babok-v3",
+    "title": "A Guide to the Business Analysis Body of Knowledge (BABOK Guide), v3 — IIBA (2015)",
+    "url": "https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/",
+    "kind": "book",
+    "status": "read",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "İstifadəçinin göndərdiyi BABOK v3 PDF-dən dərslərə aid seçilmiş bölmələr oxunub. Fəsil və bölmə nömrələri dərslərdə göstərilir. Kitabın PDF-i və uzun mətn parçaları yayımlanmır. Cari ECBA imtahan planı ayrıca 2026 IIBA sənədləri ilə yoxlanır.",
+      "en": "Selected sections of the user-supplied BABOK v3 PDF were read for these lessons. Chapters and section locators appear in lessons. The member PDF and extended book passages are not redistributed. Current ECBA exam coverage is verified separately against IIBA documents."
+    }
+  },
+  {
+    "id": "scrum-competencies-2026",
+    "title": "Scrum.org — The Professional Scrum Competencies (user-supplied page text)",
+    "url": "https://www.scrum.org/professional-scrum-competencies",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-21",
+    "notes": {
+      "az": "İstifadəçinin paylaşdığı rəsmi səhifə mətni oxunub: 5 kompetensiya qrupu və 28 fokus sahəsi. Canlı səhifə HTTP 202 giriş yoxlaması qaytarır. Kompetensiya xəritəsi şəxsi inkişaf üçündür; hər PSPO səviyyəsinin dəqiq imtahan çəkilərini müəyyən etmir.",
+      "en": "Read the official page text pasted by the user: five competency groups and 28 focus areas. Live requests return an HTTP 202 access challenge. The framework guides professional development; it does not define exact exam weights for every PSPO level."
+    }
+  },
+  {
+    "id": "community-pspo2-notes",
+    "title": "ShoSaito — PSPO II preparation notes (community study notes)",
+    "url": "https://github.com/ShoSaito/PSPO-II",
+    "kind": "community",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Read the public README: it recommends primary guides, immediate answer explanations, category-level review and revisiting weak areas. It is a preparation note, not a first-hand exam-result report or official blueprint. Its assessment numbers are unverified and internally inconsistent; they are not used as exam facts.",
+      "az": "İctimai README oxunub: əsas bələdçilər, dərhal izah, mövzu üzrə nəticə və zəif sahələrin təkrarı tövsiyə edilir. Bu, hazırlıq qeydidir, şəxsi imtahan nəticəsi hesabatı və ya rəsmi plan deyil. İmtahan rəqəmləri yoxlanmayıb və bir-biri ilə uyğun gəlmir; rəsmi fakt kimi istifadə edilmir."
     }
   }
 ]

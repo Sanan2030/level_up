@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ExternalLink, BookOpen } from 'lucide-react';
 import { sources } from '@/lib/sources';
 import { getLocale } from '@/lib/i18n';
-export const metadata = { title: 'Mənbələr · Sources' };
+export const metadata = { title: 'Sources' };
 export default async function SourcesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: raw } = await params;
   const locale = getLocale(raw);
@@ -17,7 +17,7 @@ export default async function SourcesPage({ params }: { params: Promise<{ locale
         <p className="muted">
           {az
             ? 'PSPO dərsləri göndərilən kitab və üç bələdçi əsasında öz sözlərimizlə hazırlanıb. Hər dərsdə bölmə, hər yeni sualın izahında mənbə göstərilir.'
-            : 'PSPO lessons use original explanations based on the supplied book and three guides. Lessons identify sections; new question explanations identify their sources.'}
+            : 'Lessons use original explanations based on the supplied BABOK and product ownership books, official guides and competency text. Lessons identify source sections; new question explanations cite their supporting sources.'}
         </p>
       </header>
       <div className="notice">
@@ -54,7 +54,7 @@ export default async function SourcesPage({ params }: { params: Promise<{ locale
       <p className="small muted">
         {az
           ? 'Scrum Guide və Kanban Guide əsasında uyğunlaşdırılmış izahlar CC BY-SA 4.0 ilə paylaşılır; müəlliflər və nəşrlər yuxarıda göstərilib. Kitabın PDF-i saytda yayımlanmır.'
-          : 'Adapted Scrum Guide and Kanban Guide explanations are shared under CC BY-SA 4.0; authors and editions are credited above. The book PDF is not distributed on this site.'}{' '}
+          : 'Adapted Scrum Guide, Kanban Guide and EBM Guide explanations are shared under CC BY-SA 4.0; authors and editions are credited above. The book PDF is not distributed on this site.'}{' '}
         <a className="text-link" href="https://creativecommons.org/licenses/by-sa/4.0/">
           CC BY-SA 4.0
         </a>

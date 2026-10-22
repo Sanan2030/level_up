@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "business-analysis",
+    "term": "Business analysis",
+    "aliases": [],
+    "context": "Business analysis",
+    "meaningAz": "Biznes analizi",
+    "definitionEn": "A practice of understanding needs and recommending changes that can create value in context.",
+    "explanationAz": "Ehtiyacları anlamaq və kontekstdə dəyər yarada biləcək dəyişiklikləri tövsiyə etmək fəaliyyəti.",
+    "example": {
+      "en": "The analyst identifies why customers abandon checkout before recommending a change.",
+      "az": "Analitik dəyişiklik tövsiyə etməzdən əvvəl müştərilərin ödənişi niyə yarımçıq qoyduğunu araşdırır."
+    }
+  },
+  {
+    "id": "stakeholder",
+    "term": "Stakeholder",
+    "aliases": ["stakeholders"],
+    "context": "Business analysis",
+    "meaningAz": "Maraqlı tərəf",
+    "definitionEn": "A person or group with an interest in, influence over or exposure to a change.",
+    "explanationAz": "Dəyişikliklə marağı, ona təsir gücü və ya ondan təsirlənməsi olan insan və ya qrup.",
+    "example": {
+      "en": "Support agents are stakeholders because the new refund flow changes their work.",
+      "az": "Yeni geriödəmə axını dəstək əməkdaşlarının işinə təsir etdiyi üçün onlar maraqlı tərəfdir."
+    }
+  },
+  {
+    "id": "elicitation",
+    "term": "Elicitation",
+    "aliases": [],
+    "context": "Business analysis",
+    "meaningAz": "Ehtiyacların toplanması",
+    "definitionEn": "Activities that uncover information, needs and assumptions through people, evidence and observation.",
+    "explanationAz": "İnsanlar, sübut və müşahidə vasitəsilə məlumat, ehtiyac və fərziyyələri üzə çıxaran fəaliyyətlər.",
+    "example": {
+      "en": "Observe a clerk processing an order and ask which steps cause delays.",
+      "az": "Əməkdaşın sifarişi emal etməsini müşahidə et və hansı addımların gecikmə yaratdığını soruş."
+    }
+  },
+  {
+    "id": "requirement",
+    "term": "Requirement",
+    "aliases": ["requirements"],
+    "context": "Business analysis",
+    "meaningAz": "Tələb",
+    "definitionEn": "A representation of a need or condition that supports a business or stakeholder outcome.",
+    "explanationAz": "Biznes və ya maraqlı tərəf nəticəsini dəstəkləyən ehtiyacın və ya şərtin təsviri.",
+    "example": {
+      "en": "A customer needs to receive confirmation after completing a booking.",
+      "az": "Müştərinin rezervasiyanı bitirdikdən sonra təsdiq almağa ehtiyacı var."
+    }
+  },
+  {
+    "id": "functional-requirement",
+    "term": "Functional requirement",
+    "aliases": ["functional requirements"],
+    "context": "Business analysis",
+    "meaningAz": "Funksional tələb",
+    "definitionEn": "A statement of a behavior or capability the solution must provide.",
+    "explanationAz": "Həllin təmin etməli olduğu davranış və ya imkan haqqında bəyanat.",
+    "example": {
+      "en": "The service must let customers cancel an unpaid booking.",
+      "az": "Xidmət müştəriyə ödənilməmiş rezervasiyanı ləğv etmək imkanı verməlidir."
+    }
+  },
+  {
+    "id": "quality-requirement",
+    "term": "Quality requirement",
+    "aliases": [
+      "non-functional requirement",
+      "nonfunctional requirement",
+      "non-functional requirements",
+      "NFR"
+    ],
+    "context": "Business analysis",
+    "meaningAz": "Keyfiyyət tələbi",
+    "definitionEn": "A measurable condition about how well a solution should operate, such as accessibility or response time.",
+    "explanationAz": "Həllin necə işləməli olduğuna dair əlçatanlıq və ya cavab vaxtı kimi ölçülən şərt.",
+    "example": {
+      "en": "The search response should meet the agreed performance threshold.",
+      "az": "Axtarış cavabı razılaşdırılmış performans həddinə uyğun olmalıdır."
+    }
+  },
+  {
+    "id": "acceptance-criteria",
+    "term": "Acceptance criteria",
+    "aliases": ["acceptance criterion", "AC"],
+    "context": "Business analysis",
+    "meaningAz": "Qəbul meyarları",
+    "definitionEn": "Observable conditions used to judge whether a specific item meets the agreed need.",
+    "explanationAz": "Konkret işin razılaşdırılmış ehtiyacı ödəyib-ödəmədiyini müəyyən edən müşahidə edilən şərtlər.",
+    "example": {
+      "en": "Given an expired voucher, applying it displays an expiry message without changing the total.",
+      "az": "Müddəti bitmiş kupon tətbiq ediləndə məbləğ dəyişmədən müddətin bitməsi mesajı göstərilir."
+    }
+  },
+  {
+    "id": "gherkin",
+    "term": "Gherkin",
+    "aliases": [],
+    "context": "Business analysis",
+    "meaningAz": "Gherkin",
+    "definitionEn": "A structured example notation commonly using Given, When and Then to describe context, action and result.",
+    "explanationAz": "Kontekst, addım və nəticəni təsvir etmək üçün adətən Given, When və Then işlədən strukturlaşdırılmış nümunə yazılışı.",
+    "example": {
+      "en": "Given an empty basket, when I check out, then I see a message asking me to add an item.",
+      "az": "Səbət boş olduqda ödənişə keçəndə məhsul əlavə etməyimi istəyən mesaj görürəm."
+    }
+  },
+  {
+    "id": "use-case",
+    "term": "Use case",
+    "aliases": ["use cases"],
+    "context": "Business analysis",
+    "meaningAz": "İstifadə halı",
+    "definitionEn": "A description of how an actor and a system interact to achieve a goal, including alternatives and exceptions.",
+    "explanationAz": "Məqsədə çatmaq üçün aktor və sistemin alternativ və istisnalar daxil olmaqla qarşılıqlı fəaliyyətinin təsviri.",
+    "example": {
+      "en": "The reserve-seat use case includes choosing a trip, selecting a seat and confirming payment.",
+      "az": "Yer rezervasiyası istifadə ssenarisi səfər və yer seçimini, sonra ödəniş təsdiqini əhatə edir."
+    }
+  },
+  {
+    "id": "traceability",
+    "term": "Traceability",
+    "aliases": [],
+    "context": "Business analysis",
+    "meaningAz": "İzlənilmə",
+    "definitionEn": "Recorded relationships that connect needs, requirements, designs, tests and other evidence.",
+    "explanationAz": "Ehtiyac, tələb, dizayn, test və digər sübutları bağlayan qeyd edilmiş əlaqələr.",
+    "example": {
+      "en": "Link the refund rule to its user need, design and test evidence.",
+      "az": "Geriödəmə qaydasını istifadəçi ehtiyacı, dizayn və test sübutu ilə əlaqələndir."
+    }
+  },
+  {
+    "id": "scope",
+    "term": "Scope",
+    "aliases": [],
+    "context": "Business analysis",
+    "meaningAz": "Əhatə",
+    "definitionEn": "The agreed boundary of a problem, solution or work effort, including what is outside it.",
+    "explanationAz": "Problem, həll və ya işin xaricdə qalanlar daxil olmaqla razılaşdırılmış sərhədi.",
+    "example": {
+      "en": "The first release supports domestic transfers; international transfers are outside its scope.",
+      "az": "İlk buraxılış ölkədaxili köçürmələri dəstəkləyir; beynəlxalq köçürmələr onun əhatəsinə daxil deyil."
+    }
+  },
+  {
+    "id": "bpmn",
+    "term": "BPMN",
+    "aliases": [],
+    "context": "Business analysis",
+    "meaningAz": "BPMN",
+    "definitionEn": "A business process modeling notation for communicating events, activities, decisions and interactions.",
+    "explanationAz": "Hadisə, fəaliyyət, qərar və qarşılıqlı əlaqələri çatdırmaq üçün biznes prosesi modelləşdirmə yazılışı.",
+    "example": {
+      "en": "Use a BPMN gateway to show whether a refund requires manual review.",
+      "az": "Geriödəmənin əl ilə yoxlama tələb edib-etmədiyini BPMN qərar nöqtəsi ilə göstər."
+    }
+  },
+  {
+    "id": "uml",
+    "term": "UML",
+    "aliases": [],
+    "context": "Business analysis",
+    "meaningAz": "UML",
+    "definitionEn": "A family of modeling notations used to describe different structural and behavioral views of systems.",
+    "explanationAz": "Sistemlərin müxtəlif struktur və davranış görünüşlərini təsvir edən modelləşdirmə yazılışları ailəsi.",
+    "example": {
+      "en": "A UML sequence diagram shows how the app and payment service exchange messages.",
+      "az": "UML ardıcıllıq diaqramı tətbiqlə ödəniş xidmətinin mesaj mübadiləsini göstərir."
+    }
+  },
+  {
+    "id": "erd",
+    "term": "Entity–relationship diagram",
+    "aliases": ["entity relationship diagram"],
+    "context": "Business analysis",
+    "meaningAz": "Obyekt–əlaqə diaqramı",
+    "definitionEn": "A model of data entities, their attributes and relationships, including cardinality.",
+    "explanationAz": "Məlumat obyektləri, atributları və əlaqə sayı daxil olmaqla əlaqələrinin modeli.",
+    "example": {
+      "en": "An ERD connects a customer to the orders they place.",
+      "az": "ERD müştərini onun verdiyi sifarişlərlə əlaqələndirir."
+    }
+  },
+  {
+    "id": "api",
+    "term": "API",
+    "aliases": ["application programming interface", "APIs"],
+    "context": "Engineering",
+    "meaningAz": "API",
+    "definitionEn": "A defined interface through which software components request or exchange capabilities and data.",
+    "explanationAz": "Proqram hissələrinin imkan və məlumat istədiyi və ya mübadilə etdiyi müəyyən edilmiş interfeys.",
+    "example": {
+      "en": "The booking application calls an API to retrieve available time slots.",
+      "az": "Rezervasiya tətbiqi boş vaxtları almaq üçün API-yə sorğu göndərir."
+    }
+  },
+  {
+    "id": "idempotency",
+    "term": "Idempotency",
+    "aliases": [],
+    "context": "Engineering",
+    "meaningAz": "İdempotentlik",
+    "definitionEn": "A property in which repeating the same operation has the same intended effect as performing it once.",
+    "explanationAz": "Eyni əməliyyatın təkrarının onu bir dəfə etməklə eyni nəzərdə tutulan təsir yaratması xüsusiyyəti.",
+    "example": {
+      "en": "Retrying a payment request with the same idempotency key does not create a second charge.",
+      "az": "Eyni idempotentlik açarı ilə ödəniş sorğusunu təkrarlamaq ikinci tutulma yaratmır."
+    }
+  },
+  {
+    "id": "uat",
+    "term": "User acceptance testing",
+    "aliases": ["UAT", "acceptance testing"],
+    "context": "Business analysis",
+    "meaningAz": "İstifadəçi qəbul testi",
+    "definitionEn": "Business-oriented validation that a solution supports agreed real-world needs and acceptance conditions.",
+    "explanationAz": "Həllin razılaşdırılmış real ehtiyac və qəbul şərtlərini dəstəkləməsinin biznes yönümlü yoxlanılması.",
+    "example": {
+      "en": "A support agent checks whether the new refund workflow supports real support cases.",
+      "az": "Dəstək əməkdaşı yeni geriödəmə axınının real hallara uyğunluğunu yoxlayır."
+    }
+  },
+  {
+    "id": "rice",
+    "term": "RICE",
+    "aliases": ["RICE score"],
+    "context": "Product strategy",
+    "meaningAz": "RICE",
+    "definitionEn": "A prioritization heuristic considering reach, impact, confidence and effort; estimates and assumptions should remain explicit.",
+    "explanationAz": "Əhatə, təsir, inam və səyi nəzərə alan prioritetləşdirmə üsulu; qiymətləndirmə və fərziyyələr aydın qalmalıdır.",
+    "example": {
+      "en": "Compare reach, impact, confidence and effort before discussing item order.",
+      "az": "Elementlərin sırasını müzakirə etməzdən əvvəl əhatə, təsir, əminlik və zəhməti müqayisə et."
+    }
+  },
+  {
+    "id": "moscow",
+    "term": "MoSCoW",
+    "aliases": [],
+    "context": "Product strategy",
+    "meaningAz": "MoSCoW",
+    "definitionEn": "A way to discuss must, should, could and will-not-have priorities within an agreed time or scope boundary.",
+    "explanationAz": "Razılaşdırılmış vaxt və ya əhatədə mütləq, vacib, mümkün və olmayacaq prioritetləri müzakirə üsulu.",
+    "example": {
+      "en": "A legal deadline may make one capability a Must for this release.",
+      "az": "Hüquqi son tarix bir imkanı bu buraxılış üçün mütləq tələbə çevirə bilər."
+    }
+  },
+  {
+    "id": "product-goal",
+    "term": "Product Goal",
+    "aliases": ["product goals"],
+    "context": "Scrum",
+    "meaningAz": "Məhsul Məqsədi",
+    "definitionEn": "A future state of the product that gives the Scrum Team a direction for planning and is a commitment for the Product Backlog.",
+    "explanationAz": "Scrum Komandasına planlama istiqaməti verən və Məhsul İş Siyahısının öhdəliyi olan gələcək məhsul vəziyyəti.",
+    "example": {
+      "en": "Enable small merchants to reconcile a day of payments without a spreadsheet.",
+      "az": "Kiçik satıcılara bir günlük ödənişləri cədvəl proqramı olmadan üzləşdirmək imkanı yarat."
+    }
+  },
+  {
+    "id": "sprint-goal",
+    "term": "Sprint Goal",
+    "aliases": ["sprint goals"],
+    "context": "Scrum",
+    "meaningAz": "Sprint Məqsədi",
+    "definitionEn": "A single coherent objective for a Sprint that explains why the selected work matters.",
+    "explanationAz": "Seçilmiş işin niyə vacib olduğunu izah edən Sprint üçün vahid istiqamət.",
+    "example": {
+      "en": "Let merchants identify unmatched payments in one usable journey.",
+      "az": "Satıcılara uyğunlaşdırılmamış ödənişləri bir işlək axında tapmaq imkanı ver."
+    }
+  },
+  {
+    "id": "product-backlog",
+    "term": "Product Backlog",
+    "aliases": ["backlog", "product backlogs"],
+    "context": "Scrum",
+    "meaningAz": "Məhsul İş Siyahısı",
+    "definitionEn": "An emergent, ordered list of what is needed to improve the product.",
+    "explanationAz": "Məhsulu yaxşılaşdırmaq üçün lazım olanların inkişaf edən və sıralanmış siyahısı.",
+    "example": {
+      "en": "The Product Owner orders a small refund improvement ahead of a speculative dashboard.",
+      "az": "Product Owner kiçik geriödəmə təkmilləşdirməsini fərziyyəyə əsaslanan paneldən önə çəkir."
+    }
+  },
+  {
+    "id": "increment",
+    "term": "Increment",
+    "aliases": [],
+    "context": "Scrum",
+    "meaningAz": "İnkrement",
+    "definitionEn": "A usable addition to the product that meets the Definition of Done and combines with previous increments.",
+    "explanationAz": "Bitmişlik Tərifinə cavab verən və əvvəlki inkrementlərlə birləşən istifadəyə yararlı məhsul əlavəsi.",
+    "example": {
+      "en": "The integrated refund change meets Done and can be used with the existing product.",
+      "az": "İnteqrasiya olunmuş geriödəmə dəyişikliyi Done tərifinə uyğundur və mövcud məhsulla istifadə edilə bilər."
+    }
+  },
+  {
+    "id": "definition-of-done",
+    "term": "Definition of Done",
+    "aliases": ["DoD"],
+    "context": "Scrum",
+    "meaningAz": "Bitmişlik Tərifi",
+    "definitionEn": "A shared quality description that establishes when work is part of a usable Increment.",
+    "explanationAz": "İşin nə vaxt istifadəyə yararlı İnkrementin hissəsi olduğunu müəyyən edən ortaq keyfiyyət təsviri.",
+    "example": {
+      "en": "An item is not Done while a mandatory security check still fails.",
+      "az": "Məcburi təhlükəsizlik yoxlaması keçilmədiyi müddətdə element Done sayılmır."
+    }
+  },
+  {
+    "id": "product-owner",
+    "term": "Product Owner",
+    "aliases": ["PO", "product owners"],
+    "context": "Scrum",
+    "meaningAz": "Məhsul Sahibi",
+    "definitionEn": "The Scrum accountability focused on maximizing product value and effective Product Backlog management.",
+    "explanationAz": "Məhsul dəyərinin maksimumlaşdırılması və Məhsul İş Siyahısının səmərəli idarəsinə yönələn Scrum məsuliyyəti.",
+    "example": {
+      "en": "The Product Owner explains why booking reliability is ordered ahead of a custom report.",
+      "az": "Product Owner etibarlı rezervasiyanın xüsusi hesabatdan niyə əvvəl sıralandığını izah edir."
+    }
+  },
+  {
+    "id": "scrum-master",
+    "term": "Scrum Master",
+    "aliases": ["SM"],
+    "context": "Scrum",
+    "meaningAz": "Scrum Master",
+    "definitionEn": "The Scrum accountability focused on establishing Scrum as defined and supporting team effectiveness.",
+    "explanationAz": "Scrum-un müəyyən edildiyi kimi qurulması və komanda səmərəliliyinin dəstəklənməsinə yönələn məsuliyyət.",
+    "example": {
+      "en": "The Scrum Master helps the team address an approval delay that prevents adaptation.",
+      "az": "Scrum Master uyğunlaşmaya mane olan təsdiq gecikməsini aradan qaldırmaqda komandaya kömək edir."
+    }
+  },
+  {
+    "id": "developers",
+    "term": "Developers",
+    "aliases": ["developer"],
+    "context": "Scrum",
+    "meaningAz": "Tərtibatçılar",
+    "definitionEn": "People in a Scrum Team accountable for creating a usable Increment and adapting their plan toward the Sprint Goal.",
+    "explanationAz": "Scrum Komandasında yararlı İnkrement yaratmağa və planı Sprint Məqsədinə uyğunlaşdırmağa cavabdeh insanlar.",
+    "example": {
+      "en": "Developers choose how to implement a smaller solution that still achieves the Sprint Goal.",
+      "az": "Developers Sprint Goal-a çatan daha kiçik həllin necə həyata keçiriləcəyini seçir."
+    }
+  },
+  {
+    "id": "empiricism",
+    "term": "Empiricism",
+    "aliases": [],
+    "context": "Scrum",
+    "meaningAz": "Empirizm",
+    "definitionEn": "Learning from experience and making decisions using observed evidence, with transparency, inspection and adaptation.",
+    "explanationAz": "Şəffaflıq, yoxlama və uyğunlaşma ilə təcrübədən öyrənmək və müşahidə olunan sübuta əsasən qərar vermək.",
+    "example": {
+      "en": "After observing low completion, the team changes its onboarding hypothesis.",
+      "az": "Aşağı tamamlama göstəricisini müşahidə etdikdən sonra komanda onboarding fərziyyəsini dəyişir."
+    }
+  },
+  {
+    "id": "refinement",
+    "term": "Backlog refinement",
+    "aliases": ["refinement", "product backlog refinement", "backlog grooming"],
+    "context": "Scrum",
+    "meaningAz": "İş siyahısının dəqiqləşdirilməsi",
+    "definitionEn": "Ongoing work to break down and clarify backlog items so they are better understood.",
+    "explanationAz": "İş elementlərini daha yaxşı anlamaq üçün hissələrə ayırmaq və aydınlaşdırmaq üzrə davamlı iş.",
+    "example": {
+      "en": "Split a large booking item into smaller, clearer pieces that can be Done within a Sprint.",
+      "az": "Böyük rezervasiya elementini bir Sprint-də Done ola bilən daha kiçik və aydın hissələrə böl."
+    }
+  },
+  {
+    "id": "jtbd",
+    "term": "Jobs to Be Done",
+    "aliases": ["JTBD", "job to be done"],
+    "context": "Product strategy",
+    "meaningAz": "Görülməli işlər yanaşması",
+    "definitionEn": "A lens for investigating the progress a person seeks in a particular situation and the alternatives they use.",
+    "explanationAz": "İnsanın müəyyən vəziyyətdə istədiyi irəliləyişi və istifadə etdiyi alternativləri araşdırmaq üçün baxış.",
+    "example": {
+      "en": "A merchant hires the report to explain discrepancies, not simply to download a file.",
+      "az": "Satıcı hesabatdan sadəcə fayl yükləmək üçün deyil, uyğunsuzluğu izah etmək üçün istifadə edir."
+    }
+  },
+  {
+    "id": "okr",
+    "term": "Objectives and Key Results",
+    "aliases": ["OKR", "OKRs"],
+    "context": "Product strategy",
+    "meaningAz": "Məqsədlər və Açar Nəticələr",
+    "definitionEn": "A goal-setting approach that connects a direction with measurable results, separating results from initiatives.",
+    "explanationAz": "Nəticəni təşəbbüsdən ayıraraq istiqaməti ölçülən nəticələrə bağlayan məqsədqoyma yanaşması.",
+    "example": {
+      "en": "Set an outcome such as fewer missed appointments, then choose measurable key results.",
+      "az": "Buraxılan görüşlərin azalması kimi nəticə seç, sonra ölçülən əsas nəticələr müəyyən et."
+    }
+  },
+  {
+    "id": "north-star",
+    "term": "North Star metric",
+    "aliases": ["north star", "north-star metric"],
+    "context": "Product strategy",
+    "meaningAz": "Əsas İstiqamət göstəricisi",
+    "definitionEn": "A candidate measure of recurring customer value that helps coordinate product decisions; it still needs guardrails.",
+    "explanationAz": "Məhsul qərarlarını əlaqələndirən təkrarlanan müştəri dəyəri ölçüsü; qoruyucu göstəricilər yenə lazımdır.",
+    "example": {
+      "en": "Use successful weekly reconciliations as one candidate signal of delivered merchant value.",
+      "az": "Həftəlik uğurlu üzləşdirmələri satıcıya çatdırılan dəyərin mümkün göstəricilərindən biri kimi istifadə et."
+    }
+  },
+  {
+    "id": "guardrail",
+    "term": "Guardrail metric",
+    "aliases": ["guardrail", "guardrails"],
+    "context": "Product strategy",
+    "meaningAz": "Qoruyucu göstərici",
+    "definitionEn": "A measure used to observe unacceptable side effects while pursuing a primary outcome.",
+    "explanationAz": "Əsas nəticəni izləyərkən qəbuledilməz yan təsirləri müşahidə etmək üçün ölçü.",
+    "example": {
+      "en": "Track refund complaints while testing a change that increases purchases.",
+      "az": "Alışları artıran dəyişikliyi sınayarkən geriödəmə şikayətlərini də izlə."
+    }
+  },
+  {
+    "id": "ebm",
+    "term": "Evidence-Based Management",
+    "aliases": ["EBM", "evidence based management"],
+    "context": "Product strategy",
+    "meaningAz": "Sübuta əsaslanan idarəetmə",
+    "definitionEn": "An approach to improving value through goals, experiments and evidence about outcomes and organizational capability.",
+    "explanationAz": "Məqsəd, eksperiment, nəticə və təşkilati qabiliyyət sübutu ilə dəyəri yaxşılaşdıran yanaşma.",
+    "example": {
+      "en": "Measure customer outcomes and experiment instead of judging success only by feature count.",
+      "az": "Uğuru yalnız funksiya sayı ilə qiymətləndirmək əvəzinə müştəri nəticələrini ölç və sınaqlar apar."
+    }
+  },
+  {
+    "id": "forecast",
+    "term": "Forecast",
+    "aliases": ["forecasting", "forecasts"],
+    "context": "Product strategy",
+    "meaningAz": "Proqnoz",
+    "definitionEn": "An evidence-based estimate of a future outcome that should make uncertainty and assumptions visible.",
+    "explanationAz": "Qeyri-müəyyənlik və fərziyyələri görünən etməli olan gələcək nəticənin sübut əsaslı qiymətləndirilməsi.",
+    "example": {
+      "en": "Give a delivery range using comparable completed work and state the assumptions.",
+      "az": "Müqayisə edilə bilən bitmiş işə əsaslanan çatdırılma aralığı ver və fərziyyələri açıq göstər."
+    }
+  },
+  {
+    "id": "opportunity-cost",
+    "term": "Opportunity cost",
+    "aliases": [],
+    "context": "Product strategy",
+    "meaningAz": "Fürsət xərci",
+    "definitionEn": "The value of the best alternative forgone when choosing how to use limited resources.",
+    "explanationAz": "Məhdud resursdan istifadə seçimi ediləndə imtina olunan ən yaxşı alternativin dəyəri.",
+    "example": {
+      "en": "Using the only specialist for a custom export delays the reliability improvement.",
+      "az": "Yeganə mütəxəssisi xüsusi ixraca ayırmaq etibarlılıq təkmilləşdirməsini gecikdirir."
+    }
+  },
+  {
+    "id": "accessibility",
+    "term": "Accessibility",
+    "aliases": [],
+    "context": "Engineering",
+    "meaningAz": "Əlçatanlıq",
+    "definitionEn": "Designing and evaluating a service so people with different abilities can perceive, understand and use it.",
+    "explanationAz": "Fərqli qabiliyyətli insanların xidməti qavraya, anlaya və istifadə edə bilməsi üçün dizayn və qiymətləndirmə.",
+    "example": {
+      "en": "A learner can navigate the quiz and read feedback using a keyboard and screen reader.",
+      "az": "Öyrənən şəxs klaviatura və ekran oxuyucusu ilə quiz-i idarə edib izahı oxuya bilir."
+    }
+  },
+  {
+    "id": "hypothesis",
+    "term": "Hypothesis",
+    "aliases": ["hypotheses"],
+    "context": "Product strategy",
+    "meaningAz": "Fərziyyə",
+    "definitionEn": "A testable explanation or prediction that could be challenged by new evidence.",
+    "explanationAz": "Yeni sübutla sorğulana bilən, yoxlanıla bilən izah və ya proqnoz.",
+    "example": {
+      "en": "We believe clearer topic selection will help new learners finish their first lesson.",
+      "az": "Daha aydın mövzu seçiminin yeni istifadəçilərə ilk dərsi bitirməkdə kömək edəcəyini düşünürük."
+    }
+  },
+  {
+    "id": "readiness",
+    "term": "Learning readiness",
+    "aliases": ["exam readiness"],
+    "context": "Learning",
+    "meaningAz": "Öyrənmə hazırlığı",
+    "definitionEn": "An educational indicator based on tracked practice or self-assessment, not a guarantee of exam success or eligibility.",
+    "explanationAz": "İzlənilən məşq və ya özünüqiymətləndirməyə əsaslanan tədris göstəricisi; imtahan uğuru və ya uyğunluq zəmanəti deyil.",
+    "example": {
+      "en": "A practice score helps identify gaps but does not guarantee an official exam result.",
+      "az": "Məşq nəticəsi boşluqları tapmağa kömək edir, amma rəsmi imtahan nəticəsinə zəmanət vermir."
+    }
+  },
+  {
+    "id": "onboarding",
+    "term": "Onboarding",
+    "aliases": ["user onboarding", "on-board", "on boarding", "onboard"],
+    "context": "Product experience",
+    "meaningAz": "Yeni istifadəçinin məhsula alışması",
+    "definitionEn": "The experience that helps a new user understand a product and reach their first useful result.",
+    "explanationAz": "Məhsul kontekstində onboarding yeni istifadəçiyə qeydiyyatdan sonra məhsulun necə işlədiyini anlamaqda və ilk faydalı nəticəyə çatmaqda kömək edən prosesdir. Bu, yalnız giriş ekranı və ya qeydiyyat deyil; işçi qəbulunda isə ayrıca işə uyğunlaşma mənası var.",
+    "example": {
+      "en": "Good onboarding helps a new learner choose a goal and complete a first lesson.",
+      "az": "Yaxşı onboarding yeni istifadəçiyə hədəf seçib ilk dərsi tamamlamaqda kömək edir."
+    }
+  },
+  {
+    "id": "activation",
+    "term": "Activation",
+    "aliases": ["user activation"],
+    "context": "Product experience",
+    "meaningAz": "İlk mənalı faydanın əldə edilməsi",
+    "definitionEn": "A context-defined milestone indicating that a user has experienced an important initial benefit.",
+    "explanationAz": "Activation məhsulun məqsədinə görə müəyyən edilən ilk fayda mərhələsidir. Sadəcə qeydiyyat hər məhsulda real faydanın sübutu deyil.",
+    "example": {
+      "en": "For a booking product, a first completed booking may be an activation milestone.",
+      "az": "Rezervasiya məhsulunda ilk tamamlanmış rezervasiya activation mərhələsi ola bilər."
+    }
+  },
+  {
+    "id": "retention",
+    "term": "Retention",
+    "aliases": ["user retention", "customer retention"],
+    "context": "Product experience",
+    "meaningAz": "İstifadəçilərin məhsula davam etməsi",
+    "definitionEn": "The extent to which a defined group of users continues using a product over a stated period.",
+    "explanationAz": "Retention müəyyən istifadəçi qrupunun seçilmiş müddət ərzində məhsuldan istifadəyə davam etməsini göstərir. Qrupu və müddəti demədən faizi şərh etmək çətindir.",
+    "example": {
+      "en": "Compare week-four retention for users who joined during the same week.",
+      "az": "Eyni həftədə qoşulan istifadəçilərin dördüncü həftədə istifadəyə davam etməsini müqayisə et."
+    }
+  },
+  {
+    "id": "cohort",
+    "term": "Cohort",
+    "aliases": ["cohorts", "cohort analysis"],
+    "context": "Product experience",
+    "meaningAz": "Ortaq xüsusiyyətə görə seçilmiş istifadəçi qrupu",
+    "definitionEn": "A group of users defined by a shared characteristic or starting event for analysis over time.",
+    "explanationAz": "Kohort eyni həftədə qeydiyyatdan keçmək kimi ortaq başlanğıca görə seçilmiş qrupdur. Bu yanaşma müxtəlif qrupların davranışını qarışdırmadan izləməyə kömək edir.",
+    "example": {
+      "en": "Measure completion separately for the January signup cohort.",
+      "az": "Yanvar ayında qeydiyyatdan keçən qrupun tamamlama göstəricisini ayrıca ölç."
+    }
+  },
+  {
+    "id": "business-requirement",
+    "term": "Business requirement",
+    "aliases": ["business requirements"],
+    "context": "Business analysis",
+    "meaningAz": "Biznes tələbi",
+    "definitionEn": "A high-level statement of the goals, objectives or outcomes explaining why a change is needed.",
+    "explanationAz": "Biznes tələbi dəyişikliyin niyə lazım olduğunu göstərən yüksək səviyyəli məqsəd və nəticəni ifadə edir; konkret ekranın necə qurulacağını izah etmir.",
+    "example": {
+      "en": "Reduce the time needed to resolve refund requests.",
+      "az": "Geriödəmə müraciətlərinin həll müddətini azalt."
+    }
+  },
+  {
+    "id": "stakeholder-requirement",
+    "term": "Stakeholder requirement",
+    "aliases": ["stakeholder requirements"],
+    "context": "Business analysis",
+    "meaningAz": "Maraqlı tərəf tələbi",
+    "definitionEn": "A description of a stakeholder need that must be met to achieve business requirements.",
+    "explanationAz": "Maraqlı tərəf tələbi biznes məqsədinə çatmaq üçün konkret istifadəçi və ya qrupun nəyə ehtiyac duyduğunu göstərir.",
+    "example": {
+      "en": "Support agents need to see the reason a refund was rejected.",
+      "az": "Dəstək əməkdaşları geriödəmənin rədd səbəbini görməlidir."
+    }
+  },
+  {
+    "id": "transition-requirement",
+    "term": "Transition requirement",
+    "aliases": ["transition requirements"],
+    "context": "Business analysis",
+    "meaningAz": "Keçid tələbi",
+    "definitionEn": "A temporary capability or condition needed to move from the current state to the future state.",
+    "explanationAz": "Keçid tələbi köhnə vəziyyətdən yenisinə keçmək üçün lazım olan müvəqqəti şərtdir; məlumat miqrasiyası və təlim buna nümunə ola bilər.",
+    "example": {
+      "en": "Import historical bookings before switching off the old system.",
+      "az": "Köhnə sistemi dayandırmazdan əvvəl əvvəlki rezervasiyaları yeni sistemə köçür."
+    }
+  },
+  {
+    "id": "design",
+    "term": "Design",
+    "aliases": ["designs", "design option", "design options"],
+    "context": "Business analysis",
+    "meaningAz": "Həllin təsviri",
+    "definitionEn": "A representation of how a possible solution could satisfy a need.",
+    "explanationAz": "Biznes analizində design ehtiyacın necə ödənə biləcəyinə dair həll təsviridir. Requirement ehtiyacı göstərir; design həmin ehtiyaca mümkün cavabı formalaşdırır.",
+    "example": {
+      "en": "The requirement is faster lookup; a searchable table is one design option.",
+      "az": "Tələb daha sürətli axtarışdır; axtarılan cədvəl mümkün həll variantlarından biridir."
+    }
+  },
+  {
+    "id": "verification",
+    "term": "Verification",
+    "aliases": ["verify", "requirements verification"],
+    "context": "Business analysis",
+    "meaningAz": "Tələbin keyfiyyətinin yoxlanması",
+    "definitionEn": "Checking that requirements and designs are described with sufficient quality and consistency for their intended use.",
+    "explanationAz": "BABOK kontekstində verification tələbin aydın, uyğun və istifadə üçün kifayət qədər keyfiyyətli yazılmasını yoxlayır. Bu, həllin doğru biznes ehtiyacını qarşılayıb-qarşılamadığını yoxlayan validation ilə eyni deyil.",
+    "example": {
+      "en": "Verify that the refund rule has no ambiguous conditions.",
+      "az": "Geriödəmə qaydasında qeyri-müəyyən şərtin olmadığını yoxla."
+    }
+  },
+  {
+    "id": "validation",
+    "term": "Validation",
+    "aliases": ["validate", "requirements validation"],
+    "context": "Business analysis",
+    "meaningAz": "Ehtiyaca və dəyərə uyğunluğun yoxlanması",
+    "definitionEn": "Checking whether requirements, designs or a solution support the intended need and value in context.",
+    "explanationAz": "Biznes analizində validation təsvir edilən tələbin və həllin doğru ehtiyaca xidmət edib-etmədiyini yoxlayır. Məhsul sınağında da fərziyyəni real istifadə nəticəsi ilə tutuşdurmaq mənasında işlənir.",
+    "example": {
+      "en": "Validate whether a custom report actually helps merchants resolve discrepancies.",
+      "az": "Xüsusi hesabatın satıcılara uyğunsuzluğu həll etməkdə həqiqətən kömək edib-etmədiyini yoxla."
+    }
+  },
+  {
+    "id": "dependency",
+    "term": "Dependency",
+    "aliases": ["dependencies"],
+    "context": "Business analysis",
+    "meaningAz": "Asılılıq",
+    "definitionEn": "A relationship in which a piece of work, decision or outcome relies on another condition or piece of work.",
+    "explanationAz": "Asılılıq bir işin başqa işə, qərara və ya şərtə bağlı olmasıdır. Bu, işin sıralanmasına və çatdırılma qeyri-müəyyənliyinə təsir edə bilər.",
+    "example": {
+      "en": "The refund screen depends on the payment service exposing refund status.",
+      "az": "Geriödəmə ekranı ödəniş xidmətinin geriödəmə statusunu təqdim etməsindən asılıdır."
+    }
+  },
+  {
+    "id": "assumption",
+    "term": "Assumption",
+    "aliases": ["assumptions"],
+    "context": "Business analysis",
+    "meaningAz": "Fərziyyə",
+    "definitionEn": "Something treated as true for planning or reasoning before sufficient confirmation is available.",
+    "explanationAz": "Fərziyyə hələ kifayət qədər təsdiqlənmədən doğru qəbul edilən fikirdir. Qərara təsir edirsə görünən edilməli və uyğun sübutla yoxlanmalıdır.",
+    "example": {
+      "en": "We assume new users understand the word backlog.",
+      "az": "Yeni istifadəçilərin backlog sözünü anladığını fərz edirik."
+    }
+  },
+  {
+    "id": "constraint",
+    "term": "Constraint",
+    "aliases": ["constraints"],
+    "context": "Business analysis",
+    "meaningAz": "Məhdudiyyət",
+    "definitionEn": "A condition that limits the available choices for a solution or way of working.",
+    "explanationAz": "Məhdudiyyət həll və iş üsulu üçün mümkün seçimləri daraldan şərtdir. Hüquqi tələb, uyğunluq şərti və texniki sərhəd buna nümunə ola bilər.",
+    "example": {
+      "en": "The service must work with the existing identity provider.",
+      "az": "Xidmət mövcud identifikasiya sistemi ilə işləməlidir."
+    }
+  },
+  {
+    "id": "risk",
+    "term": "Risk",
+    "aliases": ["risks"],
+    "context": "Business analysis",
+    "meaningAz": "Risk",
+    "definitionEn": "An uncertain event or condition that could affect an objective.",
+    "explanationAz": "Risk məqsədə təsir edə biləcək qeyri-müəyyən hadisə və ya şərtdir. Mövcud faktiki problem ilə gələcək ehtimalı ayırmaq qərarı aydınlaşdırır.",
+    "example": {
+      "en": "A third-party API change could interrupt booking confirmations.",
+      "az": "Üçüncü tərəfin API dəyişikliyi rezervasiya təsdiqlərini poza bilər."
+    }
+  },
+  {
+    "id": "business-case",
+    "term": "Business case",
+    "aliases": ["business cases"],
+    "context": "Business analysis",
+    "meaningAz": "Dəyişiklik üçün əsaslandırma",
+    "definitionEn": "An explanation of why an investment or change is worth considering, including expected benefits, costs and risks.",
+    "explanationAz": "Business case investisiyanın niyə dəyərli ola biləcəyini gözlənilən fayda, xərc və risklə əsaslandırır. Bu, gələcək nəticənin zəmanəti deyil.",
+    "example": {
+      "en": "Compare the expected benefit of automation with its implementation and operating costs.",
+      "az": "Avtomatlaşdırmanın gözlənilən faydasını qurulma və işləmə xərcləri ilə müqayisə et."
+    }
+  },
+  {
+    "id": "stakeholder-engagement",
+    "term": "Stakeholder engagement",
+    "aliases": ["stakeholder collaboration"],
+    "context": "Business analysis",
+    "meaningAz": "Maraqlı tərəflərin iştirakı",
+    "definitionEn": "Planned interaction that enables stakeholders to contribute to and remain informed about a change.",
+    "explanationAz": "Bu anlayış maraqlı tərəflərin ehtiyac və qərarlara vaxtında töhfə verməsini, lazımi məlumatı almasını təşkil etməyi bildirir.",
+    "example": {
+      "en": "Invite support agents early enough to discuss the proposed refund flow.",
+      "az": "Təklif edilən geriödəmə axınını müzakirə etmək üçün dəstək əməkdaşlarını erkən cəlb et."
+    }
+  },
+  {
+    "id": "outcome",
+    "term": "Outcome",
+    "aliases": ["outcomes", "customer outcome", "user outcome"],
+    "context": "Measurement",
+    "meaningAz": "İstifadəçinin əldə etdiyi nəticə",
+    "definitionEn": "A change in the experience or capability of a customer or user.",
+    "explanationAz": "Məhsul və EBM kontekstində outcome istifadəçinin əldə etdiyi dəyişmiş nəticədir. Funksiyanın buraxılması çıxışdır; istifadəçinin işini daha rahat bitirməsi nəticə ola bilər.",
+    "example": {
+      "en": "Users complete a booking without calling support.",
+      "az": "İstifadəçilər dəstəyə zəng etmədən rezervasiyanı tamamlayır."
+    }
+  },
+  {
+    "id": "output",
+    "term": "Output",
+    "aliases": ["outputs"],
+    "context": "Measurement",
+    "meaningAz": "Hazırlanmış məhsul və ya çıxış",
+    "definitionEn": "Something produced by work, such as a feature, release or report.",
+    "explanationAz": "Output görülən işin yaratdığı funksiya, buraxılış və ya hesabatdır. Onun çox olması istifadəçiyə daha çox fayda verildiyini təkbaşına sübut etmir.",
+    "example": {
+      "en": "The team releases a new search filter.",
+      "az": "Komanda yeni axtarış filtri buraxır."
+    }
+  },
+  {
+    "id": "impact",
+    "term": "Impact",
+    "aliases": ["impacts", "business impact"],
+    "context": "Measurement",
+    "meaningAz": "Təşkilat və maraqlı tərəflər üçün təsir",
+    "definitionEn": "A result for the organization or its non-customer stakeholders arising in relation to customer outcomes.",
+    "explanationAz": "EBM kontekstində impact təşkilatın və istifadəçi olmayan maraqlı tərəflərin əldə etdiyi təsirdir; məsələn davamlı gəlir artımı. Bu anlayış istifadəçi nəticəsi ilə eyni deyil.",
+    "example": {
+      "en": "Better merchant outcomes contribute to lower churn and sustainable revenue.",
+      "az": "Satıcıların daha yaxşı nəticələri müştəri itkisinin azalmasına və davamlı gəlirə kömək edir."
+    }
+  },
+  {
+    "id": "input",
+    "term": "Input",
+    "aliases": ["inputs"],
+    "context": "Measurement",
+    "meaningAz": "Sərf olunan giriş resursu",
+    "definitionEn": "Something invested or consumed to perform work, such as funding or capacity.",
+    "explanationAz": "Input işə sərf olunan maliyyə və ya tutum kimi girişdir. Daha böyük büdcə daha böyük müştəri faydasının avtomatik sübutu deyil.",
+    "example": {
+      "en": "The experiment has a limited budget and one week of team capacity.",
+      "az": "Eksperimentin məhdud büdcəsi və bir həftəlik komanda tutumu var."
+    }
+  },
+  {
+    "id": "activity",
+    "term": "Activity",
+    "aliases": ["activities"],
+    "context": "Measurement",
+    "meaningAz": "Görülən fəaliyyət",
+    "definitionEn": "Something people do while working, rather than the result users experience.",
+    "explanationAz": "Activity insanların gördüyü fəaliyyət, məsələn görüş, müsahibə və kod yazmaqdır. Fəaliyyət sayını nəticə ilə qarışdırmaq fayda haqqında yanlış qənaət yarada bilər.",
+    "example": {
+      "en": "The team conducts five interviews.",
+      "az": "Komanda beş müsahibə aparır."
+    }
+  },
+  {
+    "id": "sprint",
+    "term": "Sprint",
+    "aliases": ["sprints"],
+    "context": "Scrum",
+    "meaningAz": "Sabit müddətli Scrum dövrü",
+    "definitionEn": "A fixed-length event of one month or less containing the other Scrum events and product work.",
+    "explanationAz": "Sprint bir ay və ya daha qısa sabit müddətli Scrum dövrüdür. Bitən kimi növbətisi başlayır; içində məhsul işi və digər tədbirlər yer alır.",
+    "example": {
+      "en": "During a Sprint the team works toward one Sprint Goal.",
+      "az": "Sprint ərzində komanda bir Sprint Goal-a doğru işləyir."
+    }
+  },
+  {
+    "id": "sprint-planning",
+    "term": "Sprint Planning",
+    "aliases": ["planning"],
+    "context": "Scrum",
+    "meaningAz": "Sprint-in planlaşdırılması",
+    "definitionEn": "The event in which the Scrum Team establishes why the Sprint is valuable, what can be done and how the work will be approached.",
+    "explanationAz": "Bu tədbirdə komanda Sprint-in niyə dəyərli olduğunu, nə edilə biləcəyini və necə işləyəcəyini müzakirə edir. Sprint Goal tədbir bitmədən müəyyən edilir.",
+    "example": {
+      "en": "Developers select work after discussing the Product Goal and available capacity.",
+      "az": "Developers Product Goal və mövcud tutum barədə müzakirədən sonra işi seçir."
+    }
+  },
+  {
+    "id": "daily-scrum",
+    "term": "Daily Scrum",
+    "aliases": ["daily", "daily scrums"],
+    "context": "Scrum",
+    "meaningAz": "Gündəlik Scrum tədbiri",
+    "definitionEn": "A 15-minute event for Developers to inspect progress toward the Sprint Goal and adapt the Sprint Backlog.",
+    "explanationAz": "Daily Scrum Developers üçün Sprint Goal-a irəliləyişi yoxlayıb planı uyğunlaşdırmaq tədbiridir; rəhbərə fərdi status hesabatı deyil.",
+    "example": {
+      "en": "Developers decide how to unblock work that threatens the Sprint Goal.",
+      "az": "Developers Sprint Goal-a mane olan işi necə açacaqlarına qərar verir."
+    }
+  },
+  {
+    "id": "sprint-review",
+    "term": "Sprint Review",
+    "aliases": ["review", "sprint reviews"],
+    "context": "Scrum",
+    "meaningAz": "Sprint nəticəsinin birgə yoxlanması",
+    "definitionEn": "A working session with stakeholders to inspect the Sprint outcome and discuss future adaptations.",
+    "explanationAz": "Sprint Review nəticəni və dəyişən şəraiti maraqlı tərəflərlə yoxlayan iş sessiyasıdır. Buraxılış üçün məcburi təsdiq qapısı deyil.",
+    "example": {
+      "en": "Stakeholders try the usable change and discuss what the team should adapt next.",
+      "az": "Maraqlı tərəflər işlək dəyişikliyi yoxlayıb növbəti uyğunlaşmanı müzakirə edir."
+    }
+  },
+  {
+    "id": "sprint-retrospective",
+    "term": "Sprint Retrospective",
+    "aliases": ["retrospective", "retro", "retrospectives"],
+    "context": "Scrum",
+    "meaningAz": "Komandanın iş üsulunu təkmilləşdirmə tədbiri",
+    "definitionEn": "The Scrum event for planning ways to improve quality and effectiveness.",
+    "explanationAz": "Retrospective komandanın qarşılıqlı əlaqələrini, prosesini, alətlərini və keyfiyyətini yaxşılaşdırmaq yollarını planlaşdırır. Məqsəd insanları günahlandırmaq deyil.",
+    "example": {
+      "en": "The team investigates repeated integration delays and chooses an improvement.",
+      "az": "Komanda təkrarlanan inteqrasiya gecikmələrini araşdırıb yaxşılaşdırma seçir."
+    }
+  },
+  {
+    "id": "sprint-backlog",
+    "term": "Sprint Backlog",
+    "aliases": ["sprint backlogs"],
+    "context": "Scrum",
+    "meaningAz": "Sprint Məqsədi, seçilmiş iş və icra planı",
+    "definitionEn": "The Sprint Goal, selected Product Backlog items and actionable delivery plan, owned and adapted by Developers.",
+    "explanationAz": "Sprint Backlog niyə, nə və necə suallarını birləşdirir. Developers üçün və onlar tərəfindən qurulan, yeni məlumata görə yenilənən plandır.",
+    "example": {
+      "en": "Developers update their plan when they discover a simpler implementation.",
+      "az": "Developers daha sadə texniki həll tapanda planını yeniləyir."
+    }
+  },
+  {
+    "id": "transparency",
+    "term": "Transparency",
+    "aliases": ["transparent"],
+    "context": "Scrum",
+    "meaningAz": "Şəffaflıq",
+    "definitionEn": "Making relevant work and its state visible and understandable to support sound decisions.",
+    "explanationAz": "Scrum-da şəffaflıq işin və artefaktların vəziyyətinin görünən və başa düşülən olmasıdır. Yanlış və gizli məlumat yoxlamanı zəiflədir.",
+    "example": {
+      "en": "Show unfinished security checks rather than labeling the item Done.",
+      "az": "Elementi Done saymaq əvəzinə bitməmiş təhlükəsizlik yoxlamalarını göstər."
+    }
+  },
+  {
+    "id": "inspection",
+    "term": "Inspection",
+    "aliases": ["inspect"],
+    "context": "Scrum",
+    "meaningAz": "Yoxlama və müşahidə",
+    "definitionEn": "Examining artifacts and progress toward goals to detect problems or useful new information.",
+    "explanationAz": "Inspection məqsədə irəliləyişi və artefaktları diqqətlə yoxlayıb problem və yeni məlumatı tapmaqdır. Yoxlama lazımi uyğunlaşmaya yol açmalıdır.",
+    "example": {
+      "en": "Inspect actual completion rates after the onboarding change.",
+      "az": "Onboarding dəyişikliyindən sonra faktiki tamamlama göstəricisini yoxla."
+    }
+  },
+  {
+    "id": "adaptation",
+    "term": "Adaptation",
+    "aliases": ["adapt", "adapting"],
+    "context": "Scrum",
+    "meaningAz": "Uyğunlaşma",
+    "definitionEn": "Changing a plan, process or product in response to what has been learned.",
+    "explanationAz": "Adaptation müşahidə və öyrənməyə əsasən planı, prosesi və ya məhsulu dəyişməkdir. Eyni işi nəticədən asılı olmayaraq təkrarlamaq uyğunlaşma deyil.",
+    "example": {
+      "en": "Reorder the backlog after evidence reveals a more important customer need.",
+      "az": "Sübut daha vacib müştəri ehtiyacını üzə çıxaranda backlog-un sırasını dəyiş."
+    }
+  },
+  {
+    "id": "self-management",
+    "term": "Self-management",
+    "aliases": ["self managing", "self-managing", "self managing team", "self-managing team"],
+    "context": "Scrum",
+    "meaningAz": "Özünüidarəetmə",
+    "definitionEn": "The team’s ability to decide internally who does what, when and how within shared goals and constraints.",
+    "explanationAz": "Özünüidarəetmə ortaq məqsəd və sərhədlər daxilində işi kimin, nə vaxt və necə görəcəyini komandanın müəyyən etməsidir. Məqsədsiz sərbəstlik demək deyil.",
+    "example": {
+      "en": "Developers decide together how to organize work to achieve the Sprint Goal.",
+      "az": "Developers Sprint Goal-a çatmaq üçün işi necə təşkil edəcəklərini birlikdə müəyyən edir."
+    }
+  },
+  {
+    "id": "cross-functional-team",
+    "term": "Cross-functional team",
+    "aliases": ["cross functional", "cross-functional", "cross functional team"],
+    "context": "Scrum",
+    "meaningAz": "Birlikdə zəruri bacarıqlara malik komanda",
+    "definitionEn": "A team that collectively has the skills needed to create value, rather than requiring every person to have every skill.",
+    "explanationAz": "Cross-functional komanda olaraq zəruri bacarıqların mövcud olmasıdır. Bu, hər bir üzvün bütün peşələri bilməli olduğu demək deyil.",
+    "example": {
+      "en": "The team can research, build, test and operate a small usable change together.",
+      "az": "Komanda kiçik işlək dəyişikliyi birlikdə araşdırıb hazırlaya, sınaqdan keçirə və işlədə bilir."
+    }
+  },
+  {
+    "id": "cycle-time",
+    "term": "Cycle time",
+    "aliases": ["cycle-time", "CT"],
+    "context": "Flow",
+    "meaningAz": "Başlanmış işin bitmə müddəti",
+    "definitionEn": "Elapsed time between a work item starting and finishing within defined workflow boundaries.",
+    "explanationAz": "Cycle Time razılaşdırılmış başlama və bitmə nöqtələri arasında keçən vaxtdır. Bitməmiş işin indiyə qədərki yaşı ayrıca Work Item Age-dir.",
+    "example": {
+      "en": "An item starts on Monday and finishes on Thursday; measure elapsed time between those points.",
+      "az": "İş bazar ertəsi başlayıb cümə axşamı bitirsə, həmin nöqtələr arasındakı vaxtı ölç."
+    }
+  },
+  {
+    "id": "lead-time",
+    "term": "Lead time",
+    "aliases": ["lead-time"],
+    "context": "Flow",
+    "meaningAz": "Sorğudan və ya ideyadan nəticəyə qədər müddət",
+    "definitionEn": "Elapsed time from a defined request or idea point until its defined delivery or benefit point.",
+    "explanationAz": "Lead time üçün başlanğıc və son sərhədləri kontekstdə dəqiq demək lazımdır. Bu müddət işin aktiv icrasından əvvəlki gözləməni də əhatə edə bilər.",
+    "example": {
+      "en": "Measure from a customer request being received until the usable change reaches them.",
+      "az": "Müştəri müraciəti alındığı andan işlək dəyişiklik ona çatana qədər vaxtı ölç."
+    }
+  },
+  {
+    "id": "work-in-progress",
+    "term": "Work in progress",
+    "aliases": ["WIP", "work-in-progress"],
+    "context": "Flow",
+    "meaningAz": "Başlanmış, bitməmiş iş",
+    "definitionEn": "The number of work items started but not yet finished.",
+    "explanationAz": "WIP başlanmış, lakin bitməmiş iş sayıdır. WIP-in faktiki sayı müşahidədir, WIP limiti isə komandanın iş siyasətidir.",
+    "example": {
+      "en": "Four open items against a limit of four means there is no free slot to start another.",
+      "az": "Limit dörd olduğu halda dörd açıq iş varsa yeni işi başlamaq üçün boş yer yoxdur."
+    }
+  },
+  {
+    "id": "throughput",
+    "term": "Throughput",
+    "aliases": ["through-put"],
+    "context": "Flow",
+    "meaningAz": "Zaman vahidində bitən iş sayı",
+    "definitionEn": "The count of work items finished per unit of time.",
+    "explanationAz": "Throughput həftə kimi zaman vahidində bitən işlərin sayıdır; story point-lərin cəmi deyil. Müqayisə üçün iş və sistem sərhədləri uyğun olmalıdır.",
+    "example": {
+      "en": "The team finished eight items last week.",
+      "az": "Komanda keçən həftə səkkiz işi bitirib."
+    }
+  },
+  {
+    "id": "work-item-age",
+    "term": "Work item age",
+    "aliases": ["item age", "ageing work", "aging work"],
+    "context": "Flow",
+    "meaningAz": "Davam edən işin yaşı",
+    "definitionEn": "Elapsed time from the start of an unfinished work item until now.",
+    "explanationAz": "Work Item Age hələ bitməmiş işin başlama anından indiyə qədər keçən vaxtdır. Yaşlanan iş bloklanma və gözləmə barədə söhbət yaradır.",
+    "example": {
+      "en": "An unfinished item that started six days ago has an age of six elapsed days.",
+      "az": "Altı gün əvvəl başlamış bitməmiş işin yaşı altı gündür."
+    }
+  },
+  {
+    "id": "service-level-expectation",
+    "term": "Service level expectation",
+    "aliases": ["SLE", "service-level expectation"],
+    "context": "Flow",
+    "meaningAz": "Ehtimallı tamamlanma gözləntisi",
+    "definitionEn": "A forecast combining an elapsed-time range and a probability for work to finish.",
+    "explanationAz": "SLE müddəti ehtimalla birlikdə göstərir. Məsələn, işlərin 85 faizinin səkkiz günə bitməsi hər bir iş üçün zəmanət deyil.",
+    "example": {
+      "en": "Use an SLE of eight days at 85 percent to notice aging work that needs attention.",
+      "az": "Diqqət tələb edən yaşlanan işi tapmaq üçün səkkiz gün və 85 faiz SLE-dən istifadə et."
+    }
+  },
+  {
+    "id": "current-value",
+    "term": "Current value",
+    "aliases": ["CV"],
+    "context": "Evidence-Based Management",
+    "meaningAz": "Hazırda çatdırılan dəyər",
+    "definitionEn": "The value a product delivers to customers and stakeholders at the present time.",
+    "explanationAz": "CV hazırda məhsuldan alınan dəyərə baxır. Yalnız gəlirə baxmaq istifadəçi və əməkdaş təcrübəsini gizlədə bilər.",
+    "example": {
+      "en": "Examine whether current users can complete the task and are satisfied with the result.",
+      "az": "Hazırkı istifadəçilərin işi bitirib nəticədən razı olub-olmadığını araşdır."
+    }
+  },
+  {
+    "id": "unrealized-value",
+    "term": "Unrealized value",
+    "aliases": ["UV", "unrealised value"],
+    "context": "Evidence-Based Management",
+    "meaningAz": "Hələ reallaşmamış dəyər potensialı",
+    "definitionEn": "Potential value arising from the gap between a desired customer outcome and current experience.",
+    "explanationAz": "UV istifadəçinin arzuladığı nəticə ilə mövcud təcrübə arasındakı boşluqdan yaranan fürsəti araşdırır. Dəqiq gəlir proqnozu deyil.",
+    "example": {
+      "en": "Customers still need a spreadsheet to reconcile payments, revealing an unmet outcome.",
+      "az": "Müştərilərin ödənişləri üzləşdirmək üçün hələ cədvələ ehtiyac duyması qarşılanmayan nəticəni göstərir."
+    }
+  },
+  {
+    "id": "time-to-market",
+    "term": "Time to market",
+    "aliases": ["T2M", "time-to-market"],
+    "context": "Evidence-Based Management",
+    "meaningAz": "Dəyəri çatdırıb öyrənmə sürəti",
+    "definitionEn": "How quickly an organization can deliver potential value and learn from feedback.",
+    "explanationAz": "T2M potensial dəyəri istifadəçiyə çatdırmaq və geribildirimdən öyrənmək sürətinə baxır. Tez buraxılışın faydasını ayrıca yoxlamaq lazımdır.",
+    "example": {
+      "en": "Shorter release waiting time lets the team learn sooner from real use.",
+      "az": "Buraxılış gözləməsinin azalması komandaya real istifadədən daha tez öyrənməyə kömək edir."
+    }
+  },
+  {
+    "id": "ability-to-innovate",
+    "term": "Ability to innovate",
+    "aliases": ["A2I", "ability-to-innovate"],
+    "context": "Evidence-Based Management",
+    "meaningAz": "Yeni dəyər yaratmaq qabiliyyəti",
+    "definitionEn": "The effectiveness of an organization in delivering new capabilities.",
+    "explanationAz": "A2I təşkilatın yeni imkanları effektiv çatdırmaq qabiliyyətini və buna mane olan yükü araşdırır. Köhnə versiyalar və texniki borc bu qabiliyyəti azalda bilər.",
+    "example": {
+      "en": "Reducing repeated maintenance work may create capacity to address new customer needs.",
+      "az": "Təkrarlanan texniki xidməti azaltmaq yeni müştəri ehtiyaclarına vaxt yarada bilər."
+    }
+  },
+  {
+    "id": "minimum-viable-product",
+    "term": "Minimum viable product",
+    "aliases": ["MVP", "minimum viable products"],
+    "context": "Product strategy",
+    "meaningAz": "Fərziyyəni yoxlamağa yetən kiçik məhsul addımı",
+    "definitionEn": "A minimal product approach intended to test important assumptions and learn about value.",
+    "explanationAz": "MVP kritik fərziyyəni yoxlamaq və dəyər barədə öyrənmək üçün kiçik məhsul addımıdır. Bu, keyfiyyəti azaltmaq və ya bütün planlaşdırılmış funksiyaları yığmaq demək deyil.",
+    "example": {
+      "en": "Test one usable booking journey before funding the complete scheduling platform.",
+      "az": "Bütün planlaşdırma platformasına yatırım etməzdən əvvəl bir işlək rezervasiya axınını sına."
+    }
+  },
+  {
+    "id": "roadmap",
+    "term": "Roadmap",
+    "aliases": ["road map", "roadmaps"],
+    "context": "Product strategy",
+    "meaningAz": "Məhsulun istiqamət xəritəsi",
+    "definitionEn": "A communication tool describing intended direction, goals or possible steps over time.",
+    "explanationAz": "Roadmap məhsulun istiqamətini və gözlənilən addımlarını paylaşmaq vasitəsidir. Yüksək qeyri-müəyyənlikdə bütün funksiyalar üçün dəyişməz tarix vədi olmamalıdır.",
+    "example": {
+      "en": "Show the customer outcome to pursue next and the assumptions that may change the path.",
+      "az": "Növbəti müştəri nəticəsini və yolu dəyişə biləcək fərziyyələri göstər."
+    }
+  },
+  {
+    "id": "product-vision",
+    "term": "Product vision",
+    "aliases": ["vision"],
+    "context": "Product strategy",
+    "meaningAz": "Məhsulun uzunmüddətli istiqamət təsviri",
+    "definitionEn": "A shared description of the future the product aims to help create and why it matters.",
+    "explanationAz": "Məhsul vizyonu kimə və niyə dəyər yaratmaq istədiyimizi aydınlaşdırır. Bu, Scrum-un Product Goal öhdəliyi ilə əlaqəli ola bilər, amma eyni termin deyil.",
+    "example": {
+      "en": "Help small merchants run payments confidently without specialist finance tools.",
+      "az": "Kiçik satıcılara xüsusi maliyyə alətləri olmadan ödənişləri etibarlı idarə etməkdə kömək et."
+    }
+  },
+  {
+    "id": "value-proposition",
+    "term": "Value proposition",
+    "aliases": ["value propositions"],
+    "context": "Product strategy",
+    "meaningAz": "Dəyər təklifi",
+    "definitionEn": "An explanation of the benefit a product offers to a particular audience and why it is useful to them.",
+    "explanationAz": "Dəyər təklifi konkret qrupun hansı ehtiyacının necə qarşılanacağını izah edir. Sadəcə funksiyalar siyahısı həmin faydanı göstərməyə bilər.",
+    "example": {
+      "en": "A booking service promises fewer missed appointments for small clinics.",
+      "az": "Rezervasiya xidməti kiçik klinikalar üçün daha az buraxılmış görüş faydası təklif edir."
+    }
+  },
+  {
+    "id": "trade-off",
+    "term": "Trade-off",
+    "aliases": ["tradeoff", "trade offs", "trade-offs"],
+    "context": "Product strategy",
+    "meaningAz": "Seçim qarşılığında verilən güzəşt",
+    "definitionEn": "A decision in which improving or choosing one option has a cost or consequence for another.",
+    "explanationAz": "Trade-off bir seçimin başqa imkan, xərc və ya risk üzərində yaratdığı güzəştdir. Məqsəd bütün faydaları eyni anda vədsizcə maksimum saymaq deyil, nəticəni açıq müqayisə etməkdir.",
+    "example": {
+      "en": "Prioritizing reliability this week delays the custom export.",
+      "az": "Bu həftə etibarlılığı önə çəkmək xüsusi ixracı gecikdirir."
+    }
+  },
+  {
+    "id": "technical-debt",
+    "term": "Technical debt",
+    "aliases": ["tech debt"],
+    "context": "Engineering",
+    "meaningAz": "Texniki borc",
+    "definitionEn": "A technical condition that makes future changes or maintenance harder or more costly.",
+    "explanationAz": "Texniki borc gələcək dəyişiklik və texniki xidməti çətinləşdirən yükdür. Mövcud borc avtomatik olaraq işin Done olmadığını bildirmir; ortaq keyfiyyət tərifi ayrıca ödənməlidir.",
+    "example": {
+      "en": "A fragile integration requires repeated manual fixes whenever payment rules change.",
+      "az": "Kövrək inteqrasiya ödəniş qaydası dəyişəndə təkrar əl düzəlişi tələb edir."
+    }
+  },
+  {
+    "id": "continuous-integration",
+    "term": "Continuous integration",
+    "aliases": ["CI"],
+    "context": "Engineering",
+    "meaningAz": "Dəyişikliklərin davamlı inteqrasiyası",
+    "definitionEn": "A development practice of integrating changes frequently and checking the combined result.",
+    "explanationAz": "CI dəyişiklikləri tez-tez birləşdirib birlikdə işləyib-işləmədiyini yoxlamaq təcrübəsidir. Scrum konkret alət və ya məcburi inteqrasiya tezliyi göstərmir.",
+    "example": {
+      "en": "Integrate a small change and run shared automated checks before more work accumulates.",
+      "az": "Daha çox iş yığılmadan kiçik dəyişikliyi birləşdir və ortaq avtomatik yoxlamaları işə sal."
+    }
+  },
+  {
+    "id": "continuous-delivery",
+    "term": "Continuous delivery",
+    "aliases": ["CD"],
+    "context": "Engineering",
+    "meaningAz": "Dəyişiklikləri etibarlı təqdim etmə qabiliyyəti",
+    "definitionEn": "A practice of keeping changes in a state that can be released safely and reliably.",
+    "explanationAz": "Continuous delivery dəyişiklikləri etibarlı buraxılışa hazır saxlamaq təcrübəsidir. Hər dəyişikliyi dərhal bütün istifadəçilərə avtomatik buraxmaqla eyni deyil.",
+    "example": {
+      "en": "The team can release a verified small change when the business chooses.",
+      "az": "Biznes seçəndə komanda yoxlanmış kiçik dəyişikliyi buraxa bilir."
+    }
+  },
+  {
+    "id": "product-backlog-item",
+    "term": "Product Backlog item",
+    "aliases": ["PBI", "PBIs", "product backlog items"],
+    "context": "Scrum",
+    "meaningAz": "Product Backlog elementi",
+    "definitionEn": "An individual piece of work in the ordered Product Backlog that may be clarified and split as the team learns.",
+    "explanationAz": "PBI Product Backlog-un ayrıca elementidir, bütün siyahının özü deyil. Element ehtiyac, təkmilləşdirmə və ya məhsulla bağlı başqa işi ifadə edə bilər; mütləq user story formatında olmalı deyil.",
+    "example": {
+      "en": "Split a large payment-history item into smaller usable changes.",
+      "az": "Böyük ödəniş tarixçəsi elementini kiçik, istifadə edilə bilən dəyişikliklərə böl."
+    }
+  },
+  {
+    "id": "done",
+    "term": "Done",
+    "aliases": ["done increment"],
+    "context": "Scrum",
+    "meaningAz": "Ortaq keyfiyyət tərifinə uyğun tamamlanmış vəziyyət",
+    "definitionEn": "In Scrum, the state of work that meets the shared Definition of Done and can form part of a usable Increment.",
+    "explanationAz": "Scrum-da Done sadəcə kodun yazılması və ya bir şəxsin razılığı deyil. İş ortaq Definition of Done keyfiyyət şərtlərini ödəməlidir ki, İnkrementin hissəsi sayılsın.",
+    "example": {
+      "en": "The change is Done only after the required integration and security checks pass.",
+      "az": "Dəyişiklik yalnız tələb olunan inteqrasiya və təhlükəsizlik yoxlamaları keçəndən sonra Done sayılır."
+    }
+  }
+]

@@ -858,10 +858,11 @@
       "az": "Ssenaridə dəyişiklik, ehtiyac, həll, maraqlı tərəf, dəyər və konteksti əlaqələndir.",
       "en": "Relate change, need, solution, stakeholder, value and context in a scenario."
     },
-    "minutes": 35,
+    "minutes": 30,
     "status": "published",
     "topics": ["Business analysis concepts and context", "ECBA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "ecba-knowledge-areas",
@@ -876,10 +877,11 @@
       "az": "Kiçik dəyişiklik boyunca analiz fəaliyyətlərinin bir-birini necə məlumatlandırdığını izah et.",
       "en": "Explain how analysis activities inform each other across a small change."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 30,
+    "status": "published",
     "topics": ["A connected view of analysis work", "ECBA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "ecba-techniques",
@@ -894,10 +896,11 @@
       "az": "Ehtiyac toplama və modelləşdirmə üsullarını qərara və mövcud sübuta uyğunlaşdır.",
       "en": "Match elicitation and modeling techniques to the decision and available evidence."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 30,
+    "status": "published",
     "topics": ["Choosing an analysis technique", "ECBA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "ccba-planning",
@@ -912,10 +915,11 @@
       "az": "Maraqlı tərəf əlaqəsini, məlumat idarəsini və qərar yanaşmasını layihə riskinə uyğunlaşdır.",
       "en": "Adapt stakeholder engagement, information management and decision approaches to project risk."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 30,
+    "status": "published",
     "topics": ["Plan analysis for a real initiative", "CCBA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "ccba-elicitation",
@@ -930,10 +934,11 @@
       "az": "Məlumat toplamağı onun mənasını təsirə məruz qalanlarla təsdiqləməkdən ayır.",
       "en": "Distinguish gathering information from confirming its meaning with affected people."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 30,
+    "status": "published",
     "topics": ["Elicit and confirm evidence", "CCBA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "ccba-lifecycle",
@@ -948,10 +953,11 @@
       "az": "İzlənilmə, saxlanma, prioritetləşdirmə və təsir analizindən birlikdə istifadə et.",
       "en": "Use traceability, maintenance, prioritization and impact analysis together."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 30,
+    "status": "published",
     "topics": ["Manage requirement changes", "CCBA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "cbap-strategy",
@@ -967,9 +973,10 @@
       "en": "Compare current-state constraints, future-state options and change strategies."
     },
     "minutes": 35,
-    "status": "planned",
+    "status": "published",
     "topics": ["Strategic analysis under uncertainty", "CBAP", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "cbap-design",
@@ -985,9 +992,10 @@
       "en": "Assess consistency, completeness, value and risk across interdependent requirements."
     },
     "minutes": 35,
-    "status": "planned",
+    "status": "published",
     "topics": ["Requirements and design options", "CBAP", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "cbap-evaluation",
@@ -1003,9 +1011,10 @@
       "en": "Separate solution limitations from organizational constraints and recommend action."
     },
     "minutes": 35,
-    "status": "planned",
+    "status": "published",
     "topics": ["Evaluate enterprise solution value", "CBAP", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "scrum-accountabilities",
@@ -1024,7 +1033,7 @@
     "status": "published",
     "topics": ["Scrum accountabilities in practice", "PSPO1", "junior"],
     "prerequisites": [],
-    "sourceIds": ["scrum-2020", "professional-po-2018"]
+    "sourceIds": ["scrum-2020", "professional-po-2018", "scrum-competencies-2026"]
   },
   {
     "id": "pspo1-events",
@@ -1043,7 +1052,7 @@
     "status": "published",
     "topics": ["Events as feedback opportunities", "PSPO1", "junior"],
     "prerequisites": [],
-    "sourceIds": ["scrum-2020"]
+    "sourceIds": ["scrum-2020", "scrum-competencies-2026"]
   },
   {
     "id": "pspo1-artifacts",
@@ -1062,7 +1071,7 @@
     "status": "published",
     "topics": ["Artifacts and their commitments", "PSPO1", "junior"],
     "prerequisites": [],
-    "sourceIds": ["scrum-2020", "professional-po-2018"]
+    "sourceIds": ["scrum-2020", "professional-po-2018", "scrum-competencies-2026"]
   },
   {
     "id": "pspo2-strategy",
@@ -1081,7 +1090,7 @@
     "status": "published",
     "topics": ["Empirical product strategy", "PSPO2", "junior"],
     "prerequisites": [],
-    "sourceIds": ["professional-po-2018", "ebm-2024", "scrum-2020"]
+    "sourceIds": ["professional-po-2018", "ebm-2024", "scrum-2020", "scrum-competencies-2026"]
   },
   {
     "id": "pspo2-value",
@@ -1100,7 +1109,7 @@
     "status": "published",
     "topics": ["Value decisions in difficult situations", "PSPO2", "junior"],
     "prerequisites": [],
-    "sourceIds": ["ebm-2024", "professional-po-2018"]
+    "sourceIds": ["ebm-2024", "professional-po-2018", "scrum-competencies-2026"]
   },
   {
     "id": "pspo2-facilitation",
@@ -1119,7 +1128,7 @@
     "status": "published",
     "topics": ["Facilitate product decisions", "PSPO2", "junior"],
     "prerequisites": [],
-    "sourceIds": ["scrum-2020", "professional-po-2018"]
+    "sourceIds": ["scrum-2020", "professional-po-2018", "scrum-competencies-2026"]
   },
   {
     "id": "pspo3-written-case",
@@ -1138,7 +1147,7 @@
     "status": "published",
     "topics": ["Reason through a product case", "PSPO3", "junior"],
     "prerequisites": [],
-    "sourceIds": ["ebm-2024", "scrum-2020", "professional-po-2018"]
+    "sourceIds": ["ebm-2024", "scrum-2020", "professional-po-2018", "scrum-competencies-2026"]
   },
   {
     "id": "pspo3-complexity",
@@ -1157,7 +1166,7 @@
     "status": "published",
     "topics": ["Product ownership in complex contexts", "PSPO3", "junior"],
     "prerequisites": [],
-    "sourceIds": ["scrum-2020", "ebm-2024", "professional-po-2018"]
+    "sourceIds": ["scrum-2020", "ebm-2024", "professional-po-2018", "scrum-competencies-2026"]
   },
   {
     "id": "pspo3-reflection",
@@ -1176,7 +1185,7 @@
     "status": "published",
     "topics": ["Reflect, inspect and improve", "PSPO3", "junior"],
     "prerequisites": [],
-    "sourceIds": ["ebm-2024", "scrum-2020", "professional-po-2018"]
+    "sourceIds": ["ebm-2024", "scrum-2020", "professional-po-2018", "scrum-competencies-2026"]
   },
   {
     "id": "pspo1-product-value",
@@ -1195,7 +1204,7 @@
     "status": "published",
     "topics": ["Product value and backlog decisions", "PSPO", "pspo1"],
     "prerequisites": [],
-    "sourceIds": ["professional-po-2018", "scrum-2020", "ebm-2024"]
+    "sourceIds": ["professional-po-2018", "scrum-2020", "ebm-2024", "scrum-competencies-2026"]
   },
   {
     "id": "pspo2-kanban",
@@ -1214,6 +1223,128 @@
     "status": "published",
     "topics": ["Flow of value with Kanban", "PSPO", "pspo2"],
     "prerequisites": [],
-    "sourceIds": ["kanban-2021", "scrum-2020"]
+    "sourceIds": ["kanban-2021", "scrum-2020", "scrum-competencies-2026"]
+  },
+  {
+    "id": "pspo1-empiricism",
+    "trackId": "pspo1",
+    "level": "junior",
+    "moduleId": "pspo1-preparation",
+    "title": {
+      "az": "Empirizm, dəyərlər və özünüidarəetmə",
+      "en": "Empiricism, values and self-management"
+    },
+    "summary": {
+      "az": "Şəffaflıqdan qərara keç: Scrum dəyərlərinin gündəlik davranışda necə göründüyünü araşdır.",
+      "en": "Move from transparency to decisions: examine how Scrum values appear in daily behavior."
+    },
+    "minutes": 25,
+    "status": "published",
+    "topics": [
+      "Empiricism, values and self-management",
+      "Professional Scrum Competencies",
+      "pspo1"
+    ],
+    "prerequisites": [],
+    "sourceIds": ["scrum-2020", "scrum-competencies-2026", "professional-po-2018"]
+  },
+  {
+    "id": "pspo1-refinement",
+    "trackId": "pspo1",
+    "level": "junior",
+    "moduleId": "pspo1-preparation",
+    "title": {
+      "az": "Refinement, ölçüləndirmə və dəyərli dilimlər",
+      "en": "Refinement, sizing and valuable slices"
+    },
+    "summary": {
+      "az": "Böyük istəyi kiçik, aydın və Done ola bilən işə çevir; qayda ilə üsulu fərqləndir.",
+      "en": "Turn a large request into small, clear work that can become Done; distinguish rules from techniques."
+    },
+    "minutes": 25,
+    "status": "published",
+    "topics": [
+      "Refinement, sizing and valuable slices",
+      "Professional Scrum Competencies",
+      "pspo1"
+    ],
+    "prerequisites": [],
+    "sourceIds": ["scrum-2020", "professional-po-2018", "scrum-competencies-2026"]
+  },
+  {
+    "id": "pspo2-forecasting",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Proqnoz, buraxılış və qeyri-müəyyənlik",
+      "en": "Forecasting, release and uncertainty"
+    },
+    "summary": {
+      "az": "Done tarixçəsi ilə faydalı proqnoz qur, əhatə seçimlərini və məhdudiyyətləri şəffaf göstər.",
+      "en": "Use Done history to forecast, making scope options and limitations transparent."
+    },
+    "minutes": 25,
+    "status": "published",
+    "topics": ["Forecasting, release and uncertainty", "Professional Scrum Competencies", "pspo2"],
+    "prerequisites": [],
+    "sourceIds": ["professional-po-2018", "scrum-2020", "kanban-2021", "scrum-competencies-2026"]
+  },
+  {
+    "id": "pspo2-shared-quality",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Məhsul üzrə ortaq keyfiyyət və texniki risk",
+      "en": "Shared quality and technical risk"
+    },
+    "summary": {
+      "az": "Bir neçə komandanın işini istifadə edilə bilən İnkrementə bağla və keyfiyyət sərhədini qoru.",
+      "en": "Connect multiple teams’ work to a usable Increment and protect shared quality boundaries."
+    },
+    "minutes": 25,
+    "status": "published",
+    "sourceIds": ["scrum-2020", "ebm-2024", "professional-po-2018", "scrum-competencies-2026"],
+    "topics": ["Shared quality and technical risk", "PSPO II"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo2-discovery",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Fərziyyədən bazar sübutuna",
+      "en": "From assumptions to market evidence"
+    },
+    "summary": {
+      "az": "Maraqlı tərəf razılığını real istifadə nəticəsindən ayır və kiçik, ölçülən sınaq qur.",
+      "en": "Separate stakeholder approval from real usage outcomes and design a small measurable test."
+    },
+    "minutes": 25,
+    "status": "published",
+    "sourceIds": ["professional-po-2018", "ebm-2024", "scrum-2020", "scrum-competencies-2026"],
+    "topics": ["From assumptions to market evidence", "PSPO II"],
+    "prerequisites": []
+  },
+  {
+    "id": "pspo2-organization",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Portfel, təşkilat və məhsul sərbəstliyi",
+      "en": "Portfolio, organization and product autonomy"
+    },
+    "summary": {
+      "az": "Həddindən artıq paralel işi, qərar gecikmələrini və metriklərin davranışa təsirini araşdır.",
+      "en": "Examine overload, decision delays and the behavior encouraged by metrics."
+    },
+    "minutes": 25,
+    "status": "published",
+    "sourceIds": ["professional-po-2018", "ebm-2024", "scrum-2020", "scrum-competencies-2026"],
+    "topics": ["Portfolio, organization and product autonomy", "PSPO II"],
+    "prerequisites": []
   }
 ]

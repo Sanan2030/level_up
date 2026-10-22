@@ -3,63 +3,76 @@ id: cbap-design
 locale: en
 title: 'Requirements and design options'
 objectives:
-  - 'Assess consistency, completeness, value and risk across interdependent requirements.'
-  - 'Apply the topic to a customer self-service change; justify the decision and identify missing evidence.'
+  - 'Distinguish verification, validation and authorized approval in requirements work.'
+  - 'Evaluate requirements as a coherent whole and compare design options using uncertain potential value.'
 ---
 
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
+## Core concept
 
-## Learning objectives
-
-- Assess consistency, completeness, value and risk across interdependent requirements.
-- Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+Requirements Analysis and Design Definition turns findings into usable representations, evaluates their quality and relevance, organizes their relationships and compares ways to realize value. In BABOK v3, a requirement represents a need and a design represents a solution. Their relationship is iterative: a design can uncover additional requirements. Analysis concerns processes, people, information and rules as well as software. A useful recommendation preserves that broader scope.
 
 ## Why it matters
 
-The planned lesson uses a concrete delivery decision to show when **Requirements and design options** helps a team. It will make assumptions and affected stakeholders explicit.
+A perfectly formatted requirement can describe the wrong capability. A collection of individually useful requirements can also conflict when combined. For example, immediate deletion and a long audit-retention obligation may both sound reasonable until their scope and conditions are examined together. Verification, validation and requirements architecture answer different questions about these problems. Treating them as interchangeable “review” steps can leave a critical gap even when every item has a reference and a signature.
 
-## Core theory: planned outline
+## Theory and distinctions
 
-1. Define the essential terms in the topic.
-2. Assess consistency, completeness, value and risk across interdependent requirements.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+**Specify and model:** Choose text, matrices or diagrams suited to the audience and purpose. Modelling can begin from elicitation results in different states and may reveal a need for more elicitation. **Verify:** Check that representations meet quality expectations and are usable for further work. Look for ambiguity, inconsistent terms, missing detail, infeasibility or untestable statements. Quality is fitness for the intended use, not compliance with a template alone.
 
-## Worked example: planned outline
+**Validate:** Examine whether requirements and designs align with business requirements and support needed value. Surface benefit assumptions, evaluation criteria and scope alignment. Validation can start before verification is complete, but cannot be completed before verification is complete. **Approval** is a separate governance decision about authorized agreement.
 
-Apply the topic to a customer self-service change; justify the decision and identify missing evidence. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+**Requirements architecture:** Organize views and models so requirements work together toward the objective. Traceability can represent relationships, but links alone do not prove a coherent whole. **Design options:** Consider creation, purchase or a combination, including integration and allocation of requirements across components or releases. **Potential value:** Compare expected benefits, costs, risk, dependencies and resource constraints. Include maintenance, intangible effects and the opportunity cost of the best alternative not selected. Estimates remain uncertain. Sometimes more investigation, more than one proof of concept, or doing nothing is the most defensible recommendation.
 
-## Diagram: planned outline
+## Worked example
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **Requirements and design options**. The diagram will include a text explanation.
+A benefits agency needs reliable case handling and appropriate access to personal records. One requirement says “remove records after case closure”; another says “authorized reviewers can inspect a closed case.” A traceability matrix links both to an objective, yet does not establish compatible conditions.
 
-## Interactive practice: planned outline
+The analyst clarifies which records, users, events and retention constraints each statement concerns. A state model and roles view expose the conflict. Options include configuring an existing service, purchasing a component or developing a combined solution. The comparison considers integration, operational effort, access controls, uncertainty and the desired service outcome. No specific legal retention period is invented: relevant rules must come from an authorized source.
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+## Visual model
 
-## Common mistakes and best practices
+<Diagram
+  chart={
+    'flowchart TD\n E["Elicitation findings"] --> M["Specify and model"]\n M --> Q["Verify representation quality"]\n M --> V["Validate need and value alignment"]\n Q --> A["Check coherent requirements architecture"]\n V --> A\n A --> O["Create, purchase or combine options"]\n O --> R["Compare potential value and recommend"]'
+  }
+/>
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+The diagram separates three checks from the comparison of options. Arrows show information dependencies rather than a mandatory one-pass sequence. Rework can occur when any check exposes a gap.
 
-## Practice exercise and sample-solution plan
+## Decision practice
 
-**Exercise:** Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+The specification passes a quality checklist and a sponsor asks whether that proves value. Explain what has actually been established: the representation may be fit for further work. It still needs alignment with the business need and a credible view of benefits. Similarly, a positive potential-value estimate does not prove actual value in use. Preserve the distinction between a verified statement, a validated requirement, an approved decision and later solution evaluation.
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+## Common mistakes and better practice
 
-## Mini-quiz: planned outline
+- Do not equate correct notation with the correct business outcome.
+- Do not claim validation is complete while verification remains incomplete.
+- A reference link is not evidence that requirements form a workable whole.
+- Avoid comparing purchase price while ignoring integration, maintenance and stakeholder effects.
+- Do not turn uncertain benefits into guaranteed returns.
+- Keep decision authority separate from the analyst’s responsibility to develop a recommendation.
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+## Application exercise and explained answer
 
-## One-page summary plan
+**Exercise:** Assess “the service must be fast” and a clear requirement for an unrelated reporting feature. Then identify one architecture question for the closed-case example and one cost frequently missed in an option comparison.
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+**Explained answer:** “Fast” lacks a usable definition for the intended purpose, so verification should expose ambiguity and the need for an appropriate measure. A precise unrelated report can still fail validation because it does not support the business need or agreed scope. The architecture question is how deletion, access, case states and record types work together without contradiction. Ongoing integration support or the value of a deferred alternative can change an option comparison. A strong response explains why each problem belongs to a different check.
 
-## Further reading
+## Mini-quiz
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+For each question, identify whether the immediate concern is representation quality, business-value alignment, coherent relationships, option definition or recommendation. Several concerns may exist together, but the best next action should address the evidence gap in the scenario.
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+<LessonCheck />
+
+## Cheat sheet
+
+Verification: fit-for-use information. Validation: alignment with need and value. Architecture: requirements working as a whole. Options: alternative ways to satisfy them. Recommendation: compare uncertain potential value and consequences. Approval and actual-value evaluation remain distinct.
+
+## Sources and scope
+
+BABOK Guide v3, 2015: §2.5, pp. 19–20; §7.1, pp. 136–141; §7.2, pp. 141–144; §7.3, pp. 144–147; §7.4, pp. 148–152; §7.5, pp. 152–157; §7.6, pp. 157–162. Main explanations consulted: 137–138, 141–146, 148–149, 152–155, 157–160. Approval distinction: §5.5, pp. 95–96.
+
+- [IIBA — BABOK Guide and business analysis resources](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/)
+- [IIBA — certification information](https://www.iiba.org/business-analysis-certifications/)
+
+Explanations and examples are original teaching material. The uploaded member PDF is not distributed on this site. Practice questions are independently authored and are not official exam questions.

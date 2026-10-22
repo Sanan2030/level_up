@@ -12,7 +12,7 @@ const pages = [
   { name: 'dark landing', path: '/en', dark: true },
   { name: 'dark dashboard', path: '/en/dashboard', dark: true },
   { name: 'dark lesson', path: '/en/lessons/stakeholder-mapping', diagram: true, dark: true },
-  { name: 'Azerbaijani landing', path: '/az' },
+  { name: 'competency study guide', path: '/en/study-guide' },
 ] as const;
 
 for (const pageCase of pages) {

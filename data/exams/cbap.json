@@ -56,7 +56,7 @@
     }
   ],
   "verificationStatus": "verified",
-  "verifiedAt": "2026-10-20",
+  "verifiedAt": "2026-10-21",
   "sources": [
     {
       "title": "Certified Business Analysis Professional (CBAP) — official certification page",
@@ -68,7 +68,7 @@
     }
   ],
   "notes": {
-    "en": "Format, 120-question count, 210-minute duration and six BABOK knowledge-area weights verified against the official IIBA certification page on 2026-10-20. The consulted page does not give a numeric passing threshold: passPercent stays null (TODO: VERIFY passing policy). These are original practice questions. The 30-question seed bank cannot supply a full-length mock.",
-    "az": "Format, 120 sual, 210 dəqiqə və altı BABOK bilik sahəsinin çəkisi 2026-10-20 tarixində IIBA-nın rəsmi sertifikasiya səhifəsindən yoxlanılıb. Mənbədə rəqəmlə keçid həddi göstərilmir: passPercent null qalır (TODO: VERIFY keçid qaydası). Suallar orijinal məşq üçündür. 30 suallıq baza tam həcmli sınaq imtahanı üçün kifayət etmir."
+    "en": "Format, 120-question count, 210-minute duration and six BABOK knowledge-area weights verified against the official IIBA certification page on 2026-10-21. The consulted page does not give a numeric passing threshold: passPercent stays null (TODO: VERIFY passing policy). These are original practice questions. A full mock remains gated by the number of unique eligible questions and the configured domain allocation.",
+    "az": "Format, 120 sual, 210 dəqiqə və altı BABOK bilik sahəsinin çəkisi 2026-10-21 tarixində IIBA-nın rəsmi sertifikasiya səhifəsindən yoxlanılıb. Mənbədə rəqəmlə keçid həddi göstərilmir: passPercent null qalır (TODO: VERIFY keçid qaydası). Suallar orijinal məşq üçündür. 30 suallıq baza tam həcmli sınaq imtahanı üçün kifayət etmir."
   }
 }

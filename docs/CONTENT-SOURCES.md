@@ -1,4 +1,4 @@
-# Teaching sources and scope — 2026-10-21
+# Teaching sources and scope — updated 2026-10-22
 
 The user supplied four PDFs and pasted Scrum Guide text. Files were extracted locally with `pdftotext -layout`. They remain outside the Git repository and are not published.
 
@@ -17,7 +17,7 @@ The user supplied four PDFs and pasted Scrum Guide text. Files were extracted lo
 - Formula examples, experiment thresholds and answer-writing structures are teaching aids, not certification rules or official grading criteria.
 - Adapted explanations derived from the Scrum and Kanban guides are shared under CC BY-SA 4.0 with attribution on lesson/source pages. Book prose, figures and quizzes are not copied.
 
-## Coverage and practice
+## Initial coverage and practice — 2026-10-21
 
 All eleven PSPO lessons are now complete in Azerbaijani and English. Eight PSPO I/II lessons include source-tagged original questions and interactive inline checks. PSPO III lessons teach written reasoning and link to original written exercises with self-review rubrics. No automatic official grading is claimed. The total question bank has 218 items; sixteen newly authored items carry explicit `sourceIds`. Earlier original items retain their IDs, options and answer keys; their lesson links now point to complete related PSPO teaching. These older items are editorial practice and have not all undergone a topic-by-topic citation audit.
 
@@ -30,3 +30,19 @@ On 2026-10-21 the Product Owner Open URL returned HTTP 202 with an AWS WAF chall
 Previously requested Scrum.org forum posts were also unavailable behind a challenge. Modern Analyst and AbeBooks links were blocked; an announcement or sales listing would not replace the BABOK text in any case. No newly completed BABOK lessons are attributed to these links. IIBA curricula and exam provenance from the previous implementation remain separately documented.
 
 The uploaded books/guides do not verify current assessment question counts, time limits, pass thresholds or exact exam domain weights. PSPO exam settings therefore remain `needs-verification`; short practice remains available. Do not represent the topic groups as a verified exam blueprint or enable a full official-format mock without verified rules and a sufficiently large bank.
+
+## Expansion and English-only publication — 2026-10-22
+
+The user later supplied BABOK Guide v3 and the official Professional Scrum Competencies page text, then requested English-only visible lessons plus a word/phrase translator with both English and Azerbaijani explanations.
+
+- Current curriculum: 73 topics, 33 complete English lessons, 40 outlines. Nine IIBA lessons use selected BABOK sections; seventeen PSPO lessons use the supplied guides/book and competency text. Existing AZ material remains an archive and `/az` URLs redirect to `/en`.
+- Current bank: 446 original questions. PSPO I and II each contain 100 items; PSPO III has 40 unscored written prompts; ECBA has 64, CCBA and CBAP 60 each, BA/PO 11 each. The 228 newly added questions have source IDs and source locators. Together with the earlier 16 this yields 244 explicitly source-tagged items.
+- A source-based five-group/28-focus-area study map links related lessons without claiming a verified exam blueprint or complete coaching, mentoring and teaching coverage.
+- The 50-question ECBA mock now meets verified domain quotas. PSPO formats remain unverified, and the CCBA/CBAP banks remain smaller than their verified full exam formats.
+- `data/dictionary.json` holds 91 contextual word/phrase explanations, Azerbaijani meanings and explanations, and bilingual examples. General English fallback uses optional public services and clearly labels machine-translated output.
+
+See [the research audit](RESEARCH-2026-10-21.md) and [selected BABOK reading record](reading-audits/babok-reading-audit.md). Candidate experience reports could not be read; no candidate-review consensus or real exam claims were fabricated. New source sections were sampled independently for answer ambiguity. The solution-boundary premise in ECBA item 058 and the organizational Done premise in PSPO II item 045 were clarified. Inline answer choices now use deterministic question-specific shuffling so authored position is not a shortcut.
+
+## Community preparation note follow-up — 2026-10-22
+
+A normal public GitHub search was accessible after the earlier Google/Bing/Reddit denials. The README at [ShoSaito/PSPO-II](https://github.com/ShoSaito/PSPO-II) was read. Its study recommendations include reading primary guides, immediate explanations, category review and revisiting weak areas, which align with the app’s practice/review design. Its unsupported and internally inconsistent assessment numbers were excluded. This is not a first-hand exam-result report and does not support claims about question frequency, pass likelihood or the current official exam format. The source register identifies it explicitly as community preparation notes; no question answer keys or official settings were sourced from it.

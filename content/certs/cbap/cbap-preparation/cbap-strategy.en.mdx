@@ -3,63 +3,76 @@ id: cbap-strategy
 locale: en
 title: 'Strategic analysis under uncertainty'
 objectives:
-  - 'Compare current-state constraints, future-state options and change strategies.'
-  - 'Apply the topic to a customer self-service change; justify the decision and identify missing evidence.'
+  - 'Analyze the current state and define a future state without prematurely fixing the solution.'
+  - 'Compare change strategies, risks, capability gaps and transition states.'
 ---
 
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
+## Core concept
 
-## Learning objectives
-
-- Compare current-state constraints, future-state options and change strategies.
-- Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+Strategy Analysis connects an important need with a defensible approach to change. The unit of analysis may be an enterprise, business area, product or smaller initiative. BABOK v3 distinguishes understanding the current state, defining the future state, assessing risks and recommending a change strategy. These activities give context to requirements and design choices. A strategy is not just a technology selection or a more detailed delivery schedule.
 
 ## Why it matters
 
-The planned lesson uses a concrete delivery decision to show when **Strategic analysis under uncertainty** helps a team. It will make assumptions and affected stakeholders explicit.
+A sponsor may request a new platform when the real limitation is a policy, missing skill or handoff. Starting with the platform can narrow the alternatives before the need is understood. At the other extreme, documenting every feature of the enterprise may consume time without improving the decision. Investigate the current state in enough detail to understand why change is needed, what is affected and how progress could be assessed. Scope the investigation around the need rather than an arbitrary organizational chart.
 
-## Core theory: planned outline
+## Theory and distinctions
 
-1. Define the essential terms in the topic.
-2. Compare current-state constraints, future-state options and change strategies.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+**Current state:** Examine relevant capabilities, processes, people, technology, information, policies and external influences. Test assumptions hidden inside a proposed solution. Needs can emerge from strategic goals, operational problems, management information gaps or external drivers. Existing conditions may change while analysis continues.
 
-## Worked example: planned outline
+**Future state:** Describe necessary conditions and outcomes that would meet the need, with sufficient detail to compare approaches and assess value. Do not assume it must be an implementation-ready design. When value is uncertain, define useful measures and allow exploration of options. **Risk:** Examine possible adverse consequences, impact, likelihood and timing. The assessment may concern the existing state, transition or future operation. The task’s treatment focuses on uncertain negative outcomes; opportunities are addressed as needs.
 
-Apply the topic to a customer self-service change; justify the decision and identify missing evidence. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+**Change strategy:** Compare alternative approaches using current state, future state, risks and stakeholder engagement. Identify capability gaps, investment, resources, scope and transition states. A transition may deliver only some capabilities and benefits; make that limitation explicit. A smaller change, exploratory pilot, phased implementation or no change may be defensible depending on evidence. The strategy should explain why the recommended path fits, not merely announce its name.
 
-## Diagram: planned outline
+## Worked example
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **Strategic analysis under uncertainty**. The diagram will include a text explanation.
+A regional insurer wants faster claim settlement. Leadership proposes replacing its claims platform. Initial investigation finds that software lookup is slow, but a major delay comes from duplicated approval rules across departments. Some branches also lack trained staff for an existing capability.
 
-## Interactive practice: planned outline
+The future state is described through reliable, shorter settlement with acceptable error exposure, not through “platform installed.” Analysis compares a process-and-training intervention, a phased platform change and a broad replacement. A process pilot may generate early evidence but leave integration limitations unresolved. A platform pilot may test a high-risk dependency but not yet deliver the complete service benefit. These examples use fictional conditions and no prescribed BABOK target percentages.
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+## Visual model
 
-## Common mistakes and best practices
+<Diagram
+  chart={
+    'flowchart LR\n N["Need: reliable faster settlement"] --> C["Understand current capabilities"]\n C --> F["Define future outcomes"]\n F --> G["Find capability gaps"]\n G --> R["Assess risks and alternatives"]\n R --> S["Select change strategy"]\n S --> T["Inspect transition value"]\n T --> C'
+  }
+/>
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+The model connects needs, capability gaps and alternative strategies. Feedback is included because a change strategy can be revised when evidence or context changes. The diagram is an original teaching representation, not a copied figure from the guide.
 
-## Practice exercise and sample-solution plan
+## Decision practice
 
-**Exercise:** Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+Leadership says the platform budget is already approved, so the strategy should not be questioned. Clarify the actual decision boundary: funding may authorize investigation rather than commit every design choice. Present the need, alternative consequences and remaining uncertainty within that boundary. If a constraint truly is fixed, analyze how value could be achieved under it and expose any contradiction with the desired outcome. Do not silently invent authority to overturn the decision or conceal evidence to preserve a preferred approach.
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+## Common mistakes and better practice
 
-## Mini-quiz: planned outline
+- Do not define success only as installing the selected technology.
+- Avoid treating every current-state detail as necessary before making any progress.
+- Do not describe a transition state as delivering benefits its incomplete capabilities cannot yet support.
+- Consider risks of transition and operation, not only delivery completion.
+- Do not make the existing investment the sole reason to continue.
+- Revisit assumptions when the context changes rather than preserving a strategy through habit.
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+## Application exercise and explained answer
 
-## One-page summary plan
+**Exercise:** For the insurer, compare a process pilot and phased platform change. Specify one capability gap, one important risk, one transition-state limitation and one observation that would change your recommendation.
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+**Explained answer:** A gap might be consistent approval rules; a risk might be incorrect routing after responsibilities change. A process pilot could improve one branch while leaving cross-branch integration unresolved. A phased platform change could test integration while delaying broader settlement benefits. If reliable observations show the approval problem dominates delay and can be addressed safely, that supports an initial process intervention. If an essential platform limitation prevents any useful process change, the recommendation may differ. The answer should preserve these conditional relationships instead of declaring one strategy universally superior.
 
-## Further reading
+## Mini-quiz
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+In the questions, distinguish the desired outcome from the chosen approach. Ask what is known about the current state, which necessary condition is missing and what risk or evidence makes one strategy more suitable. A longer plan is not automatically a better strategy.
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+<LessonCheck />
+
+## Cheat sheet
+
+Need → relevant current state → desired future conditions → capability gap → risks and alternatives → recommended transition path. Explain value, investment, uncertainty and what each transition actually delivers. Keep the reasoning open to new information.
+
+## Sources and scope
+
+BABOK Guide v3, 2015: §6.1, pp. 103–110; §6.2, pp. 110–119; §6.3, pp. 120–124; §6.4, pp. 124–131. Principal passages consulted: purposes/descriptions on 103, 105, 110–111, 120, 124–125, and solution scope/gap analysis on 127. Page numbers are printed book pages. Current CBAP exam rules remain a separate source.
+
+- [IIBA — BABOK Guide and business analysis resources](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/)
+- [IIBA — certification information](https://www.iiba.org/business-analysis-certifications/)
+
+Explanations and examples are original teaching material. The uploaded member PDF is not distributed on this site. Practice questions are independently authored and are not official exam questions.

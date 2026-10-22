@@ -3,152 +3,73 @@ id: ecba-context
 locale: en
 title: 'Business analysis concepts and context'
 objectives:
-  - 'Relate change, need, solution, stakeholder, value and context in a scenario.'
-  - 'Apply the topic to a customer self-service change; justify the decision and identify missing evidence.'
+  - 'Identify the six BACCM concepts and their relationships in a scenario.'
+  - 'Distinguish business, stakeholder, solution and transition requirements.'
 ---
 
-## 1. Learning objectives
+## Core concept
 
-Explain change, need, solution, stakeholder, value and context through a single initiative. Distinguish a business problem from a proposed feature, identify evidence gaps and communicate an original analysis recommendation.
+Business analysis helps people understand a need for change and recommend a solution capable of delivering value in that context. Analysis is not limited to writing software specifications: it can concern processes, rules, services, information or organizational change. People with different job titles may perform analysis tasks. This lesson explains BABOK v3 concepts through original examples; it is not a reproduction of a current exam blueprint.
 
-## 2. Why it matters
+## Why it matters
 
-A retail bank asks for a new loan-application dashboard because applications take too long. A dashboard might help employees see delays, but it might also leave the underlying delay untouched. Business analysis begins by understanding what needs to improve, who is affected and how value could be assessed.
+When a stakeholder says “we need a mobile app,” they are already proposing a solution. A team can build a polished interface without understanding the problem it should solve. Separating need, solution and value exposes assumptions and preserves alternatives. Value is not necessarily money: safety, trust, easier work and reduced exposure can matter. Stakeholders may value different outcomes, so their perspectives and the enterprise’s objectives must be made explicit rather than assumed.
 
-This lesson introduces foundational concepts used in business analysis. It is original educational material for the ECBA learning path, not a reproduction of a copyrighted guide or a claim about the current examination format.
+## Theory and distinctions
 
-## 3. Core theory
+BACCM supplies six connected concepts: **Need**, **Change**, **Solution**, **Stakeholder**, **Value** and **Context**. They are neither a priority ranking nor six sequential project phases. A need is a problem or opportunity; change transforms an existing situation; a solution addresses needs under particular circumstances. Stakeholders have a relationship with that change, need or solution. Value concerns what matters to a stakeholder, while context contains relevant circumstances. A change in one concept should prompt reconsideration of the others.
 
-A **need** is a problem or opportunity that matters in a situation. **Change** is the movement from the current situation toward something different. A **solution** is a way of meeting needs in that situation. **Stakeholders** are people or groups with relevant interests, influence or exposure. **Value** is the benefit or importance of an outcome to those stakeholders. **Context** includes circumstances that shape the decision, such as regulations, capabilities, timing and constraints.
+Requirement classification offers a different view. A **business requirement** explains why the change matters. A **stakeholder requirement** expresses a group’s needs. **Solution requirements** describe functional capabilities and qualities needed for effectiveness. **Transition requirements** describe temporary capabilities or conditions needed to move between states. One-time migration is different from ongoing search capability. A requirement represents a need, whereas a design represents a solution. The same representation may serve different purposes for different audiences, and elaborating a design may reveal more requirements.
 
-The six ideas inform one another. A feature is not automatically a need. An efficiency improvement for one group may create a burden for another. A solution that works in one context may be unsuitable in a different context. Describe these relationships rather than memorizing isolated labels.
+## Worked example
 
-Evidence can include observed work, customer interviews, operational records and credible constraints. Separate what is observed, what is inferred and what remains unknown. When recommending a change, state the decision it supports and how you would inspect whether it helped.
+A clinic network receives frequent calls from patients who cannot finish booking online. A sponsor requests a new mobile app. Analysis first investigates why calls occur: available slots are inaccurate on the existing website, while some patients prefer assisted service.
 
-## 4. Worked example: loan processing delays
+The need is reliable booking. The change may involve self-service and reception processes. Options include fixing the website, improving staff tools or building an app. Patients, reception staff and the service owner are stakeholders. Context includes different branch hours and privacy constraints. Value should be assessed through successful bookings and avoidable repeat calls rather than app downloads alone. These measures are scenario choices, not mandatory BABOK KPIs. Keeping assisted service may protect value for a group that would be excluded by an app-only approach.
 
-| Concept            | Scenario interpretation                                                                      |
-| ------------------ | -------------------------------------------------------------------------------------------- |
-| Need               | Customers and staff experience avoidable delays in processing complete loan applications     |
-| Change             | Improve how missing information and hand-offs are handled                                    |
-| Possible solutions | Clear document guidance, better validation, queue visibility or a different hand-off process |
-| Stakeholders       | Applicants, branch staff, credit operations, risk specialists, support and platform teams    |
-| Value              | Faster informed decisions, fewer repeated contacts and maintained risk controls              |
-| Context            | Regulated lending, existing systems, privacy obligations and limited delivery capacity       |
-
-The analyst observes that many applications wait for a missing document, but the customer is not told which document. A queue dashboard would expose the delay to staff; clearer requests and validation might prevent it. Neither option should be selected solely because a senior sponsor proposed it.
-
-A useful recommendation is to validate the dominant delay reasons, test clearer document guidance with a small group and compare complete-application processing time and repeated contacts. Preserve appropriate risk and privacy controls. The scenario does not supply enough evidence to promise a numerical improvement.
-
-## 5. Diagram
+## Visual model
 
 <Diagram
   chart={
-    'flowchart TD; N[Need] --> C[Change]; C --> S[Possible solution]; S --> V[Value to inspect]; H[Stakeholders] --> N; H --> V; X[Context and constraints] --> C; X --> S; V --> N;'
+    'flowchart TD\n A["Need: reliable booking"] --> B["Change: booking service"]\n B --> C["Options: site, staff tool, app"]\n D["Patients and reception"] --> A\n E["Context: branch hours and privacy"] --> C\n C --> F["Value: successful bookings"]\n F --> A'
   }
 />
 
-The diagram shows relationships rather than a mandatory sequence. Stakeholders help interpret needs and value, while context shapes which changes and solutions are feasible.
+The model connects questions in this scenario. It does not declare a solution correct in advance; it keeps options connected to a need and evidence of value.
 
-## 6. Interactive evidence check
+## Decision practice
 
-The sponsor says “everyone knows the dashboard will reduce delays.” Decide how to respond.
+The sponsor says the app is already selected and no investigation is needed. Compare immediately listing screens with clarifying the decision, its constraints and the underlying need. The second response supports useful analysis: establish whether the decision really is fixed, identify the problem the app must solve, and agree how success will be assessed. Respecting a constraint does not require treating its value as proven. Record assumptions that need further evidence.
 
-<details>
-<summary>Record the dashboard as the business need</summary>
+## Common mistakes and better practice
 
-This confuses a proposed solution with the need. It may prevent discovery of cheaper or more effective options. Record the dashboard as a candidate and investigate what causes the delay.
+- Do not automatically classify a requested feature as the business need; investigate its purpose.
+- Do not assess value only from the sponsor’s financial perspective; hear affected groups.
+- Do not turn BACCM concepts into project phases.
+- Separate ongoing quality requirements from temporary transition work.
+- Remember that design decisions may expose additional needs and risks.
 
-</details>
+## Application exercise and explained answer
 
-<details>
-<summary>Ask which delays matter, inspect examples and compare possible changes</summary>
+**Exercise:** Classify four statements: “reduce repeat calls,” “reception staff need to see available slots,” “the system must prevent double booking,” and “existing appointments must be migrated once.” Then suggest an option that does not require a new app.
 
-This preserves the sponsor’s idea while improving the decision. Ask whose experience should improve, which evidence supports the claim and what constraints any solution must respect.
+**Explained answer:** These respectively express a business outcome, stakeholder need, functional solution requirement and temporary transition requirement. Correcting availability on the existing website is a possible alternative. It is not automatically superior: compare cost, risk, user impact and constraints. The point is to preserve a defensible choice, not to replace one unsupported solution with another.
 
-</details>
+## Mini-quiz
 
-<details>
-<summary>Reject all dashboards because analysis must never consider solutions</summary>
+Before answering, identify which concept the question concerns. Do not invent legal rules or organizational authority absent from the scenario.
 
-This is also unhelpful. Analysis can evaluate solutions; it should connect them to needs and evidence instead of accepting or rejecting them automatically.
+<LessonCheck />
 
-</details>
+## Cheat sheet
 
-## 7. Common mistakes and best practices
+Need asks why; solution asks which approach; value asks whose benefit; context asks under what circumstances. Consider change and stakeholders together with them. Classify a requirement by its purpose rather than its position in a document.
 
-- **Treating a feature as a need:** ask what problem it should solve and for whom.
-- **Assuming value is identical for everyone:** discuss benefit, burden and risk with different groups.
-- **Ignoring context:** make relevant regulations, capabilities and constraints visible.
-- **Confusing activity with outcome:** a completed report does not by itself demonstrate improved loan processing.
-- **Inventing confidence:** document evidence gaps and recommend proportionate learning steps.
-- **Studying only terminology:** practice explaining a scenario and why one action is more useful than another.
+## Sources and scope
 
-## 8. Practice exercise and sample solution
+BABOK Guide v3, 2015: §§1.2–1.3, p. 2; §§2.1–2.5, pp. 12–20. Page numbers refer to the printed book. Check the current ECBA blueprint separately against official IIBA information.
 
-**Exercise:** A telecom provider requests a mobile chatbot to reduce support costs. Write a short analysis using all six concepts. Include one evidence gap and two possible solution approaches.
+- [IIBA — BABOK Guide and business analysis resources](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/)
+- [IIBA — certification information](https://www.iiba.org/business-analysis-certifications/)
 
-<details>
-<summary>Reveal a sample solution</summary>
-
-**Need:** customers struggle to resolve common service questions, creating repeated contact and avoidable cost. **Change:** improve first-contact resolution while keeping accessible human support. **Solutions:** improve self-service explanations or test an assistant for a narrow question type. **Stakeholders:** customers, support staff, service operations, security and accessibility specialists. **Value:** fewer unresolved issues and less repeated work without hiding customer problems. **Context:** multiple languages, personal account data and existing support channels. **Evidence gap:** which question types create repeat contact and why? Investigate this before claiming a chatbot is the best investment.
-
-</details>
-
-## 9. Mini-quiz
-
-**1. “Build a dashboard” is best treated initially as what?**
-
-A. A proposed solution. B. Proof of business value. C. A complete statement of the underlying need.
-
-<details>
-<summary>Answer and explanation</summary>
-
-**A.** It describes a possible way to act. B assumes an outcome before evidence. C omits the problem, affected people and desired improvement.
-
-</details>
-
-**2. Why can two stakeholders assess the same change differently?**
-
-A. Value and consequences can differ with their situation. B. Only the sponsor’s view can be relevant. C. Any disagreement means analysis has failed.
-
-<details>
-<summary>Answer and explanation</summary>
-
-**A.** Benefits, costs and exposure may differ. B excludes important evidence. C mistakes a normal difference in interests for a reason to stop learning.
-
-</details>
-
-**3. Which example primarily describes context?**
-
-A. A proposed notification screen. B. The organization’s regulatory obligations and existing system constraints. C. A claim that every user will be happier.
-
-<details>
-<summary>Answer and explanation</summary>
-
-**B.** These circumstances shape feasible decisions. A is a possible solution element. C is an unsupported claim about value.
-
-</details>
-
-**4. The team lacks evidence about why applications wait. What is a useful next step?**
-
-A. Promise a precise improvement anyway. B. Implement every proposed feature. C. Inspect representative cases and classify delay reasons with affected people.
-
-<details>
-<summary>Answer and explanation</summary>
-
-**C.** It targets the evidence gap. A invents certainty. B increases work without clarifying the cause or best option.
-
-</details>
-
-## 10. One-page cheat sheet
-
-**Need:** what problem or opportunity matters? **Change:** what should become different? **Solution:** what options could meet the need? **Stakeholders:** whose interests, decisions and experience matter? **Value:** what benefits and trade-offs should be inspected? **Context:** what circumstances shape the decision? **Analysis habit:** distinguish observation, inference and uncertainty, then recommend the smallest useful next action.
-
-## 11. Further reading
-
-- [IIBA: What is business analysis?](https://www.iiba.org/professional-development/career-centre/what-is-business-analysis/)
-- [IIBA: Entry Certificate in Business Analysis](https://www.iiba.org/business-analysis-certifications/ecba/)
-- [IIBA: Business Analysis Standard](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/business-analysis/the-business-analysis-standard/)
-
-Check official IIBA sources for current certification scope, format and eligibility. This lesson contains original practice material and does not reproduce official examination questions.
+Explanations and examples are original teaching material. The uploaded member PDF is not distributed on this site. Practice questions are independently authored and are not official exam questions.

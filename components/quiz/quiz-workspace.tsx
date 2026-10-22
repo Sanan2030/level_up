@@ -279,6 +279,9 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
     params.get('mode') === 'review' ? 'review' : 'practice',
   );
   const [domain, setDomain] = useState('all');
+  const [difficulty, setDifficulty] = useState('all');
+  const [questionType, setQuestionType] = useState('all');
+  const [unseenOnly, setUnseenOnly] = useState(false);
   const [count, setCount] = useState(10);
   const [practiceTimer, setPracticeTimer] = useState(false);
   const [practiceDuration, setPracticeDuration] = useState(10);
@@ -321,10 +324,14 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
   const result = progress.attempts.find((attempt) => attempt.id === resultId);
   const due = dueReviews(progress.reviews, new Date(now));
   const reviewIds = new Set((onlyDue ? due : progress.reviews).map((card) => card.questionId));
+  const attemptedIds = new Set(progress.attempts.flatMap((attempt) => attempt.questionIds));
   const filtered = bank.filter(
     (q) =>
       (mode !== 'domain' || domain === 'all' || q.domain === domain) &&
-      (mode !== 'review' || reviewIds.has(q.id)),
+      (mode !== 'review' || reviewIds.has(q.id)) &&
+      (difficulty === 'all' || q.difficulty === Number(difficulty)) &&
+      (questionType === 'all' || q.type === questionType) &&
+      (!unseenOnly || !attemptedIds.has(q.id)),
   );
   const eligibility = mockEligibility(exam, bank);
   const remaining = session ? remainingTime(session, now) : null;
@@ -753,6 +760,9 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
               onChange={(event) => {
                 setSelectedTrack(event.target.value as TrackId);
                 setDomain('all');
+                setDifficulty('all');
+                setQuestionType('all');
+                setUnseenOnly(false);
               }}
             >
               {tracks.map((track) => (
@@ -824,6 +834,76 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
               </select>
             </label>
           ) : null}
+          {mode !== 'mock' && (
+            <fieldset className="practice-filters">
+              <legend>{locale === 'az' ? 'Məşqi fərdiləşdir' : 'Customize practice'}</legend>
+              <div className="grid-3">
+                <label>
+                  {locale === 'az' ? 'Çətinlik' : 'Difficulty'}
+                  <select
+                    className="input"
+                    value={difficulty}
+                    onChange={(e) => setDifficulty(e.target.value)}
+                  >
+                    <option value="all">
+                      {locale === 'az' ? 'Bütün səviyyələr' : 'All levels'}
+                    </option>
+                    <option value="1">{locale === 'az' ? '1 · Əsaslar' : '1 · Foundations'}</option>
+                    <option value="2">{locale === 'az' ? '2 · Tətbiq' : '2 · Applied'}</option>
+                    <option value="3">
+                      {locale === 'az' ? '3 · Mürəkkəb ssenarilər' : '3 · Complex scenarios'}
+                    </option>
+                  </select>
+                </label>
+                <label>
+                  {locale === 'az' ? 'Sual növü' : 'Question format'}
+                  <select
+                    className="input"
+                    value={questionType}
+                    onChange={(e) => setQuestionType(e.target.value)}
+                  >
+                    <option value="all">{locale === 'az' ? 'Bütün növlər' : 'All formats'}</option>
+                    {(['single', 'multiple', 'ordering', 'matching', 'written'] as const).map(
+                      (type) => (
+                        <option key={type} value={type}>
+                          {locale === 'az'
+                            ? {
+                                single: 'Bir düzgün cavab',
+                                multiple: 'Bir neçə düzgün cavab',
+                                ordering: 'Ardıcıllıq',
+                                matching: 'Uyğunlaşdırma',
+                                written: 'Yazılı cavab',
+                              }[type]
+                            : {
+                                single: 'Single answer',
+                                multiple: 'Multiple answers',
+                                ordering: 'Ordering',
+                                matching: 'Matching',
+                                written: 'Written response',
+                              }[type]}
+                        </option>
+                      ),
+                    )}
+                  </select>
+                </label>
+                <label className="practice-unseen">
+                  <input
+                    type="checkbox"
+                    checked={unseenOnly}
+                    onChange={(e) => setUnseenOnly(e.target.checked)}
+                  />
+                  {locale === 'az'
+                    ? 'Yalnız əvvəlki məşqlərə daxil edilməyənlər'
+                    : 'Only questions not used in previous sessions'}
+                </label>
+              </div>
+              <p className="small muted">
+                {locale === 'az'
+                  ? 'Filtrlər öyrənmə məşqlərinə aiddir. Tam sınağın rəsmi qaydaları və mövzu bölgüsü ayrıca tətbiq edilir.'
+                  : 'Filters apply to learning practice. Full mocks use their separately verified format and domain allocation.'}
+              </p>
+            </fieldset>
+          )}
           {mode === 'review' ? (
             <div>
               <p className="muted">
@@ -847,7 +927,7 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
                 value={count}
                 onChange={(e) => setCount(Number(e.target.value))}
               >
-                {[5, 10, 20, 30].map((n) => (
+                {[5, 10, 20, 30, 40, 60, 80, 100].map((n) => (
                   <option key={n} value={n}>
                     {n}
                   </option>
@@ -855,6 +935,9 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
               </select>
               <span className="muted" style={{ fontSize: '.8rem' }}>
                 {filtered.length} {t.available}
+                {filtered.length < count && filtered.length > 0
+                  ? ` · ${locale === 'az' ? 'bu məşqdə' : 'this session'}: ${filtered.length}`
+                  : ''}
               </span>
             </label>
           ) : null}

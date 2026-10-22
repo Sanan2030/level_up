@@ -1,3 +1,4 @@
+import lessonData from '../../data/lessons.json' with { type: 'json' };
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
@@ -13,7 +14,9 @@ test('certification cards open the matching library and keep original progress',
     .click();
   await expect(page).toHaveURL(/track=pspo2/);
   await expect(page.getByRole('combobox', { name: 'Track', exact: true })).toHaveValue('pspo2');
-  await expect(page.locator('.library-lesson-card')).toHaveCount(4);
+  await expect(page.locator('.library-lesson-card')).toHaveCount(
+    lessonData.filter((l) => l.trackId === 'pspo2').length,
+  );
   const saved = await page.evaluate(() =>
     JSON.parse(localStorage.getItem('level-up.progress.v1')!),
   );

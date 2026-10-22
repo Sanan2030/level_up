@@ -3,63 +3,75 @@ id: ecba-techniques
 locale: en
 title: 'Choosing an analysis technique'
 objectives:
-  - 'Match elicitation and modeling techniques to the decision and available evidence.'
-  - 'Apply the topic to a customer self-service change; justify the decision and identify missing evidence.'
+  - 'Select a technique for the research question and explain its limits.'
+  - 'Combine interviews, observation, surveys, workshops, process models and prototypes.'
 ---
 
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
+## Core concept
 
-## Learning objectives
-
-- Match elicitation and modeling techniques to the decision and available evidence.
-- Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+A technique helps obtain, represent or examine particular information. There is no universal rule to always hold a workshop or use one software tool. Select BABOK v3 techniques in light of the question, participants, time, risk and evidence already available. Several techniques may complement one another in supporting the same decision. A familiar technique is not automatically the most informative choice.
 
 ## Why it matters
 
-The planned lesson uses a concrete delivery decision to show when **Choosing an analysis technique** helps a team. It will make assumptions and affected stakeholders explicit.
+People may misremember routine work, hesitate to discuss sensitive matters in a group, or struggle to explain a future interface verbally. Relying on one technique can leave a blind spot. An experienced employee’s account can be compared with observation and then explored through a prototype. The aim is not to maximize documentation: it is to reduce uncertainty relevant to a decision while recognizing the limitations of each source.
 
-## Core theory: planned outline
+## Theory and distinctions
 
-1. Define the essential terms in the topic.
-2. Match elicitation and modeling techniques to the decision and available evidence.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+**Interviews** investigate individual knowledge, reasons and perspectives. Open questions invite detail; closed questions can confirm a specific fact. **Observation** exposes work in context. Active observation allows questions during the activity; passive observation preserves the flow and reserves questions for later. Make objectives and participant expectations clear in either case.
 
-## Worked example: planned outline
+**Document analysis** examines policies, instructions and earlier information, while checking currency and credibility. **Surveys** collect structured information from a defined group; leading questions and an inappropriate target group undermine their usefulness. **Workshops** support collaboration around a predefined goal. A facilitator protects focus and participation, while a scribe captures decisions and unresolved issues.
 
-Apply the topic to a customer self-service change; justify the decision and identify missing evidence. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+**Process models** show work, triggering events, decisions and outcomes. A high-level picture does not establish every exception. **Prototypes** expose appearance, behavior and assumptions early. A throw-away prototype supports learning and is not maintained as production code; an evolutionary prototype may develop into a working solution. Neither visual polish nor stakeholder enthusiasm automatically proves technical suitability or value.
 
-## Diagram: planned outline
+## Worked example
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **Choosing an analysis technique**. The diagram will include a text explanation.
+A warehouse manager says employees waste time finding orders. The analyst reviews existing instructions and interviews shift leads, then observes agreed work sessions. Employees copy an identifier from paper into another system. A process model makes that handoff visible, and a simple prototype explores entering the identifier once.
 
-## Interactive practice: planned outline
+Immediately surveying every employee would not establish the feasibility of a solution. First understand where and why time is lost. Positive prototype feedback also does not prove savings: compare real task completion time and errors before drawing that conclusion. The sequence is a reasoned choice for this example, not a required BABOK procedure.
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+## Visual model
 
-## Common mistakes and best practices
+<Diagram
+  chart={
+    'flowchart LR\n Q["Question: why is picking slow?"] --> D["Review current instructions"]\n D --> I["Interview shift leads"]\n I --> O["Observe actual handoffs"]\n O --> M["Model the workflow"]\n M --> P["Test a small prototype"]\n P --> V["Check task time and errors"]'
+  }
+/>
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+The model links each technique to the question it addresses. A new gap can justify revisiting earlier evidence rather than mechanically proceeding to the next technique.
 
-## Practice exercise and sample-solution plan
+## Decision practice
 
-**Exercise:** Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+Users can explain problems in today’s workflow but cannot describe a new form. Clarify their task through interviews and observation, then explore concrete behavior with a low-fidelity prototype. If integration feasibility is uncertain, implementation expertise and technical investigation are needed in addition to user feedback. One technique cannot substitute for evidence answering a different question.
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+## Common mistakes and better practice
 
-## Mini-quiz: planned outline
+- Avoid leading prompts such as “Do you want this excellent feature?”
+- Do not select only convenient or supportive participants.
+- Do not assume an old manual perfectly describes current work.
+- Do not equate the most senior person’s view with group agreement.
+- Do not present a learning prototype as a production-ready product.
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+## Application exercise and explained answer
 
-## One-page summary plan
+**Exercise:** Select techniques for three gaps: a routine sequence an employee cannot explain, conflicting approval rules across departments, and a confusing step in a proposed form. Name one limitation for each selection.
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+**Explained answer:** Observation can expose routine behavior, although observation may itself change behavior. Document analysis plus a focused workshop can clarify conflicting rules, provided the right participants and decision authority are present. A realistic task using a prototype can expose form confusion, while leaving integration and quality questions unresolved. Other combinations can be defensible if their evidence and limitations are explained.
 
-## Further reading
+## Mini-quiz
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+When a question asks for the best technique, consider its purpose, the information already known and the constraints. Familiarity alone is not a sufficient reason.
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+<LessonCheck />
+
+## Cheat sheet
+
+Question → needed evidence → suitable technique → limitation → confirmation. Revise technique choices as learning develops. Interviews, observation, modelling and prototyping can complement one another rather than compete for universal preference.
+
+## Sources and scope
+
+BABOK Guide v3, 2015: §10.18, pp. 269–270; §10.25, pp. 290–293; §10.31, pp. 305–307; §10.35, pp. 318–323; §10.36, pp. 323–325; §10.45, pp. 350–352; §10.50, pp. 363–365. Main explanations consulted: 269, 290–291, 305–306, 318–319, 323–324, 350–351, 363–364.
+
+- [IIBA — BABOK Guide and business analysis resources](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/)
+- [IIBA — certification information](https://www.iiba.org/business-analysis-certifications/)
+
+Explanations and examples are original teaching material. The uploaded member PDF is not distributed on this site. Practice questions are independently authored and are not official exam questions.

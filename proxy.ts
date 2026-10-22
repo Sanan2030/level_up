@@ -1,14 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  if (/^\/az(\/|$)/.test(pathname)) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.replace(/^\/az(?=\/|$)/, '/en');
+    return NextResponse.redirect(url, 308);
+  }
   if (
     pathname === '/' ||
-    (!/^\/(az|en)(\/|$)/.test(pathname) &&
-      !pathname.startsWith('/_next') &&
-      !pathname.includes('.'))
+    (!/^\/en(\/|$)/.test(pathname) && !pathname.startsWith('/_next') && !pathname.includes('.'))
   ) {
     const url = request.nextUrl.clone();
-    url.pathname = `/az${pathname === '/' ? '' : pathname}`;
+    url.pathname = `/en${pathname === '/' ? '' : pathname}`;
     return NextResponse.redirect(url);
   }
   return NextResponse.next();

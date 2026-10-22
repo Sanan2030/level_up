@@ -3,63 +3,75 @@ id: ccba-elicitation
 locale: en
 title: 'Elicit and confirm evidence'
 objectives:
-  - 'Distinguish gathering information from confirming its meaning with affected people.'
-  - 'Apply the topic to a customer self-service change; justify the decision and identify missing evidence.'
+  - 'Separate information gathering, confirmation of accuracy and approval authority.'
+  - 'Investigate conflicting sources and communicate to establish shared understanding.'
 ---
 
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
+## Core concept
 
-## Learning objectives
-
-- Distinguish gathering information from confirming its meaning with affected people.
-- Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+Elicitation draws information from people and other sources, investigates what is already available and, when necessary, discovers information through experiments. It is not merely a list of interviews or an initial project phase. BABOK v3 distinguishes preparation, conducting elicitation, confirming results, communicating information and managing collaboration. Those distinctions make the status of evidence visible and prevent a conversation from becoming an unexamined commitment.
 
 ## Why it matters
 
-The planned lesson uses a concrete delivery decision to show when **Elicit and confirm evidence** helps a team. It will make assumptions and affected stakeholders explicit.
+Accurately recording one employee’s statement does not establish that it is universally true. Two departments may use one term differently, and a procedure may lag behind actual practice. Confirming elicitation results checks inaccuracies, conflicts and omissions. It does not replace later work to verify requirement quality, validate business relevance or obtain approval. Fast decisions based on misunderstood information can create costly rework and stakeholder distrust.
 
-## Core theory: planned outline
+## Theory and distinctions
 
-1. Define the essential terms in the topic.
-2. Distinguish gathering information from confirming its meaning with affected people.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+**Prepare:** identify the decision to inform, participants, techniques and supporting material. Stakeholder knowledge and collaboration needs influence the choice. **Conduct:** collaborative activities, research and experiments can be combined. A plan supplies focus without requiring the analyst to ignore unexpected information.
 
-## Worked example: planned outline
+**Confirm results:** compare captured information with its source and with other elicitation results. Stakeholder corrections, historical records and additional activities can explain discrepancies. Confirmed means accurately represented and checked for consistency, not that every business decision has been approved. If a conflict remains, investigate further and preserve the unresolved point explicitly.
 
-Apply the topic to a customer self-service change; justify the decision and identify missing evidence. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+**Communicate:** choose language, detail, timing and format for the audience, then check understanding. An email being sent does not establish that its implications are understood. **Manage collaboration:** roles, attitudes and interests may change. Maintain relationships, discover missing stakeholders and make disagreements visible without undermining trust. Facilitation supports shared understanding; it does not automatically give the analyst authority to make all decisions.
 
-## Diagram: planned outline
+## Worked example
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **Elicit and confirm evidence**. The diagram will include a text explanation.
+In a loan service, branch staff say an application can be saved without documents; central operations say it cannot. An old manual only describes complete applications. The analyst does not immediately choose a winner. They examine examples, statuses and system versions.
 
-## Interactive practice: planned outline
+Branch staff mean a draft; operations mean a formally submitted application. The analyst separates the terms, confirms the revised findings with both groups and reviews a status model together. Any proposed business-rule change then receives separate impact analysis and an authorized decision. Resolving a terminology conflict is different from changing policy.
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+## Visual model
 
-## Common mistakes and best practices
+<Diagram
+  chart={
+    'flowchart TD\n P["Prepare: purpose and participants"] --> E["Elicit: collaboration, research, experiment"]\n E --> U["Unconfirmed findings"]\n U --> C["Compare sources and clarify"]\n C --> F["Confirmed findings"]\n C -. "Unresolved discrepancy" .-> E\n F --> M["Communicate and check understanding"]'
+  }
+/>
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+The status of findings stays visible. An unresolved conflict can trigger more elicitation; sending information does not finish communication until understanding is checked.
 
-## Practice exercise and sample-solution plan
+## Decision practice
 
-**Exercise:** Apply the topic to a customer self-service change; justify the decision and identify missing evidence.
+A participant confirms that notes are accurate but later rejects the proposed solution. This is not necessarily a contradiction: they confirmed the representation of their input, not an investment decision. Separate confirmed findings, open options and approval authority. Do not close the disagreement with “everyone already approved” when the earlier confirmation addressed a different question.
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+## Common mistakes and better practice
 
-## Mini-quiz: planned outline
+- Do not generalize one expert’s view to all users.
+- Do not turn an informal conversation into an immutable, source-free requirement.
+- A majority vote does not replace relevant legal or safety authority.
+- Investigate differences in terms and circumstances before blaming people.
+- Preserve when information was obtained and from whom.
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+## Application exercise and explained answer
 
-## One-page summary plan
+**Exercise:** Write two open questions, one confirmation step and one communication method for the branch and operations groups.
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+**Explained answer:** “Show how you last saved an application without documents” and “When does an application count as formally submitted?” focus on actual work. Compare the same example’s status history with the notes. A simple status model can expose the distinction both groups intended. Asking each group to explain the model in their own words checks understanding more effectively than merely sending it. These are example techniques; privacy and access constraints still apply.
 
-## Further reading
+## Mini-quiz
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+Identify the required outcome: new information, accurate capture, shared understanding, or authorized approval. They are different purposes and may require different actions.
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+<LessonCheck />
+
+## Cheat sheet
+
+Prepare → elicit → confirm against sources → communicate appropriately → check understanding. Collaboration continues throughout and adapts as participants and information change.
+
+## Sources and scope
+
+BABOK Guide v3, 2015: §§4.1–4.5, pp. 56–73; particularly §4.2 description, p. 61; §4.3, pp. 65–66; §4.4 description, p. 68; §4.5 description, pp. 71–72. Distinctions concerning confirmation, checking and approval also refer to §5.5, pp. 95–96 and §§7.2–7.3, pp. 141–147.
+
+- [IIBA — BABOK Guide and business analysis resources](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/)
+- [IIBA — certification information](https://www.iiba.org/business-analysis-certifications/)
+
+Explanations and examples are original teaching material. The uploaded member PDF is not distributed on this site. Practice questions are independently authored and are not official exam questions.

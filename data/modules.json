@@ -216,7 +216,7 @@
       "en": "Original study scenarios; official exam details are maintained separately."
     },
     "lessonIds": ["ecba-context", "ecba-knowledge-areas", "ecba-techniques"],
-    "estimatedMinutes": 105,
+    "estimatedMinutes": 90,
     "prerequisites": []
   },
   {
@@ -232,7 +232,7 @@
       "en": "Original study scenarios; official exam details are maintained separately."
     },
     "lessonIds": ["ccba-planning", "ccba-elicitation", "ccba-lifecycle"],
-    "estimatedMinutes": 105,
+    "estimatedMinutes": 90,
     "prerequisites": []
   },
   {
@@ -267,9 +267,11 @@
       "scrum-accountabilities",
       "pspo1-events",
       "pspo1-artifacts",
-      "pspo1-product-value"
+      "pspo1-product-value",
+      "pspo1-empiricism",
+      "pspo1-refinement"
     ],
-    "estimatedMinutes": 80,
+    "estimatedMinutes": 130,
     "prerequisites": []
   },
   {
@@ -284,8 +286,17 @@
       "az": "Orijinal öyrənmə ssenariləri; rəsmi imtahan məlumatları ayrıca saxlanılır.",
       "en": "Original study scenarios; official exam details are maintained separately."
     },
-    "lessonIds": ["pspo2-strategy", "pspo2-value", "pspo2-facilitation", "pspo2-kanban"],
-    "estimatedMinutes": 80,
+    "lessonIds": [
+      "pspo2-strategy",
+      "pspo2-value",
+      "pspo2-facilitation",
+      "pspo2-kanban",
+      "pspo2-forecasting",
+      "pspo2-shared-quality",
+      "pspo2-discovery",
+      "pspo2-organization"
+    ],
+    "estimatedMinutes": 180,
     "prerequisites": []
   },
   {

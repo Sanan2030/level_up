@@ -1,13 +1,14 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChartNoAxesColumnIncreasing, ChevronDown, Menu, X } from 'lucide-react';
+import { ChartNoAxesColumnIncreasing, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { copy } from '@/lib/i18n';
 import { tracks } from '@/lib/tracks';
 import type { Locale, TrackId } from '@/lib/types';
 import { useProgress } from './providers';
 import { ThemeToggle } from './theme-toggle';
+import { TranslateButton } from './translate-panel';
 
 export function AppShell({ children, locale }: { children: React.ReactNode; locale: Locale }) {
   const path = usePathname();
@@ -23,7 +24,6 @@ export function AppShell({ children, locale }: { children: React.ReactNode; loca
     window.addEventListener('keydown', close);
     return () => window.removeEventListener('keydown', close);
   }, []);
-  const alternate = path.replace(/^\/(az|en)(?=\/|$)/, az ? '/en' : '/az');
   const links = home
     ? [
         ['#how', az ? 'Necə işləyir' : 'How it works'],
@@ -69,14 +69,7 @@ export function AppShell({ children, locale }: { children: React.ReactNode; loca
             </Link>
           </nav>
           <div className="merhele-utilities">
-            <Link
-              href={alternate}
-              className="locale-toggle"
-              aria-label={az ? 'AZ — Switch to English' : 'EN — Azərbaycan dilinə keç'}
-            >
-              {locale.toUpperCase()}
-              <ChevronDown size={12} />
-            </Link>
+            <TranslateButton />
             <ThemeToggle locale={locale} />
             <button
               type="button"
@@ -118,6 +111,7 @@ export function AppShell({ children, locale }: { children: React.ReactNode; loca
           <nav aria-label={az ? 'Əlavə bölmələr' : 'More learning tools'}>
             <Link href={`/${locale}/competencies`}>{t.competencies}</Link>
             <Link href={`/${locale}/glossary`}>{t.glossary}</Link>
+            <Link href={`/${locale}/study-guide`}>Study guide</Link>
             <Link href={`/${locale}/sources`}>{az ? 'Mənbələr' : 'Sources'}</Link>
             <Link href={`/${locale}/settings`}>{t.settings}</Link>
           </nav>
