@@ -1,0 +1,1592 @@
+[
+  {
+    "id": "pspo1-sprint-goal-changes-extra-01",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 2,
+    "text": {
+      "en": "During a Sprint, a selected item proves too large, but a smaller useful slice can still achieve the same Sprint Goal. What is the most appropriate response?",
+      "az": "During a Sprint, a selected item proves too large, but a smaller useful slice can still achieve the same Sprint Goal. What is the most appropriate response?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The Product Owner directly replaces every Developer's task to preserve the original item count.",
+          "az": "The Product Owner directly replaces every Developer's task to preserve the original item count."
+        },
+        "explanation": {
+          "en": "Product accountability does not give the Product Owner ownership of the Developers' implementation plan.",
+          "az": "Product accountability does not give the Product Owner ownership of the Developers' implementation plan."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The Scrum Master must cancel because any forecast change makes the goal obsolete.",
+          "az": "The Scrum Master must cancel because any forecast change makes the goal obsolete."
+        },
+        "explanation": {
+          "en": "Changed effort and an obsolete objective are different conditions; only the Product Owner can cancel.",
+          "az": "Changed effort and an obsolete objective are different conditions; only the Product Owner can cancel."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The team lowers its Definition of Done temporarily so all original items count as complete.",
+          "az": "The team lowers its Definition of Done temporarily so all original items count as complete."
+        },
+        "explanation": {
+          "en": "Quality must not decrease to create the appearance of meeting a forecast.",
+          "az": "Quality must not decrease to create the appearance of meeting a forecast."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "The Product Owner and Developers clarify and renegotiate scope; Developers adapt their plan without reducing quality.",
+          "az": "The Product Owner and Developers clarify and renegotiate scope; Developers adapt their plan without reducing quality."
+        },
+        "explanation": {
+          "en": "The goal provides focus while allowing learning about the exact work.",
+          "az": "The goal provides focus while allowing learning about the exact work."
+        }
+      }
+    ],
+    "correct": ["d"],
+    "explanation": {
+      "en": "The Scrum Guide permits scope clarification/renegotiation while protecting the Sprint Goal and quality. See the lesson’s Sources and further reading for exact sections.",
+      "az": "The Scrum Guide permits scope clarification/renegotiation while protecting the Sprint Goal and quality. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo1-sprint-goal-changes",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "agile-manifesto-principles", "professional-po-2018"]
+  },
+  {
+    "id": "pspo1-sprint-goal-changes-extra-02",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 2,
+    "text": {
+      "en": "A legal change makes the current Sprint Goal obsolete. Who has the authority to cancel the Sprint?",
+      "az": "A legal change makes the current Sprint Goal obsolete. Who has the authority to cancel the Sprint?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Any individual Developer whenever the task list changes.",
+          "az": "Any individual Developer whenever the task list changes."
+        },
+        "explanation": {
+          "en": "An individual's plan change is not the defined cancellation authority.",
+          "az": "An individual's plan change is not the defined cancellation authority."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The Product Owner, informed by the changed circumstances.",
+          "az": "The Product Owner, informed by the changed circumstances."
+        },
+        "explanation": {
+          "en": "The Scrum Guide assigns cancellation authority to the Product Owner.",
+          "az": "The Scrum Guide assigns cancellation authority to the Product Owner."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The Sprint Review stakeholders through a majority acceptance vote.",
+          "az": "The Sprint Review stakeholders through a majority acceptance vote."
+        },
+        "explanation": {
+          "en": "Scrum does not define such a cancellation vote or require waiting for Review.",
+          "az": "Scrum does not define such a cancellation vote or require waiting for Review."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Only the Scrum Master, because cancellation changes the event schedule.",
+          "az": "Only the Scrum Master, because cancellation changes the event schedule."
+        },
+        "explanation": {
+          "en": "Supporting Scrum does not transfer the Product Owner's specified authority.",
+          "az": "Supporting Scrum does not transfer the Product Owner's specified authority."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Obsolescence concerns the goal's relevance, not merely a changed task estimate. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Obsolescence concerns the goal's relevance, not merely a changed task estimate. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo1-sprint-goal-changes",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "agile-manifesto-principles", "professional-po-2018"]
+  },
+  {
+    "id": "pspo1-sprint-goal-changes-extra-03",
+    "trackId": "pspo1",
+    "type": "multiple",
+    "domain": "scrum-application",
+    "difficulty": 3,
+    "text": {
+      "en": "Which statements are consistent with the Scrum Guide? Select all that apply.",
+      "az": "Which statements are consistent with the Scrum Guide? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A usable Done Increment may be delivered before the Sprint Review.",
+          "az": "A usable Done Increment may be delivered before the Sprint Review."
+        },
+        "explanation": {
+          "en": "Review is not a gate to releasing value.",
+          "az": "Review is not a gate to releasing value."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The Sprint Review can waive the Definition of Done for work stakeholders like.",
+          "az": "The Sprint Review can waive the Definition of Done for work stakeholders like."
+        },
+        "explanation": {
+          "en": "Stakeholder approval does not replace the quality commitment.",
+          "az": "Stakeholder approval does not replace the quality commitment."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Welcoming change means every stakeholder request must interrupt the Sprint immediately.",
+          "az": "Welcoming change means every stakeholder request must interrupt the Sprint immediately."
+        },
+        "explanation": {
+          "en": "The Agile principles do not erase Scrum's goal and quality constraints.",
+          "az": "The Agile principles do not erase Scrum's goal and quality constraints."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Selected work may be clarified and renegotiated with the Product Owner as more is learned.",
+          "az": "Selected work may be clarified and renegotiated with the Product Owner as more is learned."
+        },
+        "explanation": {
+          "en": "Scrum permits learning while keeping the Sprint Goal protected.",
+          "az": "Scrum permits learning while keeping the Sprint Goal protected."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Protect the goal and quality while adapting through collaboration; do not add a mandatory release gate. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Protect the goal and quality while adapting through collaboration; do not add a mandatory release gate. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo1-sprint-goal-changes",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "agile-manifesto-principles", "professional-po-2018"]
+  },
+  {
+    "id": "pspo1-sprint-goal-changes-extra-04",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 2,
+    "text": {
+      "en": "A Done recovery improvement is usable on day seven of a ten-day Sprint. No actual operational or regulatory constraint requires delay. Why need it not wait for Sprint Review?",
+      "az": "A Done recovery improvement is usable on day seven of a ten-day Sprint. No actual operational or regulatory constraint requires delay. Why need it not wait for Sprint Review?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The Sprint must end as soon as any Increment is released.",
+          "az": "The Sprint must end as soon as any Increment is released."
+        },
+        "explanation": {
+          "en": "A release does not automatically change the Sprint timebox.",
+          "az": "A release does not automatically change the Sprint timebox."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The Sprint Review inspects outcomes and changed circumstances; it is not mandatory release approval.",
+          "az": "The Sprint Review inspects outcomes and changed circumstances; it is not mandatory release approval."
+        },
+        "explanation": {
+          "en": "Scrum permits delivery before Review when the capability meets the required quality boundary.",
+          "az": "Scrum permits delivery before Review when the capability meets the required quality boundary."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The Product Owner can convert any unfinished work into Done by releasing it early.",
+          "az": "The Product Owner can convert any unfinished work into Done by releasing it early."
+        },
+        "explanation": {
+          "en": "Release timing does not waive the Definition of Done.",
+          "az": "Release timing does not waive the Definition of Done."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "An early release removes the need to hold a Sprint Review.",
+          "az": "An early release removes the need to hold a Sprint Review."
+        },
+        "explanation": {
+          "en": "Releasing and inspecting the Sprint outcome serve different purposes.",
+          "az": "Releasing and inspecting the Sprint outcome serve different purposes."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Use the event's purpose rather than inventing an end-of-Sprint gate. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Use the event's purpose rather than inventing an end-of-Sprint gate. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo1-sprint-goal-changes",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "agile-manifesto-principles", "professional-po-2018"]
+  },
+  {
+    "id": "pspo1-sprint-goal-changes-extra-05",
+    "trackId": "pspo1",
+    "type": "single",
+    "domain": "stakeholder-leadership",
+    "difficulty": 3,
+    "text": {
+      "en": "A sponsor says “Agile welcomes late change, so add my feature now even if the Sprint Goal is endangered.” What is the most defensible response?",
+      "az": "A sponsor says “Agile welcomes late change, so add my feature now even if the Sprint Goal is endangered.” What is the most defensible response?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Ignore all new information until the Sprint ends.",
+          "az": "Ignore all new information until the Sprint ends."
+        },
+        "explanation": {
+          "en": "Scrum is empirical and allows useful scope clarification.",
+          "az": "Scrum is empirical and allows useful scope clarification."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Assign it immediately because Agile principles override every Scrum commitment.",
+          "az": "Assign it immediately because Agile principles override every Scrum commitment."
+        },
+        "explanation": {
+          "en": "Supplementary principles do not remove the framework's specific boundaries.",
+          "az": "Supplementary principles do not remove the framework's specific boundaries."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Ask stakeholders to redefine Done so the extra work fits.",
+          "az": "Ask stakeholders to redefine Done so the extra work fits."
+        },
+        "explanation": {
+          "en": "Quality is not an accounting device for accommodating more work.",
+          "az": "Quality is not an accounting device for accommodating more work."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Inspect the request and its value, then collaborate on options that respect the Sprint Goal and quality.",
+          "az": "Inspect the request and its value, then collaborate on options that respect the Sprint Goal and quality."
+        },
+        "explanation": {
+          "en": "Responsiveness includes transparent trade-offs rather than automatic interruption.",
+          "az": "Responsiveness includes transparent trade-offs rather than automatic interruption."
+        }
+      }
+    ],
+    "correct": ["d"],
+    "explanation": {
+      "en": "The Agile principles and Scrum's commitments should support empirical collaboration rather than be used as slogans. See the lesson’s Sources and further reading for exact sections.",
+      "az": "The Agile principles and Scrum's commitments should support empirical collaboration rather than be used as slogans. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo1-sprint-goal-changes",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "agile-manifesto-principles", "professional-po-2018"]
+  },
+  {
+    "id": "pspo1-sprint-goal-changes-extra-06",
+    "trackId": "pspo1",
+    "type": "multiple",
+    "domain": "empiricism",
+    "difficulty": 3,
+    "text": {
+      "en": "Which observations help distinguish a changed forecast from an obsolete Sprint Goal? Select all that apply.",
+      "az": "Which observations help distinguish a changed forecast from an obsolete Sprint Goal? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Whether stakeholders are willing to call unfinished work an Increment.",
+          "az": "Whether stakeholders are willing to call unfinished work an Increment."
+        },
+        "explanation": {
+          "en": "Acceptance cannot substitute for the Definition of Done.",
+          "az": "Acceptance cannot substitute for the Definition of Done."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Whether the objective still creates value under the new circumstances.",
+          "az": "Whether the objective still creates value under the new circumstances."
+        },
+        "explanation": {
+          "en": "Obsolescence concerns the goal's relevance.",
+          "az": "Obsolescence concerns the goal's relevance."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Whether another useful scope option can still achieve the same objective.",
+          "az": "Whether another useful scope option can still achieve the same objective."
+        },
+        "explanation": {
+          "en": "A changed implementation forecast need not invalidate the goal.",
+          "az": "A changed implementation forecast need not invalidate the goal."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Whether all original item estimates can be preserved by changing their labels.",
+          "az": "Whether all original item estimates can be preserved by changing their labels."
+        },
+        "explanation": {
+          "en": "Relabeling does not establish value or usability.",
+          "az": "Relabeling does not establish value or usability."
+        }
+      }
+    ],
+    "correct": ["b", "c"],
+    "explanation": {
+      "en": "Reason about objective, evidence and possible adaptation; task-list discomfort alone does not prove obsolescence. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Reason about objective, evidence and possible adaptation; task-list discomfort alone does not prove obsolescence. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo1-sprint-goal-changes",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "agile-manifesto-principles", "professional-po-2018"]
+  },
+  {
+    "id": "pspo2-outcome-experiments-extra-01",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "empiricism",
+    "difficulty": 3,
+    "text": {
+      "en": "Overall completion rises from 40% to 50%, but both mobile and desktop completion rates fall as the audience mix changes. What should the Product Owner do first?",
+      "az": "Overall completion rises from 40% to 50%, but both mobile and desktop completion rates fall as the audience mix changes. What should the Product Owner do first?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Use completed story points to prove which audience benefited.",
+          "az": "Use completed story points to prove which audience benefited."
+        },
+        "explanation": {
+          "en": "Delivery estimates do not resolve the observed customer-outcome question.",
+          "az": "Delivery estimates do not resolve the observed customer-outcome question."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Inspect segments, traffic composition and measurement before claiming the change improved outcomes.",
+          "az": "Inspect segments, traffic composition and measurement before claiming the change improved outcomes."
+        },
+        "explanation": {
+          "en": "The aggregate can rise because higher-baseline users make up more of the total.",
+          "az": "The aggregate can rise because higher-baseline users make up more of the total."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Expand immediately because the overall rate is the only valid product metric.",
+          "az": "Expand immediately because the overall rate is the only valid product metric."
+        },
+        "explanation": {
+          "en": "That ignores contrary segment evidence and possible user harm.",
+          "az": "That ignores contrary segment evidence and possible user harm."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Discard all metrics permanently because averages can mislead.",
+          "az": "Discard all metrics permanently because averages can mislead."
+        },
+        "explanation": {
+          "en": "The appropriate response is better measurement and interpretation.",
+          "az": "The appropriate response is better measurement and interpretation."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "The lesson's synthetic aggregation reversal illustrates why segment context and comparison design matter. See the lesson’s Sources and further reading for exact sections.",
+      "az": "The lesson's synthetic aggregation reversal illustrates why segment context and comparison design matter. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-outcome-experiments",
+    "practiceOnly": true,
+    "sourceIds": ["ebm-2024", "govuk-performance-metrics", "govuk-service-success", "scrum-2020"]
+  },
+  {
+    "id": "pspo2-outcome-experiments-extra-02",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "empiricism",
+    "difficulty": 3,
+    "text": {
+      "en": "A team launches several changes during a seasonal promotion and observes higher conversion than last month. Which conclusion is justified without additional evidence?",
+      "az": "A team launches several changes during a seasonal promotion and observes higher conversion than last month. Which conclusion is justified without additional evidence?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Every launched feature caused an identical increase in conversion.",
+          "az": "Every launched feature caused an identical increase in conversion."
+        },
+        "explanation": {
+          "en": "The observation does not identify independent causal contributions.",
+          "az": "The observation does not identify independent causal contributions."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The result must be ignored because only experiments produce any useful information.",
+          "az": "The result must be ignored because only experiments produce any useful information."
+        },
+        "explanation": {
+          "en": "Observational evidence can still inform a decision when its limits are explicit.",
+          "az": "Observational evidence can still inform a decision when its limits are explicit."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The Sprint Review automatically turns the observed correlation into validation.",
+          "az": "The Sprint Review automatically turns the observed correlation into validation."
+        },
+        "explanation": {
+          "en": "An event cannot remove the comparison's design limitations.",
+          "az": "An event cannot remove the comparison's design limitations."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Conversion changed, but the particular product change's causal effect is not yet established.",
+          "az": "Conversion changed, but the particular product change's causal effect is not yet established."
+        },
+        "explanation": {
+          "en": "Seasonality, traffic and simultaneous releases can confound a before/after comparison.",
+          "az": "Seasonality, traffic and simultaneous releases can confound a before/after comparison."
+        }
+      }
+    ],
+    "correct": ["d"],
+    "explanation": {
+      "en": "Be transparent about what the evidence supports and what a smaller, better comparison must resolve. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Be transparent about what the evidence supports and what a smaller, better comparison must resolve. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-outcome-experiments",
+    "practiceOnly": true,
+    "sourceIds": ["ebm-2024", "govuk-performance-metrics", "govuk-service-success", "scrum-2020"]
+  },
+  {
+    "id": "pspo2-outcome-experiments-extra-03",
+    "trackId": "pspo2",
+    "type": "multiple",
+    "domain": "product-strategy",
+    "difficulty": 3,
+    "text": {
+      "en": "Which elements strengthen a product experiment plan? Select all that apply.",
+      "az": "Which elements strengthen a product experiment plan? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Use stakeholder applause as sufficient proof of sustained customer benefit.",
+          "az": "Use stakeholder applause as sufficient proof of sustained customer benefit."
+        },
+        "explanation": {
+          "en": "Stakeholder reaction is evidence of a reaction, not the complete market outcome.",
+          "az": "Stakeholder reaction is evidence of a reaction, not the complete market outcome."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Define the intended population, outcome and decision rule before looking at results.",
+          "az": "Define the intended population, outcome and decision rule before looking at results."
+        },
+        "explanation": {
+          "en": "This makes the assumption and interpretation more inspectable.",
+          "az": "This makes the assumption and interpretation more inspectable."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Track material harm and constraints alongside the target outcome.",
+          "az": "Track material harm and constraints alongside the target outcome."
+        },
+        "explanation": {
+          "en": "Guardrails prevent a local metric from concealing wider damage.",
+          "az": "Guardrails prevent a local metric from concealing wider damage."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Redefine success whenever an early result favors the sponsor's preferred feature.",
+          "az": "Redefine success whenever an early result favors the sponsor's preferred feature."
+        },
+        "explanation": {
+          "en": "Post-hoc goal changes weaken the test's ability to challenge assumptions.",
+          "az": "Post-hoc goal changes weaken the test's ability to challenge assumptions."
+        }
+      }
+    ],
+    "correct": ["b", "c"],
+    "explanation": {
+      "en": "Combine falsifiable hypotheses, measurement quality and guardrails with empirical judgment. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Combine falsifiable hypotheses, measurement quality and guardrails with empirical judgment. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-outcome-experiments",
+    "practiceOnly": true,
+    "sourceIds": ["ebm-2024", "govuk-performance-metrics", "govuk-service-success", "scrum-2020"]
+  },
+  {
+    "id": "pspo2-outcome-experiments-extra-04",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 2,
+    "text": {
+      "en": "Velocity increases by 20% while customer task completion and support burden remain unchanged. What does the velocity observation alone demonstrate?",
+      "az": "Velocity increases by 20% while customer task completion and support burden remain unchanged. What does the velocity observation alone demonstrate?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Current Value increased by exactly 20%.",
+          "az": "Current Value increased by exactly 20%."
+        },
+        "explanation": {
+          "en": "There is no justified numerical conversion from velocity to value.",
+          "az": "There is no justified numerical conversion from velocity to value."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Unrealized Value is now zero.",
+          "az": "Unrealized Value is now zero."
+        },
+        "explanation": {
+          "en": "A satisfaction/opportunity gap is not determined by delivery speed.",
+          "az": "A satisfaction/opportunity gap is not determined by delivery speed."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The Product Owner should permanently optimize only velocity.",
+          "az": "The Product Owner should permanently optimize only velocity."
+        },
+        "explanation": {
+          "en": "One output measure cannot replace the product's outcome goal.",
+          "az": "One output measure cannot replace the product's outcome goal."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "A delivery/output measure changed under its measurement assumptions.",
+          "az": "A delivery/output measure changed under its measurement assumptions."
+        },
+        "explanation": {
+          "en": "It does not independently establish improved customer value.",
+          "az": "It does not independently establish improved customer value."
+        }
+      }
+    ],
+    "correct": ["d"],
+    "explanation": {
+      "en": "EBM distinguishes activities/outputs from customer outcomes and broader impact. See the lesson’s Sources and further reading for exact sections.",
+      "az": "EBM distinguishes activities/outputs from customer outcomes and broader impact. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-outcome-experiments",
+    "practiceOnly": true,
+    "sourceIds": ["ebm-2024", "govuk-performance-metrics", "govuk-service-success", "scrum-2020"]
+  },
+  {
+    "id": "pspo2-outcome-experiments-extra-05",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 3,
+    "text": {
+      "en": "A faster onboarding flow increases starts but reduces completed first sessions for mobile users. A sponsor wants full expansion. What is the strongest next step?",
+      "az": "A faster onboarding flow increases starts but reduces completed first sessions for mobile users. A sponsor wants full expansion. What is the strongest next step?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Require an additional Discovery Sprint as a rule imposed by Scrum.",
+          "az": "Require an additional Discovery Sprint as a rule imposed by Scrum."
+        },
+        "explanation": {
+          "en": "Scrum does not prescribe a separate Discovery Sprint.",
+          "az": "Scrum does not prescribe a separate Discovery Sprint."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Inspect completion, mobile-user evidence and guardrails before deciding whether to adapt or expand.",
+          "az": "Inspect completion, mobile-user evidence and guardrails before deciding whether to adapt or expand."
+        },
+        "explanation": {
+          "en": "The observed output increase conflicts with the intended completed-user outcome.",
+          "az": "The observed output increase conflicts with the intended completed-user outcome."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Expand because more starts always means more realized value.",
+          "az": "Expand because more starts always means more realized value."
+        },
+        "explanation": {
+          "en": "Starting an unfinished journey can increase abandonment rather than value.",
+          "az": "Starting an unfinished journey can increase abandonment rather than value."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Suppress mobile results because desktop averages look better.",
+          "az": "Suppress mobile results because desktop averages look better."
+        },
+        "explanation": {
+          "en": "Removing a harmed segment makes the decision less transparent.",
+          "az": "Removing a harmed segment makes the decision less transparent."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "The goal is to improve a relevant outcome, not defend the first chosen implementation. See the lesson’s Sources and further reading for exact sections.",
+      "az": "The goal is to improve a relevant outcome, not defend the first chosen implementation. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-outcome-experiments",
+    "practiceOnly": true,
+    "sourceIds": ["ebm-2024", "govuk-performance-metrics", "govuk-service-success", "scrum-2020"]
+  },
+  {
+    "id": "pspo2-outcome-experiments-extra-06",
+    "trackId": "pspo2",
+    "type": "multiple",
+    "domain": "empiricism",
+    "difficulty": 2,
+    "text": {
+      "en": "Which practices from the supplementary GOV.UK measurement guidance help an empirical Product Owner? Select all that apply.",
+      "az": "Which practices from the supplementary GOV.UK measurement guidance help an empirical Product Owner? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Combine baselines, segments and research with digital analytics.",
+          "az": "Combine baselines, segments and research with digital analytics."
+        },
+        "explanation": {
+          "en": "Multiple sources provide context and expose interpretation problems.",
+          "az": "Multiple sources provide context and expose interpretation problems."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Treat that guidance as a verified PSPO exam blueprint.",
+          "az": "Treat that guidance as a verified PSPO exam blueprint."
+        },
+        "explanation": {
+          "en": "It is supplementary service-design material, not Scrum.org assessment policy.",
+          "az": "It is supplementary service-design material, not Scrum.org assessment policy."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Let a dashboard automatically decide every investment without product judgment.",
+          "az": "Let a dashboard automatically decide every investment without product judgment."
+        },
+        "explanation": {
+          "en": "Metrics inform a decision and have assumptions and limitations.",
+          "az": "Metrics inform a decision and have assumptions and limitations."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Derive hypotheses and metrics from service purpose and user needs.",
+          "az": "Derive hypotheses and metrics from service purpose and user needs."
+        },
+        "explanation": {
+          "en": "This ties measurement to a meaningful benefit.",
+          "az": "This ties measurement to a meaningful benefit."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Use supplemental practices for evidence quality while keeping Scrum rules and exam provenance distinct. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Use supplemental practices for evidence quality while keeping Scrum rules and exam provenance distinct. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-outcome-experiments",
+    "practiceOnly": true,
+    "sourceIds": ["ebm-2024", "govuk-performance-metrics", "govuk-service-success", "scrum-2020"]
+  },
+  {
+    "id": "pspo2-release-feature-flags-extra-01",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 3,
+    "text": {
+      "en": "An unfinished capability is deployed with its flag off. Developers say it does not meet the Definition of Done. What is the correct Scrum interpretation?",
+      "az": "An unfinished capability is deployed with its flag off. Developers say it does not meet the Definition of Done. What is the correct Scrum interpretation?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Every production deployment automatically establishes a usable Increment for all included work.",
+          "az": "Every production deployment automatically establishes a usable Increment for all included work."
+        },
+        "explanation": {
+          "en": "Installed code and a usable Done capability are different observations.",
+          "az": "Installed code and a usable Done capability are different observations."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The Product Owner can waive quality because no user sees the new screen yet.",
+          "az": "The Product Owner can waive quality because no user sees the new screen yet."
+        },
+        "explanation": {
+          "en": "A flag does not eliminate every security, data or quality consequence.",
+          "az": "A flag does not eliminate every security, data or quality consequence."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Scrum forbids all feature flags in any production environment.",
+          "az": "Scrum forbids all feature flags in any production environment."
+        },
+        "explanation": {
+          "en": "Scrum does not prescribe or prohibit the technique universally.",
+          "az": "Scrum does not prescribe or prohibit the technique universally."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Its deployment does not make that unfinished capability part of a Done Increment.",
+          "az": "Its deployment does not make that unfinished capability part of a Done Increment."
+        },
+        "explanation": {
+          "en": "Hiding code is an optional technique, not a replacement for the quality commitment.",
+          "az": "Hiding code is an optional technique, not a replacement for the quality commitment."
+        }
+      }
+    ],
+    "correct": ["d"],
+    "explanation": {
+      "en": "Scrum Guide 2020 controls the Done claim even when engineering articles discuss latent unfinished paths. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Scrum Guide 2020 controls the Done claim even when engineering articles discuss latent unfinished paths. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-release-feature-flags",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "ebm-2024", "fowler-feature-toggles"]
+  },
+  {
+    "id": "pspo2-release-feature-flags-extra-02",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "empiricism",
+    "difficulty": 3,
+    "text": {
+      "en": "A canary rollout shows no elevated error rate in a small audience. What can the Product Owner conclude about value?",
+      "az": "A canary rollout shows no elevated error rate in a small audience. What can the Product Owner conclude about value?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The feature must stay disabled until the end of the next Sprint regardless of evidence.",
+          "az": "The feature must stay disabled until the end of the next Sprint regardless of evidence."
+        },
+        "explanation": {
+          "en": "That invents a timing rule absent from Scrum.",
+          "az": "That invents a timing rule absent from Scrum."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "It provides some operational-safety evidence, but does not automatically prove a reliable customer-outcome improvement.",
+          "az": "It provides some operational-safety evidence, but does not automatically prove a reliable customer-outcome improvement."
+        },
+        "explanation": {
+          "en": "Operational rollout checks and a product experiment answer different questions.",
+          "az": "Operational rollout checks and a product experiment answer different questions."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The feature necessarily improves every customer outcome.",
+          "az": "The feature necessarily improves every customer outcome."
+        },
+        "explanation": {
+          "en": "Absence of observed technical errors does not establish benefit.",
+          "az": "Absence of observed technical errors does not establish benefit."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "The Sprint Review is no longer useful because production traffic exists.",
+          "az": "The Sprint Review is no longer useful because production traffic exists."
+        },
+        "explanation": {
+          "en": "Review still inspects outcomes and changed context.",
+          "az": "Review still inspects outcomes and changed context."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Inspect the type and limits of the evidence before expanding a claim or rollout. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Inspect the type and limits of the evidence before expanding a claim or rollout. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-release-feature-flags",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "ebm-2024", "fowler-feature-toggles"]
+  },
+  {
+    "id": "pspo2-release-feature-flags-extra-03",
+    "trackId": "pspo2",
+    "type": "multiple",
+    "domain": "scrum-application",
+    "difficulty": 3,
+    "text": {
+      "en": "Which statements about feature flags are defensible? Select all that apply.",
+      "az": "Which statements about feature flags are defensible? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Disabling a refund interface does not reverse refunds already submitted.",
+          "az": "Disabling a refund interface does not reverse refunds already submitted."
+        },
+        "explanation": {
+          "en": "UI exposure and durable external business effects are different boundaries.",
+          "az": "UI exposure and durable external business effects are different boundaries."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A client-side flag alone securely authorizes access to the underlying API.",
+          "az": "A client-side flag alone securely authorizes access to the underlying API."
+        },
+        "explanation": {
+          "en": "Direct API requests still require server-side permissions.",
+          "az": "Direct API requests still require server-side permissions."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Every flag must have the same lifetime because all flags solve the same problem.",
+          "az": "Every flag must have the same lifetime because all flags solve the same problem."
+        },
+        "explanation": {
+          "en": "Release, experiment and operational flags have different purposes.",
+          "az": "Release, experiment and operational flags have different purposes."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "A temporary flag needs a clear purpose, supported states and removal condition.",
+          "az": "A temporary flag needs a clear purpose, supported states and removal condition."
+        },
+        "explanation": {
+          "en": "Otherwise its testing and maintenance cost can accumulate invisibly.",
+          "az": "Otherwise its testing and maintenance cost can accumulate invisibly."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Flags are controlled optional engineering mechanisms whose quality and business consequences remain visible. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Flags are controlled optional engineering mechanisms whose quality and business consequences remain visible. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-release-feature-flags",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "ebm-2024", "fowler-feature-toggles"]
+  },
+  {
+    "id": "pspo2-release-feature-flags-extra-04",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "empiricism",
+    "difficulty": 3,
+    "text": {
+      "en": "An experiment flag moves users randomly between variants on every page visit, although the experiment assumes stable user cohorts. What is the concern?",
+      "az": "An experiment flag moves users randomly between variants on every page visit, although the experiment assumes stable user cohorts. What is the concern?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The Product Owner must implement the cohort algorithm personally.",
+          "az": "The Product Owner must implement the cohort algorithm personally."
+        },
+        "explanation": {
+          "en": "Product accountability does not require taking over the Developers' engineering work.",
+          "az": "Product accountability does not require taking over the Developers' engineering work."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The implementation violates its allocation assumption and can contaminate outcome comparisons.",
+          "az": "The implementation violates its allocation assumption and can contaminate outcome comparisons."
+        },
+        "explanation": {
+          "en": "Users no longer experience the defined cohort treatment consistently.",
+          "az": "Users no longer experience the defined cohort treatment consistently."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "All experiments are forbidden within a Sprint.",
+          "az": "All experiments are forbidden within a Sprint."
+        },
+        "explanation": {
+          "en": "Empirical product work can include experiments; Scrum does not impose that prohibition.",
+          "az": "Empirical product work can include experiments; Scrum does not impose that prohibition."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Changing cohorts proves higher throughput and therefore more value.",
+          "az": "Changing cohorts proves higher throughput and therefore more value."
+        },
+        "explanation": {
+          "en": "Neither the allocation defect nor value is resolved by output counts.",
+          "az": "Neither the allocation defect nor value is resolved by output counts."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "The Product Owner needs enough understanding to question evidence while collaborating with Developers on the implementation. See the lesson’s Sources and further reading for exact sections.",
+      "az": "The Product Owner needs enough understanding to question evidence while collaborating with Developers on the implementation. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-release-feature-flags",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "ebm-2024", "fowler-feature-toggles"]
+  },
+  {
+    "id": "pspo2-release-feature-flags-extra-05",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "stakeholder-leadership",
+    "difficulty": 3,
+    "text": {
+      "en": "The team can turn off a feature quickly, but it also changes persistent account data. What should the rollout plan include?",
+      "az": "The team can turn off a feature quickly, but it also changes persistent account data. What should the rollout plan include?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A statement that all data changes disappear when the flag is off.",
+          "az": "A statement that all data changes disappear when the flag is off."
+        },
+        "explanation": {
+          "en": "That invents rollback behavior the architecture does not provide.",
+          "az": "That invents rollback behavior the architecture does not provide."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A lower Definition of Done for the migration because a flag exists.",
+          "az": "A lower Definition of Done for the migration because a flag exists."
+        },
+        "explanation": {
+          "en": "The flag does not justify reducing the quality boundary.",
+          "az": "The flag does not justify reducing the quality boundary."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "No operational participation because release concerns only the Product Owner.",
+          "az": "No operational participation because release concerns only the Product Owner."
+        },
+        "explanation": {
+          "en": "Real operational constraints and expertise remain relevant to a product decision.",
+          "az": "Real operational constraints and expertise remain relevant to a product decision."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "A safe data migration/reconciliation or compensating strategy, not only a boolean switch.",
+          "az": "A safe data migration/reconciliation or compensating strategy, not only a boolean switch."
+        },
+        "explanation": {
+          "en": "Turning off exposure does not undo all committed effects.",
+          "az": "Turning off exposure does not undo all committed effects."
+        }
+      }
+    ],
+    "correct": ["d"],
+    "explanation": {
+      "en": "Release decisions need truthful state and risk information across code, data and user impact. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Release decisions need truthful state and risk information across code, data and user impact. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-release-feature-flags",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "ebm-2024", "fowler-feature-toggles"]
+  },
+  {
+    "id": "pspo2-release-feature-flags-extra-06",
+    "trackId": "pspo2",
+    "type": "multiple",
+    "domain": "product-value",
+    "difficulty": 2,
+    "text": {
+      "en": "Which distinctions help interpret a deployment dashboard? Select all that apply.",
+      "az": "Which distinctions help interpret a deployment dashboard? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A feature flag replaces Sprint Review inspection.",
+          "az": "A feature flag replaces Sprint Review inspection."
+        },
+        "explanation": {
+          "en": "An engineering mechanism does not replace the event's purpose.",
+          "az": "An engineering mechanism does not replace the event's purpose."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Code can be installed without the intended audience being exposed to a capability.",
+          "az": "Code can be installed without the intended audience being exposed to a capability."
+        },
+        "explanation": {
+          "en": "Deployment and release/exposure can be decoupled.",
+          "az": "Deployment and release/exposure can be decoupled."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A usable capability still needs outcome evidence before realized value is claimed.",
+          "az": "A usable capability still needs outcome evidence before realized value is claimed."
+        },
+        "explanation": {
+          "en": "Quality/availability are not identical to observed benefit.",
+          "az": "Quality/availability are not identical to observed benefit."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Story points completed are interchangeable with customer satisfaction.",
+          "az": "Story points completed are interchangeable with customer satisfaction."
+        },
+        "explanation": {
+          "en": "Estimation units do not measure the same construct.",
+          "az": "Estimation units do not measure the same construct."
+        }
+      }
+    ],
+    "correct": ["b", "c"],
+    "explanation": {
+      "en": "Keep deployed, exposed, Done and valuable as distinct claims supported by appropriate evidence. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Keep deployed, exposed, Done and valuable as distinct claims supported by appropriate evidence. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-release-feature-flags",
+    "practiceOnly": true,
+    "sourceIds": ["scrum-2020", "ebm-2024", "fowler-feature-toggles"]
+  },
+  {
+    "id": "pspo2-platform-value-extra-01",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 3,
+    "text": {
+      "en": "A platform adds 30 endpoints, but partners still cannot complete their first integration without weeks of support. What should the Product Owner inspect?",
+      "az": "A platform adds 30 endpoints, but partners still cannot complete their first integration without weeks of support. What should the Product Owner inspect?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Whether more story points can redefine the abandoned journeys as success.",
+          "az": "Whether more story points can redefine the abandoned journeys as success."
+        },
+        "explanation": {
+          "en": "Changing an output measure does not fix the observed outcome.",
+          "az": "Changing an output measure does not fix the observed outcome."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The actual integration journey, abandonment and consumer outcomes, not endpoint counts alone.",
+          "az": "The actual integration journey, abandonment and consumer outcomes, not endpoint counts alone."
+        },
+        "explanation": {
+          "en": "More output does not establish that consumers can achieve the product's intended benefit.",
+          "az": "More output does not establish that consumers can achieve the product's intended benefit."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Only the total number of services in the deployment diagram.",
+          "az": "Only the total number of services in the deployment diagram."
+        },
+        "explanation": {
+          "en": "Deployment units do not measure integration success.",
+          "az": "Deployment units do not measure integration success."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Whether internal users can be excluded from product discovery.",
+          "az": "Whether internal users can be excluded from product discovery."
+        },
+        "explanation": {
+          "en": "Internal users still have needs and constraints.",
+          "az": "Internal users still have needs and constraints."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "An API platform needs an identifiable user, product purpose and measurable value like other products. See the lesson’s Sources and further reading for exact sections.",
+      "az": "An API platform needs an identifiable user, product purpose and measurable value like other products. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-platform-value",
+    "practiceOnly": true,
+    "sourceIds": [
+      "scrum-2020",
+      "ebm-2024",
+      "govuk-performance-metrics",
+      "azure-microservices-patterns"
+    ]
+  },
+  {
+    "id": "pspo2-platform-value-extra-02",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "scrum-application",
+    "difficulty": 3,
+    "text": {
+      "en": "Each component service has its own backlog and reports Done, but several Scrum Teams work on one product and no integrated usable Increment exists. What is most relevant?",
+      "az": "Each component service has its own backlog and reports Done, but several Scrum Teams work on one product and no integrated usable Increment exists. What is most relevant?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Accept the component reports as definitive product value because each deployment is independent.",
+          "az": "Accept the component reports as definitive product value because each deployment is independent."
+        },
+        "explanation": {
+          "en": "Deployment independence does not establish a separate Scrum product boundary.",
+          "az": "Deployment independence does not establish a separate Scrum product boundary."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Create one mandatory Product Owner per database to satisfy Scrum.",
+          "az": "Create one mandatory Product Owner per database to satisfy Scrum."
+        },
+        "explanation": {
+          "en": "Scrum does not organize accountability by database count.",
+          "az": "Scrum does not organize accountability by database count."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Delay every integration until a final hardening Sprint required by Scrum.",
+          "az": "Delay every integration until a final hardening Sprint required by Scrum."
+        },
+        "explanation": {
+          "en": "Scrum does not require a later quality/integration phase to make unfinished work Done.",
+          "az": "Scrum does not require a later quality/integration phase to make unfinished work Done."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Inspect shared product accountability/backlog, integration and the mutually defined Definition of Done.",
+          "az": "Inspect shared product accountability/backlog, integration and the mutually defined Definition of Done."
+        },
+        "explanation": {
+          "en": "Component completion can conceal the absence of a usable product outcome.",
+          "az": "Component completion can conceal the absence of a usable product outcome."
+        }
+      }
+    ],
+    "correct": ["d"],
+    "explanation": {
+      "en": "Reason from the product and usable integrated Increment rather than assuming software-service boundaries define Scrum products. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Reason from the product and usable integrated Increment rather than assuming software-service boundaries define Scrum products. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-platform-value",
+    "practiceOnly": true,
+    "sourceIds": [
+      "scrum-2020",
+      "ebm-2024",
+      "govuk-performance-metrics",
+      "azure-microservices-patterns"
+    ]
+  },
+  {
+    "id": "pspo2-platform-value-extra-03",
+    "trackId": "pspo2",
+    "type": "multiple",
+    "domain": "empiricism",
+    "difficulty": 3,
+    "text": {
+      "en": "Which measures can inform an API-platform product decision? Select all that apply.",
+      "az": "Which measures can inform an API-platform product decision? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Number of microservices as direct proof of Current Value.",
+          "az": "Number of microservices as direct proof of Current Value."
+        },
+        "explanation": {
+          "en": "Architecture activity is not itself evidence of consumer benefit.",
+          "az": "Architecture activity is not itself evidence of consumer benefit."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "First successful authorized integration, with non-completers included in the denominator.",
+          "az": "First successful authorized integration, with non-completers included in the denominator."
+        },
+        "explanation": {
+          "en": "It can expose whether users achieve the intended outcome.",
+          "az": "It can expose whether users achieve the intended outcome."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Contract-related failures and support effort alongside integration completion.",
+          "az": "Contract-related failures and support effort alongside integration completion."
+        },
+        "explanation": {
+          "en": "These provide quality, cost and friction evidence.",
+          "az": "These provide quality, cost and friction evidence."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Average completion time only among successful partners as a complete view of all users.",
+          "az": "Average completion time only among successful partners as a complete view of all users."
+        },
+        "explanation": {
+          "en": "It excludes people who abandoned or never completed.",
+          "az": "It excludes people who abandoned or never completed."
+        }
+      }
+    ],
+    "correct": ["b", "c"],
+    "explanation": {
+      "en": "Choose metrics from the consumer's purpose and inspect selection bias and operational harm. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Choose metrics from the consumer's purpose and inspect selection bias and operational harm. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-platform-value",
+    "practiceOnly": true,
+    "sourceIds": [
+      "scrum-2020",
+      "ebm-2024",
+      "govuk-performance-metrics",
+      "azure-microservices-patterns"
+    ]
+  },
+  {
+    "id": "pspo2-platform-value-extra-04",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "stakeholder-leadership",
+    "difficulty": 3,
+    "text": {
+      "en": "A manager demands a rewrite before the team has identified why partners abandon integration. What is a strong Product Owner response?",
+      "az": "A manager demands a rewrite before the team has identified why partners abandon integration. What is a strong Product Owner response?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Mandate the exact service decomposition because the Product Owner owns every implementation choice.",
+          "az": "Mandate the exact service decomposition because the Product Owner owns every implementation choice."
+        },
+        "explanation": {
+          "en": "Developers own how to create the usable Increment.",
+          "az": "Developers own how to create the usable Increment."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Refuse all technical investments because only visible features can create value.",
+          "az": "Refuse all technical investments because only visible features can create value."
+        },
+        "explanation": {
+          "en": "Reliability and ability to innovate can materially support value.",
+          "az": "Reliability and ability to innovate can materially support value."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Count the rewrite's deployment work as realized partner success in advance.",
+          "az": "Count the rewrite's deployment work as realized partner success in advance."
+        },
+        "explanation": {
+          "en": "A promised output is not an observed outcome.",
+          "az": "A promised output is not an observed outcome."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Clarify the outcome and constraint with Developers, then compare the rewrite with smaller testable alternatives.",
+          "az": "Clarify the outcome and constraint with Developers, then compare the rewrite with smaller testable alternatives."
+        },
+        "explanation": {
+          "en": "Investment should address evidence of a need and expose its assumptions.",
+          "az": "Investment should address evidence of a need and expose its assumptions."
+        }
+      }
+    ],
+    "correct": ["d"],
+    "explanation": {
+      "en": "Make product value and risk transparent while preserving collaborative technical judgment. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Make product value and risk transparent while preserving collaborative technical judgment. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-platform-value",
+    "practiceOnly": true,
+    "sourceIds": [
+      "scrum-2020",
+      "ebm-2024",
+      "govuk-performance-metrics",
+      "azure-microservices-patterns"
+    ]
+  },
+  {
+    "id": "pspo2-platform-value-extra-05",
+    "trackId": "pspo2",
+    "type": "single",
+    "domain": "product-value",
+    "difficulty": 3,
+    "text": {
+      "en": "A technical investment reduces integration failures and frees capacity to test product ideas sooner. Which EBM interpretation is reasonable?",
+      "az": "A technical investment reduces integration failures and frees capacity to test product ideas sooner. Which EBM interpretation is reasonable?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Its value equals the exact number of implementation tasks completed.",
+          "az": "Its value equals the exact number of implementation tasks completed."
+        },
+        "explanation": {
+          "en": "Activity totals are not a numerical value conversion.",
+          "az": "Activity totals are not a numerical value conversion."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "It may improve current outcomes and Ability-to-Innovate, subject to observed evidence.",
+          "az": "It may improve current outcomes and Ability-to-Innovate, subject to observed evidence."
+        },
+        "explanation": {
+          "en": "Technical work can create value and reduce constraints on future learning.",
+          "az": "Technical work can create value and reduce constraints on future learning."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "It cannot be valuable because users did not request a new screen.",
+          "az": "It cannot be valuable because users did not request a new screen."
+        },
+        "explanation": {
+          "en": "A user-facing screen is not a prerequisite for product benefit.",
+          "az": "A user-facing screen is not a prerequisite for product benefit."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "It proves Unrealized Value is permanently zero.",
+          "az": "It proves Unrealized Value is permanently zero."
+        },
+        "explanation": {
+          "en": "An investment does not establish that every satisfaction/opportunity gap is gone.",
+          "az": "An investment does not establish that every satisfaction/opportunity gap is gone."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Technical choices should be tied to measurable benefit and capacity/risk effects without fabricated precision. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Technical choices should be tied to measurable benefit and capacity/risk effects without fabricated precision. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-platform-value",
+    "practiceOnly": true,
+    "sourceIds": [
+      "scrum-2020",
+      "ebm-2024",
+      "govuk-performance-metrics",
+      "azure-microservices-patterns"
+    ]
+  },
+  {
+    "id": "pspo2-platform-value-extra-06",
+    "trackId": "pspo2",
+    "type": "multiple",
+    "domain": "product-strategy",
+    "difficulty": 2,
+    "text": {
+      "en": "Which source/accountability distinctions should a platform Product Owner preserve? Select all that apply.",
+      "az": "Which source/accountability distinctions should a platform Product Owner preserve? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The Product Owner clarifies product value and ordering while Developers determine implementation.",
+          "az": "The Product Owner clarifies product value and ordering while Developers determine implementation."
+        },
+        "explanation": {
+          "en": "Collaboration does not erase the different accountabilities.",
+          "az": "Collaboration does not erase the different accountabilities."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Every bounded context must be one separate Scrum product by definition.",
+          "az": "Every bounded context must be one separate Scrum product by definition."
+        },
+        "explanation": {
+          "en": "Domain, deployment and product boundaries are not automatically identical.",
+          "az": "Domain, deployment and product boundaries are not automatically identical."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "GOV.UK metric guidance verifies official PSPO question weighting.",
+          "az": "GOV.UK metric guidance verifies official PSPO question weighting."
+        },
+        "explanation": {
+          "en": "Service-design advice is not an assessment blueprint.",
+          "az": "Service-design advice is not an assessment blueprint."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Microsoft architecture patterns can inform engineering trade-offs without becoming Scrum requirements.",
+          "az": "Microsoft architecture patterns can inform engineering trade-offs without becoming Scrum requirements."
+        },
+        "explanation": {
+          "en": "Supplementary guidance does not redefine the framework.",
+          "az": "Supplementary guidance does not redefine the framework."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Keep primary Scrum authority, supplementary techniques and original practice clearly distinguished. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Keep primary Scrum authority, supplementary techniques and original practice clearly distinguished. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "pspo2-platform-value",
+    "practiceOnly": true,
+    "sourceIds": [
+      "scrum-2020",
+      "ebm-2024",
+      "govuk-performance-metrics",
+      "azure-microservices-patterns"
+    ]
+  }
+]

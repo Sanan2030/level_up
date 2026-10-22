@@ -1186,5 +1186,577 @@
       "en": "The change is Done only after the required integration and security checks pass.",
       "az": "Dəyişiklik yalnız tələb olunan inteqrasiya və təhlükəsizlik yoxlamaları keçəndən sonra Done sayılır."
     }
+  },
+  {
+    "id": "token",
+    "term": "Token",
+    "aliases": ["authentication token"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Autentifikasiya tokeni",
+    "definitionEn": "In an authentication context, a value representing a credential or a constrained security assertion.",
+    "explanationAz": "Bu kontekstdə token sistemə təqdim edilən etimadnamə və ya məhdud icazə məlumatıdır; hər token eyni məqsədə xidmət etmir.",
+    "example": {
+      "en": "An access token and a refresh token have different recipients.",
+      "az": "Access token və refresh token fərqli sistemlərə təqdim olunur."
+    }
+  },
+  {
+    "id": "access-token",
+    "term": "Access token",
+    "aliases": ["access_token", "accessToken", "access tokens"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Resursa giriş tokeni",
+    "definitionEn": "A credential presented to an intended resource server under defined authorization, audience and validity constraints.",
+    "explanationAz": "API-yə giriş üçün istifadə edilir. Tokenin olması bütün istifadəçilərin bütün məlumatlarına icazə vermir.",
+    "example": {
+      "en": "The orders API accepts only a token intended for its audience.",
+      "az": "Sifariş API-si yalnız onun üçün nəzərdə tutulan tokeni qəbul edir."
+    }
+  },
+  {
+    "id": "refresh-token",
+    "term": "Refresh token",
+    "aliases": ["refresh_token", "refreshToken", "refresh tokens"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Giriş tokenini yeniləmə etimadnaməsi",
+    "definitionEn": "A credential submitted to an authorization server to obtain new access tokens within an existing grant.",
+    "explanationAz": "Access token bitəndə yenisini almaq üçün avtorizasiya serverinə göndərilir; adi sifariş API-sinə göndərilmir.",
+    "example": {
+      "en": "The client rotates its refresh credential when obtaining a new access token.",
+      "az": "Müştəri yeni access token alanda refresh etimadnaməsini rotasiya edir."
+    }
+  },
+  {
+    "id": "jwt",
+    "term": "JWT",
+    "aliases": ["JSON Web Token"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "JSON formatlı token standartı",
+    "definitionEn": "A format for representing claims with supported cryptographic protection; a common signed form has three encoded parts.",
+    "explanationAz": "JWT bir formatdır. Payload-u oxumaq imzanı və icazəni yoxlamaq demək deyil; imzalanmış JWT adətən şifrələnmiş olmur.",
+    "example": {
+      "en": "Decoding a JWT is not equivalent to validating it.",
+      "az": "JWT-ni açıb oxumaq onu doğrulamaqla eyni deyil."
+    }
+  },
+  {
+    "id": "jwks",
+    "term": "JWKS",
+    "aliases": ["JSON Web Key Set"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "JSON açar dəsti",
+    "definitionEn": "A structured set of cryptographic keys, often published by a trusted issuer for token verification.",
+    "explanationAz": "Etibarlı issuer token imzalarını yoxlamaq üçün açarlarını dərc edə bilər. Tokenin özündəki istənilən URL avtomatik etibarlı sayılmır.",
+    "example": {
+      "en": "The API refreshes keys only from the configured trusted issuer.",
+      "az": "API açarları yalnız əvvəlcədən etibar edilən issuer-dən yeniləyir."
+    }
+  },
+  {
+    "id": "oauth",
+    "term": "OAuth",
+    "aliases": ["OAuth 2.0", "OAuth2"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Nümayəndəlik əsasında icazə protokolu",
+    "definitionEn": "An authorization framework through which a client obtains constrained access to protected resources.",
+    "explanationAz": "Proqramın istifadəçi adından müəyyən resurslara məhdud giriş almasını təşkil edir. İdentifikasiya qatı üçün çox vaxt OpenID Connect istifadə olunur.",
+    "example": {
+      "en": "The client requests access to permitted receipt operations.",
+      "az": "Proqram icazə verilən qəbz əməliyyatlarına giriş istəyir."
+    }
+  },
+  {
+    "id": "pkce",
+    "term": "PKCE",
+    "aliases": ["Proof Key for Code Exchange", "S256"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Authorization code mübadiləsinin əlavə qorunması",
+    "definitionEn": "An OAuth mechanism binding authorization code redemption to a transaction-specific verifier retained by the client.",
+    "explanationAz": "Proqram əvvəlcə təsadüfi verifier yaradır, onun challenge dəyərini göndərir, kodu dəyişəndə isə verifier-i təqdim edir.",
+    "example": {
+      "en": "A stolen authorization code alone should not be redeemable without the verifier.",
+      "az": "Təkcə oğurlanmış authorization code verifier olmadan dəyişdirilə bilməməlidir."
+    }
+  },
+  {
+    "id": "openid-connect",
+    "term": "OpenID Connect",
+    "aliases": ["OIDC"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "OAuth üzərində identifikasiya qatı",
+    "definitionEn": "An identity layer on OAuth 2.0 that allows a client to validate authentication information, including an ID Token.",
+    "explanationAz": "İstifadəçinin kimliyini təsdiq edən məlumatı proqrama verir. ID Token API üçün access token ilə eyni məqsəd daşımır.",
+    "example": {
+      "en": "The web client validates the ID Token for its own client audience.",
+      "az": "Veb proqram ID Token-in öz client auditoriyasına aid olduğunu yoxlayır."
+    }
+  },
+  {
+    "id": "bearer-token",
+    "term": "Bearer token",
+    "aliases": ["bearer"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Sahib olana istifadə imkanı verən token",
+    "definitionEn": "A token whose possession is sufficient for use subject to its validity and authorization constraints.",
+    "explanationAz": "Tokeni əldə edən şəxs onu icazə və etibarlılıq sərhədləri daxilində istifadə edə bilər; buna görə məxfi saxlanmalıdır.",
+    "example": {
+      "en": "Do not place a bearer token in a URL.",
+      "az": "Bearer token-i URL daxilində yerləşdirmə."
+    }
+  },
+  {
+    "id": "oauth-scope",
+    "term": "OAuth scope",
+    "aliases": ["scope claim", "token scope"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Tokenin icazə sahəsi",
+    "definitionEn": "A named authorization scope associated with the actions or resources permitted under a grant.",
+    "explanationAz": "Məsələn invoices:read müəyyən oxuma əməliyyatını ifadə edə bilər, amma başqa tenant-ın bütün hesab-fakturalarına avtomatik giriş vermir.",
+    "example": {
+      "en": "A read scope still requires an object-permission check.",
+      "az": "Oxuma scope-u olsa da konkret obyekt üzrə icazə yoxlanmalıdır."
+    }
+  },
+  {
+    "id": "issuer",
+    "term": "Issuer",
+    "aliases": ["iss"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Tokeni verən etibarlı tərəf",
+    "definitionEn": "The entity issuing a token, identified and validated according to the receiving application’s trusted configuration.",
+    "explanationAz": "Tokeni kimin verdiyini göstərir. Proqram issuer-i əvvəlcədən etibarlı konfiqurasiya ilə tutuşdurmalıdır.",
+    "example": {
+      "en": "The payment API rejects a token from an unexpected issuer.",
+      "az": "Ödəniş API-si gözlənilməyən issuer-in tokenini rədd edir."
+    }
+  },
+  {
+    "id": "audience",
+    "term": "Audience",
+    "aliases": ["aud"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Tokenin nəzərdə tutulan alıcısı",
+    "definitionEn": "The intended recipient or recipients of a token under its validation profile.",
+    "explanationAz": "Tokenin hansı proqram və ya API üçün verildiyini bildirir. Başqa API üçün verilmiş token burada qəbul edilməməlidir.",
+    "example": {
+      "en": "A token for reporting-api is not automatically valid for payment-api.",
+      "az": "Reporting-api üçün token payment-api-də avtomatik keçərli deyil."
+    }
+  },
+  {
+    "id": "token-rotation",
+    "term": "Token rotation",
+    "aliases": ["refresh token rotation"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Tokenin yenisi ilə əvəzlənməsi",
+    "definitionEn": "Replacing a credential with a new value while invalidating or retiring the previous value under an explicit policy.",
+    "explanationAz": "Refresh zamanı əvvəlki token etibarsızlaşdırılıb yenisi verilə bilər. Köhnənin təkrar istifadəsi mümkün sızmanı göstərə bilər.",
+    "example": {
+      "en": "Rotation requires clients to store the replacement coherently.",
+      "az": "Rotasiya zamanı proqram yeni tokeni ardıcıl və düzgün saxlamalıdır."
+    }
+  },
+  {
+    "id": "token-family",
+    "term": "Token family",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Əlaqəli tokenlər ailəsi",
+    "definitionEn": "An implementation grouping of related rotating refresh credentials belonging to a grant or session lineage.",
+    "explanationAz": "Bir grant və ya sessiya boyunca ardıcıl verilən refresh token-ləri əlaqələndirmək üçün istifadə edilən tətbiq anlayışıdır.",
+    "example": {
+      "en": "Reuse detection can identify the active credential related to an old token.",
+      "az": "Təkrar istifadə aşkarlananda köhnə tokenlə əlaqəli aktiv etimadnamə müəyyən edilə bilər."
+    }
+  },
+  {
+    "id": "bff",
+    "term": "BFF",
+    "aliases": ["Backend for Frontend", "Backends for Frontends"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "İnterfeysə uyğun arxa xidmət",
+    "definitionEn": "A backend tailored to a client experience; some designs keep OAuth credentials there and give the browser a session cookie.",
+    "explanationAz": "Veb və ya mobil interfeysin ehtiyaclarına uyğun backend-dir. Tokenləri serverdə saxlamaq variantlardan biridir, bütün BFF-lər üçün məcburi qayda deyil.",
+    "example": {
+      "en": "The browser calls its BFF, which calls the resource API.",
+      "az": "Brauzer BFF-ə müraciət edir, BFF isə resurs API-sini çağırır."
+    }
+  },
+  {
+    "id": "csrf",
+    "term": "CSRF",
+    "aliases": ["Cross-Site Request Forgery"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Saytlararası saxta sorğu",
+    "definitionEn": "An attack causing a browser to send an unwanted authenticated request using credentials it attaches automatically.",
+    "explanationAz": "Brauzerin cookie-ni avtomatik göndərməsindən istifadə edib istifadəçinin istəmədiyi əməliyyatı etdirmək cəhdidir.",
+    "example": {
+      "en": "The submit operation verifies the session-bound anti-CSRF value.",
+      "az": "Göndərmə əməliyyatı sessiyaya bağlı anti-CSRF dəyərini yoxlayır."
+    }
+  },
+  {
+    "id": "cors",
+    "term": "CORS",
+    "aliases": ["Cross-Origin Resource Sharing"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Fərqli origin-lər arasında brauzer giriş qaydası",
+    "definitionEn": "A browser-enforced mechanism controlling which origins may read permitted cross-origin responses.",
+    "explanationAz": "Brauzerdə hansı origin-in başqa origin-dən cavabı oxuya biləcəyini idarə edir. API autentifikasiyasını və obyekt icazələrini əvəz etmir.",
+    "example": {
+      "en": "A command-line client is not authenticated by a CORS allowlist.",
+      "az": "CORS siyahısı komanda sətri müştərisini autentifikasiya etmir."
+    }
+  },
+  {
+    "id": "httponly",
+    "term": "HttpOnly",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "JavaScript ilə oxunmayan cookie atributu",
+    "definitionEn": "A cookie attribute preventing direct script access to the cookie value.",
+    "explanationAz": "JavaScript-in cookie dəyərini birbaşa oxumasını məhdudlaşdırır; eyni origin-dəki zərərli skriptin bütün sorğularını dayandırmır.",
+    "example": {
+      "en": "HttpOnly reduces cookie theft but does not eliminate XSS impact.",
+      "az": "HttpOnly cookie oğurluğu riskini azaldır, amma XSS təsirini tam aradan qaldırmır."
+    }
+  },
+  {
+    "id": "samesite",
+    "term": "SameSite",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Cookie-nin saytlararası göndərilmə siyasəti",
+    "definitionEn": "A cookie attribute that restricts when browsers attach the cookie to cross-site requests.",
+    "explanationAz": "Cookie-nin cross-site sorğularda göndərilməsini idarə edir. Same-site və same-origin eyni sərhəd deyil.",
+    "example": {
+      "en": "A sibling subdomain can be same-site while having another origin.",
+      "az": "Qonşu subdomen eyni site daxilində olub fərqli origin daşıya bilər."
+    }
+  },
+  {
+    "id": "etag",
+    "term": "ETag",
+    "aliases": ["entity tag"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Resurs təsvirinin versiya validatoru",
+    "definitionEn": "An HTTP representation validator used for caching and preconditions such as If-Match.",
+    "explanationAz": "Resurs təsvirinin versiyasını müqayisə etməyə kömək edir. İcazə tokeni deyil.",
+    "example": {
+      "en": "A stale ETag can cause a conditional update to return 412.",
+      "az": "Köhnə ETag ilə şərtli yeniləmə 412 qaytara bilər."
+    }
+  },
+  {
+    "id": "optimistic-locking",
+    "term": "Optimistic locking",
+    "aliases": ["optimistic concurrency"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Versiya müqayisəsi ilə paralel yeniləmə nəzarəti",
+    "definitionEn": "A concurrency approach that applies a change only if the state still matches the version previously observed.",
+    "explanationAz": "Yeniləmədən əvvəl oxunmuş versiya hələ dəyişməyibsə əməliyyat edilir; dəyişibsə konflikt həll olunmalıdır.",
+    "example": {
+      "en": "The second editor reloads after a failed version precondition.",
+      "az": "İkinci redaktor versiya şərti ödənməyəndə məlumatı yenidən oxuyur."
+    }
+  },
+  {
+    "id": "idempotency-key",
+    "term": "Idempotency key",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Təkrar əməliyyatı tanıyan açar",
+    "definitionEn": "An application-defined identifier that binds retries to one logical operation under a documented deduplication policy.",
+    "explanationAz": "Eyni məntiqi əməliyyatın təkrar sorğularını tanımaq üçün istifadə olunur. Actor, əməliyyat və payload uyğunluğu ayrıca qaydadır.",
+    "example": {
+      "en": "Retry the uncertain order with the original operation key.",
+      "az": "Nəticəsi qeyri-müəyyən sifarişi əvvəlki əməliyyat açarı ilə yoxla."
+    }
+  },
+  {
+    "id": "outbox",
+    "term": "Transactional outbox",
+    "aliases": ["outbox pattern"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Tranzaksiyalı çıxış hadisələri jurnalı",
+    "definitionEn": "A pattern that commits business data and an outgoing event together before a separate publisher sends the event.",
+    "explanationAz": "Biznes məlumatı və göndəriləcək hadisə eyni lokal tranzaksiyada saxlanır; ayrıca worker hadisəni göndərir. Təkrar göndəriş yenə mümkündür.",
+    "example": {
+      "en": "The order and its event share one local commit.",
+      "az": "Sifariş və onun hadisəsi eyni lokal commit-də saxlanılır."
+    }
+  },
+  {
+    "id": "webhook",
+    "term": "Webhook",
+    "aliases": ["webhooks"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Hadisə barədə HTTP geri çağırışı",
+    "definitionEn": "An HTTP callback used by one system to notify another about an event.",
+    "explanationAz": "Bir sistem hadisə baş verəndə digər sistemin ünvanına HTTP sorğusu göndərir. İmza, təkrar istifadə və davamlı qəbul qaydaları lazımdır.",
+    "example": {
+      "en": "The consumer verifies original bytes before processing the delivery.",
+      "az": "Qəbul edən xidmət hadisəni emal etməzdən əvvəl orijinal baytları yoxlayır."
+    }
+  },
+  {
+    "id": "hmac",
+    "term": "HMAC",
+    "aliases": ["HMAC-SHA256"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Açarla hesablanan mesaj doğrulama kodu",
+    "definitionEn": "A message authentication construction using a shared secret and hash function to verify protected bytes.",
+    "explanationAz": "Ortaq məxfi açarla mesajın dəyişdirilmədiyini yoxlamağa kömək edir. Mesajı şifrələmir və köhnə mesajın təkrarını özü dayandırmır.",
+    "example": {
+      "en": "Changing one payload byte invalidates its expected HMAC.",
+      "az": "Payload-un bir baytının dəyişməsi gözlənilən HMAC-ı uyğunsuz edir."
+    }
+  },
+  {
+    "id": "saga",
+    "term": "Saga",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Paylanmış lokal tranzaksiyalar axını",
+    "definitionEn": "A workflow coordinating local transactions across services with compensations and recovery rather than one global rollback.",
+    "explanationAz": "Hər xidmət lokal commit edir. Sonrakı xəta üçün kompensasiya və bərpa əməliyyatları planlaşdırılır; bunlar da uğursuz ola bilər.",
+    "example": {
+      "en": "A refund is a compensating business action, not erasing the original payment.",
+      "az": "Geriödəmə ilkin ödənişi tarixdən silmək deyil, kompensasiya əməliyyatıdır."
+    }
+  },
+  {
+    "id": "eventual-consistency",
+    "term": "Eventual consistency",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Zamanla uyğunlaşan məlumat vəziyyəti",
+    "definitionEn": "A model in which replicas or derived views may temporarily differ and converge under the system’s stated conditions.",
+    "explanationAz": "Məlumatın nüsxələri və oxuma görünüşləri müvəqqəti fərqlənə bilər. Uyğunlaşma şərtləri və istifadəçiyə görünən gecikmə açıq göstərilməlidir.",
+    "example": {
+      "en": "The read view may lag a committed order update.",
+      "az": "Oxuma görünüşü commit olunmuş sifariş yeniləməsindən geri qala bilər."
+    }
+  },
+  {
+    "id": "modular-monolith",
+    "term": "Modular monolith",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Modullara ayrılmış vahid tətbiq",
+    "definitionEn": "An application deployed as one unit while maintaining explicit internal module responsibilities and dependencies.",
+    "explanationAz": "Bir vahid kimi yayımlanan, amma daxilində aydın modul sərhədləri olan sistemdir. Monolit olması modulsuz olması demək deyil.",
+    "example": {
+      "en": "A single deployment can still isolate domain modules.",
+      "az": "Vahid deployment daxilində də domen modulları ayrılmış ola bilər."
+    }
+  },
+  {
+    "id": "microservice",
+    "term": "Microservice",
+    "aliases": ["microservices"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Ayrıca idarə olunan xidmət",
+    "definitionEn": "A service designed around an explicit responsibility with an independent operational boundary and associated coordination costs.",
+    "explanationAz": "Müstəqil əməliyyat sərhədi olan xidmətdir. Şəbəkə, versiya, monitorinq və məlumat uyğunluğu xərclərini artırır.",
+    "example": {
+      "en": "A service split needs a demonstrated deployment or ownership benefit.",
+      "az": "Xidməti ayırmaq üçün deployment və ya sahiblik üzrə əsaslandırılmış fayda olmalıdır."
+    }
+  },
+  {
+    "id": "bounded-context",
+    "term": "Bounded context",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Domen modelinin məna sərhədi",
+    "definitionEn": "A boundary within which a domain model and its terminology have a coherent meaning.",
+    "explanationAz": "Eyni anlayışların müəyyən məna ilə istifadə olunduğu domen sərhədidir. Avtomatik bir mikroservis və ya bir Scrum məhsulu demək deyil.",
+    "example": {
+      "en": "Billing and shipping may use different meanings for an order state.",
+      "az": "Billing və shipping sifariş vəziyyətini fərqli modellərlə izah edə bilər."
+    }
+  },
+  {
+    "id": "cqrs",
+    "term": "CQRS",
+    "aliases": ["Command Query Responsibility Segregation"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Yazma və oxuma modellərinin ayrılması",
+    "definitionEn": "An approach separating commands that change state from queries that read it, potentially with different models.",
+    "explanationAz": "Vəziyyəti dəyişən əmrlər və məlumat oxuyan sorğular ayrılır. Bu yanaşma öz-özünə event sourcing tələb etmir.",
+    "example": {
+      "en": "The reporting read model can differ from the order write model.",
+      "az": "Hesabatın oxuma modeli sifarişin yazma modelindən fərqlənə bilər."
+    }
+  },
+  {
+    "id": "circuit-breaker",
+    "term": "Circuit breaker",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Uğursuz asılılığa çağırışları məhdudlaşdıran qoruyucu",
+    "definitionEn": "A stateful resilience mechanism that stops likely failing calls and probes recovery through limited attempts.",
+    "explanationAz": "Closed normal çağırır, open sürətli xəta verir, half-open isə məhdud sınaqla bərpanı yoxlayır. Asılılığın özünü təmir etmir.",
+    "example": {
+      "en": "Half-open probes avoid flooding a recovering service.",
+      "az": "Half-open sınaqları bərpa olunan xidməti birdən yükləmir."
+    }
+  },
+  {
+    "id": "backoff",
+    "term": "Exponential backoff",
+    "aliases": ["backoff"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Təkrar cəhdlər arasında artan gözləmə",
+    "definitionEn": "A retry strategy that increases the delay between attempts, usually under explicit attempt and elapsed-time limits.",
+    "explanationAz": "Ardıcıl təkrar cəhdlər arasındakı fasilə böyüyür. Sonsuz retry və əməliyyat icazəsi demək deyil.",
+    "example": {
+      "en": "The next retry must still fit the remaining deadline.",
+      "az": "Növbəti retry qalan vaxt büdcəsinə yenə sığmalıdır."
+    }
+  },
+  {
+    "id": "jitter",
+    "term": "Jitter",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Retry gözləməsinə idarəli təsadüfilik",
+    "definitionEn": "Random variation added to retry timing to reduce synchronized traffic from many clients.",
+    "explanationAz": "Bir çox müştərinin eyni anda yenidən müraciət etməsinin qarşısını almaq üçün fasilələr fərqləndirilir.",
+    "example": {
+      "en": "Jitter spreads recovery attempts across time.",
+      "az": "Jitter bərpa cəhdlərini zamana yayır."
+    }
+  },
+  {
+    "id": "feature-flag",
+    "term": "Feature flag",
+    "aliases": ["feature toggle", "feature flags", "feature toggles"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Funksiyanın işləməsini idarə edən bayraq",
+    "definitionEn": "A mechanism that selects whether or how a capability is exposed or executed under an explicit configuration.",
+    "explanationAz": "Funksiyanı müəyyən istifadəçilərə açmaq və ya söndürmək üçün işlədilir. Gizlədilmiş yarımçıq iş avtomatik Done olmur.",
+    "example": {
+      "en": "A temporary release flag has an owner and removal condition.",
+      "az": "Müvəqqəti release flag-in sahibi və silinmə şərti olmalıdır."
+    }
+  },
+  {
+    "id": "canary-release",
+    "term": "Canary release",
+    "aliases": ["canary", "canary rollout"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Məhdud auditoriyada ilkin buraxılış",
+    "definitionEn": "A controlled exposure to a small selected audience to inspect rollout behavior before broader availability.",
+    "explanationAz": "Əvvəlcə az sayda istifadəçiyə açılaraq texniki davranış yoxlanır. Kiçik canary məhsul dəyərinin statistik sübutu deyil.",
+    "example": {
+      "en": "The canary detects elevated errors before expansion.",
+      "az": "Canary genişləndirmədən əvvəl artmış xətaları aşkar edir."
+    }
+  },
+  {
+    "id": "deployment",
+    "term": "Deployment",
+    "aliases": ["deploy"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Proqram versiyasının mühitə yerləşdirilməsi",
+    "definitionEn": "Installing or making a software version available in an execution environment.",
+    "explanationAz": "Kodun mühitə yerləşdirilməsidir. Funksiyanın istifadəçiyə açılması və dəyər yaratması ilə eyni şey deyil.",
+    "example": {
+      "en": "A deployed feature can remain unexposed behind a flag.",
+      "az": "Deployment olunmuş funksiya flag arxasında istifadəçiyə açılmamış qala bilər."
+    }
+  },
+  {
+    "id": "release",
+    "term": "Release",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Funksiyanın nəzərdə tutulan istifadəçiyə açılması",
+    "definitionEn": "Making a capability available to its intended audience under defined product and operational conditions.",
+    "explanationAz": "Funksiyanın uyğun auditoriya üçün əlçatan edilməsidir. Buraxılış olması istifadəçi nəticəsinin yaxşılaşmasını ayrıca sübut etmir.",
+    "example": {
+      "en": "A Done Increment may be released before Sprint Review.",
+      "az": "Done Increment Sprint Review-dan əvvəl buraxıla bilər."
+    }
+  },
+  {
+    "id": "openapi",
+    "term": "OpenAPI",
+    "aliases": ["OAS"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "API təsvir standartı",
+    "definitionEn": "A specification for describing HTTP API operations, schemas, responses and security requirements.",
+    "explanationAz": "API-nin giriş, çıxış və təhlükəsizlik gözləntilərini təsvir edir. Sənədin olması serverin onları icra etdiyini sübut etmir.",
+    "example": {
+      "en": "An empty security requirement can advertise anonymous access.",
+      "az": "Boş security tələbi anonim giriş variantını ifadə edə bilər."
+    }
+  },
+  {
+    "id": "cursor-pagination",
+    "term": "Cursor pagination",
+    "aliases": ["cursor"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "İstinad nöqtəsi ilə səhifələmə",
+    "definitionEn": "A pagination approach that continues a result traversal using a cursor under a defined ordering and consistency policy.",
+    "explanationAz": "Nəticələrin davamını cursor ilə alır. Cursor təkbaşına snapshot sabitliyi və ya giriş icazəsi vermir.",
+    "example": {
+      "en": "Every page rechecks authorization even when the cursor is valid.",
+      "az": "Cursor düzgün olsa da hər səhifədə icazə yenidən yoxlanır."
+    }
+  },
+  {
+    "id": "mass-assignment",
+    "term": "Mass assignment",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Gözlənilməyən sahələrin kütləvi mənimsədilməsi",
+    "definitionEn": "A flaw where caller-controlled fields are assigned to protected model properties without an appropriate allowlist or policy.",
+    "explanationAz": "İstifadəçi tenantId və ownerId kimi idarə etməməli olduğu sahələri request-ə əlavə edib modelə keçirə bilər.",
+    "example": {
+      "en": "A strict create schema rejects client-supplied ownerId.",
+      "az": "Strict yaratma sxemi müştərinin göndərdiyi ownerId-ni rədd edir."
+    }
+  },
+  {
+    "id": "observability",
+    "term": "Observability",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Sistemin davranışını müşahidə edib izah edə bilmə",
+    "definitionEn": "The ability to investigate system behavior using relevant telemetry and context across its boundaries.",
+    "explanationAz": "Log, metrik və trace məlumatı istifadəçi problemini və əməliyyat vəziyyətini izah etməlidir. Tokenləri loglamaq lazım deyil.",
+    "example": {
+      "en": "A correlation ID links attempts to one business operation.",
+      "az": "Correlation ID cəhdləri bir biznes əməliyyatı ilə əlaqələndirir."
+    }
+  },
+  {
+    "id": "slo",
+    "term": "SLO",
+    "aliases": ["Service Level Objective"],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Xidmət səviyyəsi hədəfi",
+    "definitionEn": "An explicit target for a defined service indicator over a stated measurement window.",
+    "explanationAz": "Müəyyən müddət üzrə aydın ölçülən xidmət hədəfidir. Hədəf, ölçmə qaydası və istifadəçi nəticəsi birlikdə müəyyən edilməlidir.",
+    "example": {
+      "en": "A latency SLO needs a percentile and observation window.",
+      "az": "Gecikmə SLO-su üçün percentil və müşahidə müddəti lazımdır."
+    }
+  },
+  {
+    "id": "reconciliation",
+    "term": "Reconciliation",
+    "aliases": [],
+    "context": "Software architecture, APIs and product delivery",
+    "meaningAz": "Qeyri-müəyyən vəziyyətin tutuşdurularaq aydınlaşdırılması",
+    "definitionEn": "Comparing authoritative records to resolve missing, conflicting or uncertain business outcomes.",
+    "explanationAz": "Məsələn timeout-dan sonra ödənişin baş tutub-tutmadığını provider-in etibarlı vəziyyəti ilə yoxlamaqdır.",
+    "example": {
+      "en": "Reconcile the original payment before submitting another charge.",
+      "az": "Yeni ödəniş yaratmazdan əvvəl əvvəlki ödənişin vəziyyətini dəqiqləşdir."
+    }
   }
 ]

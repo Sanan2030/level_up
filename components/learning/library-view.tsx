@@ -33,6 +33,10 @@ export function LibraryView({
     initialTrack && tracks.some((t) => t.id === initialTrack) ? initialTrack : 'all',
   );
   const [status, setStatus] = useState('all');
+  const initialSubject = params.get('subject');
+  const [subject, setSubject] = useState(
+    initialSubject === 'technical' || initialSubject === 'pspo' ? initialSubject : 'all',
+  );
   const [bookmarksOnly, setBookmarksOnly] = useState(false);
   const t = copy[locale];
   const az = locale === 'az';
@@ -41,6 +45,9 @@ export function LibraryView({
     (lesson) =>
       (track === 'all' || lesson.trackId === track) &&
       (status === 'all' || lesson.status === status) &&
+      (subject === 'all' ||
+        (subject === 'technical' && lesson.topics.includes('software-development')) ||
+        (subject === 'pspo' && lesson.trackId.startsWith('pspo'))) &&
       (!bookmarksOnly || progress.bookmarks.includes(lesson.id)) &&
       (!normalized ||
         [localize(lesson.title, locale), localize(lesson.summary, locale), ...lesson.topics]
@@ -83,6 +90,18 @@ export function LibraryView({
         </div>
         <div className="filter-bar">
           <SlidersHorizontal size={18} aria-hidden="true" />
+          <label className="field-label">
+            Subject
+            <select
+              className="input"
+              value={subject}
+              onChange={(event) => setSubject(event.target.value)}
+            >
+              <option value="all">All subjects</option>
+              <option value="technical">Architecture, coding & APIs</option>
+              <option value="pspo">PSPO preparation</option>
+            </select>
+          </label>
           <label className="field-label">
             {az ? 'İstiqamət' : 'Track'}
             <select
@@ -223,6 +242,7 @@ export function LibraryView({
               setQuery('');
               setTrack('all');
               setStatus('all');
+              setSubject('all');
               setBookmarksOnly(false);
             }}
           >

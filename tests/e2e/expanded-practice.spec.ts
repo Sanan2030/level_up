@@ -59,10 +59,16 @@ test('competency study guide shows all five groups and 28 focus areas', async ({
   await expect(page.locator('.study-group')).toHaveCount(5);
   await expect(page.locator('.study-focus')).toHaveCount(28);
   await expect(
-    page.getByRole('link', { name: 'PSPO I · 100 questions', exact: true }),
+    page.getByRole('link', {
+      name: `PSPO I · ${questions.filter((q) => q.trackId === 'pspo1').length} questions`,
+      exact: true,
+    }),
   ).toBeVisible();
   await expect(
-    page.getByRole('link', { name: 'PSPO II · 100 questions', exact: true }),
+    page.getByRole('link', {
+      name: `PSPO II · ${questions.filter((q) => q.trackId === 'pspo2').length} questions`,
+      exact: true,
+    }),
   ).toBeVisible();
   await expect(
     page.getByText('no dedicated coaching lesson is published yet', { exact: false }),

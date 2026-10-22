@@ -1,0 +1,2579 @@
+[
+  {
+    "id": "rest-apis-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A DELETE request returns 204; repeating it returns 404. The resource remains absent. What does this establish about idempotence?",
+      "az": "A DELETE request returns 204; repeating it returns 404. The resource remains absent. What does this establish about idempotence?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The second status proves a duplicate business effect.",
+          "az": "The second status proves a duplicate business effect."
+        },
+        "explanation": {
+          "en": "A different status does not by itself establish a second state change.",
+          "az": "A different status does not by itself establish a second state change."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The server must use POST to make deletion idempotent.",
+          "az": "The server must use POST to make deletion idempotent."
+        },
+        "explanation": {
+          "en": "DELETE already has idempotent semantics; POST does not inherently add that property.",
+          "az": "DELETE already has idempotent semantics; POST does not inherently add that property."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The operation can still be idempotent.",
+          "az": "The operation can still be idempotent."
+        },
+        "explanation": {
+          "en": "Idempotence concerns the intended server effect, not identical response bytes.",
+          "az": "Idempotence concerns the intended server effect, not identical response bytes."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "RFC 9110 §9.2.2 defines idempotence in terms of the intended effect of repetition. See the lesson’s Sources and further reading for exact sections.",
+      "az": "RFC 9110 §9.2.2 defines idempotence in terms of the intended effect of repetition. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "rest-apis",
+    "practiceOnly": true,
+    "sourceIds": ["http-semantics-9110", "http-problems-9457", "openapi-311"]
+  },
+  {
+    "id": "rest-apis-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A client sends If-Match for version 7, but the resource is now version 8. Under the lesson's conditional-update contract, which response fits?",
+      "az": "A client sends If-Match for version 7, but the resource is now version 8. Under the lesson's conditional-update contract, which response fits?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "412, without applying the stale update.",
+          "az": "412, without applying the stale update."
+        },
+        "explanation": {
+          "en": "The specified representation precondition failed.",
+          "az": "The specified representation precondition failed."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "200, after applying only the fields that changed.",
+          "az": "200, after applying only the fields that changed."
+        },
+        "explanation": {
+          "en": "Partial application still bypasses the caller's failed precondition.",
+          "az": "Partial application still bypasses the caller's failed precondition."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "401, because the representation version is an authentication credential.",
+          "az": "401, because the representation version is an authentication credential."
+        },
+        "explanation": {
+          "en": "An ETag is a validator, not proof of identity.",
+          "az": "An ETag is a validator, not proof of identity."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A strong If-Match comparison prevents an otherwise authorized client from silently overwriting a newer representation. See the lesson’s Sources and further reading for exact sections.",
+      "az": "A strong If-Match comparison prevents an otherwise authorized client from silently overwriting a newer representation. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "rest-apis",
+    "practiceOnly": true,
+    "sourceIds": ["http-semantics-9110", "http-problems-9457", "openapi-311"]
+  },
+  {
+    "id": "rest-apis-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which statements belong in a correct HTTP API contract? Select all that apply.",
+      "az": "Which statements belong in a correct HTTP API contract? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A 204 response has no response content.",
+          "az": "A 204 response has no response content."
+        },
+        "explanation": {
+          "en": "Clients should not expect a JSON representation from 204.",
+          "az": "Clients should not expect a JSON representation from 204."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Every transport timeout proves that the transaction rolled back.",
+          "az": "Every transport timeout proves that the transaction rolled back."
+        },
+        "explanation": {
+          "en": "The callee may have committed before the connection failed.",
+          "az": "The callee may have committed before the connection failed."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Clients should parse localized problem-detail prose as their error identifier.",
+          "az": "Clients should parse localized problem-detail prose as their error identifier."
+        },
+        "explanation": {
+          "en": "Stable problem types or documented extensions support machine behavior.",
+          "az": "Stable problem types or documented extensions support machine behavior."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "202 means work was accepted, not necessarily completed.",
+          "az": "202 means work was accepted, not necessarily completed."
+        },
+        "explanation": {
+          "en": "Acceptance and completion are different observable states.",
+          "az": "Acceptance and completion are different observable states."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Distinguish HTTP status semantics, application state and transport observations; RFC 9457 detail text is not a stable parsing contract. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Distinguish HTTP status semantics, application state and transport observations; RFC 9457 detail text is not a stable parsing contract. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "rest-apis",
+    "practiceOnly": true,
+    "sourceIds": ["http-semantics-9110", "http-problems-9457", "openapi-311"]
+  },
+  {
+    "id": "rest-apis-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A subscription API checks a valid access token and If-Match but trusts the subscription ID without an ownership check. What remains missing?",
+      "az": "A subscription API checks a valid access token and If-Match but trusts the subscription ID without an ownership check. What remains missing?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A different ETag encoding that includes the user's display name.",
+          "az": "A different ETag encoding that includes the user's display name."
+        },
+        "explanation": {
+          "en": "Encoding identity in a validator does not implement the resource's permission policy.",
+          "az": "Encoding identity in a validator does not implement the resource's permission policy."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A client-side check that the edit button was visible.",
+          "az": "A client-side check that the edit button was visible."
+        },
+        "explanation": {
+          "en": "Direct API clients do not have to use the UI.",
+          "az": "Direct API clients do not have to use the UI."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Object-level authorization for the requested subscription.",
+          "az": "Object-level authorization for the requested subscription."
+        },
+        "explanation": {
+          "en": "Token validity and version matching do not grant access to an arbitrary object.",
+          "az": "Token validity and version matching do not grant access to an arbitrary object."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Permissions, validation and representation preconditions protect different boundaries. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Permissions, validation and representation preconditions protect different boundaries. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "rest-apis",
+    "practiceOnly": true,
+    "sourceIds": ["http-semantics-9110", "http-problems-9457", "openapi-311"]
+  },
+  {
+    "id": "integration-basics-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "An order and outbox event commit together. The publisher sends the event, then crashes before recording success. What must the consumer anticipate?",
+      "az": "An order and outbox event commit together. The publisher sends the event, then crashes before recording success. What must the consumer anticipate?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The original order must have rolled back.",
+          "az": "The original order must have rolled back."
+        },
+        "explanation": {
+          "en": "The committed order is independent of the later publisher crash.",
+          "az": "The committed order is independent of the later publisher crash."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A duplicate delivery that needs durable deduplication with the business effect.",
+          "az": "A duplicate delivery that needs durable deduplication with the business effect."
+        },
+        "explanation": {
+          "en": "The worker can repeat a send whose acknowledgement/state was lost.",
+          "az": "The worker can repeat a send whose acknowledgement/state was lost."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The outbox guarantees the broker will suppress every duplicate.",
+          "az": "The outbox guarantees the broker will suppress every duplicate."
+        },
+        "explanation": {
+          "en": "An outbox closes a local commit/publish gap, not all duplicate-delivery windows.",
+          "az": "An outbox closes a local commit/publish gap, not all duplicate-delivery windows."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "The outbox and consumer each need explicit local transaction boundaries; transport redelivery remains possible. See the lesson’s Sources and further reading for exact sections.",
+      "az": "The outbox and consumer each need explicit local transaction boundaries; transport redelivery remains possible. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "integration-basics",
+    "practiceOnly": true,
+    "sourceIds": ["azure-transactional-outbox", "github-webhook-validation", "http-semantics-9110"]
+  },
+  {
+    "id": "integration-basics-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A GitHub webhook's JSON is parsed and re-serialized before signature verification. Why can a genuine delivery fail verification?",
+      "az": "A GitHub webhook's JSON is parsed and re-serialized before signature verification. Why can a genuine delivery fail verification?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "GitHub signs only the event type, so including any JSON body is invalid.",
+          "az": "GitHub signs only the event type, so including any JSON body is invalid."
+        },
+        "explanation": {
+          "en": "The documented signature covers payload contents.",
+          "az": "The documented signature covers payload contents."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Every signature failure is proof of a compromised sender.",
+          "az": "Every signature failure is proof of a compromised sender."
+        },
+        "explanation": {
+          "en": "Incorrect byte handling can reject an authentic delivery.",
+          "az": "Incorrect byte handling can reject an authentic delivery."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The HMAC protects the exact original bytes, which serialization can change.",
+          "az": "The HMAC protects the exact original bytes, which serialization can change."
+        },
+        "explanation": {
+          "en": "Whitespace, escaping or property order can change without changing parsed meaning.",
+          "az": "Whitespace, escaping or property order can change without changing parsed meaning."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Verify the documented HMAC over the original body, then process the validated content. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Verify the documented HMAC over the original body, then process the validated content. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "integration-basics",
+    "practiceOnly": true,
+    "sourceIds": ["azure-transactional-outbox", "github-webhook-validation", "http-semantics-9110"]
+  },
+  {
+    "id": "integration-basics-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which controls address different webhook risks? Select all that apply.",
+      "az": "Which controls address different webhook risks? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Deduplicate the authenticated event ID together with its business effect.",
+          "az": "Deduplicate the authenticated event ID together with its business effect."
+        },
+        "explanation": {
+          "en": "A valid signature does not prevent legitimate retries or replay.",
+          "az": "A valid signature does not prevent legitimate retries or replay."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Return 200 before durable acceptance during a storage outage.",
+          "az": "Return 200 before durable acceptance during a storage outage."
+        },
+        "explanation": {
+          "en": "Acknowledging lost work can prevent the sender from retrying it.",
+          "az": "Acknowledging lost work can prevent the sender from retrying it."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Use a timestamp generated only by the receiver as proof the sender's event is fresh.",
+          "az": "Use a timestamp generated only by the receiver as proof the sender's event is fresh."
+        },
+        "explanation": {
+          "en": "A new receipt timestamp says nothing about when the signed event was created.",
+          "az": "A new receipt timestamp says nothing about when the signed event was created."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Verify the provider's signature over original payload bytes.",
+          "az": "Verify the provider's signature over original payload bytes."
+        },
+        "explanation": {
+          "en": "This authenticates the protected content under the configured signing scheme.",
+          "az": "This authenticates the protected content under the configured signing scheme."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Authenticity, replay handling and durable processing are separate concerns. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Authenticity, replay handling and durable processing are separate concerns. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "integration-basics",
+    "practiceOnly": true,
+    "sourceIds": ["azure-transactional-outbox", "github-webhook-validation", "http-semantics-9110"]
+  },
+  {
+    "id": "integration-basics-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Two consumers both find no processed-event record, then each adds loyalty points before inserting that record. What is the key defect?",
+      "az": "Two consumers both find no processed-event record, then each adds loyalty points before inserting that record. What is the key defect?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The consumer should acknowledge earlier to stop concurrency.",
+          "az": "The consumer should acknowledge earlier to stop concurrency."
+        },
+        "explanation": {
+          "en": "Earlier acknowledgement does not coordinate competing workers and can lose events.",
+          "az": "Earlier acknowledgement does not coordinate competing workers and can lose events."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The deduplication claim and effect are not protected by one atomic boundary.",
+          "az": "The deduplication claim and effect are not protected by one atomic boundary."
+        },
+        "explanation": {
+          "en": "Concurrent checks can both pass without a unique transactional claim.",
+          "az": "Concurrent checks can both pass without a unique transactional claim."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The event ID should be longer even if the database operations remain unchanged.",
+          "az": "The event ID should be longer even if the database operations remain unchanged."
+        },
+        "explanation": {
+          "en": "A longer ID does not eliminate the check/apply race.",
+          "az": "A longer ID does not eliminate the check/apply race."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Use a durable uniqueness rule and transaction that coordinate the processed-event record with the points effect. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Use a durable uniqueness rule and transaction that coordinate the processed-event record with the points effect. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "integration-basics",
+    "practiceOnly": true,
+    "sourceIds": ["azure-transactional-outbox", "github-webhook-validation", "http-semantics-9110"]
+  },
+  {
+    "id": "access-refresh-tokens-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "An access token expires and five requests simultaneously refresh using the same rotating refresh token. The second refresh is rejected as reuse. Which client change addresses the race?",
+      "az": "An access token expires and five requests simultaneously refresh using the same rotating refresh token. The second refresh is rejected as reuse. Which client change addresses the race?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Coordinate one refresh and let the requests await its outcome.",
+          "az": "Coordinate one refresh and let the requests await its outcome."
+        },
+        "explanation": {
+          "en": "The session owner can serialize refresh and publish the replacement pair coherently.",
+          "az": "The session owner can serialize refresh and publish the replacement pair coherently."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Keep retrying the invalidated refresh token until one request succeeds.",
+          "az": "Keep retrying the invalidated refresh token until one request succeeds."
+        },
+        "explanation": {
+          "en": "Repeated use of a consumed credential can cause further grant rejection.",
+          "az": "Repeated use of a consumed credential can cause further grant rejection."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Send the refresh token to each resource API instead of refreshing.",
+          "az": "Send the refresh token to each resource API instead of refreshing."
+        },
+        "explanation": {
+          "en": "The refresh token belongs at the authorization server's token endpoint.",
+          "az": "The refresh token belongs at the authorization server's token endpoint."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Rotation needs both server-side replay handling and coordinated client/session behavior. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Rotation needs both server-side replay handling and coordinated client/session behavior. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "access-refresh-tokens",
+    "practiceOnly": true,
+    "sourceIds": ["oauth-6749", "oauth-security-9700", "owasp-oauth-security"]
+  },
+  {
+    "id": "access-refresh-tokens-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "An app deletes its session cookie and revokes refresh capability. Its API checks only a self-contained access token's signature, audience and expiry. What can still happen?",
+      "az": "An app deletes its session cookie and revokes refresh capability. Its API checks only a self-contained access token's signature, audience and expiry. What can still happen?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The API must accept the refresh token to notice logout.",
+          "az": "The API must accept the refresh token to notice logout."
+        },
+        "explanation": {
+          "en": "That would confuse token recipients rather than implement revocation.",
+          "az": "That would confuse token recipients rather than implement revocation."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A previously issued access token can remain usable until its enforced expiry.",
+          "az": "A previously issued access token can remain usable until its enforced expiry."
+        },
+        "explanation": {
+          "en": "Local logout and refresh revocation do not automatically add a per-call revocation lookup.",
+          "az": "Local logout and refresh revocation do not automatically add a per-call revocation lookup."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The token's signature automatically changes when the browser cookie is deleted.",
+          "az": "The token's signature automatically changes when the browser cookie is deleted."
+        },
+        "explanation": {
+          "en": "Deleting local state does not change an already issued token's bytes.",
+          "az": "Deleting local state does not change an already issued token's bytes."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Immediate access-token invalidation requires an explicit supported enforcement policy beyond deleting client state. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Immediate access-token invalidation requires an explicit supported enforcement policy beyond deleting client state. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "access-refresh-tokens",
+    "practiceOnly": true,
+    "sourceIds": ["oauth-6749", "oauth-security-9700", "owasp-oauth-security"]
+  },
+  {
+    "id": "access-refresh-tokens-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which statements follow from the cited OAuth guidance? Select all that apply.",
+      "az": "Which statements follow from the cited OAuth guidance? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Issuing a refresh token is optional.",
+          "az": "Issuing a refresh token is optional."
+        },
+        "explanation": {
+          "en": "An authorization server can decide not to issue one.",
+          "az": "An authorization server can decide not to issue one."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Every OAuth access token is a JWT.",
+          "az": "Every OAuth access token is a JWT."
+        },
+        "explanation": {
+          "en": "OAuth permits opaque and other token formats.",
+          "az": "OAuth permits opaque and other token formats."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Refreshing can silently broaden previously granted scope.",
+          "az": "Refreshing can silently broaden previously granted scope."
+        },
+        "explanation": {
+          "en": "A refresh request does not authorize scope expansion beyond the grant.",
+          "az": "A refresh request does not authorize scope expansion beyond the grant."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Public-client refresh tokens must be sender-constrained or use rotation.",
+          "az": "Public-client refresh tokens must be sender-constrained or use rotation."
+        },
+        "explanation": {
+          "en": "RFC 9700 supplies this replay-protection requirement.",
+          "az": "RFC 9700 supplies this replay-protection requirement."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Token format, issuance policy and replay protection are distinct; RFC 6749 and RFC 9700 define their roles. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Token format, issuance policy and replay protection are distinct; RFC 6749 and RFC 9700 define their roles. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "access-refresh-tokens",
+    "practiceOnly": true,
+    "sourceIds": ["oauth-6749", "oauth-security-9700", "owasp-oauth-security"]
+  },
+  {
+    "id": "access-refresh-tokens-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A rotated refresh response is lost. The client cannot establish safe recovery under the identity provider's policy. Which response is most defensible?",
+      "az": "A rotated refresh response is lost. The client cannot establish safe recovery under the identity provider's policy. Which response is most defensible?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Require a fresh authorization flow rather than repeatedly redeeming the consumed token.",
+          "az": "Require a fresh authorization flow rather than repeatedly redeeming the consumed token."
+        },
+        "explanation": {
+          "en": "Recovery must respect the provider's replay policy and the uncertain replacement state.",
+          "az": "Recovery must respect the provider's replay policy and the uncertain replacement state."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Disable reuse detection permanently for this device.",
+          "az": "Disable reuse detection permanently for this device."
+        },
+        "explanation": {
+          "en": "That changes the security boundary to hide an unresolved recovery problem.",
+          "az": "That changes the security boundary to hide an unresolved recovery problem."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Increase the old access token's exp value locally.",
+          "az": "Increase the old access token's exp value locally."
+        },
+        "explanation": {
+          "en": "A client cannot extend a signed grant by editing untrusted token data.",
+          "az": "A client cannot extend a signed grant by editing untrusted token data."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A lost transport response is not permission to bypass refresh-token replay protection. See the lesson’s Sources and further reading for exact sections.",
+      "az": "A lost transport response is not permission to bypass refresh-token replay protection. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "access-refresh-tokens",
+    "practiceOnly": true,
+    "sourceIds": ["oauth-6749", "oauth-security-9700", "owasp-oauth-security"]
+  },
+  {
+    "id": "oauth-pkce-oidc-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A public client sends an S256 code challenge. What must it retain for the token exchange?",
+      "az": "A public client sends an S256 code challenge. What must it retain for the token exchange?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Only the challenge, because the verifier is public authorization metadata.",
+          "az": "Only the challenge, because the verifier is public authorization metadata."
+        },
+        "explanation": {
+          "en": "The challenge is not a substitute for the retained verifier.",
+          "az": "The challenge is not a substitute for the retained verifier."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A client secret embedded in the downloadable browser code.",
+          "az": "A client secret embedded in the downloadable browser code."
+        },
+        "explanation": {
+          "en": "A public client cannot keep a bundled static secret confidential.",
+          "az": "A public client cannot keep a bundled static secret confidential."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The transaction-specific code verifier.",
+          "az": "The transaction-specific code verifier."
+        },
+        "explanation": {
+          "en": "The token endpoint compares its transformation with the saved challenge.",
+          "az": "The token endpoint compares its transformation with the saved challenge."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "PKCE binds code redemption to the verifier held by the initiating client transaction. See the lesson’s Sources and further reading for exact sections.",
+      "az": "PKCE binds code redemption to the verifier held by the initiating client transaction. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "oauth-pkce-oidc",
+    "practiceOnly": true,
+    "sourceIds": ["oauth-security-9700", "pkce-7636", "oidc-core-10"]
+  },
+  {
+    "id": "oauth-pkce-oidc-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "An ID Token targets web-client, while an access token targets orders-api. Which component should consume each credential?",
+      "az": "An ID Token targets web-client, while an access token targets orders-api. Which component should consume each credential?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The client validates the ID Token; orders-api validates the access token.",
+          "az": "The client validates the ID Token; orders-api validates the access token."
+        },
+        "explanation": {
+          "en": "The intended recipients and purposes differ.",
+          "az": "The intended recipients and purposes differ."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Orders-api accepts the ID Token because both are signed by the same issuer.",
+          "az": "Orders-api accepts the ID Token because both are signed by the same issuer."
+        },
+        "explanation": {
+          "en": "A valid issuer signature does not erase audience and purpose restrictions.",
+          "az": "A valid issuer signature does not erase audience and purpose restrictions."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The browser sends the authorization code as its permanent API credential.",
+          "az": "The browser sends the authorization code as its permanent API credential."
+        },
+        "explanation": {
+          "en": "The code is a short-lived exchange credential, not an access token.",
+          "az": "The code is a short-lived exchange credential, not an access token."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Authentication evidence for an OpenID Connect client is not interchangeable with resource authorization. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Authentication evidence for an OpenID Connect client is not interchangeable with resource authorization. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "oauth-pkce-oidc",
+    "practiceOnly": true,
+    "sourceIds": ["oauth-security-9700", "pkce-7636", "oidc-core-10"]
+  },
+  {
+    "id": "oauth-pkce-oidc-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which choices fit the lesson's authorization-code flow? Select all that apply.",
+      "az": "Which choices fit the lesson's authorization-code flow? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Use exact trusted issuer and registered redirect expectations.",
+          "az": "Use exact trusted issuer and registered redirect expectations."
+        },
+        "explanation": {
+          "en": "An arbitrary issuer or redirect can cross the trust boundary.",
+          "az": "An arbitrary issuer or redirect can cross the trust boundary."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Use PKCE as the only check for every later API call.",
+          "az": "Use PKCE as the only check for every later API call."
+        },
+        "explanation": {
+          "en": "PKCE protects code redemption, not all resource-token and authorization decisions.",
+          "az": "PKCE protects code redemption, not all resource-token and authorization decisions."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Accept a nonce mismatch if the ID Token can be decoded.",
+          "az": "Accept a nonce mismatch if the ID Token can be decoded."
+        },
+        "explanation": {
+          "en": "Decoded claims do not override failed identity transaction validation.",
+          "az": "Decoded claims do not override failed identity transaction validation."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Generate transaction-specific verifier and transaction validation data.",
+          "az": "Generate transaction-specific verifier and transaction validation data."
+        },
+        "explanation": {
+          "en": "Reusing values weakens binding to the initiating flow.",
+          "az": "Reusing values weakens binding to the initiating flow."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Follow the complete maintained client flow; individual controls serve different protocol stages. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Follow the complete maintained client flow; individual controls serve different protocol stages. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "oauth-pkce-oidc",
+    "practiceOnly": true,
+    "sourceIds": ["oauth-security-9700", "pkce-7636", "oidc-core-10"]
+  },
+  {
+    "id": "oauth-pkce-oidc-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "How does RFC 9700 distinguish PKCE guidance for authorization-code clients?",
+      "az": "How does RFC 9700 distinguish PKCE guidance for authorization-code clients?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "It is forbidden for confidential clients because they already have secrets.",
+          "az": "It is forbidden for confidential clients because they already have secrets."
+        },
+        "explanation": {
+          "en": "RFC 9700 recommends it for confidential clients too.",
+          "az": "RFC 9700 recommends it for confidential clients too."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "It replaces TLS and refresh-token replay protection for every client.",
+          "az": "It replaces TLS and refresh-token replay protection for every client."
+        },
+        "explanation": {
+          "en": "These controls address separate channels and credentials.",
+          "az": "These controls address separate channels and credentials."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Public clients must use it; its use is recommended for confidential clients.",
+          "az": "Public clients must use it; its use is recommended for confidential clients."
+        },
+        "explanation": {
+          "en": "This preserves the exact normative distinction in §2.1.1.",
+          "az": "This preserves the exact normative distinction in §2.1.1."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Do not turn a supplementary summary into a stronger or weaker normative claim than the primary RFC. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Do not turn a supplementary summary into a stronger or weaker normative claim than the primary RFC. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "oauth-pkce-oidc",
+    "practiceOnly": true,
+    "sourceIds": ["oauth-security-9700", "pkce-7636", "oidc-core-10"]
+  },
+  {
+    "id": "jwt-validation-authorization-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A JWT has a valid signature and exp but aud=reporting-api. The payment API expects payment-api. What should it do?",
+      "az": "A JWT has a valid signature and exp but aud=reporting-api. The payment API expects payment-api. What should it do?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Replace aud locally before verifying permissions.",
+          "az": "Replace aud locally before verifying permissions."
+        },
+        "explanation": {
+          "en": "Editing an untrusted claim does not create a valid grant.",
+          "az": "Editing an untrusted claim does not create a valid grant."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Reject it under the payment API's audience policy.",
+          "az": "Reject it under the payment API's audience policy."
+        },
+        "explanation": {
+          "en": "A token minted for another recipient is not valid authorization for this API.",
+          "az": "A token minted for another recipient is not valid authorization for this API."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Accept it if the issuer is shared by both services.",
+          "az": "Accept it if the issuer is shared by both services."
+        },
+        "explanation": {
+          "en": "A common issuer can mint tokens for different audiences.",
+          "az": "A common issuer can mint tokens for different audiences."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Issuer trust and intended audience are independent validation requirements. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Issuer trust and intended audience are independent validation requirements. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "jwt-validation-authorization",
+    "practiceOnly": true,
+    "sourceIds": [
+      "jwt-security-8725",
+      "oauth-security-9700",
+      "owasp-authorization",
+      "owasp-rest-security"
+    ]
+  },
+  {
+    "id": "jwt-validation-authorization-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "An unknown kid appears in a token containing jku=https://caller-controlled.example.invalid/keys. What is the safe key-discovery approach?",
+      "az": "An unknown kid appears in a token containing jku=https://caller-controlled.example.invalid/keys. What is the safe key-discovery approach?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Fetch jku automatically and trust any returned matching key.",
+          "az": "Fetch jku automatically and trust any returned matching key."
+        },
+        "explanation": {
+          "en": "An attacker-selected key location can enable token forgery and SSRF.",
+          "az": "An attacker-selected key location can enable token forgery and SSRF."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Skip signature verification during signing-key rotation.",
+          "az": "Skip signature verification during signing-key rotation."
+        },
+        "explanation": {
+          "en": "Operational rotation does not justify failing open.",
+          "az": "Operational rotation does not justify failing open."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Use bounded discovery from the configured trusted issuer and reject if no valid key is found.",
+          "az": "Use bounded discovery from the configured trusted issuer and reject if no valid key is found."
+        },
+        "explanation": {
+          "en": "The received token must not choose the application's trust anchor.",
+          "az": "The received token must not choose the application's trust anchor."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "RFC 8725 treats received key selectors and URLs as untrusted input; issuer/key binding remains necessary. See the lesson’s Sources and further reading for exact sections.",
+      "az": "RFC 8725 treats received key selectors and URLs as untrusted input; issuer/key binding remains necessary. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "jwt-validation-authorization",
+    "practiceOnly": true,
+    "sourceIds": [
+      "jwt-security-8725",
+      "oauth-security-9700",
+      "owasp-authorization",
+      "owasp-rest-security"
+    ]
+  },
+  {
+    "id": "jwt-validation-authorization-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which checks remain relevant after a token signature verifies? Select all that apply.",
+      "az": "Which checks remain relevant after a token signature verifies? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Enforce tenant and object permissions for the requested resource.",
+          "az": "Enforce tenant and object permissions for the requested resource."
+        },
+        "explanation": {
+          "en": "A scope is not universal ownership of all objects.",
+          "az": "A scope is not universal ownership of all objects."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Trust the body tenantId because it is structurally valid JSON.",
+          "az": "Trust the body tenantId because it is structurally valid JSON."
+        },
+        "explanation": {
+          "en": "Input shape cannot establish the actor's authorized tenant.",
+          "az": "Input shape cannot establish the actor's authorized tenant."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Allow algorithms solely because the token header names them.",
+          "az": "Allow algorithms solely because the token header names them."
+        },
+        "explanation": {
+          "en": "The application must restrict accepted algorithms.",
+          "az": "The application must restrict accepted algorithms."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Validate the configured issuer, audience, validity and token profile.",
+          "az": "Validate the configured issuer, audience, validity and token profile."
+        },
+        "explanation": {
+          "en": "Signature success alone does not establish the intended use.",
+          "az": "Signature success alone does not establish the intended use."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Token validation and resource authorization form separate gates. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Token validation and resource authorization form separate gates. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "jwt-validation-authorization",
+    "practiceOnly": true,
+    "sourceIds": [
+      "jwt-security-8725",
+      "oauth-security-9700",
+      "owasp-authorization",
+      "owasp-rest-security"
+    ]
+  },
+  {
+    "id": "jwt-validation-authorization-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A user with invoices:read requests another tenant's invoice using a guessed UUID. What is the decisive missing protection if it succeeds?",
+      "az": "A user with invoices:read requests another tenant's invoice using a guessed UUID. What is the decisive missing protection if it succeeds?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A refresh token attached to the GET request.",
+          "az": "A refresh token attached to the GET request."
+        },
+        "explanation": {
+          "en": "A refresh token is not the intended resource credential.",
+          "az": "A refresh token is not the intended resource credential."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Server-side object/tenant authorization.",
+          "az": "Server-side object/tenant authorization."
+        },
+        "explanation": {
+          "en": "UUID unpredictability is not an access-control policy.",
+          "az": "UUID unpredictability is not an access-control policy."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A longer JWT subject string.",
+          "az": "A longer JWT subject string."
+        },
+        "explanation": {
+          "en": "Subject length does not enforce resource relationships.",
+          "az": "Subject length does not enforce resource relationships."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Apply permission checks to every specific resource, even when the token and broad action scope are valid. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Apply permission checks to every specific resource, even when the token and broad action scope are valid. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "jwt-validation-authorization",
+    "practiceOnly": true,
+    "sourceIds": [
+      "jwt-security-8725",
+      "oauth-security-9700",
+      "owasp-authorization",
+      "owasp-rest-security"
+    ]
+  },
+  {
+    "id": "browser-bff-csrf-cors-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A malicious same-origin script cannot read an HttpOnly session cookie. Which risk can remain?",
+      "az": "A malicious same-origin script cannot read an HttpOnly session cookie. Which risk can remain?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "It can issue authenticated requests through the compromised page.",
+          "az": "It can issue authenticated requests through the compromised page."
+        },
+        "explanation": {
+          "en": "HttpOnly limits direct reads, not every action by a same-origin script.",
+          "az": "HttpOnly limits direct reads, not every action by a same-origin script."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "HttpOnly proves every request expresses the user's intentional action.",
+          "az": "HttpOnly proves every request expresses the user's intentional action."
+        },
+        "explanation": {
+          "en": "Cookie attachment does not establish request intent.",
+          "az": "Cookie attachment does not establish request intent."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The script can only act after CORS is disabled.",
+          "az": "The script can only act after CORS is disabled."
+        },
+        "explanation": {
+          "en": "Same-origin script execution does not require cross-origin permission.",
+          "az": "Same-origin script execution does not require cross-origin permission."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "HttpOnly reduces one exposure route but does not make XSS harmless. See the lesson’s Sources and further reading for exact sections.",
+      "az": "HttpOnly reduces one exposure route but does not make XSS harmless. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "browser-bff-csrf-cors",
+    "practiceOnly": true,
+    "sourceIds": ["owasp-csrf-prevention", "owasp-rest-security", "azure-microservices-patterns"]
+  },
+  {
+    "id": "browser-bff-csrf-cors-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A browser refuses to expose a cross-origin response because CORS is missing. What should an API designer avoid assuming?",
+      "az": "A browser refuses to expose a cross-origin response because CORS is missing. What should an API designer avoid assuming?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "That command-line clients need their own server-side authentication checks.",
+          "az": "That command-line clients need their own server-side authentication checks."
+        },
+        "explanation": {
+          "en": "Server authorization remains necessary for all clients.",
+          "az": "Server authorization remains necessary for all clients."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "That the server necessarily never received or acted on the request.",
+          "az": "That the server necessarily never received or acted on the request."
+        },
+        "explanation": {
+          "en": "Some requests can be sent even when the browser blocks response access.",
+          "az": "Some requests can be sent even when the browser blocks response access."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "That CORS governs browser behavior.",
+          "az": "That CORS governs browser behavior."
+        },
+        "explanation": {
+          "en": "Browser enforcement is precisely the relevant scope.",
+          "az": "Browser enforcement is precisely the relevant scope."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Response-read restrictions do not provide a general proof of request integrity or server authorization. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Response-read restrictions do not provide a general proof of request integrity or server authorization. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "browser-bff-csrf-cors",
+    "practiceOnly": true,
+    "sourceIds": ["owasp-csrf-prevention", "owasp-rest-security", "azure-microservices-patterns"]
+  },
+  {
+    "id": "browser-bff-csrf-cors-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which statements fit a cookie-authenticated BFF design? Select all that apply.",
+      "az": "Which statements fit a cookie-authenticated BFF design? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Same-site sibling origins may still matter to the threat model.",
+          "az": "Same-site sibling origins may still matter to the threat model."
+        },
+        "explanation": {
+          "en": "Site and origin are different boundaries.",
+          "az": "Site and origin are different boundaries."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Access-Control-Allow-Origin: * can expose credentialed responses to any origin.",
+          "az": "Access-Control-Allow-Origin: * can expose credentialed responses to any origin."
+        },
+        "explanation": {
+          "en": "Browsers reject wildcard origin for credentialed response access.",
+          "az": "Browsers reject wildcard origin for credentialed response access."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Every webhook should carry the user's browser anti-CSRF token.",
+          "az": "Every webhook should carry the user's browser anti-CSRF token."
+        },
+        "explanation": {
+          "en": "Webhooks need their own authenticated delivery and replay policy.",
+          "az": "Webhooks need their own authenticated delivery and replay policy."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "State-changing requests need a coherent CSRF/request-integrity policy.",
+          "az": "State-changing requests need a coherent CSRF/request-integrity policy."
+        },
+        "explanation": {
+          "en": "Moving tokens to the server does not remove automatically attached cookie risks.",
+          "az": "Moving tokens to the server does not remove automatically attached cookie risks."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Session storage, browser integrity, CORS and non-browser integration authentication require separate design decisions. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Session storage, browser integrity, CORS and non-browser integration authentication require separate design decisions. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "browser-bff-csrf-cors",
+    "practiceOnly": true,
+    "sourceIds": ["owasp-csrf-prevention", "owasp-rest-security", "azure-microservices-patterns"]
+  },
+  {
+    "id": "browser-bff-csrf-cors-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Why should a service avoid exposing approve-refund as a state-changing GET operation?",
+      "az": "Why should a service avoid exposing approve-refund as a state-changing GET operation?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "GET is a safe-method request that can be navigated or prefetched without intended mutation.",
+          "az": "GET is a safe-method request that can be navigated or prefetched without intended mutation."
+        },
+        "explanation": {
+          "en": "State changes violate that expectation and complicate CSRF protection.",
+          "az": "State changes violate that expectation and complicate CSRF protection."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Every GET request is automatically authenticated by CORS.",
+          "az": "Every GET request is automatically authenticated by CORS."
+        },
+        "explanation": {
+          "en": "CORS is not authentication.",
+          "az": "CORS is not authentication."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A Secure cookie forbids all GET requests.",
+          "az": "A Secure cookie forbids all GET requests."
+        },
+        "explanation": {
+          "en": "Secure controls transport, not the method's business effect.",
+          "az": "Secure controls transport, not the method's business effect."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Method semantics and request-integrity controls should support the same documented behavior. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Method semantics and request-integrity controls should support the same documented behavior. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "browser-bff-csrf-cors",
+    "practiceOnly": true,
+    "sourceIds": ["owasp-csrf-prevention", "owasp-rest-security", "azure-microservices-patterns"]
+  },
+  {
+    "id": "api-idempotency-concurrency-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A payment POST times out after the provider may have committed. What is the safest recovery under an idempotent-operation contract?",
+      "az": "A payment POST times out after the provider may have committed. What is the safest recovery under an idempotent-operation contract?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Create a fresh key immediately because a timeout proves no result exists.",
+          "az": "Create a fresh key immediately because a timeout proves no result exists."
+        },
+        "explanation": {
+          "en": "A timeout leaves the remote business state uncertain.",
+          "az": "A timeout leaves the remote business state uncertain."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Tell the user payment definitely failed without checking state.",
+          "az": "Tell the user payment definitely failed without checking state."
+        },
+        "explanation": {
+          "en": "The available transport evidence does not establish that claim.",
+          "az": "The available transport evidence does not establish that claim."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Preserve the operation identity and reconcile or retry under the same documented key policy.",
+          "az": "Preserve the operation identity and reconcile or retry under the same documented key policy."
+        },
+        "explanation": {
+          "en": "A new identity can represent a second charge rather than a recovery attempt.",
+          "az": "A new identity can represent a second charge rather than a recovery attempt."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Deduplication and reconciliation protect the logical operation across uncertain transport outcomes. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Deduplication and reconciliation protect the logical operation across uncertain transport outcomes. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-idempotency-concurrency",
+    "practiceOnly": true,
+    "sourceIds": ["http-semantics-9110", "azure-retry-pattern", "azure-transactional-outbox"]
+  },
+  {
+    "id": "api-idempotency-concurrency-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Two servers both observe a missing operation key before either creates an order. Which design prevents both effects from committing?",
+      "az": "Two servers both observe a missing operation key before either creates an order. Which design prevents both effects from committing?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A durable scoped uniqueness rule and an appropriate atomic transaction boundary.",
+          "az": "A durable scoped uniqueness rule and an appropriate atomic transaction boundary."
+        },
+        "explanation": {
+          "en": "The claim and effect must be coordinated across workers.",
+          "az": "The claim and effect must be coordinated across workers."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A process-local boolean on each server.",
+          "az": "A process-local boolean on each server."
+        },
+        "explanation": {
+          "en": "Separate processes do not share that lock.",
+          "az": "Separate processes do not share that lock."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A longer cache TTL after the order is already created.",
+          "az": "A longer cache TTL after the order is already created."
+        },
+        "explanation": {
+          "en": "TTL length does not remove the check/write race.",
+          "az": "TTL length does not remove the check/write race."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A preflight SELECT is not an atomic claim; the data store must enforce the invariant. See the lesson’s Sources and further reading for exact sections.",
+      "az": "A preflight SELECT is not an atomic claim; the data store must enforce the invariant. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-idempotency-concurrency",
+    "practiceOnly": true,
+    "sourceIds": ["http-semantics-9110", "azure-retry-pattern", "azure-transactional-outbox"]
+  },
+  {
+    "id": "api-idempotency-concurrency-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which statements correctly distinguish two API protections? Select all that apply.",
+      "az": "Which statements correctly distinguish two API protections? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Version/If-Match checks can prevent stale clients from overwriting newer state.",
+          "az": "Version/If-Match checks can prevent stale clients from overwriting newer state."
+        },
+        "explanation": {
+          "en": "They address a lost-update invariant.",
+          "az": "They address a lost-update invariant."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "An idempotent PUT automatically prevents all lost updates between different payloads.",
+          "az": "An idempotent PUT automatically prevents all lost updates between different payloads."
+        },
+        "explanation": {
+          "en": "Different replacements can still overwrite changes without concurrency control.",
+          "az": "Different replacements can still overwrite changes without concurrency control."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A valid key lets the caller bypass ownership checks to retrieve the result.",
+          "az": "A valid key lets the caller bypass ownership checks to retrieve the result."
+        },
+        "explanation": {
+          "en": "Stored outcomes remain protected by authorization.",
+          "az": "Stored outcomes remain protected by authorization."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Idempotency keys can recognize repeated attempts at one logical creation.",
+          "az": "Idempotency keys can recognize repeated attempts at one logical creation."
+        },
+        "explanation": {
+          "en": "They address duplicate operations under the chosen contract.",
+          "az": "They address duplicate operations under the chosen contract."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Operation identity and representation version solve different problems and can be combined. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Operation identity and representation version solve different problems and can be combined. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-idempotency-concurrency",
+    "practiceOnly": true,
+    "sourceIds": ["http-semantics-9110", "azure-retry-pattern", "azure-transactional-outbox"]
+  },
+  {
+    "id": "api-idempotency-concurrency-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "The same authenticated actor reuses a completed creation key with a materially different validated payload. What fits the lesson's contract?",
+      "az": "The same authenticated actor reuses a completed creation key with a materially different validated payload. What fits the lesson's contract?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Overwrite the stored result and silently create the second order.",
+          "az": "Overwrite the stored result and silently create the second order."
+        },
+        "explanation": {
+          "en": "This destroys the original deduplication guarantee.",
+          "az": "This destroys the original deduplication guarantee."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Return the first result while claiming it was created from the new payload.",
+          "az": "Return the first result while claiming it was created from the new payload."
+        },
+        "explanation": {
+          "en": "That misrepresents the submitted operation and hides the mismatch.",
+          "az": "That misrepresents the submitted operation and hides the mismatch."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Return a documented conflict without applying another creation.",
+          "az": "Return a documented conflict without applying another creation."
+        },
+        "explanation": {
+          "en": "One key cannot ambiguously identify two different business operations.",
+          "az": "One key cannot ambiguously identify two different business operations."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "A request fingerprint makes the key's intended operation explicit; differing payloads need a defined conflict policy. See the lesson’s Sources and further reading for exact sections.",
+      "az": "A request fingerprint makes the key's intended operation explicit; differing payloads need a defined conflict policy. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-idempotency-concurrency",
+    "practiceOnly": true,
+    "sourceIds": ["http-semantics-9110", "azure-retry-pattern", "azure-transactional-outbox"]
+  },
+  {
+    "id": "api-contracts-evolution-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "An OpenAPI operation lists two separate Security Requirement Objects. How are the alternatives interpreted?",
+      "az": "An OpenAPI operation lists two separate Security Requirement Objects. How are the alternatives interpreted?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "All security declarations are comments and cannot influence implementations.",
+          "az": "All security declarations are comments and cannot influence implementations."
+        },
+        "explanation": {
+          "en": "The description is not enforcement, but it guides implementers and tools.",
+          "az": "The description is not enforcement, but it guides implementers and tools."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Satisfying one alternative can authorize the request under that declaration.",
+          "az": "Satisfying one alternative can authorize the request under that declaration."
+        },
+        "explanation": {
+          "en": "The list represents alternatives; schemes inside one object are combined.",
+          "az": "The list represents alternatives; schemes inside one object are combined."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Every scheme in every separate object must always be satisfied together.",
+          "az": "Every scheme in every separate object must always be satisfied together."
+        },
+        "explanation": {
+          "en": "That confuses list alternatives with multiple schemes in a single requirement.",
+          "az": "That confuses list alternatives with multiple schemes in a single requirement."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Review security list structure carefully and ensure runtime behavior matches the contract. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Review security list structure carefully and ensure runtime behavior matches the contract. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-contracts-evolution",
+    "practiceOnly": true,
+    "sourceIds": ["openapi-311", "http-problems-9457", "http-semantics-9110"]
+  },
+  {
+    "id": "api-contracts-evolution-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "An optional string property may explicitly be null in OpenAPI 3.1.1. Which distinction is necessary?",
+      "az": "An optional string property may explicitly be null in OpenAPI 3.1.1. Which distinction is necessary?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Optional always means that null is an accepted string.",
+          "az": "Optional always means that null is an accepted string."
+        },
+        "explanation": {
+          "en": "Omitting a property does not make null a valid value.",
+          "az": "Omitting a property does not make null a valid value."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The 3.0 nullable keyword must be used instead of JSON Schema type unions.",
+          "az": "The 3.0 nullable keyword must be used instead of JSON Schema type unions."
+        },
+        "explanation": {
+          "en": "The lesson uses the 3.1.1 JSON Schema based dialect.",
+          "az": "The lesson uses the 3.1.1 JSON Schema based dialect."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Property absence and a present null value are different; required and type govern different aspects.",
+          "az": "Property absence and a present null value are different; required and type govern different aspects."
+        },
+        "explanation": {
+          "en": "Presence and value constraints are independent decisions.",
+          "az": "Presence and value constraints are independent decisions."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Define absence, null, defaults and partial-update semantics explicitly. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Define absence, null, defaults and partial-update semantics explicitly. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-contracts-evolution",
+    "practiceOnly": true,
+    "sourceIds": ["openapi-311", "http-problems-9457", "http-semantics-9110"]
+  },
+  {
+    "id": "api-contracts-evolution-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which compatibility risks require review? Select all that apply.",
+      "az": "Which compatibility risks require review? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A new response enum value can break an exhaustive consumer.",
+          "az": "A new response enum value can break an exhaustive consumer."
+        },
+        "explanation": {
+          "en": "Some clients assume the documented set is closed.",
+          "az": "Some clients assume the documented set is closed."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A cursor automatically preserves permissions after access is revoked.",
+          "az": "A cursor automatically preserves permissions after access is revoked."
+        },
+        "explanation": {
+          "en": "Every page must reapply current authorization.",
+          "az": "Every page must reapply current authorization."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Human-readable problem detail is the stable machine identifier.",
+          "az": "Human-readable problem detail is the stable machine identifier."
+        },
+        "explanation": {
+          "en": "Clients should use the problem type or documented extensions.",
+          "az": "Clients should use the problem type or documented extensions."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "A newly required request field can break older clients.",
+          "az": "A newly required request field can break older clients."
+        },
+        "explanation": {
+          "en": "They do not yet send the required input.",
+          "az": "They do not yet send the required input."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Compatibility and authorization depend on behavior and consumer expectations, not only the provider's schema. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Compatibility and authorization depend on behavior and consumer expectations, not only the provider's schema. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-contracts-evolution",
+    "practiceOnly": true,
+    "sourceIds": ["openapi-311", "http-problems-9457", "http-semantics-9110"]
+  },
+  {
+    "id": "api-contracts-evolution-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A team adds a createdAt cursor but many records share timestamps and new records arrive concurrently. What should it avoid promising without additional design?",
+      "az": "A team adds a createdAt cursor but many records share timestamps and new records arrive concurrently. What should it avoid promising without additional design?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "That cursor filters should stay consistent between pages.",
+          "az": "That cursor filters should stay consistent between pages."
+        },
+        "explanation": {
+          "en": "Filter binding is an important contract requirement.",
+          "az": "Filter binding is an important contract requirement."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A unique, snapshot-consistent traversal merely because it uses a cursor.",
+          "az": "A unique, snapshot-consistent traversal merely because it uses a cursor."
+        },
+        "explanation": {
+          "en": "Tie-breaking and a consistency/snapshot policy still need definition.",
+          "az": "Tie-breaking and a consistency/snapshot policy still need definition."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "That each request needs a page-size limit.",
+          "az": "That each request needs a page-size limit."
+        },
+        "explanation": {
+          "en": "A bounded size remains useful for resource control.",
+          "az": "A bounded size remains useful for resource control."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "A cursor is a navigation mechanism, not automatically a unique ordering, stable snapshot or access credential. See the lesson’s Sources and further reading for exact sections.",
+      "az": "A cursor is a navigation mechanism, not automatically a unique ordering, stable snapshot or access credential. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-contracts-evolution",
+    "practiceOnly": true,
+    "sourceIds": ["openapi-311", "http-problems-9457", "http-semantics-9110"]
+  },
+  {
+    "id": "architecture-boundaries-sagas-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A payment commits locally, then booking confirmation fails. Why is compensation not equivalent to rolling back one database transaction?",
+      "az": "A payment commits locally, then booking confirmation fails. Why is compensation not equivalent to rolling back one database transaction?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Local commits and external effects may already be observed; compensation can also fail.",
+          "az": "Local commits and external effects may already be observed; compensation can also fail."
+        },
+        "explanation": {
+          "en": "A refund or release is a new business action with its own outcome.",
+          "az": "A refund or release is a new business action with its own outcome."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Sagas provide global isolation over all participant databases.",
+          "az": "Sagas provide global isolation over all participant databases."
+        },
+        "explanation": {
+          "en": "A saga does not automatically create a distributed ACID boundary.",
+          "az": "A saga does not automatically create a distributed ACID boundary."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The booking service can erase every provider-side effect by restoring its own database.",
+          "az": "The booking service can erase every provider-side effect by restoring its own database."
+        },
+        "explanation": {
+          "en": "One service does not control committed external state.",
+          "az": "One service does not control committed external state."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Model compensations, pending states and reconciliation explicitly rather than claiming invisible global rollback. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Model compensations, pending states and reconciliation explicitly rather than claiming invisible global rollback. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "architecture-boundaries-sagas",
+    "practiceOnly": true,
+    "sourceIds": [
+      "azure-microservices-patterns",
+      "azure-saga-pattern",
+      "azure-transactional-outbox"
+    ]
+  },
+  {
+    "id": "architecture-boundaries-sagas-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "One small team has no demonstrated independent scaling or deployment need. What is a defensible response to a default six-service rewrite?",
+      "az": "One small team has no demonstrated independent scaling or deployment need. What is a defensible response to a default six-service rewrite?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Reject all service boundaries permanently, regardless of future evidence.",
+          "az": "Reject all service boundaries permanently, regardless of future evidence."
+        },
+        "explanation": {
+          "en": "An architecture decision should be revisited when its forces change.",
+          "az": "An architecture decision should be revisited when its forces change."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Compare the claimed benefit with consistency and operational cost; a modular monolith may fit.",
+          "az": "Compare the claimed benefit with consistency and operational cost; a modular monolith may fit."
+        },
+        "explanation": {
+          "en": "Deployment distribution needs an evidenced force, not a fashion preference.",
+          "az": "Deployment distribution needs an evidenced force, not a fashion preference."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Approve it because more services necessarily produce more product value.",
+          "az": "Approve it because more services necessarily produce more product value."
+        },
+        "explanation": {
+          "en": "Component count is not evidence of a better user outcome.",
+          "az": "Component count is not evidence of a better user outcome."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Choose boundaries from domain, quality and ownership needs, recording trade-offs and conditions for change. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Choose boundaries from domain, quality and ownership needs, recording trade-offs and conditions for change. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "architecture-boundaries-sagas",
+    "practiceOnly": true,
+    "sourceIds": [
+      "azure-microservices-patterns",
+      "azure-saga-pattern",
+      "azure-transactional-outbox"
+    ]
+  },
+  {
+    "id": "architecture-boundaries-sagas-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which statements about distributed design are sound? Select all that apply.",
+      "az": "Which statements about distributed design are sound? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "CQRS does not inherently require event sourcing.",
+          "az": "CQRS does not inherently require event sourcing."
+        },
+        "explanation": {
+          "en": "Separating command/query models is a different choice from storing state as events.",
+          "az": "Separating command/query models is a different choice from storing state as events."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A saga automatically isolates every concurrent business workflow.",
+          "az": "A saga automatically isolates every concurrent business workflow."
+        },
+        "explanation": {
+          "en": "Intermediate states and anomalies still require design.",
+          "az": "Intermediate states and anomalies still require design."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Every unknown payment outcome should be retried with a new charge identity.",
+          "az": "Every unknown payment outcome should be retried with a new charge identity."
+        },
+        "explanation": {
+          "en": "That can duplicate an already committed remote operation.",
+          "az": "That can duplicate an already committed remote operation."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "A domain boundary, deployment unit and Scrum product boundary need not be identical.",
+          "az": "A domain boundary, deployment unit and Scrum product boundary need not be identical."
+        },
+        "explanation": {
+          "en": "They describe different kinds of responsibility.",
+          "az": "They describe different kinds of responsibility."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Architecture patterns address selected concerns and do not eliminate unrelated consistency or product-boundary decisions. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Architecture patterns address selected concerns and do not eliminate unrelated consistency or product-boundary decisions. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "architecture-boundaries-sagas",
+    "practiceOnly": true,
+    "sourceIds": [
+      "azure-microservices-patterns",
+      "azure-saga-pattern",
+      "azure-transactional-outbox"
+    ]
+  },
+  {
+    "id": "architecture-boundaries-sagas-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "An orchestration-based saga's compensation remains pending after repeated failures. Which behavior is most appropriate?",
+      "az": "An orchestration-based saga's compensation remains pending after repeated failures. Which behavior is most appropriate?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Retain durable workflow state, expose the pending condition and use a defined recovery path.",
+          "az": "Retain durable workflow state, expose the pending condition and use a defined recovery path."
+        },
+        "explanation": {
+          "en": "The business state has not magically returned to its initial condition.",
+          "az": "The business state has not magically returned to its initial condition."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Mark the whole purchase rolled back and delete evidence of the pending step.",
+          "az": "Mark the whole purchase rolled back and delete evidence of the pending step."
+        },
+        "explanation": {
+          "en": "This hides an unresolved external effect and prevents reconciliation.",
+          "az": "This hides an unresolved external effect and prevents reconciliation."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Assume orchestration forbids all partial outcomes.",
+          "az": "Assume orchestration forbids all partial outcomes."
+        },
+        "explanation": {
+          "en": "A coordinator makes the workflow explicit; it does not make failures impossible.",
+          "az": "A coordinator makes the workflow explicit; it does not make failures impossible."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Compensation itself needs observability, retries where safe and operational ownership. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Compensation itself needs observability, retries where safe and operational ownership. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "architecture-boundaries-sagas",
+    "practiceOnly": true,
+    "sourceIds": [
+      "azure-microservices-patterns",
+      "azure-saga-pattern",
+      "azure-transactional-outbox"
+    ]
+  },
+  {
+    "id": "api-resilience-observability-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A gateway, service and SDK each retry independently. Why can this worsen an outage?",
+      "az": "A gateway, service and SDK each retry independently. Why can this worsen an outage?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A retry always changes the HTTP method to an unsafe one.",
+          "az": "A retry always changes the HTTP method to an unsafe one."
+        },
+        "explanation": {
+          "en": "The amplification problem does not depend on method rewriting.",
+          "az": "The amplification problem does not depend on method rewriting."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "More retries always reduce server load by spreading requests.",
+          "az": "More retries always reduce server load by spreading requests."
+        },
+        "explanation": {
+          "en": "Uncoordinated immediate retries can do the opposite.",
+          "az": "Uncoordinated immediate retries can do the opposite."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Nested attempts can multiply calls and exhaust a shared time/resource budget.",
+          "az": "Nested attempts can multiply calls and exhaust a shared time/resource budget."
+        },
+        "explanation": {
+          "en": "Each layer can amplify rather than merely repeat the original request count.",
+          "az": "Each layer can amplify rather than merely repeat the original request count."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Choose explicit retry ownership and inspect existing library policies before adding another loop. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Choose explicit retry ownership and inspect existing library policies before adding another loop. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-resilience-observability",
+    "practiceOnly": true,
+    "sourceIds": [
+      "azure-retry-pattern",
+      "azure-circuit-breaker",
+      "azure-microservices-patterns",
+      "http-semantics-9110"
+    ]
+  },
+  {
+    "id": "api-resilience-observability-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A breaker has moved from open to half-open. What should happen under the cited pattern?",
+      "az": "A breaker has moved from open to half-open. What should happen under the cited pattern?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Permit limited probes and decide whether recovery supports reopening normal traffic.",
+          "az": "Permit limited probes and decide whether recovery supports reopening normal traffic."
+        },
+        "explanation": {
+          "en": "Controlled probes avoid overwhelming a recovering dependency.",
+          "az": "Controlled probes avoid overwhelming a recovering dependency."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Send every queued request immediately to prove throughput.",
+          "az": "Send every queued request immediately to prove throughput."
+        },
+        "explanation": {
+          "en": "That can flood a dependency before it has recovered.",
+          "az": "That can flood a dependency before it has recovered."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat every previous timed-out payment as definitely failed.",
+          "az": "Treat every previous timed-out payment as definitely failed."
+        },
+        "explanation": {
+          "en": "Circuit state does not establish authoritative business outcomes.",
+          "az": "Circuit state does not establish authoritative business outcomes."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Circuit breaking limits likely failed calls and probes recovery; it does not determine remote transaction state. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Circuit breaking limits likely failed calls and probes recovery; it does not determine remote transaction state. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-resilience-observability",
+    "practiceOnly": true,
+    "sourceIds": [
+      "azure-retry-pattern",
+      "azure-circuit-breaker",
+      "azure-microservices-patterns",
+      "http-semantics-9110"
+    ]
+  },
+  {
+    "id": "api-resilience-observability-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which are appropriate inputs to a retry decision? Select all that apply.",
+      "az": "Which are appropriate inputs to a retry decision? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Whether the remaining deadline allows another attempt and delay.",
+          "az": "Whether the remaining deadline allows another attempt and delay."
+        },
+        "explanation": {
+          "en": "A caller's total budget must bound recovery work.",
+          "az": "A caller's total budget must bound recovery work."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Whether a permission error can be repeated indefinitely until it disappears.",
+          "az": "Whether a permission error can be repeated indefinitely until it disappears."
+        },
+        "explanation": {
+          "en": "Retry does not grant authorization.",
+          "az": "Retry does not grant authorization."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Whether logging the complete bearer token will simplify debugging.",
+          "az": "Whether logging the complete bearer token will simplify debugging."
+        },
+        "explanation": {
+          "en": "Credentials should not be exposed in telemetry.",
+          "az": "Credentials should not be exposed in telemetry."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Whether the fault may be transient and replay is safe under the operation contract.",
+          "az": "Whether the fault may be transient and replay is safe under the operation contract."
+        },
+        "explanation": {
+          "en": "Retries need both operational and business-semantic justification.",
+          "az": "Retries need both operational and business-semantic justification."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Bounded retries, safe semantics and useful credential-free telemetry belong together. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Bounded retries, safe semantics and useful credential-free telemetry belong together. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-resilience-observability",
+    "practiceOnly": true,
+    "sourceIds": [
+      "azure-retry-pattern",
+      "azure-circuit-breaker",
+      "azure-microservices-patterns",
+      "http-semantics-9110"
+    ]
+  },
+  {
+    "id": "api-resilience-observability-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A payment request times out locally. Which telemetry/behavior is most useful?",
+      "az": "A payment request times out locally. Which telemetry/behavior is most useful?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Count every retry as a newly completed customer payment.",
+          "az": "Count every retry as a newly completed customer payment."
+        },
+        "explanation": {
+          "en": "Attempt volume is not completed business value.",
+          "az": "Attempt volume is not completed business value."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Use only mean latency and discard slow-tail observations.",
+          "az": "Use only mean latency and discard slow-tail observations."
+        },
+        "explanation": {
+          "en": "Averages can hide deadline failures and user impact.",
+          "az": "Averages can hide deadline failures and user impact."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Track its original operation identity and pending/reconciled state separately from attempt counts.",
+          "az": "Track its original operation identity and pending/reconciled state separately from attempt counts."
+        },
+        "explanation": {
+          "en": "This links technical failure to the true business outcome without creating a new payment.",
+          "az": "This links technical failure to the true business outcome without creating a new payment."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Observability should explain user impact and uncertainty, not inflate completed transaction counts. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Observability should explain user impact and uncertainty, not inflate completed transaction counts. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "api-resilience-observability",
+    "practiceOnly": true,
+    "sourceIds": [
+      "azure-retry-pattern",
+      "azure-circuit-breaker",
+      "azure-microservices-patterns",
+      "http-semantics-9110"
+    ]
+  },
+  {
+    "id": "secure-api-coding-extra-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "A TypeScript interface excludes tenantId, but the server receives it in JSON. Which control does the lab use?",
+      "az": "A TypeScript interface excludes tenantId, but the server receives it in JSON. Which control does the lab use?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The browser form's hidden fields define the actor's tenant.",
+          "az": "The browser form's hidden fields define the actor's tenant."
+        },
+        "explanation": {
+          "en": "The caller controls request contents.",
+          "az": "The caller controls request contents."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A strict runtime schema rejects unknown fields and trusted context supplies the tenant.",
+          "az": "A strict runtime schema rejects unknown fields and trusted context supplies the tenant."
+        },
+        "explanation": {
+          "en": "Compile-time annotations do not validate hostile runtime input.",
+          "az": "Compile-time annotations do not validate hostile runtime input."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A type assertion on request.json() proves tenant ownership.",
+          "az": "A type assertion on request.json() proves tenant ownership."
+        },
+        "explanation": {
+          "en": "An assertion changes compiler assumptions, not runtime authority.",
+          "az": "An assertion changes compiler assumptions, not runtime authority."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Keep untrusted input separate from the authenticated actor and prevent mass assignment. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Keep untrusted input separate from the authenticated actor and prevent mass assignment. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "secure-api-coding",
+    "practiceOnly": true,
+    "sourceIds": [
+      "owasp-authorization",
+      "owasp-rest-security",
+      "http-semantics-9110",
+      "pkce-7636",
+      "github-webhook-validation"
+    ]
+  },
+  {
+    "id": "secure-api-coding-extra-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "In the lab, order version 1 is edited to version 2. A second update still expects version 1. What happens?",
+      "az": "In the lab, order version 1 is edited to version 2. A second update still expects version 1. What happens?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The service silently merges the new quantity into version 2.",
+          "az": "The service silently merges the new quantity into version 2."
+        },
+        "explanation": {
+          "en": "That bypasses the stale-update policy.",
+          "az": "That bypasses the stale-update policy."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The creation idempotency result is rewritten to match every later update.",
+          "az": "The creation idempotency result is rewritten to match every later update."
+        },
+        "explanation": {
+          "en": "The recorded creation result is a snapshot, while GET returns current state.",
+          "az": "The recorded creation result is a snapshot, while GET returns current state."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The update fails with 412 and leaves the current quantity/version unchanged.",
+          "az": "The update fails with 412 and leaves the current quantity/version unchanged."
+        },
+        "explanation": {
+          "en": "A stale comparison must not apply part of the update.",
+          "az": "A stale comparison must not apply part of the update."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Optimistic locking prevents stale changes independently of preserving a creation operation's original response. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Optimistic locking prevents stale changes independently of preserving a creation operation's original response. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "secure-api-coding",
+    "practiceOnly": true,
+    "sourceIds": [
+      "owasp-authorization",
+      "owasp-rest-security",
+      "http-semantics-9110",
+      "pkce-7636",
+      "github-webhook-validation"
+    ]
+  },
+  {
+    "id": "secure-api-coding-extra-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Which limitations of the coding lab matter? Select all that apply.",
+      "az": "Which limitations of the coding lab matter? Select all that apply."
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The supplied Principal must come from validated authentication in an actual adapter.",
+          "az": "The supplied Principal must come from validated authentication in an actual adapter."
+        },
+        "explanation": {
+          "en": "The lab fixture is not a credential-verification implementation.",
+          "az": "The lab fixture is not a credential-verification implementation."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Passing the unit tests proves a production payment integration cannot double-charge.",
+          "az": "Passing the unit tests proves a production payment integration cannot double-charge."
+        },
+        "explanation": {
+          "en": "Remote side effects and crash recovery are outside this model.",
+          "az": "Remote side effects and crash recovery are outside this model."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Because the lab is in TypeScript, runtime schema checks are unnecessary.",
+          "az": "Because the lab is in TypeScript, runtime schema checks are unnecessary."
+        },
+        "explanation": {
+          "en": "Untrusted input still arrives at runtime.",
+          "az": "Untrusted input still arrives at runtime."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Its maps do not provide durable, cross-process transaction guarantees.",
+          "az": "Its maps do not provide durable, cross-process transaction guarantees."
+        },
+        "explanation": {
+          "en": "A real multi-instance service needs the appropriate database boundary.",
+          "az": "A real multi-instance service needs the appropriate database boundary."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Tests demonstrate the model's invariants, not guarantees for boundaries the model does not implement. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Tests demonstrate the model's invariants, not guarantees for boundaries the model does not implement. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "secure-api-coding",
+    "practiceOnly": true,
+    "sourceIds": [
+      "owasp-authorization",
+      "owasp-rest-security",
+      "http-semantics-9110",
+      "pkce-7636",
+      "github-webhook-validation"
+    ]
+  },
+  {
+    "id": "secure-api-coding-extra-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "api-engineering",
+    "difficulty": 3,
+    "text": {
+      "en": "Why does the in-process lab return structured copies of stored orders?",
+      "az": "Why does the in-process lab return structured copies of stored orders?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "To persist map contents across process restarts.",
+          "az": "To persist map contents across process restarts."
+        },
+        "explanation": {
+          "en": "A copy remains in memory and does not add durability.",
+          "az": "A copy remains in memory and does not add durability."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "To prevent callers from mutating stored state through returned object references.",
+          "az": "To prevent callers from mutating stored state through returned object references."
+        },
+        "explanation": {
+          "en": "An internal reference would permit state changes outside the service's checks.",
+          "az": "An internal reference would permit state changes outside the service's checks."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "To turn an unverified JWT into a trusted Principal.",
+          "az": "To turn an unverified JWT into a trusted Principal."
+        },
+        "explanation": {
+          "en": "Copying values does not verify authenticity or permission.",
+          "az": "Copying values does not verify authenticity or permission."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Copying protects an in-process mutation boundary; it does not replace authentication or storage transactions. See the lesson’s Sources and further reading for exact sections.",
+      "az": "Copying protects an in-process mutation boundary; it does not replace authentication or storage transactions. See the lesson’s Sources and further reading for exact sections."
+    },
+    "lessonId": "secure-api-coding",
+    "practiceOnly": true,
+    "sourceIds": [
+      "owasp-authorization",
+      "owasp-rest-security",
+      "http-semantics-9110",
+      "pkce-7636",
+      "github-webhook-validation"
+    ]
+  }
+]

@@ -35,8 +35,8 @@ The uploaded books/guides do not verify current assessment question counts, time
 
 The user later supplied BABOK Guide v3 and the official Professional Scrum Competencies page text, then requested English-only visible lessons plus a word/phrase translator with both English and Azerbaijani explanations.
 
-- Current curriculum: 73 topics, 33 complete English lessons, 40 outlines. Nine IIBA lessons use selected BABOK sections; seventeen PSPO lessons use the supplied guides/book and competency text. Existing AZ material remains an archive and `/az` URLs redirect to `/en`.
-- Current bank: 446 original questions. PSPO I and II each contain 100 items; PSPO III has 40 unscored written prompts; ECBA has 64, CCBA and CBAP 60 each, BA/PO 11 each. The 228 newly added questions have source IDs and source locators. Together with the earlier 16 this yields 244 explicitly source-tagged items.
+- At that expansion: 73 topics, 33 complete English lessons, 40 outlines. Nine IIBA lessons use selected BABOK sections; seventeen PSPO lessons use the supplied guides/book and competency text. Existing AZ material remains an archive and `/az` URLs redirect to `/en`.
+- Bank at that expansion: 446 original questions. PSPO I and II each contain 100 items; PSPO III has 40 unscored written prompts; ECBA has 64, CCBA and CBAP 60 each, BA/PO 11 each. The 228 newly added questions have source IDs and source locators. Together with the earlier 16 this yields 244 explicitly source-tagged items.
 - A source-based five-group/28-focus-area study map links related lessons without claiming a verified exam blueprint or complete coaching, mentoring and teaching coverage.
 - The 50-question ECBA mock now meets verified domain quotas. PSPO formats remain unverified, and the CCBA/CBAP banks remain smaller than their verified full exam formats.
 - `data/dictionary.json` holds 91 contextual word/phrase explanations, Azerbaijani meanings and explanations, and bilingual examples. General English fallback uses optional public services and clearly labels machine-translated output.
@@ -46,3 +46,13 @@ See [the research audit](RESEARCH-2026-10-21.md) and [selected BABOK reading rec
 ## Community preparation note follow-up — 2026-10-22
 
 A normal public GitHub search was accessible after the earlier Google/Bing/Reddit denials. The README at [ShoSaito/PSPO-II](https://github.com/ShoSaito/PSPO-II) was read. Its study recommendations include reading primary guides, immediate explanations, category review and revisiting weak areas, which align with the app’s practice/review design. Its unsupported and internally inconsistent assessment numbers were excluded. This is not a first-hand exam-result report and does not support claims about question frequency, pass likelihood or the current official exam format. The source register identifies it explicitly as community preparation notes; no question answer keys or official settings were sourced from it.
+
+## Technical and supplementary PSPO expansion — 2026-10-22
+
+The current catalog has **86 topics: 48 complete English lessons and 38 outlines**. Two existing BA outlines (`rest-apis`, `integration-basics`) became complete lessons, preserving IDs; nine new technical lessons and four PSPO lessons were added. Eleven technical lessons are searchable through a dedicated Subject filter. Three new career modules provide authentication, API engineering and distributed-systems sequences.
+
+The bank now contains **514 original questions**, including **68 new source-tagged items**: 44 technical questions and 24 PSPO items. Track totals are BA 55, PO 11, PSPO I 106, PSPO II 118, PSPO III 40, ECBA 64, CCBA 60 and CBAP 60. There are 312 explicitly source-tagged questions. Existing question IDs, answer keys and saved-attempt encoding were preserved. New supplemental JSON retains the required legacy localized shape; English is the publication text, while new Azerbaijani meanings and explanations are curated in Translate. No complete AZ lesson translations are claimed.
+
+The dictionary has **135** contextual entries, and the glossary has **51** terms. The TypeScript API lab verifies the published PKCE and GitHub HMAC vectors and exercises authorization, validation, duplicate-operation and stale-update invariants. It does not provide production authentication or multi-instance transaction guarantees.
+
+Twenty-two primary/supplementary online sources were added to the register with edition/section notes. Scrum.org requests still returned HTTP 202 with no text; a Nexus PDF request returned 403 and is not used. No current PSPO assessment format, exam questions or candidate-review consensus was inferred from inaccessible pages. See [the selected-source reading audit](RESEARCH-2026-10-22.md).

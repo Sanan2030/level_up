@@ -466,5 +466,149 @@
       "en": "An educational indicator based on tracked practice or self-assessment, not a guarantee of exam success or eligibility."
     },
     "relatedLessonId": "product-goal"
+  },
+  {
+    "id": "access-token",
+    "term": {
+      "en": "Access token",
+      "az": "Resursa giriş tokeni"
+    },
+    "definition": {
+      "en": "A credential presented to an intended resource server under defined authorization, audience and validity constraints.",
+      "az": "API-yə giriş üçün istifadə edilir. Tokenin olması bütün istifadəçilərin bütün məlumatlarına icazə vermir."
+    },
+    "relatedLessonId": "access-refresh-tokens"
+  },
+  {
+    "id": "refresh-token",
+    "term": {
+      "en": "Refresh token",
+      "az": "Giriş tokenini yeniləmə etimadnaməsi"
+    },
+    "definition": {
+      "en": "A credential submitted to an authorization server to obtain new access tokens within an existing grant.",
+      "az": "Access token bitəndə yenisini almaq üçün avtorizasiya serverinə göndərilir; adi sifariş API-sinə göndərilmir."
+    },
+    "relatedLessonId": "access-refresh-tokens"
+  },
+  {
+    "id": "jwt",
+    "term": {
+      "en": "JWT",
+      "az": "JSON formatlı token standartı"
+    },
+    "definition": {
+      "en": "A format for representing claims with supported cryptographic protection; a common signed form has three encoded parts.",
+      "az": "JWT bir formatdır. Payload-u oxumaq imzanı və icazəni yoxlamaq demək deyil; imzalanmış JWT adətən şifrələnmiş olmur."
+    },
+    "relatedLessonId": "jwt-validation-authorization"
+  },
+  {
+    "id": "jwks",
+    "term": {
+      "en": "JWKS",
+      "az": "JSON açar dəsti"
+    },
+    "definition": {
+      "en": "A structured set of cryptographic keys, often published by a trusted issuer for token verification.",
+      "az": "Etibarlı issuer token imzalarını yoxlamaq üçün açarlarını dərc edə bilər. Tokenin özündəki istənilən URL avtomatik etibarlı sayılmır."
+    },
+    "relatedLessonId": "jwt-validation-authorization"
+  },
+  {
+    "id": "pkce",
+    "term": {
+      "en": "PKCE",
+      "az": "Authorization code mübadiləsinin əlavə qorunması"
+    },
+    "definition": {
+      "en": "An OAuth mechanism binding authorization code redemption to a transaction-specific verifier retained by the client.",
+      "az": "Proqram əvvəlcə təsadüfi verifier yaradır, onun challenge dəyərini göndərir, kodu dəyişəndə isə verifier-i təqdim edir."
+    },
+    "relatedLessonId": "oauth-pkce-oidc"
+  },
+  {
+    "id": "bff",
+    "term": {
+      "en": "BFF",
+      "az": "İnterfeysə uyğun arxa xidmət"
+    },
+    "definition": {
+      "en": "A backend tailored to a client experience; some designs keep OAuth credentials there and give the browser a session cookie.",
+      "az": "Veb və ya mobil interfeysin ehtiyaclarına uyğun backend-dir. Tokenləri serverdə saxlamaq variantlardan biridir, bütün BFF-lər üçün məcburi qayda deyil."
+    },
+    "relatedLessonId": "browser-bff-csrf-cors"
+  },
+  {
+    "id": "csrf",
+    "term": {
+      "en": "CSRF",
+      "az": "Saytlararası saxta sorğu"
+    },
+    "definition": {
+      "en": "An attack causing a browser to send an unwanted authenticated request using credentials it attaches automatically.",
+      "az": "Brauzerin cookie-ni avtomatik göndərməsindən istifadə edib istifadəçinin istəmədiyi əməliyyatı etdirmək cəhdidir."
+    },
+    "relatedLessonId": "browser-bff-csrf-cors"
+  },
+  {
+    "id": "outbox",
+    "term": {
+      "en": "Transactional outbox",
+      "az": "Tranzaksiyalı çıxış hadisələri jurnalı"
+    },
+    "definition": {
+      "en": "A pattern that commits business data and an outgoing event together before a separate publisher sends the event.",
+      "az": "Biznes məlumatı və göndəriləcək hadisə eyni lokal tranzaksiyada saxlanır; ayrıca worker hadisəni göndərir. Təkrar göndəriş yenə mümkündür."
+    },
+    "relatedLessonId": "integration-basics"
+  },
+  {
+    "id": "saga",
+    "term": {
+      "en": "Saga",
+      "az": "Paylanmış lokal tranzaksiyalar axını"
+    },
+    "definition": {
+      "en": "A workflow coordinating local transactions across services with compensations and recovery rather than one global rollback.",
+      "az": "Hər xidmət lokal commit edir. Sonrakı xəta üçün kompensasiya və bərpa əməliyyatları planlaşdırılır; bunlar da uğursuz ola bilər."
+    },
+    "relatedLessonId": "architecture-boundaries-sagas"
+  },
+  {
+    "id": "optimistic-locking",
+    "term": {
+      "en": "Optimistic locking",
+      "az": "Versiya müqayisəsi ilə paralel yeniləmə nəzarəti"
+    },
+    "definition": {
+      "en": "A concurrency approach that applies a change only if the state still matches the version previously observed.",
+      "az": "Yeniləmədən əvvəl oxunmuş versiya hələ dəyişməyibsə əməliyyat edilir; dəyişibsə konflikt həll olunmalıdır."
+    },
+    "relatedLessonId": "api-idempotency-concurrency"
+  },
+  {
+    "id": "feature-flag",
+    "term": {
+      "en": "Feature flag",
+      "az": "Funksiyanın işləməsini idarə edən bayraq"
+    },
+    "definition": {
+      "en": "A mechanism that selects whether or how a capability is exposed or executed under an explicit configuration.",
+      "az": "Funksiyanı müəyyən istifadəçilərə açmaq və ya söndürmək üçün işlədilir. Gizlədilmiş yarımçıq iş avtomatik Done olmur."
+    },
+    "relatedLessonId": "pspo2-release-feature-flags"
+  },
+  {
+    "id": "cursor-pagination",
+    "term": {
+      "en": "Cursor pagination",
+      "az": "İstinad nöqtəsi ilə səhifələmə"
+    },
+    "definition": {
+      "en": "A pagination approach that continues a result traversal using a cursor under a defined ordering and consistency policy.",
+      "az": "Nəticələrin davamını cursor ilə alır. Cursor təkbaşına snapshot sabitliyi və ya giriş icazəsi vermir."
+    },
+    "relatedLessonId": "api-contracts-evolution"
   }
 ]

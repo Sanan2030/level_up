@@ -166,5 +166,269 @@
       "en": "Read the public README: it recommends primary guides, immediate answer explanations, category-level review and revisiting weak areas. It is a preparation note, not a first-hand exam-result report or official blueprint. Its assessment numbers are unverified and internally inconsistent; they are not used as exam facts.",
       "az": "İctimai README oxunub: əsas bələdçilər, dərhal izah, mövzu üzrə nəticə və zəif sahələrin təkrarı tövsiyə edilir. Bu, hazırlıq qeydidir, şəxsi imtahan nəticəsi hesabatı və ya rəsmi plan deyil. İmtahan rəqəmləri yoxlanmayıb və bir-biri ilə uyğun gəlmir; rəsmi fakt kimi istifadə edilmir."
     }
+  },
+  {
+    "id": "http-semantics-9110",
+    "title": "IETF RFC 9110 — HTTP Semantics",
+    "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Sections 9.2.1–9.2.2, 9.3, 13.1.1 and 15: method semantics, idempotence, conditional requests and status codes.",
+      "az": "Sections 9.2.1–9.2.2, 9.3, 13.1.1 and 15: method semantics, idempotence, conditional requests and status codes."
+    }
+  },
+  {
+    "id": "oauth-6749",
+    "title": "IETF RFC 6749 — The OAuth 2.0 Authorization Framework",
+    "url": "https://www.rfc-editor.org/rfc/rfc6749.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Sections 1.4–1.5 and 6: access tokens, refresh tokens and refreshing an access token. Security advice is updated by RFC 9700.",
+      "az": "Sections 1.4–1.5 and 6: access tokens, refresh tokens and refreshing an access token. Security advice is updated by RFC 9700."
+    }
+  },
+  {
+    "id": "oauth-security-9700",
+    "title": "IETF RFC 9700 — Best Current Practice for OAuth 2.0 Security",
+    "url": "https://www.rfc-editor.org/rfc/rfc9700.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Sections 2.1–2.4, 4.10 and 4.14 read: PKCE, audience restrictions and refresh-token replay detection. January 2025 BCP; do not substitute informal OAuth 2.1 claims.",
+      "az": "Sections 2.1–2.4, 4.10 and 4.14 read: PKCE, audience restrictions and refresh-token replay detection. January 2025 BCP; do not substitute informal OAuth 2.1 claims."
+    }
+  },
+  {
+    "id": "pkce-7636",
+    "title": "IETF RFC 7636 — Proof Key for Code Exchange",
+    "url": "https://www.rfc-editor.org/rfc/rfc7636.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Section 4 and Appendix B: transaction-specific verifier, S256 challenge and token-endpoint verification.",
+      "az": "Section 4 and Appendix B: transaction-specific verifier, S256 challenge and token-endpoint verification."
+    }
+  },
+  {
+    "id": "jwt-security-8725",
+    "title": "IETF RFC 8725 — JSON Web Token Best Current Practices",
+    "url": "https://www.rfc-editor.org/rfc/rfc8725.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Sections 3.1–3.2 and 3.8–3.12: algorithm allowlists, issuer/audience validation, key lookup and token confusion.",
+      "az": "Sections 3.1–3.2 and 3.8–3.12: algorithm allowlists, issuer/audience validation, key lookup and token confusion."
+    }
+  },
+  {
+    "id": "http-problems-9457",
+    "title": "IETF RFC 9457 — Problem Details for HTTP APIs",
+    "url": "https://www.rfc-editor.org/rfc/rfc9457.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Sections 3, 3.1 and 5: application/problem+json, stable problem types and avoiding sensitive implementation detail.",
+      "az": "Sections 3, 3.1 and 5: application/problem+json, stable problem types and avoiding sensitive implementation detail."
+    }
+  },
+  {
+    "id": "oidc-core-10",
+    "title": "OpenID Foundation — OpenID Connect Core 1.0",
+    "url": "https://openid.net/specs/openid-connect-core-1_0.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Authorization Code Flow and ID Token validation sections read. ID Tokens authenticate to the client; they are not interchangeable with API access tokens.",
+      "az": "Authorization Code Flow and ID Token validation sections read. ID Tokens authenticate to the client; they are not interchangeable with API access tokens."
+    }
+  },
+  {
+    "id": "owasp-rest-security",
+    "title": "OWASP — REST Security Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Official OWASP GitHub Markdown read: HTTPS, JWT validation, endpoint authorization, input validation, CORS and safe errors.",
+      "az": "Official OWASP GitHub Markdown read: HTTPS, JWT validation, endpoint authorization, input validation, CORS and safe errors."
+    }
+  },
+  {
+    "id": "owasp-oauth-security",
+    "title": "OWASP — OAuth 2.0 Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/OAuth2_Cheat_Sheet.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Official OWASP GitHub Markdown read: terminology, PKCE, token replay and privilege restriction. RFC 9700 supplies exact normative wording.",
+      "az": "Official OWASP GitHub Markdown read: terminology, PKCE, token replay and privilege restriction. RFC 9700 supplies exact normative wording."
+    }
+  },
+  {
+    "id": "owasp-csrf-prevention",
+    "title": "OWASP — Cross-Site Request Forgery Prevention Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Selected official GitHub sections read: synchronizer tokens, custom headers/CORS, SameSite limitations and defense in depth.",
+      "az": "Selected official GitHub sections read: synchronizer tokens, custom headers/CORS, SameSite limitations and defense in depth."
+    }
+  },
+  {
+    "id": "owasp-authorization",
+    "title": "OWASP — Authorization Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Selected official GitHub sections read: least privilege, deny by default, object-level access checks, server enforcement and safe failure.",
+      "az": "Selected official GitHub sections read: least privilege, deny by default, object-level access checks, server enforcement and safe failure."
+    }
+  },
+  {
+    "id": "openapi-311",
+    "title": "OpenAPI Initiative — OpenAPI Specification 3.1.1",
+    "url": "https://spec.openapis.org/oas/v3.1.1.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Versioned official GitHub specification read selectively: Schema, Security Scheme and Security Requirement objects. This is the 3.1.1 edition, not a claim about the latest release.",
+      "az": "Versioned official GitHub specification read selectively: Schema, Security Scheme and Security Requirement objects. This is the 3.1.1 edition, not a claim about the latest release."
+    }
+  },
+  {
+    "id": "azure-microservices-patterns",
+    "title": "Microsoft Azure Architecture Center — Design patterns for microservices",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/microservices/design/patterns",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Official MicrosoftDocs source read: service boundaries, BFF, bulkheads, CQRS, sagas and incremental migration. These are engineering patterns, not Scrum requirements.",
+      "az": "Official MicrosoftDocs source read: service boundaries, BFF, bulkheads, CQRS, sagas and incremental migration. These are engineering patterns, not Scrum requirements."
+    }
+  },
+  {
+    "id": "azure-transactional-outbox",
+    "title": "Microsoft Azure Architecture Center — Transactional Outbox pattern",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/databases/guide/transactional-out-box-cosmos",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Problem, transactional write boundary and publisher/consumer behavior read. Cosmos DB example requires the same logical partition; the lesson distinguishes relational transactions.",
+      "az": "Problem, transactional write boundary and publisher/consumer behavior read. Cosmos DB example requires the same logical partition; the lesson distinguishes relational transactions."
+    }
+  },
+  {
+    "id": "azure-saga-pattern",
+    "title": "Microsoft Azure Architecture Center — Saga distributed transactions pattern",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/saga",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Official saga-content.md read: local transactions, compensations, choreography/orchestration, concurrency anomalies and limitations.",
+      "az": "Official saga-content.md read: local transactions, compensations, choreography/orchestration, concurrency anomalies and limitations."
+    }
+  },
+  {
+    "id": "azure-retry-pattern",
+    "title": "Microsoft Azure Architecture Center — Retry pattern",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/retry",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Official retry-content.md read: transient faults, retry delays, idempotency, nested retry amplification and time budgets.",
+      "az": "Official retry-content.md read: transient faults, retry delays, idempotency, nested retry amplification and time budgets."
+    }
+  },
+  {
+    "id": "azure-circuit-breaker",
+    "title": "Microsoft Azure Architecture Center — Circuit Breaker pattern",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Official source read selectively: closed/open/half-open states, fast failure and limited recovery probes.",
+      "az": "Official source read selectively: closed/open/half-open states, fast failure and limited recovery probes."
+    }
+  },
+  {
+    "id": "github-webhook-validation",
+    "title": "GitHub Docs — Validating webhook deliveries",
+    "url": "https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Signature-validation instructions read: HMAC-SHA256 over original payload bytes, protected shared secret and timing-safe comparison. GitHub-specific headers are not universal webhook standards.",
+      "az": "Signature-validation instructions read: HMAC-SHA256 over original payload bytes, protected shared secret and timing-safe comparison. GitHub-specific headers are not universal webhook standards."
+    }
+  },
+  {
+    "id": "agile-manifesto-principles",
+    "title": "Agile Manifesto — Principles behind the Agile Manifesto",
+    "url": "https://agilemanifesto.org/principles.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "The twelve original principles read online. They complement Scrum without overriding the November 2020 Scrum Guide.",
+      "az": "The twelve original principles read online. They complement Scrum without overriding the November 2020 Scrum Guide."
+    }
+  },
+  {
+    "id": "govuk-performance-metrics",
+    "title": "GOV.UK Service Manual — How to set performance metrics for your service",
+    "url": "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Purpose, benefits, hypotheses, data quality, segmentation and baseline sections read. Government service-design guidance provides supplementary examples, not an official PSPO syllabus.",
+      "az": "Purpose, benefits, hypotheses, data quality, segmentation and baseline sections read. Government service-design guidance provides supplementary examples, not an official PSPO syllabus."
+    }
+  },
+  {
+    "id": "govuk-service-success",
+    "title": "GOV.UK Service Manual — Measuring the success of your service",
+    "url": "https://www.gov.uk/service-manual/measuring-success/measuring-the-success-of-your-service",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Service measurement guidance read online. Used as supplementary product-outcome material, not Scrum rules or an official PSPO blueprint.",
+      "az": "Service measurement guidance read online. Used as supplementary product-outcome material, not Scrum rules or an official PSPO blueprint."
+    }
+  },
+  {
+    "id": "fowler-feature-toggles",
+    "title": "Pete Hodgson on MartinFowler.com — Feature Toggles",
+    "url": "https://martinfowler.com/articles/feature-toggles.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-22",
+    "notes": {
+      "en": "Release, Experiment, Ops and Permissioning Toggles and carrying-cost sections read. Expert engineering article; not an official Scrum.org publication. Flagged unfinished work does not become a Done Increment.",
+      "az": "Release, Experiment, Ops and Permissioning Toggles and carrying-cost sections read. Expert engineering article; not an official Scrum.org publication. Flagged unfinished work does not become a Done Increment."
+    }
   }
 ]

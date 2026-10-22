@@ -54,6 +54,8 @@ export default async function LessonPage({
     source: body,
     options: { blockJS: false, blockDangerousJS: true, mdxOptions: { remarkPlugins: [remarkGfm] } },
     components: {
+      pre: (props: ComponentProps<'pre'>) => <pre {...props} tabIndex={0} />,
+      table: (props: ComponentProps<'table'>) => <table {...props} tabIndex={0} />,
       h2: (props: ComponentProps<'h2'>) => (
         <h2 {...props} id={sections.find((s) => s.title === props.children)?.id} />
       ),

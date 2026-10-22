@@ -26,7 +26,7 @@
         "id": "events",
         "title": "Events",
         "description": "Explain the inspection and adaptation purpose of each event instead of memorizing meeting names.",
-        "lessonIds": ["pspo1-events"]
+        "lessonIds": ["pspo1-events", "pspo1-sprint-goal-changes"]
       },
       {
         "id": "artifacts",
@@ -38,13 +38,13 @@
         "id": "done",
         "title": "Done",
         "description": "Keep a shared quality boundary and distinguish it from item-specific acceptance criteria.",
-        "lessonIds": ["pspo1-artifacts", "pspo2-shared-quality"]
+        "lessonIds": ["pspo1-artifacts", "pspo2-shared-quality", "pspo2-release-feature-flags"]
       },
       {
         "id": "scaling",
         "title": "Scaling",
         "description": "Reason from one product, shared direction and an integrated usable Increment.",
-        "lessonIds": ["pspo2-shared-quality", "pspo3-complexity"]
+        "lessonIds": ["pspo2-shared-quality", "pspo3-complexity", "pspo2-platform-value"]
       }
     ]
   },
@@ -100,7 +100,7 @@
         "id": "forecasting-release",
         "title": "Forecasting & Release Planning",
         "description": "Communicate what historical evidence supports and where a forecast remains uncertain.",
-        "lessonIds": ["pspo2-forecasting"]
+        "lessonIds": ["pspo2-forecasting", "pspo2-release-feature-flags"]
       },
       {
         "id": "product-vision",
@@ -112,7 +112,12 @@
         "id": "product-value",
         "title": "Product Value",
         "description": "Distinguish outputs from outcomes and inspect current and unrealized value.",
-        "lessonIds": ["pspo1-product-value", "pspo2-value"]
+        "lessonIds": [
+          "pspo1-product-value",
+          "pspo2-value",
+          "pspo2-outcome-experiments",
+          "pspo2-platform-value"
+        ]
       },
       {
         "id": "product-backlog",
@@ -124,13 +129,13 @@
         "id": "business-strategy",
         "title": "Business Strategy",
         "description": "Use goals and experiments to guide investment under uncertainty.",
-        "lessonIds": ["pspo2-strategy", "pspo2-organization"]
+        "lessonIds": ["pspo2-strategy", "pspo2-organization", "pspo2-outcome-experiments"]
       },
       {
         "id": "stakeholders-customers",
         "title": "Stakeholders & Customers",
         "description": "Distinguish stakeholder feedback from evidence of actual customer outcomes.",
-        "lessonIds": ["pspo2-facilitation", "pspo2-discovery"]
+        "lessonIds": ["pspo2-facilitation", "pspo2-discovery", "pspo2-platform-value"]
       }
     ]
   },
@@ -149,7 +154,7 @@
         "id": "technical-risk",
         "title": "Managing Technical Risk",
         "description": "Expose integration, maintenance and quality risks when comparing investment choices.",
-        "lessonIds": ["pspo2-shared-quality"]
+        "lessonIds": ["pspo2-shared-quality", "pspo2-platform-value"]
       },
       {
         "id": "continuous-quality",
@@ -167,7 +172,7 @@
         "id": "continuous-delivery",
         "title": "Continuous Delivery",
         "description": "Remove artificial release gates while respecting quality and operational constraints.",
-        "lessonIds": ["pspo2-forecasting", "pspo2-shared-quality"]
+        "lessonIds": ["pspo2-forecasting", "pspo2-shared-quality", "pspo2-release-feature-flags"]
       },
       {
         "id": "optimizing-flow",
@@ -198,7 +203,12 @@
         "id": "evidence-based-management",
         "title": "Evidence-Based Management",
         "description": "Relate goals, hypotheses and experiments to CV, UV, T2M and A2I.",
-        "lessonIds": ["pspo2-value", "pspo2-strategy", "pspo3-reflection"]
+        "lessonIds": [
+          "pspo2-value",
+          "pspo2-strategy",
+          "pspo3-reflection",
+          "pspo2-outcome-experiments"
+        ]
       }
     ]
   }

@@ -311,17 +311,28 @@
     "level": "mid",
     "moduleId": "ba-technical",
     "title": {
-      "az": "REST, JSON, XML və API müqavilələri",
-      "en": "REST, JSON, XML and API contracts"
+      "en": "HTTP APIs, resource contracts and failure semantics",
+      "az": "HTTP API-ləri, resurs müqavilələri və xəta semantikası"
     },
     "summary": {
-      "az": "Postman üslubunda nümunələrlə metod, status kodu, məlumat paketi və OpenAPI spesifikasiyasını oxu.",
-      "en": "Read methods, status codes, payloads and OpenAPI specifications using Postman-style examples."
+      "en": "Design resource operations, distinguish safe and idempotent requests, and specify observable success and failure behavior.",
+      "az": "Design resource operations, distinguish safe and idempotent requests, and specify observable success and failure behavior."
     },
-    "minutes": 35,
-    "status": "planned",
-    "topics": ["REST, JSON, XML and API contracts", "BA", "mid"],
-    "prerequisites": []
+    "minutes": 60,
+    "status": "published",
+    "topics": [
+      "HTTP",
+      "REST",
+      "API",
+      "JSON",
+      "XML",
+      "status codes",
+      "ETag",
+      "If-Match",
+      "software-development"
+    ],
+    "prerequisites": [],
+    "sourceIds": ["http-semantics-9110", "http-problems-9457", "openapi-311"]
   },
   {
     "id": "integration-basics",
@@ -329,17 +340,26 @@
     "level": "mid",
     "moduleId": "ba-technical",
     "title": {
-      "az": "İnteqrasiya və asinxron sərhədlər",
-      "en": "Integration and asynchronous boundaries"
+      "en": "Asynchronous integration, webhooks and transactional outbox",
+      "az": "Asinxron inteqrasiya, webhook və transactional outbox"
     },
     "summary": {
-      "az": "Təkrar cəhd, dublikat və idempotentlik daxil olmaqla sinxron çağırışları və hadisələri müqayisə et.",
-      "en": "Compare synchronous calls and events, including retries, duplicates and idempotency."
+      "en": "Reason through lost events, duplicate deliveries, webhook verification and the boundary between acceptance and business completion.",
+      "az": "Reason through lost events, duplicate deliveries, webhook verification and the boundary between acceptance and business completion."
     },
-    "minutes": 35,
-    "status": "planned",
-    "topics": ["Integration and asynchronous boundaries", "BA", "mid"],
-    "prerequisites": []
+    "minutes": 70,
+    "status": "published",
+    "topics": [
+      "integration",
+      "webhook",
+      "outbox",
+      "at-least-once delivery",
+      "event-driven architecture",
+      "HMAC",
+      "software-development"
+    ],
+    "prerequisites": ["rest-apis"],
+    "sourceIds": ["azure-transactional-outbox", "github-webhook-validation", "http-semantics-9110"]
   },
   {
     "id": "uat",
@@ -1346,5 +1366,401 @@
     "sourceIds": ["professional-po-2018", "ebm-2024", "scrum-2020", "scrum-competencies-2026"],
     "topics": ["Portfolio, organization and product autonomy", "PSPO II"],
     "prerequisites": []
+  },
+  {
+    "id": "access-refresh-tokens",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-authentication",
+    "title": {
+      "en": "Access tokens, refresh tokens and rotation races",
+      "az": "Access token, refresh token və rotasiya yarışları"
+    },
+    "summary": {
+      "en": "Trace token lifecycles, detect refresh-token reuse and distinguish session logout from immediate access-token revocation.",
+      "az": "Trace token lifecycles, detect refresh-token reuse and distinguish session logout from immediate access-token revocation."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": [
+      "access token",
+      "refresh token",
+      "token rotation",
+      "token family",
+      "OAuth",
+      "replay",
+      "single-flight",
+      "software-development"
+    ],
+    "prerequisites": ["rest-apis"],
+    "sourceIds": ["oauth-6749", "oauth-security-9700", "owasp-oauth-security"]
+  },
+  {
+    "id": "oauth-pkce-oidc",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-authentication",
+    "title": {
+      "en": "OAuth authorization code, PKCE and OpenID Connect",
+      "az": "OAuth authorization code, PKCE və OpenID Connect"
+    },
+    "summary": {
+      "en": "Build and inspect a code flow, distinguish authorization from identity, and prevent redirect, replay and token-confusion mistakes.",
+      "az": "Build and inspect a code flow, distinguish authorization from identity, and prevent redirect, replay and token-confusion mistakes."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": [
+      "OAuth 2.0",
+      "PKCE",
+      "S256",
+      "OpenID Connect",
+      "OIDC",
+      "state",
+      "nonce",
+      "authorization code",
+      "software-development"
+    ],
+    "prerequisites": ["access-refresh-tokens"],
+    "sourceIds": ["oauth-security-9700", "pkce-7636", "oidc-core-10"]
+  },
+  {
+    "id": "jwt-validation-authorization",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-authentication",
+    "title": {
+      "en": "JWT validation, JWKS rotation and object authorization",
+      "az": "JWT yoxlanması, JWKS rotasiyası və obyekt icazələri"
+    },
+    "summary": {
+      "en": "Separate decoding from verification, bind keys to a trusted issuer, and enforce tenant and object permissions after validating a token.",
+      "az": "Separate decoding from verification, bind keys to a trusted issuer, and enforce tenant and object permissions after validating a token."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": [
+      "JWT",
+      "JWKS",
+      "issuer",
+      "audience",
+      "scope",
+      "RBAC",
+      "ABAC",
+      "BOLA",
+      "authorization",
+      "software-development"
+    ],
+    "prerequisites": ["access-refresh-tokens"],
+    "sourceIds": [
+      "jwt-security-8725",
+      "oauth-security-9700",
+      "owasp-authorization",
+      "owasp-rest-security"
+    ]
+  },
+  {
+    "id": "browser-bff-csrf-cors",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-authentication",
+    "title": {
+      "en": "Browser sessions, BFF, cookies, CORS and CSRF",
+      "az": "Brauzer sessiyası, BFF, cookie, CORS və CSRF"
+    },
+    "summary": {
+      "en": "Choose a browser authentication boundary and reason precisely about cookie protection, cross-origin requests and forged state changes.",
+      "az": "Choose a browser authentication boundary and reason precisely about cookie protection, cross-origin requests and forged state changes."
+    },
+    "minutes": 70,
+    "status": "published",
+    "topics": [
+      "BFF",
+      "cookie",
+      "HttpOnly",
+      "SameSite",
+      "CORS",
+      "CSRF",
+      "XSS",
+      "browser security",
+      "software-development"
+    ],
+    "prerequisites": ["oauth-pkce-oidc", "jwt-validation-authorization"],
+    "sourceIds": ["owasp-csrf-prevention", "owasp-rest-security", "azure-microservices-patterns"]
+  },
+  {
+    "id": "api-idempotency-concurrency",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-api-engineering",
+    "title": {
+      "en": "Idempotency keys, concurrent requests and optimistic locking",
+      "az": "Idempotency key, paralel sorğular və optimistik kilidləmə"
+    },
+    "summary": {
+      "en": "Prevent duplicate operations and stale writes with scoped deduplication, atomic transactions and conditional updates.",
+      "az": "Prevent duplicate operations and stale writes with scoped deduplication, atomic transactions and conditional updates."
+    },
+    "minutes": 80,
+    "status": "published",
+    "topics": [
+      "idempotency key",
+      "concurrency",
+      "optimistic locking",
+      "ETag",
+      "If-Match",
+      "transaction",
+      "race condition",
+      "software-development"
+    ],
+    "prerequisites": ["rest-apis", "jwt-validation-authorization"],
+    "sourceIds": ["http-semantics-9110", "azure-retry-pattern", "azure-transactional-outbox"]
+  },
+  {
+    "id": "api-contracts-evolution",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-api-engineering",
+    "title": {
+      "en": "OpenAPI contracts, pagination and compatible API evolution",
+      "az": "OpenAPI müqavilələri, səhifələmə və uyğun API dəyişiklikləri"
+    },
+    "summary": {
+      "en": "Review schemas and security requirements, design stable pagination, and assess changes from the perspective of real API consumers.",
+      "az": "Review schemas and security requirements, design stable pagination, and assess changes from the perspective of real API consumers."
+    },
+    "minutes": 70,
+    "status": "published",
+    "topics": [
+      "OpenAPI",
+      "JSON Schema",
+      "API versioning",
+      "cursor pagination",
+      "backward compatibility",
+      "problem details",
+      "software-development"
+    ],
+    "prerequisites": ["rest-apis"],
+    "sourceIds": ["openapi-311", "http-problems-9457", "http-semantics-9110"]
+  },
+  {
+    "id": "architecture-boundaries-sagas",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-distributed-systems",
+    "title": {
+      "en": "Architecture boundaries, modular monoliths and sagas",
+      "az": "Arxitektura sərhədləri, modul monolit və saga"
+    },
+    "summary": {
+      "en": "Choose service boundaries from consistency and ownership needs, and reason about distributed workflows without pretending compensation is rollback.",
+      "az": "Choose service boundaries from consistency and ownership needs, and reason about distributed workflows without pretending compensation is rollback."
+    },
+    "minutes": 85,
+    "status": "published",
+    "topics": [
+      "software architecture",
+      "modular monolith",
+      "microservices",
+      "bounded context",
+      "saga",
+      "CQRS",
+      "eventual consistency",
+      "distributed transaction",
+      "software-development"
+    ],
+    "prerequisites": ["integration-basics", "api-idempotency-concurrency"],
+    "sourceIds": [
+      "azure-microservices-patterns",
+      "azure-saga-pattern",
+      "azure-transactional-outbox"
+    ]
+  },
+  {
+    "id": "api-resilience-observability",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-distributed-systems",
+    "title": {
+      "en": "API timeouts, retries, circuit breakers and observability",
+      "az": "API timeout, retry, circuit breaker və müşahidəolunma"
+    },
+    "summary": {
+      "en": "Design bounded failure recovery, avoid retry storms and use latency, error and business-state evidence to diagnose distributed APIs.",
+      "az": "Design bounded failure recovery, avoid retry storms and use latency, error and business-state evidence to diagnose distributed APIs."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": [
+      "timeout",
+      "retry",
+      "exponential backoff",
+      "jitter",
+      "circuit breaker",
+      "observability",
+      "SLO",
+      "trace",
+      "bulkhead",
+      "software-development"
+    ],
+    "prerequisites": ["integration-basics", "api-idempotency-concurrency"],
+    "sourceIds": [
+      "azure-retry-pattern",
+      "azure-circuit-breaker",
+      "azure-microservices-patterns",
+      "http-semantics-9110"
+    ]
+  },
+  {
+    "id": "secure-api-coding",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-api-engineering",
+    "title": {
+      "en": "TypeScript API coding lab: validation, authorization and safe updates",
+      "az": "TypeScript API laboratoriyası: validasiya, icazə və təhlükəsiz yeniləmə"
+    },
+    "summary": {
+      "en": "Run a tested coding lab that rejects mass assignment and cross-tenant access, deduplicates creation and rejects stale updates.",
+      "az": "Run a tested coding lab that rejects mass assignment and cross-tenant access, deduplicates creation and rejects stale updates."
+    },
+    "minutes": 90,
+    "status": "published",
+    "topics": [
+      "TypeScript",
+      "coding",
+      "Zod",
+      "API implementation",
+      "mass assignment",
+      "unit tests",
+      "secure coding",
+      "software-development"
+    ],
+    "prerequisites": [
+      "jwt-validation-authorization",
+      "api-idempotency-concurrency",
+      "api-contracts-evolution"
+    ],
+    "sourceIds": [
+      "owasp-authorization",
+      "owasp-rest-security",
+      "http-semantics-9110",
+      "pkce-7636",
+      "github-webhook-validation"
+    ]
+  },
+  {
+    "id": "pspo1-sprint-goal-changes",
+    "trackId": "pspo1",
+    "level": "junior",
+    "moduleId": "pspo1-preparation",
+    "title": {
+      "en": "Sprint Goal, mid-Sprint changes and release decisions",
+      "az": "Sprint Goal, Sprint daxilində dəyişiklik və buraxılış qərarları"
+    },
+    "summary": {
+      "en": "Reason through urgent changes, obsolete goals, scope negotiation and usable Increments without inventing approval gates.",
+      "az": "Reason through urgent changes, obsolete goals, scope negotiation and usable Increments without inventing approval gates."
+    },
+    "minutes": 60,
+    "status": "published",
+    "topics": [
+      "PSPO I",
+      "Sprint Goal",
+      "Sprint cancellation",
+      "scope negotiation",
+      "Increment",
+      "release"
+    ],
+    "prerequisites": ["pspo1-events", "pspo1-artifacts"],
+    "sourceIds": ["scrum-2020", "agile-manifesto-principles", "professional-po-2018"]
+  },
+  {
+    "id": "pspo2-outcome-experiments",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "en": "Product experiments, segmented metrics and misleading averages",
+      "az": "Məhsul eksperimentləri, seqment metrikləri və yanıltıcı ortalamalar"
+    },
+    "summary": {
+      "en": "Turn a product decision into a falsifiable hypothesis, inspect segment-level outcomes and avoid claiming causation from weak comparisons.",
+      "az": "Turn a product decision into a falsifiable hypothesis, inspect segment-level outcomes and avoid claiming causation from weak comparisons."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": [
+      "PSPO II",
+      "Evidence-Based Management",
+      "hypothesis",
+      "experiment",
+      "segmentation",
+      "baseline",
+      "guardrail",
+      "Simpson paradox"
+    ],
+    "prerequisites": ["pspo2-discovery", "pspo2-value"],
+    "sourceIds": ["ebm-2024", "govuk-performance-metrics", "govuk-service-success", "scrum-2020"]
+  },
+  {
+    "id": "pspo2-release-feature-flags",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "en": "Release decisions, feature flags and the Definition of Done",
+      "az": "Buraxılış qərarları, feature flag və Definition of Done"
+    },
+    "summary": {
+      "en": "Separate deployment, exposure and customer outcomes while making quality, flag debt and rollback evidence visible.",
+      "az": "Separate deployment, exposure and customer outcomes while making quality, flag debt and rollback evidence visible."
+    },
+    "minutes": 70,
+    "status": "published",
+    "topics": [
+      "PSPO II",
+      "feature flag",
+      "release",
+      "deployment",
+      "continuous delivery",
+      "Definition of Done",
+      "canary",
+      "experiment"
+    ],
+    "prerequisites": ["pspo2-shared-quality", "pspo2-forecasting", "pspo2-outcome-experiments"],
+    "sourceIds": ["scrum-2020", "ebm-2024", "fowler-feature-toggles"]
+  },
+  {
+    "id": "pspo2-platform-value",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "en": "Product ownership for API platforms and technical investments",
+      "az": "API platformalarında Product Ownership və texniki investisiyalar"
+    },
+    "summary": {
+      "en": "Connect internal-platform work to user outcomes, product boundaries and transparent technical-risk trade-offs without prescribing implementation.",
+      "az": "Connect internal-platform work to user outcomes, product boundaries and transparent technical-risk trade-offs without prescribing implementation."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": [
+      "PSPO II",
+      "platform product",
+      "API product",
+      "technical investment",
+      "product boundary",
+      "developer experience",
+      "product value"
+    ],
+    "prerequisites": ["pspo2-value", "pspo2-shared-quality", "pspo2-organization"],
+    "sourceIds": [
+      "scrum-2020",
+      "ebm-2024",
+      "govuk-performance-metrics",
+      "azure-microservices-patterns"
+    ]
   }
 ]

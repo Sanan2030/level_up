@@ -16,7 +16,7 @@ export default async function SourcesPage({ params }: { params: Promise<{ locale
         <p className="muted">
           {az
             ? 'PSPO dərsləri göndərilən kitab və üç bələdçi əsasında öz sözlərimizlə hazırlanıb. Hər dərsdə bölmə, hər yeni sualın izahında mənbə göstərilir.'
-            : 'Lessons use original explanations based on the supplied BABOK and product ownership books, official guides and competency text. Lessons identify source sections; new question explanations cite their supporting sources.'}
+            : 'Lessons cite supplied books, official guides, technical standards and supplementary product resources. The register identifies editions and sections reviewed. Question explanations cite supporting sources.'}
         </p>
       </header>
       <div className="notice">

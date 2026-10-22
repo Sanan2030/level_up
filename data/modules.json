@@ -82,7 +82,7 @@
       "en": "Reason about data, APIs and integration failures."
     },
     "lessonIds": ["data-modeling", "sql-basics", "rest-apis", "integration-basics", "uat"],
-    "estimatedMinutes": 175,
+    "estimatedMinutes": 235,
     "prerequisites": []
   },
   {
@@ -269,9 +269,10 @@
       "pspo1-artifacts",
       "pspo1-product-value",
       "pspo1-empiricism",
-      "pspo1-refinement"
+      "pspo1-refinement",
+      "pspo1-sprint-goal-changes"
     ],
-    "estimatedMinutes": 130,
+    "estimatedMinutes": 190,
     "prerequisites": []
   },
   {
@@ -294,9 +295,12 @@
       "pspo2-forecasting",
       "pspo2-shared-quality",
       "pspo2-discovery",
-      "pspo2-organization"
+      "pspo2-organization",
+      "pspo2-outcome-experiments",
+      "pspo2-release-feature-flags",
+      "pspo2-platform-value"
     ],
-    "estimatedMinutes": 180,
+    "estimatedMinutes": 400,
     "prerequisites": []
   },
   {
@@ -314,5 +318,58 @@
     "lessonIds": ["pspo3-written-case", "pspo3-complexity", "pspo3-reflection"],
     "estimatedMinutes": 60,
     "prerequisites": []
+  },
+  {
+    "id": "ba-authentication",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "en": "Authentication and browser security",
+      "az": "Autentifikasiya və brauzer təhlükəsizliyi"
+    },
+    "description": {
+      "en": "Trace credentials and trust boundaries through API and browser flows.",
+      "az": "Trace credentials and trust boundaries through API and browser flows."
+    },
+    "lessonIds": [
+      "access-refresh-tokens",
+      "oauth-pkce-oidc",
+      "jwt-validation-authorization",
+      "browser-bff-csrf-cors"
+    ],
+    "estimatedMinutes": 295,
+    "prerequisites": ["ba-technical"]
+  },
+  {
+    "id": "ba-api-engineering",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "en": "API contracts and coding",
+      "az": "API müqavilələri və kodlaşdırma"
+    },
+    "description": {
+      "en": "Implement testable contracts, deduplication and concurrency rules.",
+      "az": "Implement testable contracts, deduplication and concurrency rules."
+    },
+    "lessonIds": ["api-idempotency-concurrency", "api-contracts-evolution", "secure-api-coding"],
+    "estimatedMinutes": 240,
+    "prerequisites": ["ba-authentication"]
+  },
+  {
+    "id": "ba-distributed-systems",
+    "trackId": "ba",
+    "level": "lead",
+    "title": {
+      "en": "Distributed architecture and resilience",
+      "az": "Paylanmış arxitektura və dayanıqlılıq"
+    },
+    "description": {
+      "en": "Make data ownership, recovery and operational trade-offs explicit.",
+      "az": "Make data ownership, recovery and operational trade-offs explicit."
+    },
+    "lessonIds": ["architecture-boundaries-sagas", "api-resilience-observability"],
+    "estimatedMinutes": 160,
+    "prerequisites": ["ba-api-engineering"]
   }
 ]
