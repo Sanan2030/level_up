@@ -166,6 +166,17 @@ h3 {
 .workspace-toolbar a:hover {
   color: var(--accent);
 }
+.page-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.page-navigation .button {
+  min-height: 38px;
+  padding: 8px 12px;
+  font-size: 13px;
+}
 .merhele-storage-warning {
   max-width: 1248px;
   margin: 12px auto 0;
@@ -284,7 +295,11 @@ h3 {
   font-size: 12px;
 }
 .merhele-shell .page-heading {
+  display: block;
   align-items: center;
+}
+.merhele-shell .page-heading.heading-with-action {
+  display: flex;
 }
 .merhele-shell .page-heading .button {
   font-size: 12px;
@@ -351,6 +366,7 @@ h3 {
 }
 .merhele-shell .lesson-card-meta {
   font-size: 11px;
+  justify-content: flex-end;
 }
 .merhele-shell .lesson-card-footer {
   font-size: 12px;
@@ -1308,15 +1324,22 @@ h3 {
     padding: 8px 14px;
   }
   .workspace-toolbar {
+    flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
-    overflow: auto;
+    gap: 8px;
     padding: 6px 0 14px;
   }
+  .workspace-toolbar > label > span {
+    display: inline;
+  }
   .workspace-toolbar nav {
-    gap: 15px;
-    min-width: max-content;
-    font-size: 11px;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    min-width: 0;
+    font-size: 12px;
+  }
+  .workspace-toolbar nav a {
+    padding: 5px 0;
   }
   .workspace-toolbar select {
     font-size: 11px;

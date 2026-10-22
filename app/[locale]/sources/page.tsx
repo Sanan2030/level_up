@@ -10,7 +10,6 @@ export default async function SourcesPage({ params }: { params: Promise<{ locale
   return (
     <div className="stack-lg">
       <header className="page-heading">
-        <p className="eyebrow">{az ? 'OXU · ANLA · YOХLA' : 'READ · UNDERSTAND · VERIFY'}</p>
         <h1 className="page-title">
           {az ? 'Mənbələr və rəsmi məşq' : 'Sources and official practice'}
         </h1>

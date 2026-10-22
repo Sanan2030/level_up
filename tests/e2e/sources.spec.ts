@@ -35,7 +35,7 @@ test('new source-backed lesson gives feedback, section links and focused practic
   await question.getByRole('button', { name: 'Check answer' }).click();
   await expect(question.getByRole('status')).toContainText('Correct.');
   await expect(question.getByRole('link', { name: /The Kanban Guide/ })).toBeVisible();
-  await page.getByRole('link', { name: 'Explore practice', exact: true }).click();
+  await page.getByRole('link', { name: 'Practice this lesson', exact: true }).click();
   await expect(page.getByRole('combobox', { name: 'Learning track', exact: true })).toHaveValue(
     'pspo2',
   );

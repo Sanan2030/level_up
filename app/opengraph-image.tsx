@@ -22,12 +22,12 @@ export default function Image() {
       <div
         style={{ display: 'flex', fontSize: 76, fontWeight: 800, marginTop: 60, lineHeight: 1.15 }}
       >
-        Your next chapter
+        Business Analysis
         <br />
-        starts with one step.
+        &amp; Product Ownership
       </div>
       <div style={{ display: 'flex', fontSize: 26, color: '#6e756d', marginTop: 45 }}>
-        Business Analysis · Product Ownership · Certification practice
+        Lessons · Learning roadmaps · Certification practice
       </div>
     </div>,
     size,

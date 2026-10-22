@@ -2,10 +2,9 @@
 export default function ErrorPage({ reset }: { reset: () => void }) {
   return (
     <div className="card padded empty-state" role="alert">
-      <h1>Yenidən sınayaq / Let’s try again</h1>
-      <p>Bu səhifə yüklənmədi. / This page couldn’t load.</p>
+      <h1>This page couldn’t load</h1>
       <button className="button button-primary" onClick={reset}>
-        Yenidən sına / Try again
+        Try again
       </button>
     </div>
   );

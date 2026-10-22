@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Mərhələ',
-    title: 'Mərhələ — Choose your level. Set your goal.',
+    title: 'Mərhələ — Business Analysis & Product Ownership',
     description:
-      'From curiosity to capability. Learn business analysis and product ownership, one step at a time.',
+      'English lessons, learning roadmaps and certification practice with an English–Azerbaijani term helper.',
     images: ['/opengraph-image'],
   },
   twitter: { card: 'summary_large_image' },

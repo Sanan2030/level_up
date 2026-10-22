@@ -77,7 +77,6 @@ export default async function LessonPage({
       <header className="lesson-header">
         <div className="button-row">
           <span className="badge badge-peach">{getTrack(lesson.trackId).name[locale]}</span>
-          <span className="badge">{lesson.level === 'lead' ? 'Lead / Senior' : lesson.level}</span>
           <span className="lesson-time">
             <Clock3 size={15} />
             {lesson.minutes} {az ? 'dəq' : 'min'}
@@ -109,9 +108,7 @@ export default async function LessonPage({
       <div className="lesson-layout">
         <article className="lesson-article card">
           <div className="objectives">
-            <span className="eyebrow">
-              {az ? 'BU DƏRSDƏ NƏ ÖYRƏNƏCƏKSƏN' : 'WHAT YOU’LL WALK AWAY WITH'}
-            </span>
+            <span className="eyebrow">{az ? 'Öyrənmə məqsədləri' : 'Learning objectives'}</span>
             <ul>
               {metadata.objectives.map((o) => (
                 <li key={o}>
@@ -140,31 +137,12 @@ export default async function LessonPage({
             <SourceLinks ids={lesson.sourceIds} locale={locale} />
           </div>
           <div className="card padded">
-            <p className="eyebrow">{az ? 'ÖYRƏN, SONRA TƏTBİQ ET' : 'MAKE IT STICK'}</p>
-            <h3>{az ? 'Bir az düşün. Bir az sına.' : 'Pause. Reflect. Put it to work.'}</h3>
-            <p className="muted">
-              {az
-                ? 'Dərsdən sonra bir real nümunə tap və öyrəndiyini öz sözlərinlə izah et.'
-                : 'After this lesson, find a real example and explain what you learned in your own words.'}
-            </p>
-            <hr />
-            <span className="lesson-time">
-              <Clock3 size={15} />
-              {lesson.minutes} {az ? 'dəqiqəlik investisiya' : 'minutes well invested'}
-            </span>
-          </div>
-          <div className="card padded">
-            <h3>{az ? 'Biliklərini yoxla' : 'Try what you know'}</h3>
-            <p className="muted">
-              {az
-                ? 'Məşq sualları ilə güclü və zəif tərəflərini kəşf et.'
-                : 'Use original practice questions to discover your strengths and your next opportunity.'}
-            </p>
+            <h3>{az ? 'Dərs üzrə suallar' : 'Lesson practice'}</h3>
             <Link
               className="button button-secondary"
               href={`/${locale}/practice?track=${lesson.trackId}&lesson=${lesson.id}`}
             >
-              {az ? 'Məşqə başla' : 'Explore practice'}
+              {az ? 'Məşqə başla' : 'Practice this lesson'}
               <ArrowRight size={15} />
             </Link>
           </div>
@@ -174,7 +152,7 @@ export default async function LessonPage({
       {next && (
         <Link href={`/${locale}/lessons/${next.id}`} className="card padded next-lesson-link">
           <div>
-            <span className="eyebrow">{az ? 'MARAĞINI İZLƏ' : 'KEEP EXPLORING'}</span>
+            <span className="eyebrow">{az ? 'Növbəti dərs' : 'Next lesson'}</span>
             <h3>{next.title[locale]}</h3>
           </div>
           <ArrowRight size={22} />

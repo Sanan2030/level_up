@@ -51,9 +51,7 @@ const AttemptChart = dynamic(
 
 const text = {
   az: {
-    eyebrow: 'BİLİYİNİ SINA',
-    title: 'Hər məşq irəliyə bir addımdır.',
-    subtitle: 'Mövzunu seç, bildiklərini yoxla və nəyə fokuslanacağını kəşf et.',
+    title: 'Məşq',
     original: 'Bütün suallar orijinal məşq materialıdır. Bunlar rəsmi imtahan sualları deyil.',
     track: 'Öyrənmə istiqaməti',
     mode: 'Məşq rejimi',
@@ -126,8 +124,7 @@ const text = {
     unanswered: 'cavabsız sual da nəticəyə daxil ediləcək.',
     discard: 'Məşqi ləğv et',
     saved: 'Məşq bu brauzerdə saxlanılır. Sonra qayıda bilərsən.',
-    results: 'Məşq nəticəsi',
-    resultTitle: 'Öyrənməyə davam et.',
+    resultTitle: 'Məşq nəticəsi',
     writtenSaved: 'Yazılı məşq saxlanıldı',
     score: 'Düzgün cavab',
     writtenNote:
@@ -151,9 +148,7 @@ const text = {
     loading: 'Məşq məlumatları yüklənir…',
   },
   en: {
-    eyebrow: 'PUT KNOWLEDGE INTO PRACTICE',
-    title: 'A little practice. A lot of progress.',
-    subtitle: 'Choose a topic, test your understanding, and discover where to focus next.',
+    title: 'Practice',
     original:
       'All questions are original practice material. These are not official exam questions.',
     track: 'Learning track',
@@ -166,11 +161,11 @@ const text = {
     practice: 'Practice',
     practiceDescription: 'Learn from an explanation after every answer.',
     domainMode: 'Domain drill',
-    domainDescription: 'Build confidence in one knowledge area.',
+    domainDescription: 'Practice questions from one knowledge area.',
     mock: 'Timed mock',
     mockDescription: 'A full session using a verified exam format.',
     review: 'Review mistakes',
-    reviewDescription: 'Turn past mistakes into stronger recall.',
+    reviewDescription: 'Retry questions you answered incorrectly.',
     start: 'Start practicing',
     available: 'questions available',
     dueOnly: 'Only questions due for spaced review today',
@@ -179,7 +174,7 @@ const text = {
     noQuestions: 'No questions match this selection. Try a different domain.',
     mockMissing: 'There is no official exam configuration for this career track.',
     mockUnverified:
-      'The official format has not been verified from its source. TODO: VERIFY. Practice remains available.',
+      'The official format has not been verified from its source. Practice remains available.',
     mockWritten:
       'Written and mixed formats do not have an automatically graded official-format mock. Use written practice with a self-review rubric.',
     mockRules:
@@ -193,7 +188,7 @@ const text = {
     questionCount: 'Official question count',
     duration: 'Duration',
     pass: 'Pass threshold',
-    unknown: 'TODO: VERIFY / not published',
+    unknown: 'Not verified / not published',
     minutes: 'minutes',
     question: 'Question',
     of: 'of',
@@ -201,7 +196,7 @@ const text = {
     flagged: 'Flagged for review',
     pause: 'Pause',
     resume: 'Resume session',
-    paused: 'Take a breather.',
+    paused: 'Session paused',
     pausedDescription: 'Your remaining time is saved. Resume when you are ready.',
     trainingPause: 'Pausing is available for learning; official exam rules may differ.',
     single: 'Choose one answer.',
@@ -213,8 +208,8 @@ const text = {
     choose: 'Choose an answer',
     check: 'Check answer',
     rubric: 'Show self-review rubric',
-    correct: 'You got it!',
-    incorrect: 'Here is something to revisit.',
+    correct: 'Correct.',
+    incorrect: 'Incorrect.',
     reflection: 'Compare your response with these review criteria.',
     explanation: 'Explanation',
     correctAnswer: 'Correct answer',
@@ -228,8 +223,7 @@ const text = {
     unanswered: 'unanswered questions will also count toward your result.',
     discard: 'Discard session',
     saved: 'Your session is saved in this browser. You can return later.',
-    results: 'SESSION COMPLETE',
-    resultTitle: 'Keep your curiosity going.',
+    resultTitle: 'Practice results',
     writtenSaved: 'Written reflection saved',
     score: 'Correct answers',
     writtenNote:
@@ -237,8 +231,8 @@ const text = {
     officialNote:
       'Practice scores do not establish official exam eligibility or predict an exam result.',
     breakdown: 'Your domain breakdown',
-    weak: 'Your next focus',
-    noWeak: 'Good work! No domain fell below 70% in this session.',
+    weak: 'Domains below 70%',
+    noWeak: 'No domain fell below 70% in this session.',
     reviewAnswers: 'Review answers and explanations',
     yourAnswer: 'Your answer',
     notAnswered: 'Not answered',
@@ -460,9 +454,7 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
   return (
     <div className="quiz-workspace" style={{ display: 'grid', gap: '1.5rem' }}>
       <header>
-        <p className="eyebrow">{t.eyebrow}</p>
         <h1 className="page-title">{t.title}</h1>
-        <p className="muted">{t.subtitle}</p>
       </header>
       <p
         className="muted"
@@ -1402,7 +1394,6 @@ function ResultPanel({
           aria-hidden="true"
           style={{ margin: '0 auto 1rem', color: 'var(--accent, #c6664a)' }}
         />
-        <p className="eyebrow">{t.results}</p>
         <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>
           {percent === null ? t.writtenSaved : t.resultTitle}
         </h2>

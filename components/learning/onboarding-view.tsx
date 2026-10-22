@@ -55,15 +55,7 @@ function OnboardingForm({ locale, initial }: { locale: Locale; initial?: Learnin
   return (
     <div className="stack onboarding-wrap">
       <div className="page-heading">
-        <p className="eyebrow">{az ? 'SƏNƏ UYĞUN YOL' : 'A PATH THAT FITS YOU'}</p>
-        <h1 className="page-title">
-          {az ? 'Böyük hədəflər. Kiçik addımlar.' : 'Big ambitions. Small steps.'}
-        </h1>
-        <p className="muted">
-          {az
-            ? 'Harada olduğunu de, növbəti addımını birlikdə tapaq. Mövcud irəliləyişin qorunur.'
-            : 'Tell us where you are. We’ll map your next step. Your existing progress stays with you.'}
-        </p>
+        <h1 className="page-title">{az ? 'Yol xəritəsini qur' : 'Set up your roadmap'}</h1>
       </div>
       <ol className="onboarding-steps" aria-label={az ? 'Plan qurma addımları' : 'Setup steps'}>
         {labels.map((label, index) => (

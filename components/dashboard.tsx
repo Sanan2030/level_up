@@ -96,7 +96,7 @@ export function Dashboard({ locale }: { locale: Locale }) {
   const badges = [
     {
       icon: Compass,
-      label: az ? 'İlk addım' : 'First step',
+      label: az ? 'Yol xəritəsi quruldu' : 'Roadmap created',
       earned: Object.keys(progress.profiles).length > 0,
     },
     {
@@ -126,34 +126,18 @@ export function Dashboard({ locale }: { locale: Locale }) {
   return (
     <div className="merhele-dashboard stack-lg">
       <header className="page-heading">
-        <h1 className="page-title">
-          {az ? 'Salam, bu gün hardan davam edək?' : 'Hello. Where shall we continue today?'}
-        </h1>
-        <p className="muted">
-          {profile
-            ? az
-              ? `${relevantTracks.length} istiqamət üzrə öyrənməni izləyirsən. Növbəti addımlarını və nəticələrini aşağıda gör.`
-              : `You are learning across ${relevantTracks.length} track${relevantTracks.length === 1 ? '' : 's'}. Find your next steps and results below.`
-            : az
-              ? 'Hədəfini seç, öyrənmə planını qur və irəliləyişini burada izlə.'
-              : 'Choose your destination, build a learning plan, and follow your progress here.'}
-        </p>
+        <h1 className="page-title">{az ? 'Panel' : 'Dashboard'}</h1>
       </header>
       <div className="dashboard-top">
         <section className="recommended-card">
-          <span className="eyebrow">
-            {az ? 'NÖVBƏTİ TÖVSİYƏ OLUNAN DƏRS' : 'YOUR NEXT RECOMMENDED LESSON'}
-          </span>
-          <h2>
-            {next?.title[locale] ??
-              (az ? 'Növbəti mərhələni planlaşdır' : 'Plan your next chapter')}
-          </h2>
+          <span className="eyebrow">{az ? 'Tövsiyə olunan dərs' : 'Recommended lesson'}</span>
+          <h2>{next?.title[locale] ?? (az ? 'Hədəf seç' : 'Choose a learning goal')}</h2>
           <p>
             {next
               ? `${getTrack(next.trackId).name[locale]} · ${next.minutes} ${az ? 'dəqiqə' : 'minutes'}. ${next.summary[locale]}`
               : az
-                ? 'Hədəfinə uyğun planı nəzərdən keçir və ya yeni istiqamət seç. Mövcud irəliləyişin saxlanır.'
-                : 'Review the plan for your target or choose another direction. Your progress stays with you.'}
+                ? 'Planı dəyiş və ya başqa istiqamət seç.'
+                : 'Edit your plan or choose another track.'}
           </p>
           <div className="button-row">
             <Link
@@ -179,7 +163,6 @@ export function Dashboard({ locale }: { locale: Locale }) {
             <strong>
               {streak} {az ? 'gün' : 'days'}
             </strong>
-            <p>{az ? 'Hər gün bir az' : 'A little every day'}</p>
           </section>
           <section className="card dashboard-small-stat">
             <span>{az ? 'Tamamlanan modul' : 'Completed modules'}</span>
@@ -372,11 +355,11 @@ export function Dashboard({ locale }: { locale: Locale }) {
                 <p>
                   {earned
                     ? az
-                      ? 'Qazanıldı'
-                      : 'Unlocked'
+                      ? 'Tamamlandı'
+                      : 'Completed'
                     : az
-                      ? 'Səni gözləyir'
-                      : 'Yours to unlock'}
+                      ? 'Tamamlanmayıb'
+                      : 'Not completed'}
                 </p>
               </div>
             ))}
@@ -384,7 +367,7 @@ export function Dashboard({ locale }: { locale: Locale }) {
         </section>
       </div>
       <details className="card padded">
-        <summary>{az ? 'Öyrənmə ritmi · son 7 gün' : 'Learning rhythm · last 7 days'}</summary>
+        <summary>{az ? 'Öyrənmə vaxtı · son 7 gün' : 'Study time · last 7 days'}</summary>
         <p className="muted" style={{ marginTop: 15 }}>
           {az
             ? 'Dəqiqələr tamamladığın dərslərin təxmini müddətidir.'

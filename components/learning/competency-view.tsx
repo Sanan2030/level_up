@@ -66,13 +66,7 @@ export function CompetencyView({ locale }: { locale: Locale }) {
   return (
     <div className="stack">
       <div className="page-heading">
-        <p className="eyebrow">{az ? 'HƏDƏFİNİ AYDIN GÖR' : 'KNOW WHAT GOOD LOOKS LIKE'}</p>
         <h1 className="page-title">{t.competencies}</h1>
-        <p className="muted">
-          {az
-            ? 'Hər səviyyədə gözləntiləri anla, güclü tərəflərini və inkişaf imkanlarını gör.'
-            : 'Understand each level’s expectations, recognize your strengths, and find room to grow.'}
-        </p>
       </div>
       <div className="filter-bar">
         <label className="field-label">
@@ -132,7 +126,6 @@ export function CompetencyView({ locale }: { locale: Locale }) {
       </div>
       <section className="card stack">
         <div>
-          <p className="eyebrow">{az ? 'BİLİKDƏN TƏCRÜBƏYƏ' : 'FROM KNOWING TO DOING'}</p>
           <h2 className="section-title">{az ? 'Özünü qiymətləndir' : 'Assess yourself'}</h2>
           <p className="muted">
             {az

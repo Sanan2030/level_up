@@ -8,9 +8,7 @@ const storageKey = 'level-up.progress.v1';
 
 async function openDashboard(page: Page) {
   await page.goto('/en/dashboard');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    'Hello. Where shall we continue today?',
-  );
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Dashboard');
   await expect(page.locator('.page-skeleton')).toHaveCount(0);
 }
 
@@ -22,7 +20,7 @@ test('defaults to English and opens the dashboard from the landing', async ({ pa
   await expect(page.getByRole('button', { name: 'Translate', exact: true })).toBeVisible();
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
-    'Choose your level. Set your goal.',
+    'Build your learning roadmap',
   );
   await page.getByRole('link', { name: 'My dashboard', exact: true }).click();
   await expect(page).toHaveURL(/\/en\/dashboard$/);
@@ -149,9 +147,9 @@ test('practices a quiz with feedback, flags and pauses it, then persists the att
     page.getByRole('button', { name: 'Flagged for review', exact: true }),
   ).toHaveAttribute('aria-pressed', 'true');
   await page.getByRole('button', { name: 'Pause', exact: true }).click();
-  await expect(page.getByRole('heading', { name: 'Take a breather.' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Session paused' })).toBeVisible();
   await page.reload();
-  await expect(page.getByRole('heading', { name: 'Take a breather.' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Session paused' })).toBeVisible();
   await page.getByRole('button', { name: 'Resume session', exact: true }).first().click();
   const radios = page.locator('input[name^="answer-"][type="radio"]');
   const checkboxes = page.locator('input[name^="answer-"][type="checkbox"]');
@@ -177,10 +175,10 @@ test('practices a quiz with feedback, flags and pauses it, then persists the att
     }
   }
   await page.getByRole('button', { name: 'Check answer', exact: true }).click();
-  await expect(page.getByText(/You got it!|Here is something to revisit\./)).toBeVisible();
+  await expect(page.getByText(/Correct\.|Incorrect\./)).toBeVisible();
   await expect(page.getByRole('link', { name: 'Explore the related lesson' })).toBeVisible();
   await page.getByRole('button', { name: 'Finish session', exact: true }).click();
-  await expect(page.getByRole('heading', { name: 'Keep your curiosity going.' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Practice results' })).toBeVisible();
   const saved = await page.evaluate((key) => JSON.parse(localStorage.getItem(key)!), storageKey);
   expect(saved.attempts).toHaveLength(1);
   expect(saved.attempts[0].questionIds).toHaveLength(5);
@@ -195,6 +193,10 @@ test('rejects malformed progress imports without overwriting current progress', 
 }) => {
   await page.goto('/en/settings');
   await expect(page.getByRole('button', { name: 'Import JSON' })).toBeEnabled();
+  await expect(page.getByRole('link', { name: 'Azərbaycanca', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('link', { name: 'English', exact: true })).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: 'Progress backup' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Translate', exact: true })).toBeVisible();
   const before = await page.evaluate((key) => localStorage.getItem(key), storageKey);
   await page.locator('input[type="file"]').setInputFiles({
     name: 'bad-progress.json',
@@ -235,7 +237,7 @@ test('shows verified IIBA facts and keeps undersized or unverified mocks unavail
   await page.getByRole('combobox', { name: 'Learning track', exact: true }).selectOption('pspo1');
   await expect(
     page.getByText(
-      'The official format has not been verified from its source. TODO: VERIFY. Practice remains available.',
+      'The official format has not been verified from its source. Practice remains available.',
     ),
   ).toBeVisible();
   await expect(page.getByRole('button', { name: 'Start practicing' })).toBeDisabled();

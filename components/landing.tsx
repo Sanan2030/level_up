@@ -2,13 +2,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import {
-  ArrowRight,
-  BookOpen,
-  ChartNoAxesColumnIncreasing,
-  Check,
-  CircleCheck,
-} from 'lucide-react';
+import { ArrowRight, BookOpen, ChartNoAxesColumnIncreasing, CircleCheck } from 'lucide-react';
 import { lessons, modules } from '@/lib/catalog';
 import { tracks } from '@/lib/tracks';
 import { generateRoadmap, levelOrder } from '@/lib/roadmap';
@@ -66,38 +60,12 @@ export function Landing({ locale }: { locale: Locale }) {
     <div className="merhele-landing">
       <section className="landing-hero">
         <div className="landing-intro">
-          <span className="landing-kicker">
-            IT Business Analyst · Product Owner · {az ? 'Sertifikatlar' : 'Certifications'}
-          </span>
-          <h1>
-            {az
-              ? 'Səviyyəni seç, hədəfi göstər. Yol xəritən hazırdır.'
-              : 'Choose your level. Set your goal. Your path is ready.'}
-          </h1>
+          <h1>{az ? 'Öyrənmə yol xəritəsini qur' : 'Build your learning roadmap'}</h1>
           <p>
             {az
-              ? 'Sıfırdan Lead səviyyəyə, ya da ECBA-dan CBAP-a və PSPO III-ə qədər: nəyi oxumalı, nəyi öyrənməli, nəyi yoxlamalı olduğunu mövzu-mövzu göstərən öyrənmə platforması.'
-              : 'From your first steps to a lead role, or from ECBA to CBAP and PSPO III: a topic-by-topic plan for what to read, learn, and put into practice.'}
+              ? 'Karyera və ya sertifikat istiqamətini, hazırkı səviyyəni və hədəfi seç.'
+              : 'Choose a career or certification track, then set your current level and target.'}
           </p>
-          <ul>
-            {(az
-              ? [
-                  'Hər səviyyə üçün “nə bilməlisən” siyahısı',
-                  'Nəzəriyyə, real layihə nümunəsi, diaqram və praktik tapşırıq',
-                  'Hər sertifikat üçün orijinal suallar və vaxtlı məşq',
-                ]
-              : [
-                  'A clear “what you should know” checklist for each level',
-                  'Theory, realistic examples, diagrams, and practical exercises',
-                  'Original certification questions and timed practice',
-                ]
-            ).map((item) => (
-              <li key={item}>
-                <Check size={16} />
-                {item}
-              </li>
-            ))}
-          </ul>
         </div>
         <section
           className="card path-builder"
@@ -215,21 +183,11 @@ export function Landing({ locale }: { locale: Locale }) {
             {az ? 'Yol xəritəmi yarat' : 'Build my roadmap'}
             <ArrowRight size={18} />
           </button>
-          <p className="builder-note">
-            {az
-              ? 'Mövcud irəliləyişin saxlanır. Tempini sonra dəyişə bilərsən.'
-              : 'Your progress stays with you. Adjust your pace at any time.'}
-          </p>
         </section>
       </section>
       <section id="how" className="landing-section landing-white">
         <div className="landing-section-inner">
-          <h2>{az ? 'Üç addımda irəlilə' : 'Move forward in three steps'}</h2>
-          <p className="section-intro">
-            {az
-              ? 'Əvvəl harada olduğunu və hara getmək istədiyini seçirsən. Qalanını platforma sıralayır.'
-              : 'Choose where you are and where you want to go. Your roadmap puts the next steps in order.'}
-          </p>
+          <h2>{az ? 'Necə işləyir' : 'How it works'}</h2>
           <div className="landing-steps">
             {(az
               ? [
@@ -249,15 +207,15 @@ export function Landing({ locale }: { locale: Locale }) {
               : [
                   [
                     'Choose your level',
-                    'Set your starting point and target. Understand the skills you need to bridge the gap.',
+                    'Select a track, current level and target to generate an ordered study plan.',
                   ],
                   [
                     'Learn topic by topic',
-                    'Theory, project examples, diagrams, and practical exercises belong together.',
+                    'Open lessons with explanations, project examples, diagrams and exercises.',
                   ],
                   [
-                    'Put it into practice',
-                    'Discover weak areas with topic drills and strengthen your knowledge with spaced review.',
+                    'Review quiz results',
+                    'Use domain drills, answer explanations and spaced review to revisit mistakes.',
                   ],
                 ]
             ).map(([title, body], i) => {
@@ -281,12 +239,7 @@ export function Landing({ locale }: { locale: Locale }) {
       <section className="landing-section">
         <div className="landing-section-inner lesson-structure">
           <div>
-            <h2>{az ? 'Hər dərs eyni quruluşla' : 'A familiar structure in every lesson'}</h2>
-            <p>
-              {az
-                ? 'Məqsəddən praktikaya: hər mövzuda eyni ardıcıllıq var. Diaqramlar və interaktiv izahlar mürəkkəb anlayışları addım-addım göstərir.'
-                : 'From objectives to application: a consistent structure helps you find what you need. Diagrams and interactive explainers make complex ideas easier to follow.'}
-            </p>
+            <h2>{az ? 'Dərsin quruluşu' : 'Lesson structure'}</h2>
             <Link className="button button-outline" href={`/${locale}/lessons/stakeholder-mapping`}>
               {az ? 'Nümunə dərsə bax' : 'Explore a sample lesson'}
             </Link>
@@ -305,9 +258,9 @@ export function Landing({ locale }: { locale: Locale }) {
                 ]
               : [
                   'Learning objectives',
-                  'Why it matters in the real world',
-                  'Theory in plain language',
-                  'A realistic project example',
+                  'Context',
+                  'Theory',
+                  'Project example',
                   'Diagram and interactive explanation',
                   'Common mistakes and better practices',
                   'Practice exercise and worked solution',

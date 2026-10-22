@@ -23,13 +23,7 @@ export function GlossaryView({ locale }: { locale: Locale }) {
   return (
     <div className="stack">
       <div className="page-heading">
-        <p className="eyebrow">{az ? 'EYNİ DİLDƏ DANIŞAQ' : 'LET’S SPEAK THE SAME LANGUAGE'}</p>
         <h1 className="page-title">{t.glossary}</h1>
-        <p className="muted">
-          {az
-            ? 'Biznes təhlili və məhsul idarəetməsi anlayışları, sadə və aydın izahlarla.'
-            : 'Business analysis and product ownership terms, explained in plain language.'}
-        </p>
       </div>
       <div className="card search-field">
         <Search size={20} />

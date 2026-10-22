@@ -19,9 +19,7 @@ export function RoadmapView({ locale }: { locale: Locale }) {
     return (
       <div className="card empty-state">
         <Layers3 size={40} />
-        <h1 className="page-title">
-          {az ? 'İlk addım səndən başlayır' : 'Your first step starts here'}
-        </h1>
+        <h1 className="page-title">{az ? 'Yol xəritəsini qur' : 'Set up your roadmap'}</h1>
         <p className="muted">
           {az
             ? 'Səviyyəni və hədəfini seç, fərdi öyrənmə planını gör.'
@@ -43,7 +41,6 @@ export function RoadmapView({ locale }: { locale: Locale }) {
     <div className="stack">
       <div className="page-heading heading-with-action">
         <div>
-          <p className="eyebrow">{az ? 'ADDIM-ADDIM İRƏLİ' : 'ONE STEP AT A TIME'}</p>
           <h1 className="page-title">{t.roadmap}</h1>
           <p className="muted">
             {localize(track.name, locale)} · {t[profile.currentLevel]} →{' '}
@@ -92,7 +89,7 @@ export function RoadmapView({ locale }: { locale: Locale }) {
       {roadmap.nextLesson && (
         <div className="card next-lesson-banner">
           <div>
-            <p className="eyebrow">{az ? 'NÖVBƏTİ ADDIMIN' : 'YOUR NEXT STEP'}</p>
+            <p className="eyebrow">{az ? 'Növbəti dərs' : 'Next lesson'}</p>
             <h2 className="section-title">{localize(roadmap.nextLesson.title, locale)}</h2>
             <p className="muted">
               {roadmap.nextLesson.minutes} {t.minutes} ·{' '}
@@ -128,7 +125,8 @@ export function RoadmapView({ locale }: { locale: Locale }) {
                 <div className="card stack">
                   <div>
                     <p className="eyebrow">
-                      {t[module.level]} · {entries.length} {az ? 'mövzu' : 'topics'}
+                      {track.category === 'career' ? `${t[module.level]} · ` : ''}
+                      {entries.length} {az ? 'mövzu' : 'topics'}
                     </p>
                     <h2 className="section-title">{localize(module.title, locale)}</h2>
                     <p className="muted">{localize(module.description, locale)}</p>
@@ -218,7 +216,6 @@ export function RoadmapView({ locale }: { locale: Locale }) {
           </aside>
         ) : (
           <aside className="card stack">
-            <p className="eyebrow">{az ? 'ÖYRƏN · TƏTBİQ ET' : 'LEARN · APPLY'}</p>
             <h2 className="section-title">{track.name[locale]}</h2>
             <p className="muted">
               {az

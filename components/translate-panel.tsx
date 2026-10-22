@@ -134,7 +134,6 @@ export function TranslateButton({ className = '' }: { className?: string }) {
       >
         <div className="translate-dialog-header">
           <div>
-            <p className="eyebrow">WORDS &amp; PHRASES</p>
             <h2 id="translate-title">Translate and understand</h2>
           </div>
           <button

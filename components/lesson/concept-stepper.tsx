@@ -43,7 +43,6 @@ export function ConceptStepper({ locale = 'az' }: { locale?: Locale }) {
       ];
   return (
     <div className="concept-stepper">
-      <p className="eyebrow">{az ? 'SINA · ÖYRƏN · UYĞUNLAŞDIR' : 'TRY · LEARN · ADAPT'}</p>
       <div className="stepper-dots">
         {steps.map((s, i) => (
           <button

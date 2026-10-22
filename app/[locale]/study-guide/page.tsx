@@ -9,8 +9,7 @@ export default function StudyGuidePage() {
   return (
     <div className="stack-lg">
       <header className="page-heading">
-        <p className="eyebrow">UNDERSTAND · APPLY · EXPLAIN</p>
-        <h1 className="page-title">Study product ownership with a purpose.</h1>
+        <h1 className="page-title">PSPO study guide</h1>
         <p className="muted">
           Follow the five Professional Scrum Competencies and their 28 focus areas. Use the lessons
           as starting points, practice a decision, then explain why each alternative helps or harms
@@ -112,7 +111,7 @@ export default function StudyGuidePage() {
         </section>
       ))}
       <div className="card stack">
-        <h2 className="section-title">Use the evidence, not a memorized answer.</h2>
+        <h2 className="section-title">Scenario review checklist</h2>
         <ul>
           <li>Identify the purpose and accountability involved before choosing an action.</li>
           <li>State which evidence would change your decision in an ambiguous product scenario.</li>

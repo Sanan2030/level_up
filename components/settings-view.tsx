@@ -1,6 +1,5 @@
 'use client';
-import { Download, FileJson, Globe2, ShieldCheck, Upload } from 'lucide-react';
-import Link from 'next/link';
+import { Download, FileJson, ShieldCheck, Upload } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { useProgress } from './providers';
 import { emptyProgress, exportProgress, importProgress, STORAGE_KEY } from '@/lib/storage';
@@ -68,18 +67,12 @@ export function SettingsView({ locale }: { locale: Locale }) {
   return (
     <div className="stack-lg">
       <div>
-        <p className="eyebrow">{az ? 'SƏNİN MƏKANIN, SƏNİN SEÇİMİN' : 'YOUR SPACE, YOUR CHOICE'}</p>
         <h1 className="page-title">{az ? 'Tənzimləmələr' : 'Settings'}</h1>
-        <p className="muted">
-          {az
-            ? 'Öyrənmə məlumatlarını idarə et və təhlükəsiz ehtiyat nüsxə saxla.'
-            : 'Make yourself at home and keep a backup of your learning.'}
-        </p>
       </div>
       <div className="grid-2">
         <section className="card padded stack">
           <FileJson size={25} className="accent" />
-          <h2>{az ? 'İrəliləyişin ehtiyat nüsxəsi' : 'Your progress, backed up'}</h2>
+          <h2>{az ? 'İrəliləyişin ehtiyat nüsxəsi' : 'Progress backup'}</h2>
           <p className="muted">
             {az
               ? 'Dərslər, qeydlər, əlfəcinlər və imtahan nəticələri yalnız bu brauzerdə saxlanır. JSON faylını başqa brauzerdə idxal edə bilərsən.'
@@ -156,40 +149,15 @@ export function SettingsView({ locale }: { locale: Locale }) {
             </div>
           )}
         </section>
-        <div className="stack">
-          <section className="card padded stack">
-            <Globe2 size={24} className="accent" />
-            <h2>{az ? 'Dil və görünüş' : 'Language & appearance'}</h2>
-            <p className="muted">
-              {az
-                ? 'Üst paneldən açıq və tünd mövzu arasında keçid et. Dil dəyişikliyi irəliləyişi saxlayır.'
-                : 'Use the theme control in the top bar to switch between light and dark. Changing language keeps your progress.'}
-            </p>
-            <div className="button-row">
-              <Link
-                href="/az/settings"
-                className={`button ${az ? 'button-primary' : 'button-secondary'}`}
-              >
-                Azərbaycanca
-              </Link>
-              <Link
-                href="/en/settings"
-                className={`button ${!az ? 'button-primary' : 'button-secondary'}`}
-              >
-                English
-              </Link>
-            </div>
-          </section>
-          <section className="card padded stack">
-            <ShieldCheck size={24} className="sage-text" />
-            <h2>{az ? 'Məxfilik' : 'A little privacy by design'}</h2>
-            <p className="muted">
-              {az
-                ? 'Hesab və izləmə tələb olunmur. Brauzer məlumatlarını silmək irəliləyişini də silir. Həssas məlumatları şəxsi qeydlərə yazma.'
-                : 'No account or tracking required. Clearing browser data also clears your progress. Keep sensitive information out of personal notes.'}
-            </p>
-          </section>
-        </div>
+        <section className="card padded stack">
+          <ShieldCheck size={24} className="sage-text" />
+          <h2>{az ? 'Məxfilik' : 'Privacy'}</h2>
+          <p className="muted">
+            {az
+              ? 'Hesab və izləmə tələb olunmur. Brauzer məlumatlarını silmək irəliləyişini də silir. Həssas məlumatları şəxsi qeydlərə yazma.'
+              : 'No account or tracking required. Clearing browser data also clears your progress. Keep sensitive information out of personal notes.'}
+          </p>
+        </section>
       </div>
     </div>
   );

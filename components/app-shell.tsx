@@ -2,13 +2,14 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChartNoAxesColumnIncreasing, Menu, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { copy } from '@/lib/i18n';
 import { tracks } from '@/lib/tracks';
 import type { Locale, TrackId } from '@/lib/types';
 import { useProgress } from './providers';
 import { ThemeToggle } from './theme-toggle';
 import { TranslateButton } from './translate-panel';
+import { PageNavigation } from './page-navigation';
 
 export function AppShell({ children, locale }: { children: React.ReactNode; locale: Locale }) {
   const path = usePathname();
@@ -125,13 +126,15 @@ export function AppShell({ children, locale }: { children: React.ReactNode; loca
         </div>
       )}
       <main id="main-content" className="main-content">
+        <Suspense fallback={null}>
+          <PageNavigation />
+        </Suspense>
         {children}
       </main>
       <footer className="merhele-footer">
         <Link href={`/${locale}`} className="merhele-footer-brand">
           Mərhələ
         </Link>
-        <span>{az ? 'BA və PO öyrənmə platforması' : 'A learning platform for BAs and POs'}</span>
         <Link href={`/${locale}/sources`}>
           {az ? 'Mənbələr və məzmun qeydləri' : 'Sources & content notes'}
         </Link>

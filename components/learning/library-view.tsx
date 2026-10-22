@@ -61,13 +61,7 @@ export function LibraryView({
   return (
     <div className="stack">
       <div className="page-heading">
-        <p className="eyebrow">{az ? 'MARAĞINI İZLƏ' : 'FOLLOW YOUR CURIOSITY'}</p>
         <h1 className="page-title">{t.lessons}</h1>
-        <p className="muted">
-          {az
-            ? 'Bir mövzu seç. Bir anlayışı mənimsə. Hər gün bir addım irəli.'
-            : 'Pick a topic. Understand a concept. Take one step forward every day.'}
-        </p>
       </div>
       <section
         className="card stack"
@@ -154,7 +148,6 @@ export function LibraryView({
                 </div>
                 <div className="lesson-card-content">
                   <div className="lesson-card-meta">
-                    <span className="eyebrow">{t[lesson.level]}</span>
                     <button
                       type="button"
                       className="icon-button"
