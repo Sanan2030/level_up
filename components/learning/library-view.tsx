@@ -35,7 +35,9 @@ export function LibraryView({
   const [status, setStatus] = useState('all');
   const initialSubject = params.get('subject');
   const [subject, setSubject] = useState(
-    initialSubject === 'technical' || initialSubject === 'pspo' ? initialSubject : 'all',
+    initialSubject && ['technical', 'pspo', 'devops', 'data'].includes(initialSubject)
+      ? initialSubject
+      : 'all',
   );
   const [bookmarksOnly, setBookmarksOnly] = useState(false);
   const t = copy[locale];
@@ -47,6 +49,8 @@ export function LibraryView({
       (status === 'all' || lesson.status === status) &&
       (subject === 'all' ||
         (subject === 'technical' && lesson.topics.includes('software-development')) ||
+        (subject === 'devops' && lesson.topics.includes('devops')) ||
+        (subject === 'data' && lesson.topics.includes('data-analysis')) ||
         (subject === 'pspo' && lesson.trackId.startsWith('pspo'))) &&
       (!bookmarksOnly || progress.bookmarks.includes(lesson.id)) &&
       (!normalized ||
@@ -99,6 +103,8 @@ export function LibraryView({
             >
               <option value="all">All subjects</option>
               <option value="technical">Architecture, coding & APIs</option>
+              <option value="devops">DevOps</option>
+              <option value="data">Data analysis</option>
               <option value="pspo">PSPO preparation</option>
             </select>
           </label>

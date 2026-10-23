@@ -34,14 +34,14 @@ The build validates content before generating the application. To set canonical 
 - Three-step onboarding with a current level, target level or certification, and daily study time. Roadmaps show the learning gap, prerequisite order, time estimates, and target-level skills. Changing tracks preserves progress.
 - Six career competency profiles with expectations, hard and soft skills, tools, deliverables, interview examples, and self-assessment checklists.
 - A searchable lesson library and glossary, statically generated MDX lessons, Mermaid diagrams, an interactive learning stepper, notes, bookmarks, and lesson completion.
-- 514 original questions (106 PSPO I, 118 PSPO II, 40 PSPO III written reflections, 64 ECBA, 60 each for CCBA/CBAP, 55 BA technical/topic items and 11 PO items), domain drills, mistake review, spaced repetition, shuffled answers, flagged questions, persisted sessions, and attempt history. Selected-response, ordering, matching, and written-reflection formats have separate handling.
+- 566 original questions (106 PSPO I, 118 PSPO II, 40 PSPO III written reflections, 64 ECBA, 60 each for CCBA/CBAP, 107 BA technical/topic items and 11 PO items), domain drills, mistake review, spaced repetition, shuffled answers, flagged questions, persisted sessions, and attempt history. Selected-response, ordering, matching, and written-reflection formats have separate handling.
 - Practice sessions of 5–100 questions with difficulty, response-format and unseen-question filters; weighted 50-question ECBA mocks are enabled by verified configuration and sufficient domain coverage. Other full mocks retain their verification and bank-size gates.
-- A top-level **Translate** tool supports words, acronyms and phrases such as _onboarding_, _Definition of Done_ and _scope creep_. Its 135 curated terms have English definitions, Azerbaijani meanings and explanations, and examples in both languages. Unknown terms use optional public dictionary/machine-translation services with visible limitations.
+- A top-level **Translate** tool supports words, acronyms and phrases such as _onboarding_, _Definition of Done_ and _scope creep_. Its 175 curated terms have English definitions, Azerbaijani meanings and explanations, and examples in both languages. Unknown terms use optional public dictionary/machine-translation services with visible limitations.
 - A five-group, 28-focus-area Professional Scrum study guide links concepts to available lessons and identifies the coaching/mentoring/teaching coverage gaps.
 - A dashboard with measured lesson progress, activity streak, milestones, next steps, and practice history charts.
 - Validated JSON progress export/import, typed storage adapters, Zod content validation, Vitest logic tests, and GitHub Actions checks.
 
-The curriculum deliberately distinguishes **complete lessons** from **planned outlines**. There are 86 topics: 48 complete English lessons and 38 detailed outlines. Complete lessons include 11 architecture/API/coding lessons, 21 PSPO lessons, 9 IIBA certification lessons, and career foundations. The technical collection covers HTTP contracts, access/refresh tokens, OAuth/PKCE/OIDC, JWT/JWKS, browser/BFF security, concurrency/idempotency, outbox/webhooks, API evolution, sagas, resilience and a tested TypeScript lab. Outlines document the remaining topic sequence and cannot be counted as completed lessons. Time estimates include the whole curriculum, including planned content; they are guidance rather than a guarantee.
+The curriculum deliberately distinguishes **complete lessons** from **planned outlines**. There are 98 topics: 61 complete English lessons and 37 detailed outlines. Complete lessons include 11 architecture/API/coding lessons, 6 DevOps lessons, 7 data analysis lessons, 21 PSPO lessons, 9 IIBA certification lessons, and career foundations. The technical collection covers HTTP contracts, access/refresh tokens, OAuth/PKCE/OIDC, JWT/JWKS, browser/BFF security, concurrency/idempotency, outbox/webhooks, API evolution, sagas, resilience and a tested TypeScript lab. Outlines document the remaining topic sequence and cannot be counted as completed lessons. Time estimates include the whole curriculum, including planned content; they are guidance rather than a guarantee.
 
 ## Certification accuracy
 
@@ -127,7 +127,7 @@ This guide describes deployment; pushing Git commits alone does not create a Ver
 
 The curriculum uses selected sections of the user-supplied BABOK Guide v3 (IIBA, 2015), Scrum Guide (November 2020), The Kanban Guide for Scrum Teams (January 2021), Evidence-Based Management Guide (2024), _The Professional Product Owner_ (McGreal & Jocham, 2018), and pasted official Professional Scrum Competencies text. Current guides take precedence over older book terminology. This is selected-section reading, not a claim that every page of both books was read.
 
-There are 312 explicitly source-tagged questions. New lessons and questions cite source sections. Existing question and option IDs remain stable for saved attempts. The source register distinguishes read uploads/pages from inaccessible links. Read [the technical and supplementary PSPO research](docs/RESEARCH-2026-10-22.md), [the content audit](docs/CONTENT-SOURCES.md), [research findings and limitations](docs/RESEARCH-2026-10-21.md), and [selected reading records](docs/reading-audits/babok-reading-audit.md).
+There are 364 explicitly source-tagged questions. New lessons and questions cite source sections. Existing question and option IDs remain stable for saved attempts. The source register distinguishes read uploads/pages from inaccessible links. Read [the DevOps and data analysis research](docs/RESEARCH-2026-10-23.md), [the technical and supplementary PSPO research](docs/RESEARCH-2026-10-22.md), [the content audit](docs/CONTENT-SOURCES.md), [research findings and limitations](docs/RESEARCH-2026-10-21.md), and [selected reading records](docs/reading-audits/babok-reading-audit.md).
 
 One public community preparation README was read and assessed separately. First-hand candidate exam-result reports could not be read through the current network restrictions. No candidate-review consensus, pass-rate claims or real exam questions were invented. PSPO exam formats remain unverified even though the practice banks are larger.
 
@@ -141,8 +141,21 @@ English-only publication preserves old lesson IDs, progress storage and notes. L
 
 ## Technical lessons and coding lab
 
-In **Lesson library → Subject**, choose **Architecture, coding & APIs** or **PSPO preparation**. Direct collection links are `/en/lessons?subject=technical` and `/en/lessons?subject=pspo`. Subject, track, publication status, search and bookmark filters compose. Technical lessons remain in the BA career track, in the technical, authentication, API engineering and distributed-systems modules. Existing lesson IDs and progress remain stable.
+In **Lesson library → Subject**, choose **Architecture, coding & APIs**, **DevOps**, **Data analysis** or **PSPO preparation**. Direct collection links use `?subject=technical`, `?subject=devops`, `?subject=data` or `?subject=pspo` on `/en/lessons`. Subject, track, publication status, search and bookmark filters compose. Technical lessons remain in the BA career track, in the technical, authentication, API engineering and distributed-systems modules. Existing lesson IDs and progress remain stable.
 
 The source-backed [API coding lab](examples/api-lab/README.md) includes strict TypeScript/Zod order validation, tenant/object permissions, scoped operation deduplication, version preconditions, PKCE S256 and GitHub webhook HMAC verification. Run `npm test -- tests/api-lab.test.ts`. It has no HTTP listener or external calls and is intentionally an in-memory teaching model, not production authentication, payment processing or distributed persistence.
 
 The added PSPO material applies the supplied Scrum/EBM/book sources to mid-Sprint changes, outcome experiments, feature flags and API-platform value. IETF/OWASP/OpenAPI/Microsoft are primary technical sources; GOV.UK service guidance and the Pete Hodgson feature-toggle article provide explicitly supplementary product/engineering context. They do not define an official PSPO syllabus.
+
+## DevOps and data analysis
+
+Four additional BA career modules contain six DevOps lessons (Linux/Git/network diagnosis, Docker, CI/CD, Kubernetes, Terraform, SRE/incidents) and six new data-analysis lessons (metric grain/quality, advanced SQL/cohorts, Python/pandas, Excel/Power BI, experiments/statistics, dashboards). The existing `sql-basics` outline is now a complete lesson, bringing the data collection to seven lessons. Each lesson includes a diagram, worked example, decision interaction, exercise/solution and four explained original practice questions. The new 52 items are topic practice, not DevOps or data certification exam questions.
+
+The [data analysis lab](examples/data-analysis-lab/README.md) runs synthetic CSV cleaning, SQLite joins/windows/cohorts and a limited A/B arithmetic example with only Python's standard library:
+
+```sh
+python3 examples/data-analysis-lab/analysis.py
+python3 -m unittest discover -s examples/data-analysis-lab -p 'test_*.py' -v
+```
+
+An optional pandas implementation validates merge cardinality and independently reconciles aggregates with SQL. pandas is not an application dependency. The lab runs locally and makes no external calls; Excel/Power BI examples are modeling exercises, and DevOps snippets do not provision infrastructure or deploy this application. See the [selected-source research note](docs/RESEARCH-2026-10-23.md) for official documentation and verification limits.

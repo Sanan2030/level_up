@@ -1758,5 +1758,525 @@
       "en": "Reconcile the original payment before submitting another charge.",
       "az": "Yeni ödəniş yaratmazdan əvvəl əvvəlki ödənişin vəziyyətini dəqiqləşdir."
     }
+  },
+  {
+    "id": "devops",
+    "term": "DevOps",
+    "aliases": ["dev ops"],
+    "context": "DevOps",
+    "meaningAz": "Proqram təminatının hazırlanması və istismarının birgə təşkili",
+    "definitionEn": "A collaborative approach to developing, delivering and operating software with shared responsibility and feedback.",
+    "explanationAz": "Proqramı hazırlayan və işlək saxlayan tərəflərin çatdırılma, etibarlılıq və geribildirim üçün birgə məsuliyyət daşıdığı yanaşmadır.",
+    "example": {
+      "en": "The team reviews deployment failures together instead of handing them to another department.",
+      "az": "Komanda deployment xətalarını başqa şöbəyə ötürmək əvəzinə birlikdə araşdırır."
+    }
+  },
+  {
+    "id": "docker",
+    "term": "Docker",
+    "aliases": [],
+    "context": "DevOps",
+    "meaningAz": "Container yaratmaq və işlətmək üçün alətlər",
+    "definitionEn": "A platform and toolset for building container images and running applications in containers.",
+    "explanationAz": "Tətbiqi və tələb etdiyi faylları image şəklində paketləməyə, sonra container kimi işlətməyə imkan verən alətlərdir.",
+    "example": {
+      "en": "Docker builds the application image before a reviewed release.",
+      "az": "Docker icmal edilmiş buraxılışdan əvvəl tətbiqin image-ini yaradır."
+    }
+  },
+  {
+    "id": "container",
+    "term": "Container",
+    "aliases": ["containers"],
+    "context": "DevOps",
+    "meaningAz": "İzolyasiya olunmuş tətbiq prosesi mühiti",
+    "definitionEn": "A runtime environment that isolates application processes while sharing the host operating system kernel.",
+    "explanationAz": "Tətbiq proseslərini müəyyən sərhədlərlə ayıran, adətən host sistemin kernelini paylaşan işləmə mühitidir; ayrıca virtual maşınla eyni deyil.",
+    "example": {
+      "en": "Replacing a container does not guarantee its writable data survives.",
+      "az": "Container-i dəyişmək onun yazılan məlumatlarının qalacağına zəmanət vermir."
+    }
+  },
+  {
+    "id": "container-image",
+    "term": "Container image",
+    "aliases": ["image", "docker image"],
+    "context": "DevOps",
+    "meaningAz": "Container üçün paketlənmiş fayl və konfiqurasiya",
+    "definitionEn": "A packaged filesystem and configuration used to create container instances.",
+    "explanationAz": "Container yaratmaq üçün istifadə edilən paketdir; işləyən prosesin özü deyil. Eyni image-dən bir neçə container yaradıla bilər.",
+    "example": {
+      "en": "Two containers can start from the same image digest.",
+      "az": "İki container eyni image digest-dən işə düşə bilər."
+    }
+  },
+  {
+    "id": "image-digest",
+    "term": "Image digest",
+    "aliases": ["digest"],
+    "context": "DevOps",
+    "meaningAz": "Image məzmununun kriptoqrafik identifikatoru",
+    "definitionEn": "A cryptographic content identifier for a container image or manifest.",
+    "explanationAz": "Image məzmununu müəyyən edən identifikatordur. Dəyişən tag-dən fərqli olaraq konkret məzmuna işarə edir, amma özlüyündə təhlükəsizliyə zəmanət vermir.",
+    "example": {
+      "en": "The release records the tested image digest.",
+      "az": "Buraxılış sınaqdan keçmiş image digest-i qeyd edir."
+    }
+  },
+  {
+    "id": "build-cache",
+    "term": "Build cache",
+    "aliases": ["docker cache"],
+    "context": "DevOps",
+    "meaningAz": "Build addımlarının təkrar istifadə olunan nəticələri",
+    "definitionEn": "Stored results of earlier build steps that can be reused when the relevant inputs are unchanged.",
+    "explanationAz": "Uyğun girişlər dəyişmədikdə əvvəlki build addımlarının nəticələrindən istifadə etməyə imkan verir; cache-i söndürmək yeni base image çəkməklə eyni deyil.",
+    "example": {
+      "en": "A dependency change invalidates the relevant build cache layer.",
+      "az": "Asılılığın dəyişməsi uyğun build cache qatının yenidən qurulmasını tələb edir."
+    }
+  },
+  {
+    "id": "terraform",
+    "term": "Terraform",
+    "aliases": [],
+    "context": "DevOps",
+    "meaningAz": "İnfrastrukturu kodla idarə edən alət",
+    "definitionEn": "An infrastructure-as-code tool that plans and manages resource changes using configuration and state.",
+    "explanationAz": "Konfiqurasiya və state əsasında infrastruktur dəyişikliklərini planlaşdıran və idarə edən alətdir. Planın mövcudluğu onun təhlükəsiz olduğunu sübut etmir.",
+    "example": {
+      "en": "Review the Terraform plan before authorizing a database replacement.",
+      "az": "Verilənlər bazasının əvəzlənməsinə icazə verməzdən əvvəl Terraform planını yoxla."
+    }
+  },
+  {
+    "id": "infrastructure-as-code",
+    "term": "Infrastructure as code",
+    "aliases": ["IaC"],
+    "context": "DevOps",
+    "meaningAz": "İnfrastrukturun kodla təsviri və idarəsi",
+    "definitionEn": "Managing infrastructure through versioned, reviewable configuration rather than undocumented manual changes.",
+    "explanationAz": "İnfrastrukturun versiyalanan və icmal edilə bilən konfiqurasiya ilə idarə edilməsidir; əl ilə edilən dəyişikliklərdən yaranan fərqlər ayrıca yoxlanır.",
+    "example": {
+      "en": "The network change is reviewed as an infrastructure-as-code proposal.",
+      "az": "Şəbəkə dəyişikliyi kodla infrastruktur təklifi kimi icmal edilir."
+    }
+  },
+  {
+    "id": "terraform-state",
+    "term": "Terraform state",
+    "aliases": ["state file"],
+    "context": "DevOps",
+    "meaningAz": "Terraform-un resurs xəritəsi və idarəetmə məlumatı",
+    "definitionEn": "Stored data mapping Terraform-managed resource instances to real objects and retaining management information.",
+    "explanationAz": "Terraform-un təsvir etdiyi resursları real obyektlərlə əlaqələndirən məlumatdır. Həssas dəyərlər saxlaya bildiyi üçün adi log kimi paylaşılmamalıdır.",
+    "example": {
+      "en": "The team restricts access to the state backend.",
+      "az": "Komanda state backend-ə girişi məhdudlaşdırır."
+    }
+  },
+  {
+    "id": "infrastructure-drift",
+    "term": "Infrastructure drift",
+    "aliases": ["drift"],
+    "context": "DevOps",
+    "meaningAz": "İnfrastrukturun gözlənilən vəziyyətdən yayınması",
+    "definitionEn": "A difference between managed expectations and actual infrastructure, often caused by changes outside the declared workflow.",
+    "explanationAz": "Real infrastrukturun idarə olunan konfiqurasiya və gözləntilərdən fərqlənməsidir; məsələn, konsolda edilmiş ayrıca dəyişiklik bunu yarada bilər.",
+    "example": {
+      "en": "A console edit creates drift that appears during review.",
+      "az": "Konsolda edilən dəyişiklik icmal zamanı görünən yayınma yaradır."
+    }
+  },
+  {
+    "id": "kubernetes",
+    "term": "Kubernetes",
+    "aliases": ["k8s"],
+    "context": "DevOps",
+    "meaningAz": "Container-lərin orkestrasiya platforması",
+    "definitionEn": "A platform that manages containerized workloads through declared desired state and controllers.",
+    "explanationAz": "Container əsaslı iş yüklərini arzu olunan vəziyyət və controller-lər vasitəsilə idarə edən platformadır. Sadəcə container başlatmaqdan daha geniş idarəetmə verir.",
+    "example": {
+      "en": "Kubernetes reconciles the Deployment with its declared replica count.",
+      "az": "Kubernetes Deployment-i göstərilmiş replika sayına uyğunlaşdırır."
+    }
+  },
+  {
+    "id": "kubernetes-pod",
+    "term": "Pod",
+    "aliases": ["pods"],
+    "context": "DevOps",
+    "meaningAz": "Kubernetes-də birlikdə planlaşdırılan iş vahidi",
+    "definitionEn": "The smallest deployable Kubernetes unit, containing one or more containers that share selected resources.",
+    "explanationAz": "Kubernetes-də birlikdə yerləşdirilən bir və ya bir neçə container-dən ibarət vahiddir; daxilindəki container-lər müəyyən şəbəkə və yaddaş resurslarını paylaşa bilər.",
+    "example": {
+      "en": "The Pod runs an application container and a supporting sidecar.",
+      "az": "Pod tətbiq container-ini və köməkçi sidecar-ı işlədir."
+    }
+  },
+  {
+    "id": "readiness-probe",
+    "term": "Readiness probe",
+    "aliases": ["kubernetes readiness"],
+    "context": "DevOps",
+    "meaningAz": "Sorğu qəbul etməyə hazırlıq yoxlaması",
+    "definitionEn": "A Kubernetes probe that indicates whether a container is ready to serve traffic through normal Service routing.",
+    "explanationAz": "Container-in trafik qəbul etməyə hazır olub-olmadığını yoxlayır. Uğursuzluq adətən onu Service trafikindən çıxarır; bu, avtomatik restart yoxlaması ilə eyni deyil.",
+    "example": {
+      "en": "Readiness fails while the application cannot safely accept requests.",
+      "az": "Tətbiq sorğuları təhlükəsiz qəbul edə bilmədikdə readiness yoxlaması uğursuz olur."
+    }
+  },
+  {
+    "id": "liveness-probe",
+    "term": "Liveness probe",
+    "aliases": ["liveness"],
+    "context": "DevOps",
+    "meaningAz": "Canlılıq və restart ehtiyacı yoxlaması",
+    "definitionEn": "A Kubernetes probe whose repeated failure can cause the container to be restarted.",
+    "explanationAz": "Container-in işləkliyini qiymətləndirən yoxlamadır; təkrar uğursuzluq restart-a səbəb ola bilər. Hər xarici asılılıq xətasını buna bağlamaq restart dövrü yarada bilər.",
+    "example": {
+      "en": "A deadlocked process fails the liveness probe and is restarted.",
+      "az": "Kilidlənmiş proses liveness yoxlamasından keçmir və yenidən başladılır."
+    }
+  },
+  {
+    "id": "startup-probe",
+    "term": "Startup probe",
+    "aliases": [],
+    "context": "DevOps",
+    "meaningAz": "İlkin işə düşmənin tamamlanması yoxlaması",
+    "definitionEn": "A Kubernetes probe that gates liveness and readiness checks until application startup succeeds.",
+    "explanationAz": "Tətbiqin ilkin açılışının tamamlanmasını yoxlayır; uğur əldə edilənədək liveness və readiness yoxlamalarını gözlədir.",
+    "example": {
+      "en": "A startup probe gives a slow-initializing service time to start.",
+      "az": "Startup probe gec açılan xidmətə işə düşmək üçün vaxt verir."
+    }
+  },
+  {
+    "id": "service-level-indicator",
+    "term": "Service level indicator",
+    "aliases": ["SLI"],
+    "context": "DevOps",
+    "meaningAz": "Xidmət səviyyəsinin ölçülən göstəricisi",
+    "definitionEn": "A quantitative measure of service behavior, such as the fraction of eligible requests that succeed.",
+    "explanationAz": "Xidmətin davranışını ölçən göstəricidir; məsələn, uyğun sorğular arasında uğurlu olanların payı. Onun əhali, vaxt və uğur tərifi dəqiq olmalıdır.",
+    "example": {
+      "en": "The SLI excludes requests outside the agreed eligible population.",
+      "az": "SLI razılaşdırılmış əhaliyə daxil olmayan sorğuları hesablamır."
+    }
+  },
+  {
+    "id": "error-budget",
+    "term": "Error budget",
+    "aliases": [],
+    "context": "DevOps",
+    "meaningAz": "SLO daxilində icazə verilən uğursuzluq payı",
+    "definitionEn": "The allowed amount of unreliability implied by a service-level objective over its defined measurement window.",
+    "explanationAz": "SLO-nun müəyyən etdiyi vaxt pəncərəsində qəbul edilən uğursuzluq həddidir. Sorğu əsaslı büdcə avtomatik olaraq dayanma dəqiqələrinə çevrilmir.",
+    "example": {
+      "en": "A 99.9% target over 100000 requests allows 100 failed requests.",
+      "az": "100000 sorğu üçün 99.9% hədəf 100 uğursuz sorğuya yer verir."
+    }
+  },
+  {
+    "id": "recovery-time-objective",
+    "term": "Recovery time objective",
+    "aliases": ["RTO"],
+    "context": "DevOps",
+    "meaningAz": "Bərpa vaxtı hədəfi",
+    "definitionEn": "The target maximum duration for restoring the required service after a disruption.",
+    "explanationAz": "Nasazlıqdan sonra tələb olunan xidməti bərpa etmək üçün hədəflənən maksimum müddətdir. Backup-un uğurlu olması bu müddətə çatıldığını sübut etmir.",
+    "example": {
+      "en": "A 95-minute restore misses a 60-minute RTO.",
+      "az": "95 dəqiqəlik bərpa 60 dəqiqəlik RTO hədəfini aşır."
+    }
+  },
+  {
+    "id": "recovery-point-objective",
+    "term": "Recovery point objective",
+    "aliases": ["RPO"],
+    "context": "DevOps",
+    "meaningAz": "Məlumatın bərpa nöqtəsi hədəfi",
+    "definitionEn": "The target maximum amount of data loss expressed as time before a disruption.",
+    "explanationAz": "Nasazlıqdan əvvəl hansı vaxtadək olan məlumat itkisinə dözmək mümkün olduğunu göstərən hədəfdir. RTO-dan fərqli olaraq bərpanın nə qədər çəkdiyini ölçmür.",
+    "example": {
+      "en": "A backup from 40 minutes before failure misses a 15-minute RPO.",
+      "az": "Xətadan 40 dəqiqə əvvəlki backup 15 dəqiqəlik RPO-ya uyğun gəlmir."
+    }
+  },
+  {
+    "id": "incident",
+    "term": "Incident",
+    "aliases": ["incidents"],
+    "context": "DevOps",
+    "meaningAz": "Xidmətə təsir edən insident",
+    "definitionEn": "An event that disrupts or threatens the expected operation of a service and requires coordinated response.",
+    "explanationAz": "Xidmətin gözlənilən işini pozan və ya təhlükəyə atan, koordinasiyalı cavab tələb edən hadisədir. Təsiri azaltmaqla səbəbi tam araşdırmaq ayrı fəaliyyətlər ola bilər.",
+    "example": {
+      "en": "The incident lead coordinates mitigation and communication.",
+      "az": "İnsident rəhbəri təsirin azaldılmasını və məlumatlandırmanı əlaqələndirir."
+    }
+  },
+  {
+    "id": "postmortem",
+    "term": "Postmortem",
+    "aliases": ["post mortem"],
+    "context": "DevOps",
+    "meaningAz": "İnsidentdən sonrakı öyrənmə icmalı",
+    "definitionEn": "A structured review of an incident timeline, contributing conditions and concrete follow-up improvements.",
+    "explanationAz": "İnsidentin gedişini, ona şərait yaradan amilləri və konkret təkmilləşdirmələri araşdıran icmaldır; yalnız günahkar axtarmaqla məhdudlaşmır.",
+    "example": {
+      "en": "The postmortem assigns an owner to a restore-test improvement.",
+      "az": "İcmal bərpa sınağının yaxşılaşdırılması üçün məsul şəxs təyin edir."
+    }
+  },
+  {
+    "id": "data-grain",
+    "term": "Data grain",
+    "aliases": ["grain", "row grain"],
+    "context": "Data analysis",
+    "meaningAz": "Bir sətrin təmsil etdiyi səviyyə",
+    "definitionEn": "The precise business entity or event represented by one row in a dataset.",
+    "explanationAz": "Bir sətrin nəyi təmsil etdiyini bildirir: müştəri, sifariş, məhsul sətri və ya hadisə. Bu səviyyə dəyişəndə toplamanın mənası da dəyişə bilər.",
+    "example": {
+      "en": "Joining orders to items changes the output grain.",
+      "az": "Sifarişləri məhsul sətirləri ilə birləşdirmək nəticənin sətir səviyyəsini dəyişir."
+    }
+  },
+  {
+    "id": "denominator",
+    "term": "Denominator",
+    "aliases": [],
+    "context": "Data analysis",
+    "meaningAz": "Nisbətin məxrəci və uyğun əhali",
+    "definitionEn": "The base quantity or eligible population by which a numerator is divided to calculate a rate.",
+    "explanationAz": "Nisbəti hesablamaq üçün bölünən əsas kəmiyyətdir. Aktivasiya ölçüsündə yalnız uğurlu müştərilər deyil, uyğun bütün istifadəçilər daxil olmalıdır.",
+    "example": {
+      "en": "One activated account among two eligible signups gives a denominator of two.",
+      "az": "İki uyğun qeydiyyatdan biri aktivləşibsə, məxrəc ikidir."
+    }
+  },
+  {
+    "id": "join-fanout",
+    "term": "Join fanout",
+    "aliases": ["fanout", "join multiplication"],
+    "context": "Data analysis",
+    "meaningAz": "Join nəticəsində sətirlərin çoxalması",
+    "definitionEn": "Multiplication of rows when a join matches one input row to multiple rows on the other side.",
+    "explanationAz": "Bir sətir qarşı tərəfdə bir neçə sətrə uyğun gəldikdə yaranan çoxalmadır. Təkrarlanan sifariş məbləğini toplamaq gəliri şişirdə bilər.",
+    "example": {
+      "en": "Two item matches repeat the order header amount twice.",
+      "az": "İki məhsul uyğunluğu sifarişin başlıq məbləğini iki dəfə təkrarlayır."
+    }
+  },
+  {
+    "id": "sampling-bias",
+    "term": "Sampling bias",
+    "aliases": [],
+    "context": "Data analysis",
+    "meaningAz": "Seçmə qərəzi",
+    "definitionEn": "A systematic difference between the observed sample and the population about which a conclusion is intended.",
+    "explanationAz": "Müşahidə olunan seçmə ilə nəticənin aid edildiyi ümumi əhali arasında sistemli fərqdir. Çox məlumatın olması bu qərəzi avtomatik aradan qaldırmır.",
+    "example": {
+      "en": "Only surveying paying customers misses nonbuyer experiences.",
+      "az": "Yalnız ödəniş edənləri sorğulamaq almayanların təcrübəsini kənarda qoyur."
+    }
+  },
+  {
+    "id": "window-function",
+    "term": "Window function",
+    "aliases": ["window functions"],
+    "context": "Data analysis",
+    "meaningAz": "Sətirləri saxlayaraq əlaqəli sətirlər üzrə hesablama",
+    "definitionEn": "A SQL function that calculates across a related set of rows while retaining the individual result rows.",
+    "explanationAz": "Adi GROUP BY kimi sətirləri birləşdirmədən əlaqəli sətirlər üzrə hesablayır; partition, sıralama və frame hesabın sərhədlərini müəyyən edir.",
+    "example": {
+      "en": "A window SUM calculates each customer’s running paid amount.",
+      "az": "Window SUM hər müştərinin yığılan ödəniş məbləğini hesablayır."
+    }
+  },
+  {
+    "id": "right-censoring",
+    "term": "Right censoring",
+    "aliases": ["right censored"],
+    "context": "Data analysis",
+    "meaningAz": "Sonrakı nəticələrin hələ müşahidə olunmaması",
+    "definitionEn": "A situation in which later outcomes cannot yet be observed because follow-up ends before they occur.",
+    "explanationAz": "Müşahidə müddəti sonrakı nəticədən əvvəl bitdiyi üçün həmin nəticə haqqında məlumatın olmamasıdır. Gələcək ayı sıfır retention kimi göstərmək olmaz.",
+    "example": {
+      "en": "March month-one retention is censored when data ends in March.",
+      "az": "Məlumat martda bitirsə, mart kohortunun növbəti ay retention-u hələ müşahidə olunmayıb."
+    }
+  },
+  {
+    "id": "pandas",
+    "term": "pandas",
+    "aliases": [],
+    "context": "Data analysis",
+    "meaningAz": "Python üçün cədvəl məlumatı analizi kitabxanası",
+    "definitionEn": "A Python library providing labeled data structures and tools for manipulating and analyzing tabular data.",
+    "explanationAz": "Python-da cədvəl məlumatlarını oxumaq, təmizləmək, birləşdirmək və toplamaq üçün istifadə olunan kitabxanadır. Nəticənin düzgünlüyü yenə də məlumat qaydalarından asılıdır.",
+    "example": {
+      "en": "pandas validates the many-to-one customer merge.",
+      "az": "pandas müştəri birləşməsinin many-to-one qaydasına uyğunluğunu yoxlayır."
+    }
+  },
+  {
+    "id": "data-quarantine",
+    "term": "Data quarantine",
+    "aliases": ["quarantine"],
+    "context": "Data analysis",
+    "meaningAz": "Etibarsız qeydlərin ayrıca saxlanması",
+    "definitionEn": "Separating records that fail stated validation rules while retaining reasons for review and reconciliation.",
+    "explanationAz": "Qaydalara uyğun olmayan qeydlərin səbəbləri ilə birlikdə ayrıca ayrılmasıdır. Bu, sətrləri izsiz silmək və ya çatışmayan dəyəri uydurmaqdan fərqlənir.",
+    "example": {
+      "en": "The missing-amount order is quarantined with a reason.",
+      "az": "Məbləği çatışmayan sifariş səbəbi göstərilərək ayrıca ayrılır."
+    }
+  },
+  {
+    "id": "star-schema",
+    "term": "Star schema",
+    "aliases": [],
+    "context": "Data analysis",
+    "meaningAz": "Ulduz sxemli analitik məlumat modeli",
+    "definitionEn": "An analytical model with fact tables linked to descriptive dimension tables at explicitly defined grains.",
+    "explanationAz": "Ölçülən hadisələri saxlayan fact cədvəllərini onları təsvir edən dimension cədvəlləri ilə əlaqələndirən modeldir. Hər cədvəlin səviyyəsi dəqiq olmalıdır.",
+    "example": {
+      "en": "The order fact connects to customer and date dimensions.",
+      "az": "Sifariş fact cədvəli müştəri və tarix dimension-larına bağlanır."
+    }
+  },
+  {
+    "id": "fact-table",
+    "term": "Fact table",
+    "aliases": ["facts"],
+    "context": "Data analysis",
+    "meaningAz": "Ölçülən hadisələr cədvəli",
+    "definitionEn": "A table storing business events or observations and their measures at a consistent declared grain.",
+    "explanationAz": "Hadisə və ölçüləri sabit sətir səviyyəsində saxlayan cədvəldir. Sifariş səviyyəli məbləği məhsul sətirləri ilə qarışdırmaq yanlış toplam yarada bilər.",
+    "example": {
+      "en": "FactOrders has one row per valid order.",
+      "az": "FactOrders hər etibarlı sifariş üçün bir sətir saxlayır."
+    }
+  },
+  {
+    "id": "dimension-table",
+    "term": "Dimension table",
+    "aliases": ["dimensions"],
+    "context": "Data analysis",
+    "meaningAz": "Təsvir və filtr atributları cədvəli",
+    "definitionEn": "A table of descriptive attributes and keys used to filter, group and label analytical facts.",
+    "explanationAz": "Analitik hadisələri filtrləmək və qruplaşdırmaq üçün təsviri atributlar saxlayır. One-to-many əlaqənin bu tərəfində açar unikal olmalıdır.",
+    "example": {
+      "en": "DimCustomer stores one row per customer key.",
+      "az": "DimCustomer hər müştəri açarı üçün bir sətir saxlayır."
+    }
+  },
+  {
+    "id": "filter-context",
+    "term": "Filter context",
+    "aliases": [],
+    "context": "Data analysis",
+    "meaningAz": "Ölçünün hesablandığı filtr konteksti",
+    "definitionEn": "The set of filters that determines which data contributes to a DAX measure evaluation.",
+    "explanationAz": "DAX ölçüsü hesablananda hansı məlumatların nəzərə alınacağını müəyyən edən filtrlər toplusudur. Tarix və ölkə seçimi nəticəni dəyişə bilər.",
+    "example": {
+      "en": "Selecting February changes the measure’s filter context.",
+      "az": "Fevralın seçilməsi ölçünün filtr kontekstini dəyişir."
+    }
+  },
+  {
+    "id": "power-query",
+    "term": "Power Query",
+    "aliases": [],
+    "context": "Data analysis",
+    "meaningAz": "Təkrarlana bilən məlumat hazırlama aləti",
+    "definitionEn": "A data preparation and transformation engine used in products including Excel and Power BI.",
+    "explanationAz": "Excel və Power BI kimi məhsullarda məlumatı yükləmək, çevirmək və təmizləmək üçün istifadə edilir. Çevirmə addımları yenilənmə zamanı təkrarlana bilər.",
+    "example": {
+      "en": "Power Query converts date text using the intended locale.",
+      "az": "Power Query tarix mətnini nəzərdə tutulan lokal qaydaya uyğun çevirir."
+    }
+  },
+  {
+    "id": "dax",
+    "term": "DAX",
+    "aliases": ["data analysis expressions"],
+    "context": "Data analysis",
+    "meaningAz": "Analitik model ifadələri dili",
+    "definitionEn": "A formula language for calculations and measures in tabular analytical models such as Power BI.",
+    "explanationAz": "Power BI kimi cədvəl əsaslı analitik modellərdə ölçü və hesablamalar yazmaq üçün dildir. Measure cari filtr kontekstində qiymətləndirilir.",
+    "example": {
+      "en": "A DAX measure divides aggregated revenue by paid order count.",
+      "az": "DAX ölçüsü toplanmış gəliri ödənilmiş sifariş sayına bölür."
+    }
+  },
+  {
+    "id": "p-value",
+    "term": "P-value",
+    "aliases": ["p value", "pvalue"],
+    "context": "Data analysis",
+    "meaningAz": "Null model altında müşahidənin quyruq ehtimalı",
+    "definitionEn": "Under a specified null model, the probability of results at least as incompatible with that model as the observed result.",
+    "explanationAz": "Müəyyən null model doğru sayıldıqda müşahidə qədər və ya daha uyğunsuz nəticənin ehtimalıdır. Null fərziyyənin doğru olma ehtimalı demək deyil.",
+    "example": {
+      "en": "A p-value does not state the probability that a rollout will be profitable.",
+      "az": "P-value buraxılışın gəlirli olma ehtimalını göstərmir."
+    }
+  },
+  {
+    "id": "confidence-interval",
+    "term": "Confidence interval",
+    "aliases": ["CI interval"],
+    "context": "Data analysis",
+    "meaningAz": "Etimad intervalı",
+    "definitionEn": "An interval constructed by a procedure with a stated long-run coverage rate under its assumptions.",
+    "explanationAz": "Müəyyən fərziyyələr altında təkrar seçmələrdə göstərilən örtmə payına malik üsulla qurulan intervaldır. Konkret interval üçün fərziyyənin ehtimalı kimi yozulmamalıdır.",
+    "example": {
+      "en": "The approximate difference interval includes zero.",
+      "az": "Fərqin təxmini etimad intervalına sıfır daxildir."
+    }
+  },
+  {
+    "id": "percentage-point",
+    "term": "Percentage point",
+    "aliases": ["percentage points", "pp"],
+    "context": "Data analysis",
+    "meaningAz": "Faiz bəndi",
+    "definitionEn": "The arithmetic difference between two percentages, expressed on the percentage scale.",
+    "explanationAz": "İki faiz göstəricisi arasındakı sadə fərqdir. 10%-dən 12%-ə artım 2 faiz bəndidir, nisbi artım isə 20%-dir.",
+    "example": {
+      "en": "Conversion rises by two percentage points from 10% to 12%.",
+      "az": "Konversiya 10%-dən 12%-ə, yəni iki faiz bəndi artır."
+    }
+  },
+  {
+    "id": "relative-lift",
+    "term": "Relative lift",
+    "aliases": ["relative change"],
+    "context": "Data analysis",
+    "meaningAz": "Başlanğıc göstəriciyə nisbətən artım",
+    "definitionEn": "The difference between an outcome rate and a baseline rate divided by that baseline rate.",
+    "explanationAz": "Yeni və başlanğıc göstərici arasındakı fərqin başlanğıc göstəriciyə nisbətidir. Başlanğıc sıfır olduqda bu sadə nisbət müəyyən olunmur.",
+    "example": {
+      "en": "A change from 10% to 12% is a 20% relative lift.",
+      "az": "10%-dən 12%-ə dəyişmə 20% nisbi artımdır."
+    }
+  },
+  {
+    "id": "randomization-unit",
+    "term": "Randomization unit",
+    "aliases": ["assignment unit"],
+    "context": "Data analysis",
+    "meaningAz": "Təsadüfi variant bölgüsünün vahidi",
+    "definitionEn": "The independently assigned entity in an experiment, such as a user, account or organization.",
+    "explanationAz": "Eksperimentdə variantın ayrıca təyin edildiyi vahiddir. Hesab üzrə bölgüdə eyni hesabın müxtəlif baxışlarda variant dəyişməsi nəticəni poza bilər.",
+    "example": {
+      "en": "An account remains in its assigned variant on repeated visits.",
+      "az": "Hesab təkrar ziyarətlərdə təyin olunmuş variantda qalır."
+    }
   }
 ]

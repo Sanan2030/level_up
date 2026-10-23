@@ -1,0 +1,2953 @@
+[
+  {
+    "id": "devops-linux-git-networking-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "A release points to commit abc123, but a health request still reports the previous artifact digest. What should you verify next?",
+      "az": "A release points to commit abc123, but a health request still reports the previous artifact digest. What should you verify next?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Only whether the Git branch name is main.",
+          "az": "Only whether the Git branch name is main."
+        },
+        "explanation": {
+          "en": "A branch can point to new source while an older artifact still runs.",
+          "az": "A branch can point to new source while an older artifact still runs."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Whether a local text editor has reloaded the source.",
+          "az": "Whether a local text editor has reloaded the source."
+        },
+        "explanation": {
+          "en": "Editor state does not identify the remote serving process.",
+          "az": "Editor state does not identify the remote serving process."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The artifact deployed and the process actually serving the request.",
+          "az": "The artifact deployed and the process actually serving the request."
+        },
+        "explanation": {
+          "en": "A commit reference alone does not establish runtime identity.",
+          "az": "A commit reference alone does not establish runtime identity."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Trace source revision, built artifact identity, deployment and the running process as separate pieces of evidence.",
+      "az": "Trace source revision, built artifact identity, deployment and the running process as separate pieces of evidence."
+    },
+    "lessonId": "devops-linux-git-networking",
+    "practiceOnly": true,
+    "sourceIds": ["git-branching", "linux-user-commands", "http-semantics-9110"]
+  },
+  {
+    "id": "devops-linux-git-networking-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "A service responds locally on its port, but its public hostname cannot be resolved. Which layer has the clearest initial failure evidence?",
+      "az": "A service responds locally on its port, but its public hostname cannot be resolved. Which layer has the clearest initial failure evidence?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "DNS resolution for the public hostname.",
+          "az": "DNS resolution for the public hostname."
+        },
+        "explanation": {
+          "en": "The observed failure occurs before an HTTP connection to the public service can be made.",
+          "az": "The observed failure occurs before an HTTP connection to the public service can be made."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The business database transaction.",
+          "az": "The business database transaction."
+        },
+        "explanation": {
+          "en": "No database evidence has been provided.",
+          "az": "No database evidence has been provided."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The Git merge strategy.",
+          "az": "The Git merge strategy."
+        },
+        "explanation": {
+          "en": "A merge strategy cannot be inferred from a name-resolution failure.",
+          "az": "A merge strategy cannot be inferred from a name-resolution failure."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Investigate the failing layer first. A local response does not establish public DNS, routing or TLS behavior.",
+      "az": "Investigate the failing layer first. A local response does not establish public DNS, routing or TLS behavior."
+    },
+    "lessonId": "devops-linux-git-networking",
+    "practiceOnly": true,
+    "sourceIds": ["git-branching", "linux-user-commands", "http-semantics-9110"]
+  },
+  {
+    "id": "devops-linux-git-networking-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "Which TWO observations are useful read-only evidence when diagnosing a service that may be listening on the wrong port?",
+      "az": "Which TWO observations are useful read-only evidence when diagnosing a service that may be listening on the wrong port?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Inspect listening sockets and compare the bind address with expected routing.",
+          "az": "Inspect listening sockets and compare the bind address with expected routing."
+        },
+        "explanation": {
+          "en": "A loopback-only listener may not be reachable through the intended network path.",
+          "az": "A loopback-only listener may not be reachable through the intended network path."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Print all environment variables into a shared log.",
+          "az": "Print all environment variables into a shared log."
+        },
+        "explanation": {
+          "en": "That can expose credentials and is not a targeted diagnostic.",
+          "az": "That can expose credentials and is not a targeted diagnostic."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Delete the deployment before collecting evidence.",
+          "az": "Delete the deployment before collecting evidence."
+        },
+        "explanation": {
+          "en": "Destructive mutation loses useful evidence and is not a read-only observation.",
+          "az": "Destructive mutation loses useful evidence and is not a read-only observation."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Inspect the process and its effective startup configuration.",
+          "az": "Inspect the process and its effective startup configuration."
+        },
+        "explanation": {
+          "en": "This can identify the running executable and configured port.",
+          "az": "This can identify the running executable and configured port."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Collect targeted process and socket evidence without dumping secrets or changing the service.",
+      "az": "Collect targeted process and socket evidence without dumping secrets or changing the service."
+    },
+    "lessonId": "devops-linux-git-networking",
+    "practiceOnly": true,
+    "sourceIds": ["git-branching", "linux-user-commands", "http-semantics-9110"]
+  },
+  {
+    "id": "devops-linux-git-networking-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "An HTTP readiness endpoint returns 200. What conclusion is justified from that response alone?",
+      "az": "An HTTP readiness endpoint returns 200. What conclusion is justified from that response alone?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Every customer payment workflow is working.",
+          "az": "Every customer payment workflow is working."
+        },
+        "explanation": {
+          "en": "A health endpoint may not cover the complete business transaction.",
+          "az": "A health endpoint may not cover the complete business transaction."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The current branch was built and deployed without dependency changes.",
+          "az": "The current branch was built and deployed without dependency changes."
+        },
+        "explanation": {
+          "en": "The status code does not establish build provenance.",
+          "az": "The status code does not establish build provenance."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "That endpoint returned a successful HTTP response at the observed time.",
+          "az": "That endpoint returned a successful HTTP response at the observed time."
+        },
+        "explanation": {
+          "en": "The observation is specific to the requested endpoint and time.",
+          "az": "The observation is specific to the requested endpoint and time."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Distinguish a transport/application check from runtime provenance and an end-to-end business outcome.",
+      "az": "Distinguish a transport/application check from runtime provenance and an end-to-end business outcome."
+    },
+    "lessonId": "devops-linux-git-networking",
+    "practiceOnly": true,
+    "sourceIds": ["git-branching", "linux-user-commands", "http-semantics-9110"]
+  },
+  {
+    "id": "devops-docker-containers-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "The tag app:latest points to different bytes today than yesterday. Which reference better identifies the exact selected image content?",
+      "az": "The tag app:latest points to different bytes today than yesterday. Which reference better identifies the exact selected image content?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The directory name of the source checkout.",
+          "az": "The directory name of the source checkout."
+        },
+        "explanation": {
+          "en": "A source directory does not identify the image bytes.",
+          "az": "A source directory does not identify the image bytes."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A reviewed image digest.",
+          "az": "A reviewed image digest."
+        },
+        "explanation": {
+          "en": "The digest identifies content rather than a mutable name.",
+          "az": "The digest identifies content rather than a mutable name."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The same latest tag written in uppercase.",
+          "az": "The same latest tag written in uppercase."
+        },
+        "explanation": {
+          "en": "Changing case does not create an immutable content identity.",
+          "az": "Changing case does not create an immutable content identity."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "A digest identifies bytes, but still needs a trusted build, review and update process.",
+      "az": "A digest identifies bytes, but still needs a trusted build, review and update process."
+    },
+    "lessonId": "devops-docker-containers",
+    "practiceOnly": true,
+    "sourceIds": ["docker-build-practices"]
+  },
+  {
+    "id": "devops-docker-containers-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "A secret is copied into an image in one layer and deleted in a later layer. What is the main problem?",
+      "az": "A secret is copied into an image in one layer and deleted in a later layer. What is the main problem?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The secret becomes safe because the final directory listing omits it.",
+          "az": "The secret becomes safe because the final directory listing omits it."
+        },
+        "explanation": {
+          "en": "Final filesystem visibility is not the same as absence from image history.",
+          "az": "Final filesystem visibility is not the same as absence from image history."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The image digest automatically encrypts every layer.",
+          "az": "The image digest automatically encrypts every layer."
+        },
+        "explanation": {
+          "en": "A digest is a content identifier, not encryption.",
+          "az": "A digest is a content identifier, not encryption."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The secret can remain in earlier image-layer content.",
+          "az": "The secret can remain in earlier image-layer content."
+        },
+        "explanation": {
+          "en": "A later deletion does not erase previously built layer data.",
+          "az": "A later deletion does not erase previously built layer data."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Keep secrets out of image layers and use appropriate build/runtime secret mechanisms rather than copying and deleting them.",
+      "az": "Keep secrets out of image layers and use appropriate build/runtime secret mechanisms rather than copying and deleting them."
+    },
+    "lessonId": "devops-docker-containers",
+    "practiceOnly": true,
+    "sourceIds": ["docker-build-practices"]
+  },
+  {
+    "id": "devops-docker-containers-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "Which TWO choices support a smaller and more controlled runtime image?",
+      "az": "Which TWO choices support a smaller and more controlled runtime image?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Run under a suitable non-root identity with only required permissions.",
+          "az": "Run under a suitable non-root identity with only required permissions."
+        },
+        "explanation": {
+          "en": "Reduced runtime privilege limits the effect of a compromise.",
+          "az": "Reduced runtime privilege limits the effect of a compromise."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Include the entire home directory to preserve convenience files.",
+          "az": "Include the entire home directory to preserve convenience files."
+        },
+        "explanation": {
+          "en": "That broadens image contents and may include sensitive data.",
+          "az": "That broadens image contents and may include sensitive data."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat the container writable layer as durable database storage.",
+          "az": "Treat the container writable layer as durable database storage."
+        },
+        "explanation": {
+          "en": "Container replacement can discard that state; storage needs a separate contract.",
+          "az": "Container replacement can discard that state; storage needs a separate contract."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Use a build stage and copy only required runtime output into the final stage.",
+          "az": "Use a build stage and copy only required runtime output into the final stage."
+        },
+        "explanation": {
+          "en": "Multi-stage builds can omit build tools and intermediate files.",
+          "az": "Multi-stage builds can omit build tools and intermediate files."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Minimize runtime contents and privilege. Durable data and secrets require deliberate external management.",
+      "az": "Minimize runtime contents and privilege. Durable data and secrets require deliberate external management."
+    },
+    "lessonId": "devops-docker-containers",
+    "practiceOnly": true,
+    "sourceIds": ["docker-build-practices"]
+  },
+  {
+    "id": "devops-docker-containers-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "A build uses --no-cache with a mutable base-image tag. Does this alone guarantee the newest base image is fetched?",
+      "az": "A build uses --no-cache with a mutable base-image tag. Does this alone guarantee the newest base image is fetched?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Yes; the tag itself cannot change.",
+          "az": "Yes; the tag itself cannot change."
+        },
+        "explanation": {
+          "en": "Tags can be updated to point at different content.",
+          "az": "Tags can be updated to point at different content."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "No; pulling the base image is a separate concern, such as using --pull.",
+          "az": "No; pulling the base image is a separate concern, such as using --pull."
+        },
+        "explanation": {
+          "en": "Ignoring build cache and fetching a newer base are different operations.",
+          "az": "Ignoring build cache and fetching a newer base are different operations."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Yes; no-cache is a guarantee about remote tag freshness.",
+          "az": "Yes; no-cache is a guarantee about remote tag freshness."
+        },
+        "explanation": {
+          "en": "The option does not by itself establish a new base pull.",
+          "az": "The option does not by itself establish a new base pull."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Understand cache invalidation and base-image resolution separately; prefer a reviewed identity and intentional updates.",
+      "az": "Understand cache invalidation and base-image resolution separately; prefer a reviewed identity and intentional updates."
+    },
+    "lessonId": "devops-docker-containers",
+    "practiceOnly": true,
+    "sourceIds": ["docker-build-practices"]
+  },
+  {
+    "id": "devops-ci-cd-artifacts-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "Tests pass on artifact A. A release job rebuilds from the same commit with floating dependencies and produces artifact B. Which statement is accurate?",
+      "az": "Tests pass on artifact A. A release job rebuilds from the same commit with floating dependencies and produces artifact B. Which statement is accurate?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The test evidence for A does not automatically establish B behaves identically.",
+          "az": "The test evidence for A does not automatically establish B behaves identically."
+        },
+        "explanation": {
+          "en": "A rebuild can resolve different dependencies or use a different environment.",
+          "az": "A rebuild can resolve different dependencies or use a different environment."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The commit hash proves A and B contain identical bytes.",
+          "az": "The commit hash proves A and B contain identical bytes."
+        },
+        "explanation": {
+          "en": "Source identity alone does not determine every build input.",
+          "az": "Source identity alone does not determine every build input."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Renaming B to A restores the original test evidence.",
+          "az": "Renaming B to A restores the original test evidence."
+        },
+        "explanation": {
+          "en": "An artifact name cannot substitute for content and provenance.",
+          "az": "An artifact name cannot substitute for content and provenance."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Promote the tested immutable artifact where feasible, or validate the new artifact explicitly.",
+      "az": "Promote the tested immutable artifact where feasible, or validate the new artifact explicitly."
+    },
+    "lessonId": "devops-ci-cd-artifacts",
+    "practiceOnly": true,
+    "sourceIds": ["github-actions-secure-use", "docker-build-practices"]
+  },
+  {
+    "id": "devops-ci-cd-artifacts-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "A privileged job checks out and executes a forked pull request while deployment credentials are available. What is the primary trust problem?",
+      "az": "A privileged job checks out and executes a forked pull request while deployment credentials are available. What is the primary trust problem?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Tests ran before the deployment step.",
+          "az": "Tests ran before the deployment step."
+        },
+        "explanation": {
+          "en": "The ordering does not remove credentials from the untrusted execution context.",
+          "az": "The ordering does not remove credentials from the untrusted execution context."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Untrusted code can execute with release credentials.",
+          "az": "Untrusted code can execute with release credentials."
+        },
+        "explanation": {
+          "en": "The job crosses a trust boundary by combining untrusted execution and privilege.",
+          "az": "The job crosses a trust boundary by combining untrusted execution and privilege."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The job name does not include the word secure.",
+          "az": "The job name does not include the word secure."
+        },
+        "explanation": {
+          "en": "Names do not enforce permissions.",
+          "az": "Names do not enforce permissions."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Separate unprivileged PR validation from trusted, constrained release execution.",
+      "az": "Separate unprivileged PR validation from trusted, constrained release execution."
+    },
+    "lessonId": "devops-ci-cd-artifacts",
+    "practiceOnly": true,
+    "sourceIds": ["github-actions-secure-use", "docker-build-practices"]
+  },
+  {
+    "id": "devops-ci-cd-artifacts-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "Which TWO controls improve a GitHub Actions release trust boundary?",
+      "az": "Which TWO controls improve a GitHub Actions release trust boundary?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Constrain federated identity trust to the intended repository, workflow and environment.",
+          "az": "Constrain federated identity trust to the intended repository, workflow and environment."
+        },
+        "explanation": {
+          "en": "Short-lived credentials still require a specific authorization policy.",
+          "az": "Short-lived credentials still require a specific authorization policy."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Interpolate a pull-request title directly into shell source.",
+          "az": "Interpolate a pull-request title directly into shell source."
+        },
+        "explanation": {
+          "en": "Untrusted input can become executable shell syntax.",
+          "az": "Untrusted input can become executable shell syntax."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Assume secret masking removes every possible encoded secret from logs.",
+          "az": "Assume secret masking removes every possible encoded secret from logs."
+        },
+        "explanation": {
+          "en": "Masking is not a guarantee for every transformed representation.",
+          "az": "Masking is not a guarantee for every transformed representation."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Use minimum required token permissions and review full-SHA action pins.",
+          "az": "Use minimum required token permissions and review full-SHA action pins."
+        },
+        "explanation": {
+          "en": "Least privilege and reviewed immutable action references constrain exposure.",
+          "az": "Least privilege and reviewed immutable action references constrain exposure."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Control permissions, dependencies, inputs and identity claims together; OIDC alone is not an authorization model.",
+      "az": "Control permissions, dependencies, inputs and identity claims together; OIDC alone is not an authorization model."
+    },
+    "lessonId": "devops-ci-cd-artifacts",
+    "practiceOnly": true,
+    "sourceIds": ["github-actions-secure-use", "docker-build-practices"]
+  },
+  {
+    "id": "devops-ci-cd-artifacts-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 2,
+    "text": {
+      "en": "A deployment is manually approved, but the job deploys whatever image a mutable tag resolves to later. What is missing?",
+      "az": "A deployment is manually approved, but the job deploys whatever image a mutable tag resolves to later. What is missing?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A binding between approval and the exact artifact identity deployed.",
+          "az": "A binding between approval and the exact artifact identity deployed."
+        },
+        "explanation": {
+          "en": "Approval should refer to the reviewed artifact and its evidence.",
+          "az": "Approval should refer to the reviewed artifact and its evidence."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "An additional motivational name for the pipeline.",
+          "az": "An additional motivational name for the pipeline."
+        },
+        "explanation": {
+          "en": "A name does not constrain content selection.",
+          "az": "A name does not constrain content selection."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A second rebuild after approval.",
+          "az": "A second rebuild after approval."
+        },
+        "explanation": {
+          "en": "That can create yet another unreviewed artifact.",
+          "az": "That can create yet another unreviewed artifact."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Record and deploy the approved immutable identity, with a known recovery reference and compatible state.",
+      "az": "Record and deploy the approved immutable identity, with a known recovery reference and compatible state."
+    },
+    "lessonId": "devops-ci-cd-artifacts",
+    "practiceOnly": true,
+    "sourceIds": ["github-actions-secure-use", "docker-build-practices"]
+  },
+  {
+    "id": "devops-kubernetes-delivery-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "A Pod process is alive but cannot currently serve traffic. Which probe should normally control whether it receives Service traffic?",
+      "az": "A Pod process is alive but cannot currently serve traffic. Which probe should normally control whether it receives Service traffic?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Liveness alone.",
+          "az": "Liveness alone."
+        },
+        "explanation": {
+          "en": "A liveness failure can trigger a restart; it is not the same routing decision.",
+          "az": "A liveness failure can trigger a restart; it is not the same routing decision."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The Git commit timestamp.",
+          "az": "The Git commit timestamp."
+        },
+        "explanation": {
+          "en": "Commit metadata does not establish serving readiness.",
+          "az": "Commit metadata does not establish serving readiness."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Readiness.",
+          "az": "Readiness."
+        },
+        "explanation": {
+          "en": "A readiness failure marks the Pod unready for normal Service traffic.",
+          "az": "A readiness failure marks the Pod unready for normal Service traffic."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Design readiness around safe traffic handling. Avoid restarting healthy processes merely because a shared dependency is briefly unavailable.",
+      "az": "Design readiness around safe traffic handling. Avoid restarting healthy processes merely because a shared dependency is briefly unavailable."
+    },
+    "lessonId": "devops-kubernetes-delivery",
+    "practiceOnly": true,
+    "sourceIds": ["kubernetes-deployments", "kubernetes-probes"]
+  },
+  {
+    "id": "devops-kubernetes-delivery-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "A service needs a long initialization period. What is the role of a startup probe?",
+      "az": "A service needs a long initialization period. What is the role of a startup probe?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Gate liveness and readiness probing until startup has succeeded.",
+          "az": "Gate liveness and readiness probing until startup has succeeded."
+        },
+        "explanation": {
+          "en": "A startup probe protects initialization from premature health-check failure behavior.",
+          "az": "A startup probe protects initialization from premature health-check failure behavior."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Guarantee every future customer transaction succeeds.",
+          "az": "Guarantee every future customer transaction succeeds."
+        },
+        "explanation": {
+          "en": "Startup success establishes neither all dependencies nor every business operation.",
+          "az": "Startup success establishes neither all dependencies nor every business operation."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Automatically migrate and roll back the production database.",
+          "az": "Automatically migrate and roll back the production database."
+        },
+        "explanation": {
+          "en": "Probes do not provide database migration recovery.",
+          "az": "Probes do not provide database migration recovery."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Probe configuration expresses startup and health behavior, not a complete delivery or data-recovery strategy.",
+      "az": "Probe configuration expresses startup and health behavior, not a complete delivery or data-recovery strategy."
+    },
+    "lessonId": "devops-kubernetes-delivery",
+    "practiceOnly": true,
+    "sourceIds": ["kubernetes-deployments", "kubernetes-probes"]
+  },
+  {
+    "id": "devops-kubernetes-delivery-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "Which TWO items belong in a review of a Kubernetes rolling release?",
+      "az": "Which TWO items belong in a review of a Kubernetes rolling release?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Compatibility of the new application with the current schema and recovery plan.",
+          "az": "Compatibility of the new application with the current schema and recovery plan."
+        },
+        "explanation": {
+          "en": "Changing image versions does not automatically reverse persisted data changes.",
+          "az": "Changing image versions does not automatically reverse persisted data changes."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Assume a progress deadline performs a complete automatic rollback.",
+          "az": "Assume a progress deadline performs a complete automatic rollback."
+        },
+        "explanation": {
+          "en": "A progress deadline reports a stalled rollout; it is not a complete rollback mechanism.",
+          "az": "A progress deadline reports a stalled rollout; it is not a complete rollback mechanism."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Ignore readiness because a container process exists.",
+          "az": "Ignore readiness because a container process exists."
+        },
+        "explanation": {
+          "en": "A running process can still be unable to serve requests.",
+          "az": "A running process can still be unable to serve requests."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Capacity under maxSurge/maxUnavailable and resource requests.",
+          "az": "Capacity under maxSurge/maxUnavailable and resource requests."
+        },
+        "explanation": {
+          "en": "Rollout availability depends on actual scheduling and capacity constraints.",
+          "az": "Rollout availability depends on actual scheduling and capacity constraints."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Review scheduling, readiness, immutable image identity and data compatibility as related but separate concerns.",
+      "az": "Review scheduling, readiness, immutable image identity and data compatibility as related but separate concerns."
+    },
+    "lessonId": "devops-kubernetes-delivery",
+    "practiceOnly": true,
+    "sourceIds": ["kubernetes-deployments", "kubernetes-probes"]
+  },
+  {
+    "id": "devops-kubernetes-delivery-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "A Deployment reports ProgressDeadlineExceeded. What should the operator infer?",
+      "az": "A Deployment reports ProgressDeadlineExceeded. What should the operator infer?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The database and application have both automatically returned to their previous state.",
+          "az": "The database and application have both automatically returned to their previous state."
+        },
+        "explanation": {
+          "en": "Deployment progress detection does not guarantee this recovery.",
+          "az": "Deployment progress detection does not guarantee this recovery."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "All Pods are necessarily healthy because a deadline exists.",
+          "az": "All Pods are necessarily healthy because a deadline exists."
+        },
+        "explanation": {
+          "en": "The failure condition indicates the opposite of that assumption.",
+          "az": "The failure condition indicates the opposite of that assumption."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The rollout failed to make the required progress; investigate and follow the recovery policy.",
+          "az": "The rollout failed to make the required progress; investigate and follow the recovery policy."
+        },
+        "explanation": {
+          "en": "The condition provides failure evidence, not proof that recovery already occurred.",
+          "az": "The condition provides failure evidence, not proof that recovery already occurred."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Do not treat rollout failure detection as a guarantee of automatic application and database recovery.",
+      "az": "Do not treat rollout failure detection as a guarantee of automatic application and database recovery."
+    },
+    "lessonId": "devops-kubernetes-delivery",
+    "practiceOnly": true,
+    "sourceIds": ["kubernetes-deployments", "kubernetes-probes"]
+  },
+  {
+    "id": "devops-terraform-iac-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "A Terraform variable is marked sensitive. Which claim is accurate?",
+      "az": "A Terraform variable is marked sensitive. Which claim is accurate?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Everyone with state access is unable to recover the value.",
+          "az": "Everyone with state access is unable to recover the value."
+        },
+        "explanation": {
+          "en": "Access to stored state can expose sensitive data.",
+          "az": "Access to stored state can expose sensitive data."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The flag can redact display, but the value may still be stored in state or plan data.",
+          "az": "The flag can redact display, but the value may still be stored in state or plan data."
+        },
+        "explanation": {
+          "en": "Redaction and omission from persisted data are different properties.",
+          "az": "Redaction and omission from persisted data are different properties."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The value is guaranteed absent from every state file.",
+          "az": "The value is guaranteed absent from every state file."
+        },
+        "explanation": {
+          "en": "Sensitive marking alone does not establish absence from state.",
+          "az": "Sensitive marking alone does not establish absence from state."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Protect state and plan artifacts. Ephemeral and write-only features have version and provider constraints that must be checked.",
+      "az": "Protect state and plan artifacts. Ephemeral and write-only features have version and provider constraints that must be checked."
+    },
+    "lessonId": "devops-terraform-iac",
+    "practiceOnly": true,
+    "sourceIds": ["terraform-state-purpose", "terraform-sensitive-data"]
+  },
+  {
+    "id": "devops-terraform-iac-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "Two engineers plan to change the same infrastructure through Terraform. What coordination should they verify?",
+      "az": "Two engineers plan to change the same infrastructure through Terraform. What coordination should they verify?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Every backend provides identical locking automatically.",
+          "az": "Every backend provides identical locking automatically."
+        },
+        "explanation": {
+          "en": "Lock support is not universal.",
+          "az": "Lock support is not universal."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A local filename prevents concurrent remote changes.",
+          "az": "A local filename prevents concurrent remote changes."
+        },
+        "explanation": {
+          "en": "A filename does not coordinate independent writers.",
+          "az": "A filename does not coordinate independent writers."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The chosen backend supports appropriate locking and access controls for their workflow.",
+          "az": "The chosen backend supports appropriate locking and access controls for their workflow."
+        },
+        "explanation": {
+          "en": "Coordination behavior depends on backend capabilities and configuration.",
+          "az": "Coordination behavior depends on backend capabilities and configuration."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Review backend-specific state coordination, authorization and recovery before applying concurrent changes.",
+      "az": "Review backend-specific state coordination, authorization and recovery before applying concurrent changes."
+    },
+    "lessonId": "devops-terraform-iac",
+    "practiceOnly": true,
+    "sourceIds": ["terraform-state-purpose", "terraform-sensitive-data"]
+  },
+  {
+    "id": "devops-terraform-iac-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "Which TWO statements correctly distinguish configuration, state and actual infrastructure?",
+      "az": "Which TWO statements correctly distinguish configuration, state and actual infrastructure?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "State maps managed resource instances to remote objects and retains management data.",
+          "az": "State maps managed resource instances to remote objects and retains management data."
+        },
+        "explanation": {
+          "en": "Terraform uses state to relate its model to actual infrastructure.",
+          "az": "Terraform uses state to relate its model to actual infrastructure."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "State is only an expendable console log.",
+          "az": "State is only an expendable console log."
+        },
+        "explanation": {
+          "en": "Losing or exposing state has operational and confidentiality consequences.",
+          "az": "Losing or exposing state has operational and confidentiality consequences."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A saved plan proves nobody can change remote infrastructure afterward.",
+          "az": "A saved plan proves nobody can change remote infrastructure afterward."
+        },
+        "explanation": {
+          "en": "Out-of-band change can still occur and alter assumptions.",
+          "az": "Out-of-band change can still occur and alter assumptions."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Configuration describes intended resources and relationships.",
+          "az": "Configuration describes intended resources and relationships."
+        },
+        "explanation": {
+          "en": "It represents the desired management model.",
+          "az": "It represents the desired management model."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Review the proposed transition against current evidence. Do not confuse a plan with a permanent lock on real-world state.",
+      "az": "Review the proposed transition against current evidence. Do not confuse a plan with a permanent lock on real-world state."
+    },
+    "lessonId": "devops-terraform-iac",
+    "practiceOnly": true,
+    "sourceIds": ["terraform-state-purpose", "terraform-sensitive-data"]
+  },
+  {
+    "id": "devops-terraform-iac-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "A reviewed plan unexpectedly proposes replacing a database. What is the best next action?",
+      "az": "A reviewed plan unexpectedly proposes replacing a database. What is the best next action?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Delete the state file so the replacement disappears from the output.",
+          "az": "Delete the state file so the replacement disappears from the output."
+        },
+        "explanation": {
+          "en": "That damages management evidence rather than resolving the cause.",
+          "az": "That damages management evidence rather than resolving the cause."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Investigate the cause, impact, backup/restore evidence and approved recovery path before applying.",
+          "az": "Investigate the cause, impact, backup/restore evidence and approved recovery path before applying."
+        },
+        "explanation": {
+          "en": "A destructive transition needs an understood data and availability consequence.",
+          "az": "A destructive transition needs an understood data and availability consequence."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Apply immediately because a plan is always safe.",
+          "az": "Apply immediately because a plan is always safe."
+        },
+        "explanation": {
+          "en": "A plan describes changes; it does not certify their safety.",
+          "az": "A plan describes changes; it does not certify their safety."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Inspect drift, configuration and provider behavior, then review the concrete change with its data-recovery implications.",
+      "az": "Inspect drift, configuration and provider behavior, then review the concrete change with its data-recovery implications."
+    },
+    "lessonId": "devops-terraform-iac",
+    "practiceOnly": true,
+    "sourceIds": ["terraform-state-purpose", "terraform-sensitive-data"]
+  },
+  {
+    "id": "devops-sre-incidents-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "An SLO allows 99.9% successful eligible requests. There are 100,000 eligible requests and 80 failures in the window. What remains of the request-based error budget?",
+      "az": "An SLO allows 99.9% successful eligible requests. There are 100,000 eligible requests and 80 failures in the window. What remains of the request-based error budget?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "20 failed requests.",
+          "az": "20 failed requests."
+        },
+        "explanation": {
+          "en": "The allowance is 100 failures; 80 have been consumed.",
+          "az": "The allowance is 100 failures; 80 have been consumed."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "20 minutes of downtime.",
+          "az": "20 minutes of downtime."
+        },
+        "explanation": {
+          "en": "A request-based budget cannot be converted to minutes without a separate model.",
+          "az": "A request-based budget cannot be converted to minutes without a separate model."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "80 successful requests.",
+          "az": "80 successful requests."
+        },
+        "explanation": {
+          "en": "Failures consumed the budget; successful requests are not the remaining allowance.",
+          "az": "Failures consumed the budget; successful requests are not the remaining allowance."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Keep the SLI population, window and budget units explicit: 100000 × 0.001 = 100 allowed failures.",
+      "az": "Keep the SLI population, window and budget units explicit: 100000 × 0.001 = 100 allowed failures."
+    },
+    "lessonId": "devops-sre-incidents",
+    "practiceOnly": true,
+    "sourceIds": ["google-sre-slos", "google-sre-incidents", "azure-recovery-targets"]
+  },
+  {
+    "id": "devops-sre-incidents-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "The RTO is 60 minutes and RPO is 15 minutes. A restore takes 95 minutes and recovers data from 40 minutes before the incident. Which targets are missed?",
+      "az": "The RTO is 60 minutes and RPO is 15 minutes. A restore takes 95 minutes and recovers data from 40 minutes before the incident. Which targets are missed?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Neither, because the service eventually recovered.",
+          "az": "Neither, because the service eventually recovered."
+        },
+        "explanation": {
+          "en": "Eventual recovery is weaker than satisfying quantified targets.",
+          "az": "Eventual recovery is weaker than satisfying quantified targets."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Both RTO and RPO.",
+          "az": "Both RTO and RPO."
+        },
+        "explanation": {
+          "en": "Recovery took too long and the recovered data is too old for the stated targets.",
+          "az": "Recovery took too long and the recovered data is too old for the stated targets."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Only RTO, because any backup meets RPO.",
+          "az": "Only RTO, because any backup meets RPO."
+        },
+        "explanation": {
+          "en": "Backup existence does not establish an acceptable recovery point.",
+          "az": "Backup existence does not establish an acceptable recovery point."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Measure recovery time and recoverable data loss separately through restore exercises.",
+      "az": "Measure recovery time and recoverable data loss separately through restore exercises."
+    },
+    "lessonId": "devops-sre-incidents",
+    "practiceOnly": true,
+    "sourceIds": ["google-sre-slos", "google-sre-incidents", "azure-recovery-targets"]
+  },
+  {
+    "id": "devops-sre-incidents-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "Which TWO actions support effective incident response?",
+      "az": "Which TWO actions support effective incident response?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Record a timeline and follow up on system-level contributing conditions.",
+          "az": "Record a timeline and follow up on system-level contributing conditions."
+        },
+        "explanation": {
+          "en": "Evidence supports learning and concrete prevention or detection improvements.",
+          "az": "Evidence supports learning and concrete prevention or detection improvements."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Wait for a complete root-cause explanation before any mitigation.",
+          "az": "Wait for a complete root-cause explanation before any mitigation."
+        },
+        "explanation": {
+          "en": "Restoring service safely can take priority over final causal analysis.",
+          "az": "Restoring service safely can take priority over final causal analysis."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Treat naming an individual at fault as a complete corrective action.",
+          "az": "Treat naming an individual at fault as a complete corrective action."
+        },
+        "explanation": {
+          "en": "That does not address system conditions or recovery capability.",
+          "az": "That does not address system conditions or recovery capability."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Assign coordination and communications responsibilities while responders mitigate the impact.",
+          "az": "Assign coordination and communications responsibilities while responders mitigate the impact."
+        },
+        "explanation": {
+          "en": "Clear responsibilities reduce conflicting changes and lost communication.",
+          "az": "Clear responsibilities reduce conflicting changes and lost communication."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Coordinate mitigation, preserve evidence and convert learning into owned follow-up actions.",
+      "az": "Coordinate mitigation, preserve evidence and convert learning into owned follow-up actions."
+    },
+    "lessonId": "devops-sre-incidents",
+    "practiceOnly": true,
+    "sourceIds": ["google-sre-slos", "google-sre-incidents", "azure-recovery-targets"]
+  },
+  {
+    "id": "devops-sre-incidents-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "devops",
+    "difficulty": 3,
+    "text": {
+      "en": "A backup job reports success every night, but no restore has been tested. What is still unproven?",
+      "az": "A backup job reports success every night, but no restore has been tested. What is still unproven?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "That a usable restoration can meet the required recovery time and data-loss targets.",
+          "az": "That a usable restoration can meet the required recovery time and data-loss targets."
+        },
+        "explanation": {
+          "en": "Backup completion is not end-to-end restore evidence.",
+          "az": "Backup completion is not end-to-end restore evidence."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "That the job ran at all.",
+          "az": "That the job ran at all."
+        },
+        "explanation": {
+          "en": "The scenario already supplies successful job evidence; the gap is restoration.",
+          "az": "The scenario already supplies successful job evidence; the gap is restoration."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "That recovery targets are unnecessary.",
+          "az": "That recovery targets are unnecessary."
+        },
+        "explanation": {
+          "en": "Targets still define the required capability.",
+          "az": "Targets still define the required capability."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Test restoration and dependencies under representative conditions; compare measured results with RTO and RPO.",
+      "az": "Test restoration and dependencies under representative conditions; compare measured results with RTO and RPO."
+    },
+    "lessonId": "devops-sre-incidents",
+    "practiceOnly": true,
+    "sourceIds": ["google-sre-slos", "google-sre-incidents", "azure-recovery-targets"]
+  },
+  {
+    "id": "data-analysis-grain-quality-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "Two February signups are eligible and fully observed. One activates. A paid-customer extract contains only that successful person. What is the correct signup activation rate?",
+      "az": "Two February signups are eligible and fully observed. One activates. A paid-customer extract contains only that successful person. What is the correct signup activation rate?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "100%, using only the paid-customer extract.",
+          "az": "100%, using only the paid-customer extract."
+        },
+        "explanation": {
+          "en": "Selecting only successful people removes the non-activator from the denominator.",
+          "az": "Selecting only successful people removes the non-activator from the denominator."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The number cannot be calculated because unsuccessful users should be excluded.",
+          "az": "The number cannot be calculated because unsuccessful users should be excluded."
+        },
+        "explanation": {
+          "en": "The scenario provides the complete eligible population.",
+          "az": "The scenario provides the complete eligible population."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "50%, using both eligible signups.",
+          "az": "50%, using both eligible signups."
+        },
+        "explanation": {
+          "en": "The denominator includes people who could have activated, including the non-activator.",
+          "az": "The denominator includes people who could have activated, including the non-activator."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Choose the denominator from eligibility, not from having already achieved the desired outcome.",
+      "az": "Choose the denominator from eligibility, not from having already achieved the desired outcome."
+    },
+    "lessonId": "data-analysis-grain-quality",
+    "practiceOnly": true,
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "postgres18-joins"]
+  },
+  {
+    "id": "data-analysis-grain-quality-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "An order header appears twice after joining to its two items. What changed?",
+      "az": "An order header appears twice after joining to its two items. What changed?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The output grain, which now has one row per matching item.",
+          "az": "The output grain, which now has one row per matching item."
+        },
+        "explanation": {
+          "en": "A one-to-many join repeats the header values.",
+          "az": "A one-to-many join repeats the header values."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The customer necessarily placed a second order.",
+          "az": "The customer necessarily placed a second order."
+        },
+        "explanation": {
+          "en": "Repeated joined rows do not establish another business event.",
+          "az": "Repeated joined rows do not establish another business event."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The original stored order amount necessarily changed.",
+          "az": "The original stored order amount necessarily changed."
+        },
+        "explanation": {
+          "en": "A join can repeat a value without modifying source data.",
+          "az": "A join can repeat a value without modifying source data."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Declare the grain before and after each transformation; count keys to detect multiplication.",
+      "az": "Declare the grain before and after each transformation; count keys to detect multiplication."
+    },
+    "lessonId": "data-analysis-grain-quality",
+    "practiceOnly": true,
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "postgres18-joins"]
+  },
+  {
+    "id": "data-analysis-grain-quality-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "Which TWO fields help make a metric contract reproducible?",
+      "az": "Which TWO fields help make a metric contract reproducible?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Numerator, denominator and explicit event definition.",
+          "az": "Numerator, denominator and explicit event definition."
+        },
+        "explanation": {
+          "en": "They define the actual calculation.",
+          "az": "They define the actual calculation."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A favorable chart color with no source definition.",
+          "az": "A favorable chart color with no source definition."
+        },
+        "explanation": {
+          "en": "Appearance does not establish measurement meaning.",
+          "az": "Appearance does not establish measurement meaning."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A rule to remove every unsuccessful customer.",
+          "az": "A rule to remove every unsuccessful customer."
+        },
+        "explanation": {
+          "en": "That biases an outcome rate rather than specifying eligibility.",
+          "az": "That biases an outcome rate rather than specifying eligibility."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Eligible population and observation window.",
+          "az": "Eligible population and observation window."
+        },
+        "explanation": {
+          "en": "They establish who could contribute and when outcomes are measured.",
+          "az": "They establish who could contribute and when outcomes are measured."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Also retain source, timezone, exclusions, refresh/completeness information and an accountable owner.",
+      "az": "Also retain source, timezone, exclusions, refresh/completeness information and an accountable owner."
+    },
+    "lessonId": "data-analysis-grain-quality",
+    "practiceOnly": true,
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "postgres18-joins"]
+  },
+  {
+    "id": "data-analysis-grain-quality-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "A required order amount is missing. Under the lesson cleaning contract, what should happen?",
+      "az": "A required order amount is missing. Under the lesson cleaning contract, what should happen?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Replace it with zero without reporting a change.",
+          "az": "Replace it with zero without reporting a change."
+        },
+        "explanation": {
+          "en": "That changes the meaning and hides an assumption.",
+          "az": "That changes the meaning and hides an assumption."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Treat it as a duplicate of any other missing amount.",
+          "az": "Treat it as a duplicate of any other missing amount."
+        },
+        "explanation": {
+          "en": "Missingness does not establish that two rows represent the same order.",
+          "az": "Missingness does not establish that two rows represent the same order."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Quarantine it with a reason and include the exclusion in reconciliation.",
+          "az": "Quarantine it with a reason and include the exclusion in reconciliation."
+        },
+        "explanation": {
+          "en": "The amount is unknown rather than a measured zero.",
+          "az": "The amount is unknown rather than a measured zero."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Use an explicit field-specific policy and preserve an audit trail; missing and zero are different states.",
+      "az": "Use an explicit field-specific policy and preserve an audit trail; missing and zero are different states."
+    },
+    "lessonId": "data-analysis-grain-quality",
+    "practiceOnly": true,
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "postgres18-joins"]
+  },
+  {
+    "id": "sql-basics-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "A customer has no matching orders in a LEFT JOIN. Which expression counts zero matching orders for that customer?",
+      "az": "A customer has no matching orders in a LEFT JOIN. Which expression counts zero matching orders for that customer?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "SUM(DISTINCT c.customer_id).",
+          "az": "SUM(DISTINCT c.customer_id)."
+        },
+        "explanation": {
+          "en": "Customer identifiers are not the intended order count.",
+          "az": "Customer identifiers are not the intended order count."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "COUNT(o.order_id), when order_id is non-null on actual orders.",
+          "az": "COUNT(o.order_id), when order_id is non-null on actual orders."
+        },
+        "explanation": {
+          "en": "The null-extended unmatched row contributes no non-null order ID.",
+          "az": "The null-extended unmatched row contributes no non-null order ID."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "COUNT(*).",
+          "az": "COUNT(*)."
+        },
+        "explanation": {
+          "en": "It counts the retained output row and therefore returns one.",
+          "az": "It counts the retained output row and therefore returns one."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Select an aggregate that counts the intended entity at the joined grain.",
+      "az": "Select an aggregate that counts the intended entity at the joined grain."
+    },
+    "lessonId": "sql-basics",
+    "practiceOnly": true,
+    "sourceIds": ["postgres18-joins", "postgres18-windows"]
+  },
+  {
+    "id": "sql-basics-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "You need every customer and only their paid-order matches. Where should the paid-status qualification go in a customer-to-order LEFT JOIN?",
+      "az": "You need every customer and only their paid-order matches. Where should the paid-status qualification go in a customer-to-order LEFT JOIN?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Only in WHERE o.status = paid after the join.",
+          "az": "Only in WHERE o.status = paid after the join."
+        },
+        "explanation": {
+          "en": "That removes null-extended customers with no paid match.",
+          "az": "That removes null-extended customers with no paid match."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "In ORDER BY, because sorting filters unmatched rows.",
+          "az": "In ORDER BY, because sorting filters unmatched rows."
+        },
+        "explanation": {
+          "en": "ORDER BY does not filter rows.",
+          "az": "ORDER BY does not filter rows."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "In the ON condition for matching orders.",
+          "az": "In the ON condition for matching orders."
+        },
+        "explanation": {
+          "en": "This restricts matches while retaining customers with none.",
+          "az": "This restricts matches while retaining customers with none."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "The difference between ON and WHERE matters when preserving the complete left-side population.",
+      "az": "The difference between ON and WHERE matters when preserving the complete left-side population."
+    },
+    "lessonId": "sql-basics",
+    "practiceOnly": true,
+    "sourceIds": ["postgres18-joins", "postgres18-windows"]
+  },
+  {
+    "id": "sql-basics-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "Which TWO SQL statements are accurate?",
+      "az": "Which TWO SQL statements are accurate?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "HAVING can filter groups after aggregation.",
+          "az": "HAVING can filter groups after aggregation."
+        },
+        "explanation": {
+          "en": "It operates on grouped results rather than selecting individual input rows.",
+          "az": "It operates on grouped results rather than selecting individual input rows."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "SUM(DISTINCT amount) always fixes a one-to-many revenue join.",
+          "az": "SUM(DISTINCT amount) always fixes a one-to-many revenue join."
+        },
+        "explanation": {
+          "en": "Different valid orders can share the same amount and be incorrectly collapsed.",
+          "az": "Different valid orders can share the same amount and be incorrectly collapsed."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A query without ORDER BY guarantees insertion order.",
+          "az": "A query without ORDER BY guarantees insertion order."
+        },
+        "explanation": {
+          "en": "SQL output order is not guaranteed that way.",
+          "az": "SQL output order is not guaranteed that way."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "IS NULL tests for missing values.",
+          "az": "IS NULL tests for missing values."
+        },
+        "explanation": {
+          "en": "Ordinary equality to NULL does not act like an equality to a normal value.",
+          "az": "Ordinary equality to NULL does not act like an equality to a normal value."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Use the appropriate null test, aggregation stage and explicit ordering; repair grain rather than hiding fanout.",
+      "az": "Use the appropriate null test, aggregation stage and explicit ordering; repair grain rather than hiding fanout."
+    },
+    "lessonId": "sql-basics",
+    "practiceOnly": true,
+    "sourceIds": ["postgres18-joins", "postgres18-windows"]
+  },
+  {
+    "id": "sql-basics-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "The paid revenue is 16500 cents. A header-to-item join produces 17500 because o1 has two items and a 1000-cent header. What is the sound correction?",
+      "az": "The paid revenue is 16500 cents. A header-to-item join produces 17500 because o1 has two items and a 1000-cent header. What is the sound correction?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Divide all revenue by two.",
+          "az": "Divide all revenue by two."
+        },
+        "explanation": {
+          "en": "Only one order has two items; the duplication factor is not uniform.",
+          "az": "Only one order has two items; the duplication factor is not uniform."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Sum the additive item amounts or preserve one row per order before summing headers.",
+          "az": "Sum the additive item amounts or preserve one row per order before summing headers."
+        },
+        "explanation": {
+          "en": "Both approaches can respect the intended additive grain.",
+          "az": "Both approaches can respect the intended additive grain."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Subtract 1000 from every future report.",
+          "az": "Subtract 1000 from every future report."
+        },
+        "explanation": {
+          "en": "A hard-coded adjustment fails as data and item counts change.",
+          "az": "A hard-coded adjustment fails as data and item counts change."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Fix the relationship between grain and additive measure, then reconcile the resulting total.",
+      "az": "Fix the relationship between grain and additive measure, then reconcile the resulting total."
+    },
+    "lessonId": "sql-basics",
+    "practiceOnly": true,
+    "sourceIds": ["postgres18-joins", "postgres18-windows"]
+  },
+  {
+    "id": "data-sql-windows-cohorts-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 3,
+    "text": {
+      "en": "A customer has revenue rows for January and March, with February absent. What does LAG(revenue) on the March row return when ordered by month?",
+      "az": "A customer has revenue rows for January and March, with February absent. What does LAG(revenue) on the March row return when ordered by month?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The January row value.",
+          "az": "The January row value."
+        },
+        "explanation": {
+          "en": "LAG accesses the preceding row, not a guaranteed previous calendar month.",
+          "az": "LAG accesses the preceding row, not a guaranteed previous calendar month."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A measured February zero.",
+          "az": "A measured February zero."
+        },
+        "explanation": {
+          "en": "The absent month is not inserted automatically.",
+          "az": "The absent month is not inserted automatically."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The average of January and February.",
+          "az": "The average of January and February."
+        },
+        "explanation": {
+          "en": "LAG does not perform that aggregation.",
+          "az": "LAG does not perform that aggregation."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Use a calendar spine and an explicit missing-period policy when the question requires consecutive calendar months.",
+      "az": "Use a calendar spine and an explicit missing-period policy when the question requires consecutive calendar months."
+    },
+    "lessonId": "data-sql-windows-cohorts",
+    "practiceOnly": true,
+    "sourceIds": ["postgres18-windows", "postgres18-joins"]
+  },
+  {
+    "id": "data-sql-windows-cohorts-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 3,
+    "text": {
+      "en": "Data is complete through March. What should March first-paid-cohort month-one retention display?",
+      "az": "Data is complete through March. What should March first-paid-cohort month-one retention display?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "100%, because the cohort started in March.",
+          "az": "100%, because the cohort started in March."
+        },
+        "explanation": {
+          "en": "Entry activity is not next-month activity.",
+          "az": "Entry activity is not next-month activity."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Unobserved, because April is not yet in the observation window.",
+          "az": "Unobserved, because April is not yet in the observation window."
+        },
+        "explanation": {
+          "en": "A future outcome is not evidence of zero retention.",
+          "az": "A future outcome is not evidence of zero retention."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "0%, because no April row exists.",
+          "az": "0%, because no April row exists."
+        },
+        "explanation": {
+          "en": "The missing future period is right-censored, not a measured failure.",
+          "az": "The missing future period is right-censored, not a measured failure."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Keep unobserved periods distinct from observed periods with no qualifying activity.",
+      "az": "Keep unobserved periods distinct from observed periods with no qualifying activity."
+    },
+    "lessonId": "data-sql-windows-cohorts",
+    "practiceOnly": true,
+    "sourceIds": ["postgres18-windows", "postgres18-joins"]
+  },
+  {
+    "id": "data-sql-windows-cohorts-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "data-analysis",
+    "difficulty": 3,
+    "text": {
+      "en": "Which TWO choices support a deterministic row-by-row running paid total?",
+      "az": "Which TWO choices support a deterministic row-by-row running paid total?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "An explicit ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW frame.",
+          "az": "An explicit ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW frame."
+        },
+        "explanation": {
+          "en": "The frame states that accumulation proceeds through the current ordered row.",
+          "az": "The frame states that accumulation proceeds through the current ordered row."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Assuming a window ORDER BY also fixes final presentation order.",
+          "az": "Assuming a window ORDER BY also fixes final presentation order."
+        },
+        "explanation": {
+          "en": "A separate outer ORDER BY controls final result ordering.",
+          "az": "A separate outer ORDER BY controls final result ordering."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Removing PARTITION BY even though totals must restart per customer.",
+          "az": "Removing PARTITION BY even though totals must restart per customer."
+        },
+        "explanation": {
+          "en": "That would combine customers in the same accumulation.",
+          "az": "That would combine customers in the same accumulation."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "An ordering with a meaningful stable tie-breaker.",
+          "az": "An ordering with a meaningful stable tie-breaker."
+        },
+        "explanation": {
+          "en": "Equal timestamps otherwise leave row sequencing ambiguous.",
+          "az": "Equal timestamps otherwise leave row sequencing ambiguous."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Frame, partition and ordering express different parts of the intended calculation.",
+      "az": "Frame, partition and ordering express different parts of the intended calculation."
+    },
+    "lessonId": "data-sql-windows-cohorts",
+    "practiceOnly": true,
+    "sourceIds": ["postgres18-windows", "postgres18-joins"]
+  },
+  {
+    "id": "data-sql-windows-cohorts-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 3,
+    "text": {
+      "en": "February first-paid retention is 100% for u3, while February signup activation is 50% for u3 and u5. Why can both be correct?",
+      "az": "February first-paid retention is 100% for u3, while February signup activation is 50% for u3 and u5. Why can both be correct?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "They use different entry events, observation definitions and denominators.",
+          "az": "They use different entry events, observation definitions and denominators."
+        },
+        "explanation": {
+          "en": "Only u3 belongs to the February first-paid cohort; both are February signups.",
+          "az": "Only u3 belongs to the February first-paid cohort; both are February signups."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "One rate must be wrong because the month label matches.",
+          "az": "One rate must be wrong because the month label matches."
+        },
+        "explanation": {
+          "en": "A calendar label does not establish the same population or metric.",
+          "az": "A calendar label does not establish the same population or metric."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Activation and retention are always interchangeable names.",
+          "az": "Activation and retention are always interchangeable names."
+        },
+        "explanation": {
+          "en": "They measure different behaviors and windows.",
+          "az": "They measure different behaviors and windows."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "State cohort entry, activity and observation window instead of comparing percentages by month label alone.",
+      "az": "State cohort entry, activity and observation window instead of comparing percentages by month label alone."
+    },
+    "lessonId": "data-sql-windows-cohorts",
+    "practiceOnly": true,
+    "sourceIds": ["postgres18-windows", "postgres18-joins"]
+  },
+  {
+    "id": "data-python-pandas-cleaning-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "Orders may have many rows per customer, while the customer dimension must have one row per key. Which pandas merge validation matches this enrichment?",
+      "az": "Orders may have many rows per customer, while the customer dimension must have one row per key. Which pandas merge validation matches this enrichment?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "validate='many_to_many'.",
+          "az": "validate='many_to_many'."
+        },
+        "explanation": {
+          "en": "It permits multiplication and does not enforce the intended unique dimension.",
+          "az": "It permits multiplication and does not enforce the intended unique dimension."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "No validation, followed by dropping any repeated amount.",
+          "az": "No validation, followed by dropping any repeated amount."
+        },
+        "explanation": {
+          "en": "That can conceal key errors and remove valid equal-valued orders.",
+          "az": "That can conceal key errors and remove valid equal-valued orders."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "validate='many_to_one'.",
+          "az": "validate='many_to_one'."
+        },
+        "explanation": {
+          "en": "It asserts that the right-side customer key is unique.",
+          "az": "It asserts that the right-side customer key is unique."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Declare merge cardinality and investigate violations before aggregating money.",
+      "az": "Declare merge cardinality and investigate violations before aggregating money."
+    },
+    "lessonId": "data-python-pandas-cleaning",
+    "practiceOnly": true,
+    "sourceIds": ["pandas-missing-data", "pandas-merge-validation"]
+  },
+  {
+    "id": "data-python-pandas-cleaning-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "Two rows share an order ID but contain conflicting amounts and no reliable version ordering. What does the lesson lab do?",
+      "az": "Two rows share an order ID but contain conflicting amounts and no reliable version ordering. What does the lesson lab do?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Raise an error rather than choose a version arbitrarily.",
+          "az": "Raise an error rather than choose a version arbitrarily."
+        },
+        "explanation": {
+          "en": "The fixture has no correction rule that establishes which version is authoritative.",
+          "az": "The fixture has no correction rule that establishes which version is authoritative."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Keep whichever row happens to load first without reporting it.",
+          "az": "Keep whichever row happens to load first without reporting it."
+        },
+        "explanation": {
+          "en": "Input order is not a documented authority rule.",
+          "az": "Input order is not a documented authority rule."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Add the two amounts because repeated IDs mean two orders.",
+          "az": "Add the two amounts because repeated IDs mean two orders."
+        },
+        "explanation": {
+          "en": "The repeated key contradicts the one-order grain.",
+          "az": "The repeated key contradicts the one-order grain."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Exact repeated rows and conflicting versions require different policies.",
+      "az": "Exact repeated rows and conflicting versions require different policies."
+    },
+    "lessonId": "data-python-pandas-cleaning",
+    "practiceOnly": true,
+    "sourceIds": ["pandas-missing-data", "pandas-merge-validation"]
+  },
+  {
+    "id": "data-python-pandas-cleaning-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "Which TWO pandas behaviors need explicit attention in this exercise?",
+      "az": "Which TWO pandas behaviors need explicit attention in this exercise?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Null merge keys can match one another.",
+          "az": "Null merge keys can match one another."
+        },
+        "explanation": {
+          "en": "This differs from ordinary SQL equality-join behavior and may create unintended matches.",
+          "az": "This differs from ordinary SQL equality-join behavior and may create unintended matches."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "fillna(0) is automatically meaningful for every column.",
+          "az": "fillna(0) is automatically meaningful for every column."
+        },
+        "explanation": {
+          "en": "IDs, categories and unknown amounts do not share a universal zero policy.",
+          "az": "IDs, categories and unknown amounts do not share a universal zero policy."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A string identifier can safely be converted to a number in every dataset.",
+          "az": "A string identifier can safely be converted to a number in every dataset."
+        },
+        "explanation": {
+          "en": "That can erase meaningful leading zeros or fail for nonnumeric IDs.",
+          "az": "That can erase meaningful leading zeros or fail for nonnumeric IDs."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Use isna/notna to detect missing values.",
+          "az": "Use isna/notna to detect missing values."
+        },
+        "explanation": {
+          "en": "Equality to NaN is not a reliable missing-value test.",
+          "az": "Equality to NaN is not a reliable missing-value test."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Preserve identifier meaning and distinguish unknown observations from valid measured zeros.",
+      "az": "Preserve identifier meaning and distinguish unknown observations from valid measured zeros."
+    },
+    "lessonId": "data-python-pandas-cleaning",
+    "practiceOnly": true,
+    "sourceIds": ["pandas-missing-data", "pandas-merge-validation"]
+  },
+  {
+    "id": "data-python-pandas-cleaning-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "pandas and SQL independently aggregate the same cleaned orders. Which reconciliation is expected?",
+      "az": "pandas and SQL independently aggregate the same cleaned orders. Which reconciliation is expected?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "17500 paid cents, because the item join is always the correct grain.",
+          "az": "17500 paid cents, because the item join is always the correct grain."
+        },
+        "explanation": {
+          "en": "That is the deliberately inflated header sum after fanout.",
+          "az": "That is the deliberately inflated header sum after fanout."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "An extra paid order with zero amount replacing the missing value.",
+          "az": "An extra paid order with zero amount replacing the missing value."
+        },
+        "explanation": {
+          "en": "The stated cleaning policy quarantines that invalid row.",
+          "az": "The stated cleaning policy quarantines that invalid row."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "16500 paid cents, with monthly totals 4000, 6000 and 6500.",
+          "az": "16500 paid cents, with monthly totals 4000, 6000 and 6500."
+        },
+        "explanation": {
+          "en": "These are the fixture results after one exact duplicate and one invalid amount are excluded.",
+          "az": "These are the fixture results after one exact duplicate and one invalid amount are excluded."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Reconcile both totals and row-handling counts, not merely whether two scripts complete.",
+      "az": "Reconcile both totals and row-handling counts, not merely whether two scripts complete."
+    },
+    "lessonId": "data-python-pandas-cleaning",
+    "practiceOnly": true,
+    "sourceIds": ["pandas-missing-data", "pandas-merge-validation"]
+  },
+  {
+    "id": "data-excel-powerbi-models-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "In the teaching star schema, what grain should FactOrders have?",
+      "az": "In the teaching star schema, what grain should FactOrders have?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "One row per report color.",
+          "az": "One row per report color."
+        },
+        "explanation": {
+          "en": "Presentation categories do not define the business fact grain.",
+          "az": "Presentation categories do not define the business fact grain."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "One row per valid unique order.",
+          "az": "One row per valid unique order."
+        },
+        "explanation": {
+          "en": "This matches the additive order-level amount used by the measures.",
+          "az": "This matches the additive order-level amount used by the measures."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A mixture of order headers and item rows with repeated header amounts.",
+          "az": "A mixture of order headers and item rows with repeated header amounts."
+        },
+        "explanation": {
+          "en": "Mixing grains makes simple aggregation ambiguous and can inflate revenue.",
+          "az": "Mixing grains makes simple aggregation ambiguous and can inflate revenue."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "Consistent fact grain and unique dimension keys are foundations of the model.",
+      "az": "Consistent fact grain and unique dimension keys are foundations of the model."
+    },
+    "lessonId": "data-excel-powerbi-models",
+    "practiceOnly": true,
+    "sourceIds": ["powerbi-star-schema", "powerquery-data-types"]
+  },
+  {
+    "id": "data-excel-powerbi-models-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "A DAX paid-revenue measure changes when a February report filter is applied. What explains this?",
+      "az": "A DAX paid-revenue measure changes when a February report filter is applied. What explains this?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "The measure permanently edits the raw CSV.",
+          "az": "The measure permanently edits the raw CSV."
+        },
+        "explanation": {
+          "en": "A report measure does not imply source mutation.",
+          "az": "A report measure does not imply source mutation."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Every measure is a stored row-by-row column.",
+          "az": "Every measure is a stored row-by-row column."
+        },
+        "explanation": {
+          "en": "Measures and calculated columns have different evaluation behavior.",
+          "az": "Measures and calculated columns have different evaluation behavior."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The measure is evaluated in the current filter context.",
+          "az": "The measure is evaluated in the current filter context."
+        },
+        "explanation": {
+          "en": "The date filter changes which related fact rows contribute.",
+          "az": "The date filter changes which related fact rows contribute."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Review relationships and filter context when interpreting report-level calculations.",
+      "az": "Review relationships and filter context when interpreting report-level calculations."
+    },
+    "lessonId": "data-excel-powerbi-models",
+    "practiceOnly": true,
+    "sourceIds": ["powerbi-star-schema", "powerquery-data-types"]
+  },
+  {
+    "id": "data-excel-powerbi-models-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "Which TWO checks belong in Excel/Power Query preparation and modeling?",
+      "az": "Which TWO checks belong in Excel/Power Query preparation and modeling?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Verify dimension-key uniqueness before creating one-to-many relationships.",
+          "az": "Verify dimension-key uniqueness before creating one-to-many relationships."
+        },
+        "explanation": {
+          "en": "Duplicate dimension keys violate the intended relationship cardinality.",
+          "az": "Duplicate dimension keys violate the intended relationship cardinality."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Assume a refreshed chart proves the source range contains every new row.",
+          "az": "Assume a refreshed chart proves the source range contains every new row."
+        },
+        "explanation": {
+          "en": "A refresh can operate on an incomplete source range.",
+          "az": "A refresh can operate on an incomplete source range."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Make every relationship bidirectional without reviewing ambiguity.",
+          "az": "Make every relationship bidirectional without reviewing ambiguity."
+        },
+        "explanation": {
+          "en": "Filter direction should be an intentional modeling decision.",
+          "az": "Filter direction should be an intentional modeling decision."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Specify the intended locale for ambiguous date conversions.",
+          "az": "Specify the intended locale for ambiguous date conversions."
+        },
+        "explanation": {
+          "en": "A syntactically valid conversion can still assign the wrong calendar date.",
+          "az": "A syntactically valid conversion can still assign the wrong calendar date."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "Repeatable preparation, explicit types and deliberate relationships support trustworthy measures.",
+      "az": "Repeatable preparation, explicit types and deliberate relationships support trustworthy measures."
+    },
+    "lessonId": "data-excel-powerbi-models",
+    "practiceOnly": true,
+    "sourceIds": ["powerbi-star-schema", "powerquery-data-types"]
+  },
+  {
+    "id": "data-excel-powerbi-models-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "A region has 1 success out of 2 and another has 90 out of 100. What is the combined success rate?",
+      "az": "A region has 1 success out of 2 and another has 90 out of 100. What is the combined success rate?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "140%, the sum of the two percentages.",
+          "az": "140%, the sum of the two percentages."
+        },
+        "explanation": {
+          "en": "Subgroup percentages are not additive measures.",
+          "az": "Subgroup percentages are not additive measures."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "91/102, approximately 89.2%.",
+          "az": "91/102, approximately 89.2%."
+        },
+        "explanation": {
+          "en": "Combine the eligible numerators and denominators.",
+          "az": "Combine the eligible numerators and denominators."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "70%, the simple average of 50% and 90%.",
+          "az": "70%, the simple average of 50% and 90%."
+        },
+        "explanation": {
+          "en": "That weights regions equally despite different population sizes.",
+          "az": "That weights regions equally despite different population sizes."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "For the overall population, aggregate numerator and denominator before dividing; define any alternative weighting explicitly.",
+      "az": "For the overall population, aggregate numerator and denominator before dividing; define any alternative weighting explicitly."
+    },
+    "lessonId": "data-excel-powerbi-models",
+    "practiceOnly": true,
+    "sourceIds": ["powerbi-star-schema", "powerquery-data-types"]
+  },
+  {
+    "id": "data-experiments-statistics-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 3,
+    "text": {
+      "en": "Conversion increases from 10% to 12%. Which description is correct?",
+      "az": "Conversion increases from 10% to 12%. Which description is correct?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A 2-percentage-point increase and a 20% relative lift.",
+          "az": "A 2-percentage-point increase and a 20% relative lift."
+        },
+        "explanation": {
+          "en": "The absolute difference is 0.02; dividing by 0.10 gives 0.20.",
+          "az": "The absolute difference is 0.02; dividing by 0.10 gives 0.20."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A 20-percentage-point increase.",
+          "az": "A 20-percentage-point increase."
+        },
+        "explanation": {
+          "en": "That confuses relative lift with the absolute rate difference.",
+          "az": "That confuses relative lift with the absolute rate difference."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "A 2% relative lift.",
+          "az": "A 2% relative lift."
+        },
+        "explanation": {
+          "en": "The relative difference is 20%, not 2%.",
+          "az": "The relative difference is 20%, not 2%."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Report both the effect scale and its uncertainty; an observed difference alone does not justify rollout.",
+      "az": "Report both the effect scale and its uncertainty; an observed difference alone does not justify rollout."
+    },
+    "lessonId": "data-experiments-statistics",
+    "practiceOnly": true,
+    "sourceIds": ["nist-experiment-design", "govuk-performance-metrics"]
+  },
+  {
+    "id": "data-experiments-statistics-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 3,
+    "text": {
+      "en": "In the lesson, 100/1000 versus 120/1000 yields an approximate interval of -0.74 to +4.74 percentage points. What follows?",
+      "az": "In the lesson, 100/1000 versus 120/1000 yields an approximate interval of -0.74 to +4.74 percentage points. What follows?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "There is a 95% probability that the null hypothesis is true.",
+          "az": "There is a 95% probability that the null hypothesis is true."
+        },
+        "explanation": {
+          "en": "That is not the frequentist interval or p-value interpretation.",
+          "az": "That is not the frequentist interval or p-value interpretation."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The approximation includes no difference, so it does not establish a confident positive effect.",
+          "az": "The approximation includes no difference, so it does not establish a confident positive effect."
+        },
+        "explanation": {
+          "en": "The interval includes zero and a small negative effect.",
+          "az": "The interval includes zero and a small negative effect."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The variants are proven identical.",
+          "az": "The variants are proven identical."
+        },
+        "explanation": {
+          "en": "Failure to establish a difference is not proof of equivalence.",
+          "az": "Failure to establish a difference is not proof of equivalence."
+        }
+      }
+    ],
+    "correct": ["b"],
+    "explanation": {
+      "en": "State assumptions and limitations. The simplified fixed-horizon approximation is not a universal experiment method.",
+      "az": "State assumptions and limitations. The simplified fixed-horizon approximation is not a universal experiment method."
+    },
+    "lessonId": "data-experiments-statistics",
+    "practiceOnly": true,
+    "sourceIds": ["nist-experiment-design", "govuk-performance-metrics"]
+  },
+  {
+    "id": "data-experiments-statistics-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "data-analysis",
+    "difficulty": 3,
+    "text": {
+      "en": "Which TWO choices improve an account-level A/B experiment design?",
+      "az": "Which TWO choices improve an account-level A/B experiment design?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Predeclare the primary outcome, analysis/stopping plan and guardrails.",
+          "az": "Predeclare the primary outcome, analysis/stopping plan and guardrails."
+        },
+        "explanation": {
+          "en": "This reduces outcome switching and unaccounted repeated testing.",
+          "az": "This reduces outcome switching and unaccounted repeated testing."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Stop at the first favorable significance result after unlimited peeking.",
+          "az": "Stop at the first favorable significance result after unlimited peeking."
+        },
+        "explanation": {
+          "en": "That alters error behavior without an appropriate sequential design.",
+          "az": "That alters error behavior without an appropriate sequential design."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Ignore missing outcomes if the observed percentage looks high.",
+          "az": "Ignore missing outcomes if the observed percentage looks high."
+        },
+        "explanation": {
+          "en": "Differential missingness can invalidate the comparison.",
+          "az": "Differential missingness can invalidate the comparison."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Keep each account in a stable assigned variant.",
+          "az": "Keep each account in a stable assigned variant."
+        },
+        "explanation": {
+          "en": "Repeated visits should not unintentionally cross treatments under this design.",
+          "az": "Repeated visits should not unintentionally cross treatments under this design."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "The assignment unit, measurement quality and decision rules need to be designed before inspecting the result.",
+      "az": "The assignment unit, measurement quality and decision rules need to be designed before inspecting the result."
+    },
+    "lessonId": "data-experiments-statistics",
+    "practiceOnly": true,
+    "sourceIds": ["nist-experiment-design", "govuk-performance-metrics"]
+  },
+  {
+    "id": "data-experiments-statistics-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 3,
+    "text": {
+      "en": "Which statement correctly describes a p-value?",
+      "az": "Which statement correctly describes a p-value?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "A tail probability for results at least as incompatible with a specified null model as those observed.",
+          "az": "A tail probability for results at least as incompatible with a specified null model as those observed."
+        },
+        "explanation": {
+          "en": "The probability is conditional on that null model and its assumptions.",
+          "az": "The probability is conditional on that null model and its assumptions."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "The probability that the null hypothesis is true.",
+          "az": "The probability that the null hypothesis is true."
+        },
+        "explanation": {
+          "en": "That reverses the conditioning and is not the definition.",
+          "az": "That reverses the conditioning and is not the definition."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The expected business profit from rollout.",
+          "az": "The expected business profit from rollout."
+        },
+        "explanation": {
+          "en": "Statistical compatibility does not calculate commercial value.",
+          "az": "Statistical compatibility does not calculate commercial value."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "A p-value does not supply effect size, practical value or the acceptable trade-off with guardrail harms.",
+      "az": "A p-value does not supply effect size, practical value or the acceptable trade-off with guardrail harms."
+    },
+    "lessonId": "data-experiments-statistics",
+    "practiceOnly": true,
+    "sourceIds": ["nist-experiment-design", "govuk-performance-metrics"]
+  },
+  {
+    "id": "data-dashboards-storytelling-practice-01",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "A dashboard uses only red and green cells to indicate failure and success. What should be added?",
+      "az": "A dashboard uses only red and green cells to indicate failure and success. What should be added?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "More shades of red and green without labels.",
+          "az": "More shades of red and green without labels."
+        },
+        "explanation": {
+          "en": "Additional colors still rely on color to convey status.",
+          "az": "Additional colors still rely on color to convey status."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A hidden note available only in the database.",
+          "az": "A hidden note available only in the database."
+        },
+        "explanation": {
+          "en": "Users need access to the meaning in the report interface.",
+          "az": "Users need access to the meaning in the report interface."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Text, icons or another accessible non-color signal for the status.",
+          "az": "Text, icons or another accessible non-color signal for the status."
+        },
+        "explanation": {
+          "en": "Meaning must not depend on color alone.",
+          "az": "Meaning must not depend on color alone."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "WCAG use-of-color guidance requires another means of conveying the information; contrast and accessible values also need review.",
+      "az": "WCAG use-of-color guidance requires another means of conveying the information; contrast and accessible values also need review."
+    },
+    "lessonId": "data-dashboards-storytelling",
+    "practiceOnly": true,
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "wcag22-use-of-color"]
+  },
+  {
+    "id": "data-dashboards-storytelling-practice-02",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "A pipeline refreshed successfully at noon, but upstream events are complete only through yesterday. Which freshness statement is useful?",
+      "az": "A pipeline refreshed successfully at noon, but upstream events are complete only through yesterday. Which freshness statement is useful?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Show the refresh time and the separate event-completeness cutoff.",
+          "az": "Show the refresh time and the separate event-completeness cutoff."
+        },
+        "explanation": {
+          "en": "A successful run does not establish up-to-the-minute source completeness.",
+          "az": "A successful run does not establish up-to-the-minute source completeness."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "Label every metric real-time because the job succeeded.",
+          "az": "Label every metric real-time because the job succeeded."
+        },
+        "explanation": {
+          "en": "That overstates the actual observation window.",
+          "az": "That overstates the actual observation window."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "Remove all timestamps to avoid explaining the gap.",
+          "az": "Remove all timestamps to avoid explaining the gap."
+        },
+        "explanation": {
+          "en": "The user loses evidence needed to interpret the result.",
+          "az": "The user loses evidence needed to interpret the result."
+        }
+      }
+    ],
+    "correct": ["a"],
+    "explanation": {
+      "en": "Freshness includes when processing ran and through when the underlying observations are complete.",
+      "az": "Freshness includes when processing ran and through when the underlying observations are complete."
+    },
+    "lessonId": "data-dashboards-storytelling",
+    "practiceOnly": true,
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "wcag22-use-of-color"]
+  },
+  {
+    "id": "data-dashboards-storytelling-practice-03",
+    "trackId": "ba",
+    "type": "multiple",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "Which TWO elements help someone interpret an exported KPI chart?",
+      "az": "Which TWO elements help someone interpret an exported KPI chart?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Active filters and a source-completeness statement.",
+          "az": "Active filters and a source-completeness statement."
+        },
+        "explanation": {
+          "en": "The export should retain context that may otherwise be lost.",
+          "az": "The export should retain context that may otherwise be lost."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A causal claim based only on two lines moving together.",
+          "az": "A causal claim based only on two lines moving together."
+        },
+        "explanation": {
+          "en": "Correlation in a chart does not establish causation.",
+          "az": "Correlation in a chart does not establish causation."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "An unlabeled truncated bar axis chosen to dramatize the change.",
+          "az": "An unlabeled truncated bar axis chosen to dramatize the change."
+        },
+        "explanation": {
+          "en": "That can distort length-based magnitude comparisons.",
+          "az": "That can distort length-based magnitude comparisons."
+        }
+      },
+      {
+        "id": "d",
+        "text": {
+          "en": "Units, eligible population and time window.",
+          "az": "Units, eligible population and time window."
+        },
+        "explanation": {
+          "en": "They establish the meaning and comparability of values.",
+          "az": "They establish the meaning and comparability of values."
+        }
+      }
+    ],
+    "correct": ["a", "d"],
+    "explanation": {
+      "en": "An export should preserve the measurement context and avoid stronger claims than the evidence supports.",
+      "az": "An export should preserve the measurement context and avoid stronger claims than the evidence supports."
+    },
+    "lessonId": "data-dashboards-storytelling",
+    "practiceOnly": true,
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "wcag22-use-of-color"]
+  },
+  {
+    "id": "data-dashboards-storytelling-practice-04",
+    "trackId": "ba",
+    "type": "single",
+    "domain": "data-analysis",
+    "difficulty": 2,
+    "text": {
+      "en": "A February cohort retention cell shows 100%, based on one customer. What should the report make visible?",
+      "az": "A February cohort retention cell shows 100%, based on one customer. What should the report make visible?"
+    },
+    "options": [
+      {
+        "id": "a",
+        "text": {
+          "en": "Only the large percentage, because counts distract from success.",
+          "az": "Only the large percentage, because counts distract from success."
+        },
+        "explanation": {
+          "en": "Hiding the denominator encourages overconfidence.",
+          "az": "Hiding the denominator encourages overconfidence."
+        }
+      },
+      {
+        "id": "b",
+        "text": {
+          "en": "A guarantee that future cohorts will also retain at 100%.",
+          "az": "A guarantee that future cohorts will also retain at 100%."
+        },
+        "explanation": {
+          "en": "One observed customer cannot establish that prediction.",
+          "az": "One observed customer cannot establish that prediction."
+        }
+      },
+      {
+        "id": "c",
+        "text": {
+          "en": "The cohort size and limitations of such a small denominator.",
+          "az": "The cohort size and limitations of such a small denominator."
+        },
+        "explanation": {
+          "en": "The percentage is arithmetically correct but weak as a general estimate.",
+          "az": "The percentage is arithmetically correct but weak as a general estimate."
+        }
+      }
+    ],
+    "correct": ["c"],
+    "explanation": {
+      "en": "Show counts with percentages and distinguish descriptive observations from general or causal conclusions.",
+      "az": "Show counts with percentages and distinguish descriptive observations from general or causal conclusions."
+    },
+    "lessonId": "data-dashboards-storytelling",
+    "practiceOnly": true,
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "wcag22-use-of-color"]
+  }
+]

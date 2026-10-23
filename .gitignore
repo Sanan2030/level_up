@@ -10,3 +10,5 @@ next-env.d.ts
 !.env.example
 .cache/
 .DS_Store
+__pycache__/
+*.pyc

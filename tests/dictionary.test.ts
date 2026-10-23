@@ -43,6 +43,21 @@ describe('study dictionary', () => {
     expect(findDictionaryEntry('a phrase this dictionary does not define')).toBeUndefined();
   });
 
+  it('does not let a new contextual alias silently replace another term', () => {
+    const seen = new Map<string, string>();
+    for (const entry of dictionary) {
+      for (const key of [entry.id, entry.term, ...entry.aliases]) {
+        const normalized = normalizeDictionaryTerm(key);
+        expect(seen.get(normalized) ?? entry.id, normalized).toBe(entry.id);
+        seen.set(normalized, entry.id);
+      }
+    }
+    expect(findDictionaryEntry('readiness')?.id).toBe('readiness');
+    expect(findDictionaryEntry('kubernetes readiness')?.id).toBe('readiness-probe');
+    expect(findDictionaryEntry('liveness')?.id).toBe('liveness-probe');
+    expect(findDictionaryEntry('p_value')?.id).toBe('p-value');
+  });
+
   it('keeps commonly confused business-analysis concepts distinct', () => {
     const verification = findDictionaryEntry('verify');
     const validation = findDictionaryEntry('validate');

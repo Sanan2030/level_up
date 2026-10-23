@@ -610,5 +610,245 @@
       "az": "Nəticələrin davamını cursor ilə alır. Cursor təkbaşına snapshot sabitliyi və ya giriş icazəsi vermir."
     },
     "relatedLessonId": "api-contracts-evolution"
+  },
+  {
+    "id": "devops",
+    "term": {
+      "en": "DevOps",
+      "az": "Proqram təminatının hazırlanması və istismarının birgə təşkili"
+    },
+    "definition": {
+      "en": "A collaborative approach to developing, delivering and operating software with shared responsibility and feedback.",
+      "az": "Proqramı hazırlayan və işlək saxlayan tərəflərin çatdırılma, etibarlılıq və geribildirim üçün birgə məsuliyyət daşıdığı yanaşmadır."
+    },
+    "relatedLessonId": "devops-linux-git-networking"
+  },
+  {
+    "id": "container",
+    "term": {
+      "en": "Container",
+      "az": "İzolyasiya olunmuş tətbiq prosesi mühiti"
+    },
+    "definition": {
+      "en": "A runtime environment that isolates application processes while sharing the host operating system kernel.",
+      "az": "Tətbiq proseslərini müəyyən sərhədlərlə ayıran, adətən host sistemin kernelini paylaşan işləmə mühitidir; ayrıca virtual maşınla eyni deyil."
+    },
+    "relatedLessonId": "devops-docker-containers"
+  },
+  {
+    "id": "image-digest",
+    "term": {
+      "en": "Image digest",
+      "az": "Image məzmununun kriptoqrafik identifikatoru"
+    },
+    "definition": {
+      "en": "A cryptographic content identifier for a container image or manifest.",
+      "az": "Image məzmununu müəyyən edən identifikatordur. Dəyişən tag-dən fərqli olaraq konkret məzmuna işarə edir, amma özlüyündə təhlükəsizliyə zəmanət vermir."
+    },
+    "relatedLessonId": "devops-docker-containers"
+  },
+  {
+    "id": "infrastructure-as-code",
+    "term": {
+      "en": "Infrastructure as code",
+      "az": "İnfrastrukturun kodla təsviri və idarəsi"
+    },
+    "definition": {
+      "en": "Managing infrastructure through versioned, reviewable configuration rather than undocumented manual changes.",
+      "az": "İnfrastrukturun versiyalanan və icmal edilə bilən konfiqurasiya ilə idarə edilməsidir; əl ilə edilən dəyişikliklərdən yaranan fərqlər ayrıca yoxlanır."
+    },
+    "relatedLessonId": "devops-terraform-iac"
+  },
+  {
+    "id": "terraform-state",
+    "term": {
+      "en": "Terraform state",
+      "az": "Terraform-un resurs xəritəsi və idarəetmə məlumatı"
+    },
+    "definition": {
+      "en": "Stored data mapping Terraform-managed resource instances to real objects and retaining management information.",
+      "az": "Terraform-un təsvir etdiyi resursları real obyektlərlə əlaqələndirən məlumatdır. Həssas dəyərlər saxlaya bildiyi üçün adi log kimi paylaşılmamalıdır."
+    },
+    "relatedLessonId": "devops-terraform-iac"
+  },
+  {
+    "id": "readiness-probe",
+    "term": {
+      "en": "Readiness probe",
+      "az": "Sorğu qəbul etməyə hazırlıq yoxlaması"
+    },
+    "definition": {
+      "en": "A Kubernetes probe that indicates whether a container is ready to serve traffic through normal Service routing.",
+      "az": "Container-in trafik qəbul etməyə hazır olub-olmadığını yoxlayır. Uğursuzluq adətən onu Service trafikindən çıxarır; bu, avtomatik restart yoxlaması ilə eyni deyil."
+    },
+    "relatedLessonId": "devops-kubernetes-delivery"
+  },
+  {
+    "id": "liveness-probe",
+    "term": {
+      "en": "Liveness probe",
+      "az": "Canlılıq və restart ehtiyacı yoxlaması"
+    },
+    "definition": {
+      "en": "A Kubernetes probe whose repeated failure can cause the container to be restarted.",
+      "az": "Container-in işləkliyini qiymətləndirən yoxlamadır; təkrar uğursuzluq restart-a səbəb ola bilər. Hər xarici asılılıq xətasını buna bağlamaq restart dövrü yarada bilər."
+    },
+    "relatedLessonId": "devops-kubernetes-delivery"
+  },
+  {
+    "id": "error-budget",
+    "term": {
+      "en": "Error budget",
+      "az": "SLO daxilində icazə verilən uğursuzluq payı"
+    },
+    "definition": {
+      "en": "The allowed amount of unreliability implied by a service-level objective over its defined measurement window.",
+      "az": "SLO-nun müəyyən etdiyi vaxt pəncərəsində qəbul edilən uğursuzluq həddidir. Sorğu əsaslı büdcə avtomatik olaraq dayanma dəqiqələrinə çevrilmir."
+    },
+    "relatedLessonId": "devops-sre-incidents"
+  },
+  {
+    "id": "recovery-time-objective",
+    "term": {
+      "en": "Recovery time objective",
+      "az": "Bərpa vaxtı hədəfi"
+    },
+    "definition": {
+      "en": "The target maximum duration for restoring the required service after a disruption.",
+      "az": "Nasazlıqdan sonra tələb olunan xidməti bərpa etmək üçün hədəflənən maksimum müddətdir. Backup-un uğurlu olması bu müddətə çatıldığını sübut etmir."
+    },
+    "relatedLessonId": "devops-sre-incidents"
+  },
+  {
+    "id": "recovery-point-objective",
+    "term": {
+      "en": "Recovery point objective",
+      "az": "Məlumatın bərpa nöqtəsi hədəfi"
+    },
+    "definition": {
+      "en": "The target maximum amount of data loss expressed as time before a disruption.",
+      "az": "Nasazlıqdan əvvəl hansı vaxtadək olan məlumat itkisinə dözmək mümkün olduğunu göstərən hədəfdir. RTO-dan fərqli olaraq bərpanın nə qədər çəkdiyini ölçmür."
+    },
+    "relatedLessonId": "devops-sre-incidents"
+  },
+  {
+    "id": "data-grain",
+    "term": {
+      "en": "Data grain",
+      "az": "Bir sətrin təmsil etdiyi səviyyə"
+    },
+    "definition": {
+      "en": "The precise business entity or event represented by one row in a dataset.",
+      "az": "Bir sətrin nəyi təmsil etdiyini bildirir: müştəri, sifariş, məhsul sətri və ya hadisə. Bu səviyyə dəyişəndə toplamanın mənası da dəyişə bilər."
+    },
+    "relatedLessonId": "data-analysis-grain-quality"
+  },
+  {
+    "id": "denominator",
+    "term": {
+      "en": "Denominator",
+      "az": "Nisbətin məxrəci və uyğun əhali"
+    },
+    "definition": {
+      "en": "The base quantity or eligible population by which a numerator is divided to calculate a rate.",
+      "az": "Nisbəti hesablamaq üçün bölünən əsas kəmiyyətdir. Aktivasiya ölçüsündə yalnız uğurlu müştərilər deyil, uyğun bütün istifadəçilər daxil olmalıdır."
+    },
+    "relatedLessonId": "data-analysis-grain-quality"
+  },
+  {
+    "id": "join-fanout",
+    "term": {
+      "en": "Join fanout",
+      "az": "Join nəticəsində sətirlərin çoxalması"
+    },
+    "definition": {
+      "en": "Multiplication of rows when a join matches one input row to multiple rows on the other side.",
+      "az": "Bir sətir qarşı tərəfdə bir neçə sətrə uyğun gəldikdə yaranan çoxalmadır. Təkrarlanan sifariş məbləğini toplamaq gəliri şişirdə bilər."
+    },
+    "relatedLessonId": "data-analysis-grain-quality"
+  },
+  {
+    "id": "window-function",
+    "term": {
+      "en": "Window function",
+      "az": "Sətirləri saxlayaraq əlaqəli sətirlər üzrə hesablama"
+    },
+    "definition": {
+      "en": "A SQL function that calculates across a related set of rows while retaining the individual result rows.",
+      "az": "Adi GROUP BY kimi sətirləri birləşdirmədən əlaqəli sətirlər üzrə hesablayır; partition, sıralama və frame hesabın sərhədlərini müəyyən edir."
+    },
+    "relatedLessonId": "data-sql-windows-cohorts"
+  },
+  {
+    "id": "right-censoring",
+    "term": {
+      "en": "Right censoring",
+      "az": "Sonrakı nəticələrin hələ müşahidə olunmaması"
+    },
+    "definition": {
+      "en": "A situation in which later outcomes cannot yet be observed because follow-up ends before they occur.",
+      "az": "Müşahidə müddəti sonrakı nəticədən əvvəl bitdiyi üçün həmin nəticə haqqında məlumatın olmamasıdır. Gələcək ayı sıfır retention kimi göstərmək olmaz."
+    },
+    "relatedLessonId": "data-sql-windows-cohorts"
+  },
+  {
+    "id": "star-schema",
+    "term": {
+      "en": "Star schema",
+      "az": "Ulduz sxemli analitik məlumat modeli"
+    },
+    "definition": {
+      "en": "An analytical model with fact tables linked to descriptive dimension tables at explicitly defined grains.",
+      "az": "Ölçülən hadisələri saxlayan fact cədvəllərini onları təsvir edən dimension cədvəlləri ilə əlaqələndirən modeldir. Hər cədvəlin səviyyəsi dəqiq olmalıdır."
+    },
+    "relatedLessonId": "data-excel-powerbi-models"
+  },
+  {
+    "id": "filter-context",
+    "term": {
+      "en": "Filter context",
+      "az": "Ölçünün hesablandığı filtr konteksti"
+    },
+    "definition": {
+      "en": "The set of filters that determines which data contributes to a DAX measure evaluation.",
+      "az": "DAX ölçüsü hesablananda hansı məlumatların nəzərə alınacağını müəyyən edən filtrlər toplusudur. Tarix və ölkə seçimi nəticəni dəyişə bilər."
+    },
+    "relatedLessonId": "data-excel-powerbi-models"
+  },
+  {
+    "id": "p-value",
+    "term": {
+      "en": "P-value",
+      "az": "Null model altında müşahidənin quyruq ehtimalı"
+    },
+    "definition": {
+      "en": "Under a specified null model, the probability of results at least as incompatible with that model as the observed result.",
+      "az": "Müəyyən null model doğru sayıldıqda müşahidə qədər və ya daha uyğunsuz nəticənin ehtimalıdır. Null fərziyyənin doğru olma ehtimalı demək deyil."
+    },
+    "relatedLessonId": "data-experiments-statistics"
+  },
+  {
+    "id": "percentage-point",
+    "term": {
+      "en": "Percentage point",
+      "az": "Faiz bəndi"
+    },
+    "definition": {
+      "en": "The arithmetic difference between two percentages, expressed on the percentage scale.",
+      "az": "İki faiz göstəricisi arasındakı sadə fərqdir. 10%-dən 12%-ə artım 2 faiz bəndidir, nisbi artım isə 20%-dir."
+    },
+    "relatedLessonId": "data-experiments-statistics"
+  },
+  {
+    "id": "randomization-unit",
+    "term": {
+      "en": "Randomization unit",
+      "az": "Təsadüfi variant bölgüsünün vahidi"
+    },
+    "definition": {
+      "en": "The independently assigned entity in an experiment, such as a user, account or organization.",
+      "az": "Eksperimentdə variantın ayrıca təyin edildiyi vahiddir. Hesab üzrə bölgüdə eyni hesabın müxtəlif baxışlarda variant dəyişməsi nəticəni poza bilər."
+    },
+    "relatedLessonId": "data-experiments-statistics"
   }
 ]

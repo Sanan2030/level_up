@@ -34,6 +34,8 @@ jobs:
         run: npm run typecheck
       - name: Test
         run: npm test
+      - name: Test data analysis lab
+        run: python3 -m unittest discover -s examples/data-analysis-lab -p 'test_*.py' -v
       - name: Check formatting
         run: npm run format:check
       - name: Build production application

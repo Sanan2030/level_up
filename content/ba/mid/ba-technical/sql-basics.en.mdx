@@ -3,63 +3,122 @@ id: sql-basics
 locale: en
 title: 'SQL for business questions'
 objectives:
-  - 'Use SELECT, filters, joins, grouping and null handling to inspect evidence.'
-  - 'Write a query outline for refund rates by month, identifying possible double-counting.'
+  - 'Write a filtered and grouped business query with an explicit output grain.'
+  - 'Preserve unmatched customers with LEFT JOIN and count the intended entity.'
+  - 'Diagnose one-to-many fanout and reconcile a revenue total.'
 ---
-
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
 
 ## Learning objectives
 
-- Use SELECT, filters, joins, grouping and null handling to inspect evidence.
-- Write a query outline for refund rates by month, identifying possible double-counting.
+- Write a filtered and grouped business query with an explicit output grain.
+- Preserve unmatched customers with LEFT JOIN and count the intended entity.
+- Diagnose one-to-many fanout and reconcile a revenue total.
 
-## Why it matters
+## Why this matters
 
-The planned lesson uses a concrete delivery decision to show when **SQL for business questions** helps a team. It will make assumptions and affected stakeholders explicit.
+SQL translates a question into a precise selection of rows and calculations. A query can execute successfully while answering the wrong question. Analysts must check row grain, join cardinality and missing values as carefully as syntax. This lesson upgrades the existing SQL outline into a complete exercise using a small reproducible dataset.
 
-## Core theory: planned outline
+## Core theory
 
-1. Define the essential terms in the topic.
-2. Use SELECT, filters, joins, grouping and null handling to inspect evidence.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+`SELECT` chooses expressions, `FROM` identifies the input and `WHERE` filters individual rows. `GROUP BY` creates groups; aggregate functions calculate a value per group. `HAVING` filters those groups. `ORDER BY` controls the presentation order; do not assume that storage or insertion order is guaranteed.
 
-## Worked example: planned outline
+An inner join returns matching row combinations. A left join also retains unmatched left-side rows with nulls for the missing right-side values. A right-table filter in `WHERE` can remove those null-extended rows. Put the qualification in `ON` when you intend to retain all left-side customers while matching only qualified orders.
 
-Write a query outline for refund rates by month, identifying possible double-counting. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+`COUNT(*)` counts result rows. `COUNT(expression)` counts non-null expression values. After a customer-to-order left join, count the order identifier to count matching orders. Counting rows would give a customer with no orders a count of one.
 
-## Diagram: planned outline
+SQL null represents missing or unknown information. Use `IS NULL`, not `= NULL`. In an ordinary equality comparison, null does not act like a normal value. Aggregate behavior also matters: `SUM` ignores null inputs, and an aggregate over no matching rows may return null. Apply `COALESCE` only after deciding whether absence really means zero for this measure.
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **SQL for business questions**. The diagram will include a text explanation.
+One-to-many joins change grain. Joining order headers to items repeats the header amount for every item. `SUM(DISTINCT amount)` is not a repair: two different orders may have the same amount. Aggregate at the entity key or use the correct additive item measure.
 
-## Interactive practice: planned outline
+The examples store money as integer cents in a single teaching currency. Real multi-currency analysis needs currency and conversion policy, and real financial definitions must specify refunds, tax and recognition timing.
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+## Worked example
 
-## Common mistakes and best practices
+The cleaned fixture has seven orders, six paid, totaling **16,500 cents**. This SQLite-compatible query uses ISO date strings; a PostgreSQL application can use typed dates and its own date functions.
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+```sql
+SELECT substr(ordered_at, 1, 7) AS month,
+       COUNT(*) AS paid_orders,
+       SUM(amount_cents) AS paid_revenue_cents
+FROM orders
+WHERE status = 'paid'
+GROUP BY substr(ordered_at, 1, 7)
+ORDER BY month;
+```
 
-## Practice exercise and sample-solution plan
+Expected results are January `4000`, February `6000`, March `6500`. Together they reconcile to `16500`.
 
-**Exercise:** Write a query outline for refund rates by month, identifying possible double-counting.
+To retain customers with no paid orders:
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+```sql
+SELECT c.customer_id, COUNT(o.order_id) AS paid_orders
+FROM customers AS c
+LEFT JOIN orders AS o
+  ON o.customer_id = c.customer_id
+ AND o.status = 'paid'
+GROUP BY c.customer_id
+ORDER BY c.customer_id;
+```
 
-## Mini-quiz: planned outline
+Customer `u5` remains with a count of zero. Moving `o.status = 'paid'` into `WHERE` removes this customer.
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+If you join the paid orders to `order_items` and sum the header amount, order `o1` appears twice. The incorrect result is `17500`, exactly `1000` too high.
 
-## One-page summary plan
+## Visual model
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+<Diagram
+  chart={
+    'flowchart LR\n C[Five customers] --> J[LEFT JOIN qualified orders]\n O[Six paid orders] --> J\n J --> G[Group by customer ID]\n G --> R[Five customer results including zero]'
+  }
+/>
 
-## Further reading
+The left side supplies the complete customer population. Qualification in the join limits matching orders without removing customers who have no match.
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+## Inspect the decision
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+<details>
+<summary>Would SUM(DISTINCT amount_cents) reliably fix join fanout?</summary>
+
+No. It deduplicates equal amounts, not order IDs. Two valid orders for 1000 cents should contribute 2000 cents, but a distinct sum would count only 1000. Preserve order grain or pre-aggregate the item table to one row per order before joining.
+
+</details>
+
+## Common mistakes
+
+- Filtering a right-side column in `WHERE` and unintentionally turning a left join into matching-only results.
+- Counting rows when the question asks for unique customers or matching orders.
+- Using `DISTINCT` to conceal an unexplained join cardinality problem.
+- Adding amounts across different currencies without a conversion policy.
+- Treating successful query execution as evidence that the metric is valid.
+
+## Practice exercise
+
+Run the standard-library lab in [the data analysis lab](https://github.com/Sanan2030/level_up/tree/main/examples/data-analysis-lab). Predict the paid revenue before running it. Then write a query returning every customer and their total paid amount, including `u5` with zero. Explain where you would apply a paid-status filter and why.
+
+## Worked solution
+
+<details>
+<summary>Show worked solution</summary>
+
+The revenue is 16500 cents. Start from customers and put the paid-status condition in the join. Group by the stable customer identifier and use `COALESCE(SUM(o.amount_cents), 0)` because this contract defines no matching paid order as zero paid revenue. Expected totals are `u1=3000`, `u2=3000`, `u3=10000`, `u4=500`, `u5=0`. A missing amount on an existing order is a separate data-quality issue and was quarantined before this calculation.
+
+</details>
+
+## Check understanding and cheat sheet
+
+| Intent                     | SQL check                            |
+| -------------------------- | ------------------------------------ |
+| Retain the full population | LEFT JOIN with match filters in ON   |
+| Count matching orders      | COUNT(order_id)                      |
+| Find missing values        | IS NULL                              |
+| Filter aggregated groups   | HAVING                               |
+| Avoid inflated money       | Verify one row per additive entity   |
+| Reproduce results          | Explicit filters, units and ORDER BY |
+
+<LessonCheck />
+
+## Sources and further reading
+
+- [PostgreSQL 18: Joins between tables](https://www.postgresql.org/docs/18/tutorial-join.html): inner and outer joins and qualified column names.
+- [PostgreSQL 18: Window functions](https://www.postgresql.org/docs/18/tutorial-window.html): contrast ordinary aggregation with calculations that retain rows.
+- [the data analysis lab](https://github.com/Sanan2030/level_up/tree/main/examples/data-analysis-lab): original SQLite queries and reconciliation tests. PostgreSQL and SQLite date syntax are not interchangeable; the fixture uses ISO text dates deliberately.

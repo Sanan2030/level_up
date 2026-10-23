@@ -430,5 +430,233 @@
       "en": "Release, Experiment, Ops and Permissioning Toggles and carrying-cost sections read. Expert engineering article; not an official Scrum.org publication. Flagged unfinished work does not become a Done Increment.",
       "az": "Release, Experiment, Ops and Permissioning Toggles and carrying-cost sections read. Expert engineering article; not an official Scrum.org publication. Flagged unfinished work does not become a Done Increment."
     }
+  },
+  {
+    "id": "git-branching",
+    "title": "Pro Git — Branches in a Nutshell",
+    "url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Branches, commits and HEAD read. Git branches are pointers to commits, not separate runtime environments.",
+      "az": "Branches, commits and HEAD read. Git branches are pointers to commits, not separate runtime environments."
+    }
+  },
+  {
+    "id": "linux-user-commands",
+    "title": "Linux man-pages — intro(1), user commands",
+    "url": "https://man7.org/linux/man-pages/man1/intro.1.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected introduction read: Linux manual section 1 covers user commands. The short page does not document every shell, filesystem or networking command in the original lesson examples.",
+      "az": "Selected introduction read: Linux manual section 1 covers user commands. The short page does not document every shell, filesystem or networking command in the original lesson examples."
+    }
+  },
+  {
+    "id": "github-actions-secure-use",
+    "title": "GitHub Docs — Secure use of GitHub Actions",
+    "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Least privilege, secrets, untrusted input/code checkout, full action commit pinning and short-lived cloud credential guidance read.",
+      "az": "Least privilege, secrets, untrusted input/code checkout, full action commit pinning and short-lived cloud credential guidance read."
+    }
+  },
+  {
+    "id": "docker-build-practices",
+    "title": "Docker Docs — Building best practices",
+    "url": "https://docs.docker.com/build/building/best-practices/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Multi-stage builds, base image selection, cache, .dockerignore and image digest pinning sections read. No claim of executing a Docker build.",
+      "az": "Multi-stage builds, base image selection, cache, .dockerignore and image digest pinning sections read. No claim of executing a Docker build."
+    }
+  },
+  {
+    "id": "kubernetes-deployments",
+    "title": "Kubernetes Docs — Deployments",
+    "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Desired state, rollouts, revision rollback and progress deadline sections read. A deadline reports failure; it is not automatic application/data rollback.",
+      "az": "Desired state, rollouts, revision rollback and progress deadline sections read. A deadline reports failure; it is not automatic application/data rollback."
+    }
+  },
+  {
+    "id": "kubernetes-probes",
+    "title": "Kubernetes Docs — Liveness, readiness and startup probes",
+    "url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Probe purposes, startup gating, readiness traffic and liveness restart behavior read. Cluster commands remain illustrative, not a tested deployment.",
+      "az": "Probe purposes, startup gating, readiness traffic and liveness restart behavior read. Cluster commands remain illustrative, not a tested deployment."
+    }
+  },
+  {
+    "id": "terraform-state-purpose",
+    "title": "HashiCorp Terraform — Purpose of state",
+    "url": "https://developer.hashicorp.com/terraform/language/state/purpose",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Resource mapping, metadata and performance sections read. State is protected operational data, not just a disposable cache.",
+      "az": "Resource mapping, metadata and performance sections read. State is protected operational data, not just a disposable cache."
+    }
+  },
+  {
+    "id": "terraform-sensitive-data",
+    "title": "HashiCorp Terraform — Manage sensitive data",
+    "url": "https://developer.hashicorp.com/terraform/language/manage-sensitive-data",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "State/plan exposure, sensitive redaction and version/provider-dependent ephemeral/write-only values read. Sensitive does not universally omit values from state.",
+      "az": "State/plan exposure, sensitive redaction and version/provider-dependent ephemeral/write-only values read. Sensitive does not universally omit values from state."
+    }
+  },
+  {
+    "id": "google-sre-slos",
+    "title": "Google SRE Workbook — Implementing SLOs",
+    "url": "https://sre.google/workbook/implementing-slos/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "User-centered SLIs, SLO measurement windows and error-budget decision guidance read. Request-based budgets are distinct from time-based downtime.",
+      "az": "User-centered SLIs, SLO measurement windows and error-budget decision guidance read. Request-based budgets are distinct from time-based downtime."
+    }
+  },
+  {
+    "id": "google-sre-incidents",
+    "title": "Google SRE Workbook — Incident Response",
+    "url": "https://sre.google/workbook/incident-response/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Command/operations/communication roles, mitigation, coordination and learning sections read.",
+      "az": "Command/operations/communication roles, mitigation, coordination and learning sections read."
+    }
+  },
+  {
+    "id": "azure-recovery-targets",
+    "title": "Microsoft Well-Architected — Reliability metrics",
+    "url": "https://learn.microsoft.com/en-us/azure/well-architected/reliability/metrics",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Recovery target/RTO/RPO sections read. Backup schedules alone do not establish demonstrated recovery capability.",
+      "az": "Recovery target/RTO/RPO sections read. Backup schedules alone do not establish demonstrated recovery capability."
+    }
+  },
+  {
+    "id": "postgres18-joins",
+    "title": "PostgreSQL 18 — Joins between tables",
+    "url": "https://www.postgresql.org/docs/18/tutorial-join.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Join conditions and inner/outer join examples read. The executable local lab separately identifies its SQLite dialect.",
+      "az": "Join conditions and inner/outer join examples read. The executable local lab separately identifies its SQLite dialect."
+    }
+  },
+  {
+    "id": "postgres18-windows",
+    "title": "PostgreSQL 18 — Window functions",
+    "url": "https://www.postgresql.org/docs/18/tutorial-window.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "PARTITION BY, ORDER BY, frames, peer behavior and subquery filtering read. Explicit frames avoid an accidental cumulative-sum assumption.",
+      "az": "PARTITION BY, ORDER BY, frames, peer behavior and subquery filtering read. Explicit frames avoid an accidental cumulative-sum assumption."
+    }
+  },
+  {
+    "id": "pandas-missing-data",
+    "title": "pandas — Working with missing data",
+    "url": "https://pandas.pydata.org/docs/user_guide/missing_data.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Missing sentinels, isna/notna, nullable dtypes and filling/dropping distinctions read. Current documentation is not a promise of every older pandas release.",
+      "az": "Missing sentinels, isna/notna, nullable dtypes and filling/dropping distinctions read. Current documentation is not a promise of every older pandas release."
+    }
+  },
+  {
+    "id": "pandas-merge-validation",
+    "title": "pandas — Merge, join, concatenate and compare",
+    "url": "https://pandas.pydata.org/docs/user_guide/merging.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Key cardinality, validate, merge indicators and duplicate expansion sections read.",
+      "az": "Key cardinality, validate, merge indicators and duplicate expansion sections read."
+    }
+  },
+  {
+    "id": "powerbi-star-schema",
+    "title": "Microsoft Power BI — Star schema guidance",
+    "url": "https://learn.microsoft.com/en-us/power-bi/guidance/star-schema",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Fact/dimension grain, relationships, measures and filter propagation sections read. No claim of executing Power BI Desktop in this environment.",
+      "az": "Fact/dimension grain, relationships, measures and filter propagation sections read. No claim of executing Power BI Desktop in this environment."
+    }
+  },
+  {
+    "id": "powerquery-data-types",
+    "title": "Microsoft Power Query — Data types",
+    "url": "https://learn.microsoft.com/en-us/power-query/data-types",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Explicit types, conversions, locale and detection behavior read. Excel and Power BI transformations share Power Query concepts.",
+      "az": "Explicit types, conversions, locale and detection behavior read. Excel and Power BI transformations share Power Query concepts."
+    }
+  },
+  {
+    "id": "nist-experiment-design",
+    "title": "NIST/SEMATECH Handbook — Choosing an experimental design",
+    "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri33.htm",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Comparative objectives, randomized designs, resources and Type I/II error considerations read. Numerical examples are original, not measured research results.",
+      "az": "Comparative objectives, randomized designs, resources and Type I/II error considerations read. Numerical examples are original, not measured research results."
+    }
+  },
+  {
+    "id": "wcag22-use-of-color",
+    "title": "W3C — Understanding WCAG 2.2, Use of Color",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Success criterion and explanation read: color must not be the sole visual means of conveying information.",
+      "az": "Success criterion and explanation read: color must not be the sole visual means of conveying information."
+    }
   }
 ]

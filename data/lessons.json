@@ -293,17 +293,18 @@
     "level": "mid",
     "moduleId": "ba-technical",
     "title": {
-      "az": "Biznes sualları üçün SQL",
-      "en": "SQL for business questions"
+      "en": "SQL for business questions",
+      "az": "Biznes sualları üçün SQL"
     },
     "summary": {
-      "az": "Sübutu yoxlamaq üçün SELECT, filtr, birləşdirmə, qruplaşdırma və null emalından istifadə et.",
-      "en": "Use SELECT, filters, joins, grouping and null handling to inspect evidence."
+      "en": "Use SELECT, joins, grouping and null handling to answer business questions without multiplying revenue or excluding non-buyers.",
+      "az": "Use SELECT, joins, grouping and null handling to answer business questions without multiplying revenue or excluding non-buyers."
     },
-    "minutes": 35,
-    "status": "planned",
-    "topics": ["SQL for business questions", "BA", "mid"],
-    "prerequisites": []
+    "minutes": 70,
+    "status": "published",
+    "topics": ["data-analysis", "SQL", "joins", "GROUP BY", "NULL", "grain"],
+    "prerequisites": ["data-analysis-grain-quality"],
+    "sourceIds": ["postgres18-joins", "postgres18-windows"]
   },
   {
     "id": "rest-apis",
@@ -1762,5 +1763,292 @@
       "govuk-performance-metrics",
       "azure-microservices-patterns"
     ]
+  },
+  {
+    "id": "devops-linux-git-networking",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-devops-foundations",
+    "title": {
+      "en": "DevOps foundations: Linux, Git and network diagnosis",
+      "az": "DevOps əsasları: Linux, Git və şəbəkə diaqnostikası"
+    },
+    "summary": {
+      "en": "Trace a running service from a commit through a process, port, DNS and HTTP response without guessing from one symptom.",
+      "az": "Trace a running service from a commit through a process, port, DNS and HTTP response without guessing from one symptom."
+    },
+    "minutes": 60,
+    "status": "published",
+    "topics": ["devops", "Linux", "Git", "DNS", "TLS", "process", "port", "exit status"],
+    "prerequisites": [],
+    "sourceIds": ["git-branching", "linux-user-commands", "http-semantics-9110"]
+  },
+  {
+    "id": "devops-docker-containers",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-devops-foundations",
+    "title": {
+      "en": "Docker images, containers, storage and secure builds",
+      "az": "Docker image, container, yaddaş və təhlükəsiz build"
+    },
+    "summary": {
+      "en": "Separate immutable image identity from runtime state, use multi-stage builds and keep secrets out of image layers.",
+      "az": "Separate immutable image identity from runtime state, use multi-stage builds and keep secrets out of image layers."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": [
+      "devops",
+      "Docker",
+      "container",
+      "image",
+      "digest",
+      "Dockerfile",
+      "volume",
+      "build cache"
+    ],
+    "prerequisites": ["devops-linux-git-networking"],
+    "sourceIds": ["docker-build-practices"]
+  },
+  {
+    "id": "devops-ci-cd-artifacts",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-devops-foundations",
+    "title": {
+      "en": "CI/CD pipelines, immutable artifacts and deployment trust",
+      "az": "CI/CD pipeline, dəyişməz artefakt və deployment etibarı"
+    },
+    "summary": {
+      "en": "Separate validation from release, promote the tested artifact and protect privileged jobs from untrusted pull-request content.",
+      "az": "Separate validation from release, promote the tested artifact and protect privileged jobs from untrusted pull-request content."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["devops", "CI", "CD", "CI/CD", "GitHub Actions", "artifact", "supply chain", "OIDC"],
+    "prerequisites": ["devops-linux-git-networking", "devops-docker-containers"],
+    "sourceIds": ["github-actions-secure-use", "docker-build-practices"]
+  },
+  {
+    "id": "devops-kubernetes-delivery",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-devops-operations",
+    "title": {
+      "en": "Kubernetes delivery: Deployments, Services and probes",
+      "az": "Kubernetes çatdırılması: Deployment, Service və probe"
+    },
+    "summary": {
+      "en": "Explain desired state, rollout capacity and probe behavior without treating a green process as a ready service.",
+      "az": "Explain desired state, rollout capacity and probe behavior without treating a green process as a ready service."
+    },
+    "minutes": 80,
+    "status": "published",
+    "topics": [
+      "devops",
+      "Kubernetes",
+      "Deployment",
+      "Service",
+      "Pod",
+      "readiness",
+      "liveness",
+      "startup probe"
+    ],
+    "prerequisites": ["devops-docker-containers", "devops-ci-cd-artifacts"],
+    "sourceIds": ["kubernetes-deployments", "kubernetes-probes"]
+  },
+  {
+    "id": "devops-terraform-iac",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-devops-operations",
+    "title": {
+      "en": "Terraform infrastructure as code, state and safe change review",
+      "az": "Terraform ilə infrastruktur, state və təhlükəsiz dəyişiklik icmalı"
+    },
+    "summary": {
+      "en": "Review a plan as a proposed change, protect state and explain drift, locking and recovery without applying production infrastructure.",
+      "az": "Review a plan as a proposed change, protect state and explain drift, locking and recovery without applying production infrastructure."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["devops", "Terraform", "IaC", "state", "plan", "drift", "locking", "secret"],
+    "prerequisites": ["devops-ci-cd-artifacts"],
+    "sourceIds": ["terraform-state-purpose", "terraform-sensitive-data"]
+  },
+  {
+    "id": "devops-sre-incidents",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-devops-operations",
+    "title": {
+      "en": "Reliability engineering: SLOs, incidents and recovery tests",
+      "az": "Etibarlılıq mühəndisliyi: SLO, insident və bərpa sınaqları"
+    },
+    "summary": {
+      "en": "Calculate an explicit error budget, coordinate incident mitigation and distinguish recovery targets from untested backup assumptions.",
+      "az": "Calculate an explicit error budget, coordinate incident mitigation and distinguish recovery targets from untested backup assumptions."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": [
+      "devops",
+      "SRE",
+      "SLI",
+      "SLO",
+      "error budget",
+      "incident",
+      "RTO",
+      "RPO",
+      "postmortem"
+    ],
+    "prerequisites": ["devops-kubernetes-delivery"],
+    "sourceIds": ["google-sre-slos", "google-sre-incidents", "azure-recovery-targets"]
+  },
+  {
+    "id": "data-analysis-grain-quality",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-data-analysis",
+    "title": {
+      "en": "Data analysis: questions, grain, denominators and quality",
+      "az": "Data analizi: sual, sətir səviyyəsi, məxrəc və keyfiyyət"
+    },
+    "summary": {
+      "en": "Turn a business question into a reproducible measurement contract and detect duplicates, missing values and misleading denominators.",
+      "az": "Turn a business question into a reproducible measurement contract and detect duplicates, missing values and misleading denominators."
+    },
+    "minutes": 65,
+    "status": "published",
+    "topics": ["data-analysis", "data quality", "grain", "denominator", "sampling", "metric"],
+    "prerequisites": [],
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "postgres18-joins"]
+  },
+  {
+    "id": "data-sql-windows-cohorts",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-analytics-advanced",
+    "title": {
+      "en": "Advanced SQL: window functions, retention and cohorts",
+      "az": "Qabaqcıl SQL: window funksiyaları, retention və kohortlar"
+    },
+    "summary": {
+      "en": "Use explicit window frames, stable ordering and observable cohort denominators to calculate running totals and retention.",
+      "az": "Use explicit window frames, stable ordering and observable cohort denominators to calculate running totals and retention."
+    },
+    "minutes": 85,
+    "status": "published",
+    "topics": [
+      "data-analysis",
+      "SQL",
+      "window function",
+      "cohort",
+      "retention",
+      "LAG",
+      "right censoring"
+    ],
+    "prerequisites": ["sql-basics"],
+    "sourceIds": ["postgres18-windows", "postgres18-joins"]
+  },
+  {
+    "id": "data-python-pandas-cleaning",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-data-analysis",
+    "title": {
+      "en": "Python and pandas: cleaning, validation and safe merges",
+      "az": "Python və pandas: təmizləmə, yoxlama və təhlükəsiz merge"
+    },
+    "summary": {
+      "en": "Make cleaning policies auditable, validate join cardinality and reconcile Python analysis with SQL totals.",
+      "az": "Make cleaning policies auditable, validate join cardinality and reconcile Python analysis with SQL totals."
+    },
+    "minutes": 80,
+    "status": "published",
+    "topics": ["data-analysis", "Python", "pandas", "CSV", "missing data", "merge", "validation"],
+    "prerequisites": ["data-analysis-grain-quality", "sql-basics"],
+    "sourceIds": ["pandas-missing-data", "pandas-merge-validation"]
+  },
+  {
+    "id": "data-excel-powerbi-models",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-data-analysis",
+    "title": {
+      "en": "Excel, Power Query and Power BI: models and measures",
+      "az": "Excel, Power Query və Power BI: model və ölçülər"
+    },
+    "summary": {
+      "en": "Separate data preparation from measures, preserve fact-table grain and use a star schema with explicit filter context.",
+      "az": "Separate data preparation from measures, preserve fact-table grain and use a star schema with explicit filter context."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": [
+      "data-analysis",
+      "Excel",
+      "Power BI",
+      "Power Query",
+      "star schema",
+      "DAX",
+      "filter context"
+    ],
+    "prerequisites": ["data-analysis-grain-quality", "sql-basics"],
+    "sourceIds": ["powerbi-star-schema", "powerquery-data-types"]
+  },
+  {
+    "id": "data-experiments-statistics",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-analytics-advanced",
+    "title": {
+      "en": "A/B testing: randomization, uncertainty and decision rules",
+      "az": "A/B testi: təsadüfi bölgü, qeyri-müəyyənlik və qərar qaydası"
+    },
+    "summary": {
+      "en": "Design a controlled comparison, calculate absolute and relative effects and separate an observed difference from a decision justified by evidence.",
+      "az": "Design a controlled comparison, calculate absolute and relative effects and separate an observed difference from a decision justified by evidence."
+    },
+    "minutes": 85,
+    "status": "published",
+    "topics": [
+      "data-analysis",
+      "A/B test",
+      "experiment",
+      "randomization",
+      "confidence interval",
+      "p-value",
+      "guardrail"
+    ],
+    "prerequisites": ["data-analysis-grain-quality", "sql-basics"],
+    "sourceIds": ["nist-experiment-design", "govuk-performance-metrics"]
+  },
+  {
+    "id": "data-dashboards-storytelling",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-data-analysis",
+    "title": {
+      "en": "Dashboards: KPI contracts, visual evidence and decisions",
+      "az": "Dashboard: KPI tərifi, vizual sübut və qərarlar"
+    },
+    "summary": {
+      "en": "Build a decision-focused dashboard with clear denominators, accessible charts, freshness and visible uncertainty.",
+      "az": "Build a decision-focused dashboard with clear denominators, accessible charts, freshness and visible uncertainty."
+    },
+    "minutes": 60,
+    "status": "published",
+    "topics": [
+      "data-analysis",
+      "dashboard",
+      "KPI",
+      "visualization",
+      "accessibility",
+      "data storytelling"
+    ],
+    "prerequisites": ["data-analysis-grain-quality", "sql-basics"],
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "wcag22-use-of-color"]
   }
 ]

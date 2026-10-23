@@ -82,7 +82,7 @@
       "en": "Reason about data, APIs and integration failures."
     },
     "lessonIds": ["data-modeling", "sql-basics", "rest-apis", "integration-basics", "uat"],
-    "estimatedMinutes": 235,
+    "estimatedMinutes": 270,
     "prerequisites": []
   },
   {
@@ -371,5 +371,78 @@
     "lessonIds": ["architecture-boundaries-sagas", "api-resilience-observability"],
     "estimatedMinutes": 160,
     "prerequisites": ["ba-api-engineering"]
+  },
+  {
+    "id": "ba-devops-foundations",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "en": "DevOps foundations",
+      "az": "DevOps əsasları"
+    },
+    "description": {
+      "en": "Diagnose services, package containers and design trusted delivery pipelines.",
+      "az": "Diagnose services, package containers and design trusted delivery pipelines."
+    },
+    "lessonIds": [
+      "devops-linux-git-networking",
+      "devops-docker-containers",
+      "devops-ci-cd-artifacts"
+    ],
+    "estimatedMinutes": 210,
+    "prerequisites": []
+  },
+  {
+    "id": "ba-devops-operations",
+    "trackId": "ba",
+    "level": "lead",
+    "title": {
+      "en": "DevOps operations and reliability",
+      "az": "DevOps əməliyyatları və etibarlılıq"
+    },
+    "description": {
+      "en": "Reason about Kubernetes delivery, infrastructure state, SLOs and recovery.",
+      "az": "Reason about Kubernetes delivery, infrastructure state, SLOs and recovery."
+    },
+    "lessonIds": ["devops-kubernetes-delivery", "devops-terraform-iac", "devops-sre-incidents"],
+    "estimatedMinutes": 230,
+    "prerequisites": ["ba-devops-foundations"]
+  },
+  {
+    "id": "ba-data-analysis",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "en": "Data analysis and reporting",
+      "az": "Data analizi və hesabat"
+    },
+    "description": {
+      "en": "Define metrics, validate datasets and build reproducible Python and BI analysis.",
+      "az": "Define metrics, validate datasets and build reproducible Python and BI analysis."
+    },
+    "lessonIds": [
+      "data-analysis-grain-quality",
+      "data-python-pandas-cleaning",
+      "data-excel-powerbi-models",
+      "data-dashboards-storytelling"
+    ],
+    "estimatedMinutes": 280,
+    "prerequisites": []
+  },
+  {
+    "id": "ba-analytics-advanced",
+    "trackId": "ba",
+    "level": "lead",
+    "title": {
+      "en": "Advanced analytics and experiments",
+      "az": "Qabaqcıl analitika və eksperimentlər"
+    },
+    "description": {
+      "en": "Calculate observable retention cohorts and assess controlled experiments.",
+      "az": "Calculate observable retention cohorts and assess controlled experiments."
+    },
+    "lessonIds": ["data-sql-windows-cohorts", "data-experiments-statistics"],
+    "estimatedMinutes": 170,
+    "prerequisites": ["ba-data-analysis", "ba-technical"]
   }
 ]
