@@ -62,9 +62,9 @@ test('technical lessons provide inline feedback, curated translation and focused
   expect(onlineLookups).toBe(0);
   await page.keyboard.press('Escape');
   await page.getByRole('link', { name: 'Practice this lesson', exact: true }).click();
-  await expect(page.getByRole('combobox', { name: 'Learning track', exact: true })).toHaveValue(
-    'ba',
-  );
+  await expect(
+    page.getByText('Independent lesson practice · outside learning paths', { exact: true }),
+  ).toBeVisible();
   await page.getByRole('button', { name: 'Start practicing', exact: true }).click();
   const ids = await page.evaluate(
     () =>

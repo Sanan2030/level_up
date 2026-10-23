@@ -13,8 +13,8 @@ import {
   SlidersHorizontal,
 } from 'lucide-react';
 import { useProgress } from '@/components/providers';
-import { lessons, glossary } from '@/lib/catalog';
-import { tracks, getTrack } from '@/lib/tracks';
+import { lessons, glossary, isIndependentLesson, lessonCategory } from '@/lib/catalog';
+import { tracks } from '@/lib/tracks';
 import { copy, localize } from '@/lib/i18n';
 import type { Locale } from '@/lib/types';
 
@@ -30,7 +30,9 @@ export function LibraryView({
   const params = useSearchParams();
   const initialTrack = params.get('track');
   const [track, setTrack] = useState(
-    initialTrack && tracks.some((t) => t.id === initialTrack) ? initialTrack : 'all',
+    initialTrack && (initialTrack === 'library' || tracks.some((t) => t.id === initialTrack))
+      ? initialTrack
+      : 'all',
   );
   const [status, setStatus] = useState('all');
   const initialSubject = params.get('subject');
@@ -56,7 +58,10 @@ export function LibraryView({
   const normalized = query.trim().toLocaleLowerCase(locale);
   const results = lessons.filter(
     (lesson) =>
-      (track === 'all' || lesson.trackId === track) &&
+      (track === 'all' ||
+        (track === 'library'
+          ? isIndependentLesson(lesson)
+          : !isIndependentLesson(lesson) && lesson.trackId === track)) &&
       (status === 'all' || lesson.status === status) &&
       (subject === 'all' ||
         (subject === 'technical' && lesson.topics.includes('software-development')) ||
@@ -136,6 +141,7 @@ export function LibraryView({
               onChange={(event) => setTrack(event.target.value)}
             >
               <option value="all">{t.all}</option>
+              <option value="library">Independent lessons</option>
               {tracks.map((entry) => (
                 <option key={entry.id} value={entry.id}>
                   {localize(entry.name, locale)}
@@ -189,7 +195,7 @@ export function LibraryView({
               >
                 <div className={`lesson-card-art art-${lesson.trackId}`}>
                   <BookOpen size={34} strokeWidth={1.3} />
-                  <span>{localize(getTrack(lesson.trackId).name, locale)}</span>
+                  <span>{lessonCategory(lesson, locale)}</span>
                 </div>
                 <div className="lesson-card-content">
                   <div className="lesson-card-meta">

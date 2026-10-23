@@ -69,8 +69,14 @@ The synthetic Python lab checks row cleaning/reconciliation, conflicting IDs, no
 
 ## BA/PO and technical course expansion — 2026-10-23
 
-The current catalog has **114 topics: 89 complete English lessons and 25 outlines**, across **34 modules**. Seven BA and five PO outlines were expanded under their original IDs. Sixteen new lessons cover advanced databases (3), messaging/caching (3), software testing (3), data engineering (3) and cloud/security (4). Nine modules keep career levels and prerequisites coherent; five new subject filters expose the technical collections.
+At that expansion, the catalog had **114 topics: 89 complete English lessons and 25 outlines**, across **34 modules**. Seven BA and five PO outlines were expanded under their original IDs. Sixteen new lessons cover advanced databases (3), messaging/caching (3), software testing (3), data engineering (3) and cloud/security (4). Nine modules keep career levels and prerequisites coherent; five new subject filters expose the technical collections.
 
 The bank now has **678 original questions**, including 112 new source-tagged topic items. Totals are BA 199, PO 31, PSPO I 106, PSPO II 118, PSPO III 40, ECBA 64, CCBA 60 and CBAP 60. There are **476 source-tagged questions**, **205 curated dictionary entries** and **86 glossary entries**. Each new lesson has four explained single/multiple-choice checks. No new official-exam or grading claims are introduced.
 
 Thirty-one selectively read online sources supplement the supplied BABOK/Scrum/EBM/Product Owner materials. The [course research record](RESEARCH-COURSES-2026-10-23.md) documents actual reading, version limits, index-only OMG access and unavailable URLs. All lessons, scenarios, diagrams, questions and numerical examples are original. Legacy AZ metadata/question slots preserve schema compatibility while the newly curated terminology has real Azerbaijani explanations and examples. Notes, bookmarks, saved attempts, public access and progress storage remain intact.
+
+## Independent library and browser labs — 2026-10-23
+
+At the user’s request, all 40 engineering/data topics are now independent library lessons and excluded from every learning path. Learning paths retain 74 topics (49 complete, 25 outlines) in 18 modules; 17 independent collections hold the other 40 complete lessons. Total content, lesson/question IDs, sources, notes and stored completions are preserved. Generic BA practice and learning-dashboard calculations exclude independent topic work; explicit lesson practice remains available.
+
+Seven SQL and seven API/testing lessons include in-browser labs. The SQLite fixture reproduces the already published synthetic data and calculations. Six SQL exercises check result values, not a canonical query string. The HTTP lab is an explicitly simulated orders service carried by real same-origin transport, with per-tab caller-owned state and five exercises. It does not call a live external API or provide production authentication, persistence, broker semantics, JWT cryptography or database isolation. Read [the implementation and validation boundaries](BROWSER-LABS.md).

@@ -74,15 +74,15 @@
     "trackId": "ba",
     "level": "mid",
     "title": {
-      "az": "Sistemlərin dilində danış",
-      "en": "Speak the language of systems"
+      "en": "Data modelling and business acceptance",
+      "az": "Məlumat modelləşdirməsi və biznes qəbulu"
     },
     "description": {
-      "az": "Məlumat, API və inteqrasiya xətalarını təhlil et.",
-      "en": "Reason about data, APIs and integration failures."
+      "en": "Model business information and verify acceptance of business workflows.",
+      "az": "Biznes məlumatlarını modelləşdir və biznes axınlarının qəbulunu yoxla."
     },
-    "lessonIds": ["data-modeling", "sql-basics", "rest-apis", "integration-basics", "uat"],
-    "estimatedMinutes": 295,
+    "lessonIds": ["data-modeling", "uat"],
+    "estimatedMinutes": 95,
     "prerequisites": []
   },
   {
@@ -338,7 +338,8 @@
       "browser-bff-csrf-cors"
     ],
     "estimatedMinutes": 295,
-    "prerequisites": ["ba-technical"]
+    "prerequisites": ["ba-technical"],
+    "placement": "library"
   },
   {
     "id": "ba-api-engineering",
@@ -354,7 +355,8 @@
     },
     "lessonIds": ["api-idempotency-concurrency", "api-contracts-evolution", "secure-api-coding"],
     "estimatedMinutes": 240,
-    "prerequisites": ["ba-authentication"]
+    "prerequisites": ["ba-authentication"],
+    "placement": "library"
   },
   {
     "id": "ba-distributed-systems",
@@ -370,7 +372,8 @@
     },
     "lessonIds": ["architecture-boundaries-sagas", "api-resilience-observability"],
     "estimatedMinutes": 160,
-    "prerequisites": ["ba-api-engineering"]
+    "prerequisites": ["ba-api-engineering"],
+    "placement": "library"
   },
   {
     "id": "ba-devops-foundations",
@@ -390,7 +393,8 @@
       "devops-ci-cd-artifacts"
     ],
     "estimatedMinutes": 210,
-    "prerequisites": []
+    "prerequisites": [],
+    "placement": "library"
   },
   {
     "id": "ba-devops-operations",
@@ -406,7 +410,8 @@
     },
     "lessonIds": ["devops-kubernetes-delivery", "devops-terraform-iac", "devops-sre-incidents"],
     "estimatedMinutes": 230,
-    "prerequisites": ["ba-devops-foundations"]
+    "prerequisites": ["ba-devops-foundations"],
+    "placement": "library"
   },
   {
     "id": "ba-data-analysis",
@@ -427,7 +432,8 @@
       "data-dashboards-storytelling"
     ],
     "estimatedMinutes": 280,
-    "prerequisites": []
+    "prerequisites": [],
+    "placement": "library"
   },
   {
     "id": "ba-analytics-advanced",
@@ -443,7 +449,8 @@
     },
     "lessonIds": ["data-sql-windows-cohorts", "data-experiments-statistics"],
     "estimatedMinutes": 170,
-    "prerequisites": ["ba-data-analysis", "ba-technical"]
+    "prerequisites": ["ba-data-analysis", "ba-technical"],
+    "placement": "library"
   },
   {
     "id": "ba-database-foundations",
@@ -459,7 +466,8 @@
     },
     "lessonIds": ["db-indexes-explain"],
     "estimatedMinutes": 75,
-    "prerequisites": ["ba-technical"]
+    "prerequisites": ["ba-technical"],
+    "placement": "library"
   },
   {
     "id": "ba-databases",
@@ -475,7 +483,8 @@
     },
     "lessonIds": ["db-transactions-locks", "db-safe-migrations"],
     "estimatedMinutes": 155,
-    "prerequisites": ["ba-database-foundations"]
+    "prerequisites": ["ba-database-foundations"],
+    "placement": "library"
   },
   {
     "id": "ba-cache-foundations",
@@ -491,7 +500,8 @@
     },
     "lessonIds": ["caching-redis"],
     "estimatedMinutes": 70,
-    "prerequisites": ["ba-technical"]
+    "prerequisites": ["ba-technical"],
+    "placement": "library"
   },
   {
     "id": "ba-messaging-caching",
@@ -507,7 +517,8 @@
     },
     "lessonIds": ["messaging-kafka", "messaging-rabbitmq"],
     "estimatedMinutes": 150,
-    "prerequisites": ["ba-technical"]
+    "prerequisites": ["ba-technical"],
+    "placement": "library"
   },
   {
     "id": "ba-software-testing",
@@ -523,7 +534,8 @@
     },
     "lessonIds": ["testing-strategy-contracts", "testing-postman-apis", "testing-playwright"],
     "estimatedMinutes": 215,
-    "prerequisites": ["ba-technical"]
+    "prerequisites": ["ba-technical"],
+    "placement": "library"
   },
   {
     "id": "ba-data-pipelines",
@@ -539,7 +551,8 @@
     },
     "lessonIds": ["data-etl-warehouse"],
     "estimatedMinutes": 75,
-    "prerequisites": ["ba-technical", "ba-data-analysis"]
+    "prerequisites": ["ba-technical", "ba-data-analysis"],
+    "placement": "library"
   },
   {
     "id": "ba-data-engineering",
@@ -555,7 +568,8 @@
     },
     "lessonIds": ["data-dbt-quality-lineage", "data-airflow-orchestration"],
     "estimatedMinutes": 160,
-    "prerequisites": ["ba-data-pipelines"]
+    "prerequisites": ["ba-data-pipelines"],
+    "placement": "library"
   },
   {
     "id": "ba-cloud-foundations",
@@ -571,7 +585,8 @@
     },
     "lessonIds": ["cloud-iam-vpc-balancing"],
     "estimatedMinutes": 80,
-    "prerequisites": ["ba-devops-foundations"]
+    "prerequisites": ["ba-devops-foundations"],
+    "placement": "library"
   },
   {
     "id": "ba-cloud-security",
@@ -591,6 +606,24 @@
       "security-secrets-rotation"
     ],
     "estimatedMinutes": 220,
-    "prerequisites": ["ba-cloud-foundations", "ba-authentication"]
+    "prerequisites": ["ba-cloud-foundations", "ba-authentication"],
+    "placement": "library"
+  },
+  {
+    "id": "library-api-data-basics",
+    "trackId": "ba",
+    "level": "mid",
+    "placement": "library",
+    "title": {
+      "en": "SQL and API fundamentals",
+      "az": "SQL və API əsasları"
+    },
+    "description": {
+      "en": "Independent SQL, HTTP and integration lessons.",
+      "az": "Müstəqil SQL, HTTP və inteqrasiya dərsləri."
+    },
+    "lessonIds": ["sql-basics", "rest-apis", "integration-basics"],
+    "estimatedMinutes": 200,
+    "prerequisites": []
   }
 ]

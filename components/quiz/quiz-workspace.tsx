@@ -24,7 +24,7 @@ import {
 import { useProgress } from '@/components/providers';
 import { tracks } from '@/lib/tracks';
 import { localize } from '@/lib/i18n';
-import { lessons } from '@/lib/catalog';
+import { lessons, isIndependentLesson } from '@/lib/catalog';
 import type { ExamConfig, Locale, QuizAttempt, QuizQuestion, TrackId } from '@/lib/types';
 import {
   createQuizSession,
@@ -267,7 +267,9 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
   const params = useSearchParams();
   const requestedTrack = params.get('track');
   const [selectedTrack, setSelectedTrack] = useState<TrackId | null>(
-    tracks.find((t) => t.id === requestedTrack)?.id ?? null,
+    tracks.find((t) => t.id === requestedTrack)?.id ??
+      lessons.find((lesson) => lesson.id === params.get('lesson'))?.trackId ??
+      null,
   );
   const [mode, setMode] = useState<QuizMode>(
     params.get('mode') === 'review' ? 'review' : 'practice',
@@ -287,12 +289,19 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
   const lessonFilter = lessons.some((l) => l.id === requestedLesson && l.trackId === trackId)
     ? requestedLesson
     : null;
+  const independentIds = useMemo(
+    () => new Set(lessons.filter(isIndependentLesson).map((lesson) => lesson.id)),
+    [],
+  );
+  const independentPractice = !!lessonFilter && independentIds.has(lessonFilter);
   const bank = useMemo(
     () =>
       questions.filter(
-        (q) => q.trackId === trackId && (!lessonFilter || q.lessonId === lessonFilter),
+        (q) =>
+          q.trackId === trackId &&
+          (lessonFilter ? q.lessonId === lessonFilter : !independentIds.has(q.lessonId)),
       ),
-    [questions, trackId, lessonFilter],
+    [questions, trackId, lessonFilter, independentIds],
   );
   const questionMap = useMemo(() => new Map(questions.map((q) => [q.id, q])), [questions]);
   const exam = exams.find((item) => item.id === trackId);
@@ -502,8 +511,12 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
               }}
             >
               <span className="badge">
-                {tracks.find((track) => track.id === session.trackId)?.name[locale]} · {t.question}{' '}
-                {session.index + 1} {t.of} {session.questionIds.length}
+                {session.questionIds.some((id) =>
+                  independentIds.has(questionMap.get(id)?.lessonId ?? ''),
+                )
+                  ? 'Independent lesson practice'
+                  : tracks.find((track) => track.id === session.trackId)?.name[locale]}{' '}
+                · {t.question} {session.index + 1} {t.of} {session.questionIds.length}
               </span>
               <div style={{ display: 'flex', gap: '.75rem', alignItems: 'center' }}>
                 {remaining !== null ? (
@@ -744,26 +757,30 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
               </Link>
             </div>
           )}
-          <label style={{ display: 'grid', gap: '.5rem' }}>
-            <span style={{ fontWeight: 600 }}>{t.track}</span>
-            <select
-              className="input"
-              value={trackId}
-              onChange={(event) => {
-                setSelectedTrack(event.target.value as TrackId);
-                setDomain('all');
-                setDifficulty('all');
-                setQuestionType('all');
-                setUnseenOnly(false);
-              }}
-            >
-              {tracks.map((track) => (
-                <option key={track.id} value={track.id}>
-                  {localize(track.name, locale)}
-                </option>
-              ))}
-            </select>
-          </label>
+          {independentPractice ? (
+            <p className="notice">Independent lesson practice · outside learning paths</p>
+          ) : (
+            <label style={{ display: 'grid', gap: '.5rem' }}>
+              <span style={{ fontWeight: 600 }}>{t.track}</span>
+              <select
+                className="input"
+                value={trackId}
+                onChange={(event) => {
+                  setSelectedTrack(event.target.value as TrackId);
+                  setDomain('all');
+                  setDifficulty('all');
+                  setQuestionType('all');
+                  setUnseenOnly(false);
+                }}
+              >
+                {tracks.map((track) => (
+                  <option key={track.id} value={track.id}>
+                    {localize(track.name, locale)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
           <fieldset style={{ border: 0, padding: 0, margin: 0 }}>
             <legend style={{ fontWeight: 600, marginBottom: '.75rem' }}>{t.mode}</legend>
             <div
@@ -780,37 +797,44 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
                   ['mock', t.mock, t.mockDescription],
                   ['review', t.review, t.reviewDescription],
                 ] as const
-              ).map(([id, title, description]) => (
-                <label
-                  key={id}
-                  className="card"
-                  style={{
-                    padding: '1rem',
-                    cursor: 'pointer',
-                    borderColor: mode === id ? 'var(--accent, #c6664a)' : undefined,
-                    borderWidth: mode === id ? 2 : 1,
-                  }}
-                >
-                  <span
-                    style={{ display: 'flex', alignItems: 'center', gap: '.5rem', fontWeight: 600 }}
+              )
+                .filter(([id]) => !independentPractice || id !== 'mock')
+                .map(([id, title, description]) => (
+                  <label
+                    key={id}
+                    className="card"
+                    style={{
+                      padding: '1rem',
+                      cursor: 'pointer',
+                      borderColor: mode === id ? 'var(--accent, #c6664a)' : undefined,
+                      borderWidth: mode === id ? 2 : 1,
+                    }}
                   >
-                    <input
-                      type="radio"
-                      name="quiz-mode"
-                      value={id}
-                      checked={mode === id}
-                      onChange={() => setMode(id)}
-                    />
-                    {title}
-                  </span>
-                  <span
-                    className="muted"
-                    style={{ display: 'block', fontSize: '.85rem', marginTop: '.5rem' }}
-                  >
-                    {description}
-                  </span>
-                </label>
-              ))}
+                    <span
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '.5rem',
+                        fontWeight: 600,
+                      }}
+                    >
+                      <input
+                        type="radio"
+                        name="quiz-mode"
+                        value={id}
+                        checked={mode === id}
+                        onChange={() => setMode(id)}
+                      />
+                      {title}
+                    </span>
+                    <span
+                      className="muted"
+                      style={{ display: 'block', fontSize: '.85rem', marginTop: '.5rem' }}
+                    >
+                      {description}
+                    </span>
+                  </label>
+                ))}
             </div>
           </fieldset>
           {mode === 'domain' ? (
@@ -1029,7 +1053,11 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
                   >
                     <div>
                       <strong>
-                        {tracks.find((track) => track.id === attempt.trackId)?.name[locale]}
+                        {attempt.questionIds.some((id) =>
+                          independentIds.has(questionMap.get(id)?.lessonId ?? ''),
+                        )
+                          ? 'Independent lesson practice'
+                          : tracks.find((track) => track.id === attempt.trackId)?.name[locale]}
                       </strong>
                       <p className="muted" style={{ fontSize: '.85rem' }}>
                         {new Date(attempt.completedAt).toLocaleDateString(

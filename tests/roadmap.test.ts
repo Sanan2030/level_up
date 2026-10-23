@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { generateRoadmap, orderByPrerequisites } from '../lib/roadmap';
 import type { LearningModule, LearningProfile, Lesson } from '../lib/types';
+import { lessons as catalogLessons, modules as catalogModules } from '../lib/catalog';
+import { tracks } from '../lib/tracks';
 
 const title = { az: 'Mövzu', en: 'Topic' };
 const modules: LearningModule[] = [
@@ -66,6 +68,37 @@ const profile: LearningProfile = {
 };
 
 describe('personalized roadmap', () => {
+  it('keeps all independent technical collections out of every learning path and estimate', () => {
+    const independent = catalogLessons.filter((lesson) => lesson.placement === 'library');
+    expect(independent).toHaveLength(40);
+    for (const track of tracks) {
+      const plan = generateRoadmap(
+        { trackId: track.id, currentLevel: 'zero', targetLevel: 'lead', dailyMinutes: 30 },
+        catalogModules,
+        catalogLessons,
+      );
+      expect(plan.modules.every((module) => module.placement !== 'library')).toBe(true);
+      expect(plan.lessons.every((lesson) => lesson.placement !== 'library')).toBe(true);
+      expect(plan.totalMinutes).toBe(plan.lessons.reduce((sum, lesson) => sum + lesson.minutes, 0));
+    }
+  });
+  it('preserves old independent completion records without counting them toward BA progress', () => {
+    const completed = {
+      'devops-docker-containers': '2026-10-23T10:00:00Z',
+      'sql-basics': '2026-10-23T10:00:00Z',
+      'stakeholder-mapping': '2026-10-23T10:00:00Z',
+    };
+    const before = JSON.stringify(completed);
+    const plan = generateRoadmap(
+      { trackId: 'ba', currentLevel: 'zero', targetLevel: 'lead', dailyMinutes: 30 },
+      catalogModules,
+      catalogLessons,
+      completed,
+    );
+    expect(plan.completedCount).toBe(1);
+    expect(plan.lessons.some((lesson) => lesson.id === 'sql-basics')).toBe(false);
+    expect(JSON.stringify(completed)).toBe(before);
+  });
   it('selects only the level gap and orders prerequisites before dependent modules', () => {
     const roadmap = generateRoadmap(profile, modules, lessons);
     expect(roadmap.modules.map((m) => m.id)).toEqual(['mid', 'lead']);

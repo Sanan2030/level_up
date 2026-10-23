@@ -118,7 +118,12 @@ test('searches lesson and glossary content and filters complete lessons', async 
   await page.getByRole('combobox', { name: 'Track', exact: true }).selectOption('ba');
   await page.getByRole('combobox', { name: 'Content', exact: true }).selectOption('published');
   await expect(page.locator('.library-lesson-card')).toHaveCount(
-    lessonData.filter((lesson) => lesson.trackId === 'ba' && lesson.status === 'published').length,
+    lessonData.filter(
+      (lesson) =>
+        lesson.trackId === 'ba' &&
+        lesson.status === 'published' &&
+        (!('placement' in lesson) || lesson.placement !== 'library'),
+    ).length,
   );
   await page.getByRole('searchbox').fill('stakeholder mapping');
   await expect(

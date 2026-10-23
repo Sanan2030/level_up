@@ -2,7 +2,11 @@
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { BookOpen, Check, Compass, Flame, GraduationCap } from 'lucide-react';
-import { lessons, modules, competencies } from '@/lib/catalog';
+import {
+  learningLessons as lessons,
+  learningModules as modules,
+  competencies,
+} from '@/lib/catalog';
 import { getTrack } from '@/lib/tracks';
 import type { Locale, TrackId } from '@/lib/types';
 import { activityDate, streakDays } from '@/lib/storage';
@@ -14,9 +18,19 @@ const AttemptChart = dynamic(() => import('./quiz/attempt-chart').then((m) => m.
 });
 const ProgressChart = dynamic(() => import('./progress-chart'), { ssr: false });
 
-export function Dashboard({ locale }: { locale: Locale }) {
+export function Dashboard({
+  locale,
+  independentQuestionIds = [],
+}: {
+  locale: Locale;
+  independentQuestionIds?: string[];
+}) {
   const az = locale === 'az';
   const { progress, ready } = useProgress();
+  const independentQuestions = new Set(independentQuestionIds);
+  const learningAttempts = progress.attempts.filter(
+    (attempt) => !attempt.questionIds.some((id) => independentQuestions.has(id)),
+  );
   const track = getTrack(progress.activeTrack);
   const profile = progress.profiles[track.id];
   const roadmap = profile
@@ -31,15 +45,17 @@ export function Dashboard({ locale }: { locale: Locale }) {
     m.lessonIds.every((id) => progress.completedLessons[id]),
   ).length;
   const streak = streakDays(progress.activity);
-  const due = dueReviews(progress.reviews).length;
-  const attempts = progress.attempts.filter((a) => a.trackId === track.id);
+  const due = dueReviews(progress.reviews).filter(
+    (review) => !independentQuestions.has(review.questionId),
+  ).length;
+  const attempts = learningAttempts.filter((a) => a.trackId === track.id);
   const scored = attempts.filter((a) => a.total > 0);
   const last = scored.at(-1);
   const relevantTracks = [
     ...new Set([
       progress.activeTrack,
       ...Object.keys(progress.profiles),
-      ...progress.attempts.map((a) => a.trackId),
+      ...learningAttempts.map((a) => a.trackId),
     ]),
   ] as TrackId[];
   const recent = [
@@ -57,7 +73,7 @@ export function Dashboard({ locale }: { locale: Locale }) {
           ]
         : [];
     }),
-    ...progress.attempts.map((a) => ({
+    ...learningAttempts.map((a) => ({
       id: a.id,
       date: a.completedAt,
       label: `${az ? 'Məşq' : 'Practice'}: ${getTrack(a.trackId).name[locale]}`,
@@ -108,7 +124,7 @@ export function Dashboard({ locale }: { locale: Locale }) {
     {
       icon: GraduationCap,
       label: az ? 'İlk məşq' : 'First practice',
-      earned: progress.attempts.length > 0,
+      earned: learningAttempts.length > 0,
     },
   ];
   if (!ready)
@@ -198,7 +214,7 @@ export function Dashboard({ locale }: { locale: Locale }) {
             const skills = competencies
               .filter((c) => c.trackId === id && c.level === target)
               .flatMap((c) => c.checklist);
-            const latest = progress.attempts.filter((a) => a.trackId === id && a.total > 0).at(-1);
+            const latest = learningAttempts.filter((a) => a.trackId === id && a.total > 0).at(-1);
             const percent =
               tr.category === 'career'
                 ? skills.length
@@ -240,7 +256,7 @@ export function Dashboard({ locale }: { locale: Locale }) {
         </div>
         <div className="dashboard-extra-stats" style={{ marginTop: 22 }}>
           <span>
-            {Object.keys(progress.completedLessons).length}{' '}
+            {lessons.filter((lesson) => progress.completedLessons[lesson.id]).length}{' '}
             {az ? 'tamamlanmış dərs' : 'completed lessons'}
           </span>
           <span>

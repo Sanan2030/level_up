@@ -3248,3 +3248,86 @@ hr {
 .dark .note-signature {
   color: #b8c9aa;
 }
+
+.lesson-labs {
+  scroll-margin-top: 24px;
+  min-width: 0;
+}
+.lesson-lab {
+  padding: clamp(20px, 4vw, 36px);
+  min-width: 0;
+}
+.lesson-lab h2 {
+  font-size: 1.65rem;
+}
+.lesson-lab summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.lesson-lab details > p,
+.lab-dataset > div {
+  margin-top: 12px;
+}
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.lab-grid > *,
+.lab-response {
+  min-width: 0;
+}
+.lab-editor,
+.lab-mono {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.lab-editor {
+  resize: vertical;
+  width: 100%;
+  min-height: 140px;
+  tab-size: 2;
+}
+.lesson-lab pre {
+  background: var(--surface, #f3f6f4);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  overflow: auto;
+  max-width: 100%;
+  font-size: 13px;
+}
+.lab-table-scroll {
+  overflow: auto;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.lesson-lab table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.lesson-lab th,
+.lesson-lab td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+.lesson-lab th {
+  font-weight: 600;
+}
+.lab-correct {
+  border-color: var(--accent);
+}
+.lab-http-status {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+@media (max-width: 700px) {
+  .lab-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

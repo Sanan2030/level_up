@@ -42,16 +42,23 @@ export function generateRoadmap(
   if (!Number.isFinite(profile.dailyMinutes) || profile.dailyMinutes <= 0) {
     throw new Error('Daily study minutes must be positive');
   }
-  const selectedModules = orderByPrerequisites(
-    allModules.filter(
-      (module) =>
-        module.trackId === profile.trackId &&
-        (!career ||
-          (levelOrder.indexOf(module.level) > current &&
-            levelOrder.indexOf(module.level) <= target)),
-    ),
-  );
   const lessonLookup = new Map(allLessons.map((lesson) => [lesson.id, lesson]));
+  const selectedModules = orderByPrerequisites(
+    allModules
+      .filter(
+        (module) =>
+          module.trackId === profile.trackId &&
+          module.placement !== 'library' &&
+          (!career ||
+            (levelOrder.indexOf(module.level) > current &&
+              levelOrder.indexOf(module.level) <= target)),
+      )
+      .map((module) => ({
+        ...module,
+        lessonIds: module.lessonIds.filter((id) => lessonLookup.get(id)?.placement !== 'library'),
+      }))
+      .filter((module) => module.lessonIds.length > 0),
+  );
   const selectedLessons = orderByPrerequisites(
     selectedModules.flatMap((module) =>
       module.lessonIds

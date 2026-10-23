@@ -8,6 +8,7 @@ export default defineConfig([
   prettier,
   globalIgnores([
     '.next/**',
+    'public/labs/vendor/**',
     'out/**',
     'coverage/**',
     'playwright-report/**',

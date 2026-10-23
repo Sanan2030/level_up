@@ -7,13 +7,14 @@ import type { ComponentProps } from 'react';
 import { LessonCheck } from '@/components/lesson/lesson-check';
 import { SourceLinks } from '@/components/source-links';
 import { getQuestions } from '@/lib/assessments';
-import { lessons } from '@/lib/catalog';
+import { lessons, isIndependentLesson, lessonCategory } from '@/lib/catalog';
 import { getContent } from '@/lib/content';
 import { getLocale } from '@/lib/i18n';
-import { getTrack } from '@/lib/tracks';
 import { Diagram } from '@/components/lesson/diagram';
 import { ConceptStepper } from '@/components/lesson/concept-stepper';
 import { LessonActions } from '@/components/lesson/lesson-actions';
+import { LessonLab } from '@/components/lesson/lesson-lab';
+import { hasLessonLab } from '@/lib/labs/catalog';
 export function generateStaticParams() {
   return lessons.map((l) => ({ id: l.id }));
 }
@@ -67,7 +68,11 @@ export default async function LessonPage({
     },
   });
   const trackLessons = lessons.filter(
-    (l) => l.trackId === lesson.trackId && l.status === 'published',
+    (l) =>
+      l.status === 'published' &&
+      (isIndependentLesson(lesson)
+        ? isIndependentLesson(l) && l.moduleId === lesson.moduleId
+        : !isIndependentLesson(l) && l.trackId === lesson.trackId),
   );
   const next = trackLessons[trackLessons.findIndex((l) => l.id === id) + 1];
   return (
@@ -78,7 +83,7 @@ export default async function LessonPage({
       </Link>
       <header className="lesson-header">
         <div className="button-row">
-          <span className="badge badge-peach">{getTrack(lesson.trackId).name[locale]}</span>
+          <span className="badge badge-peach">{lessonCategory(lesson, locale)}</span>
           <span className="lesson-time">
             <Clock3 size={15} />
             {lesson.minutes} {az ? 'dəq' : 'min'}
@@ -140,9 +145,18 @@ export default async function LessonPage({
           </div>
           <div className="card padded">
             <h3>{az ? 'Dərs üzrə suallar' : 'Lesson practice'}</h3>
+            {hasLessonLab(id) && (
+              <a className="button button-primary" href="#practice-lab">
+                Open practical lab
+              </a>
+            )}
             <Link
               className="button button-secondary"
-              href={`/${locale}/practice?track=${lesson.trackId}&lesson=${lesson.id}`}
+              href={
+                isIndependentLesson(lesson)
+                  ? `/${locale}/practice?lesson=${lesson.id}`
+                  : `/${locale}/practice?track=${lesson.trackId}&lesson=${lesson.id}`
+              }
             >
               {az ? 'Məşqə başla' : 'Practice this lesson'}
               <ArrowRight size={15} />
@@ -150,6 +164,7 @@ export default async function LessonPage({
           </div>
         </aside>
       </div>
+      <LessonLab lessonId={id} />
       <LessonActions lesson={lesson} locale={locale} />
       {next && (
         <Link href={`/${locale}/lessons/${next.id}`} className="card padded next-lesson-link">

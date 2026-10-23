@@ -19,6 +19,7 @@ export const levelSchema = z.enum(['zero', 'junior', 'mid', 'lead']);
 export type LevelId = z.infer<typeof levelSchema>;
 export const moduleSchema = z.object({
   id: z.string(),
+  placement: z.enum(['learning', 'library']).optional(),
   trackId: trackIdSchema,
   level: levelSchema,
   title: localizedSchema,
@@ -29,6 +30,7 @@ export const moduleSchema = z.object({
 });
 export type LearningModule = z.infer<typeof moduleSchema>;
 export const lessonSchema = z.object({
+  placement: z.enum(['learning', 'library']).optional(),
   sourceIds: z.array(z.string()).default([]),
   id: z.string(),
   trackId: trackIdSchema,

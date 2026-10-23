@@ -297,7 +297,7 @@
     "id": "sql-basics",
     "trackId": "ba",
     "level": "mid",
-    "moduleId": "ba-technical",
+    "moduleId": "library-api-data-basics",
     "title": {
       "en": "SQL for business questions",
       "az": "Biznes sualları üçün SQL"
@@ -310,13 +310,14 @@
     "status": "published",
     "topics": ["data-analysis", "SQL", "joins", "GROUP BY", "NULL", "grain"],
     "prerequisites": ["data-analysis-grain-quality"],
-    "sourceIds": ["postgres18-joins", "postgres18-windows"]
+    "sourceIds": ["postgres18-joins", "postgres18-windows"],
+    "placement": "library"
   },
   {
     "id": "rest-apis",
     "trackId": "ba",
     "level": "mid",
-    "moduleId": "ba-technical",
+    "moduleId": "library-api-data-basics",
     "title": {
       "en": "HTTP APIs, resource contracts and failure semantics",
       "az": "HTTP API-ləri, resurs müqavilələri və xəta semantikası"
@@ -339,13 +340,14 @@
       "software-development"
     ],
     "prerequisites": [],
-    "sourceIds": ["http-semantics-9110", "http-problems-9457", "openapi-311"]
+    "sourceIds": ["http-semantics-9110", "http-problems-9457", "openapi-311"],
+    "placement": "library"
   },
   {
     "id": "integration-basics",
     "trackId": "ba",
     "level": "mid",
-    "moduleId": "ba-technical",
+    "moduleId": "library-api-data-basics",
     "title": {
       "en": "Asynchronous integration, webhooks and transactional outbox",
       "az": "Asinxron inteqrasiya, webhook və transactional outbox"
@@ -366,7 +368,8 @@
       "software-development"
     ],
     "prerequisites": ["rest-apis"],
-    "sourceIds": ["azure-transactional-outbox", "github-webhook-validation", "http-semantics-9110"]
+    "sourceIds": ["azure-transactional-outbox", "github-webhook-validation", "http-semantics-9110"],
+    "placement": "library"
   },
   {
     "id": "uat",
@@ -1406,7 +1409,8 @@
       "software-development"
     ],
     "prerequisites": ["rest-apis"],
-    "sourceIds": ["oauth-6749", "oauth-security-9700", "owasp-oauth-security"]
+    "sourceIds": ["oauth-6749", "oauth-security-9700", "owasp-oauth-security"],
+    "placement": "library"
   },
   {
     "id": "oauth-pkce-oidc",
@@ -1435,7 +1439,8 @@
       "software-development"
     ],
     "prerequisites": ["access-refresh-tokens"],
-    "sourceIds": ["oauth-security-9700", "pkce-7636", "oidc-core-10"]
+    "sourceIds": ["oauth-security-9700", "pkce-7636", "oidc-core-10"],
+    "placement": "library"
   },
   {
     "id": "jwt-validation-authorization",
@@ -1470,7 +1475,8 @@
       "oauth-security-9700",
       "owasp-authorization",
       "owasp-rest-security"
-    ]
+    ],
+    "placement": "library"
   },
   {
     "id": "browser-bff-csrf-cors",
@@ -1499,7 +1505,8 @@
       "software-development"
     ],
     "prerequisites": ["oauth-pkce-oidc", "jwt-validation-authorization"],
-    "sourceIds": ["owasp-csrf-prevention", "owasp-rest-security", "azure-microservices-patterns"]
+    "sourceIds": ["owasp-csrf-prevention", "owasp-rest-security", "azure-microservices-patterns"],
+    "placement": "library"
   },
   {
     "id": "api-idempotency-concurrency",
@@ -1527,7 +1534,8 @@
       "software-development"
     ],
     "prerequisites": ["rest-apis", "jwt-validation-authorization"],
-    "sourceIds": ["http-semantics-9110", "azure-retry-pattern", "azure-transactional-outbox"]
+    "sourceIds": ["http-semantics-9110", "azure-retry-pattern", "azure-transactional-outbox"],
+    "placement": "library"
   },
   {
     "id": "api-contracts-evolution",
@@ -1554,7 +1562,8 @@
       "software-development"
     ],
     "prerequisites": ["rest-apis"],
-    "sourceIds": ["openapi-311", "http-problems-9457", "http-semantics-9110"]
+    "sourceIds": ["openapi-311", "http-problems-9457", "http-semantics-9110"],
+    "placement": "library"
   },
   {
     "id": "architecture-boundaries-sagas",
@@ -1587,7 +1596,8 @@
       "azure-microservices-patterns",
       "azure-saga-pattern",
       "azure-transactional-outbox"
-    ]
+    ],
+    "placement": "library"
   },
   {
     "id": "api-resilience-observability",
@@ -1622,7 +1632,8 @@
       "azure-circuit-breaker",
       "azure-microservices-patterns",
       "http-semantics-9110"
-    ]
+    ],
+    "placement": "library"
   },
   {
     "id": "secure-api-coding",
@@ -1660,7 +1671,8 @@
       "http-semantics-9110",
       "pkce-7636",
       "github-webhook-validation"
-    ]
+    ],
+    "placement": "library"
   },
   {
     "id": "pspo1-sprint-goal-changes",
@@ -1793,7 +1805,8 @@
     "status": "published",
     "topics": ["devops", "Linux", "Git", "DNS", "TLS", "process", "port", "exit status"],
     "prerequisites": [],
-    "sourceIds": ["git-branching", "linux-user-commands", "http-semantics-9110"]
+    "sourceIds": ["git-branching", "linux-user-commands", "http-semantics-9110"],
+    "placement": "library"
   },
   {
     "id": "devops-docker-containers",
@@ -1821,7 +1834,8 @@
       "build cache"
     ],
     "prerequisites": ["devops-linux-git-networking"],
-    "sourceIds": ["docker-build-practices"]
+    "sourceIds": ["docker-build-practices"],
+    "placement": "library"
   },
   {
     "id": "devops-ci-cd-artifacts",
@@ -1840,7 +1854,8 @@
     "status": "published",
     "topics": ["devops", "CI", "CD", "CI/CD", "GitHub Actions", "artifact", "supply chain", "OIDC"],
     "prerequisites": ["devops-linux-git-networking", "devops-docker-containers"],
-    "sourceIds": ["github-actions-secure-use", "docker-build-practices"]
+    "sourceIds": ["github-actions-secure-use", "docker-build-practices"],
+    "placement": "library"
   },
   {
     "id": "devops-kubernetes-delivery",
@@ -1868,7 +1883,8 @@
       "startup probe"
     ],
     "prerequisites": ["devops-docker-containers", "devops-ci-cd-artifacts"],
-    "sourceIds": ["kubernetes-deployments", "kubernetes-probes"]
+    "sourceIds": ["kubernetes-deployments", "kubernetes-probes"],
+    "placement": "library"
   },
   {
     "id": "devops-terraform-iac",
@@ -1887,7 +1903,8 @@
     "status": "published",
     "topics": ["devops", "Terraform", "IaC", "state", "plan", "drift", "locking", "secret"],
     "prerequisites": ["devops-ci-cd-artifacts"],
-    "sourceIds": ["terraform-state-purpose", "terraform-sensitive-data"]
+    "sourceIds": ["terraform-state-purpose", "terraform-sensitive-data"],
+    "placement": "library"
   },
   {
     "id": "devops-sre-incidents",
@@ -1916,7 +1933,8 @@
       "postmortem"
     ],
     "prerequisites": ["devops-kubernetes-delivery"],
-    "sourceIds": ["google-sre-slos", "google-sre-incidents", "azure-recovery-targets"]
+    "sourceIds": ["google-sre-slos", "google-sre-incidents", "azure-recovery-targets"],
+    "placement": "library"
   },
   {
     "id": "data-analysis-grain-quality",
@@ -1935,7 +1953,8 @@
     "status": "published",
     "topics": ["data-analysis", "data quality", "grain", "denominator", "sampling", "metric"],
     "prerequisites": [],
-    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "postgres18-joins"]
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "postgres18-joins"],
+    "placement": "library"
   },
   {
     "id": "data-sql-windows-cohorts",
@@ -1962,7 +1981,8 @@
       "right censoring"
     ],
     "prerequisites": ["sql-basics"],
-    "sourceIds": ["postgres18-windows", "postgres18-joins"]
+    "sourceIds": ["postgres18-windows", "postgres18-joins"],
+    "placement": "library"
   },
   {
     "id": "data-python-pandas-cleaning",
@@ -1981,7 +2001,8 @@
     "status": "published",
     "topics": ["data-analysis", "Python", "pandas", "CSV", "missing data", "merge", "validation"],
     "prerequisites": ["data-analysis-grain-quality", "sql-basics"],
-    "sourceIds": ["pandas-missing-data", "pandas-merge-validation"]
+    "sourceIds": ["pandas-missing-data", "pandas-merge-validation"],
+    "placement": "library"
   },
   {
     "id": "data-excel-powerbi-models",
@@ -2008,7 +2029,8 @@
       "filter context"
     ],
     "prerequisites": ["data-analysis-grain-quality", "sql-basics"],
-    "sourceIds": ["powerbi-star-schema", "powerquery-data-types"]
+    "sourceIds": ["powerbi-star-schema", "powerquery-data-types"],
+    "placement": "library"
   },
   {
     "id": "data-experiments-statistics",
@@ -2035,7 +2057,8 @@
       "guardrail"
     ],
     "prerequisites": ["data-analysis-grain-quality", "sql-basics"],
-    "sourceIds": ["nist-experiment-design", "govuk-performance-metrics"]
+    "sourceIds": ["nist-experiment-design", "govuk-performance-metrics"],
+    "placement": "library"
   },
   {
     "id": "data-dashboards-storytelling",
@@ -2061,7 +2084,8 @@
       "data storytelling"
     ],
     "prerequisites": ["data-analysis-grain-quality", "sql-basics"],
-    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "wcag22-use-of-color"]
+    "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "wcag22-use-of-color"],
+    "placement": "library"
   },
   {
     "id": "db-indexes-explain",
@@ -2080,7 +2104,8 @@
     "status": "published",
     "topics": ["databases"],
     "prerequisites": ["sql-basics"],
-    "sourceIds": ["pg-explain", "pg-createindex"]
+    "sourceIds": ["pg-explain", "pg-createindex"],
+    "placement": "library"
   },
   {
     "id": "db-transactions-locks",
@@ -2099,7 +2124,8 @@
     "status": "published",
     "topics": ["databases"],
     "prerequisites": ["sql-basics"],
-    "sourceIds": ["pg-isolation", "pg-locking"]
+    "sourceIds": ["pg-isolation", "pg-locking"],
+    "placement": "library"
   },
   {
     "id": "db-safe-migrations",
@@ -2118,7 +2144,8 @@
     "status": "published",
     "topics": ["databases"],
     "prerequisites": ["db-transactions-locks"],
-    "sourceIds": ["pg-createindex", "pg-locking"]
+    "sourceIds": ["pg-createindex", "pg-locking"],
+    "placement": "library"
   },
   {
     "id": "messaging-kafka",
@@ -2137,7 +2164,8 @@
     "status": "published",
     "topics": ["messaging"],
     "prerequisites": ["integration-basics"],
-    "sourceIds": ["kafka-design", "http-semantics-9110"]
+    "sourceIds": ["kafka-design", "http-semantics-9110"],
+    "placement": "library"
   },
   {
     "id": "messaging-rabbitmq",
@@ -2156,7 +2184,8 @@
     "status": "published",
     "topics": ["messaging"],
     "prerequisites": ["integration-basics"],
-    "sourceIds": ["rabbit-ack", "rabbit-dlx"]
+    "sourceIds": ["rabbit-ack", "rabbit-dlx"],
+    "placement": "library"
   },
   {
     "id": "caching-redis",
@@ -2175,7 +2204,8 @@
     "status": "published",
     "topics": ["messaging"],
     "prerequisites": ["rest-apis"],
-    "sourceIds": ["redis-expire", "azure-cache-aside"]
+    "sourceIds": ["redis-expire", "azure-cache-aside"],
+    "placement": "library"
   },
   {
     "id": "testing-strategy-contracts",
@@ -2194,7 +2224,8 @@
     "status": "published",
     "topics": ["testing"],
     "prerequisites": ["stories-gherkin"],
-    "sourceIds": ["fowler-tests", "openapi-311", "owasp-authorization"]
+    "sourceIds": ["fowler-tests", "openapi-311", "owasp-authorization"],
+    "placement": "library"
   },
   {
     "id": "testing-postman-apis",
@@ -2213,7 +2244,8 @@
     "status": "published",
     "topics": ["testing"],
     "prerequisites": ["rest-apis", "testing-strategy-contracts"],
-    "sourceIds": ["postman-tests", "openapi-311", "http-semantics-9110"]
+    "sourceIds": ["postman-tests", "openapi-311", "http-semantics-9110"],
+    "placement": "library"
   },
   {
     "id": "testing-playwright",
@@ -2232,7 +2264,8 @@
     "status": "published",
     "topics": ["testing"],
     "prerequisites": ["testing-strategy-contracts"],
-    "sourceIds": ["playwright-practices"]
+    "sourceIds": ["playwright-practices"],
+    "placement": "library"
   },
   {
     "id": "data-etl-warehouse",
@@ -2251,7 +2284,8 @@
     "status": "published",
     "topics": ["data-engineering"],
     "prerequisites": ["sql-basics", "data-analysis-grain-quality"],
-    "sourceIds": ["aws-etl-elt", "fabric-warehouse", "powerbi-star-schema"]
+    "sourceIds": ["aws-etl-elt", "fabric-warehouse", "powerbi-star-schema"],
+    "placement": "library"
   },
   {
     "id": "data-dbt-quality-lineage",
@@ -2270,7 +2304,8 @@
     "status": "published",
     "topics": ["data-engineering"],
     "prerequisites": ["data-etl-warehouse"],
-    "sourceIds": ["dbt-tests", "dbt-ref"]
+    "sourceIds": ["dbt-tests", "dbt-ref"],
+    "placement": "library"
   },
   {
     "id": "data-airflow-orchestration",
@@ -2289,7 +2324,8 @@
     "status": "published",
     "topics": ["data-engineering"],
     "prerequisites": ["data-etl-warehouse"],
-    "sourceIds": ["airflow-dags", "airflow-practices"]
+    "sourceIds": ["airflow-dags", "airflow-practices"],
+    "placement": "library"
   },
   {
     "id": "cloud-iam-vpc-balancing",
@@ -2308,7 +2344,8 @@
     "status": "published",
     "topics": ["cloud-security"],
     "prerequisites": ["devops-linux-git-networking"],
-    "sourceIds": ["aws-iam", "aws-vpc", "aws-alb", "owasp-authorization"]
+    "sourceIds": ["aws-iam", "aws-vpc", "aws-alb", "owasp-authorization"],
+    "placement": "library"
   },
   {
     "id": "cloud-cost-engineering",
@@ -2327,7 +2364,8 @@
     "status": "published",
     "topics": ["cloud-security"],
     "prerequisites": ["cloud-iam-vpc-balancing"],
-    "sourceIds": ["aws-cost", "aws-cost-tags"]
+    "sourceIds": ["aws-cost", "aws-cost-tags"],
+    "placement": "library"
   },
   {
     "id": "security-threat-modeling-ssrf",
@@ -2346,7 +2384,8 @@
     "status": "published",
     "topics": ["cloud-security"],
     "prerequisites": ["rest-apis", "cloud-iam-vpc-balancing"],
-    "sourceIds": ["owasp-threat", "owasp-ssrf"]
+    "sourceIds": ["owasp-threat", "owasp-ssrf"],
+    "placement": "library"
   },
   {
     "id": "security-secrets-rotation",
@@ -2365,6 +2404,7 @@
     "status": "published",
     "topics": ["cloud-security"],
     "prerequisites": ["jwt-validation-authorization"],
-    "sourceIds": ["owasp-secrets", "aws-iam", "jwt-security-8725"]
+    "sourceIds": ["owasp-secrets", "aws-iam", "jwt-security-8725"],
+    "placement": "library"
   }
 ]

@@ -47,6 +47,17 @@ async function validate() {
       modules.find((m) => m.id === lesson.moduleId)?.trackId === lesson.trackId,
       `${lesson.id}: module track mismatch`,
     );
+    check(
+      (modules.find((m) => m.id === lesson.moduleId)?.placement === 'library') ===
+        (lesson.placement === 'library'),
+      `${lesson.id}: lesson/module placement mismatch`,
+    );
+    if (lesson.placement !== 'library')
+      for (const id of lesson.prerequisites)
+        check(
+          lessons.find((l) => l.id === id)?.placement !== 'library',
+          `${lesson.id}: learning path requires independent lesson ${id}`,
+        );
     for (const id of lesson.prerequisites)
       check(lessonIds.has(id), `${lesson.id}: unknown prerequisite ${id}`);
   }
@@ -59,6 +70,12 @@ async function validate() {
       check(lessonIds.has(id), `${learningModule.id}: unknown lesson ${id}`);
     for (const id of learningModule.prerequisites)
       check(moduleIds.has(id), `${learningModule.id}: unknown prerequisite ${id}`);
+    if (learningModule.placement !== 'library')
+      for (const id of learningModule.prerequisites)
+        check(
+          modules.find((module) => module.id === id)?.placement !== 'library',
+          `${learningModule.id}: learning path depends on independent collection ${id}`,
+        );
   }
   const visiting = new Set<string>();
   const visited = new Set<string>();
