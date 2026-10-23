@@ -3,63 +3,86 @@ id: story-mapping
 locale: en
 title: 'Story mapping and discovery loops'
 objectives:
-  - 'Map a user journey and choose a thin slice to test a risky assumption.'
-  - 'Create an end-to-end slice for rescheduling a delivery without calling support.'
+  - 'Separate the journey backbone from detailed tasks.'
+  - 'Slice a usable outcome across the journey.'
+  - 'Use a map to discuss gaps, risks and learning rather than freeze scope.'
 ---
-
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
 
 ## Learning objectives
 
-- Map a user journey and choose a thin slice to test a risky assumption.
-- Create an end-to-end slice for rescheduling a delivery without calling support.
+- Separate the journey backbone from detailed tasks.
+- Slice a usable outcome across the journey.
+- Use a map to discuss gaps, risks and learning rather than freeze scope.
 
-## Why it matters
+## Why this matters
 
-The planned lesson uses a concrete delivery decision to show when **Story mapping and discovery loops** helps a team. It will make assumptions and affected stakeholders explicit.
+A flat backlog can contain hundreds of items while hiding how a user completes a goal. A story map makes the journey visible and helps people discuss a coherent release. Its value comes from shared understanding and slicing, not from arranging colorful cards.
 
-## Core theory: planned outline
+## Core theory
 
-1. Define the essential terms in the topic.
-2. Map a user journey and choose a thin slice to test a risky assumption.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+Start with a user goal and a concrete journey. Identify major activities in an approximate narrative order, then place more detailed tasks beneath them. The backbone gives context; lower-level tasks expose alternatives, exceptions and implementation questions. A map is not a claim that every user follows one rigid sequence.
 
-## Worked example: planned outline
+Separate the order of activities from the priority of work. A task appears early in the journey because the user does it early, not necessarily because it should be built first. Discuss dependencies and risk while preserving the overall goal.
 
-Create an end-to-end slice for rescheduling a delivery without calling support. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+A release slice crosses enough of the journey to deliver a usable outcome. A small booking release might let a customer find an available slot, reserve it and receive confirmation. Delivering only a database layer or only a search screen may provide engineering progress without a usable booking outcome.
 
-## Diagram: planned outline
+Include quality, exception handling and operational work needed for the selected outcome. A release label does not excuse violating the Definition of Done. A “walking skeleton” is useful only if the team defines what is usable and what the exercise can actually demonstrate.
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **Story mapping and discovery loops**. The diagram will include a text explanation.
+Keep assumptions visible: which user situation is represented, which alternatives are omitted, which policy rules remain unresolved and what evidence would change the slice. Translate selected work into appropriately refined Product Backlog items. The map supports the Product Owner's ordering and collaboration; it does not replace the Product Backlog or prescribe a new mandatory Scrum artifact.
 
-## Interactive practice: planned outline
+## Worked example
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+For appointment booking, the backbone is Discover, Choose, Reserve and Manage. Tasks include filter locations, inspect availability, submit details, receive confirmation and cancel. The first proposed release includes one location, a limited schedule, a reservation and accessible confirmation, plus the essential failure and cancellation behavior.
 
-## Common mistakes and best practices
+Multi-location comparison and loyalty rewards remain outside that slice. The team discovers that confirmation delivery is unreliable, so it includes a visible reservation status and recovery path. It does not call an unconfirmed reservation successful merely to keep the slice small.
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+## Visual model
 
-## Practice exercise and sample-solution plan
+<Diagram
+  chart={
+    'flowchart LR\n D[Discover availability] --> C[Choose slot]\n C --> R[Reserve safely]\n R --> F[Confirm and manage]\n H[One coherent release slice] -.-> D\n H -.-> C\n H -.-> R\n H -.-> F'
+  }
+/>
 
-**Exercise:** Create an end-to-end slice for rescheduling a delivery without calling support.
+Trace the decision and its evidence across each boundary. The diagram is an original teaching model; it is not a formal notation validator.
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+## Inspect the decision
 
-## Mini-quiz: planned outline
+<details>
+<summary>Does a release containing every search feature but no reservation flow complete the booking goal?</summary>
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+Not under this stated goal. It may test a search hypothesis, but it does not deliver a usable booking journey. Label the learning purpose honestly or choose a smaller end-to-end slice that supports reservation and confirmation with required quality.
 
-## One-page summary plan
+</details>
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+## Common mistakes
 
-## Further reading
+- Confusing journey order with backlog priority.
+- Choosing horizontal technical layers as the only release slices.
+- Hiding necessary accessibility or recovery work below a release line.
+- Treating the map as fixed scope after new evidence appears.
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+## Practice exercise
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+Create a story map for a refund journey. Choose a first usable slice, two deferred capabilities and one assumption to test before committing to the slice.
+
+## Worked solution
+
+<details>
+<summary>Show worked solution</summary>
+
+Use activities such as Find payment, Check eligibility, Request refund and Track outcome. A first slice can support one payment method and a limited eligible population while preserving authorization, duplicate protection and unresolved-status handling. Defer additional payment methods and advanced reporting if they are not essential to the outcome. Test whether customers can understand the pending state and find their outcome.
+
+</details>
+
+## Check understanding and cheat sheet
+
+User goal → activities → tasks and exceptions → end-to-end slice → evidence and adaptation. Story mapping is a practice, not an additional mandatory Scrum artifact.
+
+<LessonCheck />
+
+## Sources and further reading
+
+- [Agile Alliance: Story Mapping](https://agilealliance.org/glossary/story-mapping/): journey organization and release discussion.
+- [The Professional Product Owner, McGreal and Jocham (2018)](https://www.informit.com/store/professional-product-owner-leveraging-scrum-as-a-competitive-9780134686479): selected product-discovery, value and backlog passages from the user-supplied book. Explanations, cases and exercises are original; book prose and figures are not republished. Selected chapter 7 story-mapping passage, pp. 232–236.
+- [Scrum Guide 2020](https://scrumguides.org/scrum-guide.html): Product Backlog, usable Increment and Definition of Done. Scrum adaptations: CC BY-SA 4.0, Schwaber and Sutherland.

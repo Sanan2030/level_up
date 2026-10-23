@@ -658,5 +658,377 @@
       "en": "Success criterion and explanation read: color must not be the sole visual means of conveying information.",
       "az": "Success criterion and explanation read: color must not be the sole visual means of conveying information."
     }
+  },
+  {
+    "id": "pg-explain",
+    "title": "PostgreSQL 18 — Using EXPLAIN",
+    "url": "https://www.postgresql.org/docs/18/using-explain.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "pg-isolation",
+    "title": "PostgreSQL 18 — Transaction Isolation",
+    "url": "https://www.postgresql.org/docs/18/transaction-iso.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "pg-locking",
+    "title": "PostgreSQL 18 — Explicit Locking",
+    "url": "https://www.postgresql.org/docs/18/explicit-locking.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "pg-createindex",
+    "title": "PostgreSQL 18 — CREATE INDEX",
+    "url": "https://www.postgresql.org/docs/18/sql-createindex.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "kafka-design",
+    "title": "Apache Kafka 4.1 — Design",
+    "url": "https://kafka.apache.org/41/design/design/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "rabbit-ack",
+    "title": "RabbitMQ — Consumer Acknowledgements and Publisher Confirms",
+    "url": "https://www.rabbitmq.com/docs/confirms",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "rabbit-dlx",
+    "title": "RabbitMQ — Dead Letter Exchanges",
+    "url": "https://www.rabbitmq.com/docs/dlx",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "redis-expire",
+    "title": "Redis official documentation repository — EXPIRE",
+    "url": "https://raw.githubusercontent.com/redis/docs/main/content/commands/expire.md",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Official Redis documentation source read from redis/docs because the public page returned a tiny non-document body. Selected EXPIRE semantics support original cache-design scenarios.",
+      "az": "Official Redis documentation source read from redis/docs because the public page returned a tiny non-document body. Selected EXPIRE semantics support original cache-design scenarios."
+    }
+  },
+  {
+    "id": "azure-cache-aside",
+    "title": "Microsoft Azure Architecture — Cache-Aside pattern",
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "playwright-practices",
+    "title": "Playwright — Best Practices",
+    "url": "https://playwright.dev/docs/best-practices",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "postman-tests",
+    "title": "Postman — Write Post-Response Scripts",
+    "url": "https://learning.postman.com/docs/tests-and-scripts/write-scripts/test-scripts/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "fowler-tests",
+    "title": "The Practical Test Pyramid — Ham Vocke, MartinFowler.com",
+    "url": "https://martinfowler.com/articles/practical-test-pyramid.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "dbt-tests",
+    "title": "dbt — Data Tests",
+    "url": "https://docs.getdbt.com/docs/build/data-tests",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "dbt-ref",
+    "title": "dbt — ref function",
+    "url": "https://docs.getdbt.com/reference/dbt-jinja-functions/ref",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "airflow-dags",
+    "title": "Apache Airflow — DAGs",
+    "url": "https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "airflow-practices",
+    "title": "Apache Airflow — Best Practices",
+    "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "aws-iam",
+    "title": "AWS IAM — Security Best Practices",
+    "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "aws-vpc",
+    "title": "Amazon VPC — Overview",
+    "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "aws-alb",
+    "title": "AWS Application Load Balancer — Overview",
+    "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "aws-cost",
+    "title": "AWS Well-Architected — Cost Optimization pillar overview",
+    "url": "https://docs.aws.amazon.com/wellarchitected/latest/cost-optimization-pillar/welcome.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Cost Optimization pillar overview read selectively; numerical costs and unit-economics examples are original synthetic teaching cases, not current provider prices.",
+      "az": "Cost Optimization pillar overview read selectively; numerical costs and unit-economics examples are original synthetic teaching cases, not current provider prices."
+    }
+  },
+  {
+    "id": "aws-cost-tags",
+    "title": "AWS Billing — Cost Allocation Tags",
+    "url": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "aws-etl-elt",
+    "title": "AWS — ETL versus ELT",
+    "url": "https://aws.amazon.com/compare/the-difference-between-etl-and-elt/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "fabric-warehouse",
+    "title": "Microsoft Fabric — Data Warehousing",
+    "url": "https://learn.microsoft.com/en-us/fabric/data-warehouse/data-warehousing",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "owasp-threat",
+    "title": "OWASP — Threat Modeling Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "owasp-ssrf",
+    "title": "OWASP — SSRF Prevention Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "owasp-secrets",
+    "title": "OWASP — Secrets Management Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "govuk-interviews",
+    "title": "GOV.UK — Using In-Depth Interviews",
+    "url": "https://www.gov.uk/service-manual/user-research/using-in-depth-interviews",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "jtbd-theory",
+    "title": "Christensen Institute — Jobs to Be Done",
+    "url": "https://www.christenseninstitute.org/theory/jobs-to-be-done/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "story-mapping",
+    "title": "Agile Alliance — Story Mapping",
+    "url": "https://agilealliance.org/glossary/story-mapping/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
+      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+    }
+  },
+  {
+    "id": "omg-bpmn",
+    "title": "OMG — BPMN 2.0.2 specification index",
+    "url": "https://www.omg.org/spec/BPMN/2.0.2",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation.",
+      "az": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation."
+    }
+  },
+  {
+    "id": "omg-uml",
+    "title": "OMG — UML 2.5.1 specification index",
+    "url": "https://www.omg.org/spec/UML/2.5.1",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-23",
+    "notes": {
+      "en": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation.",
+      "az": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation."
+    }
   }
 ]

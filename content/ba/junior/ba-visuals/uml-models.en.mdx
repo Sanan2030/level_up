@@ -3,63 +3,87 @@ id: uml-models
 locale: en
 title: 'Choose the right UML view'
 objectives:
-  - 'Compare use case, activity, sequence, class and state diagrams.'
-  - 'Choose a UML view for a payment timeout, then explain what it reveals.'
+  - 'Choose a model for scope, interaction, structure or lifecycle.'
+  - 'Make actor goals and object relationships explicit.'
+  - 'Cross-check an interaction against lifecycle and business rules.'
 ---
-
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
 
 ## Learning objectives
 
-- Compare use case, activity, sequence, class and state diagrams.
-- Choose a UML view for a payment timeout, then explain what it reveals.
+- Choose a model for scope, interaction, structure or lifecycle.
+- Make actor goals and object relationships explicit.
+- Cross-check an interaction against lifecycle and business rules.
 
-## Why it matters
+## Why this matters
 
-The planned lesson uses a concrete delivery decision to show when **Choose the right UML view** helps a team. It will make assumptions and affected stakeholders explicit.
+One enormous diagram rarely answers every stakeholder question. A product owner may need a boundary and user goal, an engineer may need message order, and operations may need allowed status transitions. UML offers complementary views. Choosing the view starts with the decision, not the diagramming tool.
 
-## Core theory: planned outline
+## Core theory
 
-1. Define the essential terms in the topic.
-2. Compare use case, activity, sequence, class and state diagrams.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+A use-case view identifies actors, goals and the system boundary. An actor is an external role interacting with the system, not necessarily a particular employee. A use-case diagram alone does not describe every normal or exceptional step; supplement it with a scenario when behavior matters.
 
-## Worked example: planned outline
+A sequence view shows participants and ordered messages for a scenario. It helps expose which component calls another, where a response is expected and what happens on failure. It does not by itself prove timing guarantees or deployment topology. Label alternatives and avoid assuming every asynchronous interaction completes immediately.
 
-Choose a UML view for a payment timeout, then explain what it reveals. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+A class or domain view describes concepts, attributes and relationships. Multiplicity states how many related instances are allowed at an association end. “One order has many items” is a structural rule; it is not a workflow. Decide whether an object may temporarily have zero related instances and test those assumptions against creation and deletion behavior.
 
-## Diagram: planned outline
+A state view models a lifecycle: states, triggering events, guards and transitions. A status label such as Paid should have an agreed meaning. Define which actor or event can move an order into that state and what happens when an event is duplicated or arrives late.
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **Choose the right UML view**. The diagram will include a text explanation.
+Keep views consistent. If a sequence marks an order Paid before payment confirmation, but the state rule requires confirmation, the models disagree. Resolve the rule rather than changing labels until the diagrams look similar. Use the smallest set of views that makes the relevant behavior clear; modelling is evidence for a discussion, not an end in itself.
 
-## Interactive practice: planned outline
+## Worked example
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+For a booking service, the use case is “Cancel a booking,” with the customer as actor. A sequence describes a request to the booking API, an eligibility check and a refund request. A state model distinguishes Confirmed, CancellationPending and Cancelled.
 
-## Common mistakes and best practices
+The domain view states that a booking can have zero or more payment attempts. That matters because a first attempt may fail before a successful one. The sequence must identify the settled payment rather than refunding every attempt. An unknown provider response keeps cancellation pending until reconciliation establishes the result.
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+## Visual model
 
-## Practice exercise and sample-solution plan
+<Diagram
+  chart={
+    'stateDiagram-v2\n [*] --> Confirmed\n Confirmed --> CancellationPending: eligible request\n CancellationPending --> Cancelled: outcome confirmed\n CancellationPending --> Confirmed: request rejected\n Cancelled --> [*]'
+  }
+/>
 
-**Exercise:** Choose a UML view for a payment timeout, then explain what it reveals.
+Trace the decision and its evidence across each boundary. The diagram is an original teaching model; it is not a formal notation validator.
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+## Inspect the decision
 
-## Mini-quiz: planned outline
+<details>
+<summary>Does a class diagram establish the order in which API calls execute?</summary>
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+No. Structural relationships do not specify runtime message order. Use a sequence view for a particular interaction and a state view for allowed lifecycle changes. Compare them against the same business rules and explicitly record asynchronous or unresolved outcomes.
 
-## One-page summary plan
+</details>
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+## Common mistakes
 
-## Further reading
+- Using a person’s name where an actor role is intended.
+- Treating multiplicity as an event sequence.
+- Adding every implementation detail to a stakeholder domain model.
+- Assuming a sequence diagram proves every possible execution path.
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+## Practice exercise
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+Choose two views for a subscription cancellation with a pending final invoice. State what each view answers and define one invariant that both must respect.
+
+## Worked solution
+
+<details>
+<summary>Show worked solution</summary>
+
+Use a state view to define Active, CancellationPending and Cancelled, and a sequence view to show the cancellation request, invoice check and confirmation messages. An invariant might be that final cancellation is not confirmed before the agreed billing condition is resolved. Add a domain view only if the relationship between subscriptions, invoices and payments is itself uncertain.
+
+</details>
+
+## Check understanding and cheat sheet
+
+Scope and goals → use case. Ordered interaction → sequence. Concepts and multiplicity → class/domain. Lifecycle rules → state. Cross-check shared terms and invariants.
+
+<LessonCheck />
+
+## Sources and further reading
+
+[BABOK Guide v3, IIBA (2015)](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/). Selected sections of the user-supplied book support these original explanations; the PDF and source prose are not republished.
+
+- BABOK §7.1: specifying and modelling requirements; §10.47: use cases and scenarios.
+- [OMG UML 2.5.1 specification index](https://www.omg.org/spec/UML/2.5.1): version and normative references. The lesson diagrams are selected teaching views, not a full UML conformance course.

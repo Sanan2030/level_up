@@ -35,7 +35,18 @@ export function LibraryView({
   const [status, setStatus] = useState('all');
   const initialSubject = params.get('subject');
   const [subject, setSubject] = useState(
-    initialSubject && ['technical', 'pspo', 'devops', 'data'].includes(initialSubject)
+    initialSubject &&
+      [
+        'technical',
+        'pspo',
+        'devops',
+        'data',
+        'databases',
+        'messaging',
+        'testing',
+        'data-engineering',
+        'cloud-security',
+      ].includes(initialSubject)
       ? initialSubject
       : 'all',
   );
@@ -51,6 +62,10 @@ export function LibraryView({
         (subject === 'technical' && lesson.topics.includes('software-development')) ||
         (subject === 'devops' && lesson.topics.includes('devops')) ||
         (subject === 'data' && lesson.topics.includes('data-analysis')) ||
+        (['databases', 'messaging', 'testing', 'data-engineering', 'cloud-security'].includes(
+          subject,
+        ) &&
+          lesson.topics.includes(subject)) ||
         (subject === 'pspo' && lesson.trackId.startsWith('pspo'))) &&
       (!bookmarksOnly || progress.bookmarks.includes(lesson.id)) &&
       (!normalized ||
@@ -105,6 +120,11 @@ export function LibraryView({
               <option value="technical">Architecture, coding & APIs</option>
               <option value="devops">DevOps</option>
               <option value="data">Data analysis</option>
+              <option value="databases">Advanced databases</option>
+              <option value="messaging">Messaging & caching</option>
+              <option value="testing">Software testing</option>
+              <option value="data-engineering">Data engineering</option>
+              <option value="cloud-security">Cloud & security</option>
               <option value="pspo">PSPO preparation</option>
             </select>
           </label>

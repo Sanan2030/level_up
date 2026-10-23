@@ -59,10 +59,18 @@ Twenty-two primary/supplementary online sources were added to the register with 
 
 ## DevOps and data analysis expansion — 2026-10-23
 
-The current catalog has **98 topics: 61 complete English lessons and 37 outlines**, across **25 modules**. Six new DevOps lessons and six new data lessons were added; the stable `sql-basics` outline became the seventh complete data lesson. Subject filters provide separate DevOps and Data analysis collections while preserving the eleven architecture/API/coding lessons.
+At that expansion, the catalog had **98 topics: 61 complete English lessons and 37 outlines**, across **25 modules**. Six new DevOps lessons and six new data lessons were added; the stable `sql-basics` outline became the seventh complete data lesson. Subject filters provide separate DevOps and Data analysis collections while preserving the eleven architecture/API/coding lessons.
 
 There are **566 original questions**, including 52 new source-tagged BA topic questions, four per added/expanded lesson. The BA bank now has 107 items; other track totals and certification mock verification gates are unchanged. There are **364 explicitly source-tagged items**, **175 curated dictionary entries** and **71 glossary entries**. New dictionary entries have real Azerbaijani meanings, contextual explanations and examples. Required legacy AZ lesson metadata/question slots retain English compatibility values; no new complete AZ course translation is claimed.
 
 Nineteen official documentation sources were read selectively and registered, covering Git/Linux, Docker, GitHub Actions, Kubernetes, Terraform, SRE/recovery, PostgreSQL, pandas, Microsoft analytics, experimental design and accessible color use. Prior read GOV.UK guidance supports metric definitions. The short Linux intro is explicitly limited in scope. See [the reading and verification record](RESEARCH-2026-10-23.md).
 
 The synthetic Python lab checks row cleaning/reconciliation, conflicting IDs, nonbuyer denominators, join fanout, explicit windows, cohort observation boundaries and a limited fixed-horizon A/B approximation. Its optional pandas counterpart independently aggregates the cleaned rows. DevOps manifests are instructional fragments, not deployed infrastructure; no Docker/Kubernetes/Terraform deployment or executed Power BI workbook is claimed. Existing lesson/question IDs, progress storage, notes, English publication and navigation are preserved.
+
+## BA/PO and technical course expansion — 2026-10-23
+
+The current catalog has **114 topics: 89 complete English lessons and 25 outlines**, across **34 modules**. Seven BA and five PO outlines were expanded under their original IDs. Sixteen new lessons cover advanced databases (3), messaging/caching (3), software testing (3), data engineering (3) and cloud/security (4). Nine modules keep career levels and prerequisites coherent; five new subject filters expose the technical collections.
+
+The bank now has **678 original questions**, including 112 new source-tagged topic items. Totals are BA 199, PO 31, PSPO I 106, PSPO II 118, PSPO III 40, ECBA 64, CCBA 60 and CBAP 60. There are **476 source-tagged questions**, **205 curated dictionary entries** and **86 glossary entries**. Each new lesson has four explained single/multiple-choice checks. No new official-exam or grading claims are introduced.
+
+Thirty-one selectively read online sources supplement the supplied BABOK/Scrum/EBM/Product Owner materials. The [course research record](RESEARCH-COURSES-2026-10-23.md) documents actual reading, version limits, index-only OMG access and unavailable URLs. All lessons, scenarios, diagrams, questions and numerical examples are original. Legacy AZ metadata/question slots preserve schema compatibility while the newly curated terminology has real Azerbaijani explanations and examples. Notes, bookmarks, saved attempts, public access and progress storage remain intact.

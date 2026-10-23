@@ -34,7 +34,7 @@
       "use-cases",
       "requirements-documents"
     ],
-    "estimatedMinutes": 175,
+    "estimatedMinutes": 225,
     "prerequisites": []
   },
   {
@@ -50,7 +50,7 @@
       "en": "Use a diagram or prototype to resolve ambiguity."
     },
     "lessonIds": ["bpmn-process", "uml-models", "wireframes"],
-    "estimatedMinutes": 105,
+    "estimatedMinutes": 155,
     "prerequisites": []
   },
   {
@@ -66,7 +66,7 @@
       "en": "Keep changing requirements coherent and traceable."
     },
     "lessonIds": ["prioritization", "traceability", "scope-change", "gap-root-cause"],
-    "estimatedMinutes": 140,
+    "estimatedMinutes": 190,
     "prerequisites": []
   },
   {
@@ -82,7 +82,7 @@
       "en": "Reason about data, APIs and integration failures."
     },
     "lessonIds": ["data-modeling", "sql-basics", "rest-apis", "integration-basics", "uat"],
-    "estimatedMinutes": 270,
+    "estimatedMinutes": 295,
     "prerequisites": []
   },
   {
@@ -152,7 +152,7 @@
       "en": "Learn from people and expose product assumptions."
     },
     "lessonIds": ["jtbd-research", "personas", "story-mapping"],
-    "estimatedMinutes": 105,
+    "estimatedMinutes": 155,
     "prerequisites": []
   },
   {
@@ -168,7 +168,7 @@
       "en": "Connect direction, discovery, metrics and economic decisions."
     },
     "lessonIds": ["product-strategy", "okrs", "product-metrics", "ebm", "po-prioritization"],
-    "estimatedMinutes": 175,
+    "estimatedMinutes": 225,
     "prerequisites": []
   },
   {
@@ -184,7 +184,7 @@
       "en": "Make forecasts and commercial decisions with evidence."
     },
     "lessonIds": ["forecast-release", "po-teamwork", "pricing-gtm"],
-    "estimatedMinutes": 105,
+    "estimatedMinutes": 130,
     "prerequisites": []
   },
   {
@@ -444,5 +444,153 @@
     "lessonIds": ["data-sql-windows-cohorts", "data-experiments-statistics"],
     "estimatedMinutes": 170,
     "prerequisites": ["ba-data-analysis", "ba-technical"]
+  },
+  {
+    "id": "ba-database-foundations",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "en": "Database query performance",
+      "az": "Database query performance"
+    },
+    "description": {
+      "en": "Apply database query performance through worked cases, diagrams, exercises and explained checks.",
+      "az": "Apply database query performance through worked cases, diagrams, exercises and explained checks."
+    },
+    "lessonIds": ["db-indexes-explain"],
+    "estimatedMinutes": 75,
+    "prerequisites": ["ba-technical"]
+  },
+  {
+    "id": "ba-databases",
+    "trackId": "ba",
+    "level": "lead",
+    "title": {
+      "en": "Database concurrency and evolution",
+      "az": "Database concurrency and evolution"
+    },
+    "description": {
+      "en": "Apply database concurrency and evolution through worked cases, diagrams, exercises and explained checks.",
+      "az": "Apply database concurrency and evolution through worked cases, diagrams, exercises and explained checks."
+    },
+    "lessonIds": ["db-transactions-locks", "db-safe-migrations"],
+    "estimatedMinutes": 155,
+    "prerequisites": ["ba-database-foundations"]
+  },
+  {
+    "id": "ba-cache-foundations",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "en": "Cache design and freshness",
+      "az": "Cache design and freshness"
+    },
+    "description": {
+      "en": "Apply cache design and freshness through worked cases, diagrams, exercises and explained checks.",
+      "az": "Apply cache design and freshness through worked cases, diagrams, exercises and explained checks."
+    },
+    "lessonIds": ["caching-redis"],
+    "estimatedMinutes": 70,
+    "prerequisites": ["ba-technical"]
+  },
+  {
+    "id": "ba-messaging-caching",
+    "trackId": "ba",
+    "level": "lead",
+    "title": {
+      "en": "Message delivery and recovery",
+      "az": "Message delivery and recovery"
+    },
+    "description": {
+      "en": "Apply message delivery and recovery through worked cases, diagrams, exercises and explained checks.",
+      "az": "Apply message delivery and recovery through worked cases, diagrams, exercises and explained checks."
+    },
+    "lessonIds": ["messaging-kafka", "messaging-rabbitmq"],
+    "estimatedMinutes": 150,
+    "prerequisites": ["ba-technical"]
+  },
+  {
+    "id": "ba-software-testing",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "en": "Software testing and quality evidence",
+      "az": "Software testing and quality evidence"
+    },
+    "description": {
+      "en": "Apply software testing and quality evidence through worked cases, diagrams, exercises and explained checks.",
+      "az": "Apply software testing and quality evidence through worked cases, diagrams, exercises and explained checks."
+    },
+    "lessonIds": ["testing-strategy-contracts", "testing-postman-apis", "testing-playwright"],
+    "estimatedMinutes": 215,
+    "prerequisites": ["ba-technical"]
+  },
+  {
+    "id": "ba-data-pipelines",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "en": "Data pipeline foundations",
+      "az": "Data pipeline foundations"
+    },
+    "description": {
+      "en": "Apply data pipeline foundations through worked cases, diagrams, exercises and explained checks.",
+      "az": "Apply data pipeline foundations through worked cases, diagrams, exercises and explained checks."
+    },
+    "lessonIds": ["data-etl-warehouse"],
+    "estimatedMinutes": 75,
+    "prerequisites": ["ba-technical", "ba-data-analysis"]
+  },
+  {
+    "id": "ba-data-engineering",
+    "trackId": "ba",
+    "level": "lead",
+    "title": {
+      "en": "Data transformation and orchestration",
+      "az": "Data transformation and orchestration"
+    },
+    "description": {
+      "en": "Apply data transformation and orchestration through worked cases, diagrams, exercises and explained checks.",
+      "az": "Apply data transformation and orchestration through worked cases, diagrams, exercises and explained checks."
+    },
+    "lessonIds": ["data-dbt-quality-lineage", "data-airflow-orchestration"],
+    "estimatedMinutes": 160,
+    "prerequisites": ["ba-data-pipelines"]
+  },
+  {
+    "id": "ba-cloud-foundations",
+    "trackId": "ba",
+    "level": "mid",
+    "title": {
+      "en": "Cloud identity and networking",
+      "az": "Cloud identity and networking"
+    },
+    "description": {
+      "en": "Apply cloud identity and networking through worked cases, diagrams, exercises and explained checks.",
+      "az": "Apply cloud identity and networking through worked cases, diagrams, exercises and explained checks."
+    },
+    "lessonIds": ["cloud-iam-vpc-balancing"],
+    "estimatedMinutes": 80,
+    "prerequisites": ["ba-devops-foundations"]
+  },
+  {
+    "id": "ba-cloud-security",
+    "trackId": "ba",
+    "level": "lead",
+    "title": {
+      "en": "Cloud costs and security engineering",
+      "az": "Cloud costs and security engineering"
+    },
+    "description": {
+      "en": "Apply cloud costs and security engineering through worked cases, diagrams, exercises and explained checks.",
+      "az": "Apply cloud costs and security engineering through worked cases, diagrams, exercises and explained checks."
+    },
+    "lessonIds": [
+      "cloud-cost-engineering",
+      "security-threat-modeling-ssrf",
+      "security-secrets-rotation"
+    ],
+    "estimatedMinutes": 220,
+    "prerequisites": ["ba-cloud-foundations", "ba-authentication"]
   }
 ]

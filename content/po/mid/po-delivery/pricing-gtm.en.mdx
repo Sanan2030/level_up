@@ -3,63 +3,86 @@ id: pricing-gtm
 locale: en
 title: 'Pricing and go-to-market hypotheses'
 objectives:
-  - 'Connect customer segments, willingness to pay, channels and launch learning.'
-  - 'Design a small pricing experiment with clear ethical and revenue guardrails.'
+  - 'Separate pricing, packaging and revenue assumptions.'
+  - 'Calculate contribution and a simplified break-even point.'
+  - 'Design a launch experiment with adoption and harm measures.'
 ---
-
-> **Curriculum outline — full lesson not yet published.** This page describes planned learning activities. Reading the outline does not demonstrate mastery.
 
 ## Learning objectives
 
-- Connect customer segments, willingness to pay, channels and launch learning.
-- Design a small pricing experiment with clear ethical and revenue guardrails.
+- Separate pricing, packaging and revenue assumptions.
+- Calculate contribution and a simplified break-even point.
+- Design a launch experiment with adoption and harm measures.
 
-## Why it matters
+## Why this matters
 
-The planned lesson uses a concrete delivery decision to show when **Pricing and go-to-market hypotheses** helps a team. It will make assumptions and affected stakeholders explicit.
+A product can attract registrations without supporting a sustainable business. Pricing and go-to-market decisions connect customer value, alternatives, acquisition, delivery cost and retention. A launch is a test of those assumptions, not proof that demand exists because marketing activity was completed.
 
-## Core theory: planned outline
+## Core theory
 
-1. Define the essential terms in the topic.
-2. Connect customer segments, willingness to pay, channels and launch learning.
-3. Compare a useful application with a plausible misuse.
-4. Identify evidence that could change the decision.
+Pricing sets what is charged and under which terms. Packaging groups capabilities, limits and service levels into offers. A revenue model describes how money is earned over time. A low advertised price may still create a poor experience if unavoidable fees or restrictive terms are unclear.
 
-## Worked example: planned outline
+Understand the customer situation, alternatives and purchasing authority. Interview actual decision-makers and examine current spending and trade-offs. Hypothetical willingness to pay is evidence to investigate, not a guaranteed purchase. An experiment can test an offer, but it must represent availability and conditions honestly.
 
-Design a small pricing experiment with clear ethical and revenue guardrails. The full example will include context, constraints, alternatives, a decision and a check of the outcome.
+Unit economics connects revenue and variable costs at a defined unit such as customer-month or completed transaction. Contribution per unit is price minus the included variable cost. State which costs are included; support, payment processing, infrastructure and refunds can change the result. Contribution is not the same as net profit.
 
-## Diagram: planned outline
+In a simplified single-product model, break-even volume equals fixed costs divided by contribution per unit, provided the contribution is positive and assumptions hold. Real businesses may have capacity steps, multiple plans, discounts, taxes and changing retention. Avoid using a neat formula to conceal uncertain inputs.
 
-Planned visual: a labeled view of the actors, decisions and evidence involved in **Pricing and go-to-market hypotheses**. The diagram will include a text explanation.
+A go-to-market hypothesis identifies the target segment, value proposition, channel, purchasing process, onboarding and support needed for adoption. Define qualified reach, trial, paid conversion, retained usage and relevant guardrails. A campaign can generate cheap leads that never become suitable customers. Review channel cost and retained value together, and avoid comparing cohorts with incomplete follow-up.
 
-## Interactive practice: planned outline
+## Worked example
 
-Planned activity: choose an action for the scenario, reveal its consequences and revise the choice when new evidence arrives. A keyboard-friendly alternative will be available.
+An original subscription example charges 50 currency units per customer-month and includes 20 units of variable cost per customer-month. Contribution is `50 - 20 = 30`. With 60000 units of monthly fixed costs, simplified break-even is `60000 / 30 = 2000` active paying customers.
 
-## Common mistakes and best practices
+If variable cost rises to 35, contribution becomes 15 and the simplified break-even doubles to 4000 customers. A large signup count does not repair weak contribution or poor retention. The team tests a small offer with transparent terms and measures paid activation, a complete retention window and support burden before scaling the channel.
 
-- Do not mistake a template or framework for evidence.
-- State the context and decision owner before recommending an action.
-- Compare outcomes rather than counting documents or features.
+## Visual model
 
-## Practice exercise and sample-solution plan
+<Diagram
+  chart={
+    'flowchart LR\n C[Customer situation and alternatives] --> V[Offer and value hypothesis]\n V --> P[Price packaging and costs]\n P --> G[Channel and onboarding test]\n G --> E[Adoption retention and contribution]\n E --> D[Adjust scale or stop]'
+  }
+/>
 
-**Exercise:** Design a small pricing experiment with clear ethical and revenue guardrails.
+Trace the decision and its evidence across each boundary. The diagram is an original teaching model; it is not a formal notation validator.
 
-**Planned sample solution:** state the problem, list assumptions, compare options, justify the selected action and define what to inspect next. A worked answer will be added with the full lesson.
+## Inspect the decision
 
-## Mini-quiz: planned outline
+<details>
+<summary>A cheaper acquisition channel produces more signups. Should its budget automatically increase?</summary>
 
-The full lesson will contain original questions on terminology, scenario application and trade-offs, with explanations for correct and incorrect choices. No lesson quiz is published on this outline.
+No. Check whether the signups are eligible customers, activate, pay and remain long enough to support the economics. Compare complete cohorts and included costs. Cheap signups can be expensive if support burden, refunds or early churn are high.
 
-## One-page summary plan
+</details>
 
-The final cheat sheet will summarize the topic's purpose, inputs, decisions, outputs and a review checklist.
+## Common mistakes
 
-## Further reading
+- Equating stated interest with purchase behavior.
+- Calling contribution net profit.
+- Ignoring discounts, refunds or delivery costs.
+- Using an incomplete recent cohort to claim superior retention.
 
-- [Scrum Guide, official source](https://scrumguides.org/scrum-guide.html)
-- [IIBA business analysis resources](https://www.iiba.org/business-analysis-blogs/)
+## Practice exercise
 
-Consult the resource relevant to your track. Official certification format and eligibility information must be checked separately.
+At a price of 40 and variable cost of 25 per customer-month, calculate contribution and simplified break-even for fixed costs of 45000. Name two assumptions that could invalidate the forecast and two launch measures.
+
+## Worked solution
+
+<details>
+<summary>Show worked solution</summary>
+
+Contribution is 15 per customer-month and simplified break-even is 3000 active paying customers. Changing variable cost, plan mix, capacity or retention can alter the calculation. Measure a defined paid-activation outcome and retained usage over a complete window, while monitoring support or refund harm. Record acquisition costs separately and define the time horizon before comparing customer value with acquisition spending.
+
+</details>
+
+## Check understanding and cheat sheet
+
+Situation → honest offer → price and cost assumptions → channel experiment → complete adoption/retention evidence. Contribution and signups are not net profit or retained demand.
+
+<LessonCheck />
+
+## Sources and further reading
+
+- [The Professional Product Owner, McGreal and Jocham (2018)](https://www.informit.com/store/professional-product-owner-leveraging-scrum-as-a-competitive-9780134686479): selected business-model, marketplace and value passages from the supplied book.
+- [EBM Guide 2024](https://www.scrum.org/resources/evidence-based-management-guide): value measures and experiments; adaptations CC BY-SA 4.0, Scrum.org.
+- Pricing arithmetic, costs and launch design are original supplemental examples, not official PSPO exam questions or claims about real market prices.

@@ -2278,5 +2278,395 @@
       "en": "An account remains in its assigned variant on repeated visits.",
       "az": "Hesab təkrar ziyarətlərdə təyin olunmuş variantda qalır."
     }
+  },
+  {
+    "id": "brd",
+    "term": "BRD",
+    "aliases": ["business requirements document"],
+    "context": "Business analysis",
+    "meaningAz": "Biznes tələbləri sənədi",
+    "definitionEn": "A document view describing a business problem, intended outcomes, scope and related requirements for an agreed audience.",
+    "explanationAz": "Biznes problemini, məqsədləri və əhatəni təsvir edən sənəd görünüşüdür. Hər layihədə məcburi standart şablon deyil; təşkilatın qərar ehtiyacına uyğunlaşdırılır.",
+    "example": {
+      "en": "The BRD links the refund objective to controlled requirement records.",
+      "az": "BRD geriödəmə məqsədini idarə olunan tələb qeydləri ilə əlaqələndirir."
+    }
+  },
+  {
+    "id": "frd",
+    "term": "FRD",
+    "aliases": ["functional requirements document"],
+    "context": "Business analysis",
+    "meaningAz": "Funksional tələblər sənədi",
+    "definitionEn": "A document view organizing observable capabilities and behavior, including normal and exceptional paths.",
+    "explanationAz": "Həllin müşahidə olunan funksiyalarını, normal və istisna axınlarını təşkil edən sənəd görünüşüdür. Eyni qaydanı müstəqil nüsxələrdə təkrarlamaq uyğunsuzluq yarada bilər.",
+    "example": {
+      "en": "The FRD describes the pending refund outcome and its recovery path.",
+      "az": "FRD gözləmədə olan geriödəmə nəticəsini və bərpa yolunu təsvir edir."
+    }
+  },
+  {
+    "id": "srs",
+    "term": "SRS",
+    "aliases": ["software requirements specification"],
+    "context": "Business analysis",
+    "meaningAz": "Proqram təminatı tələblərinin spesifikasiyası",
+    "definitionEn": "A structured specification of software behavior, interfaces, data, quality attributes and constraints within a defined boundary.",
+    "explanationAz": "Müəyyən sərhəd daxilində proqramın davranışını, interfeyslərini və keyfiyyət tələblərini təşkil edən təsviridir. Sənədin adı onun avtomatik düzgün və ya təsdiqli olduğunu göstərmir.",
+    "example": {
+      "en": "The SRS references the agreed API and latency requirements.",
+      "az": "SRS razılaşdırılmış API və gecikmə tələblərinə istinad edir."
+    }
+  },
+  {
+    "id": "change-request",
+    "term": "Change request",
+    "aliases": [],
+    "context": "Business analysis",
+    "meaningAz": "Dəyişiklik sorğusu",
+    "definitionEn": "A recorded proposal to alter an agreed need, requirement, design, constraint or scope with its rationale.",
+    "explanationAz": "Razılaşdırılmış ehtiyac, tələb, dizayn və ya əhatədə dəyişiklik təklifidir. Sorğunun mövcudluğu onun artıq təsdiq edildiyi demək deyil.",
+    "example": {
+      "en": "The change request identifies the rule and the reason for revision.",
+      "az": "Dəyişiklik sorğusu qaydanı və yenilənmənin səbəbini göstərir."
+    }
+  },
+  {
+    "id": "impact-analysis",
+    "term": "Impact analysis",
+    "aliases": [],
+    "context": "Business analysis",
+    "meaningAz": "Təsir analizi",
+    "definitionEn": "An assessment of how a proposed change affects value, costs, risks, dependencies and related information or systems.",
+    "explanationAz": "Təklif edilən dəyişikliyin dəyərə, riskə, xərcə və əlaqəli sistemlərə təsirinin araşdırılmasıdır. Ekranda kiçik görünən dəyişiklik geniş nəticələr yarada bilər.",
+    "example": {
+      "en": "Impact analysis includes reporting, tests and support procedures.",
+      "az": "Təsir analizi hesabatları, testləri və dəstək qaydalarını da əhatə edir."
+    }
+  },
+  {
+    "id": "query-plan",
+    "term": "Query plan",
+    "aliases": ["execution plan"],
+    "context": "Databases",
+    "meaningAz": "Sorğunun icra planı",
+    "definitionEn": "A database plan describing the operations and access paths chosen to produce a query result.",
+    "explanationAz": "Verilənlər bazasının nəticəni əldə etmək üçün seçdiyi əməliyyat və giriş yollarının təsviridir. Planın qiymətləndirmələri ölçülmüş icra vaxtı ilə eyni deyil.",
+    "example": {
+      "en": "The query plan reveals a repeated node with underestimated rows.",
+      "az": "Sorğu planı sətir sayı az qiymətləndirilmiş təkrarlanan qovşağı göstərir."
+    }
+  },
+  {
+    "id": "selectivity",
+    "term": "Selectivity",
+    "aliases": [],
+    "context": "Databases",
+    "meaningAz": "Şərtin məlumatı daraltma dərəcəsi",
+    "definitionEn": "How narrowly a condition selects rows from a dataset, which can influence the usefulness of an access path.",
+    "explanationAz": "Şərtin məlumatın nə qədər kiçik hissəsini seçdiyini ifadə edir. Çox geniş seçimdə indeks əvəzinə ardıcıl oxuma uyğun ola bilər.",
+    "example": {
+      "en": "A broad condition may make a sequential scan reasonable.",
+      "az": "Geniş şərt üçün ardıcıl oxuma məntiqli seçim ola bilər."
+    }
+  },
+  {
+    "id": "transaction-isolation",
+    "term": "Transaction isolation",
+    "aliases": ["isolation level"],
+    "context": "Databases",
+    "meaningAz": "Tranzaksiyaların bir-birindən təcrid səviyyəsi",
+    "definitionEn": "The rules governing which effects concurrent transactions can observe and how conflicting executions are handled.",
+    "explanationAz": "Paralel tranzaksiyaların hansı dəyişiklikləri görə biləcəyini və ziddiyyətlərin necə idarə olunacağını müəyyən edir. Tranzaksiyanın atomik olması bütün yarışları aradan qaldırmır.",
+    "example": {
+      "en": "Serializable transactions can still require retry after an abort.",
+      "az": "Serializable tranzaksiya dayandırıldıqdan sonra yenidən cəhd tələb edə bilər."
+    }
+  },
+  {
+    "id": "deadlock",
+    "term": "Deadlock",
+    "aliases": [],
+    "context": "Databases",
+    "meaningAz": "Dairəvi kilid gözləməsi",
+    "definitionEn": "A cycle in which transactions hold resources and wait for incompatible resources held by one another.",
+    "explanationAz": "Tranzaksiyaların bir-birinin saxladığı resursları dairəvi şəkildə gözləməsidir. Adi uzun gözləmə mütləq deadlock deyil; ardıcıl kilid sırası riski azalda bilər.",
+    "example": {
+      "en": "The database aborts one transaction to break the deadlock.",
+      "az": "Verilənlər bazası deadlock-u aradan qaldırmaq üçün bir tranzaksiyanı dayandırır."
+    }
+  },
+  {
+    "id": "expand-contract",
+    "term": "Expand-contract migration",
+    "aliases": ["expand contract"],
+    "context": "Databases",
+    "meaningAz": "Genişləndir, köçür və sonra daralt miqrasiyası",
+    "definitionEn": "A staged evolution approach that introduces compatible structures before migrating consumers and removing old representations.",
+    "explanationAz": "Əvvəl uyğun yeni struktur əlavə edən, sonra məlumat və istifadəçiləri keçirən, köhnə hissəni isə gec mərhələdə çıxaran yanaşmadır. Kodun geri qaytarılması silinmiş məlumatı bərpa etmir.",
+    "example": {
+      "en": "The team retains the old column through the recovery window.",
+      "az": "Komanda bərpa müddəti bitənədək köhnə sütunu saxlayır."
+    }
+  },
+  {
+    "id": "kafka-partition",
+    "term": "Kafka partition",
+    "aliases": ["topic partition"],
+    "context": "Messaging",
+    "meaningAz": "Kafka mövzusunun sıralanmış hissəsi",
+    "definitionEn": "An ordered log within a Kafka topic whose records have positions identified by offsets.",
+    "explanationAz": "Kafka mövzusunun daxilində sıralanmış log hissəsidir. Buradakı ardıcıllıq bütün partition-lar üzrə ümumi qlobal sıra demək deyil.",
+    "example": {
+      "en": "Related events use a reviewed key to preserve required partition ordering.",
+      "az": "Əlaqəli hadisələr tələb olunan partition ardıcıllığı üçün razılaşdırılmış açardan istifadə edir."
+    }
+  },
+  {
+    "id": "consumer-group",
+    "term": "Consumer group",
+    "aliases": [],
+    "context": "Messaging",
+    "meaningAz": "Consumer qrupu",
+    "definitionEn": "A coordinated set of Kafka consumers that shares partition assignments for a reading purpose.",
+    "explanationAz": "Eyni oxuma məqsədi üçün partition tapşırıqlarını bölüşən consumer-lər qrupudur. Qrup üzvləri dəyişəndə tapşırıqlar yenidən paylana bilər.",
+    "example": {
+      "en": "A new group can read the same events for independent analysis.",
+      "az": "Yeni qrup eyni hadisələri ayrıca analiz məqsədilə oxuya bilər."
+    }
+  },
+  {
+    "id": "kafka-offset",
+    "term": "Kafka offset",
+    "aliases": ["offset"],
+    "context": "Messaging",
+    "meaningAz": "Kafka partition daxilində mövqe",
+    "definitionEn": "A position identifying a record or recovery progress within a specific Kafka partition.",
+    "explanationAz": "Konkret partition daxilində qeyd və ya bərpa irəliləyişini bildirən mövqedir. Offset commit etmək xarici biznes əməliyyatının tamamlandığını sübut etmir.",
+    "example": {
+      "en": "Committing the next offset after processing still needs crash-safe effect handling.",
+      "az": "Emaldan sonra növbəti offset-i commit etmək də qəza zamanı təhlükəsiz təsir idarəsi tələb edir."
+    }
+  },
+  {
+    "id": "publisher-confirm",
+    "term": "Publisher confirm",
+    "aliases": [],
+    "context": "Messaging",
+    "meaningAz": "Brokerin nəşri təsdiqləməsi",
+    "definitionEn": "Broker-to-publisher confirmation about handling a publication under the configured messaging guarantees.",
+    "explanationAz": "Brokerin göndərənə mesaj nəşri barədə verdiyi təsdiqdir. Bu, consumer-in işini və ya müştərinin son nəticəsini tamamladığını bildirmir.",
+    "example": {
+      "en": "A publisher confirm does not prove an email was delivered to a recipient.",
+      "az": "Publisher confirm e-poçtun alıcıya çatdırıldığını sübut etmir."
+    }
+  },
+  {
+    "id": "consumer-acknowledgement",
+    "term": "Consumer acknowledgement",
+    "aliases": ["consumer ack"],
+    "context": "Messaging",
+    "meaningAz": "Consumer-in emalı təsdiqləməsi",
+    "definitionEn": "A consumer signal telling the broker that a delivery was handled according to the application contract.",
+    "explanationAz": "Consumer-in brokerə çatdırılmış mesajı müqaviləyə uyğun emal etdiyini bildirməsidir. Tələb edilən davamlı təsirdən əvvəl təsdiq iş itkisi yarada bilər.",
+    "example": {
+      "en": "The worker acknowledges after its required durable processing boundary.",
+      "az": "Worker tələb olunan davamlı emal sərhədindən sonra təsdiq göndərir."
+    }
+  },
+  {
+    "id": "dead-letter-queue",
+    "term": "Dead-letter queue",
+    "aliases": ["DLQ", "dead letter queue"],
+    "context": "Messaging",
+    "meaningAz": "Uğursuz mesajlar üçün ayrıca növbə",
+    "definitionEn": "A queue used to hold messages routed into a failure-handling path for investigation or controlled recovery.",
+    "explanationAz": "Uğursuz mesajların araşdırma və nəzarətli bərpa üçün yönəldildiyi növbədir. Mesajın ora köçməsi biznes probleminin həll olunduğunu göstərmir.",
+    "example": {
+      "en": "The DLQ has an owner and a reviewed replay procedure.",
+      "az": "DLQ üçün məsul şəxs və icmal edilmiş təkrar emal qaydası var."
+    }
+  },
+  {
+    "id": "cache-aside",
+    "term": "Cache-aside",
+    "aliases": ["cache aside"],
+    "context": "Caching",
+    "meaningAz": "Cache yoxdursa mənbədən yükləmə modeli",
+    "definitionEn": "A caching pattern where the application loads from the authoritative source on a miss and stores the derived result.",
+    "explanationAz": "Tətbiqin cache-də nəticə olmadıqda əsas mənbədən oxuyub nəticəni cache-ə yazdığı modeldir. Yenilənmə və köhnəlmə siyasəti ayrıca qurulmalıdır.",
+    "example": {
+      "en": "Cache-aside needs an explicit invalidation and outage policy.",
+      "az": "Cache-aside ayrıca invalidation və nasazlıq siyasəti tələb edir."
+    }
+  },
+  {
+    "id": "cache-stampede",
+    "term": "Cache stampede",
+    "aliases": [],
+    "context": "Caching",
+    "meaningAz": "Eyni vaxtlı cache miss yük sıçrayışı",
+    "definitionEn": "A burst of source requests when many callers miss the cache at the same time.",
+    "explanationAz": "Çoxlu sorğunun eyni vaxtda cache-də nəticə tapmayıb əsas mənbəyə yönəlməsidir. Sorğuları birləşdirmək və yükləməni məhdudlaşdırmaq təzyiqi azalda bilər.",
+    "example": {
+      "en": "Coalescing identical misses protects the database from a stampede.",
+      "az": "Eyni miss-ləri birləşdirmək verilənlər bazasını yük sıçrayışından qoruyur."
+    }
+  },
+  {
+    "id": "contract-test",
+    "term": "Contract test",
+    "aliases": ["contract testing"],
+    "context": "Software testing",
+    "meaningAz": "Qarşılıqlı interfeys müqaviləsinin testi",
+    "definitionEn": "A test checking agreed interactions between a consumer and provider at a defined interface boundary.",
+    "explanationAz": "Consumer və provider arasında razılaşdırılmış qarşılıqlı əlaqəni yoxlayan testdir. Təkcə mock nəticəsi real provider uyğunluğunu sübut etmir.",
+    "example": {
+      "en": "The provider verifies the interaction expected by its consumer.",
+      "az": "Provider consumer-in gözlədiyi qarşılıqlı əlaqəni yoxlayır."
+    }
+  },
+  {
+    "id": "test-double",
+    "term": "Test double",
+    "aliases": [],
+    "context": "Software testing",
+    "meaningAz": "Testdə real asılılığın əvəzedicisi",
+    "definitionEn": "A controlled replacement for a dependency used to make selected behavior reproducible in a test.",
+    "explanationAz": "Testdə seçilmiş davranışı təkrarlamaq üçün real asılılığı əvəz edən vasitədir. Stub, fake və mock fərqli məqsədlərlə istifadə oluna bilər.",
+    "example": {
+      "en": "A timeout test double makes the recovery condition reproducible.",
+      "az": "Timeout əvəzedicisi bərpa vəziyyətini testdə təkrarlamağa imkan verir."
+    }
+  },
+  {
+    "id": "playwright-locator",
+    "term": "Playwright locator",
+    "aliases": ["locator"],
+    "context": "Software testing",
+    "meaningAz": "Səhifədə elementi müəyyən edən axtarış təsviri",
+    "definitionEn": "A Playwright mechanism describing how to find and interact with a page element using a meaningful selection contract.",
+    "explanationAz": "Səhifədə elementi tapmaq və onunla işləmək üçün istifadə olunan təsvirdir. Rol və əlçatan ad çox vaxt uzun CSS yolundan daha aydın olur.",
+    "example": {
+      "en": "The locator finds the button by its accessible name.",
+      "az": "Locator düyməni onun əlçatan adı ilə tapır."
+    }
+  },
+  {
+    "id": "etl",
+    "term": "ETL",
+    "aliases": ["extract transform load"],
+    "context": "Data engineering",
+    "meaningAz": "Çıxar, çevir və yüklə",
+    "definitionEn": "A pipeline approach that extracts data, transforms it and then loads the target representation.",
+    "explanationAz": "Məlumatı mənbədən çıxarıb çevirdikdən sonra hədəfə yükləyən yanaşmadır. Addımların bu sırası özlüyündə keyfiyyətə zəmanət vermir.",
+    "example": {
+      "en": "ETL validates the transformation before loading the curated target.",
+      "az": "ETL hazırlanmış hədəfə yükləməzdən əvvəl çevirməni yoxlayır."
+    }
+  },
+  {
+    "id": "elt",
+    "term": "ELT",
+    "aliases": ["extract load transform"],
+    "context": "Data engineering",
+    "meaningAz": "Çıxar, yüklə və sonra çevir",
+    "definitionEn": "A pipeline approach that loads extracted data before transforming it in the target environment.",
+    "explanationAz": "Çıxarılan məlumatı əvvəl hədəfə yükləyib sonra həmin mühitdə çevirən yanaşmadır. Məxfilik və keyfiyyət tələbləri yenə qüvvədə qalır.",
+    "example": {
+      "en": "ELT uses target compute for reviewed analytical transformations.",
+      "az": "ELT icmal edilmiş analitik çevirmələr üçün hədəfin hesablama gücündən istifadə edir."
+    }
+  },
+  {
+    "id": "data-lineage",
+    "term": "Data lineage",
+    "aliases": ["lineage"],
+    "context": "Data engineering",
+    "meaningAz": "Məlumatın mənşə və çevrilmə əlaqələri",
+    "definitionEn": "The recorded relationships showing where data originates and how transformations and consumers depend on it.",
+    "explanationAz": "Məlumatın haradan gəldiyini və çevirmələrin bir-birinə necə bağlı olduğunu göstərən əlaqələrdir. Deklarativ qraf bütün gizli xarici istehlakçıları avtomatik tapmır.",
+    "example": {
+      "en": "Lineage helps identify reports affected by a column change.",
+      "az": "Lineage sütun dəyişikliyindən təsirlənən hesabatları tapmağa kömək edir."
+    }
+  },
+  {
+    "id": "directed-acyclic-graph",
+    "term": "Directed acyclic graph",
+    "aliases": ["DAG"],
+    "context": "Data engineering",
+    "meaningAz": "İstiqamətli dövrsüz qraf",
+    "definitionEn": "A graph of directed dependencies without a cycle, used by orchestrators to organize task relationships.",
+    "explanationAz": "Tapşırıq asılılıqlarını dövr yaratmadan istiqamətli əlaqələrlə göstərən qrafdır. Tapşırıqların uğurlu olması məlumatın bütün biznes qaydalarına uyğunluğunu avtomatik sübut etmir.",
+    "example": {
+      "en": "The DAG validates a partition before publishing it.",
+      "az": "DAG partition-u yayımlamazdan əvvəl yoxlayır."
+    }
+  },
+  {
+    "id": "data-interval",
+    "term": "Data interval",
+    "aliases": [],
+    "context": "Data engineering",
+    "meaningAz": "İş axınının nəzərdə tutulan məlumat müddəti",
+    "definitionEn": "The intended time range of data associated with an interval-based scheduled workflow run.",
+    "explanationAz": "Planlaşdırılmış işin emal etməli olduğu məlumat vaxtı aralığıdır. Gec işləyən tapşırığın cari tarixə baxıb başqa məlumat seçməsi düzgün olmaya bilər.",
+    "example": {
+      "en": "A delayed run still processes its original data interval.",
+      "az": "Gecikmiş iş yenə öz ilkin məlumat intervalını emal edir."
+    }
+  },
+  {
+    "id": "iam",
+    "term": "IAM",
+    "aliases": ["identity and access management"],
+    "context": "Cloud security",
+    "meaningAz": "İdentifikasiya və giriş səlahiyyətlərinin idarəsi",
+    "definitionEn": "Policies and mechanisms governing which identities may perform which actions on resources under stated conditions.",
+    "explanationAz": "Kimliyin hansı resursda hansı əməliyyatı hansı şərtlə edə biləcəyini idarə edir. Şəbəkədə əlçatan olmaq həmin əməliyyata icazə verildiyini göstərmir.",
+    "example": {
+      "en": "The workload role receives only the required IAM actions.",
+      "az": "Workload rolu yalnız tələb olunan IAM əməliyyatlarını alır."
+    }
+  },
+  {
+    "id": "vpc",
+    "term": "VPC",
+    "aliases": ["virtual private cloud"],
+    "context": "Cloud security",
+    "meaningAz": "Məntiqi ayrılmış bulud şəbəkəsi",
+    "definitionEn": "A logically isolated cloud network whose subnets, routes and connectivity controls define intended network paths.",
+    "explanationAz": "Subnet, route və əlaqə nəzarətləri ilə şəbəkə yolları qurulan məntiqi ayrılmış mühitdir. Private yerləşmə tətbiqin tenant icazələrini əvəz etmir.",
+    "example": {
+      "en": "The VPC routes application traffic through the intended entry path.",
+      "az": "VPC tətbiq trafikini nəzərdə tutulan giriş yolu ilə yönəldir."
+    }
+  },
+  {
+    "id": "ssrf",
+    "term": "SSRF",
+    "aliases": ["server side request forgery"],
+    "context": "Cloud security",
+    "meaningAz": "Serverin sorğu imkanından icazəsiz istifadə",
+    "definitionEn": "An abuse of server-side request behavior that lets untrusted input direct requests beyond the intended authority.",
+    "explanationAz": "Etibarsız girişin serveri nəzərdə tutulmayan ünvana sorğu göndərməyə yönəltməsidir. HTTPS və sadə domen mətni yoxlaması bütün riski aradan qaldırmır.",
+    "example": {
+      "en": "The fetcher restricts destinations and redirects to reduce SSRF exposure.",
+      "az": "Fetcher SSRF riskini azaltmaq üçün ünvanları və redirect-ləri məhdudlaşdırır."
+    }
+  },
+  {
+    "id": "key-rotation",
+    "term": "Key rotation",
+    "aliases": ["secret rotation"],
+    "context": "Cloud security",
+    "meaningAz": "Açar və secret materialının nəzarətli yenilənməsi",
+    "definitionEn": "A controlled replacement of key or credential material with consumer migration, verification and retirement rules.",
+    "explanationAz": "Açar və ya credential-ın istifadəçilərin keçirilməsi, yoxlama və köhnə materialın çıxarılması qaydaları ilə yenilənməsidir. Şifrələmə və imzalama açarlarının bərpa ehtiyacları fərqlənir.",
+    "example": {
+      "en": "Rotation verifies both consumers before normal retirement of the old credential.",
+      "az": "Rotasiya köhnə credential adi qaydada çıxarılmazdan əvvəl hər iki istifadəçini yoxlayır."
+    }
   }
 ]

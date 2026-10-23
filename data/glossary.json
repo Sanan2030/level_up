@@ -850,5 +850,185 @@
       "az": "Eksperimentdə variantın ayrıca təyin edildiyi vahiddir. Hesab üzrə bölgüdə eyni hesabın müxtəlif baxışlarda variant dəyişməsi nəticəni poza bilər."
     },
     "relatedLessonId": "data-experiments-statistics"
+  },
+  {
+    "id": "brd",
+    "term": {
+      "en": "BRD",
+      "az": "Biznes tələbləri sənədi"
+    },
+    "definition": {
+      "en": "A document view describing a business problem, intended outcomes, scope and related requirements for an agreed audience.",
+      "az": "Biznes problemini, məqsədləri və əhatəni təsvir edən sənəd görünüşüdür. Hər layihədə məcburi standart şablon deyil; təşkilatın qərar ehtiyacına uyğunlaşdırılır."
+    },
+    "relatedLessonId": "requirements-documents"
+  },
+  {
+    "id": "srs",
+    "term": {
+      "en": "SRS",
+      "az": "Proqram təminatı tələblərinin spesifikasiyası"
+    },
+    "definition": {
+      "en": "A structured specification of software behavior, interfaces, data, quality attributes and constraints within a defined boundary.",
+      "az": "Müəyyən sərhəd daxilində proqramın davranışını, interfeyslərini və keyfiyyət tələblərini təşkil edən təsviridir. Sənədin adı onun avtomatik düzgün və ya təsdiqli olduğunu göstərmir."
+    },
+    "relatedLessonId": "requirements-documents"
+  },
+  {
+    "id": "impact-analysis",
+    "term": {
+      "en": "Impact analysis",
+      "az": "Təsir analizi"
+    },
+    "definition": {
+      "en": "An assessment of how a proposed change affects value, costs, risks, dependencies and related information or systems.",
+      "az": "Təklif edilən dəyişikliyin dəyərə, riskə, xərcə və əlaqəli sistemlərə təsirinin araşdırılmasıdır. Ekranda kiçik görünən dəyişiklik geniş nəticələr yarada bilər."
+    },
+    "relatedLessonId": "scope-change"
+  },
+  {
+    "id": "query-plan",
+    "term": {
+      "en": "Query plan",
+      "az": "Sorğunun icra planı"
+    },
+    "definition": {
+      "en": "A database plan describing the operations and access paths chosen to produce a query result.",
+      "az": "Verilənlər bazasının nəticəni əldə etmək üçün seçdiyi əməliyyat və giriş yollarının təsviridir. Planın qiymətləndirmələri ölçülmüş icra vaxtı ilə eyni deyil."
+    },
+    "relatedLessonId": "db-indexes-explain"
+  },
+  {
+    "id": "deadlock",
+    "term": {
+      "en": "Deadlock",
+      "az": "Dairəvi kilid gözləməsi"
+    },
+    "definition": {
+      "en": "A cycle in which transactions hold resources and wait for incompatible resources held by one another.",
+      "az": "Tranzaksiyaların bir-birinin saxladığı resursları dairəvi şəkildə gözləməsidir. Adi uzun gözləmə mütləq deadlock deyil; ardıcıl kilid sırası riski azalda bilər."
+    },
+    "relatedLessonId": "db-transactions-locks"
+  },
+  {
+    "id": "expand-contract",
+    "term": {
+      "en": "Expand-contract migration",
+      "az": "Genişləndir, köçür və sonra daralt miqrasiyası"
+    },
+    "definition": {
+      "en": "A staged evolution approach that introduces compatible structures before migrating consumers and removing old representations.",
+      "az": "Əvvəl uyğun yeni struktur əlavə edən, sonra məlumat və istifadəçiləri keçirən, köhnə hissəni isə gec mərhələdə çıxaran yanaşmadır. Kodun geri qaytarılması silinmiş məlumatı bərpa etmir."
+    },
+    "relatedLessonId": "db-safe-migrations"
+  },
+  {
+    "id": "consumer-group",
+    "term": {
+      "en": "Consumer group",
+      "az": "Consumer qrupu"
+    },
+    "definition": {
+      "en": "A coordinated set of Kafka consumers that shares partition assignments for a reading purpose.",
+      "az": "Eyni oxuma məqsədi üçün partition tapşırıqlarını bölüşən consumer-lər qrupudur. Qrup üzvləri dəyişəndə tapşırıqlar yenidən paylana bilər."
+    },
+    "relatedLessonId": "messaging-kafka"
+  },
+  {
+    "id": "dead-letter-queue",
+    "term": {
+      "en": "Dead-letter queue",
+      "az": "Uğursuz mesajlar üçün ayrıca növbə"
+    },
+    "definition": {
+      "en": "A queue used to hold messages routed into a failure-handling path for investigation or controlled recovery.",
+      "az": "Uğursuz mesajların araşdırma və nəzarətli bərpa üçün yönəldildiyi növbədir. Mesajın ora köçməsi biznes probleminin həll olunduğunu göstərmir."
+    },
+    "relatedLessonId": "messaging-rabbitmq"
+  },
+  {
+    "id": "cache-stampede",
+    "term": {
+      "en": "Cache stampede",
+      "az": "Eyni vaxtlı cache miss yük sıçrayışı"
+    },
+    "definition": {
+      "en": "A burst of source requests when many callers miss the cache at the same time.",
+      "az": "Çoxlu sorğunun eyni vaxtda cache-də nəticə tapmayıb əsas mənbəyə yönəlməsidir. Sorğuları birləşdirmək və yükləməni məhdudlaşdırmaq təzyiqi azalda bilər."
+    },
+    "relatedLessonId": "caching-redis"
+  },
+  {
+    "id": "contract-test",
+    "term": {
+      "en": "Contract test",
+      "az": "Qarşılıqlı interfeys müqaviləsinin testi"
+    },
+    "definition": {
+      "en": "A test checking agreed interactions between a consumer and provider at a defined interface boundary.",
+      "az": "Consumer və provider arasında razılaşdırılmış qarşılıqlı əlaqəni yoxlayan testdir. Təkcə mock nəticəsi real provider uyğunluğunu sübut etmir."
+    },
+    "relatedLessonId": "testing-strategy-contracts"
+  },
+  {
+    "id": "data-lineage",
+    "term": {
+      "en": "Data lineage",
+      "az": "Məlumatın mənşə və çevrilmə əlaqələri"
+    },
+    "definition": {
+      "en": "The recorded relationships showing where data originates and how transformations and consumers depend on it.",
+      "az": "Məlumatın haradan gəldiyini və çevirmələrin bir-birinə necə bağlı olduğunu göstərən əlaqələrdir. Deklarativ qraf bütün gizli xarici istehlakçıları avtomatik tapmır."
+    },
+    "relatedLessonId": "data-dbt-quality-lineage"
+  },
+  {
+    "id": "directed-acyclic-graph",
+    "term": {
+      "en": "Directed acyclic graph",
+      "az": "İstiqamətli dövrsüz qraf"
+    },
+    "definition": {
+      "en": "A graph of directed dependencies without a cycle, used by orchestrators to organize task relationships.",
+      "az": "Tapşırıq asılılıqlarını dövr yaratmadan istiqamətli əlaqələrlə göstərən qrafdır. Tapşırıqların uğurlu olması məlumatın bütün biznes qaydalarına uyğunluğunu avtomatik sübut etmir."
+    },
+    "relatedLessonId": "data-airflow-orchestration"
+  },
+  {
+    "id": "iam",
+    "term": {
+      "en": "IAM",
+      "az": "İdentifikasiya və giriş səlahiyyətlərinin idarəsi"
+    },
+    "definition": {
+      "en": "Policies and mechanisms governing which identities may perform which actions on resources under stated conditions.",
+      "az": "Kimliyin hansı resursda hansı əməliyyatı hansı şərtlə edə biləcəyini idarə edir. Şəbəkədə əlçatan olmaq həmin əməliyyata icazə verildiyini göstərmir."
+    },
+    "relatedLessonId": "cloud-iam-vpc-balancing"
+  },
+  {
+    "id": "ssrf",
+    "term": {
+      "en": "SSRF",
+      "az": "Serverin sorğu imkanından icazəsiz istifadə"
+    },
+    "definition": {
+      "en": "An abuse of server-side request behavior that lets untrusted input direct requests beyond the intended authority.",
+      "az": "Etibarsız girişin serveri nəzərdə tutulmayan ünvana sorğu göndərməyə yönəltməsidir. HTTPS və sadə domen mətni yoxlaması bütün riski aradan qaldırmır."
+    },
+    "relatedLessonId": "security-threat-modeling-ssrf"
+  },
+  {
+    "id": "key-rotation",
+    "term": {
+      "en": "Key rotation",
+      "az": "Açar və secret materialının nəzarətli yenilənməsi"
+    },
+    "definition": {
+      "en": "A controlled replacement of key or credential material with consumer migration, verification and retirement rules.",
+      "az": "Açar və ya credential-ın istifadəçilərin keçirilməsi, yoxlama və köhnə materialın çıxarılması qaydaları ilə yenilənməsidir. Şifrələmə və imzalama açarlarının bərpa ehtiyacları fərqlənir."
+    },
+    "relatedLessonId": "security-secrets-rotation"
   }
 ]

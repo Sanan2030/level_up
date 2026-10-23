@@ -59,17 +59,18 @@
     "level": "junior",
     "moduleId": "ba-requirements",
     "title": {
-      "az": "Müsahibə, seminar və müşahidə",
-      "en": "Interviews, workshops and observation"
+      "en": "Interviews, workshops and observation",
+      "az": "Müsahibə, seminar və müşahidə"
     },
     "summary": {
-      "az": "Lazım olan sübut üçün müsahibə, seminar, sorğu, sənəd analizi və müşahidəni seç.",
-      "en": "Choose interviews, workshops, surveys, document analysis and observation for the evidence needed."
+      "en": "Plan interviews, workshops and observation around a decision, then confirm findings without confusing confirmation with approval.",
+      "az": "Plan interviews, workshops and observation around a decision, then confirm findings without confusing confirmation with approval."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["Interviews, workshops and observation", "BA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3", "govuk-interviews"]
   },
   {
     "id": "requirement-types",
@@ -131,17 +132,18 @@
     "level": "junior",
     "moduleId": "ba-requirements",
     "title": {
-      "az": "Təkrarsız BRD, FRD və SRS",
-      "en": "BRD, FRD and SRS without duplication"
+      "en": "BRD, FRD and SRS without duplication",
+      "az": "Təkrarsız BRD, FRD və SRS"
     },
     "summary": {
-      "az": "Sənədin dərinliyini və sahibliyini auditoriya və riskə uyğun seç.",
-      "en": "Choose document depth and ownership according to audience and risk."
+      "en": "Use BRD, FRD and SRS as audience-specific views of controlled requirements, without duplicating conflicting sources of truth.",
+      "az": "Use BRD, FRD and SRS as audience-specific views of controlled requirements, without duplicating conflicting sources of truth."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["BRD, FRD and SRS without duplication", "BA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "bpmn-process",
@@ -149,17 +151,18 @@
     "level": "junior",
     "moduleId": "ba-visuals",
     "title": {
-      "az": "BPMN üslubunda proses modelləşdirməsi",
-      "en": "BPMN-style process modeling"
+      "en": "BPMN-style process modeling",
+      "az": "BPMN üslubunda proses modelləşdirməsi"
     },
     "summary": {
-      "az": "Hadisə, tapşırıq, qərar və ötürmələri aydın başlanğıc və sonla modelləşdir.",
-      "en": "Model events, tasks, decisions and hand-offs with a clear start and end."
+      "en": "Model process boundaries, responsibilities, decisions and exceptions while keeping sequence flow distinct from cross-participant messages.",
+      "az": "Model process boundaries, responsibilities, decisions and exceptions while keeping sequence flow distinct from cross-participant messages."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["BPMN-style process modeling", "BA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3", "omg-bpmn"]
   },
   {
     "id": "uml-models",
@@ -167,17 +170,18 @@
     "level": "junior",
     "moduleId": "ba-visuals",
     "title": {
-      "az": "Uyğun UML görünüşünü seç",
-      "en": "Choose the right UML view"
+      "en": "Choose the right UML view",
+      "az": "Uyğun UML görünüşünü seç"
     },
     "summary": {
-      "az": "İstifadə halı, fəaliyyət, ardıcıllıq, sinif və vəziyyət diaqramlarını müqayisə et.",
-      "en": "Compare use case, activity, sequence, class and state diagrams."
+      "en": "Choose use-case, sequence, class or state views according to the question, and keep their responsibilities consistent.",
+      "az": "Choose use-case, sequence, class or state views according to the question, and keep their responsibilities consistent."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["Choose the right UML view", "BA", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3", "omg-uml"]
   },
   {
     "id": "wireframes",
@@ -221,17 +225,18 @@
     "level": "mid",
     "moduleId": "ba-control",
     "title": {
-      "az": "Tələblərin izlənilməsi",
-      "en": "Requirements traceability"
+      "en": "Requirements traceability",
+      "az": "Tələblərin izlənilməsi"
     },
     "summary": {
-      "az": "Ehtiyac, tələb, dizayn, test və dəyər sübutunu əlaqələndir.",
-      "en": "Link needs, requirements, designs, tests and evidence of value."
+      "en": "Link business needs, requirements, designs, tests and delivered changes so an impact assessment follows evidence rather than guesses.",
+      "az": "Link business needs, requirements, designs, tests and delivered changes so an impact assessment follows evidence rather than guesses."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["Requirements traceability", "BA", "mid"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3"]
   },
   {
     "id": "scope-change",
@@ -239,17 +244,18 @@
     "level": "mid",
     "moduleId": "ba-control",
     "title": {
-      "az": "Əhatə sərhədləri və dəyişiklik nəzarəti",
-      "en": "Scope boundaries and change control"
+      "en": "Scope boundaries and change control",
+      "az": "Əhatə sərhədləri və dəyişiklik nəzarəti"
     },
     "summary": {
-      "az": "Əhatə dəyişikliyini qəbul etməzdən əvvəl təsiri və qərar sahibini qiymətləndir.",
-      "en": "Assess impact and decision ownership before accepting a scope change."
+      "en": "Assess changes against the baseline, dependencies, value and authority while distinguishing adaptive planning from uncontrolled commitments.",
+      "az": "Assess changes against the baseline, dependencies, value and authority while distinguishing adaptive planning from uncontrolled commitments."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["Scope boundaries and change control", "BA", "mid"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3", "scrum-2020"]
   },
   {
     "id": "gap-root-cause",
@@ -368,17 +374,18 @@
     "level": "mid",
     "moduleId": "ba-technical",
     "title": {
-      "az": "Test halları və UAT",
-      "en": "Test cases and UAT"
+      "en": "Test cases and UAT",
+      "az": "Test halları və UAT"
     },
     "summary": {
-      "az": "Qəbul meyarlarını real biznes qəbul ssenarilərinə çevir.",
-      "en": "Translate acceptance criteria into realistic business acceptance scenarios."
+      "en": "Plan user acceptance testing around business outcomes, representative data, explicit criteria and accountable release decisions.",
+      "az": "Plan user acceptance testing around business outcomes, representative data, explicit criteria and accountable release decisions."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["Test cases and UAT", "BA", "mid"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["babok-v3", "fowler-tests"]
   },
   {
     "id": "agile-analysis",
@@ -602,17 +609,18 @@
     "level": "junior",
     "moduleId": "po-discovery",
     "title": {
-      "az": "JTBD və yönləndirməyən müsahibələr",
-      "en": "JTBD and non-leading interviews"
+      "en": "JTBD and non-leading interviews",
+      "az": "JTBD və yönləndirməyən müsahibələr"
     },
     "summary": {
-      "az": "Müştərinin vəziyyətini, istədiyi irəliləyişi və mövcud alternativləri araşdır.",
-      "en": "Explore a customer’s situation, desired progress and existing alternatives."
+      "en": "Investigate the progress a customer sought in a real situation, including alternatives, anxieties and the events behind a switch.",
+      "az": "Investigate the progress a customer sought in a real situation, including alternatives, anxieties and the events behind a switch."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["JTBD and non-leading interviews", "PO", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["jtbd-theory", "govuk-interviews", "professional-po-2018"]
   },
   {
     "id": "personas",
@@ -638,17 +646,18 @@
     "level": "junior",
     "moduleId": "po-discovery",
     "title": {
-      "az": "Hekayə xəritəsi və kəşf dövrləri",
-      "en": "Story mapping and discovery loops"
+      "en": "Story mapping and discovery loops",
+      "az": "Hekayə xəritəsi və kəşf dövrləri"
     },
     "summary": {
-      "az": "İstifadəçi səyahətini xəritələ və riskli fərziyyəni yoxlamaq üçün kiçik hissə seç.",
-      "en": "Map a user journey and choose a thin slice to test a risky assumption."
+      "en": "Organize a user journey into activities and tasks, then choose a small end-to-end release slice with visible assumptions.",
+      "az": "Organize a user journey into activities and tasks, then choose a small end-to-end release slice with visible assumptions."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["Story mapping and discovery loops", "PO", "junior"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["story-mapping", "professional-po-2018", "scrum-2020"]
   },
   {
     "id": "product-strategy",
@@ -656,17 +665,18 @@
     "level": "mid",
     "moduleId": "po-strategy",
     "title": {
-      "az": "Məhsul strategiyası və nəticə yol xəritələri",
-      "en": "Product strategy and outcome roadmaps"
+      "en": "Product strategy and outcome roadmaps",
+      "az": "Məhsul strategiyası və nəticə yol xəritələri"
     },
     "summary": {
-      "az": "Harada rəqabət aparılacağını, hansı ehtiyaclara xidmət ediləcəyini və hansı seçimlərin təxirə salınacağını izah et.",
-      "en": "Explain where to compete, which needs to serve and which choices to defer."
+      "en": "Connect a product goal to a target situation, value hypothesis, strategic choices and measurable learning rather than a fixed feature calendar.",
+      "az": "Connect a product goal to a target situation, value hypothesis, strategic choices and measurable learning rather than a fixed feature calendar."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["Product strategy and outcome roadmaps", "PO", "mid"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["professional-po-2018", "ebm-2024", "scrum-2020"]
   },
   {
     "id": "okrs",
@@ -674,17 +684,18 @@
     "level": "mid",
     "moduleId": "po-strategy",
     "title": {
-      "az": "OKR və qərara çevrilən ölçülər",
-      "en": "OKRs and actionable measures"
+      "en": "OKRs and actionable measures",
+      "az": "OKR və qərara çevrilən ölçülər"
     },
     "summary": {
-      "az": "Məqsədləri, ölçülən nəticələri və təşəbbüsləri ayır.",
-      "en": "Separate objectives, measurable results and initiatives."
+      "en": "Write outcome-oriented objectives and measurable key results with baselines, guardrails and explicit ownership.",
+      "az": "Write outcome-oriented objectives and measurable key results with baselines, guardrails and explicit ownership."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["OKRs and actionable measures", "PO", "mid"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["ebm-2024", "govuk-performance-metrics"]
   },
   {
     "id": "product-metrics",
@@ -782,17 +793,18 @@
     "level": "mid",
     "moduleId": "po-delivery",
     "title": {
-      "az": "Qiymətləndirmə və bazara çıxış fərziyyələri",
-      "en": "Pricing and go-to-market hypotheses"
+      "en": "Pricing and go-to-market hypotheses",
+      "az": "Qiymətləndirmə və bazara çıxış fərziyyələri"
     },
     "summary": {
-      "az": "Müştəri seqmentini, ödəmə istəyini, kanalları və buraxılışdan öyrənməni əlaqələndir.",
-      "en": "Connect customer segments, willingness to pay, channels and launch learning."
+      "en": "Test pricing and go-to-market assumptions through customer situations, unit economics, channels and measurable launch evidence.",
+      "az": "Test pricing and go-to-market assumptions through customer situations, unit economics, channels and measurable launch evidence."
     },
-    "minutes": 35,
-    "status": "planned",
+    "minutes": 60,
+    "status": "published",
     "topics": ["Pricing and go-to-market hypotheses", "PO", "mid"],
-    "prerequisites": []
+    "prerequisites": [],
+    "sourceIds": ["professional-po-2018", "ebm-2024"]
   },
   {
     "id": "scaling-products",
@@ -2050,5 +2062,309 @@
     ],
     "prerequisites": ["data-analysis-grain-quality", "sql-basics"],
     "sourceIds": ["govuk-performance-metrics", "govuk-service-success", "wcag22-use-of-color"]
+  },
+  {
+    "id": "db-indexes-explain",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-database-foundations",
+    "title": {
+      "en": "Indexes and EXPLAIN: evidence-based query tuning",
+      "az": "İndekslər və EXPLAIN ilə sorğu optimallaşdırılması"
+    },
+    "summary": {
+      "en": "Use query plans and representative evidence to evaluate indexes, row estimates, loops and write-side trade-offs.",
+      "az": "Use query plans and representative evidence to evaluate indexes, row estimates, loops and write-side trade-offs."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["databases"],
+    "prerequisites": ["sql-basics"],
+    "sourceIds": ["pg-explain", "pg-createindex"]
+  },
+  {
+    "id": "db-transactions-locks",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-databases",
+    "title": {
+      "en": "Transactions, isolation, locks and deadlocks",
+      "az": "Tranzaksiya, izolyasiya, kilid və deadlock"
+    },
+    "summary": {
+      "en": "Protect business invariants under concurrency using appropriate transactions, conditional updates, locks and retry policies.",
+      "az": "Protect business invariants under concurrency using appropriate transactions, conditional updates, locks and retry policies."
+    },
+    "minutes": 80,
+    "status": "published",
+    "topics": ["databases"],
+    "prerequisites": ["sql-basics"],
+    "sourceIds": ["pg-isolation", "pg-locking"]
+  },
+  {
+    "id": "db-safe-migrations",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-databases",
+    "title": {
+      "en": "Safe database migrations and expand-contract delivery",
+      "az": "Təhlükəsiz verilənlər bazası miqrasiyaları"
+    },
+    "summary": {
+      "en": "Evolve schemas through compatible stages, bounded backfills and observable cutovers, with a recovery plan for both code and data.",
+      "az": "Evolve schemas through compatible stages, bounded backfills and observable cutovers, with a recovery plan for both code and data."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["databases"],
+    "prerequisites": ["db-transactions-locks"],
+    "sourceIds": ["pg-createindex", "pg-locking"]
+  },
+  {
+    "id": "messaging-kafka",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-messaging-caching",
+    "title": {
+      "en": "Kafka: partitions, offsets, ordering and consumer recovery",
+      "az": "Kafka: partition, offset, ardıcıllıq və bərpa"
+    },
+    "summary": {
+      "en": "Reason about Kafka partition order, consumer-group ownership, offset commits and recovery without assuming global or external exactly-once effects.",
+      "az": "Reason about Kafka partition order, consumer-group ownership, offset commits and recovery without assuming global or external exactly-once effects."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["messaging"],
+    "prerequisites": ["integration-basics"],
+    "sourceIds": ["kafka-design", "http-semantics-9110"]
+  },
+  {
+    "id": "messaging-rabbitmq",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-messaging-caching",
+    "title": {
+      "en": "RabbitMQ: acknowledgements, retries and dead-letter queues",
+      "az": "RabbitMQ: təsdiq, retry və dead-letter növbələri"
+    },
+    "summary": {
+      "en": "Separate publisher confirms from consumer acknowledgements, then design bounded retries and observable dead-letter handling.",
+      "az": "Separate publisher confirms from consumer acknowledgements, then design bounded retries and observable dead-letter handling."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["messaging"],
+    "prerequisites": ["integration-basics"],
+    "sourceIds": ["rabbit-ack", "rabbit-dlx"]
+  },
+  {
+    "id": "caching-redis",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-cache-foundations",
+    "title": {
+      "en": "Redis caching: TTL, invalidation and stampede control",
+      "az": "Redis cache: TTL, invalidation və yük sıçrayışı"
+    },
+    "summary": {
+      "en": "Use Redis as a performance layer with explicit freshness, invalidation, failure and cache-stampede policies.",
+      "az": "Use Redis as a performance layer with explicit freshness, invalidation, failure and cache-stampede policies."
+    },
+    "minutes": 70,
+    "status": "published",
+    "topics": ["messaging"],
+    "prerequisites": ["rest-apis"],
+    "sourceIds": ["redis-expire", "azure-cache-aside"]
+  },
+  {
+    "id": "testing-strategy-contracts",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-software-testing",
+    "title": {
+      "en": "Testing strategy: unit, integration and contract evidence",
+      "az": "Test strategiyası: unit, integration və contract"
+    },
+    "summary": {
+      "en": "Choose complementary test boundaries by risk, distinguishing isolated logic, real integration, consumer contracts and complete user journeys.",
+      "az": "Choose complementary test boundaries by risk, distinguishing isolated logic, real integration, consumer contracts and complete user journeys."
+    },
+    "minutes": 65,
+    "status": "published",
+    "topics": ["testing"],
+    "prerequisites": ["stories-gherkin"],
+    "sourceIds": ["fowler-tests", "openapi-311", "owasp-authorization"]
+  },
+  {
+    "id": "testing-postman-apis",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-software-testing",
+    "title": {
+      "en": "API testing with Postman: assertions, negative cases and mocks",
+      "az": "Postman ilə API testləri və mock"
+    },
+    "summary": {
+      "en": "Build API checks around explicit status, body, authorization and state contracts, and distinguish mock responses from server evidence.",
+      "az": "Build API checks around explicit status, body, authorization and state contracts, and distinguish mock responses from server evidence."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["testing"],
+    "prerequisites": ["rest-apis", "testing-strategy-contracts"],
+    "sourceIds": ["postman-tests", "openapi-311", "http-semantics-9110"]
+  },
+  {
+    "id": "testing-playwright",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-software-testing",
+    "title": {
+      "en": "Playwright E2E testing: isolation, locators and reliable feedback",
+      "az": "Playwright E2E testləri və etibarlı geribildirim"
+    },
+    "summary": {
+      "en": "Create isolated browser tests with accessible locators, auto-retrying assertions and controlled network/data boundaries.",
+      "az": "Create isolated browser tests with accessible locators, auto-retrying assertions and controlled network/data boundaries."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["testing"],
+    "prerequisites": ["testing-strategy-contracts"],
+    "sourceIds": ["playwright-practices"]
+  },
+  {
+    "id": "data-etl-warehouse",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-data-pipelines",
+    "title": {
+      "en": "ETL, ELT and data warehouse delivery contracts",
+      "az": "ETL, ELT və data warehouse müqavilələri"
+    },
+    "summary": {
+      "en": "Design reproducible ingestion and warehouse transformations with explicit grain, checkpoints, late data and trustworthy publication rules.",
+      "az": "Design reproducible ingestion and warehouse transformations with explicit grain, checkpoints, late data and trustworthy publication rules."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["data-engineering"],
+    "prerequisites": ["sql-basics", "data-analysis-grain-quality"],
+    "sourceIds": ["aws-etl-elt", "fabric-warehouse", "powerbi-star-schema"]
+  },
+  {
+    "id": "data-dbt-quality-lineage",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-data-engineering",
+    "title": {
+      "en": "dbt: transformations, lineage and data quality tests",
+      "az": "dbt: çevirmə, lineage və məlumat keyfiyyəti"
+    },
+    "summary": {
+      "en": "Build dbt model dependencies with ref, test declared data assumptions and use lineage to assess downstream change impact.",
+      "az": "Build dbt model dependencies with ref, test declared data assumptions and use lineage to assess downstream change impact."
+    },
+    "minutes": 80,
+    "status": "published",
+    "topics": ["data-engineering"],
+    "prerequisites": ["data-etl-warehouse"],
+    "sourceIds": ["dbt-tests", "dbt-ref"]
+  },
+  {
+    "id": "data-airflow-orchestration",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-data-engineering",
+    "title": {
+      "en": "Airflow orchestration: intervals, retries and idempotent tasks",
+      "az": "Airflow: interval, retry və idempotent tapşırıqlar"
+    },
+    "summary": {
+      "en": "Coordinate data work through explicit intervals, dependencies and retry-safe outputs while keeping orchestration separate from business correctness.",
+      "az": "Coordinate data work through explicit intervals, dependencies and retry-safe outputs while keeping orchestration separate from business correctness."
+    },
+    "minutes": 80,
+    "status": "published",
+    "topics": ["data-engineering"],
+    "prerequisites": ["data-etl-warehouse"],
+    "sourceIds": ["airflow-dags", "airflow-practices"]
+  },
+  {
+    "id": "cloud-iam-vpc-balancing",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-cloud-foundations",
+    "title": {
+      "en": "Cloud foundations: IAM, VPC and load balancing",
+      "az": "Cloud əsasları: IAM, VPC və load balancer"
+    },
+    "summary": {
+      "en": "Separate identity permissions, network reachability, transport trust and application authorization in a layered cloud design.",
+      "az": "Separate identity permissions, network reachability, transport trust and application authorization in a layered cloud design."
+    },
+    "minutes": 80,
+    "status": "published",
+    "topics": ["cloud-security"],
+    "prerequisites": ["devops-linux-git-networking"],
+    "sourceIds": ["aws-iam", "aws-vpc", "aws-alb", "owasp-authorization"]
+  },
+  {
+    "id": "cloud-cost-engineering",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-cloud-security",
+    "title": {
+      "en": "Cloud cost engineering: allocation, unit cost and trade-offs",
+      "az": "Cloud xərcləri və vahid başına xərc"
+    },
+    "summary": {
+      "en": "Measure cloud spending against useful workload units, allocate shared costs honestly and assess optimization with reliability and security.",
+      "az": "Measure cloud spending against useful workload units, allocate shared costs honestly and assess optimization with reliability and security."
+    },
+    "minutes": 65,
+    "status": "published",
+    "topics": ["cloud-security"],
+    "prerequisites": ["cloud-iam-vpc-balancing"],
+    "sourceIds": ["aws-cost", "aws-cost-tags"]
+  },
+  {
+    "id": "security-threat-modeling-ssrf",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-cloud-security",
+    "title": {
+      "en": "Threat modeling, trust boundaries and SSRF defenses",
+      "az": "Threat modeling, etibar sərhədləri və SSRF"
+    },
+    "summary": {
+      "en": "Model assets and trust boundaries, then defend server-side fetching through destination policy, network controls and tested failure handling.",
+      "az": "Model assets and trust boundaries, then defend server-side fetching through destination policy, network controls and tested failure handling."
+    },
+    "minutes": 80,
+    "status": "published",
+    "topics": ["cloud-security"],
+    "prerequisites": ["rest-apis", "cloud-iam-vpc-balancing"],
+    "sourceIds": ["owasp-threat", "owasp-ssrf"]
+  },
+  {
+    "id": "security-secrets-rotation",
+    "trackId": "ba",
+    "level": "lead",
+    "moduleId": "ba-cloud-security",
+    "title": {
+      "en": "Secrets and key lifecycle: storage, rotation and incident recovery",
+      "az": "Secret və açarlar: saxlanma, rotasiya və bərpa"
+    },
+    "summary": {
+      "en": "Manage credentials and cryptographic keys through controlled creation, use, rotation, revocation and recovery with secret-free evidence.",
+      "az": "Manage credentials and cryptographic keys through controlled creation, use, rotation, revocation and recovery with secret-free evidence."
+    },
+    "minutes": 75,
+    "status": "published",
+    "topics": ["cloud-security"],
+    "prerequisites": ["jwt-validation-authorization"],
+    "sourceIds": ["owasp-secrets", "aws-iam", "jwt-security-8725"]
   }
 ]
