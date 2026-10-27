@@ -7,7 +7,9 @@ test('DevOps and data collections compose with existing library filters', async 
   await page.goto('/en/lessons?subject=devops');
   const subject = page.getByRole('combobox', { name: 'Subject', exact: true });
   await expect(subject).toHaveValue('devops');
-  await expect(cards).toHaveCount(6);
+  await expect(cards).toHaveCount(
+    lessonData.filter((lesson) => lesson.topics.includes('devops')).length,
+  );
   await page.getByRole('combobox', { name: 'Content', exact: true }).selectOption('published');
   await page.getByRole('searchbox').fill('Terraform');
   await expect(cards).toHaveCount(1);

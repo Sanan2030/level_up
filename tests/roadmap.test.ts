@@ -70,7 +70,7 @@ const profile: LearningProfile = {
 describe('personalized roadmap', () => {
   it('keeps all independent technical collections out of every learning path and estimate', () => {
     const independent = catalogLessons.filter((lesson) => lesson.placement === 'library');
-    expect(independent).toHaveLength(40);
+    expect(independent).toHaveLength(41);
     for (const track of tracks) {
       const plan = generateRoadmap(
         { trackId: track.id, currentLevel: 'zero', targetLevel: 'lead', dailyMinutes: 30 },

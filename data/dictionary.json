@@ -2668,5 +2668,135 @@
       "en": "Rotation verifies both consumers before normal retirement of the old credential.",
       "az": "Rotasiya köhnə credential adi qaydada çıxarılmazdan əvvəl hər iki istifadəçini yoxlayır."
     }
+  },
+  {
+    "id": "kubernetes-deployment",
+    "term": "Kubernetes Deployment",
+    "aliases": ["k8s deployment"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Kubernetes-də Pod versiyalarını idarə edən obyekt",
+    "definitionEn": "A workload object that manages ReplicaSets to maintain and update application Pods declaratively.",
+    "explanationAz": "ReplicaSet-ləri idarə edərək tətbiqin Pod sayını və versiya yeniləmələrini arzu olunan vəziyyətə uyğunlaşdıran obyektdir; ümumi deployment fəaliyyəti ilə qarışdırma.",
+    "example": {
+      "en": "Changing the Pod template starts a Deployment rollout.",
+      "az": "Pod şablonunu dəyişmək Deployment yeniləməsini başladır."
+    }
+  },
+  {
+    "id": "replicaset",
+    "term": "ReplicaSet",
+    "aliases": ["replica set", "replicasets"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Arzu olunan Pod sayını saxlayan obyekt",
+    "definitionEn": "A Kubernetes controller-backed resource that maintains a desired count of matching Pods.",
+    "explanationAz": "Uyğun label-lərə sahib Pod-ların sayını hədəfə çatdırır. Adətən Deployment tərəfindən idarə olunur; silinən Pod-un yerinə yeni Pod yaradır.",
+    "example": {
+      "en": "Deleting a managed Pod leaves its ReplicaSet replica target unchanged.",
+      "az": "İdarə olunan Pod-u silmək ReplicaSet-in hədəf sayını dəyişmir."
+    }
+  },
+  {
+    "id": "kubernetes-label",
+    "term": "Kubernetes label",
+    "aliases": ["labels", "pod label"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Kubernetes obyektinin açar-dəyər etiketi",
+    "definitionEn": "An identifying key/value pair attached to a Kubernetes object and queryable with a label selector.",
+    "explanationAz": "Obyektləri qruplaşdırmaq və seçmək üçün metadata daxilində yazılan açar-dəyər cütüdür. Deployment etiketi avtomatik Pod etiketi olmur.",
+    "example": {
+      "en": "The Pod template carries the label app: orders.",
+      "az": "Pod şablonunda app: orders etiketi var."
+    }
+  },
+  {
+    "id": "label-selector",
+    "term": "Label selector",
+    "aliases": ["selector", "selectors", "label and selector"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Etiketə görə seçim qaydası",
+    "definitionEn": "A query that matches Kubernetes objects using their label keys and values within the applicable resource scope.",
+    "explanationAz": "Obyektləri label-lərinə əsasən seçən qaydadır. Service selector-u öz namespace-ində uyğun və hazır Pod-ları tapır.",
+    "example": {
+      "en": "A selector using app: order does not match app: orders.",
+      "az": "app: order seçimi app: orders etiketinə uyğun gəlmir."
+    }
+  },
+  {
+    "id": "kubernetes-namespace",
+    "term": "Kubernetes namespace",
+    "aliases": ["namespace", "namespaces"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Klasterdə resursların məntiqi ad sahəsi",
+    "definitionEn": "A logical scope for namespaced Kubernetes resources within a cluster, separate from node placement.",
+    "explanationAz": "Pod, Deployment, Service kimi resursların adlarını və əhatəsini ayırır. Öz-özünə şəbəkə trafikinə qadağa qoymur; node namespace daxilində olmur.",
+    "example": {
+      "en": "A Service in demo selects matching Pods in demo.",
+      "az": "demo namespace-indəki Service həmin namespace-də uyğun Pod-ları seçir."
+    }
+  },
+  {
+    "id": "configmap",
+    "term": "ConfigMap",
+    "aliases": ["config map", "configmaps"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Məxfi olmayan konfiqurasiya obyekti",
+    "definitionEn": "A Kubernetes object for non-confidential configuration consumed through environment variables, files or other supported methods.",
+    "explanationAz": "Log səviyyəsi kimi məxfi olmayan parametrləri koddan ayırır. Məxfiliyi təmin etmir; environment kimi verilən dəyər işləyən prosesdə avtomatik dəyişmir.",
+    "example": {
+      "en": "A changed ConfigMap does not rewrite a running process environment.",
+      "az": "ConfigMap dəyişikliyi işləyən prosesin environment dəyərini yenidən yazmır."
+    }
+  },
+  {
+    "id": "kubernetes-secret",
+    "term": "Kubernetes Secret",
+    "aliases": ["k8s secret"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Kubernetes-də həssas məlumat obyekti",
+    "definitionEn": "A Kubernetes object for sensitive data that still requires configured access control and protection at rest.",
+    "explanationAz": "Parol və token kimi məlumatlar üçündür. Base64 şifrələmə deyil; giriş səlahiyyətləri və yaddaşda şifrələmə ayrıca qurulmalıdır.",
+    "example": {
+      "en": "Encoding a password as base64 does not encrypt it.",
+      "az": "Parolu base64 ilə kodlamaq onu şifrələmir."
+    }
+  },
+  {
+    "id": "vault",
+    "term": "HashiCorp Vault",
+    "aliases": ["vault"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Məxfi məlumatların idarəetmə xidməti",
+    "definitionEn": "A separate service for identity-based secret access, policies and secrets-engine-dependent credential lifecycle management.",
+    "explanationAz": "Məxfi məlumatlara şəxsiyyət və policy əsasında giriş verir. Kubernetes-in daxili obyekt növü deyil; dinamik credential üçün uyğun secrets engine qurulmalıdır.",
+    "example": {
+      "en": "A Vault role binds a ServiceAccount identity to a scoped policy.",
+      "az": "Vault rolu ServiceAccount kimliyini məhdud policy ilə əlaqələndirir."
+    }
+  },
+  {
+    "id": "vault-agent",
+    "term": "Vault Agent",
+    "aliases": ["vault sidecar"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Məxfi məlumatı tətbiqə çatdıran köməkçi agent",
+    "definitionEn": "A client agent that can authenticate to Vault and render permitted secrets into files for application use.",
+    "explanationAz": "Vault-a autentifikasiya olub icazəli məxfi məlumatı fayla yaza bilər. Fayl yenilənəndə tətbiq onu yenidən oxumalı və lazım olduqda bağlantılarını yeniləməlidir.",
+    "example": {
+      "en": "The Agent refreshed the file, but the app must reload its credential.",
+      "az": "Agent faylı yenilədi, amma tətbiq credential-ı yenidən oxumalıdır."
+    }
+  },
+  {
+    "id": "service-account",
+    "term": "ServiceAccount",
+    "aliases": ["service account"],
+    "context": "Docker, Kubernetes and Vault",
+    "meaningAz": "Kubernetes iş yükünün xidmət kimliyi",
+    "definitionEn": "A namespaced Kubernetes identity that a workload can use when authenticating to the API or configured external services.",
+    "explanationAz": "Pod-un API və uyğun xarici xidmətlərə autentifikasiyada istifadə etdiyi namespace-ə aid kimlikdir; Vault rolu bu kimliyi yoxlayıb policy təyin edə bilər.",
+    "example": {
+      "en": "The orders-app ServiceAccount authenticates through Vault Kubernetes auth.",
+      "az": "orders-app ServiceAccount-u Vault Kubernetes auth vasitəsilə autentifikasiya olur."
+    }
   }
 ]

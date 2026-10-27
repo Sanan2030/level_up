@@ -12,6 +12,7 @@ import { getContent } from '@/lib/content';
 import { getLocale } from '@/lib/i18n';
 import { Diagram } from '@/components/lesson/diagram';
 import { ConceptStepper } from '@/components/lesson/concept-stepper';
+import { KubernetesExplorer } from '@/components/lesson/kubernetes-explorer';
 import { LessonActions } from '@/components/lesson/lesson-actions';
 import { LessonLab } from '@/components/lesson/lesson-lab';
 import { hasLessonLab } from '@/lib/labs/catalog';
@@ -65,6 +66,7 @@ export default async function LessonPage({
         <Diagram chart={chart} locale={locale} title={lesson.title[locale]} />
       ),
       ConceptStepper: () => <ConceptStepper locale={locale} />,
+      KubernetesExplorer,
     },
   });
   const trackLessons = lessons.filter(

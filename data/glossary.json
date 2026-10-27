@@ -1030,5 +1030,125 @@
       "az": "Açar və ya credential-ın istifadəçilərin keçirilməsi, yoxlama və köhnə materialın çıxarılması qaydaları ilə yenilənməsidir. Şifrələmə və imzalama açarlarının bərpa ehtiyacları fərqlənir."
     },
     "relatedLessonId": "security-secrets-rotation"
+  },
+  {
+    "id": "kubernetes-deployment",
+    "term": {
+      "en": "Kubernetes Deployment",
+      "az": "Kubernetes-də Pod versiyalarını idarə edən obyekt"
+    },
+    "definition": {
+      "en": "A workload object that manages ReplicaSets to maintain and update application Pods declaratively.",
+      "az": "ReplicaSet-ləri idarə edərək tətbiqin Pod sayını və versiya yeniləmələrini arzu olunan vəziyyətə uyğunlaşdıran obyektdir; ümumi deployment fəaliyyəti ilə qarışdırma."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
+  },
+  {
+    "id": "replicaset",
+    "term": {
+      "en": "ReplicaSet",
+      "az": "Arzu olunan Pod sayını saxlayan obyekt"
+    },
+    "definition": {
+      "en": "A Kubernetes controller-backed resource that maintains a desired count of matching Pods.",
+      "az": "Uyğun label-lərə sahib Pod-ların sayını hədəfə çatdırır. Adətən Deployment tərəfindən idarə olunur; silinən Pod-un yerinə yeni Pod yaradır."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
+  },
+  {
+    "id": "kubernetes-label",
+    "term": {
+      "en": "Kubernetes label",
+      "az": "Kubernetes obyektinin açar-dəyər etiketi"
+    },
+    "definition": {
+      "en": "An identifying key/value pair attached to a Kubernetes object and queryable with a label selector.",
+      "az": "Obyektləri qruplaşdırmaq və seçmək üçün metadata daxilində yazılan açar-dəyər cütüdür. Deployment etiketi avtomatik Pod etiketi olmur."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
+  },
+  {
+    "id": "label-selector",
+    "term": {
+      "en": "Label selector",
+      "az": "Etiketə görə seçim qaydası"
+    },
+    "definition": {
+      "en": "A query that matches Kubernetes objects using their label keys and values within the applicable resource scope.",
+      "az": "Obyektləri label-lərinə əsasən seçən qaydadır. Service selector-u öz namespace-ində uyğun və hazır Pod-ları tapır."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
+  },
+  {
+    "id": "kubernetes-namespace",
+    "term": {
+      "en": "Kubernetes namespace",
+      "az": "Klasterdə resursların məntiqi ad sahəsi"
+    },
+    "definition": {
+      "en": "A logical scope for namespaced Kubernetes resources within a cluster, separate from node placement.",
+      "az": "Pod, Deployment, Service kimi resursların adlarını və əhatəsini ayırır. Öz-özünə şəbəkə trafikinə qadağa qoymur; node namespace daxilində olmur."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
+  },
+  {
+    "id": "configmap",
+    "term": {
+      "en": "ConfigMap",
+      "az": "Məxfi olmayan konfiqurasiya obyekti"
+    },
+    "definition": {
+      "en": "A Kubernetes object for non-confidential configuration consumed through environment variables, files or other supported methods.",
+      "az": "Log səviyyəsi kimi məxfi olmayan parametrləri koddan ayırır. Məxfiliyi təmin etmir; environment kimi verilən dəyər işləyən prosesdə avtomatik dəyişmir."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
+  },
+  {
+    "id": "kubernetes-secret",
+    "term": {
+      "en": "Kubernetes Secret",
+      "az": "Kubernetes-də həssas məlumat obyekti"
+    },
+    "definition": {
+      "en": "A Kubernetes object for sensitive data that still requires configured access control and protection at rest.",
+      "az": "Parol və token kimi məlumatlar üçündür. Base64 şifrələmə deyil; giriş səlahiyyətləri və yaddaşda şifrələmə ayrıca qurulmalıdır."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
+  },
+  {
+    "id": "vault",
+    "term": {
+      "en": "HashiCorp Vault",
+      "az": "Məxfi məlumatların idarəetmə xidməti"
+    },
+    "definition": {
+      "en": "A separate service for identity-based secret access, policies and secrets-engine-dependent credential lifecycle management.",
+      "az": "Məxfi məlumatlara şəxsiyyət və policy əsasında giriş verir. Kubernetes-in daxili obyekt növü deyil; dinamik credential üçün uyğun secrets engine qurulmalıdır."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
+  },
+  {
+    "id": "vault-agent",
+    "term": {
+      "en": "Vault Agent",
+      "az": "Məxfi məlumatı tətbiqə çatdıran köməkçi agent"
+    },
+    "definition": {
+      "en": "A client agent that can authenticate to Vault and render permitted secrets into files for application use.",
+      "az": "Vault-a autentifikasiya olub icazəli məxfi məlumatı fayla yaza bilər. Fayl yenilənəndə tətbiq onu yenidən oxumalı və lazım olduqda bağlantılarını yeniləməlidir."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
+  },
+  {
+    "id": "service-account",
+    "term": {
+      "en": "ServiceAccount",
+      "az": "Kubernetes iş yükünün xidmət kimliyi"
+    },
+    "definition": {
+      "en": "A namespaced Kubernetes identity that a workload can use when authenticating to the API or configured external services.",
+      "az": "Pod-un API və uyğun xarici xidmətlərə autentifikasiyada istifadə etdiyi namespace-ə aid kimlikdir; Vault rolu bu kimliyi yoxlayıb policy təyin edə bilər."
+    },
+    "relatedLessonId": "docker-kubernetes-masterclass"
   }
 ]

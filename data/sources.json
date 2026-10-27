@@ -1030,5 +1030,53 @@
       "en": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation.",
       "az": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation."
     }
+  },
+  {
+    "id": "kubernetes-core-objects",
+    "title": "Kubernetes Docs — Pods, ReplicaSets, labels and namespaces",
+    "url": "https://kubernetes.io/docs/concepts/workloads/pods/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-27",
+    "notes": {
+      "en": "Read the official Kubernetes website repository: content/en/docs/concepts/workloads/pods/_index.md, workloads/controllers/replicaset.md, overview/working-with-objects/labels.md and namespaces.md on 2026-10-27 via raw.githubusercontent.com/kubernetes/website/main/. Reviewed shared Pod resources, ownership, controller selectors and namespace scope.",
+      "az": "Read the official Kubernetes website repository: content/en/docs/concepts/workloads/pods/_index.md, workloads/controllers/replicaset.md, overview/working-with-objects/labels.md and namespaces.md on 2026-10-27 via raw.githubusercontent.com/kubernetes/website/main/. Reviewed shared Pod resources, ownership, controller selectors and namespace scope."
+    }
+  },
+  {
+    "id": "kubernetes-configmaps",
+    "title": "Kubernetes Docs — ConfigMaps",
+    "url": "https://kubernetes.io/docs/concepts/configuration/configmap/",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-27",
+    "notes": {
+      "en": "Read official source content/en/docs/concepts/configuration/configmap.md at raw.githubusercontent.com/kubernetes/website/main/ on 2026-10-27. Reviewed non-confidential data, namespace references, environment snapshots, eventual volume updates and subPath exceptions.",
+      "az": "Read official source content/en/docs/concepts/configuration/configmap.md at raw.githubusercontent.com/kubernetes/website/main/ on 2026-10-27. Reviewed non-confidential data, namespace references, environment snapshots, eventual volume updates and subPath exceptions."
+    }
+  },
+  {
+    "id": "vault-kubernetes-auth",
+    "title": "HashiCorp Vault — Kubernetes auth method",
+    "url": "https://developer.hashicorp.com/vault/docs/auth/kubernetes",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-27",
+    "notes": {
+      "en": "Read official documentation source website/content/docs/auth/kubernetes.mdx at raw.githubusercontent.com/hashicorp/vault/v1.19.0/ on 2026-10-27. Reviewed ServiceAccount JWT authentication, TokenReview and role bindings. Versioned source used for durable concepts; no claim of verifying latest version defaults.",
+      "az": "Read official documentation source website/content/docs/auth/kubernetes.mdx at raw.githubusercontent.com/hashicorp/vault/v1.19.0/ on 2026-10-27. Reviewed ServiceAccount JWT authentication, TokenReview and role bindings. Versioned source used for durable concepts; no claim of verifying latest version defaults."
+    }
+  },
+  {
+    "id": "vault-agent-injector",
+    "title": "HashiCorp Vault — Vault Agent Injector",
+    "url": "https://developer.hashicorp.com/vault/docs/platform/k8s/injector",
+    "kind": "guide",
+    "status": "read",
+    "checkedAt": "2026-10-27",
+    "notes": {
+      "en": "Read official documentation source website/content/docs/platform/k8s/injector/index.mdx at raw.githubusercontent.com/hashicorp/vault/v1.19.0/ on 2026-10-27. Reviewed admission injection, Pod template annotations, ServiceAccount roles, init/sidecar containers and shared memory files. Examples are illustrative, not executed against a cluster.",
+      "az": "Read official documentation source website/content/docs/platform/k8s/injector/index.mdx at raw.githubusercontent.com/hashicorp/vault/v1.19.0/ on 2026-10-27. Reviewed admission injection, Pod template annotations, ServiceAccount roles, init/sidecar containers and shared memory files. Examples are illustrative, not executed against a cluster."
+    }
   }
 ]

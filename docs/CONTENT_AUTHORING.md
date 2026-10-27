@@ -89,6 +89,8 @@ Do not copy BABOK prose, exam questions, paid course exercises, or diagrams you 
 
 The lesson renderer supplies `Diagram` and `ConceptStepper`; lesson authors do not need to add React imports.
 
+`KubernetesExplorer` is also available for the Docker and Kubernetes masterclass. It provides an image delivery walkthrough, a simplified ReplicaSet recovery and rolling-update simulation, Service label/namespace selection, and ConfigMap/Vault refresh experiments. Embed it as `<KubernetesExplorer />`; it does not access a real cluster. It uses the public site's English interface and respects reduced motion.
+
 ```mdx
 <Diagram
   chart={

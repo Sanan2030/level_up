@@ -1809,6 +1809,53 @@
     "placement": "library"
   },
   {
+    "id": "docker-kubernetes-masterclass",
+    "trackId": "ba",
+    "level": "mid",
+    "moduleId": "ba-devops-foundations",
+    "title": {
+      "en": "Docker & Kubernetes: from containers to Vault",
+      "az": "Docker və Kubernetes: konteynerdən Vault-a"
+    },
+    "summary": {
+      "en": "One visual, hands-on lesson covering Docker, Kubernetes architecture, Pods, Deployments, ReplicaSets, labels and selectors, namespaces, ConfigMaps and Vault. Explore animated delivery, self-healing, rolling updates and secret rotation.",
+      "az": "Docker, Kubernetes arxitekturası, Pod, Deployment, ReplicaSet, label və selector, namespace, ConfigMap və Vault-u vizuallar, animasiyalar və praktik nümunələrlə vahid dərsdə öyrən."
+    },
+    "minutes": 120,
+    "status": "published",
+    "topics": [
+      "devops",
+      "Docker",
+      "Kubernetes",
+      "K8s",
+      "container",
+      "Dockerfile",
+      "Pod",
+      "Deployment",
+      "ReplicaSet",
+      "label",
+      "selector",
+      "namespace",
+      "ConfigMap",
+      "Secret",
+      "Vault",
+      "Service",
+      "rolling update",
+      "self-healing"
+    ],
+    "prerequisites": [],
+    "sourceIds": [
+      "docker-build-practices",
+      "kubernetes-deployments",
+      "kubernetes-probes",
+      "kubernetes-core-objects",
+      "kubernetes-configmaps",
+      "vault-kubernetes-auth",
+      "vault-agent-injector"
+    ],
+    "placement": "library"
+  },
+  {
     "id": "devops-docker-containers",
     "trackId": "ba",
     "level": "mid",

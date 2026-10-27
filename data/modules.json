@@ -389,10 +389,11 @@
     },
     "lessonIds": [
       "devops-linux-git-networking",
+      "docker-kubernetes-masterclass",
       "devops-docker-containers",
       "devops-ci-cd-artifacts"
     ],
-    "estimatedMinutes": 210,
+    "estimatedMinutes": 330,
     "prerequisites": [],
     "placement": "library"
   },
