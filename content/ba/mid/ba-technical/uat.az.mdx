@@ -3,63 +3,87 @@ id: uat
 locale: az
 title: 'Test halları və UAT'
 objectives:
-  - 'Qəbul meyarlarını real biznes qəbul ssenarilərinə çevir.'
-  - 'Kredit limiti dəyişikliyi üçün uğurlu, mənfi və sərhəd halları olan UAT paketi hazırla.'
+  - 'Acceptance testing-i technical check və sign-off-dan ayır.'
+  - 'Biznes meyarından normal, boundary və exception case qur.'
+  - 'Result, unresolved issue və release authority-ni yaz.'
 ---
-
-> **Kurikulum planı — tam dərs hələ dərc edilməyib.** Bu səhifə planlaşdırılan öyrənmə fəaliyyətlərini təsvir edir. Planı oxumaq mövzunu mənimsəmək demək deyil.
 
 ## Öyrənmə məqsədləri
 
-- Qəbul meyarlarını real biznes qəbul ssenarilərinə çevir.
-- Kredit limiti dəyişikliyi üçün uğurlu, mənfi və sərhəd halları olan UAT paketi hazırla.
+- Acceptance testing-i technical check və sign-off-dan ayır.
+- Biznes meyarından normal, boundary və exception case qur.
+- Result, unresolved issue və release authority-ni yaz.
 
-## Niyə vacibdir
+## Bu mövzu niyə vacibdir
 
-Planlaşdırılan dərs **Test halları və UAT** mövzusunun komandaya nə vaxt kömək etdiyini konkret qərarla göstərəcək. Fərziyyələr və təsirlənən tərəflər aydın qeyd ediləcək.
+API unit test-dən keçir, amma işçilər gün sonunda refund-u reconcile edə bilmir. User Acceptance Testing həllin təmsilçi şəraitdə agreed business use-u dəstəkləməsini yoxlayır. Technical testing-i tamamlayır; sübutlar ayrı suallara cavab verir.
 
-## Əsas nəzəriyyə: dərs planı
+## Əsas anlayışlar
 
-1. Mövzunun əsas terminlərini müəyyən et.
-2. Qəbul meyarlarını real biznes qəbul ssenarilərinə çevir.
-3. Faydalı tətbiqi inandırıcı, amma yanlış istifadə ilə müqayisə et.
-4. Qərarı dəyişə biləcək sübutu müəyyən et.
+Business need və requirement version-a bağlı acceptance criteria-dan başla. Mənalı execution üçün user/nümayəndə, environment, data, access, business rule və dependency müəyyən et. Development team demo-su acceptance-a kömək edə bilər; user-in işi özü görməsinə avtomatik bərabər deyil.
 
-## İşlənmiş nümunə: dərs planı
+Test case precondition, data, action və expected observable result verir. Uyğun yerdə success, invalid input, boundary, authorization, exception və recovery daxil et. Expected result pass-ı inandırıcı izahdan ayıracaq qədər konkret olsun. Yaşıl status üçün sistemi gördükdən sonra expected result dəyişmə.
 
-Kredit limiti dəyişikliyi üçün uğurlu, mənfi və sərhəd halları olan UAT paketi hazırla. Tam nümunədə kontekst, məhdudiyyətlər, alternativlər, qərar və nəticənin yoxlanılması olacaq.
+Uyğun synthetic/approved data istifadə et. Kritik external dependency-ni keçən environment tam production journey-ni sübut etmir; limiti göstər, ayrıca sübut al. Yalnız admin happy path-i deyil, role permission və accessibility ehtiyacını yoxla.
 
-## Diaqram: dərs planı
+Actual result, evidence reference, defect və retest status saxla. Severity təsiri, priority nə vaxt hərəkəti göstərir; təşkilat öz scale-ını seçə bilər. Biznes nümayəndəsi ciddi issue tapa bilər, amma təkbaşına release authority-si olmaya bilər. Release qərarı open defect, risk acceptance, operational readiness və rollback/recovery limit-ini nəzərə almalıdır.
 
-Planlaşdırılan vizual: **Test halları və UAT** mövzusunda iştirakçılar, qərarlar və sübutların işarələnmiş görünüşü. Diaqramın mətn izahı da veriləcək.
+Acceptance criteria, verification, validation və approval ayrıdır. Test yazılmış criteria-nı ödəyib vacib need-in buraxıldığını göstərə bilər. Boşluğu eskalasiya et, controlled information-u agreed proseslə yenilə. İmzanı bütün behavior-un icra sübutu sayma.
 
-## İnteraktiv məşq: dərs planı
+## İşlənmiş nümunə
 
-Planlaşdırılan fəaliyyət: ssenari üçün addım seç, nəticəsini aç və yeni sübut gəldikdə seçimi yenilə. Klaviatura ilə işləyən alternativ olacaq.
+Refund UAT case settled 100 vahid payment və icazəli operator ilə başlayır. 40 vahid partial refund istə, provider outcome-u təsdiqlə; remaining refundable amount 60 olsun. Eyni operation identifier-i təkrarla, əlavə refund olmasın. Yeni 70 request stated policy-yə görə rədd edilsin.
 
-## Tipik səhvlər və yaxşı təcrübələr
+Timeout case görünən unresolved status və reconciliation path gözləyir. Environment həmişə mock success verirsə timeout davranışını sübut etmir. Limiti yaz, tam acceptance coverage iddiasından əvvəl missing path üçün controlled evidence təşkil et.
 
-- Şablonu və ya çərçivəni sübutla qarışdırma.
-- Addım tövsiyə etməzdən əvvəl konteksti və qərar sahibini göstər.
-- Sənəd və ya funksiya sayını deyil, nəticələri müqayisə et.
+## Vizual model
 
-## Praktik tapşırıq və nümunə həll planı
+<Diagram
+  chart={
+    'flowchart LR\n N[Business needs and criteria] --> P[People environment and data]\n P --> C[Cases and expected results]\n C --> E[Execution evidence]\n E --> I[Issues and retests]\n I --> D[Authorized acceptance decision]'
+  }
+/>
 
-**Tapşırıq:** Kredit limiti dəyişikliyi üçün uğurlu, mənfi və sərhəd halları olan UAT paketi hazırla.
+Hər sərhəddə qərarı və onu əsaslandıran sübutu izlə. Diaqram orijinal öyrənmə modelidir; formal notasiya validator-u deyil.
 
-**Nümunə həll planı:** problemi yaz, fərziyyələri sadala, seçimləri müqayisə et, addımı əsaslandır və növbəti yoxlanışı müəyyən et. Tam dərslə birlikdə işlənmiş cavab əlavə ediləcək.
+## Qərarı təhlil et
 
-## Mini-test: dərs planı
+<details>
+<summary>User demo-dan sonra screen-i approve edir. Bütün exception path-lər UAT-dan keçibmi?</summary>
 
-Tam dərsdə terminlər, ssenarinin tətbiqi və seçimlər üzrə orijinal suallar, düzgün və yanlış cavabların izahı olacaq. Bu planda dərs testi hələ dərc edilməyib.
+Xeyr. Müşahidə yalnız həmin şəraitdə göstərilən behavior-u dəstəkləyir. Planned case, actual execution və untested path-i tap. Stakeholder feedback-ini cavabdehi olan acceptance/release qərarından ayır.
 
-## Bir səhifəlik xülasə planı
+</details>
 
-Yekun yaddaş vərəqi mövzunun məqsədini, girişlərini, qərarlarını, çıxışlarını və baxış siyahısını ümumiləşdirəcək.
+## Tipik səhvlər
 
-## Əlavə oxu
+- Yalnız admin permission ilə test etmək.
+- Expected result kimi “düzgün işləyir” yazmaq.
+- Mock və çatışmayan integration-u gizlətmək.
+- Bütün open defect-i ya avtomatik blocker, ya avtomatik məqbul saymaq.
 
-- [Scrum Guide, rəsmi mənbə](https://scrumguides.org/scrum-guide.html)
-- [IIBA biznes analizi resursları](https://www.iiba.org/business-analysis-blogs/)
+## Praktik tapşırıq
 
-İstiqamətinə uyğun mənbədən istifadə et. Rəsmi sertifikasiya formatı və uyğunluq şərtləri ayrıca yoxlanmalıdır.
+Booking cancellation üçün üç UAT case yaz: uğurlu cancellation, unauthorized caller, unknown payment provider outcome. Hər biri üçün sübut və sahib göstər.
+
+## Nümunə həll
+
+<details>
+<summary>Nümunə həlli göstər</summary>
+
+Booking state, caller role və payment precondition müəyyən et. Success agreed final state/customer message verməlidir; unauthorized caller booking-i dəyişməməli, protected data almamalıdır. Unknown provider outcome reconciliation sahibi ilə açıq pending qalmalıdır. Request identifier, redacted response və resulting state saxla; unresolved risk-i səlahiyyətli qərarverən qiymətləndirsin.
+
+</details>
+
+## Bilik yoxlaması və yaddaş vərəqi
+
+Criterion + precondition + action + observable result + evidence + cavabdehi olan qərar. Technical pass, user observation və release approval ayrı qeyddir.
+
+<LessonCheck />
+
+## Mənbələr və əlavə oxu
+
+[BABOK Guide v3, IIBA (2015)](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/). Təqdim edilmiş kitabın seçilmiş bölmələri orijinal izah və ssenariləri dəstəkləyir; mənbə mətni və üzvlər üçün PDF yayılmır.
+
+- BABOK §10.1 Acceptance and Evaluation Criteria, §§7.2–7.3 verification/validation, chapter 8 solution evaluation.
+- [The Practical Test Pyramid, Ham Vocke](https://martinfowler.com/articles/practical-test-pyramid.html): automated test sübutunun tamamlayıcı səviyyələri.

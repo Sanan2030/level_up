@@ -442,7 +442,7 @@
         },
         "explanation": {
           "en": "Acceptance criteria make the intended behavior testable without prescribing every implementation detail.",
-          "az": "Qəbul meyarları bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
+          "az": "Acceptance criteria bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
         }
       },
       {
@@ -471,7 +471,7 @@
     "correct": ["a"],
     "explanation": {
       "en": "Acceptance criteria make the intended behavior testable without prescribing every implementation detail.",
-      "az": "Qəbul meyarları bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
+      "az": "Acceptance criteria bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
     },
     "lessonId": "stories-gherkin",
     "practiceOnly": true
@@ -703,11 +703,11 @@
         "id": "a",
         "text": {
           "en": "Test a low-cost prototype with representative users.",
-          "az": "Təmsilçi istifadəçilərlə az xərcli prototipi yoxlamaq."
+          "az": "Təmsilçi istifadəçilərlə az xərcli prototype-ı yoxlamaq."
         },
         "explanation": {
           "en": "A prototype helps test understanding and usability before expensive implementation.",
-          "az": "Prototip bahalı tətbiqdən əvvəl anlayışı və istifadə rahatlığını yoxlamağa kömək edir."
+          "az": "Prototype bahalı tətbiqdən əvvəl anlayışı və istifadə rahatlığını yoxlamağa kömək edir."
         }
       },
       {
@@ -736,7 +736,7 @@
     "correct": ["a"],
     "explanation": {
       "en": "A prototype helps test understanding and usability before expensive implementation.",
-      "az": "Prototip bahalı tətbiqdən əvvəl anlayışı və istifadə rahatlığını yoxlamağa kömək edir."
+      "az": "Prototype bahalı tətbiqdən əvvəl anlayışı və istifadə rahatlığını yoxlamağa kömək edir."
     },
     "lessonId": "wireframes",
     "practiceOnly": true
@@ -2738,7 +2738,7 @@
         "id": "a",
         "text": {
           "en": "A controlled prototype experiment with relevant users.",
-          "az": "Uyğun istifadəçilərlə nəzarətli prototip eksperimenti."
+          "az": "Uyğun istifadəçilərlə nəzarətli prototype eksperimenti."
         },
         "explanation": {
           "en": "Experiments can reveal information not available from existing opinions or documents.",

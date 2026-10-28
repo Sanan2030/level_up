@@ -1,10 +1,13 @@
 'use client';
+import { useUIText, useLocale } from '@/components/use-ui-text';
 
 import { useEffect, useRef, useState } from 'react';
 import fixture from '@/data/labs/sql-fixture.json';
 import { checkSqlResult, sqlExercises, type SqlResult } from '@/lib/labs/sql';
 
 export function SqlLab({ initialExercise = 'paid-revenue' }: { initialExercise?: string }) {
+  const t = useUIText();
+  const az = useLocale() === 'az';
   const initial = sqlExercises.find((item) => item.id === initialExercise) ?? sqlExercises[0];
   const [exerciseId, setExerciseId] = useState(initial.id);
   const exercise = sqlExercises.find((item) => item.id === exerciseId)!;
@@ -89,14 +92,15 @@ export function SqlLab({ initialExercise = 'paid-revenue' }: { initialExercise?:
   return (
     <section className="card lesson-lab stack" aria-labelledby="sql-lab-title">
       <div>
-        <h2 id="sql-lab-title">SQL lab</h2>
+        <h2 id="sql-lab-title">{t('SQL lab')}</h2>
         <p className="small muted">
-          SQLite runs in your browser on synthetic data. Each run starts with the same read-only
-          dataset. PostgreSQL syntax and plans can differ.
+          {t(
+            'SQLite runs in your browser on synthetic data. Each run starts with the same read-only dataset. PostgreSQL syntax and plans can differ.',
+          )}
         </p>
       </div>
       <label className="field-label" htmlFor="sql-exercise">
-        SQL exercise
+        {t('SQL exercise')}
       </label>
       <select
         id="sql-exercise"
@@ -107,13 +111,13 @@ export function SqlLab({ initialExercise = 'paid-revenue' }: { initialExercise?:
       >
         {sqlExercises.map((item) => (
           <option key={item.id} value={item.id}>
-            {item.title}
+            {t(item.title)}
           </option>
         ))}
       </select>
-      <p id="sql-task">{exercise.task}</p>
+      <p id="sql-task">{t(exercise.task)}</p>
       <details className="lab-dataset">
-        <summary>View tables and sample data</summary>
+        <summary>{t('View tables and sample data')}</summary>
         {fixture.tables.map((table) => (
           <div key={table.name} className="stack">
             <h3>{table.name}</h3>
@@ -124,7 +128,7 @@ export function SqlLab({ initialExercise = 'paid-revenue' }: { initialExercise?:
               className="lab-table-scroll"
               tabIndex={0}
               role="region"
-              aria-label={`${table.name} fixture rows`}
+              aria-label={az ? `${table.name}: nümunə sətirlər` : `${table.name} fixture rows`}
             >
               <table>
                 <thead>
@@ -151,7 +155,7 @@ export function SqlLab({ initialExercise = 'paid-revenue' }: { initialExercise?:
         ))}
       </details>
       <label className="field-label" htmlFor="sql-editor">
-        SQL query
+        {t('SQL query')}
       </label>
       <textarea
         id="sql-editor"
@@ -177,7 +181,7 @@ export function SqlLab({ initialExercise = 'paid-revenue' }: { initialExercise?:
           onClick={run}
           disabled={busy || !query.trim()}
         >
-          {busy ? 'Running SQL…' : 'Run SQL'}
+          {busy ? t('Running SQL…') : t('Run SQL')}
         </button>
         {busy && (
           <button
@@ -189,11 +193,11 @@ export function SqlLab({ initialExercise = 'paid-revenue' }: { initialExercise?:
               setError('Query cancelled.');
             }}
           >
-            Cancel query
+            {t('Cancel query')}
           </button>
         )}
         <button className="button button-secondary" type="button" onClick={() => reset()}>
-          Reset query
+          {t('Reset query')}
         </button>
         <button
           className="button button-secondary"
@@ -201,27 +205,33 @@ export function SqlLab({ initialExercise = 'paid-revenue' }: { initialExercise?:
           disabled={busy || !result}
           onClick={() => result && setFeedback(checkSqlResult(result, exercise))}
         >
-          Check SQL result
+          {t('Check SQL result')}
         </button>
       </div>
       <details>
-        <summary>Show SQL hint</summary>
-        <p>{exercise.hint}</p>
+        <summary>{t('Show SQL hint')}</summary>
+        <p>{t(exercise.hint)}</p>
       </details>
-      {busy && <p role="status">Running in an isolated SQL worker…</p>}
+      {busy && <p role="status">{t('Running in an isolated SQL worker…')}</p>}
       {error && (
         <p role="alert" className="notice">
-          {error}
+          {t(error)}
         </p>
       )}
       {result && (
         <div className="stack" aria-live="polite">
           <p role="status">
-            {result.rows.length} row(s){result.truncated ? ' · result truncated' : ''}
+            {result.rows.length} {az ? 'sətir' : 'row(s)'}
+            {result.truncated ? (az ? ' · nəticə kəsilib' : ' · result truncated') : ''}
           </p>
-          <div className="lab-table-scroll" tabIndex={0} role="region" aria-label="SQL results">
+          <div
+            className="lab-table-scroll"
+            tabIndex={0}
+            role="region"
+            aria-label={t('SQL results')}
+          >
             <table>
-              <caption className="sr-only">Query result</caption>
+              <caption className="sr-only">{t('Query result')}</caption>
               <thead>
                 <tr>
                   {result.columns.map((name, index) => (
@@ -248,7 +258,7 @@ export function SqlLab({ initialExercise = 'paid-revenue' }: { initialExercise?:
       )}
       {feedback && (
         <p role="status" className={feedback.correct ? 'notice lab-correct' : 'notice'}>
-          {feedback.message}
+          {t(feedback.message)}
         </p>
       )}
     </section>

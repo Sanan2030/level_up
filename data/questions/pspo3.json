@@ -12,7 +12,7 @@
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "Buraxılmış funksiyaları satıcılar üçün nəticələrdən ayırın. Məhsuldan ayrılan satıcılarla danışın, saxlanmanı kohortlar üzrə ölçün və üzləşdirmə əməyinin çoxluğu kimi yoxlanıla bilən səbəb seçin. Kiçik müdaxiləni prioritetləşdirin, gözlənilən dəyişikliyi və müşahidə müddətini yazın, genişləndirmədən əvvəl nəticə və mümkün zərəri yoxlayın.",
+      "az": "Buraxılmış funksiyaları satıcılar üçün nəticələrdən ayırın. Məhsuldan ayrılan satıcılarla danışın, saxlanmanı cohort-lar üzrə ölçün və üzləşdirmə əməyinin çoxluğu kimi yoxlanıla bilən səbəb seçin. Kiçik müdaxiləni prioritetləşdirin, gözlənilən dəyişikliyi və müşahidə müddətini yazın, genişləndirmədən əvvəl nəticə və mümkün zərəri yoxlayın.",
       "en": "Separate delivery output from merchant outcomes. Interview merchants who leave, segment retention by cohort, and identify a testable cause such as reconciliation effort. Reorder work around a small intervention, state the expected retention change and observation window, and inspect both results and possible harm before expanding it."
     },
     "lessonId": "pspo3-written-case",
@@ -23,7 +23,7 @@
         "en": "Distinguishes output from customer value"
       },
       {
-        "az": "Kohort sübutundan və yoxlanıla bilən fərziyyədən istifadə edir",
+        "az": "Cohort sübutundan və yoxlanıla bilən fərziyyədən istifadə edir",
         "en": "Uses cohort evidence and a testable hypothesis"
       },
       {
@@ -45,7 +45,7 @@
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "Müştəri təsirini, kommersiya riskini, zəhməti və Məhsul məqsədi ilə əlaqəni görünən edin. Seçimləri maraqlı tərəfin vəzifəsinə görə deyil, ortaq fərziyyələrə görə müqayisə edin, daha kiçik ixrac həllini araşdırın və texniki mümkünlüyə Tərtibatçıları cəlb edin. Məhsul sahibi sıralama qərarını verir, güzəşti və qeyri-müəyyənliyi izah edir, hansı yeni sübutun qərarı dəyişəcəyini göstərir.",
+      "az": "Müştəri təsirini, kommersiya riskini, zəhməti və Məhsul məqsədi ilə əlaqəni görünən edin. Seçimləri maraqlı tərəfin vəzifəsinə görə deyil, ortaq fərziyyələrə görə müqayisə edin, daha kiçik ixrac həllini araşdırın və texniki mümkünlüyə Developers-i cəlb edin. Məhsul sahibi sıralama qərarını verir, güzəşti və qeyri-müəyyənliyi izah edir, hansı yeni sübutun qərarı dəyişəcəyini göstərir.",
       "en": "Make the customer impact, commercial exposure, risks, effort, and relationship to the Product Goal visible. Compare options using common assumptions rather than stakeholder rank, explore a smaller export solution, and involve Developers in feasibility. The Product Owner decides the ordering, explains the trade-off and uncertainty, and specifies which new evidence would change it."
     },
     "lessonId": "pspo3-written-case",
@@ -56,7 +56,7 @@
         "en": "Compares impact with explicit assumptions"
       },
       {
-        "az": "Sıralama məsuliyyətini ötürmədən Tərtibatçıları cəlb edir",
+        "az": "Sıralama məsuliyyətini ötürmədən Developers-i cəlb edir",
         "en": "Includes Developers without transferring ordering accountability"
       },
       {
@@ -111,7 +111,7 @@
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "Məhsul üzrə ortaq Məhsul məqsədini və vahid sıralanmış Məhsul iş siyahısını şəffaf edin; dəyərə görə bir Məhsul sahibi cavabdeh olsun. Komandalar inteqrasiya olunmuş, istifadəyə yararlı İnkrement yaradan qarşılıqlı razılaşdırılmış Tamamlanma tərifinə ehtiyac duyur. Sadəcə üç hesabat siyahısını uyğunlaşdırmaq əvəzinə texniki əməkdaşlığı və asılılıqların azaldılmasını dəstəkləyin.",
+      "az": "Məhsul üzrə ortaq Məhsul məqsədini və vahid sıralanmış Məhsul iş siyahısını şəffaf edin; dəyərə görə bir Məhsul sahibi cavabdeh olsun. Komandalar inteqrasiya olunmuş, istifadəyə yararlı Increment yaradan qarşılıqlı razılaşdırılmış Tamamlanma tərifinə ehtiyac duyur. Sadəcə üç hesabat siyahısını uyğunlaşdırmaq əvəzinə texniki əməkdaşlığı və asılılıqların azaldılmasını dəstəkləyin.",
       "en": "Create transparency around a shared Product Goal and a single ordered Product Backlog for the product, with one Product Owner accountable for value. The teams need a mutually agreed Definition of Done that enables an integrated, usable Increment. Facilitate technical collaboration and dependency reduction rather than merely synchronizing three reporting lists."
     },
     "lessonId": "pspo3-complexity",
@@ -270,13 +270,13 @@
     "domain": "scrum-application",
     "difficulty": 3,
     "text": {
-      "az": "Sprintin ortasında maraqlı tərəf yeni imkan istəyir. Tərtibatçılar bunun Sprint məqsədini təhlükəyə atacağını düşünür. Sprintin nə vaxt ləğv oluna biləcəyini də daxil edərək cavabınızı izah edin.",
+      "az": "Sprintin ortasında maraqlı tərəf yeni imkan istəyir. Developers bunun Sprint məqsədini təhlükəyə atacağını düşünür. Sprintin nə vaxt ləğv oluna biləcəyini də daxil edərək cavabınızı izah edin.",
       "en": "Mid-Sprint, a stakeholder requests a new capability. Developers believe it would endanger the Sprint Goal. Explain your response, including when a Sprint might be cancelled."
     },
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "Sprint məqsədini qoruyaraq təcililiyi və alternativləri Tərtibatçılarla müzakirə edin; öyrənmə zamanı işin həcmi dəqiqləşdirilə və yenidən razılaşdırıla bilər. Vəzifə səlahiyyəti ilə iş əlavə etməyin və keyfiyyəti azaltmayın. Sprint məqsədi aktuallığını itiribsə Məhsul sahibi Sprinti ləğv edə bilər; əlavə tələb təkbaşına məqsədin köhnəldiyini göstərmir.",
+      "az": "Sprint məqsədini qoruyaraq təcililiyi və alternativləri Developersla müzakirə edin; öyrənmə zamanı işin həcmi dəqiqləşdirilə və yenidən razılaşdırıla bilər. Vəzifə səlahiyyəti ilə iş əlavə etməyin və keyfiyyəti azaltmayın. Sprint məqsədi aktuallığını itiribsə Məhsul sahibi Sprinti ləğv edə bilər; əlavə tələb təkbaşına məqsədin köhnəldiyini göstərmir.",
       "en": "Discuss urgency and alternatives with Developers while protecting the Sprint Goal; scope can be clarified and renegotiated as learning occurs. Do not insert work by authority or reduce quality. If the Sprint Goal has become obsolete, the Product Owner may cancel the Sprint; an additional request alone does not establish obsolescence."
     },
     "lessonId": "pspo3-complexity",
@@ -287,7 +287,7 @@
         "en": "Protects the Sprint Goal while negotiating scope"
       },
       {
-        "az": "Tərtibatçılara və keyfiyyətə hörmət edir",
+        "az": "Developersa və keyfiyyətə hörmət edir",
         "en": "Respects Developers and quality"
       },
       {
@@ -336,7 +336,7 @@
     "domain": "product-value",
     "difficulty": 3,
     "text": {
-      "az": "Tərtibatçılar yeni müştəri funksiyası əvəzinə yerləşdirmənin avtomatlaşdırılmasına investisiya təklif edir. Rəhbərlik daxili təkmilləşdirmələrin məhsul dəyəri yaratmadığını deyir. Təklifi necə qiymətləndirərdiniz?",
+      "az": "Developers yeni müştəri funksiyası əvəzinə yerləşdirmənin avtomatlaşdırılmasına investisiya təklif edir. Rəhbərlik daxili təkmilləşdirmələrin məhsul dəyəri yaratmadığını deyir. Təklifi necə qiymətləndirərdiniz?",
       "en": "Developers propose investing in deployment automation instead of another customer feature. Executives say internal improvements create no product value. How would you assess this proposal?"
     },
     "options": [],
@@ -441,7 +441,7 @@
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "Nəticəni, sıralamanı və məhdudiyyətləri dəqiqləşdirin, planın və texniki işin idarəsini Tərtibatçılara buraxın. Maneələri görünən edin və təkrarlanan əngəlləri aradan qaldırmaq üçün Scrum Master və təşkilatla işləyin. Özünüidarəni fərdi tapşırıq bölgüsü ilə əvəz etmək əvəzinə əməkdaşlıq və asılılıq nümunələrini araşdırın.",
+      "az": "Nəticəni, sıralamanı və məhdudiyyətləri dəqiqləşdirin, planın və texniki işin idarəsini Developersa buraxın. Maneələri görünən edin və təkrarlanan əngəlləri aradan qaldırmaq üçün Scrum Master və təşkilatla işləyin. Özünüidarəni fərdi tapşırıq bölgüsü ilə əvəz etmək əvəzinə əməkdaşlıq və asılılıq nümunələrini araşdırın.",
       "en": "Clarify the outcome, ordering, and constraints while leaving the Developers to manage their plan and technical work. Make blockers visible and work with the Scrum Master and the organization to remove recurring impediments. Inspect collaboration and dependency patterns instead of replacing self-management with individual task assignment."
     },
     "lessonId": "pspo3-complexity",
@@ -452,7 +452,7 @@
         "en": "Separates product direction from task management"
       },
       {
-        "az": "Tərtibatçıların özünüidarəsini qoruyur",
+        "az": "Developers-in özünüidarəsini qoruyur",
         "en": "Preserves Developers’ self-management"
       },
       {
@@ -606,7 +606,7 @@
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "İcmalı məhsul nəticəsini və dəyişən konteksti maraqlı tərəflərlə yoxlamaq üçün iş fürsəti kimi təqdim edin. Məhsul iş siyahısının növbəti uyğunlaşmalarını müzakirə etmək üçün istifadəyə yararlı İnkrementdən, müştəri sübutundan, bazar dəyişikliklərindən və açıq fərziyyələrdən istifadə edin. Maraqlı tərəfin təsdiqini İnkrementi Tamamlanmış edən mexanizm saymaq əvəzinə keyfiyyəti Tamamlanma tərifi ilə şəffaf edin.",
+      "az": "İcmalı məhsul nəticəsini və dəyişən konteksti maraqlı tərəflərlə yoxlamaq üçün iş fürsəti kimi təqdim edin. Məhsul iş siyahısının növbəti uyğunlaşmalarını müzakirə etmək üçün istifadəyə yararlı Increment-dən, müştəri sübutundan, bazar dəyişikliklərindən və açıq fərziyyələrdən istifadə edin. Maraqlı tərəfin təsdiqini İnkrementi Tamamlanmış edən mexanizm saymaq əvəzinə keyfiyyəti Tamamlanma tərifi ilə şəffaf edin.",
       "en": "Reframe the Review as a working opportunity to inspect the product outcome and changing context with stakeholders. Use the usable Increment, customer evidence, market changes, and unresolved assumptions to discuss next adaptations to the Product Backlog. Keep quality transparent through the Definition of Done rather than treating stakeholder approval as the mechanism that creates a Done Increment."
     },
     "lessonId": "pspo3-complexity",
@@ -699,13 +699,13 @@
     "domain": "stakeholder-leadership",
     "difficulty": 3,
     "text": {
-      "az": "İki rəhbər Məhsul sahibindən yan keçərək Tərtibatçılardan təcili iş istəyir. Tərtibatçılar imtina edə bilmir. Hansı dəyişiklikləri istəyərdiniz?",
+      "az": "İki rəhbər Məhsul sahibindən yan keçərək Developersdan təcili iş istəyir. Developers imtina edə bilmir. Hansı dəyişiklikləri istəyərdiniz?",
       "en": "Two executives repeatedly bypass the Product Owner and ask Developers for urgent work. Developers feel unable to refuse. What changes would you seek?"
     },
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "Tərtibatçıları günahlandırmadan məqsədlərə, axına və proqnozlaşdırmaya təsiri görünən edin. Həqiqi fövqəladə hallar üçün açıq yol daxil olmaqla rəhbərləri vahid Məhsul iş siyahısı üzrə şəffaf tələb qəbulu və qərar qaydasında razılaşdırın. Özünüidarəni və Məhsul sahibinin sıralama qərarlarını dəstəkləmək üçün Scrum Master və rəhbərliklə işləyin, yeni razılaşmaya əməl olunmasını yoxlayın.",
+      "az": "Developers-i günahlandırmadan məqsədlərə, axına və proqnozlaşdırmaya təsiri görünən edin. Həqiqi fövqəladə hallar üçün açıq yol daxil olmaqla rəhbərləri vahid Məhsul backlog üzrə şəffaf tələb qəbulu və qərar qaydasında razılaşdırın. Özünüidarəni və Məhsul sahibinin sıralama qərarlarını dəstəkləmək üçün Scrum Master və rəhbərliklə işləyin, yeni razılaşmaya əməl olunmasını yoxlayın.",
       "en": "Expose the impact on goals, flow, and predictability without blaming Developers. Align executives on transparent intake and decision-making around one Product Backlog, including an explicit path for genuine emergencies. Work with the Scrum Master and leadership to support self-management and the Product Owner’s ordering decisions, and inspect whether the new agreement is respected."
     },
     "lessonId": "pspo3-complexity",
@@ -765,13 +765,13 @@
     "domain": "scrum-application",
     "difficulty": 3,
     "text": {
-      "az": "Kəşfiyyat mütəxəssisi ayrıca kəşfiyyat iş siyahısı istəyir və hər ay hazır tələbləri Tərtibatçılara ötürəcəyini vəd edir. Faydalı ixtisaslaşmanı ötürmə fabriki yaratmadan necə qoruyardınız?",
+      "az": "Kəşfiyyat mütəxəssisi ayrıca kəşfiyyat backlog istəyir və hər ay hazır tələbləri Developersa ötürəcəyini vəd edir. Faydalı ixtisaslaşmanı ötürmə fabriki yaratmadan necə qoruyardınız?",
       "en": "A discovery specialist wants a separate discovery backlog and promises to hand completed requirements to Developers each month. Explain how you would preserve useful specialization without creating a handoff factory."
     },
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "Kəşfiyyat və çatdırılmanın eyni nəticəyə xidmət etməsi üçün ortaq Məhsul məqsədi və şəffaf Məhsul iş siyahısını qoruyun. Tərtibatçıları, mütəxəssisi və istifadəçiləri birlikdə öyrənməyə təşviq edin, qabaqcadan yığılan işi məhdudlaşdırın və müşahidələri tez geri qaytarın. İxtisaslaşmanı guya son tələblərlə məcburi mərhələ qapısı deyil, komandanın qabiliyyətinə töhfə kimi istifadə edin.",
+      "az": "Kəşfiyyat və çatdırılmanın eyni nəticəyə xidmət etməsi üçün ortaq Məhsul məqsədi və şəffaf Məhsul iş siyahısını qoruyun. Developers-i, mütəxəssisi və istifadəçiləri birlikdə öyrənməyə təşviq edin, qabaqcadan yığılan işi məhdudlaşdırın və müşahidələri tez geri qaytarın. İxtisaslaşmanı guya son tələblərlə məcburi mərhələ qapısı deyil, komandanın qabiliyyətinə töhfə kimi istifadə edin.",
       "en": "Keep a shared Product Goal and transparent Product Backlog so discovery and delivery serve the same outcome. Encourage Developers, the specialist, and users to learn together, limiting work ahead and feeding observations back quickly. Use specialization as a contribution to the team’s capability rather than a compulsory phase gate with supposedly final requirements."
     },
     "lessonId": "pspo3-written-case",
@@ -831,13 +831,13 @@
     "domain": "product-value",
     "difficulty": 3,
     "text": {
-      "az": "Komanda təhlükəsizlik yoxlamasını silməklə giriş çətinliyini azalda bilər. Konversiya yaxşılaşa bilər, amma dələduzluğa təsir qeyri-müəyyəndir. İşi necə sıralayar və qəbuledilən sübutu necə müəyyən edərdiniz?",
+      "az": "Komanda təhlükəsizlik yoxlamasını silməklə giriş çətinliyini azalda bilər. Conversion yaxşılaşa bilər, amma dələduzluğa təsir qeyri-müəyyəndir. İşi necə sıralayar və qəbuledilən sübutu necə müəyyən edərdiniz?",
       "en": "The team can reduce login friction by removing a security check. Conversion may improve, but the fraud impact is uncertain. How would you order the work and define acceptable evidence?"
     },
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "Məcburi nəzarətləri və çətinliyin real mənbəyini müəyyən etmək üçün təhlükəsizlik və risk mütəxəssislərini cəlb edin. Riskə əsaslanan yoxlamalar kimi daha təhlükəsiz alternativləri müqayisə edin, dələduzluq və giriş üzrə qoruyucu hədlər müəyyən edin və yalnız qəbuledilən risk daxilində sınayın. Konversiya artımını kifayət qədər dəyər sübutu saymaq əvəzinə seqmentlər üzrə xalis nəticələri qiymətləndirin.",
+      "az": "Məcburi nəzarətləri və çətinliyin real mənbəyini müəyyən etmək üçün təhlükəsizlik və risk mütəxəssislərini cəlb edin. Riskə əsaslanan yoxlamalar kimi daha təhlükəsiz alternativləri müqayisə edin, dələduzluq və giriş üzrə qoruyucu hədlər müəyyən edin və yalnız qəbuledilən risk daxilində sınayın. Conversion artımını kifayət qədər dəyər sübutu saymaq əvəzinə seqmentlər üzrə xalis nəticələri qiymətləndirin.",
       "en": "Engage security and risk specialists to identify non-negotiable controls and the actual source of friction. Compare safer alternatives such as risk-based challenges, define fraud and access guardrails, and test only within acceptable exposure. Evaluate net outcomes across segments rather than treating a conversion gain as sufficient evidence of value."
     },
     "lessonId": "pspo3-written-case",
@@ -936,7 +936,7 @@
     "options": [],
     "correct": [],
     "explanation": {
-      "az": "Ödənilməyən keyfiyyət meyarlarını görünən edin və natamam işi Tamamlanmış İnkrement kimi təqdim etməyin. Tamamlanma tərifini ödəmək üçün Tərtibatçılar və uyğun mütəxəssislərlə əməkdaşlıq edin, buraxılış riskini açıqlayın və məcburi keyfiyyəti azaltmaq əvəzinə həcmi və ya vaxtı razılaşdırın. Yoxlamaların niyə təxirə salındığını araşdırın və əlçatanlığın prosesə daxil olduğu iş axını qurun.",
+      "az": "Ödənilməyən keyfiyyət meyarlarını görünən edin və natamam işi Tamamlanmış Increment kimi təqdim etməyin. Tamamlanma tərifini ödəmək üçün Developers və uyğun mütəxəssislərlə əməkdaşlıq edin, buraxılış riskini açıqlayın və məcburi keyfiyyəti azaltmaq əvəzinə həcmi və ya vaxtı razılaşdırın. Yoxlamaların niyə təxirə salındığını araşdırın və əlçatanlığın prosesə daxil olduğu iş axını qurun.",
       "en": "Make the unmet quality criteria visible and do not describe incomplete work as a Done Increment. Collaborate with Developers and relevant specialists to meet the Definition of Done, expose the release risk, and negotiate scope or timing rather than lowering mandatory quality. Inspect why checks were deferred and improve the workflow so accessibility is integrated."
     },
     "lessonId": "pspo3-complexity",
@@ -1187,7 +1187,7 @@
     "difficulty": 3,
     "text": {
       "en": "Stakeholders want the Sprint Review to approve releases. A usable Done Increment is available earlier, but market feedback is slow. Explain how you would improve both the event and the feedback loop.",
-      "az": "Maraqlı tərəflər Sprint Review-u buraxılış təsdiqi üçün istifadə etmək istəyir. Done İnkrement daha tez hazırdır, amma bazar geribildirimi gecikir. Tədbiri və geribildirim dövrünü necə yaxşılaşdırardın?"
+      "az": "Maraqlı tərəflər Sprint Review-u buraxılış təsdiqi üçün istifadə etmək istəyir. Done Increment daha tez hazırdır, amma bazar geribildirimi gecikir. Tədbiri və geribildirim dövrünü necə yaxşılaşdırardın?"
     },
     "options": [],
     "correct": [],

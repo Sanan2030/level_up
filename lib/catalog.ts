@@ -6,6 +6,7 @@ import { moduleSchema, lessonSchema, competencySchema, localizedSchema } from '.
 import { z } from 'zod';
 import { getTrack } from './tracks';
 import type { Lesson, Locale } from './types';
+import { uiText } from './ui-text';
 export const modules = z.array(moduleSchema).parse(modulesData);
 export const lessons = z.array(lessonSchema).parse(lessonsData);
 export const learningModules = modules.filter((module) => module.placement !== 'library');
@@ -27,7 +28,10 @@ export function lessonCategory(lesson: Lesson, locale: Locale): string {
     'data-engineering': 'Data engineering',
     'cloud-security': 'Cloud & security',
   };
-  return lesson.topics.map((topic) => groups[topic]).find(Boolean) ?? 'Independent lessons';
+  return uiText(
+    lesson.topics.map((topic) => groups[topic]).find(Boolean) ?? 'Independent lessons',
+    locale,
+  );
 }
 export const competencies = z.array(competencySchema).parse(competenciesData);
 export const glossary = z

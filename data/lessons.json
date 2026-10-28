@@ -5,7 +5,7 @@
     "level": "junior",
     "moduleId": "ba-foundations",
     "title": {
-      "az": "Biznes analitikin töhfəsi",
+      "az": "Business Analyst-in töhfəsi",
       "en": "The business analyst’s contribution"
     },
     "summary": {
@@ -41,7 +41,7 @@
     "level": "junior",
     "moduleId": "ba-foundations",
     "title": {
-      "az": "Maraqlı tərəflərin xəritələnməsi",
+      "az": "Stakeholder mapping",
       "en": "Stakeholder mapping"
     },
     "summary": {
@@ -64,7 +64,7 @@
     },
     "summary": {
       "en": "Plan interviews, workshops and observation around a decision, then confirm findings without confusing confirmation with approval.",
-      "az": "Plan interviews, workshops and observation around a decision, then confirm findings without confusing confirmation with approval."
+      "az": "Müsahibə, workshop və müşahidəni veriləcək qərara uyğun planlaşdır; nəticələrin düzgün başa düşülməsini təsdiqləməyi rəsmi approval ilə qarışdırma."
     },
     "minutes": 60,
     "status": "published",
@@ -78,7 +78,7 @@
     "level": "junior",
     "moduleId": "ba-requirements",
     "title": {
-      "az": "Biznes, maraqlı tərəf və həll tələbləri",
+      "az": "Business, stakeholder və solution requirements",
       "en": "Business, stakeholder and solution requirements"
     },
     "summary": {
@@ -96,7 +96,7 @@
     "level": "junior",
     "moduleId": "ba-requirements",
     "title": {
-      "az": "İstifadəçi hekayələri və qəbul meyarları",
+      "az": "User story-lər və acceptance criteria",
       "en": "User stories and acceptance criteria"
     },
     "summary": {
@@ -114,7 +114,7 @@
     "level": "junior",
     "moduleId": "ba-requirements",
     "title": {
-      "az": "İstifadə halları və istisna axınları",
+      "az": "Use case-lər və exception flow-lar",
       "en": "Use cases and exception flows"
     },
     "summary": {
@@ -137,7 +137,7 @@
     },
     "summary": {
       "en": "Use BRD, FRD and SRS as audience-specific views of controlled requirements, without duplicating conflicting sources of truth.",
-      "az": "Use BRD, FRD and SRS as audience-specific views of controlled requirements, without duplicating conflicting sources of truth."
+      "az": "BRD, FRD və SRS-i nəzarət olunan tələblərin müxtəlif auditoriyalar üçün görünüşləri kimi istifadə et; bir-birinə zidd əsas mənbələr yaratma."
     },
     "minutes": 60,
     "status": "published",
@@ -156,7 +156,7 @@
     },
     "summary": {
       "en": "Model process boundaries, responsibilities, decisions and exceptions while keeping sequence flow distinct from cross-participant messages.",
-      "az": "Model process boundaries, responsibilities, decisions and exceptions while keeping sequence flow distinct from cross-participant messages."
+      "az": "Sequence flow ilə iştirakçılararası message flow-u ayıraraq proses sərhədlərini, məsuliyyətləri, qərarları və istisnaları modelləşdir."
     },
     "minutes": 60,
     "status": "published",
@@ -175,7 +175,7 @@
     },
     "summary": {
       "en": "Choose use-case, sequence, class or state views according to the question, and keep their responsibilities consistent.",
-      "az": "Choose use-case, sequence, class or state views according to the question, and keep their responsibilities consistent."
+      "az": "Suala uyğun use case, sequence, class və ya state görünüşünü seç və onların vəzifələrini bir-birinə uyğun saxla."
     },
     "minutes": 60,
     "status": "published",
@@ -189,7 +189,7 @@
     "level": "junior",
     "moduleId": "ba-visuals",
     "title": {
-      "az": "Vayrfreym və yoxlanıla bilən prototiplər",
+      "az": "Wireframe və yoxlanıla bilən prototype-lar",
       "en": "Wireframing and testable prototypes"
     },
     "summary": {
@@ -230,7 +230,7 @@
     },
     "summary": {
       "en": "Link business needs, requirements, designs, tests and delivered changes so an impact assessment follows evidence rather than guesses.",
-      "az": "Link business needs, requirements, designs, tests and delivered changes so an impact assessment follows evidence rather than guesses."
+      "az": "Biznes ehtiyacını, requirement, design, test və çatdırılmış dəyişikliyi əlaqələndir ki, impact assessment təxminə deyil, sübuta əsaslansın."
     },
     "minutes": 60,
     "status": "published",
@@ -249,7 +249,7 @@
     },
     "summary": {
       "en": "Assess changes against the baseline, dependencies, value and authority while distinguishing adaptive planning from uncontrolled commitments.",
-      "az": "Assess changes against the baseline, dependencies, value and authority while distinguishing adaptive planning from uncontrolled commitments."
+      "az": "Dəyişikliyi baseline, asılılıq, dəyər və qərar səlahiyyətinə görə qiymətləndir; adaptiv planlaşdırmanı nəzarətsiz öhdəlikdən ayır."
     },
     "minutes": 60,
     "status": "published",
@@ -304,7 +304,7 @@
     },
     "summary": {
       "en": "Use SELECT, joins, grouping and null handling to answer business questions without multiplying revenue or excluding non-buyers.",
-      "az": "Use SELECT, joins, grouping and null handling to answer business questions without multiplying revenue or excluding non-buyers."
+      "az": "Gəliri çoxaltmadan və alış etməyənləri nəticədən çıxarmadan SELECT, join, grouping və NULL qaydaları ilə biznes suallarına cavab ver."
     },
     "minutes": 70,
     "status": "published",
@@ -324,7 +324,7 @@
     },
     "summary": {
       "en": "Design resource operations, distinguish safe and idempotent requests, and specify observable success and failure behavior.",
-      "az": "Design resource operations, distinguish safe and idempotent requests, and specify observable success and failure behavior."
+      "az": "Resource əməliyyatlarını layihələndir, safe və idempotent request-ləri fərqləndir, uğur və xəta davranışını müşahidə edilən şəkildə müəyyənləşdir."
     },
     "minutes": 60,
     "status": "published",
@@ -354,7 +354,7 @@
     },
     "summary": {
       "en": "Reason through lost events, duplicate deliveries, webhook verification and the boundary between acceptance and business completion.",
-      "az": "Reason through lost events, duplicate deliveries, webhook verification and the boundary between acceptance and business completion."
+      "az": "İtən event, təkrar delivery, webhook verification və request-in qəbulu ilə biznes əməliyyatının tamamlanması arasındakı sərhədi təhlil et."
     },
     "minutes": 70,
     "status": "published",
@@ -382,7 +382,7 @@
     },
     "summary": {
       "en": "Plan user acceptance testing around business outcomes, representative data, explicit criteria and accountable release decisions.",
-      "az": "Plan user acceptance testing around business outcomes, representative data, explicit criteria and accountable release decisions."
+      "az": "User acceptance testing-i biznes nəticələri, təmsilçi məlumatlar, aydın meyarlar və səlahiyyəti müəyyən edilmiş release qərarları ətrafında planlaşdır."
     },
     "minutes": 60,
     "status": "published",
@@ -540,7 +540,7 @@
     "level": "junior",
     "moduleId": "po-foundations",
     "title": {
-      "az": "Məhsul vizyonundan Məhsul Məqsədinə",
+      "az": "Məhsul vizyonundan Product Goal-a",
       "en": "From product vision to Product Goal"
     },
     "summary": {
@@ -562,7 +562,7 @@
       "en": "Scrum as an empirical framework"
     },
     "summary": {
-      "az": "Şəffaflıq, yoxlama və uyğunlaşmanı məsuliyyət, tədbir və artefaktlarla əlaqələndir.",
+      "az": "Transparency, inspection və adaptation-u accountability, event və artifact-larla əlaqələndir.",
       "en": "Relate transparency, inspection and adaptation to accountabilities, events and artifacts."
     },
     "minutes": 35,
@@ -576,11 +576,11 @@
     "level": "junior",
     "moduleId": "po-foundations",
     "title": {
-      "az": "Məhsul İş Siyahısına sahiblik və dəqiqləşdirmə",
+      "az": "Product Backlog-a sahiblik və dəqiqləşdirmə",
       "en": "Product Backlog ownership and refinement"
     },
     "summary": {
-      "az": "İşi Məhsul Məqsədinə uyğun sırala və əməkdaşlıqla dəqiqləşdir.",
+      "az": "İşi Product Goal-a uyğun sırala və əməkdaşlıqla dəqiqləşdir.",
       "en": "Order work toward a Product Goal and refine it collaboratively."
     },
     "minutes": 35,
@@ -594,7 +594,7 @@
     "level": "junior",
     "moduleId": "po-foundations",
     "title": {
-      "az": "Faydalı Məhsul İş Siyahısı elementləri",
+      "az": "Faydalı Product Backlog elementləri",
       "en": "Useful Product Backlog Items"
     },
     "summary": {
@@ -617,7 +617,7 @@
     },
     "summary": {
       "en": "Investigate the progress a customer sought in a real situation, including alternatives, anxieties and the events behind a switch.",
-      "az": "Investigate the progress a customer sought in a real situation, including alternatives, anxieties and the events behind a switch."
+      "az": "Müştərinin real vəziyyətdə hansı irəliləyişi istədiyini, alternativləri, narahatlıqları və başqa həllə keçidin səbəblərini araşdır."
     },
     "minutes": 60,
     "status": "published",
@@ -631,11 +631,11 @@
     "level": "junior",
     "moduleId": "po-discovery",
     "title": {
-      "az": "Sübuta əsaslanan personalar",
+      "az": "Sübuta əsaslanan persona-lar",
       "en": "Evidence-based personas"
     },
     "summary": {
-      "az": "Stereotipləri araşdırma ilə əvəz etmədən əhəmiyyətli davranış nümunələrini ümumiləşdir.",
+      "az": "Araşdırmanı stereotiplərlə əvəz etmədən əhəmiyyətli davranış nümunələrini ümumiləşdir.",
       "en": "Summarize meaningful behavior patterns without substituting stereotypes for research."
     },
     "minutes": 35,
@@ -654,7 +654,7 @@
     },
     "summary": {
       "en": "Organize a user journey into activities and tasks, then choose a small end-to-end release slice with visible assumptions.",
-      "az": "Organize a user journey into activities and tasks, then choose a small end-to-end release slice with visible assumptions."
+      "az": "User journey-ni fəaliyyət və tapşırıqlara ayır; fərziyyələri açıq saxlayaraq kiçik, başdan sona işləyən release hissəsi seç."
     },
     "minutes": 60,
     "status": "published",
@@ -673,7 +673,7 @@
     },
     "summary": {
       "en": "Connect a product goal to a target situation, value hypothesis, strategic choices and measurable learning rather than a fixed feature calendar.",
-      "az": "Connect a product goal to a target situation, value hypothesis, strategic choices and measurable learning rather than a fixed feature calendar."
+      "az": "Product Goal-u hədəf vəziyyət, dəyər fərziyyəsi, strateji seçim və ölçülə bilən öyrənmə ilə bağla; onu sabit feature təqviminə çevirmə."
     },
     "minutes": 60,
     "status": "published",
@@ -692,7 +692,7 @@
     },
     "summary": {
       "en": "Write outcome-oriented objectives and measurable key results with baselines, guardrails and explicit ownership.",
-      "az": "Write outcome-oriented objectives and measurable key results with baselines, guardrails and explicit ownership."
+      "az": "Başlanğıc ölçüləri, qoruyucu hədləri və cavabdeh şəxsləri göstərərək nəticəyə yönələn Objective və ölçülə bilən Key Result yaz."
     },
     "minutes": 60,
     "status": "published",
@@ -706,7 +706,7 @@
     "level": "mid",
     "moduleId": "po-strategy",
     "title": {
-      "az": "AARRR, HEART və Əsas İstiqamət göstəriciləri",
+      "az": "AARRR, HEART və North Star metric-ləri",
       "en": "AARRR, HEART and North Star metrics"
     },
     "summary": {
@@ -724,11 +724,11 @@
     "level": "mid",
     "moduleId": "po-strategy",
     "title": {
-      "az": "Sübuta əsaslanan idarəetmə",
+      "az": "Evidence-Based Management",
       "en": "Evidence-Based Management"
     },
     "summary": {
-      "az": "Cari dəyəri, reallaşmamış dəyəri, bazara çıxma vaxtını və innovasiya qabiliyyətini yoxla.",
+      "az": "Current Value, Unrealized Value, Time-to-Market və Ability to Innovate sahələrini yoxla.",
       "en": "Inspect current value, unrealized value, time to market and ability to innovate."
     },
     "minutes": 35,
@@ -778,7 +778,7 @@
     "level": "mid",
     "moduleId": "po-delivery",
     "title": {
-      "az": "Tərtibatçılar və Scrum Master ilə iş",
+      "az": "Developers və Scrum Master ilə iş",
       "en": "Working with Developers and Scrum Master"
     },
     "summary": {
@@ -801,7 +801,7 @@
     },
     "summary": {
       "en": "Test pricing and go-to-market assumptions through customer situations, unit economics, channels and measurable launch evidence.",
-      "az": "Test pricing and go-to-market assumptions through customer situations, unit economics, channels and measurable launch evidence."
+      "az": "Pricing və go-to-market fərziyyələrini müştəri vəziyyətləri, unit economics, kanallar və ölçülə bilən launch sübutları ilə sına."
     },
     "minutes": 60,
     "status": "published",
@@ -1058,11 +1058,11 @@
     "level": "junior",
     "moduleId": "pspo1-preparation",
     "title": {
-      "az": "Scrum məsuliyyətləri praktikada",
+      "az": "Scrum accountability-ləri praktikada",
       "en": "Scrum accountabilities in practice"
     },
     "summary": {
-      "az": "Məhsul Sahibi, Scrum Master və Tərtibatçıları qərarlar və əməkdaşlıqla fərqləndir.",
+      "az": "Product Owner, Scrum Master və Developers-i qərarlar və əməkdaşlıqla fərqləndir.",
       "en": "Distinguish Product Owner, Scrum Master and Developers through decisions and collaboration."
     },
     "minutes": 20,
@@ -1077,7 +1077,7 @@
     "level": "junior",
     "moduleId": "pspo1-preparation",
     "title": {
-      "az": "Tədbirlər geribildirim fürsəti kimi",
+      "az": "Scrum event-ləri: inspection və adaptation",
       "en": "Events as feedback opportunities"
     },
     "summary": {
@@ -1096,11 +1096,11 @@
     "level": "junior",
     "moduleId": "pspo1-preparation",
     "title": {
-      "az": "Artefaktlar və onların öhdəlikləri",
+      "az": "Scrum artifact-ları və commitment-ləri",
       "en": "Artifacts and their commitments"
     },
     "summary": {
-      "az": "Məhsul İş Siyahısını, Sprint İş Siyahısını və İnkrementi ortaq öhdəliklərlə əlaqələndir.",
+      "az": "Product Backlog-u, Sprint Backlog-u və İnkrementi ortaq öhdəliklərlə əlaqələndir.",
       "en": "Relate the Product Backlog, Sprint Backlog and Increment to shared commitments."
     },
     "minutes": 20,
@@ -1267,7 +1267,7 @@
     "level": "junior",
     "moduleId": "pspo1-preparation",
     "title": {
-      "az": "Empirizm, dəyərlər və özünüidarəetmə",
+      "az": "Empiricism, dəyərlər və özünüidarəetmə",
       "en": "Empiricism, values and self-management"
     },
     "summary": {
@@ -1336,7 +1336,7 @@
       "en": "Shared quality and technical risk"
     },
     "summary": {
-      "az": "Bir neçə komandanın işini istifadə edilə bilən İnkrementə bağla və keyfiyyət sərhədini qoru.",
+      "az": "Bir neçə komandanın işini istifadə edilə bilən Increment-ə bağla və keyfiyyət sərhədini qoru.",
       "en": "Connect multiple teams’ work to a usable Increment and protect shared quality boundaries."
     },
     "minutes": 25,
@@ -1394,7 +1394,7 @@
     },
     "summary": {
       "en": "Trace token lifecycles, detect refresh-token reuse and distinguish session logout from immediate access-token revocation.",
-      "az": "Trace token lifecycles, detect refresh-token reuse and distinguish session logout from immediate access-token revocation."
+      "az": "Token lifecycle-ını izlə, refresh token-in təkrar istifadəsini aşkarlayıb session logout-u access token-in dərhal ləğvindən ayır."
     },
     "minutes": 75,
     "status": "published",
@@ -1423,7 +1423,7 @@
     },
     "summary": {
       "en": "Build and inspect a code flow, distinguish authorization from identity, and prevent redirect, replay and token-confusion mistakes.",
-      "az": "Build and inspect a code flow, distinguish authorization from identity, and prevent redirect, replay and token-confusion mistakes."
+      "az": "Authorization code flow qur və yoxla; authorization-u identity-dən ayır, redirect, replay və token confusion xətalarının qarşısını al."
     },
     "minutes": 75,
     "status": "published",
@@ -1453,7 +1453,7 @@
     },
     "summary": {
       "en": "Separate decoding from verification, bind keys to a trusted issuer, and enforce tenant and object permissions after validating a token.",
-      "az": "Separate decoding from verification, bind keys to a trusted issuer, and enforce tenant and object permissions after validating a token."
+      "az": "Decoding-i verification-dan ayır, key-ləri etibarlı issuer-ə bağla və token yoxlandıqdan sonra tenant və object icazələrini tətbiq et."
     },
     "minutes": 75,
     "status": "published",
@@ -1489,7 +1489,7 @@
     },
     "summary": {
       "en": "Choose a browser authentication boundary and reason precisely about cookie protection, cross-origin requests and forged state changes.",
-      "az": "Choose a browser authentication boundary and reason precisely about cookie protection, cross-origin requests and forged state changes."
+      "az": "Brauzer authentication sərhədini seç; cookie qorunmasını, cross-origin request-ləri və saxtalaşdırılmış state dəyişikliyini dəqiq təhlil et."
     },
     "minutes": 70,
     "status": "published",
@@ -1519,7 +1519,7 @@
     },
     "summary": {
       "en": "Prevent duplicate operations and stale writes with scoped deduplication, atomic transactions and conditional updates.",
-      "az": "Prevent duplicate operations and stale writes with scoped deduplication, atomic transactions and conditional updates."
+      "az": "Scope-u müəyyən edilmiş deduplication, atomik transaction və conditional update ilə təkrar əməliyyatı və köhnə məlumat əsasında yazmanı önlə."
     },
     "minutes": 80,
     "status": "published",
@@ -1548,7 +1548,7 @@
     },
     "summary": {
       "en": "Review schemas and security requirements, design stable pagination, and assess changes from the perspective of real API consumers.",
-      "az": "Review schemas and security requirements, design stable pagination, and assess changes from the perspective of real API consumers."
+      "az": "Schema və security tələblərini nəzərdən keçir, sabit pagination qur və dəyişiklikləri real API consumer-lərinin baxışından qiymətləndir."
     },
     "minutes": 70,
     "status": "published",
@@ -1576,7 +1576,7 @@
     },
     "summary": {
       "en": "Choose service boundaries from consistency and ownership needs, and reason about distributed workflows without pretending compensation is rollback.",
-      "az": "Choose service boundaries from consistency and ownership needs, and reason about distributed workflows without pretending compensation is rollback."
+      "az": "Service sərhədlərini consistency və ownership ehtiyaclarına görə seç; compensation-u rollback saymadan distributed workflow-ları təhlil et."
     },
     "minutes": 85,
     "status": "published",
@@ -1610,7 +1610,7 @@
     },
     "summary": {
       "en": "Design bounded failure recovery, avoid retry storms and use latency, error and business-state evidence to diagnose distributed APIs.",
-      "az": "Design bounded failure recovery, avoid retry storms and use latency, error and business-state evidence to diagnose distributed APIs."
+      "az": "Məhdud failure recovery qur, retry storm-dan qaç; distributed API diaqnostikası üçün latency, xəta və biznes state göstəricilərindən istifadə et."
     },
     "minutes": 75,
     "status": "published",
@@ -1646,7 +1646,7 @@
     },
     "summary": {
       "en": "Run a tested coding lab that rejects mass assignment and cross-tenant access, deduplicates creation and rejects stale updates.",
-      "az": "Run a tested coding lab that rejects mass assignment and cross-tenant access, deduplicates creation and rejects stale updates."
+      "az": "Mass assignment və cross-tenant girişi rədd edən, yaratmanı deduplicate edən və köhnə update-i dayandıran sınaqdan keçirilmiş kod laboratoriyasını işlət."
     },
     "minutes": 90,
     "status": "published",
@@ -1685,7 +1685,7 @@
     },
     "summary": {
       "en": "Reason through urgent changes, obsolete goals, scope negotiation and usable Increments without inventing approval gates.",
-      "az": "Reason through urgent changes, obsolete goals, scope negotiation and usable Increments without inventing approval gates."
+      "az": "Uydurma approval mərhələləri yaratmadan təcili dəyişiklikləri, köhnəlmiş Sprint Goal-u, scope danışıqlarını və istifadə edilə bilən Increment-i təhlil et."
     },
     "minutes": 60,
     "status": "published",
@@ -1711,7 +1711,7 @@
     },
     "summary": {
       "en": "Turn a product decision into a falsifiable hypothesis, inspect segment-level outcomes and avoid claiming causation from weak comparisons.",
-      "az": "Turn a product decision into a falsifiable hypothesis, inspect segment-level outcomes and avoid claiming causation from weak comparisons."
+      "az": "Məhsul qərarını yanlışlığı yoxlanıla bilən fərziyyəyə çevir; segment nəticələrini araşdır və zəif müqayisədən səbəb-nəticə hökmü çıxarma."
     },
     "minutes": 75,
     "status": "published",
@@ -1739,7 +1739,7 @@
     },
     "summary": {
       "en": "Separate deployment, exposure and customer outcomes while making quality, flag debt and rollback evidence visible.",
-      "az": "Separate deployment, exposure and customer outcomes while making quality, flag debt and rollback evidence visible."
+      "az": "Deployment, exposure və müştəri nəticəsini ayır; keyfiyyəti, feature flag borcunu və rollback sübutlarını görünən et."
     },
     "minutes": 70,
     "status": "published",
@@ -1767,7 +1767,7 @@
     },
     "summary": {
       "en": "Connect internal-platform work to user outcomes, product boundaries and transparent technical-risk trade-offs without prescribing implementation.",
-      "az": "Connect internal-platform work to user outcomes, product boundaries and transparent technical-risk trade-offs without prescribing implementation."
+      "az": "Texniki implementasiyanı diktə etmədən daxili platforma işini istifadəçi nəticələri, məhsul sərhədləri və açıq texniki risk seçimləri ilə əlaqələndir."
     },
     "minutes": 75,
     "status": "published",
@@ -1799,7 +1799,7 @@
     },
     "summary": {
       "en": "Trace a running service from a commit through a process, port, DNS and HTTP response without guessing from one symptom.",
-      "az": "Trace a running service from a commit through a process, port, DNS and HTTP response without guessing from one symptom."
+      "az": "Bir simptomdan nəticə çıxarmaq əvəzinə işləyən xidməti commit-dən prosesə, porta, DNS-ə və HTTP cavabına qədər izlə."
     },
     "minutes": 60,
     "status": "published",
@@ -1815,7 +1815,7 @@
     "moduleId": "ba-devops-foundations",
     "title": {
       "en": "Docker & Kubernetes: from containers to Vault",
-      "az": "Docker və Kubernetes: konteynerdən Vault-a"
+      "az": "Docker və Kubernetes: container-dən Vault-a"
     },
     "summary": {
       "en": "One visual, hands-on lesson covering Docker, Kubernetes architecture, Pods, Deployments, ReplicaSets, labels and selectors, namespaces, ConfigMaps and Vault. Explore animated delivery, self-healing, rolling updates and secret rotation.",
@@ -1866,7 +1866,7 @@
     },
     "summary": {
       "en": "Separate immutable image identity from runtime state, use multi-stage builds and keep secrets out of image layers.",
-      "az": "Separate immutable image identity from runtime state, use multi-stage builds and keep secrets out of image layers."
+      "az": "Dəyişməz image kimliyini runtime state-dən ayır, multi-stage build istifadə et və secret-ləri image layer-lərindən kənarda saxla."
     },
     "minutes": 75,
     "status": "published",
@@ -1891,11 +1891,11 @@
     "moduleId": "ba-devops-foundations",
     "title": {
       "en": "CI/CD pipelines, immutable artifacts and deployment trust",
-      "az": "CI/CD pipeline, dəyişməz artefakt və deployment etibarı"
+      "az": "CI/CD pipeline, dəyişməz artifact və deployment etibarı"
     },
     "summary": {
       "en": "Separate validation from release, promote the tested artifact and protect privileged jobs from untrusted pull-request content.",
-      "az": "Separate validation from release, promote the tested artifact and protect privileged jobs from untrusted pull-request content."
+      "az": "Validation-u release-dən ayır, test edilmiş artifact-ı irəlilət və səlahiyyətli job-ları etibarsız pull request məzmunundan qoru."
     },
     "minutes": 75,
     "status": "published",
@@ -1915,7 +1915,7 @@
     },
     "summary": {
       "en": "Explain desired state, rollout capacity and probe behavior without treating a green process as a ready service.",
-      "az": "Explain desired state, rollout capacity and probe behavior without treating a green process as a ready service."
+      "az": "İşləyən prosesi avtomatik Ready xidmət saymadan desired state-i, rollout tutumunu və probe davranışını izah et."
     },
     "minutes": 80,
     "status": "published",
@@ -1944,7 +1944,7 @@
     },
     "summary": {
       "en": "Review a plan as a proposed change, protect state and explain drift, locking and recovery without applying production infrastructure.",
-      "az": "Review a plan as a proposed change, protect state and explain drift, locking and recovery without applying production infrastructure."
+      "az": "Plan-a təklif olunan dəyişiklik kimi bax; state-i qoru, production infrastrukturunu dəyişmədən drift, locking və recovery-ni izah et."
     },
     "minutes": 75,
     "status": "published",
@@ -1964,7 +1964,7 @@
     },
     "summary": {
       "en": "Calculate an explicit error budget, coordinate incident mitigation and distinguish recovery targets from untested backup assumptions.",
-      "az": "Calculate an explicit error budget, coordinate incident mitigation and distinguish recovery targets from untested backup assumptions."
+      "az": "Aydın error budget hesabla, incident mitigation-u əlaqələndir və recovery hədəflərini sınaqdan keçirilməmiş backup fərziyyələrindən ayır."
     },
     "minutes": 75,
     "status": "published",
@@ -1994,7 +1994,7 @@
     },
     "summary": {
       "en": "Turn a business question into a reproducible measurement contract and detect duplicates, missing values and misleading denominators.",
-      "az": "Turn a business question into a reproducible measurement contract and detect duplicates, missing values and misleading denominators."
+      "az": "Biznes sualını təkrarlana bilən measurement contract-a çevir; duplicate, çatışmayan dəyər və çaşdırıcı denominator-u aşkarla."
     },
     "minutes": 65,
     "status": "published",
@@ -2010,11 +2010,11 @@
     "moduleId": "ba-analytics-advanced",
     "title": {
       "en": "Advanced SQL: window functions, retention and cohorts",
-      "az": "Qabaqcıl SQL: window funksiyaları, retention və kohortlar"
+      "az": "Qabaqcıl SQL: window funksiyaları, retention və cohort-lar"
     },
     "summary": {
       "en": "Use explicit window frames, stable ordering and observable cohort denominators to calculate running totals and retention.",
-      "az": "Use explicit window frames, stable ordering and observable cohort denominators to calculate running totals and retention."
+      "az": "Running total və retention hesablamaq üçün aydın window frame, sabit ordering və müşahidə oluna bilən cohort denominator-ları istifadə et."
     },
     "minutes": 85,
     "status": "published",
@@ -2042,7 +2042,7 @@
     },
     "summary": {
       "en": "Make cleaning policies auditable, validate join cardinality and reconcile Python analysis with SQL totals.",
-      "az": "Make cleaning policies auditable, validate join cardinality and reconcile Python analysis with SQL totals."
+      "az": "Data cleaning qaydalarını yoxlanıla bilən et, join cardinality-ni təsdiqlə və Python analizini SQL cəmləri ilə tutuşdur."
     },
     "minutes": 80,
     "status": "published",
@@ -2062,7 +2062,7 @@
     },
     "summary": {
       "en": "Separate data preparation from measures, preserve fact-table grain and use a star schema with explicit filter context.",
-      "az": "Separate data preparation from measures, preserve fact-table grain and use a star schema with explicit filter context."
+      "az": "Data preparation-u measure-dan ayır, fact table grain-ini qoru və aydın filter context ilə star schema istifadə et."
     },
     "minutes": 75,
     "status": "published",
@@ -2090,7 +2090,7 @@
     },
     "summary": {
       "en": "Design a controlled comparison, calculate absolute and relative effects and separate an observed difference from a decision justified by evidence.",
-      "az": "Design a controlled comparison, calculate absolute and relative effects and separate an observed difference from a decision justified by evidence."
+      "az": "Nəzarətli müqayisə qur, absolute və relative effect hesabla; müşahidə olunan fərqi sübutla əsaslandırılan qərardan ayır."
     },
     "minutes": 85,
     "status": "published",
@@ -2118,7 +2118,7 @@
     },
     "summary": {
       "en": "Build a decision-focused dashboard with clear denominators, accessible charts, freshness and visible uncertainty.",
-      "az": "Build a decision-focused dashboard with clear denominators, accessible charts, freshness and visible uncertainty."
+      "az": "Denominator-u, data freshness-i və qeyri-müəyyənliyi göstərən, əlçatan chart-ları olan və qərara xidmət edən dashboard qur."
     },
     "minutes": 60,
     "status": "published",
@@ -2145,7 +2145,7 @@
     },
     "summary": {
       "en": "Use query plans and representative evidence to evaluate indexes, row estimates, loops and write-side trade-offs.",
-      "az": "Use query plans and representative evidence to evaluate indexes, row estimates, loops and write-side trade-offs."
+      "az": "Index, row estimate, loop və yazma əməliyyatının təsirlərini query plan və təmsilçi sübutla qiymətləndir."
     },
     "minutes": 75,
     "status": "published",
@@ -2165,7 +2165,7 @@
     },
     "summary": {
       "en": "Protect business invariants under concurrency using appropriate transactions, conditional updates, locks and retry policies.",
-      "az": "Protect business invariants under concurrency using appropriate transactions, conditional updates, locks and retry policies."
+      "az": "Uyğun transaction, conditional update, lock və retry policy ilə concurrency zamanı biznes invariant-larını qoru."
     },
     "minutes": 80,
     "status": "published",
@@ -2185,7 +2185,7 @@
     },
     "summary": {
       "en": "Evolve schemas through compatible stages, bounded backfills and observable cutovers, with a recovery plan for both code and data.",
-      "az": "Evolve schemas through compatible stages, bounded backfills and observable cutovers, with a recovery plan for both code and data."
+      "az": "Schema-nı uyğun mərhələlər, məhdud backfill və müşahidə edilən cutover ilə dəyiş; həm kod, həm data üçün recovery planı saxla."
     },
     "minutes": 75,
     "status": "published",
@@ -2205,7 +2205,7 @@
     },
     "summary": {
       "en": "Reason about Kafka partition order, consumer-group ownership, offset commits and recovery without assuming global or external exactly-once effects.",
-      "az": "Reason about Kafka partition order, consumer-group ownership, offset commits and recovery without assuming global or external exactly-once effects."
+      "az": "Qlobal və ya xarici exactly-once təsir fərz etmədən Kafka partition sırasını, consumer group ownership-i, offset commit-i və recovery-ni təhlil et."
     },
     "minutes": 75,
     "status": "published",
@@ -2225,7 +2225,7 @@
     },
     "summary": {
       "en": "Separate publisher confirms from consumer acknowledgements, then design bounded retries and observable dead-letter handling.",
-      "az": "Separate publisher confirms from consumer acknowledgements, then design bounded retries and observable dead-letter handling."
+      "az": "Publisher confirm-i consumer acknowledgement-dən ayır; məhdud retry və müşahidə edilən dead-letter emalı qur."
     },
     "minutes": 75,
     "status": "published",
@@ -2245,7 +2245,7 @@
     },
     "summary": {
       "en": "Use Redis as a performance layer with explicit freshness, invalidation, failure and cache-stampede policies.",
-      "az": "Use Redis as a performance layer with explicit freshness, invalidation, failure and cache-stampede policies."
+      "az": "Redis-i freshness, invalidation, failure və cache stampede qaydaları aydın olan performance layer kimi istifadə et."
     },
     "minutes": 70,
     "status": "published",
@@ -2265,7 +2265,7 @@
     },
     "summary": {
       "en": "Choose complementary test boundaries by risk, distinguishing isolated logic, real integration, consumer contracts and complete user journeys.",
-      "az": "Choose complementary test boundaries by risk, distinguishing isolated logic, real integration, consumer contracts and complete user journeys."
+      "az": "Riski nəzərə alaraq təcrid olunmuş məntiq, real integration, consumer contract və tam user journey üçün bir-birini tamamlayan test sərhədləri seç."
     },
     "minutes": 65,
     "status": "published",
@@ -2285,7 +2285,7 @@
     },
     "summary": {
       "en": "Build API checks around explicit status, body, authorization and state contracts, and distinguish mock responses from server evidence.",
-      "az": "Build API checks around explicit status, body, authorization and state contracts, and distinguish mock responses from server evidence."
+      "az": "API yoxlamalarını aydın status, body, authorization və state contract-ları əsasında qur; mock cavabı real server sübutundan ayır."
     },
     "minutes": 75,
     "status": "published",
@@ -2305,7 +2305,7 @@
     },
     "summary": {
       "en": "Create isolated browser tests with accessible locators, auto-retrying assertions and controlled network/data boundaries.",
-      "az": "Create isolated browser tests with accessible locators, auto-retrying assertions and controlled network/data boundaries."
+      "az": "Accessible locator, auto-retrying assertion və nəzarət olunan network/data sərhədləri ilə müstəqil brauzer testləri yarat."
     },
     "minutes": 75,
     "status": "published",
@@ -2325,7 +2325,7 @@
     },
     "summary": {
       "en": "Design reproducible ingestion and warehouse transformations with explicit grain, checkpoints, late data and trustworthy publication rules.",
-      "az": "Design reproducible ingestion and warehouse transformations with explicit grain, checkpoints, late data and trustworthy publication rules."
+      "az": "Aydın grain, checkpoint, gecikmiş məlumat və etibarlı publication qaydaları ilə təkrarlana bilən ingestion və warehouse transformation qur."
     },
     "minutes": 75,
     "status": "published",
@@ -2345,7 +2345,7 @@
     },
     "summary": {
       "en": "Build dbt model dependencies with ref, test declared data assumptions and use lineage to assess downstream change impact.",
-      "az": "Build dbt model dependencies with ref, test declared data assumptions and use lineage to assess downstream change impact."
+      "az": "ref ilə dbt model asılılıqları qur, data fərziyyələrini test et və downstream dəyişiklik təsirini lineage ilə qiymətləndir."
     },
     "minutes": 80,
     "status": "published",
@@ -2365,7 +2365,7 @@
     },
     "summary": {
       "en": "Coordinate data work through explicit intervals, dependencies and retry-safe outputs while keeping orchestration separate from business correctness.",
-      "az": "Coordinate data work through explicit intervals, dependencies and retry-safe outputs while keeping orchestration separate from business correctness."
+      "az": "Aydın interval, asılılıq və retry-safe nəticələrlə data işini əlaqələndir; orchestration-u biznes düzgünlüyündən ayır."
     },
     "minutes": 80,
     "status": "published",
@@ -2385,7 +2385,7 @@
     },
     "summary": {
       "en": "Separate identity permissions, network reachability, transport trust and application authorization in a layered cloud design.",
-      "az": "Separate identity permissions, network reachability, transport trust and application authorization in a layered cloud design."
+      "az": "Çoxqatlı cloud dizaynında identity icazəsini, network əlçatımlılığını, transport etibarını və tətbiq authorization-unu fərqləndir."
     },
     "minutes": 80,
     "status": "published",
@@ -2405,7 +2405,7 @@
     },
     "summary": {
       "en": "Measure cloud spending against useful workload units, allocate shared costs honestly and assess optimization with reliability and security.",
-      "az": "Measure cloud spending against useful workload units, allocate shared costs honestly and assess optimization with reliability and security."
+      "az": "Cloud xərcini faydalı workload vahidlərinə görə ölç, ortaq xərcləri əsaslı böl və optimizasiyanı reliability və security ilə birlikdə qiymətləndir."
     },
     "minutes": 65,
     "status": "published",
@@ -2425,7 +2425,7 @@
     },
     "summary": {
       "en": "Model assets and trust boundaries, then defend server-side fetching through destination policy, network controls and tested failure handling.",
-      "az": "Model assets and trust boundaries, then defend server-side fetching through destination policy, network controls and tested failure handling."
+      "az": "Asset və trust boundary-ləri modelləşdir; server-side fetch-i destination policy, network controls və sınaqdan keçirilmiş failure handling ilə qoru."
     },
     "minutes": 80,
     "status": "published",
@@ -2445,7 +2445,7 @@
     },
     "summary": {
       "en": "Manage credentials and cryptographic keys through controlled creation, use, rotation, revocation and recovery with secret-free evidence.",
-      "az": "Manage credentials and cryptographic keys through controlled creation, use, rotation, revocation and recovery with secret-free evidence."
+      "az": "Credential və cryptographic key-lərin yaradılmasını, istifadəsini, rotation, revocation və recovery-sini secret göstərməyən sübutlarla idarə et."
     },
     "minutes": 75,
     "status": "published",

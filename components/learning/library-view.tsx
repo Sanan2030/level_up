@@ -1,4 +1,5 @@
 'use client';
+import { useUIText } from '@/components/use-ui-text';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -25,6 +26,7 @@ export function LibraryView({
   locale: Locale;
   initialQuery?: string;
 }) {
+  const ui = useUIText();
   const { progress, ready, update } = useProgress();
   const [query, setQuery] = useState(initialQuery);
   const params = useSearchParams();
@@ -82,7 +84,7 @@ export function LibraryView({
   const terms = normalized
     ? glossary
         .filter((term) =>
-          [localize(term.term, locale), localize(term.definition, locale)]
+          [term.term.en, term.term.az, localize(term.definition, locale)]
             .join(' ')
             .toLocaleLowerCase(locale)
             .includes(normalized),
@@ -115,22 +117,22 @@ export function LibraryView({
         <div className="filter-bar">
           <SlidersHorizontal size={18} aria-hidden="true" />
           <label className="field-label">
-            Subject
+            {ui('Subject')}
             <select
               className="input"
               value={subject}
               onChange={(event) => setSubject(event.target.value)}
             >
-              <option value="all">All subjects</option>
-              <option value="technical">Architecture, coding & APIs</option>
+              <option value="all">{ui('All subjects')}</option>
+              <option value="technical">{ui('Architecture, coding & APIs')}</option>
               <option value="devops">DevOps</option>
-              <option value="data">Data analysis</option>
-              <option value="databases">Advanced databases</option>
-              <option value="messaging">Messaging & caching</option>
-              <option value="testing">Software testing</option>
-              <option value="data-engineering">Data engineering</option>
-              <option value="cloud-security">Cloud & security</option>
-              <option value="pspo">PSPO preparation</option>
+              <option value="data">{ui('Data analysis')}</option>
+              <option value="databases">{ui('Advanced databases')}</option>
+              <option value="messaging">{ui('Messaging & caching')}</option>
+              <option value="testing">{ui('Software testing')}</option>
+              <option value="data-engineering">{ui('Data engineering')}</option>
+              <option value="cloud-security">{ui('Cloud & security')}</option>
+              <option value="pspo">{ui('PSPO preparation')}</option>
             </select>
           </label>
           <label className="field-label">
@@ -141,7 +143,7 @@ export function LibraryView({
               onChange={(event) => setTrack(event.target.value)}
             >
               <option value="all">{t.all}</option>
-              <option value="library">Independent lessons</option>
+              <option value="library">{ui('Independent lessons')}</option>
               {tracks.map((entry) => (
                 <option key={entry.id} value={entry.id}>
                   {localize(entry.name, locale)}
@@ -290,7 +292,7 @@ export function LibraryView({
               <div key={term.id}>
                 <dt>
                   <Link className="text-link" href={`/${locale}/glossary#${term.id}`}>
-                    {localize(term.term, locale)}
+                    {term.term.en}
                     <ArrowRight size={14} />
                   </Link>
                 </dt>

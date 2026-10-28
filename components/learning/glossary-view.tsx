@@ -19,7 +19,7 @@ export function GlossaryView({ locale }: { locale: Locale }) {
         .toLocaleLowerCase(locale)
         .includes(normalized),
     )
-    .sort((a, b) => localize(a.term, locale).localeCompare(localize(b.term, locale), locale));
+    .sort((a, b) => a.term.en.localeCompare(b.term.en, 'en'));
   return (
     <div className="stack">
       <div className="page-heading">
@@ -48,7 +48,9 @@ export function GlossaryView({ locale }: { locale: Locale }) {
             <div id={term.id} className="card glossary-entry" key={term.id}>
               <dt>
                 <BookA size={20} />
-                <h2 className="section-title">{localize(term.term, locale)}</h2>
+                <h2 className="section-title" lang="en">
+                  {term.term.en}
+                </h2>
               </dt>
               <dd>
                 <p className="muted">{localize(term.definition, locale)}</p>

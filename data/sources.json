@@ -176,7 +176,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Sections 9.2.1–9.2.2, 9.3, 13.1.1 and 15: method semantics, idempotence, conditional requests and status codes.",
-      "az": "Sections 9.2.1–9.2.2, 9.3, 13.1.1 and 15: method semantics, idempotence, conditional requests and status codes."
+      "az": "9.2.1–9.2.2, 9.3, 13.1.1 və 15-ci bölmələr: method semantikası, idempotence, conditional request-lər və status code-lar."
     }
   },
   {
@@ -188,7 +188,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Sections 1.4–1.5 and 6: access tokens, refresh tokens and refreshing an access token. Security advice is updated by RFC 9700.",
-      "az": "Sections 1.4–1.5 and 6: access tokens, refresh tokens and refreshing an access token. Security advice is updated by RFC 9700."
+      "az": "1.4–1.5 və 6-cı bölmələr: access token-lər, refresh token-lər və access token-in yenilənməsi. Təhlükəsizlik tövsiyələri RFC 9700 ilə yenilənir."
     }
   },
   {
@@ -200,7 +200,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Sections 2.1–2.4, 4.10 and 4.14 read: PKCE, audience restrictions and refresh-token replay detection. January 2025 BCP; do not substitute informal OAuth 2.1 claims.",
-      "az": "Sections 2.1–2.4, 4.10 and 4.14 read: PKCE, audience restrictions and refresh-token replay detection. January 2025 BCP; do not substitute informal OAuth 2.1 claims."
+      "az": "2.1–2.4, 4.10 və 4.14-cü bölmələr oxunub: PKCE, audience məhdudiyyətləri və refresh token replay detection. Yanvar 2025 BCP sənədidir; qeyri-rəsmi OAuth 2.1 iddiaları ilə əvəz edilməməlidir."
     }
   },
   {
@@ -212,7 +212,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Section 4 and Appendix B: transaction-specific verifier, S256 challenge and token-endpoint verification.",
-      "az": "Section 4 and Appendix B: transaction-specific verifier, S256 challenge and token-endpoint verification."
+      "az": "4-cü bölmə və Appendix B: transaction-a məxsus verifier, S256 challenge və token endpoint yoxlaması."
     }
   },
   {
@@ -224,7 +224,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Sections 3.1–3.2 and 3.8–3.12: algorithm allowlists, issuer/audience validation, key lookup and token confusion.",
-      "az": "Sections 3.1–3.2 and 3.8–3.12: algorithm allowlists, issuer/audience validation, key lookup and token confusion."
+      "az": "3.1–3.2 və 3.8–3.12-ci bölmələr: algorithm allowlist-ləri, issuer/audience validation, key lookup və token confusion."
     }
   },
   {
@@ -236,7 +236,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Sections 3, 3.1 and 5: application/problem+json, stable problem types and avoiding sensitive implementation detail.",
-      "az": "Sections 3, 3.1 and 5: application/problem+json, stable problem types and avoiding sensitive implementation detail."
+      "az": "3, 3.1 və 5-ci bölmələr: application/problem+json, sabit problem type-ları və həssas implementation detallarından yayınmaq."
     }
   },
   {
@@ -248,7 +248,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Authorization Code Flow and ID Token validation sections read. ID Tokens authenticate to the client; they are not interchangeable with API access tokens.",
-      "az": "Authorization Code Flow and ID Token validation sections read. ID Tokens authenticate to the client; they are not interchangeable with API access tokens."
+      "az": "Authorization Code Flow və ID Token validation bölmələri oxunub. ID Token-lər client qarşısında authentication təmin edir; API access token-lərini əvəz etmir."
     }
   },
   {
@@ -260,7 +260,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Official OWASP GitHub Markdown read: HTTPS, JWT validation, endpoint authorization, input validation, CORS and safe errors.",
-      "az": "Official OWASP GitHub Markdown read: HTTPS, JWT validation, endpoint authorization, input validation, CORS and safe errors."
+      "az": "OWASP-ın rəsmi GitHub Markdown mənbəyi oxunub: HTTPS, JWT validation, endpoint authorization, input validation, CORS və təhlükəsiz error-lar."
     }
   },
   {
@@ -272,7 +272,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Official OWASP GitHub Markdown read: terminology, PKCE, token replay and privilege restriction. RFC 9700 supplies exact normative wording.",
-      "az": "Official OWASP GitHub Markdown read: terminology, PKCE, token replay and privilege restriction. RFC 9700 supplies exact normative wording."
+      "az": "OWASP-ın rəsmi GitHub Markdown mənbəyi oxunub: terminologiya, PKCE, token replay və privilege restriction. Dəqiq normativ ifadələri RFC 9700 müəyyən edir."
     }
   },
   {
@@ -284,7 +284,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Selected official GitHub sections read: synchronizer tokens, custom headers/CORS, SameSite limitations and defense in depth.",
-      "az": "Selected official GitHub sections read: synchronizer tokens, custom headers/CORS, SameSite limitations and defense in depth."
+      "az": "Rəsmi GitHub mənbəyinin seçilmiş bölmələri oxunub: synchronizer token-lər, custom header-lər/CORS, SameSite məhdudiyyətləri və defense in depth."
     }
   },
   {
@@ -296,7 +296,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Selected official GitHub sections read: least privilege, deny by default, object-level access checks, server enforcement and safe failure.",
-      "az": "Selected official GitHub sections read: least privilege, deny by default, object-level access checks, server enforcement and safe failure."
+      "az": "Rəsmi GitHub mənbəyinin seçilmiş bölmələri oxunub: least privilege, deny by default, object-level access check-lər, server enforcement və təhlükəsiz failure."
     }
   },
   {
@@ -308,7 +308,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Versioned official GitHub specification read selectively: Schema, Security Scheme and Security Requirement objects. This is the 3.1.1 edition, not a claim about the latest release.",
-      "az": "Versioned official GitHub specification read selectively: Schema, Security Scheme and Security Requirement objects. This is the 3.1.1 edition, not a claim about the latest release."
+      "az": "Rəsmi GitHub specification-ın konkret versiyası seçmə şəkildə oxunub: Schema, Security Scheme və Security Requirement obyektləri. Bu, 3.1.1 nəşridir; ən son release haqqında iddia deyil."
     }
   },
   {
@@ -320,7 +320,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Official MicrosoftDocs source read: service boundaries, BFF, bulkheads, CQRS, sagas and incremental migration. These are engineering patterns, not Scrum requirements.",
-      "az": "Official MicrosoftDocs source read: service boundaries, BFF, bulkheads, CQRS, sagas and incremental migration. These are engineering patterns, not Scrum requirements."
+      "az": "Rəsmi MicrosoftDocs mənbəyi oxunub: service sərhədləri, BFF, bulkhead-lər, CQRS, saga-lar və incremental migration. Bunlar engineering pattern-ləridir, Scrum tələbləri deyil."
     }
   },
   {
@@ -332,7 +332,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Problem, transactional write boundary and publisher/consumer behavior read. Cosmos DB example requires the same logical partition; the lesson distinguishes relational transactions.",
-      "az": "Problem, transactional write boundary and publisher/consumer behavior read. Cosmos DB example requires the same logical partition; the lesson distinguishes relational transactions."
+      "az": "Problem, transactional write sərhədi və publisher/consumer davranışı oxunub. Cosmos DB nümunəsi eyni logical partition tələb edir; dərsdə relational transaction-lar ayrıca fərqləndirilir."
     }
   },
   {
@@ -344,7 +344,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Official saga-content.md read: local transactions, compensations, choreography/orchestration, concurrency anomalies and limitations.",
-      "az": "Official saga-content.md read: local transactions, compensations, choreography/orchestration, concurrency anomalies and limitations."
+      "az": "Rəsmi saga-content.md oxunub: lokal transaction-lar, compensation-lar, choreography/orchestration, concurrency anomaliyaları və məhdudiyyətlər."
     }
   },
   {
@@ -356,7 +356,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Official retry-content.md read: transient faults, retry delays, idempotency, nested retry amplification and time budgets.",
-      "az": "Official retry-content.md read: transient faults, retry delays, idempotency, nested retry amplification and time budgets."
+      "az": "Rəsmi retry-content.md oxunub: transient fault-lar, retry gecikmələri, idempotency, iç-içə retry-lərin yaratdığı artım və vaxt budget-ləri."
     }
   },
   {
@@ -368,7 +368,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Official source read selectively: closed/open/half-open states, fast failure and limited recovery probes.",
-      "az": "Official source read selectively: closed/open/half-open states, fast failure and limited recovery probes."
+      "az": "Rəsmi mənbə seçmə şəkildə oxunub: closed/open/half-open vəziyyətləri, fast failure və məhdud recovery probe-ları."
     }
   },
   {
@@ -380,7 +380,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Signature-validation instructions read: HMAC-SHA256 over original payload bytes, protected shared secret and timing-safe comparison. GitHub-specific headers are not universal webhook standards.",
-      "az": "Signature-validation instructions read: HMAC-SHA256 over original payload bytes, protected shared secret and timing-safe comparison. GitHub-specific headers are not universal webhook standards."
+      "az": "Signature validation təlimatları oxunub: ilkin payload byte-ları üzərində HMAC-SHA256, qorunan shared secret və timing-safe müqayisə. GitHub-a məxsus header-lər universal webhook standartları deyil."
     }
   },
   {
@@ -392,7 +392,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "The twelve original principles read online. They complement Scrum without overriding the November 2020 Scrum Guide.",
-      "az": "The twelve original principles read online. They complement Scrum without overriding the November 2020 Scrum Guide."
+      "az": "On iki orijinal prinsip onlayn oxunub. Onlar noyabr 2020 Scrum Guide-ı ləğv etmədən Scrum-u tamamlayır."
     }
   },
   {
@@ -404,7 +404,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Purpose, benefits, hypotheses, data quality, segmentation and baseline sections read. Government service-design guidance provides supplementary examples, not an official PSPO syllabus.",
-      "az": "Purpose, benefits, hypotheses, data quality, segmentation and baseline sections read. Government service-design guidance provides supplementary examples, not an official PSPO syllabus."
+      "az": "Məqsəd, faydalar, hypothesis-lər, data quality, segmentation və baseline bölmələri oxunub. Dövlət service design qaydaları əlavə nümunələr verir, rəsmi PSPO syllabus deyil."
     }
   },
   {
@@ -416,7 +416,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Service measurement guidance read online. Used as supplementary product-outcome material, not Scrum rules or an official PSPO blueprint.",
-      "az": "Service measurement guidance read online. Used as supplementary product-outcome material, not Scrum rules or an official PSPO blueprint."
+      "az": "Service measurement qaydaları onlayn oxunub. Scrum qaydaları və ya rəsmi PSPO blueprint kimi deyil, əlavə product outcome materialı kimi istifadə olunub."
     }
   },
   {
@@ -428,7 +428,7 @@
     "checkedAt": "2026-10-22",
     "notes": {
       "en": "Release, Experiment, Ops and Permissioning Toggles and carrying-cost sections read. Expert engineering article; not an official Scrum.org publication. Flagged unfinished work does not become a Done Increment.",
-      "az": "Release, Experiment, Ops and Permissioning Toggles and carrying-cost sections read. Expert engineering article; not an official Scrum.org publication. Flagged unfinished work does not become a Done Increment."
+      "az": "Release, Experiment, Ops və Permissioning Toggles, eləcə də carrying cost bölmələri oxunub. Ekspert engineering məqaləsidir; rəsmi Scrum.org nəşri deyil. Flag arxasındakı yarımçıq iş Done Increment olmur."
     }
   },
   {
@@ -440,7 +440,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Branches, commits and HEAD read. Git branches are pointers to commits, not separate runtime environments.",
-      "az": "Branches, commits and HEAD read. Git branches are pointers to commits, not separate runtime environments."
+      "az": "Branch-lər, commit-lər və HEAD oxunub. Git branch-ləri ayrıca runtime mühiti deyil, commit-lərə pointer-lərdir."
     }
   },
   {
@@ -452,7 +452,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected introduction read: Linux manual section 1 covers user commands. The short page does not document every shell, filesystem or networking command in the original lesson examples.",
-      "az": "Selected introduction read: Linux manual section 1 covers user commands. The short page does not document every shell, filesystem or networking command in the original lesson examples."
+      "az": "Seçilmiş giriş hissəsi oxunub: Linux manual-ın 1-ci bölməsi istifadəçi command-larını əhatə edir. Bu qısa səhifə orijinal dərs nümunələrindəki bütün shell, filesystem və networking command-larını sənədləşdirmir."
     }
   },
   {
@@ -464,7 +464,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Least privilege, secrets, untrusted input/code checkout, full action commit pinning and short-lived cloud credential guidance read.",
-      "az": "Least privilege, secrets, untrusted input/code checkout, full action commit pinning and short-lived cloud credential guidance read."
+      "az": "Least privilege, secret-lər, etibarsız input/code checkout, action-ların tam commit-ə pin edilməsi və qısamüddətli cloud credential qaydaları oxunub."
     }
   },
   {
@@ -476,7 +476,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Multi-stage builds, base image selection, cache, .dockerignore and image digest pinning sections read. No claim of executing a Docker build.",
-      "az": "Multi-stage builds, base image selection, cache, .dockerignore and image digest pinning sections read. No claim of executing a Docker build."
+      "az": "Multi-stage build-lər, base image seçimi, cache, .dockerignore və image digest pinning bölmələri oxunub. Docker build-in icra edildiyi iddia olunmur."
     }
   },
   {
@@ -488,7 +488,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Desired state, rollouts, revision rollback and progress deadline sections read. A deadline reports failure; it is not automatic application/data rollback.",
-      "az": "Desired state, rollouts, revision rollback and progress deadline sections read. A deadline reports failure; it is not automatic application/data rollback."
+      "az": "Desired state, rollout-lar, revision rollback və progress deadline bölmələri oxunub. Deadline failure bildirir; avtomatik application/data rollback deyil."
     }
   },
   {
@@ -500,7 +500,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Probe purposes, startup gating, readiness traffic and liveness restart behavior read. Cluster commands remain illustrative, not a tested deployment.",
-      "az": "Probe purposes, startup gating, readiness traffic and liveness restart behavior read. Cluster commands remain illustrative, not a tested deployment."
+      "az": "Probe məqsədləri, startup gating, readiness traffic və liveness restart davranışı oxunub. Cluster command-ları izahlı nümunələrdir, sınaqdan keçmiş deployment deyil."
     }
   },
   {
@@ -512,7 +512,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Resource mapping, metadata and performance sections read. State is protected operational data, not just a disposable cache.",
-      "az": "Resource mapping, metadata and performance sections read. State is protected operational data, not just a disposable cache."
+      "az": "Resource mapping, metadata və performance bölmələri oxunub. State sadəcə silinə bilən cache deyil, qorunan əməliyyat məlumatıdır."
     }
   },
   {
@@ -524,7 +524,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "State/plan exposure, sensitive redaction and version/provider-dependent ephemeral/write-only values read. Sensitive does not universally omit values from state.",
-      "az": "State/plan exposure, sensitive redaction and version/provider-dependent ephemeral/write-only values read. Sensitive does not universally omit values from state."
+      "az": "State/plan ifşası, sensitive redaction və versiya/provider-dən asılı ephemeral/write-only dəyərlər oxunub. Sensitive bütün hallarda dəyəri state-dən çıxarmır."
     }
   },
   {
@@ -536,7 +536,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "User-centered SLIs, SLO measurement windows and error-budget decision guidance read. Request-based budgets are distinct from time-based downtime.",
-      "az": "User-centered SLIs, SLO measurement windows and error-budget decision guidance read. Request-based budgets are distinct from time-based downtime."
+      "az": "İstifadəçi yönümlü SLI-lər, SLO ölçmə müddətləri və error budget qərar qaydaları oxunub. Request əsaslı budget-lər vaxt əsaslı downtime-dan fərqlidir."
     }
   },
   {
@@ -548,7 +548,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Command/operations/communication roles, mitigation, coordination and learning sections read.",
-      "az": "Command/operations/communication roles, mitigation, coordination and learning sections read."
+      "az": "Command, operations və communication rolları, mitigation, koordinasiya və öyrənmə bölmələri oxunub."
     }
   },
   {
@@ -560,7 +560,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Recovery target/RTO/RPO sections read. Backup schedules alone do not establish demonstrated recovery capability.",
-      "az": "Recovery target/RTO/RPO sections read. Backup schedules alone do not establish demonstrated recovery capability."
+      "az": "Bərpa hədəfi/RTO/RPO bölmələri oxunub. Təkcə backup cədvəli bərpa imkanının nümayiş etdirildiyini sübut etmir."
     }
   },
   {
@@ -572,7 +572,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Join conditions and inner/outer join examples read. The executable local lab separately identifies its SQLite dialect.",
-      "az": "Join conditions and inner/outer join examples read. The executable local lab separately identifies its SQLite dialect."
+      "az": "Join şərtləri və inner/outer join nümunələri oxunub. İcra edilə bilən lokal lab öz SQLite dialect-ini ayrıca göstərir."
     }
   },
   {
@@ -584,7 +584,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "PARTITION BY, ORDER BY, frames, peer behavior and subquery filtering read. Explicit frames avoid an accidental cumulative-sum assumption.",
-      "az": "PARTITION BY, ORDER BY, frames, peer behavior and subquery filtering read. Explicit frames avoid an accidental cumulative-sum assumption."
+      "az": "PARTITION BY, ORDER BY, frame-lər, peer davranışı və subquery filtering oxunub. Açıq frame-lər təsadüfi cumulative sum fərziyyəsinin qarşısını alır."
     }
   },
   {
@@ -596,7 +596,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Missing sentinels, isna/notna, nullable dtypes and filling/dropping distinctions read. Current documentation is not a promise of every older pandas release.",
-      "az": "Missing sentinels, isna/notna, nullable dtypes and filling/dropping distinctions read. Current documentation is not a promise of every older pandas release."
+      "az": "Missing sentinel-lər, isna/notna, nullable dtype-lar və fill/drop fərqləri oxunub. Cari sənədlər bütün köhnə pandas release-ləri üçün vəd deyil."
     }
   },
   {
@@ -608,7 +608,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Key cardinality, validate, merge indicators and duplicate expansion sections read.",
-      "az": "Key cardinality, validate, merge indicators and duplicate expansion sections read."
+      "az": "Key cardinality, validate, merge indicator-ları və duplicate expansion bölmələri oxunub."
     }
   },
   {
@@ -620,7 +620,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Fact/dimension grain, relationships, measures and filter propagation sections read. No claim of executing Power BI Desktop in this environment.",
-      "az": "Fact/dimension grain, relationships, measures and filter propagation sections read. No claim of executing Power BI Desktop in this environment."
+      "az": "Fact/dimension grain-i, relationship-lər, measure-lər və filter propagation bölmələri oxunub. Bu mühitdə Power BI Desktop-un icra edildiyi iddia olunmur."
     }
   },
   {
@@ -632,7 +632,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Explicit types, conversions, locale and detection behavior read. Excel and Power BI transformations share Power Query concepts.",
-      "az": "Explicit types, conversions, locale and detection behavior read. Excel and Power BI transformations share Power Query concepts."
+      "az": "Açıq data type-lar, conversion-lar, locale və detection davranışı oxunub. Excel və Power BI transformasiyaları ortaq Power Query anlayışlarından istifadə edir."
     }
   },
   {
@@ -644,7 +644,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Comparative objectives, randomized designs, resources and Type I/II error considerations read. Numerical examples are original, not measured research results.",
-      "az": "Comparative objectives, randomized designs, resources and Type I/II error considerations read. Numerical examples are original, not measured research results."
+      "az": "Müqayisə məqsədləri, randomized design-lar, resource-lar və Type I/II error məsələləri oxunub. Rəqəm nümunələri orijinaldır, ölçülmüş araşdırma nəticələri deyil."
     }
   },
   {
@@ -656,7 +656,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Success criterion and explanation read: color must not be the sole visual means of conveying information.",
-      "az": "Success criterion and explanation read: color must not be the sole visual means of conveying information."
+      "az": "Success criterion və izahı oxunub: rəng məlumatı çatdırmağın yeganə vizual vasitəsi olmamalıdır."
     }
   },
   {
@@ -668,7 +668,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -680,7 +680,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -692,7 +692,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -704,7 +704,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -716,7 +716,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -728,7 +728,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -740,7 +740,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -752,7 +752,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Official Redis documentation source read from redis/docs because the public page returned a tiny non-document body. Selected EXPIRE semantics support original cache-design scenarios.",
-      "az": "Official Redis documentation source read from redis/docs because the public page returned a tiny non-document body. Selected EXPIRE semantics support original cache-design scenarios."
+      "az": "Açıq səhifə sənəd əvəzinə çox kiçik məzmun qaytardığı üçün rəsmi Redis documentation mənbəyi redis/docs-dan oxunub. Seçilmiş EXPIRE semantikası orijinal cache design ssenarilərinə əsas verir."
     }
   },
   {
@@ -764,7 +764,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -776,7 +776,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -788,7 +788,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -800,7 +800,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -812,7 +812,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -824,7 +824,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -836,7 +836,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -848,7 +848,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -860,7 +860,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -872,7 +872,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -884,7 +884,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -896,7 +896,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Cost Optimization pillar overview read selectively; numerical costs and unit-economics examples are original synthetic teaching cases, not current provider prices.",
-      "az": "Cost Optimization pillar overview read selectively; numerical costs and unit-economics examples are original synthetic teaching cases, not current provider prices."
+      "az": "Cost Optimization pillar icmalı seçmə şəkildə oxunub; rəqəmli xərc və unit economics nümunələri orijinal süni tədris hallarıdır, provider-in cari qiymətləri deyil."
     }
   },
   {
@@ -908,7 +908,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -920,7 +920,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -932,7 +932,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -944,7 +944,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -956,7 +956,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -968,7 +968,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -980,7 +980,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -992,7 +992,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -1004,7 +1004,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed.",
-      "az": "Selected sections read on 2026-10-23 for original educational explanations and scenarios. Scope and unavailable requests are recorded in docs/RESEARCH-COURSES-2026-10-23.md; no entire-site reading or production deployment is claimed."
+      "az": "Orijinal tədris izahları və ssenariləri üçün seçilmiş bölmələr 2026-10-23 tarixində oxunub. Scope və əlçatmaz request-lər docs/RESEARCH-COURSES-2026-10-23.md faylında qeyd edilib; bütün saytın oxunduğu və ya production deployment edildiyi iddia olunmur."
     }
   },
   {
@@ -1016,7 +1016,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation.",
-      "az": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation."
+      "az": "Yalnız specification index-i, versiya və normativ reference link-ləri oxunub. Tam normativ PDF onlayn oxunmayıb; dərs diagram-ları sadələşdirilmiş tədris modelləridir, notation uyğunluq yoxlaması deyil."
     }
   },
   {
@@ -1028,7 +1028,7 @@
     "checkedAt": "2026-10-23",
     "notes": {
       "en": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation.",
-      "az": "Specification index, version and normative-reference links read only. The full normative PDF was not read online; lesson diagrams are simplified teaching models, not notation conformance validation."
+      "az": "Yalnız specification index-i, versiya və normativ reference link-ləri oxunub. Tam normativ PDF onlayn oxunmayıb; dərs diagram-ları sadələşdirilmiş tədris modelləridir, notation uyğunluq yoxlaması deyil."
     }
   },
   {
@@ -1040,7 +1040,7 @@
     "checkedAt": "2026-10-27",
     "notes": {
       "en": "Read the official Kubernetes website repository: content/en/docs/concepts/workloads/pods/_index.md, workloads/controllers/replicaset.md, overview/working-with-objects/labels.md and namespaces.md on 2026-10-27 via raw.githubusercontent.com/kubernetes/website/main/. Reviewed shared Pod resources, ownership, controller selectors and namespace scope.",
-      "az": "Read the official Kubernetes website repository: content/en/docs/concepts/workloads/pods/_index.md, workloads/controllers/replicaset.md, overview/working-with-objects/labels.md and namespaces.md on 2026-10-27 via raw.githubusercontent.com/kubernetes/website/main/. Reviewed shared Pod resources, ownership, controller selectors and namespace scope."
+      "az": "Kubernetes-in rəsmi website repository-sində content/en/docs/concepts/workloads/pods/_index.md, workloads/controllers/replicaset.md, overview/working-with-objects/labels.md və namespaces.md faylları 2026-10-27 tarixində raw.githubusercontent.com/kubernetes/website/main/ vasitəsilə oxunub. Ortaq Pod resource-ları, ownership, controller selector-ları və namespace scope-u yoxlanıb."
     }
   },
   {
@@ -1052,7 +1052,7 @@
     "checkedAt": "2026-10-27",
     "notes": {
       "en": "Read official source content/en/docs/concepts/configuration/configmap.md at raw.githubusercontent.com/kubernetes/website/main/ on 2026-10-27. Reviewed non-confidential data, namespace references, environment snapshots, eventual volume updates and subPath exceptions.",
-      "az": "Read official source content/en/docs/concepts/configuration/configmap.md at raw.githubusercontent.com/kubernetes/website/main/ on 2026-10-27. Reviewed non-confidential data, namespace references, environment snapshots, eventual volume updates and subPath exceptions."
+      "az": "Rəsmi content/en/docs/concepts/configuration/configmap.md mənbəyi 2026-10-27 tarixində raw.githubusercontent.com/kubernetes/website/main/ ünvanında oxunub. Məxfi olmayan məlumatlar, namespace reference-ləri, environment snapshot-ları, gecikmə ilə volume update-ləri və subPath istisnaları yoxlanıb."
     }
   },
   {
@@ -1064,7 +1064,7 @@
     "checkedAt": "2026-10-27",
     "notes": {
       "en": "Read official documentation source website/content/docs/auth/kubernetes.mdx at raw.githubusercontent.com/hashicorp/vault/v1.19.0/ on 2026-10-27. Reviewed ServiceAccount JWT authentication, TokenReview and role bindings. Versioned source used for durable concepts; no claim of verifying latest version defaults.",
-      "az": "Read official documentation source website/content/docs/auth/kubernetes.mdx at raw.githubusercontent.com/hashicorp/vault/v1.19.0/ on 2026-10-27. Reviewed ServiceAccount JWT authentication, TokenReview and role bindings. Versioned source used for durable concepts; no claim of verifying latest version defaults."
+      "az": "Rəsmi website/content/docs/auth/kubernetes.mdx documentation mənbəyi 2026-10-27 tarixində raw.githubusercontent.com/hashicorp/vault/v1.19.0/ ünvanında oxunub. ServiceAccount JWT authentication, TokenReview və role binding-lər yoxlanıb. Sabit anlayışlar üçün konkret versiyanın mənbəyi istifadə olunub; ən son versiyanın default-larının yoxlandığı iddia olunmur."
     }
   },
   {
@@ -1076,7 +1076,7 @@
     "checkedAt": "2026-10-27",
     "notes": {
       "en": "Read official documentation source website/content/docs/platform/k8s/injector/index.mdx at raw.githubusercontent.com/hashicorp/vault/v1.19.0/ on 2026-10-27. Reviewed admission injection, Pod template annotations, ServiceAccount roles, init/sidecar containers and shared memory files. Examples are illustrative, not executed against a cluster.",
-      "az": "Read official documentation source website/content/docs/platform/k8s/injector/index.mdx at raw.githubusercontent.com/hashicorp/vault/v1.19.0/ on 2026-10-27. Reviewed admission injection, Pod template annotations, ServiceAccount roles, init/sidecar containers and shared memory files. Examples are illustrative, not executed against a cluster."
+      "az": "Rəsmi website/content/docs/platform/k8s/injector/index.mdx documentation mənbəyi 2026-10-27 tarixində raw.githubusercontent.com/hashicorp/vault/v1.19.0/ ünvanında oxunub. Admission injection, Pod template annotation-ları, ServiceAccount rolları, init/sidecar container-lər və shared memory faylları yoxlanıb. Nümunələr izah üçündür, cluster-də icra edilməyib."
     }
   }
 ]

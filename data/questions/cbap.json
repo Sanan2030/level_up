@@ -218,7 +218,7 @@
     "domain": "planning-monitoring",
     "difficulty": 3,
     "text": {
-      "az": "Portfeldə aşağı riskli məhsul təcrübələri və təhlükəsizlik baxımından kritik əvəzləmə var. PMO hər ikisi üçün eyni təhlil artefaktlarını tələb edir. Aparıcı BA nə tövsiyə etməlidir?",
+      "az": "Portfeldə aşağı riskli məhsul təcrübələri və təhlükəsizlik baxımından kritik əvəzləmə var. PMO hər ikisi üçün eyni təhlil artifact-larını tələb edir. Aparıcı BA nə tövsiyə etməlidir?",
       "en": "A portfolio contains low-risk product experiments and a safety-critical replacement. The PMO mandates the same analysis deliverables for both. What should the lead BA recommend?"
     },
     "options": [
@@ -569,7 +569,7 @@
           "en": "Approve it solely because the requesting team owns its delivery backlog."
         },
         "explanation": {
-          "az": "Yerli iş siyahısı sahibliyi ortaq nəzarət və digər məhsullara təsirləri aradan qaldırmır.",
+          "az": "Yerli backlog sahibliyi ortaq nəzarət və digər məhsullara təsirləri aradan qaldırmır.",
           "en": "Local backlog ownership does not remove impacts on shared controls and other products."
         }
       }
@@ -1077,7 +1077,7 @@
           "en": "Reconcile the models against the agreed policy and validate their consistency across representative scenarios."
         },
         "explanation": {
-          "az": "Tələb keyfiyyəti təkcə hər artefaktın aydınlığı deyil, baxışlararası uyğunluqdur.",
+          "az": "Tələb keyfiyyəti təkcə hər artifact-ın aydınlığı deyil, baxışlararası uyğunluqdur.",
           "en": "Requirement quality includes consistency across views, not merely clarity within each artifact."
         }
       },
@@ -1106,7 +1106,7 @@
     ],
     "correct": ["a"],
     "explanation": {
-      "az": "Tələb keyfiyyəti təkcə hər artefaktın aydınlığı deyil, baxışlararası uyğunluqdur.",
+      "az": "Tələb keyfiyyəti təkcə hər artifact-ın aydınlığı deyil, baxışlararası uyğunluqdur.",
       "en": "Requirement quality includes consistency across views, not merely clarity within each artifact."
     },
     "lessonId": "cbap-design",
@@ -1243,7 +1243,7 @@
       {
         "id": "b",
         "text": {
-          "az": "Daha çox təcrid olunmuş istifadəçi hekayəsi.",
+          "az": "Daha çox təcrid olunmuş user story.",
           "en": "A larger number of isolated user stories."
         },
         "explanation": {
@@ -1982,7 +1982,7 @@
         "id": "a",
         "text": {
           "en": "Run a focused prototype experiment designed to reveal the disputed behavior.",
-          "az": "Mübahisəli davranışı göstərmək üçün fokuslanmış prototip eksperimenti aparmaq."
+          "az": "Mübahisəli davranışı göstərmək üçün fokuslanmış prototype eksperimenti aparmaq."
         },
         "explanation": {
           "en": "Experiments can uncover information not known through existing sources.",

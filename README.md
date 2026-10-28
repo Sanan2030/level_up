@@ -1,6 +1,6 @@
 # Mərhələ
 
-An English learning workspace for IT Business Analysts and Product Owners, with career roadmaps, original certification practice, and an English–Azerbaijani word and terminology helper. The public entry point is `/en`; old `/az` links redirect to the equivalent English page.
+A bilingual Azerbaijani/English learning workspace for IT Business Analysts and Product Owners, with career roadmaps, original certification practice, and an English–Azerbaijani terminology helper. Both `/az` and `/en` are public; the rounded AZ/EN header switch preserves the current page, filters and anchor. Professional terms remain English in either language.
 
 **Tracks:** BA Junior → Mid → Lead; PO Junior → Mid → Senior/Lead; ECBA, CCBA, CBAP, PSPO I, PSPO II, and PSPO III.
 
@@ -15,7 +15,7 @@ npm ci
 npm run dev
 ```
 
-Open the address printed by Next.js. The root route redirects to English. No database, account, paid API, or secret is required. The curated terminology dictionary works offline; general-word fallback depends on external public services.
+Open the address printed by Next.js. The root route uses the saved language preference and defaults to English. No database, account, paid API, or secret is required. The curated terminology dictionary works offline; general-word fallback depends on external public services.
 
 For an existing checkout, use `npm ci` to reproduce the committed lockfile. Use `npm install` only when intentionally updating dependencies; commit the resulting `package-lock.json` with that change.
 
@@ -30,7 +30,7 @@ The build validates content before generating the application. To set canonical 
 
 ## What is included
 
-- The supplied Mərhələ design with a landing-page roadmap builder, horizontal navigation, a personal dashboard at `/[locale]/dashboard`, and a responsive English application shell, light/dark appearance, keyboard controls, and reduced-motion support.
+- The supplied Mərhələ design with a landing-page roadmap builder, horizontal navigation, a personal dashboard at `/[locale]/dashboard`, and a responsive Azerbaijani/English application shell, light/dark appearance, keyboard controls, and reduced-motion support.
 - Three-step onboarding with a current level, target level or certification, and daily study time. Roadmaps show the learning gap, prerequisite order, time estimates, and target-level skills. Changing tracks preserves progress.
 - Six career competency profiles with expectations, hard and soft skills, tools, deliverables, interview examples, and self-assessment checklists.
 - A searchable lesson library and glossary, statically generated MDX lessons, Mermaid diagrams, an interactive learning stepper, notes, bookmarks, and lesson completion.
@@ -41,7 +41,7 @@ The build validates content before generating the application. To set canonical 
 - A dashboard with measured lesson progress, activity streak, milestones, next steps, and practice history charts.
 - Validated JSON progress export/import, typed storage adapters, Zod content validation, Vitest logic tests, and GitHub Actions checks.
 
-The curriculum deliberately distinguishes **complete lessons** from **planned outlines**. There are 114 topics: 89 complete English lessons and 25 detailed outlines. Complete lessons cover BA/PO practice, architecture/APIs, DevOps, data analysis, advanced databases, messaging/caching, software testing, data engineering, cloud/security and certification preparation. The technical collection covers HTTP contracts, access/refresh tokens, OAuth/PKCE/OIDC, JWT/JWKS, browser/BFF security, concurrency/idempotency, outbox/webhooks, API evolution, sagas, resilience and a tested TypeScript lab. Outlines document the remaining topic sequence and cannot be counted as completed lessons. Learning-path estimates include their planned outlines and exclude independent library lessons; they are guidance rather than a guarantee.
+The curriculum deliberately distinguishes **complete lessons** from **planned outlines**. There are 115 topics: 90 complete lessons in both languages and 25 detailed outlines. Complete lessons cover BA/PO practice, architecture/APIs, DevOps, data analysis, advanced databases, messaging/caching, software testing, data engineering, cloud/security and certification preparation. The technical collection covers HTTP contracts, access/refresh tokens, OAuth/PKCE/OIDC, JWT/JWKS, browser/BFF security, concurrency/idempotency, outbox/webhooks, API evolution, sagas, resilience and a tested TypeScript lab. Outlines document the remaining topic sequence and cannot be counted as completed lessons. Learning-path estimates include their planned outlines and exclude independent library lessons; they are guidance rather than a guarantee.
 
 ## Certification accuracy
 
@@ -99,7 +99,7 @@ npm run test:e2e
 
 `npm run test:e2e` uses Playwright with a production server on port 3100. Install its browser once with `npx playwright install chromium`; to use an existing browser, set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH`. Tests cover functional flows and automated WCAG A/AA checks.
 
-`npm run test:watch` runs Vitest while developing. `npm run format` applies Prettier. The CI workflow runs the checks above on pushes and pull requests; a green run applies only to the revision it tested. For UI changes, also inspect English pages, both themes, the bilingual Translate results, a narrow viewport, keyboard navigation, and the affected functional flow. Source verification is a separate editorial responsibility; passing a schema check does not establish that an exam fact is current.
+`npm run test:watch` runs Vitest while developing. `npm run format` applies Prettier. The CI workflow runs the checks above on pushes and pull requests; a green run applies only to the revision it tested. For UI changes, also inspect both languages, both themes, the bilingual Translate results, a narrow viewport, keyboard navigation, and the affected functional flow. Source verification is a separate editorial responsibility; passing a schema check does not establish that an exam fact is current.
 
 ## Publish through GitHub and Vercel
 
@@ -137,7 +137,7 @@ Open **Translate** in the header and enter an English word or short phrase, or s
 
 `GET /api/translate?q=...` accepts short text only, uses fixed upstream hosts, validates responses, applies timeouts, bounds its cache and requires no credentials. Only explicit unknown-term lookups contact these services. Tests mock provider success/failure. A live check on 2026-10-22 confirmed Datamuse definitions and MyMemory translation respond successfully; the primary dictionary returned HTTP 403 in this cloud environment. External services may still be unavailable or quota-limited. The original PDFs are not bundled or made downloadable.
 
-English-only publication preserves old lesson IDs, progress storage and notes. Localized JSON fields and archived AZ MDX files remain for compatibility and terminology work; `/az/...` redirects preserve path and query parameters.
+Both languages share stable lesson and question IDs, progress, notes, bookmarks and saved attempts. All 115 topics have matching AZ/EN MDX files, including the Docker/Kubernetes/Vault masterclass. All 682 practice questions have bilingual prompts and explanations. Site copy is stored as reviewed static translations; the optional unknown-word Translate service is separate from interface and lesson localization. See [translation review rules](docs/TRANSLATION_REVIEW.md).
 
 ## Technical lessons and coding lab
 
@@ -170,9 +170,9 @@ Each of these 28 complete lessons has eleven sections, an original diagram, work
 
 ## Independent lessons and in-browser labs
 
-Forty engineering/data lessons live in **Lessons → Track → Independent lessons** and the existing Subject collections. They are excluded from every BA/PO/certification roadmap, its estimates, next-lesson recommendation and learning-dashboard progress. Normal BA practice excludes their questions; lesson-focused practice remains available from each independent lesson. Existing completions, notes, bookmarks and saved attempts remain stored. Legacy internal track IDs remain only for saved-question/session compatibility; the interface labels independent topics by subject.
+Forty-one engineering/data lessons live in **Lessons → Track → Independent lessons** and the existing Subject collections. They are excluded from every BA/PO/certification roadmap, its estimates, next-lesson recommendation and learning-dashboard progress. Normal BA practice excludes their questions; lesson-focused practice remains available from each independent lesson. Existing completions, notes, bookmarks and saved attempts remain stored. Legacy internal track IDs remain only for saved-question/session compatibility; the interface labels independent topics by subject.
 
-Learning content has 74 topics (49 complete, 25 outlines) in 18 modules; the independent library has 40 complete lessons in 17 collections. The total catalog remains 114 topics and 678 original questions.
+Learning content has 74 topics (49 complete, 25 outlines) in 18 modules; the independent library has 41 complete lessons in 17 collections. The total catalog contains 115 topics and 682 original questions.
 
 Seven SQL lessons and seven API/testing lessons now include an inline **Open practical lab** link. SQL uses sql.js/SQLite in a disposable browser worker on the synthetic orders fixture. Six exercises cover paid revenue, non-buyers, join grain, monthly totals, window functions and observed cohort retention. **Run SQL** executes the query; **Check SQL result** compares column names and row values, accepting equivalent row/column ordering. A match is evidence for this fixture, not a proof of a general algorithm. Only one read query is accepted, SQLite query_only enforces the data boundary, the SQLite heap and results are bounded and a query worker is terminated after three seconds of execution. SQLite syntax/plans differ from PostgreSQL. SQL text is not sent to a server.
 

@@ -1,12 +1,10 @@
 import type { Locale, Localized } from './types';
-export const locales: Locale[] = ['en'];
+export const locales: Locale[] = ['az', 'en'];
 export function localize(value: Localized, locale: Locale) {
   return value[locale];
 }
 export function getLocale(value: string): Locale {
-  // Legacy locales are redirected by proxy; English is the publication language.
-  if (value !== 'en') return 'en';
-  return value;
+  return value === 'az' ? 'az' : 'en';
 }
 export const copy = {
   az: {

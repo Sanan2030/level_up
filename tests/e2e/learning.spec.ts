@@ -76,7 +76,7 @@ test('creates a level-gap roadmap and preserves an existing plan when changing t
   await expect(page.getByRole('combobox', { name: 'Level', exact: true })).toHaveValue('junior');
 });
 
-test('completes a lesson, bookmarks it, and preserves notes across reload and legacy locale redirects', async ({
+test('completes a lesson, bookmarks it, and preserves notes across reload and both locales', async ({
   page,
 }) => {
   await page.goto('/en/lessons/stakeholder-mapping');
@@ -101,9 +101,9 @@ test('completes a lesson, bookmarks it, and preserves notes across reload and le
     'Ask front-line staff who is affected before agreeing the scope.',
   );
   await page.goto('/az/lessons/stakeholder-mapping');
-  await expect(page).toHaveURL(/\/en\/lessons\/stakeholder-mapping$/);
-  await expect(page.getByRole('button', { name: 'Completed — undo' })).toBeEnabled();
-  await expect(page.getByRole('button', { name: 'Bookmark', exact: true })).toHaveAttribute(
+  await expect(page).toHaveURL(/\/az\/lessons\/stakeholder-mapping$/);
+  await expect(page.getByRole('button', { name: 'Tamamlandı — geri al' })).toBeEnabled();
+  await expect(page.getByRole('button', { name: 'Əlfəcin', exact: true })).toHaveAttribute(
     'aria-pressed',
     'true',
   );

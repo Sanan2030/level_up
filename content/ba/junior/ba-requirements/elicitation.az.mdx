@@ -3,63 +3,87 @@ id: elicitation
 locale: az
 title: 'Müsahibə, seminar və müşahidə'
 objectives:
-  - 'Lazım olan sübut üçün müsahibə, seminar, sorğu, sənəd analizi və müşahidəni seç.'
-  - 'Müştərilərin telekom qeydiyyatını niyə yarımçıq qoyduğunu araşdırmaq üçün seminar planlaşdır.'
+  - 'Konkret qeyri-müəyyənlik üçün elicitation texnikası seç.'
+  - 'Real iş barədə cavabı yönləndirməyən suallar ver.'
+  - 'Finding, interpretation, açıq məsələ və approval qərarını ayır.'
 ---
-
-> **Kurikulum planı — tam dərs hələ dərc edilməyib.** Bu səhifə planlaşdırılan öyrənmə fəaliyyətlərini təsvir edir. Planı oxumaq mövzunu mənimsəmək demək deyil.
 
 ## Öyrənmə məqsədləri
 
-- Lazım olan sübut üçün müsahibə, seminar, sorğu, sənəd analizi və müşahidəni seç.
-- Müştərilərin telekom qeydiyyatını niyə yarımçıq qoyduğunu araşdırmaq üçün seminar planlaşdır.
+- Konkret qeyri-müəyyənlik üçün elicitation texnikası seç.
+- Real iş barədə cavabı yönləndirməyən suallar ver.
+- Finding, interpretation, açıq məsələ və approval qərarını ayır.
 
-## Niyə vacibdir
+## Bu mövzu niyə vacibdir
 
-Planlaşdırılan dərs **Müsahibə, seminar və müşahidə** mövzusunun komandaya nə vaxt kömək etdiyini konkret qərarla göstərəcək. Fərziyyələr və təsirlənən tərəflər aydın qeyd ediləcək.
+Stakeholder export button istəyir, amma support təkrarlanan reconciliation xətası bildirir. Düyməni dərhal qurmaq real problemi saxlaya bilər. Elicitation təklif edilən həll avtomatik requirement sayılmamış ehtiyac, qayda, məhdudiyyət və sübutu açır. Analyst kimin təcrübəsinin çatışmadığını da bilməlidir.
 
-## Əsas nəzəriyyə: dərs planı
+## Əsas anlayışlar
 
-1. Mövzunun əsas terminlərini müəyyən et.
-2. Lazım olan sübut üçün müsahibə, seminar, sorğu, sənəd analizi və müşahidəni seç.
-3. Faydalı tətbiqi inandırıcı, amma yanlış istifadə ilə müqayisə et.
-4. Qərarı dəyişə biləcək sübutu müəyyən et.
+Məlumatın dəstəkləyəcəyi qərardan başla. İştirakçı, sənəd, termin, access məhdudiyyəti və expected output-u tap. Bir workshop hər suala cavab verər düşünmək əvəzinə texnikaları birləşdir.
 
-## İşlənmiş nümunə: dərs planı
+Interview insanın real təcrübəsini dərindən açır. Gələcək feature barədə rəy istəməzdən əvvəl “Son uğursuz reconciliation-u addım-addım danış” soruş. “Əla dashboard-umuz bunu həll edərmi?” kimi leading sual cavabı təlqin edir və zəif sübut verir. Recording-dən əvvəl icazə al, lazımsız şəxsi məlumat toplama.
 
-Müştərilərin telekom qeydiyyatını niyə yarımçıq qoyduğunu araşdırmaq üçün seminar planlaşdır. Tam nümunədə kontekst, məhdudiyyətlər, alternativlər, qərar və nəticənin yoxlanılması olacaq.
+Observation workaround-u, sənədləşmiş və real proses fərqini göstərir. Ekran addımından niyyət çıxarmaq əvəzinə mənasını soruş. Müşahidəçi davranışa təsir edə bilər; bir növbə bütün operating condition-ları təmsil etmir.
 
-## Diaqram: dərs planı
+Workshop insanlara bilik müqayisəsi, termin razılaşması və birgə seçim araşdırması verir. Outcome, agenda, facilitation rolları və decision authority müəyyən et. Sakit iştirakçını da dinlə, etirazı saxla; səsli çoxluq legal, security və business authority-ni əvəz etmir.
 
-Planlaşdırılan vizual: **Müsahibə, seminar və müşahidə** mövzusunda iştirakçılar, qərarlar və sübutların işarələnmiş görünüşü. Diaqramın mətn izahı da veriləcək.
+Source, tarix, kontekst, nümunə və confidence saxla. Birbaşa müşahidəni interpretation və həll olunmamış assumption-dan ayır. Elicitation results confirmation qeydin mənbəni düzgün əks etdirib-etdirmədiyini yoxlayır. Həlli və hər derived requirement-i avtomatik approve etmir. Verification, business validation və approval ayrı fəaliyyətdir.
 
-## İnteraktiv məşq: dərs planı
+## İşlənmiş nümunə
 
-Planlaşdırılan fəaliyyət: ssenari üçün addım seç, nəticəsini aç və yeni sübut gəldikdə seçimi yenilə. Klaviatura ilə işləyən alternativ olacaq.
+Çatdırılma şirkəti “order-lər itir” deyir. Dispatcher üçün reassignment-dan sonra order filtered queue-dan yox olur; finance üçün settled order gündəlik export-da görünmür. Bunlar ayrı event-dir.
 
-## Tipik səhvlər və yaxşı təcrübələr
+Analyst iki rolla yaxın nümunə üzrə danışır, reassignment-ı müşahidə edir, export timestamp-lərini müqayisə edir. Ortaq log iki finding saxlayır: queue visibility assignment-a görə dəyişir; export cutoff late settlement-i çıxarır. İştirakçılar təsviri təsdiqləyir. Sonra export window təklifi impact assessment və səlahiyyətli qərara gedir; interview qeydlərinin təsdiqi maliyyə policy-sini dəyişmək icazəsi sayılmır.
 
-- Şablonu və ya çərçivəni sübutla qarışdırma.
-- Addım tövsiyə etməzdən əvvəl konteksti və qərar sahibini göstər.
-- Sənəd və ya funksiya sayını deyil, nəticələri müqayisə et.
+## Vizual model
 
-## Praktik tapşırıq və nümunə həll planı
+<Diagram
+  chart={
+    'flowchart LR\n D[Decision and uncertainty] --> P[Prepare people and evidence]\n P --> E[Interview observe workshop]\n E --> F[Findings and open questions]\n F --> C[Confirm accuracy]\n C --> A[Separate analysis and approval]'
+  }
+/>
 
-**Tapşırıq:** Müştərilərin telekom qeydiyyatını niyə yarımçıq qoyduğunu araşdırmaq üçün seminar planlaşdır.
+Hər sərhəddə qərarı və onu əsaslandıran sübutu izlə. Diaqram orijinal öyrənmə modelidir; formal notasiya validator-u deyil.
 
-**Nümunə həll planı:** problemi yaz, fərziyyələri sadala, seçimləri müqayisə et, addımı əsaslandır və növbəti yoxlanışı müəyyən et. Tam dərslə birlikdə işlənmiş cavab əlavə ediləcək.
+## Qərarı təhlil et
 
-## Mini-test: dərs planı
+<details>
+<summary>Interview iştirakçısı qeydləri doğru sayır, amma feature təklifini rədd edir. Bu, ziddiyyətdirmi?</summary>
 
-Tam dərsdə terminlər, ssenarinin tətbiqi və seçimlər üzrə orijinal suallar, düzgün və yanlış cavabların izahı olacaq. Bu planda dərs testi hələ dərc edilməyib.
+Xeyr. İnsan investisiyanı və həlli deyil, təcrübəsinin təsvirini təsdiqləyib. Təklifin hansı ehtiyacı və seçim təsirini qarşılamadığını soruş, təsdiqlənmiş sübutu saxla, alternativi razılaşdırılmış qərar prosesi ilə yoxla.
 
-## Bir səhifəlik xülasə planı
+</details>
 
-Yekun yaddaş vərəqi mövzunun məqsədini, girişlərini, qərarlarını, çıxışlarını və baxış siyahısını ümumiləşdirəcək.
+## Tipik səhvlər
 
-## Əlavə oxu
+- İstənilən feature-i əsas ehtiyac saymaq.
+- Bir ekspertin fikrini bütün user-lərə ümumiləşdirmək.
+- Uyğun consent/access olmadan həssas case yazmaq.
+- Workshop-da susmağı approval saymaq.
 
-- [Scrum Guide, rəsmi mənbə](https://scrumguides.org/scrum-guide.html)
-- [IIBA biznes analizi resursları](https://www.iiba.org/business-analysis-blogs/)
+## Praktik tapşırıq
 
-İstiqamətinə uyğun mənbədən istifadə et. Rəsmi sertifikasiya formatı və uyğunluq şərtləri ayrıca yoxlanmalıdır.
+Son uğursuz refund barədə 30 dəqiqəlik interview hazırla. Üç non-leading sual, bir observation və qeydə alınmış finding-i təsdiqləmə üsulu yaz. Policy dəyişikliyini kimin approve edə biləcəyini göstər.
+
+## Nümunə həll
+
+<details>
+<summary>Nümunə həlli göstər</summary>
+
+Refund-u nə başladıb, hansı addımlar gedib, expected nəticə actual-dan harada fərqlənib soruş. Məxfi hissəsi çıxarılmış yaxın nümunə istə, icazə varsa cari workflow-u müşahidə et. Ardıcıllığı, termin və açıq məsələləri iştirakçıya geri xülasələ. Düzəlişi saxla, qısa confirmation sorğusu göndər. Policy sahibini ayrıca tap; interview facilitator avtomatik approver deyil.
+
+</details>
+
+## Bilik yoxlaması və yaddaş vərəqi
+
+Qərar → iştirakçı və texnika → sübut → təsdiqlənmiş finding → analiz → səlahiyyətli qərar. Hər addımda source və qeyri-müəyyənliyi saxla.
+
+<LessonCheck />
+
+## Mənbələr və əlavə oxu
+
+[BABOK Guide v3, IIBA (2015)](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/). Təqdim edilmiş kitabın seçilmiş bölmələri orijinal izah və ssenariləri dəstəkləyir; mənbə mətni və üzvlər üçün PDF yayılmır.
+
+- BABOK §§4.1–4.5; interviews §10.25, observation §10.31, workshops §10.50.
+- [GOV.UK: Using in-depth interviews](https://www.gov.uk/service-manual/user-research/using-in-depth-interviews): hazırlıq, açıq sual və iştirakçı təcrübəsi.

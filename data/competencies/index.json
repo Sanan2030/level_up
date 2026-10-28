@@ -27,7 +27,7 @@
         "en": "Stakeholder identification and interview preparation"
       },
       {
-        "az": "Tələb növləri, istifadəçi hekayələri və qəbul nümunələri",
+        "az": "Tələb növləri, user story-lər və qəbul nümunələri",
         "en": "Requirement types, user stories and acceptance examples"
       },
       {
@@ -51,7 +51,7 @@
         "en": "Issue tracker and team knowledge base"
       },
       {
-        "az": "Diaqram və ilkin prototip alətləri",
+        "az": "Diaqram və ilkin prototype alətləri",
         "en": "Diagramming and basic prototyping tools"
       }
     ],
@@ -61,7 +61,7 @@
         "en": "Stakeholder list and engagement notes"
       },
       {
-        "az": "Qəbul meyarları olan kiçik tələb paketi",
+        "az": "Acceptance criteria olan kiçik tələb paketi",
         "en": "Small requirements pack with acceptance criteria"
       },
       {
@@ -98,7 +98,7 @@
       {
         "id": "ba-junior-skill-4",
         "text": {
-          "az": "Müşahidə edilən qəbul meyarları yaza bilirəm.",
+          "az": "Müşahidə edilən acceptance criteria yaza bilirəm.",
           "en": "I can write observable acceptance criteria."
         }
       },
@@ -446,11 +446,11 @@
     ],
     "hardSkills": [
       {
-        "az": "Scrum məsuliyyətləri, tədbirləri, artefaktları və öhdəlikləri",
+        "az": "Scrum məsuliyyətləri, tədbirləri, artifact-ları və öhdəlikləri",
         "en": "Scrum accountabilities, events, artifacts and commitments"
       },
       {
-        "az": "Məhsul Məqsədi və aydın iş siyahısı elementləri",
+        "az": "Product Goal və aydın backlog elementləri",
         "en": "Product Goal and clear Product Backlog Items"
       },
       {
@@ -480,7 +480,7 @@
     ],
     "deliverables": [
       {
-        "az": "Məhsul Məqsədi və sıralanmış iş siyahısı",
+        "az": "Product Goal və sıralanmış backlog",
         "en": "Product Goal and ordered backlog"
       },
       {
@@ -543,17 +543,17 @@
     "interviews": [
       {
         "question": {
-          "az": "Məhsul İş Siyahısını kim sıralayır?",
+          "az": "Product Backlog-u kim sıralayır?",
           "en": "Who orders the Product Backlog?"
         },
         "answer": {
-          "az": "Məhsul Sahibi sıralama daxil olmaqla iş siyahısının səmərəli idarəsinə cavabdehdir. Başqaları töhfə verə və həvalə olunan işi görə bilər, amma cavabdehlik Məhsul Sahibində qalır.",
+          "az": "Product Owner sıralama daxil olmaqla iş siyahısının səmərəli idarəsinə cavabdehdir. Başqaları töhfə verə və həvalə olunan işi görə bilər, amma cavabdehlik Product Owner-də qalır.",
           "en": "The Product Owner is accountable for effective Product Backlog management, including ordering. Others can contribute or do delegated work, while accountability remains with the Product Owner."
         }
       },
       {
         "question": {
-          "az": "Faydalı Məhsul Məqsədi necə olur?",
+          "az": "Faydalı Product Goal necə olur?",
           "en": "What makes a useful Product Goal?"
         },
         "answer": {
@@ -577,7 +577,7 @@
         "en": "Own product decisions across discovery and delivery."
       },
       {
-        "az": "Strategiyanı məqsəd, göstərici və iş siyahısı seçiminə bağla.",
+        "az": "Strategiyanı məqsəd, göstərici və backlog seçiminə bağla.",
         "en": "Connect strategy to goals, metrics and backlog choices."
       },
       {
@@ -688,7 +688,7 @@
           "en": "A senior stakeholder demands an urgent feature. What do you do?"
         },
         "answer": {
-          "az": "Əsas nəticə və təcililiyi aydınlaşdıraram, Məhsul Məqsədi və sübutla müqayisə edərəm, seçim təsirini açıb cavabdeh sıralama qərarı verər və paylaşaram.",
+          "az": "Əsas nəticə və təcililiyi aydınlaşdıraram, Product Goal və sübutla müqayisə edərəm, seçim təsirini açıb cavabdeh sıralama qərarı verər və paylaşaram.",
           "en": "I clarify the underlying outcome and urgency, compare it with the Product Goal and current evidence, expose trade-offs, then make and communicate an accountable ordering decision."
         }
       },

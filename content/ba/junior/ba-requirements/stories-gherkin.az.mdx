@@ -1,7 +1,7 @@
 ---
 id: stories-gherkin
 locale: az
-title: 'İstifadəçi hekayələri və qəbul meyarları'
+title: 'User story-lər və acceptance criteria'
 objectives:
   - 'İstifadəçi ehtiyacını xəta yolları daxil olmaqla müşahidə edilən qəbul nümunələrinə bağla.'
   - 'Unudulmuş şifrənin bərpası üçün hekayə və Given/When/Then nümunələri yaz.'
@@ -9,19 +9,19 @@ objectives:
 
 ## 1. Öyrənmə məqsədləri
 
-Həlli dəyər kimi göstərmədən istifadəçi ehtiyacını ifadə et. Given/When/Then nümunələri ilə müşahidə edilən qəbul meyarları yaz, uğurlu, mənfi və sərhəd hallarını daxil et, hekayəni tam spesifikasiyadan və avtomatlaşdırılmış testdən fərqləndir.
+Həlli dəyər kimi göstərmədən istifadəçi ehtiyacını ifadə et. Given/When/Then nümunələri ilə müşahidə edilən acceptance criteria yaz, uğurlu, mənfi və sərhəd hallarını daxil et, hekayəni tam spesifikasiyadan və avtomatlaşdırılmış testdən fərqləndir.
 
 ## 2. Niyə vacibdir
 
 Onlayn mağaza “bərpa düyməsi əlavə et” iş elementi alır. Komanda düyməni qurur, amma müştəri vaxtı keçmiş keçid alır və hesabını bərpa edə bilmir. İş elementi interfeys detalını təsvir edib, müştəri nəticəsini, təhlükəsizlik sərhədlərini və xəta yollarını gizlədib.
 
-Faydalı istifadəçi hekayəsi insan, istənilən imkan və dəyər haqqında söhbət başladır. Konkret qəbul nümunələri isə tətbiqdən əvvəl fərqli yozumları üzə çıxarır.
+Faydalı user story insan, istənilən imkan və dəyər haqqında söhbət başladır. Konkret qəbul nümunələri isə tətbiqdən əvvəl fərqli yozumları üzə çıxarır.
 
 ## 3. Sadə dildə əsas nəzəriyyə
 
-Yayğın hekayə forması belədir: “Bu vəziyyətdə olan insan kimi bir imkanı istəyirəm ki, nəticəyə çata bilim.” Bu, məcburi sehrli ifadə deyil, düşünmə başlanğıcıdır. Scrum istifadəçi hekayəsi və ya Gherkin tələb etmir; komanda Məhsul İş Siyahısı elementlərini başqa faydalı üsulla da təsvir edə bilər.
+Yayğın hekayə forması belədir: “Bu vəziyyətdə olan insan kimi bir imkanı istəyirəm ki, nəticəyə çata bilim.” Bu, məcburi sehrli ifadə deyil, düşünmə başlanğıcıdır. Scrum user story və ya Gherkin tələb etmir; komanda Product Backlog elementlərini başqa faydalı üsulla da təsvir edə bilər.
 
-Qəbul meyarları konkret işin razılaşdırılmış ehtiyaca uyğunluğunu qiymətləndirmək üçün şərtlərdir. Ortaq Bitmişlik Tərifini əvəz etmir, tamamlayır. Hekayə meyarı şifrə bərpasını təsvir edə bilər; Bitmişlik Tərifi isə İnkrementin daha geniş keyfiyyət şərtlərini bildirir.
+Acceptance criteria konkret işin razılaşdırılmış ehtiyaca uyğunluğunu qiymətləndirmək üçün şərtlərdir. Ortaq Definition of Done-ı əvəz etmir, tamamlayır. Hekayə meyarı şifrə bərpasını təsvir edə bilər; Definition of Done isə Increment-in daha geniş keyfiyyət şərtlərini bildirir.
 
 Gherkin strukturlaşdırılmış nümunələr verir. **Given** uyğun başlanğıc kontekstini göstərir. **When** yoxlanılan addımı və ya hadisəni göstərir. **Then** müşahidə edilən nəticəni göstərir. Eyni hissəni aydınlaşdırmaq üçün əlavə **And** addımı istifadə et. Bir ssenaridə bir əsas davranış saxla, aydın ad ver və hər ekran klikini deyil, nəticəni təsvir et.
 
@@ -164,13 +164,13 @@ A. Bəli, çünki sintaksis strukturludur. B. Xeyr; icra üçün tətbiq, test i
 
 ## 10. Bir səhifəlik yaddaş vərəqi
 
-**Hekayə:** insan, imkan və dəyər. **Söhbət:** nümunə, fərziyyə və seçim təsiri. **Qəbul meyarı:** işə məxsus müşahidə edilən şərt. **Given:** uyğun kontekst. **When:** bir addım və ya hadisə. **Then:** müşahidə edilən nəticə. **Əhatə:** riskə görə uğurlu, mənfi və sərhəd yolları. **Əlaqəli sübut:** keyfiyyət tələbi, təhlükəsizlik baxışı və Bitmişlik Tərifi. **Avtomatlaşdırma:** yalnız pozulmuş davranışı tapa bilən yoxlamalarla icra olunanda faydalıdır.
+**Hekayə:** insan, imkan və dəyər. **Söhbət:** nümunə, fərziyyə və seçim təsiri. **Acceptance criterion:** işə məxsus müşahidə edilən şərt. **Given:** uyğun kontekst. **When:** bir addım və ya hadisə. **Then:** müşahidə edilən nəticə. **Əhatə:** riskə görə uğurlu, mənfi və sərhəd yolları. **Əlaqəli sübut:** keyfiyyət tələbi, təhlükəsizlik baxışı və Definition of Done. **Avtomatlaşdırma:** yalnız pozulmuş davranışı tapa bilən yoxlamalarla icra olunanda faydalıdır.
 
 ## 11. Əlavə oxu
 
 - [Cucumber: Gherkin istinad sənədi](https://cucumber.io/docs/gherkin/reference/)
 - [Cucumber: davranış yönümlü hazırlama](https://cucumber.io/docs/bdd/)
-- [Scrum Guide: Məhsul İş Siyahısı və Bitmişlik Tərifi](https://scrumguides.org/scrum-guide.html)
+- [Scrum Guide: Product Backlog və Definition of Done](https://scrumguides.org/scrum-guide.html)
 - [OWASP: Forgot Password Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html)
 
 Dərs və test sualları orijinal məşq materialıdır. Xəyali nümunələr analiz üçündür və təhlükəsizlik dizayn baxışını əvəz etmir.

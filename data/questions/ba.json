@@ -71,7 +71,7 @@
         },
         "explanation": {
           "en": "Acceptance criteria make the intended behavior testable without prescribing every implementation detail.",
-          "az": "Qəbul meyarları bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
+          "az": "Acceptance criteria bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
         }
       },
       {
@@ -100,7 +100,7 @@
     "correct": ["a"],
     "explanation": {
       "en": "Acceptance criteria make the intended behavior testable without prescribing every implementation detail.",
-      "az": "Qəbul meyarları bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
+      "az": "Acceptance criteria bütün texniki detalları diktə etmədən davranışı yoxlanılan edir."
     },
     "lessonId": "stories-gherkin",
     "practiceOnly": true

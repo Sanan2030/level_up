@@ -40,7 +40,9 @@ test('independent lessons remain searchable and preserve notes without entering 
   await expect(timeline).not.toContainText('SQL for business questions');
   await expect(timeline).not.toContainText('JWT validation');
   await page.goto('/en/lessons?track=library');
-  await expect(page.locator('.library-lesson-card')).toHaveCount(40);
+  await expect(page.locator('.library-lesson-card')).toHaveCount(
+    lessons.filter((lesson) => 'placement' in lesson && lesson.placement === 'library').length,
+  );
   await page.getByRole('searchbox').fill('SQL for business questions');
   await page.getByRole('link', { name: 'SQL for business questions', exact: true }).click();
   await page.getByText('My personal notes', { exact: true }).click();

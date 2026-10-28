@@ -10,6 +10,7 @@ import { useProgress } from './providers';
 import { ThemeToggle } from './theme-toggle';
 import { TranslateButton } from './translate-panel';
 import { PageNavigation } from './page-navigation';
+import { LanguageSwitch } from './language-switch';
 
 export function AppShell({ children, locale }: { children: React.ReactNode; locale: Locale }) {
   const path = usePathname();
@@ -40,7 +41,11 @@ export function AppShell({ children, locale }: { children: React.ReactNode; loca
     <div className={`merhele-shell ${home ? 'is-home' : ''}`}>
       <header className="merhele-header">
         <div className="merhele-header-inner">
-          <Link href={`/${locale}`} className="merhele-brand" aria-label="Mərhələ — Home">
+          <Link
+            href={`/${locale}`}
+            className="merhele-brand"
+            aria-label={az ? 'Mərhələ — Ana səhifə' : 'Mərhələ — Home'}
+          >
             <span>
               <ChartNoAxesColumnIncreasing size={23} />
             </span>
@@ -70,6 +75,7 @@ export function AppShell({ children, locale }: { children: React.ReactNode; loca
             </Link>
           </nav>
           <div className="merhele-utilities">
+            <LanguageSwitch locale={locale} />
             <TranslateButton />
             <ThemeToggle locale={locale} />
             <button
@@ -112,7 +118,7 @@ export function AppShell({ children, locale }: { children: React.ReactNode; loca
           <nav aria-label={az ? 'Əlavə bölmələr' : 'More learning tools'}>
             <Link href={`/${locale}/competencies`}>{t.competencies}</Link>
             <Link href={`/${locale}/glossary`}>{t.glossary}</Link>
-            <Link href={`/${locale}/study-guide`}>Study guide</Link>
+            <Link href={`/${locale}/study-guide`}>{az ? 'Öyrənmə bələdçisi' : 'Study guide'}</Link>
             <Link href={`/${locale}/sources`}>{az ? 'Mənbələr' : 'Sources'}</Link>
             <Link href={`/${locale}/settings`}>{t.settings}</Link>
           </nav>

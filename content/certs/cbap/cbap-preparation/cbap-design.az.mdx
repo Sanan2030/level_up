@@ -3,63 +3,76 @@ id: cbap-design
 locale: az
 title: 'Tələblər və dizayn seçimləri'
 objectives:
-  - 'Qarşılıqlı asılı tələblər üzrə uyğunluğu, tamlığı, dəyəri və riski qiymətləndir.'
-  - 'Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.'
+  - 'Requirements işində verification, validation və authorized approval-u ayır.'
+  - 'Requirement-ləri ardıcıl bütöv kimi yoxla, qeyri-müəyyən potential value ilə design variantlarını müqayisə et.'
 ---
 
-> **Kurikulum planı — tam dərs hələ dərc edilməyib.** Bu səhifə planlaşdırılan öyrənmə fəaliyyətlərini təsvir edir. Planı oxumaq mövzunu mənimsəmək demək deyil.
+## Əsas anlayış
 
-## Öyrənmə məqsədləri
-
-- Qarşılıqlı asılı tələblər üzrə uyğunluğu, tamlığı, dəyəri və riski qiymətləndir.
-- Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.
+Requirements Analysis and Design Definition finding-i istifadə edilən representation-a çevirir, keyfiyyət/uyğunluğunu yoxlayır, əlaqələri təşkil edir, value yollarını müqayisə edir. BABOK v3-də requirement need-i, design solution-u təmsil edir. Əlaqə iterativdir: design əlavə requirement aça bilər. Analiz software ilə yanaşı process, people, information və rule-a aiddir. Faydalı tövsiyə geniş scope-u saxlayır.
 
 ## Niyə vacibdir
 
-Planlaşdırılan dərs **Tələblər və dizayn seçimləri** mövzusunun komandaya nə vaxt kömək etdiyini konkret qərarla göstərəcək. Fərziyyələr və təsirlənən tərəflər aydın qeyd ediləcək.
+Mükəmməl formatlı requirement yanlış capability təsvir edə bilər. Ayrılıqda faydalı requirement-lər birlikdə conflict yarada bilər. Məsələn, dərhal deletion və uzun audit retention scope/şərt birlikdə baxılanadək uyğun görünə bilər. Verification, validation və requirements architecture bu problemlərə ayrı sual verir. Hamısını eyni “review” saymaq hər item-də reference/imza olsa da kritik boşluq qoyar.
 
-## Əsas nəzəriyyə: dərs planı
+## Nəzəriyyə və fərqlər
 
-1. Mövzunun əsas terminlərini müəyyən et.
-2. Qarşılıqlı asılı tələblər üzrə uyğunluğu, tamlığı, dəyəri və riski qiymətləndir.
-3. Faydalı tətbiqi inandırıcı, amma yanlış istifadə ilə müqayisə et.
-4. Qərarı dəyişə biləcək sübutu müəyyən et.
+**Specify/model:** auditoriya/purpose-a uyğun text, matrix, diagram seç. Modeling müxtəlif vəziyyətdəki elicitation result-dan başlaya və əlavə elicitation aça bilər. **Verify:** representation-un quality tələbinə, sonrakı istifadəyə uyğunluğunu yoxla. Ambiguity, uyğunsuz term, missing detail, infeasibility və test edilməyən statement axtar. Quality tək template uyğunluğu deyil, intended use-a yararlılıqdır.
 
-## İşlənmiş nümunə: dərs planı
+**Validate:** requirement/design-ın business requirement-ə uyğunluğunu və lazım olan value-nu dəstəkləməsini yoxla. Benefit assumption, evaluation criteria, scope alignment aç. Validation verification bitməmiş başlaya bilər, amma verification tamamlanmamış tamamlana bilməz. **Approval** səlahiyyətli razılaşma barədə ayrıca governance qərarıdır.
 
-Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et. Tam nümunədə kontekst, məhdudiyyətlər, alternativlər, qərar və nəticənin yoxlanılması olacaq.
+**Requirements architecture:** requirement-lər objective üçün birgə işləsin deyə view/model təşkil et. Traceability relation göstərə bilər; tək link bütövlüyü sübut etmir. **Design option:** yaratmaq, almaq və birləşdirmək; integration, requirement-in component/release üzrə bölgüsünü düşün. **Potential value:** benefit, cost, risk, dependency, resource constraint müqayisə et. Maintenance, intangible effect və seçilməyən ən yaxşı alternativin opportunity cost-unu daxil et. Estimate qeyri-müəyyəndir. Bəzən əlavə investigation, bir neçə proof of concept və ya heç nə etməmək ən əsaslı tövsiyədir.
 
-## Diaqram: dərs planı
+## İşlənmiş nümunə
 
-Planlaşdırılan vizual: **Tələblər və dizayn seçimləri** mövzusunda iştirakçılar, qərarlar və sübutların işarələnmiş görünüşü. Diaqramın mətn izahı da veriləcək.
+Benefits agentliyinə etibarlı case handling və şəxsi record-a uyğun access lazımdır. Bir requirement “case bağlananda record sil”, digəri “authorized reviewer closed case-i görə bilsin” deyir. Traceability matrix hər ikisini objective-ə bağlayır, amma uyğun şərti sübut etmir.
 
-## İnteraktiv məşq: dərs planı
+Analyst hər statement üçün record, user, event və retention constraint-i aydınlaşdırır. State model/role view conflict-i açır. Variant mövcud service configuration, component purchase və combined development-dir. Müqayisə integration, operational effort, access control, uncertainty və desired outcome-u nəzərə alır. Legal retention müddəti uydurulmur; qayda səlahiyyətli mənbədən gəlməlidir.
 
-Planlaşdırılan fəaliyyət: ssenari üçün addım seç, nəticəsini aç və yeni sübut gəldikdə seçimi yenilə. Klaviatura ilə işləyən alternativ olacaq.
+## Vizual model
 
-## Tipik səhvlər və yaxşı təcrübələr
+<Diagram
+  chart={
+    'flowchart TD\n E["Elicitation findings"] --> M["Specify and model"]\n M --> Q["Verify representation quality"]\n M --> V["Validate need and value alignment"]\n Q --> A["Check coherent requirements architecture"]\n V --> A\n A --> O["Create, purchase or combine options"]\n O --> R["Compare potential value and recommend"]'
+  }
+/>
 
-- Şablonu və ya çərçivəni sübutla qarışdırma.
-- Addım tövsiyə etməzdən əvvəl konteksti və qərar sahibini göstər.
-- Sənəd və ya funksiya sayını deyil, nəticələri müqayisə et.
+Diaqram üç check-i option comparison-dan ayırır. Oxlar məcburi birdəfəlik sıra deyil, information dependency göstərir. Hər yoxlama gap aşkar edəndə rework ola bilər.
 
-## Praktik tapşırıq və nümunə həll planı
+## Qərar məşqi
 
-**Tapşırıq:** Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.
+Specification quality checklist-dən keçir; sponsor value-nun sübutunu soruşur. Real nəticəni izah et: representation sonrakı iş üçün yararlı ola bilər. Yenə business need alignment və inandırıcı benefit gözləntisi lazımdır. Müsbət potential value estimate real istifadə value-sunu sübut etmir. Verified statement, validated requirement, approved decision və sonrakı solution evaluation fərqini saxla.
 
-**Nümunə həll planı:** problemi yaz, fərziyyələri sadala, seçimləri müqayisə et, addımı əsaslandır və növbəti yoxlanışı müəyyən et. Tam dərslə birlikdə işlənmiş cavab əlavə ediləcək.
+## Tipik səhvlər və yaxşı təcrübə
 
-## Mini-test: dərs planı
+- Düzgün notation-u düzgün business outcome sayma.
+- Verification natamamkən validation-u complete adlandırma.
+- Reference link requirement-lərin işlək bütöv olması sübutu deyil.
+- Integration, maintenance, stakeholder effect-i buraxıb yalnız purchase price müqayisə etmə.
+- Uncertain benefit-i guaranteed return etmə.
+- Qərar səlahiyyətini analyst-in tövsiyə hazırlama məsuliyyətindən ayır.
 
-Tam dərsdə terminlər, ssenarinin tətbiqi və seçimlər üzrə orijinal suallar, düzgün və yanlış cavabların izahı olacaq. Bu planda dərs testi hələ dərc edilməyib.
+## Tətbiq tapşırığı və izahlı cavab
 
-## Bir səhifəlik xülasə planı
+**Tapşırıq:** “service sürətli olmalıdır” və əlaqəsiz report üçün aydın requirement-i qiymətləndir. Closed-case nümunəsinə bir architecture sualı, option comparison-da tez-tez unudulan bir cost seç.
 
-Yekun yaddaş vərəqi mövzunun məqsədini, girişlərini, qərarlarını, çıxışlarını və baxış siyahısını ümumiləşdirəcək.
+**İzahlı cavab:** “sürətli” intended purpose üçün yararlı tərif deyil; verification ambiguity və uyğun measure ehtiyacını açmalıdır. Dəqiq, amma əlaqəsiz report need/scope-u dəstəkləmədiyi üçün validation-dan keçməyə bilər. Architecture sualı deletion, access, case state və record type-ın ziddiyyətsiz birgə işləməsidir. Davamlı integration support və deferred alternative-in value-su müqayisəni dəyişə bilər. Güclü cavab hər problemin ayrı check-ə aidliyini izah edir.
 
-## Əlavə oxu
+## Mini-test
 
-- [Scrum Guide, rəsmi mənbə](https://scrumguides.org/scrum-guide.html)
-- [IIBA biznes analizi resursları](https://www.iiba.org/business-analysis-blogs/)
+Dərhal problemin representation quality, value alignment, coherent relation, option definition və ya recommendation olduğunu tap. Bir neçə problem ola bilər, amma ən yaxşı növbəti addım ssenaridəki evidence gap-i qarşılamalıdır.
 
-İstiqamətinə uyğun mənbədən istifadə et. Rəsmi sertifikasiya formatı və uyğunluq şərtləri ayrıca yoxlanmalıdır.
+<LessonCheck />
+
+## Yaddaş vərəqi
+
+Verification: istifadəyə yararlı information. Validation: need/value uyğunluğu. Architecture: requirement-lərin bütöv işləməsi. Option: onları ödəyən alternativ. Recommendation: uncertain potential value/nəticə müqayisəsi. Approval və actual value evaluation ayrıdır.
+
+## Mənbələr və əhatə
+
+BABOK Guide v3, 2015: §2.5, s. 19–20; §7.1, s. 136–141; §7.2, s. 141–144; §7.3, s. 144–147; §7.4, s. 148–152; §7.5, s. 152–157; §7.6, s. 157–162. Əsas oxunan izahlar: 137–138, 141–146, 148–149, 152–155, 157–160. Approval fərqi: §5.5, s. 95–96.
+
+- [IIBA — BABOK Guide and business analysis resources](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/)
+- [IIBA — certification information](https://www.iiba.org/business-analysis-certifications/)
+
+İzah və nümunələr orijinal tədris materialıdır. Yüklənmiş üzv PDF-i saytda yayılmır. Məşq sualları müstəqil hazırlanıb; rəsmi imtahan sualları deyil.

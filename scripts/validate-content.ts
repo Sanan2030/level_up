@@ -108,7 +108,7 @@ async function validate() {
         blockDangerousJS: true,
         mdxOptions: { remarkPlugins: [remarkGfm] },
       });
-      if (lesson?.status === 'published' && meta.locale === 'en') {
+      if (lesson?.status === 'published') {
         check(
           (parsed.content.match(/^## /gm)?.length ?? 0) >= 10,
           `${key}: complete lesson needs template sections`,
@@ -121,7 +121,7 @@ async function validate() {
     }
   }
   for (const lesson of lessons)
-    for (const locale of ['en'])
+    for (const locale of ['az', 'en'])
       check(fileKeys.has(`${lesson.id}.${locale}`), `Missing translation ${lesson.id}.${locale}`);
   for (const term of glossary)
     check(lessonIds.has(term.relatedLessonId), `${term.id}: glossary lesson missing`);
@@ -159,6 +159,11 @@ async function validate() {
       );
   }
   for (const q of questions) {
+    check(q.text.az !== q.text.en, `${q.id}: Azerbaijani question duplicates English`);
+    check(
+      q.explanation.az !== q.explanation.en,
+      `${q.id}: Azerbaijani explanation duplicates English`,
+    );
     for (const id of q.sourceIds)
       check(sourceIds.has(id), `${q.id}: source not read or missing: ${id}`);
     if (q.sourceIds.length)

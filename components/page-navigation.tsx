@@ -11,6 +11,8 @@ export function PageNavigation() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const router = useRouter();
+  const locale = pathname.split('/')[1] === 'az' ? 'az' : 'en';
+  const az = locale === 'az';
   const entry = useRef<NavigationEntry | null>(null);
 
   useEffect(() => {
@@ -49,23 +51,23 @@ export function PageNavigation() {
     return () => window.removeEventListener('popstate', restore, true);
   }, []);
 
-  if (pathname === '/en') return null;
+  if (pathname === `/${locale}`) return null;
 
   function back() {
     const stored = window.history.state?.merheleNavigation as NavigationEntry | undefined;
     if (stored?.session === entry.current?.session && stored && stored.depth > 0) router.back();
-    else router.push('/en');
+    else router.push(`/${locale}`);
   }
 
   return (
-    <nav className="page-navigation" aria-label="Page navigation">
+    <nav className="page-navigation" aria-label={az ? 'Səhifə naviqasiyası' : 'Page navigation'}>
       <button type="button" className="button button-secondary" onClick={back}>
         <ArrowLeft size={16} aria-hidden="true" />
-        Back
+        {az ? 'Geri' : 'Back'}
       </button>
-      <Link href="/en" className="button button-secondary">
+      <Link href={`/${locale}`} className="button button-secondary">
         <House size={16} aria-hidden="true" />
-        Home
+        {az ? 'Ana səhifə' : 'Home'}
       </Link>
     </nav>
   );

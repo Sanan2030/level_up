@@ -1,4 +1,5 @@
 'use client';
+import { useUIText, useLocale } from '@/components/use-ui-text';
 
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import {
@@ -65,6 +66,7 @@ const journey = [
 ];
 
 export function KubernetesExplorer() {
+  const t = useUIText();
   const id = useId();
   const [tab, setTab] = useState('journey');
   const tabs = [
@@ -74,13 +76,16 @@ export function KubernetesExplorer() {
     ['configuration', 'ConfigMap & Vault'],
   ];
   return (
-    <section className={styles.explorer} aria-label="Docker and Kubernetes interactive explorer">
+    <section
+      className={styles.explorer}
+      aria-label={t('Docker and Kubernetes interactive explorer')}
+    >
       <div className={styles.header}>
-        <span className={styles.kicker}>LEARN BY CHANGING THINGS</span>
-        <h3>Inside the cluster</h3>
-        <p>A visual simulation. Explore each view; nothing runs against a real cluster.</p>
+        <span className={styles.kicker}>{t('LEARN BY CHANGING THINGS')}</span>
+        <h3>{t('Inside the cluster')}</h3>
+        <p>{t('A visual simulation. Explore each view; nothing runs against a real cluster.')}</p>
       </div>
-      <div className={styles.tabs} role="tablist" aria-label="Explorer views">
+      <div className={styles.tabs} role="tablist" aria-label={t('Explorer views')}>
         {tabs.map(([key, label], index) => (
           <button
             key={key}
@@ -103,7 +108,7 @@ export function KubernetesExplorer() {
               document.getElementById(`${id}-${tabs[next][0]}-tab`)?.focus();
             }}
           >
-            {label}
+            {t(label)}
           </button>
         ))}
       </div>
@@ -128,6 +133,7 @@ export function KubernetesExplorer() {
 }
 
 function ImageJourney() {
+  const t = useUIText();
   const reduce = useReducedMotion();
   const [step, setStep] = useState(0);
   const [playing, setPlaying] = useState(false);
@@ -142,7 +148,7 @@ function ImageJourney() {
       <div className={styles.journey}>
         {journey.map(({ title, icon: Icon }, index) => (
           <button
-            key={title}
+            key={t(title)}
             type="button"
             onClick={() => {
               setStep(index);
@@ -154,7 +160,7 @@ function ImageJourney() {
               <Icon size={23} aria-hidden="true" />
             </span>
             <small>0{index + 1}</small>
-            {title}
+            {t(title)}
           </button>
         ))}
       </div>
@@ -166,9 +172,9 @@ function ImageJourney() {
         aria-live="polite"
       >
         <strong>
-          {step + 1}. {current.title}
+          {step + 1}. {t(current.title)}
         </strong>
-        <p>{current.detail}</p>
+        <p>{t(current.detail)}</p>
         <pre tabIndex={0}>
           <code>{current.code}</code>
         </pre>
@@ -183,7 +189,7 @@ function ImageJourney() {
             setStep(step - 1);
           }}
         >
-          Previous step
+          {t('Previous step')}
         </button>
         <button
           className="button button-primary"
@@ -194,24 +200,25 @@ function ImageJourney() {
             setStep(step + 1);
           }}
         >
-          Next step <ArrowRight size={15} />
+          {t('Next step')}
+          <ArrowRight size={15} />
         </button>
-        {!reduce && (
-          <button
-            className="button button-secondary"
-            type="button"
-            onClick={() => setPlaying(!playing)}
-          >
-            <Play size={15} />
-            {playing ? 'Pause animation' : 'Play animation'}
-          </button>
-        )}
+        <button
+          className={`button button-secondary ${styles.animationToggle}`}
+          type="button"
+          onClick={() => setPlaying(!playing)}
+        >
+          <Play size={15} />
+          {t(playing ? 'Pause animation' : 'Play animation')}
+        </button>
       </div>
     </>
   );
 }
 
 function Cluster() {
+  const t = useUIText();
+  const az = useLocale() === 'az';
   const reduce = useReducedMotion();
   const [replicas, setReplicas] = useState(3);
   const [generation, setGeneration] = useState(0);
@@ -241,14 +248,18 @@ function Cluster() {
     <>
       <div className={styles.controls}>
         <label>
-          Desired replicas
+          {t('Desired replicas')}
           <select
             value={replicas}
             disabled={recovering || rollout > 0}
             onChange={(e) => {
               const n = Number(e.target.value);
               setReplicas(n);
-              setMessage(`Scaled: the ReplicaSet now maintains ${n} ready Pods.`);
+              setMessage(
+                az
+                  ? `ReplicaSet indi ${n} Ready Pod saxlayır.`
+                  : `Scaled: the ReplicaSet now maintains ${n} ready Pods.`,
+              );
             }}
           >
             {[1, 2, 3, 4, 5].map((n) => (
@@ -259,7 +270,7 @@ function Cluster() {
         <span className={styles.chip}>namespace: demo</span>
         <button type="button" className="button button-secondary" onClick={reset}>
           <RotateCcw size={14} />
-          Reset cluster
+          {t('Reset cluster')}
         </button>
       </div>
       <div className={styles.deployment}>
@@ -269,7 +280,9 @@ function Cluster() {
           <small>replicas: {replicas} · maxSurge: 1 · maxUnavailable: 0</small>
         </div>
       </div>
-      <div className={styles.branch}>↓ manages ReplicaSets ↓</div>
+      <div className={styles.branch}>
+        {az ? '↓ ReplicaSet-ləri idarə edir ↓' : '↓ manages ReplicaSets ↓'}
+      </div>
       <div className={styles.replicaGrid}>
         {[{ version: 'v1', count: v1 }, ...(rollout ? [{ version: 'v2', count: v2 }] : [])].map(
           ({ version, count }) => (
@@ -278,7 +291,7 @@ function Cluster() {
                 <Boxes size={17} /> ReplicaSet / orders-{version}
               </strong>
               <small>
-                {count} ready {count === 1 ? 'Pod' : 'Pods'}
+                {count} {az ? 'Ready Pod' : count === 1 ? 'ready Pod' : 'ready Pods'}
               </small>
               <div className={styles.pods}>
                 <AnimatePresence initial={false}>
@@ -313,7 +326,7 @@ function Cluster() {
         )}
       </div>
       <p className={styles.status} role="status">
-        {message} Ready: {v1 + v2} / desired: {replicas}.
+        {t(message)} Ready: {v1 + v2} / {az ? 'hədəf' : 'desired'}: {replicas}.
       </p>
       <div className={styles.actions}>
         <button
@@ -328,7 +341,7 @@ function Cluster() {
           }}
         >
           <Trash2 size={15} />
-          Delete one Pod
+          {t('Delete one Pod')}
         </button>
         <button
           type="button"
@@ -346,20 +359,22 @@ function Cluster() {
             );
           }}
         >
-          {rollout === 0 ? 'Deploy v2' : rolling ? 'Next rollout step' : 'Rollout complete'}
+          {t(rollout === 0 ? 'Deploy v2' : rolling ? 'Next rollout step' : 'Rollout complete')}
           <ArrowRight size={15} />
         </button>
       </div>
       <p className={styles.note}>
-        Simplified model: each new Pod becomes ready immediately; terminating Pods, scheduling
-        delays and failures are omitted. Real rollouts can stall. Replacing a Pod does not restore
-        its local data.
+        {t(
+          'Simplified model: each new Pod becomes ready immediately; terminating Pods, scheduling delays and failures are omitted. Real rollouts can stall. Replacing a Pod does not restore its local data.',
+        )}
       </p>
     </>
   );
 }
 
 function Selectors() {
+  const t = useUIText();
+  const az = useLocale() === 'az';
   const [namespace, setNamespace] = useState('demo');
   const [app, setApp] = useState('orders');
   const pods = [
@@ -373,18 +388,18 @@ function Selectors() {
     <>
       <div className={styles.controls}>
         <label>
-          Service namespace
+          {t('Service namespace')}
           <select value={namespace} onChange={(e) => setNamespace(e.target.value)}>
             <option>demo</option>
             <option>production</option>
           </select>
         </label>
         <label>
-          Service selector
+          {t('Service selector')}
           <select value={app} onChange={(e) => setApp(e.target.value)}>
             <option value="orders">app: orders</option>
             <option value="catalog">app: catalog</option>
-            <option value="order">app: order (typo)</option>
+            <option value="order">app: order ({az ? 'yazılış xətası' : 'typo'})</option>
           </select>
         </label>
       </div>
@@ -397,7 +412,11 @@ function Selectors() {
           </small>
         </div>
       </div>
-      <div className={styles.branch}>↓ selects ready Pods in the same namespace ↓</div>
+      <div className={styles.branch}>
+        {az
+          ? '↓ eyni namespace-də Ready Pod-ları seçir ↓'
+          : '↓ selects ready Pods in the same namespace ↓'}
+      </div>
       <div className={styles.selectorGrid}>
         {pods.map((pod) => {
           const matched = matches.includes(pod);
@@ -410,26 +429,37 @@ function Selectors() {
               <strong>{pod.name}</strong>
               <small>namespace: {pod.namespace}</small>
               <small>app: {pod.app}</small>
-              <span>{matched ? '✓ Selected' : '— Not selected'}</span>
+              <span>{t(matched ? '✓ Selected' : '— Not selected')}</span>
             </div>
           );
         })}
       </div>
       <p className={styles.status} role="status">
-        {matches.length} matching ready {matches.length === 1 ? 'Pod' : 'Pods'}.{' '}
-        {matches.length === 0
-          ? 'No backends: check spelling and namespace before restarting containers.'
-          : 'A matching label alone is insufficient: namespace and readiness also matter.'}
+        {matches.length}{' '}
+        {az
+          ? 'uyğun Ready Pod'
+          : matches.length === 1
+            ? 'matching ready Pod'
+            : 'matching ready Pods'}
+        .{' '}
+        {t(
+          matches.length === 0
+            ? 'No backends: check spelling and namespace before restarting containers.'
+            : 'A matching label alone is insufficient: namespace and readiness also matter.',
+        )}
       </p>
       <p className={styles.note}>
-        A selector-based Service discovers Pods in its own namespace. Namespaces do not block
-        network traffic by themselves; use RBAC and supported NetworkPolicies for access control.
+        {t(
+          'A selector-based Service discovers Pods in its own namespace. Namespaces do not block network traffic by themselves; use RBAC and supported NetworkPolicies for access control.',
+        )}
       </p>
     </>
   );
 }
 
 function Configuration() {
+  const t = useUIText();
+  const az = useLocale() === 'az';
   const [config, setConfig] = useState('info');
   const [environment, setEnvironment] = useState('info');
   const [secretVersion, setSecretVersion] = useState(1);
@@ -440,7 +470,7 @@ function Configuration() {
         <div className={styles.configCard}>
           <FileCode2 size={25} />
           <strong>ConfigMap / orders-config</strong>
-          <p>Non-confidential configuration</p>
+          <p>{t('Non-confidential configuration')}</p>
           <label>
             LOG_LEVEL
             <select value={config} onChange={(e) => setConfig(e.target.value)}>
@@ -449,39 +479,49 @@ function Configuration() {
               <option>warn</option>
             </select>
           </label>
-          <small>Consumed as an environment variable</small>
+          <small>{t('Consumed as an environment variable')}</small>
         </div>
         <div className={styles.configCard}>
           <KeyRound size={25} />
-          <strong>Vault → Agent → shared file</strong>
-          <p>Credentials under a scoped policy</p>
-          <span className={styles.chip}>Rendered credential: version {secretVersion}</span>
+          <strong>{t('Vault → Agent → shared file')}</strong>
+          <p>{t('Credentials under a scoped policy')}</p>
+          <span className={styles.chip}>
+            {az ? 'Fayldakı credential versiyası' : 'Rendered credential: version'} {secretVersion}
+          </span>
           <button
             type="button"
             className="button button-secondary"
             onClick={() => setSecretVersion((v) => v + 1)}
           >
-            Simulate secret rotation
+            {t('Simulate secret rotation')}
           </button>
-          <small>Agent has fetched a new credential</small>
+          <small>{t('Agent has fetched a new credential')}</small>
         </div>
       </div>
       <div className={styles.deployment}>
         <Container size={24} />
         <div>
-          <strong>Application process</strong>
-          <small>Environment LOG_LEVEL: {environment}</small>
-          <small>Loaded credential: version {appVersion}</small>
+          <strong>{t('Application process')}</strong>
+          <small>
+            {az ? 'Environment daxilində LOG_LEVEL' : 'Environment LOG_LEVEL'}: {environment}
+          </small>
+          <small>
+            {az ? 'Oxunmuş credential versiyası' : 'Loaded credential: version'} {appVersion}
+          </small>
         </div>
         <ShieldCheck size={22} />
       </div>
       <p className={styles.status} role="status">
-        {config !== environment
-          ? 'ConfigMap changed. Existing environment variables keep their old value until the Pod is replaced. '
-          : 'Environment matches the ConfigMap snapshot. '}
-        {secretVersion !== appVersion
-          ? 'Agent updated the file; the application still needs to reload it.'
-          : 'Application has loaded the current credential file.'}
+        {t(
+          config !== environment
+            ? 'ConfigMap changed. Existing environment variables keep their old value until the Pod is replaced.'
+            : 'Environment matches the ConfigMap snapshot.',
+        )}{' '}
+        {t(
+          secretVersion !== appVersion
+            ? 'Agent updated the file; the application still needs to reload it.'
+            : 'Application has loaded the current credential file.',
+        )}
       </p>
       <div className={styles.actions}>
         <button
@@ -493,7 +533,7 @@ function Configuration() {
             setAppVersion(secretVersion);
           }}
         >
-          Recreate Pod for config
+          {t('Recreate Pod for config')}
         </button>
         <button
           type="button"
@@ -501,13 +541,13 @@ function Configuration() {
           disabled={secretVersion === appVersion}
           onClick={() => setAppVersion(secretVersion)}
         >
-          Reload credential file
+          {t('Reload credential file')}
         </button>
       </div>
       <p className={styles.note}>
-        Rotation is simulated: real Agent refresh depends on secret type and configuration. File
-        updates do not automatically update application memory or existing database connections.
-        ConfigMaps provide no secrecy; base64 in a Kubernetes Secret is encoding, not encryption.
+        {t(
+          'Rotation is simulated: real Agent refresh depends on secret type and configuration. File updates do not automatically update application memory or existing database connections. ConfigMaps provide no secrecy; base64 in a Kubernetes Secret is encoding, not encryption.',
+        )}
       </p>
     </>
   );

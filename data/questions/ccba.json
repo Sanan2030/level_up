@@ -576,7 +576,7 @@
     ],
     "correct": ["a", "b"],
     "explanation": {
-      "az": "Təsirlənən artefaktları izlənəbilənliklə tapın, sonra təsirləri qiymətləndirib uyğun qərarı alın.",
+      "az": "Təsirlənən artifact-ları izlənəbilənliklə tapın, sonra təsirləri qiymətləndirib uyğun qərarı alın.",
       "en": "Use traceability to identify affected artifacts, then assess impacts and seek the appropriate decision."
     },
     "lessonId": "traceability",
@@ -1066,7 +1066,7 @@
     "domain": "requirements-design",
     "difficulty": 2,
     "text": {
-      "az": "Hekayədə deyilir: “Alıcı kimi sifarişi ləğv etmək istəyirəm.” Hansı qəbul meyarı vacib biznes qaydasını yoxlanılan edər?",
+      "az": "Hekayədə deyilir: “Alıcı kimi sifarişi ləğv etmək istəyirəm.” Hansı acceptance criterion vacib biznes qaydasını yoxlanılan edər?",
       "en": "A story says, “As a buyer, I want to cancel an order.” Which acceptance criterion makes an important business rule testable?"
     },
     "options": [
@@ -1508,7 +1508,7 @@
       {
         "id": "a",
         "text": {
-          "az": "Təmsilçi biznes istifadəçiləri istisnalar daxil real tam ssenariləri razılaşdırılmış qəbul meyarları ilə yerinə yetirirlər.",
+          "az": "Təmsilçi biznes istifadəçiləri istisnalar daxil real tam ssenariləri razılaşdırılmış acceptance criteria ilə yerinə yetirirlər.",
           "en": "Representative business users complete realistic end-to-end scenarios, including exceptions, against agreed acceptance criteria."
         },
         "explanation": {

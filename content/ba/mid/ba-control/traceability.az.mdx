@@ -3,63 +3,86 @@ id: traceability
 locale: az
 title: 'Tələblərin izlənilməsi'
 objectives:
-  - 'Ehtiyac, tələb, dizayn, test və dəyər sübutunu əlaqələndir.'
-  - 'İki faktorlu autentifikasiya tələbi üçün izlənilmə cədvəli qur.'
+  - 'Qərarı dəstəkləyən trace relationship seç.'
+  - 'Dəyişikliyi requirement, design və test boyunca izlə.'
+  - 'Coverage link-i correctness sübutundan ayır.'
 ---
-
-> **Kurikulum planı — tam dərs hələ dərc edilməyib.** Bu səhifə planlaşdırılan öyrənmə fəaliyyətlərini təsvir edir. Planı oxumaq mövzunu mənimsəmək demək deyil.
 
 ## Öyrənmə məqsədləri
 
-- Ehtiyac, tələb, dizayn, test və dəyər sübutunu əlaqələndir.
-- İki faktorlu autentifikasiya tələbi üçün izlənilmə cədvəli qur.
+- Qərarı dəstəkləyən trace relationship seç.
+- Dəyişikliyi requirement, design və test boyunca izlə.
+- Coverage link-i correctness sübutundan ayır.
 
-## Niyə vacibdir
+## Bu mövzu niyə vacibdir
 
-Planlaşdırılan dərs **Tələblərin izlənilməsi** mövzusunun komandaya nə vaxt kömək etdiyini konkret qərarla göstərəcək. Fərziyyələr və təsirlənən tərəflər aydın qeyd ediləcək.
+Regulation refund deadline-ını dəyişir. Document-də refund axtarmaq qaydadan asılı report, customer message və delayed job-u qaçıra bilər. Traceability əlaqəni görünən edir və komandanın dəyişiklik öhdəliyindən əvvəl impact qiymətləndirməsinə kömək edir.
 
-## Əsas nəzəriyyə: dərs planı
+## Əsas anlayışlar
 
-1. Mövzunun əsas terminlərini müəyyən et.
-2. Ehtiyac, tələb, dizayn, test və dəyər sübutunu əlaqələndir.
-3. Faydalı tətbiqi inandırıcı, amma yanlış istifadə ilə müqayisə et.
-4. Qərarı dəyişə biləcək sübutu müəyyən et.
+Traceability business analysis məlumatını əlaqəli məlumatla bağlayır. Faydalı link requirement source-u, dəstəklədiyi need, onu reallaşdıran design, digər requirement asılılığı və verification testidir. Relationship sözlüyü təşkilatın qərarına uyğun olmalıdır; hər record cütünü bağlamaq lazım deyil.
 
-## İşlənmiş nümunə: dərs planı
+Forward tracing need-i nəyin reallaşdırdığını və necə yoxlanacağını soruşur. Backward tracing component, requirement və test-in niyə mövcudluğunu soruşur. İkisi missing work və əsaslandırılmamış scope tapır. Source-u məlum olmayan feature yenə dəyərli ola bilər; avtomatik qəbul/silmək əvəzinə rationale araşdırılmalıdır.
 
-İki faktorlu autentifikasiya tələbi üçün izlənilmə cədvəli qur. Tam nümunədə kontekst, məhdudiyyətlər, alternativlər, qərar və nəticənin yoxlanılması olacaq.
+Relation-u sübutdan ayır. Requirement-in test-ə bağlanması coverage əlaqəsidir. Test-in işləyib-işləmədiyi, təmsilçi şəraitdə keçməsi və düzgün qaydanı yoxlaması ayrıca sualdır. Coverage faizi zəif və köhnəlmiş testi gizlədə bilər.
 
-## Diaqram: dərs planı
+Sabit identifier, aydın link type, version və ownership istifadə et. Baseline qərar/release üçün istifadə edilmiş information state-i göstərir. Requirement/design dəyişəndə tarixi əlaqələri saxla ki, əvvəlki release anlaşılsın. Bütün keçmiş test nəticəsini səssiz yeni requirement version-a yönəltmə.
 
-Planlaşdırılan vizual: **Tələblərin izlənilməsi** mövzusunda iştirakçılar, qərarlar və sübutların işarələnmiş görünüşü. Diaqramın mətn izahı da veriləcək.
+İdarəolunmaz matrix yaratmadan impact analysis üçün yetərli detal saxla. Yüksək riskli rule, regulated behavior və shared interface çox vaxt müvəqqəti experiment-dən güclü sübut tələb edir. Orphan record, broken link və dependency dəyişikliyinə bax. Traceability mühakiməyə kömək edir; change-in dəyərini avtomatik seçmir.
 
-## İnteraktiv məşq: dərs planı
+## İşlənmiş nümunə
 
-Planlaşdırılan fəaliyyət: ssenari üçün addım seç, nəticəsini aç və yeni sübut gəldikdə seçimi yenilə. Klaviatura ilə işləyən alternativ olacaq.
+`OBJ-2` objective-i qarşısı alınan duplicate refund-u azaltmaqdır. `REF-014` refund-u remaining amount-la məhdudlaşdırır. `API-9` design authorization/deduplication sərhədini implement edir. `T-31`/`T-32` normal və repeated request yoxlayır; `OPS-7` support proseduru unknown provider outcome-u idarə edir.
 
-## Tipik səhvlər və yaxşı təcrübələr
+Partial refund təklifi amount calculation, API schema, customer communication və reconciliation-a toxunur. Analyst link-ləri izləyib sahiblərdən impact istəyir, dəyişəcək test version-larını qeydə alır. Full refund üçün keçən test tarixi sübut kimi qalır; partial refund correctness sübutu kimi verilmir.
 
-- Şablonu və ya çərçivəni sübutla qarışdırma.
-- Addım tövsiyə etməzdən əvvəl konteksti və qərar sahibini göstər.
-- Sənəd və ya funksiya sayını deyil, nəticələri müqayisə et.
+## Vizual model
 
-## Praktik tapşırıq və nümunə həll planı
+<Diagram
+  chart={
+    'flowchart LR\n O[Business objective] --> R[Versioned requirement]\n R --> D[Design and interface]\n R --> P[Operational procedure]\n D --> T[Tests and execution evidence]\n R --> C[Change impact review]'
+  }
+/>
 
-**Tapşırıq:** İki faktorlu autentifikasiya tələbi üçün izlənilmə cədvəli qur.
+Hər sərhəddə qərarı və onu əsaslandıran sübutu izlə. Diaqram orijinal öyrənmə modelidir; formal notasiya validator-u deyil.
 
-**Nümunə həll planı:** problemi yaz, fərziyyələri sadala, seçimləri müqayisə et, addımı əsaslandır və növbəti yoxlanışı müəyyən et. Tam dərslə birlikdə işlənmiş cavab əlavə ediləcək.
+## Qərarı təhlil et
 
-## Mini-test: dərs planı
+<details>
+<summary>Hər requirement-ə ən az bir test bağlıdır. Solution mütləq verify olunubmu?</summary>
 
-Tam dərsdə terminlər, ssenarinin tətbiqi və seçimlər üzrə orijinal suallar, düzgün və yanlış cavabların izahı olacaq. Bu planda dərs testi hələ dərc edilməyib.
+Xeyr. Link nəzərdə tutulan coverage-i göstərir, uğurlu execution və yetərli assertion-u yox. Test-in nəyi yoxladığını, requirement version-u, environment-i və actual nəticəni araşdır. Risk tələb etdikdə mənfi/istisna path əlavə et.
 
-## Bir səhifəlik xülasə planı
+</details>
 
-Yekun yaddaş vərəqi mövzunun məqsədini, girişlərini, qərarlarını, çıxışlarını və baxış siyahısını ümumiləşdirəcək.
+## Tipik səhvlər
 
-## Əlavə oxu
+- Yalnız link sayını ölçmək.
+- Müvafiq requirement-i göstərmədən document-ə bağlamaq.
+- Qayda dəyişəndə historical relationship silmək.
+- Traceability alətini qərarın sahibi saymaq.
 
-- [Scrum Guide, rəsmi mənbə](https://scrumguides.org/scrum-guide.html)
-- [IIBA biznes analizi resursları](https://www.iiba.org/business-analysis-blogs/)
+## Praktik tapşırıq
 
-İstiqamətinə uyğun mənbədən istifadə et. Rəsmi sertifikasiya formatı və uyğunluq şərtləri ayrıca yoxlanmalıdır.
+Maximum transfer qaydası üçün kiçik trace chain qur: objective, requirement, API design, negative test və support procedure. Limit artımının iki təsirini tap.
+
+## Nümunə həll
+
+<details>
+<summary>Nümunə həlli göstər</summary>
+
+Objective-i sabit transfer limit requirement-inə, sonra server-side validation, boundary value test və escalation proseduruna bağla. Limit artımı risk policy, authorization, transaction monitoring, client message və test-i dəyişə bilər. Aidiyyəti sahiblərdən qiymətləndirmə istə; approved requirement version və verification sübutunu saxla.
+
+</details>
+
+## Bilik yoxlaması və yaddaş vərəqi
+
+Source → need → requirement → design → test evidence → delivered version. Həm “bu niyə var?”, həm “qayda dəyişsə nə dəyişir?” soruş.
+
+<LessonCheck />
+
+## Mənbələr və əlavə oxu
+
+[BABOK Guide v3, IIBA (2015)](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/). Təqdim edilmiş kitabın seçilmiş bölmələri orijinal izah və ssenariləri dəstəkləyir; mənbə mətni və üzvlər üçün PDF yayılmır.
+
+Seçilmiş bölmələr: §5.1 Trace Requirements, §5.2 Maintain Requirements, §5.4 Assess Requirements Changes və §3.4 Plan Business Analysis Information Management.

@@ -1,8 +1,9 @@
+import { pageMetadata } from '@/lib/page-metadata';
 import Link from 'next/link';
 import { ExternalLink, BookOpen } from 'lucide-react';
 import { sources } from '@/lib/sources';
 import { getLocale } from '@/lib/i18n';
-export const metadata = { title: 'Sources' };
+export const generateMetadata = pageMetadata('Sources', 'Mənbələr');
 export default async function SourcesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: raw } = await params;
   const locale = getLocale(raw);
@@ -15,7 +16,7 @@ export default async function SourcesPage({ params }: { params: Promise<{ locale
         </h1>
         <p className="muted">
           {az
-            ? 'PSPO dərsləri göndərilən kitab və üç bələdçi əsasında öz sözlərimizlə hazırlanıb. Hər dərsdə bölmə, hər yeni sualın izahında mənbə göstərilir.'
+            ? 'Dərslər göndərilən kitablara, rəsmi bələdçilərə, texniki standartlara və əlavə product resurslarına istinad edir. Reyestrdə oxunmuş nəşrlər və bölmələr göstərilir. Sualların izahında əsaslandırıcı mənbələrə istinad edilir.'
             : 'Lessons cite supplied books, official guides, technical standards and supplementary product resources. The register identifies editions and sections reviewed. Question explanations cite supporting sources.'}
         </p>
       </header>
@@ -52,7 +53,7 @@ export default async function SourcesPage({ params }: { params: Promise<{ locale
       </section>
       <p className="small muted">
         {az
-          ? 'Scrum Guide və Kanban Guide əsasında uyğunlaşdırılmış izahlar CC BY-SA 4.0 ilə paylaşılır; müəlliflər və nəşrlər yuxarıda göstərilib. Kitabın PDF-i saytda yayımlanmır.'
+          ? 'Scrum Guide, Kanban Guide və EBM Guide əsasında uyğunlaşdırılmış izahlar CC BY-SA 4.0 ilə paylaşılır; müəlliflər və nəşrlər yuxarıda göstərilib. Kitabın PDF-i saytda yayımlanmır.'
           : 'Adapted Scrum Guide, Kanban Guide and EBM Guide explanations are shared under CC BY-SA 4.0; authors and editions are credited above. The book PDF is not distributed on this site.'}{' '}
         <a className="text-link" href="https://creativecommons.org/licenses/by-sa/4.0/">
           CC BY-SA 4.0

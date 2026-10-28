@@ -3,63 +3,102 @@ id: integration-basics
 locale: az
 title: 'Asinxron inteqrasiya, webhook və transactional outbox'
 objectives:
-  - 'Təkrar cəhd, dublikat və idempotentlik daxil olmaqla sinxron çağırışları və hadisələri müqayisə et.'
-  - 'Ödəniş vaxt aşımından sonra müştəridən iki dəfə pul tutulmasının qarşısını izah et.'
+  - 'DB commit ilə message publish-in niyə fərqlənə bildiyini izah et.'
+  - 'Aydın transaction sərhədində outbox publishing və consumer deduplication qur.'
+  - 'Webhook üçün signature verification, replay handling və reconciliation müəyyən et.'
 ---
-
-> **Kurikulum planı — tam dərs hələ dərc edilməyib.** Bu səhifə planlaşdırılan öyrənmə fəaliyyətlərini təsvir edir. Planı oxumaq mövzunu mənimsəmək demək deyil.
 
 ## Öyrənmə məqsədləri
 
-- Təkrar cəhd, dublikat və idempotentlik daxil olmaqla sinxron çağırışları və hadisələri müqayisə et.
-- Ödəniş vaxt aşımından sonra müştəridən iki dəfə pul tutulmasının qarşısını izah et.
+- DB commit ilə message publish-in niyə fərqlənə bildiyini izah et.
+- Aydın transaction sərhədində outbox publishing və consumer deduplication qur.
+- Webhook üçün signature verification, replay handling və reconciliation müəyyən et.
 
-## Niyə vacibdir
+## Bu mövzu niyə vacibdir
 
-Planlaşdırılan dərs **İnteqrasiya və asinxron sərhədlər** mövzusunun komandaya nə vaxt kömək etdiyini konkret qərarla göstərəcək. Fərziyyələr və təsirlənən tərəflər aydın qeyd ediləcək.
+Commerce xidməti order-i commit edib OrderCreated publish etməmiş crash edir. Customer order nömrəsi görür, warehouse event almır. Əks sıra da risklidir: əvvəl publish DB transaction sonra rollback olanda shipment başlada bilər. Dizayn iki müstəqil sistemin birlikdə commit etdiyini fərz etmək əvəzinə boşluğu qarşılamalıdır.
 
-## Əsas nəzəriyyə: dərs planı
+## Əsas anlayışlar
 
-1. Mövzunun əsas terminlərini müəyyən et.
-2. Təkrar cəhd, dublikat və idempotentlik daxil olmaqla sinxron çağırışları və hadisələri müqayisə et.
-3. Faydalı tətbiqi inandırıcı, amma yanlış istifadə ilə müqayisə et.
-4. Qərarı dəyişə biləcək sübutu müəyyən et.
+Synchronous request caller time budget daxilində response gözləyir. Async iş acceptance-ı eventual completion-dan ayırır. Queue işi buferləyir, event baş verəni təsvir edir. Fərq payload-un JSON olmasında deyil, məsuliyyət və zamandadır.
 
-## İşlənmiş nümunə: dərs planı
+Transactional outbox business record və event record-u eyni local DB transaction-da yazır. Ayrı publisher committed event-i broker-ə göndərib sonra publication-u qeydə alır. Göndərdikdən sonra success yazmamış crash etsə təkrar göndərə bilər. Pattern commit/publish boşluğunu önləyir, duplicate delivery-ni tam silmir.
 
-Ödəniş vaxt aşımından sonra müştəridən iki dəfə pul tutulmasının qarşısını izah et. Tam nümunədə kontekst, məhdudiyyətlər, alternativlər, qərar və nəticənin yoxlanılması olacaq.
+Consumer sabit event ID ilə business effect-i eyni local transaction-da yaza bilər. ID artıq tətbiq edilibsə effect-i təkrarlamadan ack et. İlkin SELECT və əlaqəsiz INSERT concurrency zəmanəti deyil. DB uniqueness/transaction mexanizmi istifadə et. Retention gözlənilən redelivery/reconciliation müddətini əhatə etsin.
 
-## Diaqram: dərs planı
+Ordering ayrıca contract-dır. Event daha yenisindən sonra gələ bilər. Entity üzrə sequence/version seç, gap-i defer, reject və ya reconcile etməyi müəyyən et. Ayrı maşın timestamp-lərindən qlobal order çıxarma.
 
-Planlaşdırılan vizual: **İnteqrasiya və asinxron sərhədlər** mövzusunda iştirakçılar, qərarlar və sübutların işarələnmiş görünüşü. Diaqramın mətn izahı da veriləcək.
+Webhook HTTP callback-dir. Parsed content-ə güvənməzdən əvvəl provider signature-ını dəqiq ilkin body byte-larında yoxla. GitHub nümunəsi HMAC-SHA256 və X-Hub-Signature-256 istifadə edir; başqa provider fərqli header/algorithm seçir. Valid signature qorunan byte-ları authenticate edir; özü freshness, uniqueness, hər business effect üçün permission və eventual delivery sübut etmir.
 
-## İnteraktiv məşq: dərs planı
+## İşlənmiş nümunə
 
-Planlaşdırılan fəaliyyət: ssenari üçün addım seç, nəticəsini aç və yeni sübut gəldikdə seçimi yenilə. Klaviatura ilə işləyən alternativ olacaq.
+Orders service O-81 order-i və E-81 outbox event-i bir relational transaction-da saxlayır. İlk ack itirildiyi üçün worker E-81-i iki dəfə göndərir. Warehouse consumer processed-event record-da unique key-i stock reserve edən transaction-la birlikdə istifadə edir. Yalnız bir reservation commit olunur.
 
-## Tipik səhvlər və yaxşı təcrübələr
+```sql
+BEGIN;
+INSERT INTO processed_events (consumer_name, event_id)
+VALUES ('warehouse-reservation', 'E-81');
+-- A uniqueness conflict means this consumer already applied the event.
+UPDATE inventory SET reserved = reserved + 1
+WHERE sku = 'COURSE-1' AND available - reserved >= 1;
+-- Check the affected-row count; a failed reservation needs a business outcome.
+COMMIT;
+```
 
-- Şablonu və ya çərçivəni sübutla qarışdırma.
-- Addım tövsiyə etməzdən əvvəl konteksti və qərar sahibini göstər.
-- Sənəd və ya funksiya sayını deyil, nəticələri müqayisə et.
+Bu, tam DB implementasiyası deyil, transaction boundary pseudocode-udur. Uniqueness conflict seçilmiş DB transaction mexanizmi ilə idarə edilməlidir. Stock shortage sonsuz retry yox, explicit status və ya compensation workflow istəyən business rejection-dır.
 
-## Praktik tapşırıq və nümunə həll planı
+## Vizual model
 
-**Tapşırıq:** Ödəniş vaxt aşımından sonra müştəridən iki dəfə pul tutulmasının qarşısını izah et.
+<Diagram
+  chart={
+    'flowchart LR\n A["Order and outbox in one commit"] --> B["Publisher"]\n B --> C["Broker may redeliver"]\n C --> D["Consumer transaction"]\n D --> E["Deduplicate and apply effect"]'
+  }
+/>
 
-**Nümunə həll planı:** problemi yaz, fərziyyələri sadala, seçimləri müqayisə et, addımı əsaslandır və növbəti yoxlanışı müəyyən et. Tam dərslə birlikdə işlənmiş cavab əlavə ediləcək.
+İki atomik sərhəd local-dır: order/outbox commit və consumer deduplication/effect commit. Aralarındakı message təkrarlana bilər.
 
-## Mini-test: dərs planı
+## Qərarı təhlil et
 
-Tam dərsdə terminlər, ssenarinin tətbiqi və seçimlər üzrə orijinal suallar, düzgün və yanlış cavabların izahı olacaq. Bu planda dərs testi hələ dərc edilməyib.
+<details>
+<summary>Provider webhook-u düzgün imzalayıb. Event ID izləməsini keçmək olarmı?</summary>
 
-## Bir səhifəlik xülasə planı
+Xeyr. Həqiqi delivery retry ola bilər; freshness control yoxdursa köhnə signed body replay edilə bilər. Signature-ı yoxla, provider timestamp policy verirsə tətbiq et; authenticated event identifier və durable record ilə deduplicate et.
 
-Yekun yaddaş vərəqi mövzunun məqsədini, girişlərini, qərarlarını, çıxışlarını və baxış siyahısını ümumiləşdirəcək.
+</details>
 
-## Əlavə oxu
+## Tipik səhvlər
 
-- [Scrum Guide, rəsmi mənbə](https://scrumguides.org/scrum-guide.html)
-- [IIBA biznes analizi resursları](https://www.iiba.org/business-analysis-blogs/)
+- Scope göstərmədən “exactly once” demək transport delivery-ni bir committed business effect-lə qarışdırır.
+- Durable acceptance-dan əvvəl webhook ack etmək crash-də event itirə bilər.
+- Verification-dan əvvəl JSON re-serialize etmək byte-ı dəyişib qanuni signature-ı poza bilər.
+- Shared signing secret-i log-a yazmaq onunla gələn bütün future delivery-ni ifşa edir.
+- Əlaqəsiz Cosmos DB partition-larında outbox qurmaq mənbənin vermədiyi atomic boundary-ni fərz edir.
 
-İstiqamətinə uyğun mənbədən istifadə et. Rəsmi sertifikasiya formatı və uyğunluq şərtləri ayrıca yoxlanmalıdır.
+## Praktik tapşırıq
+
+Provider payment-confirmed webhook-u 72 saat redeliver edə bilər. Handler JSON parse edir, loyalty point əlavə edib 200 verir. Parallel duplicate, storage outage, old event və provider-specific signing key rotation daxil əvəzedici flow yaz.
+
+## Nümunə həll
+
+<details>
+<summary>Nümunə həlli göstər</summary>
+
+Body size həddi ilə raw byte oxu, qorunan active key ilə provider signing qaydasını yoxla, sənədləşmiş signed timestamp tolerance tətbiq et. Event schema validate et, expected merchant/account-a bağla. Bir local transaction-da provider/event ID yaz, point-i həmin event üçün bir dəfə tətbiq et. Parallel duplicate üçün uniqueness constraint istifadə et. Tanınmış duplicate point təkrarlamadan success ack ala bilər.
+
+Durable acceptance fail olarsa success iddiası deyil, documented retryable failure qaytar. Deduplication record-u ən az delivery/reconciliation policy müddətincə saxla; 72 saatdan uzun ola bilər. Planned key rotation-da yalnız configured provider overlap key-lərini müəyyən transition window-da qəbul et. Sübut natamamdırsa payment state-ni provider-lə reconcile et.
+
+</details>
+
+## Bilik yoxlaması və yaddaş vərəqi
+
+Business record + outbox birlikdə commit. Retry ilə publish. Deduplicate + effect birlikdə. Raw byte yoxla. Signature validity replay protection deyil. Async işi complete saymamış ordering, dead-letter handling və reconciliation qur.
+
+<LessonCheck />
+
+## Mənbələr və əlavə oxu
+
+- [Microsoft Transactional Outbox](https://learn.microsoft.com/en-us/azure/architecture/databases/guide/transactional-out-box-cosmos): problem, local transaction və publisher nümunəsi.
+- [GitHub webhook validation](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries): raw payload HMAC və timing-safe comparison.
+- [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110.html): §15.3.3, 202 Accepted mənası.
+
+SQL, retention seçimi və warehouse nümunəsi orijinal dizayn tapşırığıdır. Azure mənbəyindəki Cosmos DB implementasiyası same-logical-partition transaction tələb edir.

@@ -1,4 +1,5 @@
 'use client';
+import { useUIText } from '@/components/use-ui-text';
 
 import { useEffect, useRef, useState } from 'react';
 import {
@@ -12,6 +13,7 @@ import {
 } from '@/lib/labs/http';
 
 export function ApiLab({ initialExercise = 'read' }: { initialExercise?: string }) {
+  const t = useUIText();
   const initial = apiExercises.find((item) => item.id === initialExercise) ?? apiExercises[0];
   const [exerciseId, setExerciseId] = useState(initial.id);
   const exercise = apiExercises.find((item) => item.id === exerciseId)!;
@@ -111,15 +113,15 @@ export function ApiLab({ initialExercise = 'read' }: { initialExercise?: string 
   return (
     <section className="card lesson-lab stack" aria-labelledby="api-lab-title">
       <div>
-        <h2 id="api-lab-title">API lab</h2>
+        <h2 id="api-lab-title">{t('API lab')}</h2>
         <p className="small muted">
-          Send requests to a simulated orders service through this site. Only synthetic fixtures are
-          used; no external API is contacted. Each tab has separate fixture state, which resets on
-          reload.
+          {t(
+            'Send requests to a simulated orders service through this site. Only synthetic fixtures are used; no external API is contacted. Each tab has separate fixture state, which resets on reload.',
+          )}
         </p>
       </div>
       <label className="field-label" htmlFor="api-exercise">
-        API exercise
+        {t('API exercise')}
       </label>
       <select
         id="api-exercise"
@@ -130,33 +132,35 @@ export function ApiLab({ initialExercise = 'read' }: { initialExercise?: string 
       >
         {apiExercises.map((item) => (
           <option key={item.id} value={item.id}>
-            {item.title}
+            {t(item.title)}
           </option>
         ))}
       </select>
-      <p id="api-task">{exercise.task}</p>
+      <p id="api-task">{t(exercise.task)}</p>
       <details>
-        <summary>API contract and demo identities</summary>
+        <summary>{t('API contract and demo identities')}</summary>
         <p>
-          GET /orders or /orders/order-100. POST /orders creates an order. PATCH and DELETE address
-          an order and require If-Match. POST requires an Idempotency-Key. JSON bodies accept only
-          the fields described by the exercise.
+          {t(
+            'GET /orders or /orders/order-100. POST /orders creates an order. PATCH and DELETE address an order and require If-Match. POST requires an Idempotency-Key. JSON bodies accept only the fields described by the exercise.',
+          )}
         </p>
         <p>
-          Demo tokens: <code>Bearer demo-alice</code>, <code>Bearer demo-bob</code>,{' '}
-          <code>Bearer demo-reader</code>. Alice owns order-100; Bob owns order-200. The reader
-          token can only read Alice’s orders. Use these fixture tokens, not real credentials.
+          {t('Demo tokens:')} <code>Bearer demo-alice</code>, <code>Bearer demo-bob</code>,{' '}
+          <code>Bearer demo-reader</code>
+          {t(
+            '. Alice owns order-100; Bob owns order-200. The reader token can only read Alice’s orders. Use these fixture tokens, not real credentials.',
+          )}
         </p>
         <p>
-          The status below is the simulated service response. It is carried by a separate
-          same-origin lab request. This model does not provide real account security, durable
-          storage or network concurrency guarantees.
+          {t(
+            'The status below is the simulated service response. It is carried by a separate same-origin lab request. This model does not provide real account security, durable storage or network concurrency guarantees.',
+          )}
         </p>
       </details>
       <div className="lab-grid">
         <div className="stack">
           <label className="field-label" htmlFor="api-method">
-            Request method
+            {t('Request method')}
           </label>
           <select
             id="api-method"
@@ -173,7 +177,7 @@ export function ApiLab({ initialExercise = 'read' }: { initialExercise?: string 
             ))}
           </select>
           <label className="field-label" htmlFor="api-path">
-            Request path
+            {t('Request path')}
           </label>
           <input
             id="api-path"
@@ -187,7 +191,7 @@ export function ApiLab({ initialExercise = 'read' }: { initialExercise?: string 
             }}
           />
           <label className="field-label" htmlFor="api-headers">
-            Request headers (JSON)
+            {t('Request headers (JSON)')}
           </label>
           <textarea
             id="api-headers"
@@ -203,7 +207,7 @@ export function ApiLab({ initialExercise = 'read' }: { initialExercise?: string 
             }}
           />
           <label className="field-label" htmlFor="api-body">
-            Request body (JSON)
+            {t('Request body (JSON)')}
           </label>
           <textarea
             id="api-body"
@@ -221,42 +225,42 @@ export function ApiLab({ initialExercise = 'read' }: { initialExercise?: string 
           />
         </div>
         <div className="stack lab-response">
-          <h3>Sandbox response</h3>
+          <h3>{t('Sandbox response')}</h3>
           {result ? (
             <>
               <p role="status" className="lab-http-status">
                 {result.response.status} {result.response.statusText}
               </p>
-              <h4>Response headers</h4>
-              <pre tabIndex={0} aria-label="Response headers">
+              <h4>{t('Response headers')}</h4>
+              <pre tabIndex={0} aria-label={t('Response headers')}>
                 {JSON.stringify(result.response.headers, null, 2)}
               </pre>
-              <h4>Response body</h4>
-              <pre tabIndex={0} aria-label="Response body">
+              <h4>{t('Response body')}</h4>
+              <pre tabIndex={0} aria-label={t('Response body')}>
                 {result.response.status === 204
-                  ? '(no content)'
+                  ? t('(no content)')
                   : JSON.stringify(result.response.body, null, 2)}
               </pre>
             </>
           ) : (
-            <p className="muted">Send a request to inspect its status, headers and body.</p>
+            <p className="muted">{t('Send a request to inspect its status, headers and body.')}</p>
           )}
           <p className="small muted">
-            Demo orders: {state.orders.length} · recorded create operations:{' '}
+            {t('Demo orders:')} {state.orders.length} {t('· recorded create operations:')}{' '}
             {state.operations.length}
           </p>
           <details>
-            <summary>Inspect synthetic order state</summary>
+            <summary>{t('Inspect synthetic order state')}</summary>
             <pre tabIndex={0}>{JSON.stringify(state.orders, null, 2)}</pre>
           </details>
         </div>
       </div>
       <div className="button-row">
         <button className="button button-primary" type="button" disabled={busy} onClick={send}>
-          {busy ? 'Sending…' : 'Send request'}
+          {busy ? t('Sending…') : t('Send request')}
         </button>
         <button className="button button-secondary" type="button" onClick={() => reset()}>
-          Reset sandbox
+          {t('Reset sandbox')}
         </button>
         <button
           className="button button-secondary"
@@ -264,21 +268,21 @@ export function ApiLab({ initialExercise = 'read' }: { initialExercise?: string 
           disabled={busy || !result || !sent}
           onClick={() => result && sent && setFeedback(checkApiResult(exercise, sent, result))}
         >
-          Check API result
+          {t('Check API result')}
         </button>
       </div>
       <details>
-        <summary>Show API hint</summary>
-        <p>{exercise.hint}</p>
+        <summary>{t('Show API hint')}</summary>
+        <p>{t(exercise.hint)}</p>
       </details>
       {error && (
         <p role="alert" className="notice">
-          {error}
+          {t(error)}
         </p>
       )}
       {feedback && (
         <p role="status" className={feedback.correct ? 'notice lab-correct' : 'notice'}>
-          {feedback.message}
+          {t(feedback.message)}
         </p>
       )}
     </section>

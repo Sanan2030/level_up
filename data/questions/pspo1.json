@@ -7,7 +7,7 @@
     "difficulty": 1,
     "text": {
       "en": "A stakeholder says the Product Owner’s job is to relay requests unchanged. Which responsibility should guide the response?",
-      "az": "Maraqlı tərəf Məhsul Sahibinin işinin istəkləri dəyişmədən ötürmək olduğunu deyir. Cavabı hansı məsuliyyət yönləndirməlidir?"
+      "az": "Maraqlı tərəf Product Owner-in işinin istəkləri dəyişmədən ötürmək olduğunu deyir. Cavabı hansı məsuliyyət yönləndirməlidir?"
     },
     "options": [
       {
@@ -25,22 +25,22 @@
         "id": "b",
         "text": {
           "en": "Have the Product Owner assign individual technical tasks.",
-          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+          "az": "Fərdi texniki tapşırıqları Product Owner-in paylaması."
         },
         "explanation": {
           "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
-          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Developersdan alır."
         }
       },
       {
         "id": "c",
         "text": {
           "en": "Make a committee collectively accountable as the Product Owner.",
-          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+          "az": "Komitəni kollektiv şəkildə Product Owner kimi hesabatlı etmək."
         },
         "explanation": {
           "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
-          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+          "az": "Komitə vahid Product Owner-in hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
         }
       }
     ],
@@ -71,7 +71,7 @@
         },
         "explanation": {
           "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
-          "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+          "az": "Product Goal Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
         }
       },
       {
@@ -89,7 +89,7 @@
         "id": "c",
         "text": {
           "en": "Use higher story-point velocity as the primary proof of product value.",
-          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək story point sürətini istifadə etmək."
         },
         "explanation": {
           "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
@@ -100,7 +100,7 @@
     "correct": ["a"],
     "explanation": {
       "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
-      "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+      "az": "Product Goal Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
     },
     "lessonId": "pspo1-artifacts",
     "practiceOnly": true
@@ -146,7 +146,7 @@
         },
         "explanation": {
           "en": "The Product Owner remains accountable for effective Product Backlog management, including ordering.",
-          "az": "Məhsul Sahibi sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
+          "az": "Product Owner sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
         }
       }
     ],
@@ -166,47 +166,47 @@
     "difficulty": 1,
     "text": {
       "en": "The Product Owner starts assigning database tasks to individual Developers. What should change?",
-      "az": "Məhsul Sahibi fərdi Tərtibatçılara verilənlər bazası tapşırıqları paylamağa başlayır. Nə dəyişməlidir?"
+      "az": "Product Owner fərdi Developersa verilənlər bazası tapşırıqları paylamağa başlayır. Nə dəyişməlidir?"
     },
     "options": [
       {
         "id": "a",
         "text": {
           "en": "Let Developers decide how to create the Increment.",
-          "az": "İnkrementin necə yaradılacağına Tərtibatçıların qərar verməsinə imkan yaratmaq."
+          "az": "Increment-in necə yaradılacağına Developers-in qərar verməsinə imkan yaratmaq."
         },
         "explanation": {
           "en": "Developers own the implementation plan and adapt it as they learn.",
-          "az": "Tərtibatçılar tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
+          "az": "Developers tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
         }
       },
       {
         "id": "b",
         "text": {
           "en": "Have the Product Owner assign individual technical tasks.",
-          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+          "az": "Fərdi texniki tapşırıqları Product Owner-in paylaması."
         },
         "explanation": {
           "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
-          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Developersdan alır."
         }
       },
       {
         "id": "c",
         "text": {
           "en": "Make a committee collectively accountable as the Product Owner.",
-          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+          "az": "Komitəni kollektiv şəkildə Product Owner kimi hesabatlı etmək."
         },
         "explanation": {
           "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
-          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+          "az": "Komitə vahid Product Owner-in hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "Developers own the implementation plan and adapt it as they learn.",
-      "az": "Tərtibatçılar tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
+      "az": "Developers tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
     },
     "lessonId": "scrum-accountabilities",
     "practiceOnly": true
@@ -219,18 +219,18 @@
     "difficulty": 1,
     "text": {
       "en": "Sprint Planning produces only a list of unrelated tasks. What would establish why this Sprint is worthwhile?",
-      "az": "Sprint Planlaması yalnız əlaqəsiz tapşırıq siyahısı yaradır. Sprintin niyə dəyərli olduğunu nə müəyyən edər?"
+      "az": "Sprint Planning yalnız əlaqəsiz tapşırıq siyahısı yaradır. Sprintin niyə dəyərli olduğunu nə müəyyən edər?"
     },
     "options": [
       {
         "id": "a",
         "text": {
           "en": "Collaborate on one Sprint Goal that explains the purpose.",
-          "az": "Məqsədi izah edən vahid Sprint Məqsədi üzərində əməkdaşlıq etmək."
+          "az": "Məqsədi izah edən vahid Sprint Goal üzərində əməkdaşlıq etmək."
         },
         "explanation": {
           "en": "The Sprint Goal creates focus while allowing flexibility in the exact work needed.",
-          "az": "Sprint Məqsədi diqqəti cəmləyir və tələb olunan konkret işdə çevikliyə imkan verir."
+          "az": "Sprint Goal diqqəti cəmləyir və tələb olunan konkret işdə çevikliyə imkan verir."
         }
       },
       {
@@ -241,14 +241,14 @@
         },
         "explanation": {
           "en": "Without a shared purpose, work loses focus and the Sprint Goal cannot guide adaptation.",
-          "az": "Ortaq məqsəd olmadan iş diqqətini itirir və Sprint Məqsədi uyğunlaşmaya istiqamət verə bilmir."
+          "az": "Ortaq məqsəd olmadan iş diqqətini itirir və Sprint Goal uyğunlaşmaya istiqamət verə bilmir."
         }
       },
       {
         "id": "c",
         "text": {
           "en": "Use higher story-point velocity as the primary proof of product value.",
-          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək story point sürətini istifadə etmək."
         },
         "explanation": {
           "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
@@ -259,7 +259,7 @@
     "correct": ["a"],
     "explanation": {
       "en": "The Sprint Goal creates focus while allowing flexibility in the exact work needed.",
-      "az": "Sprint Məqsədi diqqəti cəmləyir və tələb olunan konkret işdə çevikliyə imkan verir."
+      "az": "Sprint Goal diqqəti cəmləyir və tələb olunan konkret işdə çevikliyə imkan verir."
     },
     "lessonId": "pspo1-events",
     "practiceOnly": true
@@ -272,18 +272,18 @@
     "difficulty": 1,
     "text": {
       "en": "Developers discover that one planned task is unnecessary to achieve the Sprint Goal. What is an appropriate response?",
-      "az": "Tərtibatçılar planlaşdırılan işlərdən birinin Sprint Məqsədi üçün lazımsız olduğunu aşkar edirlər. Uyğun reaksiya nədir?"
+      "az": "Developers planlaşdırılan işlərdən birinin Sprint Goal üçün lazımsız olduğunu aşkar edirlər. Uyğun reaksiya nədir?"
     },
     "options": [
       {
         "id": "a",
         "text": {
           "en": "Discuss and renegotiate scope with the Product Owner while protecting the Sprint Goal.",
-          "az": "Sprint Məqsədini qoruyaraq Məhsul Sahibi ilə əhatəni müzakirə edib yenidən razılaşdırmaq."
+          "az": "Sprint Goal-u qoruyaraq Product Owner ilə əhatəni müzakirə edib yenidən razılaşdırmaq."
         },
         "explanation": {
           "en": "Learning can change the implementation scope without abandoning the Sprint Goal.",
-          "az": "Öyrənmə Sprint Məqsədindən imtina etmədən tətbiq əhatəsini dəyişə bilər."
+          "az": "Öyrənmə Sprint Goalndən imtina etmədən tətbiq əhatəsini dəyişə bilər."
         }
       },
       {
@@ -305,14 +305,14 @@
         },
         "explanation": {
           "en": "Without a shared purpose, work loses focus and the Sprint Goal cannot guide adaptation.",
-          "az": "Ortaq məqsəd olmadan iş diqqətini itirir və Sprint Məqsədi uyğunlaşmaya istiqamət verə bilmir."
+          "az": "Ortaq məqsəd olmadan iş diqqətini itirir və Sprint Goal uyğunlaşmaya istiqamət verə bilmir."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "Learning can change the implementation scope without abandoning the Sprint Goal.",
-      "az": "Öyrənmə Sprint Məqsədindən imtina etmədən tətbiq əhatəsini dəyişə bilər."
+      "az": "Öyrənmə Sprint Goalndən imtina etmədən tətbiq əhatəsini dəyişə bilər."
     },
     "lessonId": "pspo1-events",
     "practiceOnly": true
@@ -332,11 +332,11 @@
         "id": "a",
         "text": {
           "en": "Apply the shared Definition of Done before counting work as part of an Increment.",
-          "az": "İşi İnkrementə daxil etməzdən əvvəl ortaq Hazır Olma Tərifini tətbiq etmək."
+          "az": "İşi Increment-ə daxil etməzdən əvvəl ortaq Hazır Olma Tərifini tətbiq etmək."
         },
         "explanation": {
           "en": "Work that does not meet the Definition of Done is not a usable part of the Increment.",
-          "az": "Hazır Olma Tərifinə uyğun olmayan iş İnkrementin istifadə edilə bilən hissəsi sayılmır."
+          "az": "Hazır Olma Tərifinə uyğun olmayan iş Increment-in istifadə edilə bilən hissəsi sayılmır."
         }
       },
       {
@@ -347,7 +347,7 @@
         },
         "explanation": {
           "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
-          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır Increment yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
         }
       },
       {
@@ -365,7 +365,7 @@
     "correct": ["a"],
     "explanation": {
       "en": "Work that does not meet the Definition of Done is not a usable part of the Increment.",
-      "az": "Hazır Olma Tərifinə uyğun olmayan iş İnkrementin istifadə edilə bilən hissəsi sayılmır."
+      "az": "Hazır Olma Tərifinə uyğun olmayan iş Increment-in istifadə edilə bilən hissəsi sayılmır."
     },
     "lessonId": "pspo1-artifacts",
     "practiceOnly": true
@@ -460,11 +460,11 @@
         "id": "c",
         "text": {
           "en": "Make the Daily Scrum a status report to the Product Owner.",
-          "az": "Gündəlik Scrumu Məhsul Sahibinə status hesabatına çevirmək."
+          "az": "Gündəlik Scrumu Product Owner-ə status hesabatına çevirmək."
         },
         "explanation": {
           "en": "The Daily Scrum serves the Developers’ inspection and planning toward the Sprint Goal.",
-          "az": "Gündəlik Scrum Tərtibatçıların Sprint Məqsədinə doğru yoxlama və planlaşdırmasına xidmət edir."
+          "az": "Gündəlik Scrum Developers-in Sprint Goal-a doğru yoxlama və planlaşdırmasına xidmət edir."
         }
       }
     ],
@@ -484,47 +484,47 @@
     "difficulty": 1,
     "text": {
       "en": "At the Daily Scrum, Developers only recite yesterday’s tasks to a manager. What should the event help them do?",
-      "az": "Gündəlik Scrumda Tərtibatçılar yalnız dünənin işlərini rəhbərə sadalayırlar. Tədbir onlara nə etməyə kömək etməlidir?"
+      "az": "Gündəlik Scrumda Developers yalnız dünənin işlərini rəhbərə sadalayırlar. Tədbir onlara nə etməyə kömək etməlidir?"
     },
     "options": [
       {
         "id": "a",
         "text": {
           "en": "Inspect progress toward the Sprint Goal and adapt the plan.",
-          "az": "Sprint Məqsədinə doğru irəliləyişi yoxlayıb planı uyğunlaşdırmaq."
+          "az": "Sprint Goal-a doğru irəliləyişi yoxlayıb planı uyğunlaşdırmaq."
         },
         "explanation": {
           "en": "The Daily Scrum helps Developers coordinate and plan the next working day.",
-          "az": "Gündəlik Scrum Tərtibatçıların işi əlaqələndirməsinə və növbəti iş gününü planlaşdırmasına kömək edir."
+          "az": "Gündəlik Scrum Developers-in işi əlaqələndirməsinə və növbəti iş gününü planlaşdırmasına kömək edir."
         }
       },
       {
         "id": "b",
         "text": {
           "en": "Make the Daily Scrum a status report to the Product Owner.",
-          "az": "Gündəlik Scrumu Məhsul Sahibinə status hesabatına çevirmək."
+          "az": "Gündəlik Scrumu Product Owner-ə status hesabatına çevirmək."
         },
         "explanation": {
           "en": "The Daily Scrum serves the Developers’ inspection and planning toward the Sprint Goal.",
-          "az": "Gündəlik Scrum Tərtibatçıların Sprint Məqsədinə doğru yoxlama və planlaşdırmasına xidmət edir."
+          "az": "Gündəlik Scrum Developers-in Sprint Goal-a doğru yoxlama və planlaşdırmasına xidmət edir."
         }
       },
       {
         "id": "c",
         "text": {
           "en": "Have the Product Owner assign individual technical tasks.",
-          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+          "az": "Fərdi texniki tapşırıqları Product Owner-in paylaması."
         },
         "explanation": {
           "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
-          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Developersdan alır."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "The Daily Scrum helps Developers coordinate and plan the next working day.",
-      "az": "Gündəlik Scrum Tərtibatçıların işi əlaqələndirməsinə və növbəti iş gününü planlaşdırmasına kömək edir."
+      "az": "Gündəlik Scrum Developers-in işi əlaqələndirməsinə və növbəti iş gününü planlaşdırmasına kömək edir."
     },
     "lessonId": "pspo1-events",
     "practiceOnly": true
@@ -548,14 +548,14 @@
         },
         "explanation": {
           "en": "A usable Increment can be delivered before the Sprint ends; review timing does not define releasability.",
-          "az": "İstifadəyə hazır İnkrement Sprint bitmədən təqdim edilə bilər; icmalın vaxtı buraxılışa yararlılığı müəyyən etmir."
+          "az": "İstifadəyə hazır Increment Sprint bitmədən təqdim edilə bilər; icmalın vaxtı buraxılışa yararlılığı müəyyən etmir."
         }
       },
       {
         "id": "b",
         "text": {
           "en": "Require the Sprint Review before any usable Increment can be released.",
-          "az": "İstifadəyə hazır İnkrement buraxılmazdan əvvəl mütləq Sprint İcmalı tələb etmək."
+          "az": "İstifadəyə hazır Increment buraxılmazdan əvvəl mütləq Sprint İcmalı tələb etmək."
         },
         "explanation": {
           "en": "The Sprint Review is for inspection and adaptation; it is not a mandatory release approval gate.",
@@ -570,14 +570,14 @@
         },
         "explanation": {
           "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
-          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır Increment yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "A usable Increment can be delivered before the Sprint ends; review timing does not define releasability.",
-      "az": "İstifadəyə hazır İnkrement Sprint bitmədən təqdim edilə bilər; icmalın vaxtı buraxılışa yararlılığı müəyyən etmir."
+      "az": "İstifadəyə hazır Increment Sprint bitmədən təqdim edilə bilər; icmalın vaxtı buraxılışa yararlılığı müəyyən etmir."
     },
     "lessonId": "pspo1-events",
     "practiceOnly": true
@@ -590,18 +590,18 @@
     "difficulty": 1,
     "text": {
       "en": "A legal change makes the current Sprint Goal irrelevant. Who may cancel the Sprint on that basis?",
-      "az": "Qanun dəyişikliyi cari Sprint Məqsədini mənasız edir. Bu əsasla Sprinti kim ləğv edə bilər?"
+      "az": "Qanun dəyişikliyi cari Sprint Goal-u mənasız edir. Bu əsasla Sprinti kim ləğv edə bilər?"
     },
     "options": [
       {
         "id": "a",
         "text": {
           "en": "The Product Owner may cancel the Sprint if its goal becomes obsolete.",
-          "az": "Sprint Məqsədi aktuallığını itirərsə Məhsul Sahibi Sprinti ləğv edə bilər."
+          "az": "Sprint Goal aktuallığını itirərsə Product Owner Sprinti ləğv edə bilər."
         },
         "explanation": {
           "en": "Cancellation addresses an obsolete Sprint Goal rather than normal uncertainty about individual tasks.",
-          "az": "Ləğv etmə ayrı-ayrı işlərdə adi qeyri-müəyyənliyi deyil, aktuallığını itirmiş Sprint Məqsədini həll edir."
+          "az": "Ləğv etmə ayrı-ayrı işlərdə adi qeyri-müəyyənliyi deyil, aktuallığını itirmiş Sprint Goal-u həll edir."
         }
       },
       {
@@ -612,25 +612,25 @@
         },
         "explanation": {
           "en": "The Product Owner remains accountable for effective Product Backlog management, including ordering.",
-          "az": "Məhsul Sahibi sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
+          "az": "Product Owner sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
         }
       },
       {
         "id": "c",
         "text": {
           "en": "Make a committee collectively accountable as the Product Owner.",
-          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+          "az": "Komitəni kollektiv şəkildə Product Owner kimi hesabatlı etmək."
         },
         "explanation": {
           "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
-          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+          "az": "Komitə vahid Product Owner-in hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "Cancellation addresses an obsolete Sprint Goal rather than normal uncertainty about individual tasks.",
-      "az": "Ləğv etmə ayrı-ayrı işlərdə adi qeyri-müəyyənliyi deyil, aktuallığını itirmiş Sprint Məqsədini həll edir."
+      "az": "Ləğv etmə ayrı-ayrı işlərdə adi qeyri-müəyyənliyi deyil, aktuallığını itirmiş Sprint Goal-u həll edir."
     },
     "lessonId": "scrum-accountabilities",
     "practiceOnly": true
@@ -643,7 +643,7 @@
     "difficulty": 1,
     "text": {
       "en": "Upcoming backlog items are too broad to discuss sensibly in Sprint Planning. What ongoing activity helps?",
-      "az": "Qarşıdakı bekloq elementləri Sprint Planlamasında müzakirə üçün çox genişdir. Hansı davamlı fəaliyyət kömək edir?"
+      "az": "Qarşıdakı bekloq elementləri Sprint Planning-də müzakirə üçün çox genişdir. Hansı davamlı fəaliyyət kömək edir?"
     },
     "options": [
       {
@@ -696,29 +696,29 @@
     "difficulty": 1,
     "text": {
       "en": "A Product Owner delegates interview scheduling and backlog editing. What remains true about accountability?",
-      "az": "Məhsul Sahibi müsahibə vaxtlarının təyinini və bekloqun redaktəsini həvalə edir. Hesabatlılıq barədə nə doğrudur?"
+      "az": "Product Owner müsahibə vaxtlarının təyinini və bekloqun redaktəsini həvalə edir. Hesabatlılıq barədə nə doğrudur?"
     },
     "options": [
       {
         "id": "a",
         "text": {
           "en": "Keep one Product Owner accountable while involving others in the work.",
-          "az": "Başqalarını işə cəlb edərək bir Məhsul Sahibinin hesabatlılığını saxlamaq."
+          "az": "Başqalarını işə cəlb edərək bir Product Owner-in hesabatlılığını saxlamaq."
         },
         "explanation": {
           "en": "Delegating backlog work does not distribute the Product Owner accountability to a committee.",
-          "az": "Bekloq işinin həvalə edilməsi Məhsul Sahibinin hesabatlılığını komitəyə bölmür."
+          "az": "Bekloq işinin həvalə edilməsi Product Owner-in hesabatlılığını komitəyə bölmür."
         }
       },
       {
         "id": "b",
         "text": {
           "en": "Make a committee collectively accountable as the Product Owner.",
-          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+          "az": "Komitəni kollektiv şəkildə Product Owner kimi hesabatlı etmək."
         },
         "explanation": {
           "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
-          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+          "az": "Komitə vahid Product Owner-in hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
         }
       },
       {
@@ -729,14 +729,14 @@
         },
         "explanation": {
           "en": "The Product Owner remains accountable for effective Product Backlog management, including ordering.",
-          "az": "Məhsul Sahibi sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
+          "az": "Product Owner sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "Delegating backlog work does not distribute the Product Owner accountability to a committee.",
-      "az": "Bekloq işinin həvalə edilməsi Məhsul Sahibinin hesabatlılığını komitəyə bölmür."
+      "az": "Bekloq işinin həvalə edilməsi Product Owner-in hesabatlılığını komitəyə bölmür."
     },
     "lessonId": "scrum-accountabilities",
     "practiceOnly": true
@@ -767,22 +767,22 @@
         "id": "b",
         "text": {
           "en": "Have the Product Owner assign individual technical tasks.",
-          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+          "az": "Fərdi texniki tapşırıqları Product Owner-in paylaması."
         },
         "explanation": {
           "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
-          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Developersdan alır."
         }
       },
       {
         "id": "c",
         "text": {
           "en": "Make the Daily Scrum a status report to the Product Owner.",
-          "az": "Gündəlik Scrumu Məhsul Sahibinə status hesabatına çevirmək."
+          "az": "Gündəlik Scrumu Product Owner-ə status hesabatına çevirmək."
         },
         "explanation": {
           "en": "The Daily Scrum serves the Developers’ inspection and planning toward the Sprint Goal.",
-          "az": "Gündəlik Scrum Tərtibatçıların Sprint Məqsədinə doğru yoxlama və planlaşdırmasına xidmət edir."
+          "az": "Gündəlik Scrum Developers-in Sprint Goal-a doğru yoxlama və planlaşdırmasına xidmət edir."
         }
       }
     ],
@@ -855,7 +855,7 @@
     "difficulty": 1,
     "text": {
       "en": "A stakeholder asks whether a large uncertain feature will definitely be delivered by a date. What should the Product Owner communicate?",
-      "az": "Maraqlı tərəf böyük və qeyri-müəyyən funksiyanın müəyyən tarixə mütləq hazır olub-olmayacağını soruşur. Məhsul Sahibi nə bildirməlidir?"
+      "az": "Maraqlı tərəf böyük və qeyri-müəyyən funksiyanın müəyyən tarixə mütləq hazır olub-olmayacağını soruşur. Product Owner nə bildirməlidir?"
     },
     "options": [
       {
@@ -908,7 +908,7 @@
     "difficulty": 1,
     "text": {
       "en": "Developers need to clarify a user’s workflow. The Product Owner insists every sentence pass through them. What is a better approach?",
-      "az": "Tərtibatçılar istifadəçinin iş axınını dəqiqləşdirməlidirlər. Məhsul Sahibi hər sözün onun vasitəsilə keçməsini istəyir. Daha yaxşı yanaşma hansıdır?"
+      "az": "Developers istifadəçinin iş axınını dəqiqləşdirməlidirlər. Product Owner hər sözün onun vasitəsilə keçməsini istəyir. Daha yaxşı yanaşma hansıdır?"
     },
     "options": [
       {
@@ -919,7 +919,7 @@
         },
         "explanation": {
           "en": "Useful collaboration improves understanding; the Product Owner need not act as a message bottleneck.",
-          "az": "Faydalı əməkdaşlıq anlayışı artırır; Məhsul Sahibi məlumat ötürülməsində dar boğaz olmamalıdır."
+          "az": "Faydalı əməkdaşlıq anlayışı artırır; Product Owner məlumat ötürülməsində dar boğaz olmamalıdır."
         }
       },
       {
@@ -937,18 +937,18 @@
         "id": "c",
         "text": {
           "en": "Make a committee collectively accountable as the Product Owner.",
-          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+          "az": "Komitəni kollektiv şəkildə Product Owner kimi hesabatlı etmək."
         },
         "explanation": {
           "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
-          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+          "az": "Komitə vahid Product Owner-in hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "Useful collaboration improves understanding; the Product Owner need not act as a message bottleneck.",
-      "az": "Faydalı əməkdaşlıq anlayışı artırır; Məhsul Sahibi məlumat ötürülməsində dar boğaz olmamalıdır."
+      "az": "Faydalı əməkdaşlıq anlayışı artırır; Product Owner məlumat ötürülməsində dar boğaz olmamalıdır."
     },
     "lessonId": "scrum-accountabilities",
     "practiceOnly": true
@@ -983,7 +983,7 @@
         },
         "explanation": {
           "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
-          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır Increment yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
         }
       },
       {
@@ -1014,29 +1014,29 @@
     "difficulty": 1,
     "text": {
       "en": "The Product Owner disagrees with an estimate and wants to impose a smaller number. Who should size the work?",
-      "az": "Məhsul Sahibi təxminlə razı deyil və daha kiçik rəqəm qoymaq istəyir. İşi kim ölçməlidir?"
+      "az": "Product Owner təxminlə razı deyil və daha kiçik rəqəm qoymaq istəyir. İşi kim ölçməlidir?"
     },
     "options": [
       {
         "id": "a",
         "text": {
           "en": "Let the Developers who will do the work size it.",
-          "az": "İşi görəcək Tərtibatçıların onu ölçməsinə imkan yaratmaq."
+          "az": "İşi görəcək Developers-in onu ölçməsinə imkan yaratmaq."
         },
         "explanation": {
           "en": "The people performing the work are responsible for sizing and can discuss trade-offs with the Product Owner.",
-          "az": "İşi icra edənlər ölçməyə cavabdehdirlər və Məhsul Sahibi ilə alternativləri müzakirə edə bilərlər."
+          "az": "İşi icra edənlər ölçməyə cavabdehdirlər və Product Owner ilə alternativləri müzakirə edə bilərlər."
         }
       },
       {
         "id": "b",
         "text": {
           "en": "Have the Product Owner assign individual technical tasks.",
-          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+          "az": "Fərdi texniki tapşırıqları Product Owner-in paylaması."
         },
         "explanation": {
           "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
-          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Developersdan alır."
         }
       },
       {
@@ -1047,14 +1047,14 @@
         },
         "explanation": {
           "en": "The Product Owner remains accountable for effective Product Backlog management, including ordering.",
-          "az": "Məhsul Sahibi sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
+          "az": "Product Owner sıralama daxil olmaqla Məhsul Bekloqunun effektiv idarəsinə görə hesabatlı qalır."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "The people performing the work are responsible for sizing and can discuss trade-offs with the Product Owner.",
-      "az": "İşi icra edənlər ölçməyə cavabdehdirlər və Məhsul Sahibi ilə alternativləri müzakirə edə bilərlər."
+      "az": "İşi icra edənlər ölçməyə cavabdehdirlər və Product Owner ilə alternativləri müzakirə edə bilərlər."
     },
     "lessonId": "scrum-accountabilities",
     "practiceOnly": true
@@ -1138,11 +1138,11 @@
         "id": "b",
         "text": {
           "en": "Make a committee collectively accountable as the Product Owner.",
-          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+          "az": "Komitəni kollektiv şəkildə Product Owner kimi hesabatlı etmək."
         },
         "explanation": {
           "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
-          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+          "az": "Komitə vahid Product Owner-in hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
         }
       },
       {
@@ -1173,18 +1173,18 @@
     "difficulty": 1,
     "text": {
       "en": "During a Sprint, Developers learn a better implementation sequence. How should they regard the Sprint Backlog?",
-      "az": "Sprint zamanı Tərtibatçılar daha yaxşı tətbiq ardıcıllığı öyrənirlər. Sprint Bekloquna necə yanaşmalıdırlar?"
+      "az": "Sprint zamanı Developers daha yaxşı tətbiq ardıcıllığı öyrənirlər. Sprint Bekloquna necə yanaşmalıdırlar?"
     },
     "options": [
       {
         "id": "a",
         "text": {
           "en": "Treat the Sprint Backlog as the Developers’ evolving plan.",
-          "az": "Sprint Bekloqunu Tərtibatçıların dəyişən planı kimi qəbul etmək."
+          "az": "Sprint Bekloqunu Developers-in dəyişən planı kimi qəbul etmək."
         },
         "explanation": {
           "en": "The Sprint Backlog is adapted as Developers learn what is required to reach the Sprint Goal.",
-          "az": "Tərtibatçılar Sprint Məqsədinə çatmaq üçün nə lazım olduğunu öyrəndikcə Sprint Bekloqu uyğunlaşdırılır."
+          "az": "Developers Sprint Goal-a çatmaq üçün nə lazım olduğunu öyrəndikcə Sprint Bekloqu uyğunlaşdırılır."
         }
       },
       {
@@ -1202,18 +1202,18 @@
         "id": "c",
         "text": {
           "en": "Have the Product Owner assign individual technical tasks.",
-          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+          "az": "Fərdi texniki tapşırıqları Product Owner-in paylaması."
         },
         "explanation": {
           "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
-          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Developersdan alır."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "The Sprint Backlog is adapted as Developers learn what is required to reach the Sprint Goal.",
-      "az": "Tərtibatçılar Sprint Məqsədinə çatmaq üçün nə lazım olduğunu öyrəndikcə Sprint Bekloqu uyğunlaşdırılır."
+      "az": "Developers Sprint Goal-a çatmaq üçün nə lazım olduğunu öyrəndikcə Sprint Bekloqu uyğunlaşdırılır."
     },
     "lessonId": "pspo1-artifacts",
     "practiceOnly": true
@@ -1279,7 +1279,7 @@
     "difficulty": 1,
     "text": {
       "en": "The team delivers many features, but no one checks whether customers use them. What should the Product Owner add?",
-      "az": "Komanda çox funksiya verir, amma müştərilərin istifadə edib-etmədiyini heç kim yoxlamır. Məhsul Sahibi nə əlavə etməlidir?"
+      "az": "Komanda çox funksiya verir, amma müştərilərin istifadə edib-etmədiyini heç kim yoxlamır. Product Owner nə əlavə etməlidir?"
     },
     "options": [
       {
@@ -1297,7 +1297,7 @@
         "id": "b",
         "text": {
           "en": "Use higher story-point velocity as the primary proof of product value.",
-          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək story point sürətini istifadə etmək."
         },
         "explanation": {
           "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
@@ -1385,7 +1385,7 @@
     "difficulty": 1,
     "text": {
       "en": "The Product Goal is still useful, but evidence suggests a different feature would serve it better. What approach fits product ownership?",
-      "az": "Məhsul Məqsədi hələ faydalıdır, amma sübut başqa funksiyanın ona daha yaxşı xidmət edəcəyini göstərir. Hansı yanaşma uyğundur?"
+      "az": "Product Goal hələ faydalıdır, amma sübut başqa funksiyanın ona daha yaxşı xidmət edəcəyini göstərir. Hansı yanaşma uyğundur?"
     },
     "options": [
       {
@@ -1502,7 +1502,7 @@
         },
         "explanation": {
           "en": "An integrated Increment requires compatible quality standards and attention to cross-team integration.",
-          "az": "İnteqrasiya olunmuş İnkrement uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
+          "az": "İnteqrasiya olunmuş Increment uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
         }
       },
       {
@@ -1524,14 +1524,14 @@
         },
         "explanation": {
           "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
-          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır Increment yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
         }
       }
     ],
     "correct": ["a", "b"],
     "explanation": {
       "en": "An integrated Increment requires compatible quality standards and attention to cross-team integration.",
-      "az": "İnteqrasiya olunmuş İnkrement uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
+      "az": "İnteqrasiya olunmuş Increment uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
     },
     "lessonId": "pspo1-artifacts",
     "practiceOnly": true
@@ -1555,7 +1555,7 @@
         },
         "explanation": {
           "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
-          "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+          "az": "Product Goal Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
         }
       },
       {
@@ -1573,7 +1573,7 @@
         "id": "c",
         "text": {
           "en": "Use higher story-point velocity as the primary proof of product value.",
-          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək story point sürətini istifadə etmək."
         },
         "explanation": {
           "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
@@ -1584,7 +1584,7 @@
     "correct": ["a", "b"],
     "explanation": {
       "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
-      "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+      "az": "Product Goal Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
     },
     "lessonId": "pspo1-artifacts",
     "practiceOnly": true
@@ -1704,7 +1704,7 @@
     "domain": "scrum-application",
     "difficulty": 1,
     "text": {
-      "az": "Done İnkrement Sprint-in ortasında hazırdır. Scrum nəyi tələb edir?",
+      "az": "Done Increment Sprint-in ortasında hazırdır. Scrum nəyi tələb edir?",
       "en": "A Done Increment is ready halfway through a Sprint. What does Scrum require?"
     },
     "options": [
@@ -1715,7 +1715,7 @@
           "en": "Do not treat Review as a release gate."
         },
         "explanation": {
-          "az": "Scrum Guide: İnkrement Sprint bitmədən təqdim oluna bilər.",
+          "az": "Scrum Guide: Increment Sprint bitmədən təqdim oluna bilər.",
           "en": "Scrum Guide: an Increment may be delivered before the Sprint ends."
         }
       },
@@ -1737,14 +1737,14 @@
           "en": "Start a new Sprint."
         },
         "explanation": {
-          "az": "İnkrement yaranması Sprint-i bitirmir.",
+          "az": "Increment yaranması Sprint-i bitirmir.",
           "en": "Creating an Increment does not end the Sprint."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
-      "az": "Scrum Guide: İnkrement Sprint bitmədən təqdim oluna bilər.",
+      "az": "Scrum Guide: Increment Sprint bitmədən təqdim oluna bilər.",
       "en": "Scrum Guide: an Increment may be delivered before the Sprint ends."
     },
     "lessonId": "pspo1-events",
@@ -2370,7 +2370,7 @@
       {
         "id": "a",
         "text": {
-          "az": "Artefaktı görünən və başa düşülən edərək eyni əsasda yoxlamanı təmin etmək.",
+          "az": "Artifact-ı görünən və başa düşülən edərək eyni əsasda yoxlamanı təmin etmək.",
           "en": "Make the artifact visible and understood so inspection shares a common basis."
         },
         "explanation": {
@@ -2785,7 +2785,7 @@
           "en": "Treating quality solely as another phase’s problem."
         },
         "explanation": {
-          "az": "Bütün komanda faydalı İnkrement yaratmağa hesabatlıdır.",
+          "az": "Bütün komanda faydalı Increment yaratmağa hesabatlıdır.",
           "en": "The whole team is accountable for a useful Increment."
         }
       },
@@ -3336,7 +3336,7 @@
           "en": "Criteria may be lowered whenever the Product Owner agrees."
         },
         "explanation": {
-          "az": "Product Owner razılığı qeyri-Done işi keyfiyyətli İnkrement etmir.",
+          "az": "Product Owner razılığı qeyri-Done işi keyfiyyətli Increment etmir.",
           "en": "Product Owner agreement does not turn unfinished work into a quality Increment."
         }
       },
@@ -3347,7 +3347,7 @@
           "en": "Quality should be considered only in the following Sprint."
         },
         "explanation": {
-          "az": "Hər Sprint faydalı və dəyərli İnkrement tələb edir.",
+          "az": "Hər Sprint faydalı və dəyərli Increment tələb edir.",
           "en": "Every Sprint calls for a valuable, useful Increment."
         }
       }
@@ -4103,7 +4103,7 @@
     "domain": "scrum-application",
     "difficulty": 1,
     "text": {
-      "az": "Komanda burndown qrafikini yeniləyir. Scrum-un formal artefaktları barədə hansı fikir doğrudur?",
+      "az": "Komanda burndown qrafikini yeniləyir. Scrum-un formal artifact-ları barədə hansı fikir doğrudur?",
       "en": "The team maintains a burndown chart. Which statement about formal Scrum artifacts is correct?"
     },
     "options": [
@@ -4114,7 +4114,7 @@
           "en": "Product Backlog, Sprint Backlog and Increment are the three formal artifacts; burndown is a complementary technique."
         },
         "explanation": {
-          "az": "Guide proqnoz qrafiklərini faydalı, amma empirizmi əvəz etməyən təcrübələr kimi göstərir.",
+          "az": "Guide proqnoz qrafiklərini faydalı, amma empiricism-i əvəz etməyən təcrübələr kimi göstərir.",
           "en": "The Guide describes forecasting charts as useful practices that do not replace empiricism."
         }
       },
@@ -4125,7 +4125,7 @@
           "en": "Burndown is a fourth mandatory artifact."
         },
         "explanation": {
-          "az": "Scrum Guide yalnız üç formal artefakt müəyyən edir.",
+          "az": "Scrum Guide yalnız üç formal artifact müəyyən edir.",
           "en": "The Guide defines three formal artifacts."
         }
       },
@@ -4143,7 +4143,7 @@
     ],
     "correct": ["a"],
     "explanation": {
-      "az": "Guide proqnoz qrafiklərini faydalı, amma empirizmi əvəz etməyən təcrübələr kimi göstərir. Mənbə: Scrum Guide 2020 — Scrum Artifacts; The Sprint.",
+      "az": "Guide proqnoz qrafiklərini faydalı, amma empiricism-i əvəz etməyən təcrübələr kimi göstərir. Mənbə: Scrum Guide 2020 — Scrum Artifacts; The Sprint.",
       "en": "The Guide describes forecasting charts as useful practices that do not replace empiricism. Source: Scrum Guide 2020 — Scrum Artifacts; The Sprint."
     },
     "lessonId": "pspo1-artifacts",
@@ -4614,7 +4614,7 @@
     "domain": "scrum-application",
     "difficulty": 1,
     "text": {
-      "az": "İş Definition of Done-a uyğundur, amma Review hələ gələn həftədir. İnkrement nə vaxt yaranır?",
+      "az": "İş Definition of Done-a uyğundur, amma Review hələ gələn həftədir. Increment nə vaxt yaranır?",
       "en": "An item meets the Definition of Done, while Review is next week. When is an Increment created?"
     },
     "options": [
@@ -4625,7 +4625,7 @@
           "en": "When the item meets the Definition of Done."
         },
         "explanation": {
-          "az": "Guide İnkrementin yaranmasını Done meyarına uyğunlaşma ilə bağlayır.",
+          "az": "Guide Increment-in yaranmasını Done meyarına uyğunlaşma ilə bağlayır.",
           "en": "The Guide ties the birth of an Increment to meeting Done."
         }
       },
@@ -4636,7 +4636,7 @@
           "en": "Only when the Product Owner signs at Review."
         },
         "explanation": {
-          "az": "Review İnkrementin yaranması üçün təsdiq qapısı deyil.",
+          "az": "Review Increment-in yaranması üçün təsdiq qapısı deyil.",
           "en": "Review is not an approval gate for creating an Increment."
         }
       },
@@ -4654,7 +4654,7 @@
     ],
     "correct": ["a"],
     "explanation": {
-      "az": "Guide İnkrementin yaranmasını Done meyarına uyğunlaşma ilə bağlayır. Mənbə: Scrum Guide 2020 — Commitment: Definition of Done.",
+      "az": "Guide Increment-in yaranmasını Done meyarına uyğunlaşma ilə bağlayır. Mənbə: Scrum Guide 2020 — Commitment: Definition of Done.",
       "en": "The Guide ties the birth of an Increment to meeting Done. Source: Scrum Guide 2020 — Commitment: Definition of Done."
     },
     "lessonId": "pspo1-artifacts",
@@ -4668,14 +4668,14 @@
     "domain": "scrum-application",
     "difficulty": 1,
     "text": {
-      "az": "Bir Sprint-də iki İnkrement hazırlanır. Hansı iki şərh düzgündür? İki cavab seç.",
+      "az": "Bir Sprint-də iki Increment hazırlanır. Hansı iki şərh düzgündür? İki cavab seç.",
       "en": "Two Increments are created during one Sprint. Which two statements are correct? Select two."
     },
     "options": [
       {
         "id": "a",
         "text": {
-          "az": "Bir Sprint-də birdən çox İnkrement mümkündür.",
+          "az": "Bir Sprint-də birdən çox Increment mümkündür.",
           "en": "Multiple Increments can be created within one Sprint."
         },
         "explanation": {
@@ -4686,7 +4686,7 @@
       {
         "id": "b",
         "text": {
-          "az": "Hər İnkrement əvvəlkilərə əlavə olunmalı və birlikdə işləməsi yoxlanmalıdır.",
+          "az": "Hər Increment əvvəlkilərə əlavə olunmalı və birlikdə işləməsi yoxlanmalıdır.",
           "en": "Each Increment is additive to prior ones and verified to work together."
         },
         "explanation": {
@@ -4697,22 +4697,22 @@
       {
         "id": "c",
         "text": {
-          "az": "İkinci İnkrement keyfiyyət yoxlamalarını ötürə bilər.",
+          "az": "İkinci Increment keyfiyyət yoxlamalarını ötürə bilər.",
           "en": "The second Increment may skip quality checks."
         },
         "explanation": {
-          "az": "İnkrement olmaq üçün hər iş Definition of Done-a cavab verməlidir.",
+          "az": "Increment olmaq üçün hər iş Definition of Done-a cavab verməlidir.",
           "en": "Every item must meet Done to be part of an Increment."
         }
       },
       {
         "id": "d",
         "text": {
-          "az": "Birinci İnkrement hazır olan kimi Sprint avtomatik bitir.",
+          "az": "Birinci Increment hazır olan kimi Sprint avtomatik bitir.",
           "en": "The Sprint automatically ends when the first Increment is ready."
         },
         "explanation": {
-          "az": "İnkrementin yaranması sabit Sprint müddətini avtomatik bitirmir.",
+          "az": "Increment-in yaranması sabit Sprint müddətini avtomatik bitirmir.",
           "en": "Creating an Increment does not automatically end the fixed-length Sprint."
         }
       }
@@ -4762,11 +4762,11 @@
       {
         "id": "c",
         "text": {
-          "az": "Əsas hissəsi işləyirsə bitmiş İnkrement sayılır.",
+          "az": "Əsas hissəsi işləyirsə bitmiş Increment sayılır.",
           "en": "It counts as a completed Increment if the main part works."
         },
         "explanation": {
-          "az": "Definition of Done ödənmədən iş İnkrementin hissəsi deyil.",
+          "az": "Definition of Done ödənmədən iş Increment-in hissəsi deyil.",
           "en": "Work is not part of the Increment without meeting Done."
         }
       }
@@ -4906,14 +4906,14 @@
     "domain": "scrum-application",
     "difficulty": 1,
     "text": {
-      "az": "Elementin qəbul meyarları ödənib, amma ortaq Definition of Done-dakı yoxlama qalıb. Hansı nəticə düzgündür?",
+      "az": "Elementin acceptance criteria ödənib, amma ortaq Definition of Done-dakı yoxlama qalıb. Hansı nəticə düzgündür?",
       "en": "An item’s acceptance criteria are met, but a check in the shared Definition of Done is missing. What follows?"
     },
     "options": [
       {
         "id": "a",
         "text": {
-          "az": "Element hələ Done İnkrementin hissəsi deyil.",
+          "az": "Element hələ Done Increment-in hissəsi deyil.",
           "en": "The item is not yet part of a Done Increment."
         },
         "explanation": {
@@ -4924,11 +4924,11 @@
       {
         "id": "b",
         "text": {
-          "az": "Qəbul meyarları Done-u avtomatik ləğv edir.",
+          "az": "Acceptance criteria Done-u avtomatik ləğv edir.",
           "en": "Acceptance criteria automatically override Done."
         },
         "explanation": {
-          "az": "Scrum Guide Done-u İnkrement üçün ortaq keyfiyyət sərhədi kimi saxlayır.",
+          "az": "Scrum Guide Done-u Increment üçün ortaq keyfiyyət sərhədi kimi saxlayır.",
           "en": "The Guide retains Done as the Increment’s shared quality boundary."
         }
       },
@@ -4993,7 +4993,7 @@
           "en": "Complete certainty from the initial plan despite changing conditions."
         },
         "explanation": {
-          "az": "Bu, qeyri-müəyyənliyi və empirizmi nəzərə almır.",
+          "az": "Bu, qeyri-müəyyənliyi və empiricism-i nəzərə almır.",
           "en": "This ignores uncertainty and empiricism."
         }
       }
@@ -5047,14 +5047,14 @@
           "en": "Definition of Done."
         },
         "explanation": {
-          "az": "İnkrementin öhdəliyi Definition of Done-dur.",
+          "az": "Increment-in öhdəliyi Definition of Done-dur.",
           "en": "The Increment’s commitment is the Definition of Done."
         }
       }
     ],
     "correct": ["a", "b", "c"],
     "explanation": {
-      "az": "Product Backlog-un öhdəliyi Product Goal-dur. Sprint Backlog-un öhdəliyi Sprint Goal-dur. İnkrementin öhdəliyi Definition of Done-dur. Mənbə: Scrum Guide 2020 — Scrum Artifacts.",
+      "az": "Product Backlog-un öhdəliyi Product Goal-dur. Sprint Backlog-un öhdəliyi Sprint Goal-dur. Increment-in öhdəliyi Definition of Done-dur. Mənbə: Scrum Guide 2020 — Scrum Artifacts.",
       "en": "The Product Backlog’s commitment is the Product Goal. The Sprint Backlog’s commitment is the Sprint Goal. The Increment’s commitment is the Definition of Done. Source: Scrum Guide 2020 — Scrum Artifacts."
     },
     "lessonId": "pspo1-artifacts",

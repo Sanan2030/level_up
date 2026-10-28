@@ -15,7 +15,7 @@ content/ba/junior/requirements/acceptance-criteria.en.mdx
 
 The other roots are `content/po/` and `content/certs/`. For certification content, use the certification ID for the level-or-certification directory, for example `content/certs/pspo1/scrum/`. Track IDs are `ba`, `po`, `ecba`, `ccba`, `cbap`, `pspo1`, `pspo2`, and `pspo3`. Career level IDs are `zero`, `junior`, `mid`, and `lead`; `lead` is displayed as Lead/Senior where appropriate.
 
-The filename must be `<id>.<locale>.mdx`. Each language has its own body and objectives, while both files refer to the same metadata ID. The loader can label an English fallback if an Azerbaijani file is unavailable; publish the complete English lesson. AZ source files may remain as editorial archives; the public site is English only.
+The filename must be `<id>.<locale>.mdx`. Each language has its own body and objectives, while both files refer to the same metadata ID. Both files are required by content validation. Publish complete, reviewed content in both languages. Professional terms remain English; translate the surrounding explanation naturally. See [translation review rules](TRANSLATION_REVIEW.md).
 
 ## Add a lesson
 
@@ -28,7 +28,7 @@ The filename must be `<id>.<locale>.mdx`. Each language has its own body and obj
      "level": "junior",
      "moduleId": "ba-requirements",
      "title": {
-       "az": "Qəbul meyarları",
+       "az": "Acceptance criteria",
        "en": "Acceptance criteria"
      },
      "summary": {
@@ -43,7 +43,7 @@ The filename must be `<id>.<locale>.mdx`. Each language has its own body and obj
    ```
 
 2. Add the ID to the appropriate module's `lessonIds` in `data/modules.json`. A module identifies its track, level, localized title and description, estimated minutes, and prerequisite **module IDs**. Lesson prerequisites use **lesson IDs**. Keep relationships valid and acyclic; do not use titles as references. Recalculate module estimates when its lesson list changes.
-3. Add the English MDX file. An AZ editorial archive is optional. Start each with YAML frontmatter:
+3. Add matching English and Azerbaijani MDX files. Start each with YAML frontmatter:
 
    ```mdx
    ---
@@ -61,9 +61,9 @@ The filename must be `<id>.<locale>.mdx`. Each language has its own body and obj
    write examples a team can verify.
    ```
 
-4. Write the content using the complete lesson structure below. If the file is an outline, say so explicitly and include a useful learning sequence and practice plan. Keep `status: "planned"` until the complete lesson is ready in English. `published` means a complete lesson, not simply a file that exists.
+4. Write the content using the complete lesson structure below. If the file is an outline, say so explicitly and include a useful learning sequence and practice plan. Keep `status: "planned"` until the complete lesson is ready in both languages. `published` means a complete lesson, not simply a file that exists.
 5. Add relevant glossary entries or questions if needed. Update related references using the stable lesson ID.
-6. Run content validation, formatting, tests, and a production build. Review the rendered English lesson and its terminology support at a narrow viewport. Submit a pull request; CI must pass before merge.
+6. Run content validation, formatting, tests, and a production build. Review both rendered language versions and their terminology at a narrow viewport. Submit a pull request; CI must pass before merge.
 
 The canonical field definitions are Zod schemas in `lib/types.ts`. The frontmatter schema is in `lib/content.ts`. Validation checks metadata and content relationships; a valid schema does not replace educational or factual review. Do not silently weaken validation to make a content change pass.
 
@@ -89,7 +89,7 @@ Do not copy BABOK prose, exam questions, paid course exercises, or diagrams you 
 
 The lesson renderer supplies `Diagram` and `ConceptStepper`; lesson authors do not need to add React imports.
 
-`KubernetesExplorer` is also available for the Docker and Kubernetes masterclass. It provides an image delivery walkthrough, a simplified ReplicaSet recovery and rolling-update simulation, Service label/namespace selection, and ConfigMap/Vault refresh experiments. Embed it as `<KubernetesExplorer />`; it does not access a real cluster. It uses the public site's English interface and respects reduced motion.
+`KubernetesExplorer` is also available for the Docker and Kubernetes masterclass. It provides an image delivery walkthrough, a simplified ReplicaSet recovery and rolling-update simulation, Service label/namespace selection, and ConfigMap/Vault refresh experiments. Embed it as `<KubernetesExplorer />`; it does not access a real cluster. It follows the current AZ/EN interface language and respects reduced motion.
 
 ```mdx
 <Diagram
@@ -101,7 +101,7 @@ The lesson renderer supplies `Diagram` and `ConceptStepper`; lesson authors do n
 <ConceptStepper locale="en" />
 ```
 
-The public renderer uses English; Azerbaijani meanings and explanations belong in the Translate dictionary. `ConceptStepper` currently explains understanding a goal, choosing a small step, testing, and adapting; use it where that cycle fits the topic. Do not label it as a different simulator or imply that it models every framework.
+The public renderer follows the selected locale. Use the matching locale for `ConceptStepper`. `ConceptStepper` currently explains understanding a goal, choosing a small step, testing, and adapting; use it where that cycle fits the topic. Do not label it as a different simulator or imply that it models every framework.
 
 Keep chart labels short and provide an adjacent text explanation of the relationship, so the lesson remains useful if a diagram cannot render or is not visually accessible. Mermaid uses strict rendering security. Motion must respect the learner's reduced-motion preference. Use standard Markdown headings, lists, links, tables, and fenced code blocks. Give images meaningful alt text; avoid conveying an answer only through color.
 
@@ -144,7 +144,7 @@ npm test
 npm run build
 ```
 
-Before merging, verify that the English lesson renders, planned content is clearly labeled, diagrams have a readable text explanation, referenced lessons exist, and the lesson's estimate is reasonable. Review source accuracy and teaching quality separately from automated checks.
+Before merging, verify that both language versions render, planned content is clearly labeled, diagrams have a readable text explanation, referenced lessons exist, and the lesson's estimate is reasonable. Review source accuracy and teaching quality separately from automated checks.
 
 ## Terminology helper
 

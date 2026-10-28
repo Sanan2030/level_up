@@ -3,63 +3,76 @@ id: cbap-strategy
 locale: az
 title: 'Qeyri-müəyyənlikdə strateji analiz'
 objectives:
-  - 'Cari vəziyyət məhdudiyyətlərini, gələcək seçimləri və dəyişiklik strategiyalarını müqayisə et.'
-  - 'Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.'
+  - 'Həlli əvvəlcədən sabitləmədən current state-i təhlil et və future state müəyyən et.'
+  - 'Change strategy, risk, capability gap və transition state variantlarını müqayisə et.'
 ---
 
-> **Kurikulum planı — tam dərs hələ dərc edilməyib.** Bu səhifə planlaşdırılan öyrənmə fəaliyyətlərini təsvir edir. Planı oxumaq mövzunu mənimsəmək demək deyil.
+## Əsas anlayış
 
-## Öyrənmə məqsədləri
-
-- Cari vəziyyət məhdudiyyətlərini, gələcək seçimləri və dəyişiklik strategiyalarını müqayisə et.
-- Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.
+Strategy Analysis vacib need-i əsaslandırılan change yanaşmasına bağlayır. Analiz vahidi enterprise, business area, product və ya kiçik initiative ola bilər. BABOK v3 current state anlamağı, future state müəyyən etməyi, risk qiymətləndirməyi və change strategy tövsiyəsini ayırır. Bu fəaliyyətlər requirement/design seçiminə kontekst verir. Strategy yalnız texnologiya seçimi və detallı delivery schedule deyil.
 
 ## Niyə vacibdir
 
-Planlaşdırılan dərs **Qeyri-müəyyənlikdə strateji analiz** mövzusunun komandaya nə vaxt kömək etdiyini konkret qərarla göstərəcək. Fərziyyələr və təsirlənən tərəflər aydın qeyd ediləcək.
+Əsas constraint policy, missing skill və ya handoff olduğu halda sponsor yeni platforma istəyə bilər. Platformadan başlamaq need anlaşılmadan alternativi daraldır. Əks tərəfdə enterprise-in hər detalını sənədləşdirmək qərara faydasız vaxt apara bilər. Niyə change lazımdır, nə təsirlənir, progress necə ölçülür anlamaq qədər current state araşdır. Scope-u ixtiyari organization chart deyil, need ətrafında qur.
 
-## Əsas nəzəriyyə: dərs planı
+## Nəzəriyyə və fərqlər
 
-1. Mövzunun əsas terminlərini müəyyən et.
-2. Cari vəziyyət məhdudiyyətlərini, gələcək seçimləri və dəyişiklik strategiyalarını müqayisə et.
-3. Faydalı tətbiqi inandırıcı, amma yanlış istifadə ilə müqayisə et.
-4. Qərarı dəyişə biləcək sübutu müəyyən et.
+**Current state:** aid capability, process, people, technology, information, policy və external influence yoxla. Proposed solution-da gizli assumption-u sına. Need strategic goal, operational problem, management information gap və external driver-dən çıxa bilər. Analiz gedərkən mövcud şərait dəyişə bilər.
 
-## İşlənmiş nümunə: dərs planı
+**Future state:** yanaşmaları müqayisə/value qiymətləndirməyə yetərli detallarla need-i ödəyən şərt/outcome təsvir et. Mütləq implementation-ready design olduğunu fərz etmə. Value naməlumdursa faydalı measure seç, variant araşdır. **Risk:** mümkün mənfi consequence, impact, likelihood və timing-i yoxla. Assessment current state, transition və future operation-a aid ola bilər. Bu task qeyri-müəyyən mənfi outcome-a fokuslanır; opportunity need kimi qarşılanır.
 
-Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et. Tam nümunədə kontekst, məhdudiyyətlər, alternativlər, qərar və nəticənin yoxlanılması olacaq.
+**Change strategy:** current/future state, risk və stakeholder engagement ilə alternativi müqayisə et. Capability gap, investment, resource, scope və transition state tap. Transition yalnız bəzi capability/benefit verə bilər; limiti açıq göstər. Sübutdan asılı olaraq kiçik change, exploratory pilot, phased implementation və ya change etməmək əsaslı ola bilər. Tövsiyə olunan yolun adını demək deyil, niyə uyğunluğunu izah et.
 
-## Diaqram: dərs planı
+## İşlənmiş nümunə
 
-Planlaşdırılan vizual: **Qeyri-müəyyənlikdə strateji analiz** mövzusunda iştirakçılar, qərarlar və sübutların işarələnmiş görünüşü. Diaqramın mətn izahı da veriləcək.
+Regional sığortaçı claim settlement-i sürətləndirmək istəyir. Rəhbərlik claims platformasını dəyişməyi təklif edir. İlkin araşdırma software lookup-un ləngliyini, amma əsas delay-in şöbələrdə təkrarlanan approval rule-dan gəldiyini tapır. Bəzi filiallarda mövcud capability üçün təlimli işçi yoxdur.
 
-## İnteraktiv məşq: dərs planı
+Future state “platforma quraşdırıldı” deyil, məqbul error exposure ilə daha qısa, etibarlı settlement-dir. Analiz process/training müdaxiləsini, phased platform change və geniş replacement-i müqayisə edir. Process pilot erkən sübut verib integration limit-i həll etməyə bilər. Platform pilot riskli dependency-ni yoxlayıb tam service benefit verməyə bilər. Şərtlər uydurmadır; BABOK-un məcburi target faizi yoxdur.
 
-Planlaşdırılan fəaliyyət: ssenari üçün addım seç, nəticəsini aç və yeni sübut gəldikdə seçimi yenilə. Klaviatura ilə işləyən alternativ olacaq.
+## Vizual model
 
-## Tipik səhvlər və yaxşı təcrübələr
+<Diagram
+  chart={
+    'flowchart LR\n N["Need: reliable faster settlement"] --> C["Understand current capabilities"]\n C --> F["Define future outcomes"]\n F --> G["Find capability gaps"]\n G --> R["Assess risks and alternatives"]\n R --> S["Select change strategy"]\n S --> T["Inspect transition value"]\n T --> C'
+  }
+/>
 
-- Şablonu və ya çərçivəni sübutla qarışdırma.
-- Addım tövsiyə etməzdən əvvəl konteksti və qərar sahibini göstər.
-- Sənəd və ya funksiya sayını deyil, nəticələri müqayisə et.
+Model need, capability gap və alternative strategy-ni bağlayır. Evidence/kontekst dəyişəndə strategy yenilənə bildiyi üçün feedback var. Diaqram orijinal tədris modelidir; guide-dan köçürülən şəkil deyil.
 
-## Praktik tapşırıq və nümunə həll planı
+## Qərar məşqi
 
-**Tapşırıq:** Mövzunu müştəri özünəxidmət dəyişikliyinə tətbiq et; qərarı əsaslandır və çatışmayan sübutu müəyyən et.
+Rəhbərlik platforma budget-i təsdiqli olduğuna görə strategy-ni sorğulamamağı deyir. Real decision boundary-ni dəqiqləşdir: maliyyə bütün design seçimini deyil, investigation-u icazələndirə bilər. Need, alternativ nəticə və uncertainty-ni həmin sərhəddə göstər. Constraint həqiqətən sabitdirsə altında value yaratmağı analiz et və desired outcome-la ziddiyyəti aç. Qərarı çevirmək üçün səlahiyyət uydurma, sevilən yanaşma qalsın deyə sübut gizlətmə.
 
-**Nümunə həll planı:** problemi yaz, fərziyyələri sadala, seçimləri müqayisə et, addımı əsaslandır və növbəti yoxlanışı müəyyən et. Tam dərslə birlikdə işlənmiş cavab əlavə ediləcək.
+## Tipik səhvlər və yaxşı təcrübə
 
-## Mini-test: dərs planı
+- Success-i yalnız seçilmiş texnologiyanın quraşdırılması sayma.
+- Hər current-state detalını irəliləyişdən əvvəl məcburi sayma.
+- Natamam transition capability-nin vermədiyi benefit-i çatdırılmış göstərmə.
+- Tək delivery deyil, transition/operation riskini düşün.
+- Əvvəlki investisiyanı davamın yeganə səbəbi etmə.
+- Strategy-ni vərdişlə qorumaq əvəzinə kontekst dəyişəndə assumption-a qayıt.
 
-Tam dərsdə terminlər, ssenarinin tətbiqi və seçimlər üzrə orijinal suallar, düzgün və yanlış cavabların izahı olacaq. Bu planda dərs testi hələ dərc edilməyib.
+## Tətbiq tapşırığı və izahlı cavab
 
-## Bir səhifəlik xülasə planı
+**Tapşırıq:** sığortaçı üçün process pilot və phased platform change müqayisə et. Bir capability gap, risk, transition limitation və tövsiyəni dəyişən müşahidə göstər.
 
-Yekun yaddaş vərəqi mövzunun məqsədini, girişlərini, qərarlarını, çıxışlarını və baxış siyahısını ümumiləşdirəcək.
+**İzahlı cavab:** gap uyğun approval rule, risk isə məsuliyyət dəyişikliyindən sonra yanlış routing ola bilər. Process pilot bir filialı yaxşılaşdırıb cross-branch integration-u açıq qoya bilər. Platform change integration-u test edib geniş settlement benefit-i gecikdirə bilər. Etibarlı müşahidə approval probleminin əsas delay olduğunu və təhlükəsiz həllini göstərirsə ilkin process müdaxiləsini dəstəkləyir. Əsas platform limit hər faydalı process dəyişikliyini önləyirsə tövsiyə fərqlənə bilər. Bir variantı universal üstün elan etmək əvəzinə bu şərti əlaqələri qoru.
 
-## Əlavə oxu
+## Mini-test
 
-- [Scrum Guide, rəsmi mənbə](https://scrumguides.org/scrum-guide.html)
-- [IIBA biznes analizi resursları](https://www.iiba.org/business-analysis-blogs/)
+Suallarda desired outcome-u seçilmiş yanaşmadan ayır. Current state barədə nə məlumdur, hansı şərt çatışmır, hansı risk/sübut variantı uyğun edir soruş. Uzun plan avtomatik yaxşı strategy deyil.
 
-İstiqamətinə uyğun mənbədən istifadə et. Rəsmi sertifikasiya formatı və uyğunluq şərtləri ayrıca yoxlanmalıdır.
+<LessonCheck />
+
+## Yaddaş vərəqi
+
+Need → relevant current state → desired future condition → capability gap → risk/alternative → recommended transition path. Value, investment, uncertainty və hər transition-un real verdiyini izah et. Yeni məlumata açıq qal.
+
+## Mənbələr və əhatə
+
+BABOK Guide v3, 2015: §6.1, s. 103–110; §6.2, s. 110–119; §6.3, s. 120–124; §6.4, s. 124–131. Əsas oxunan hissələr: purpose/description 103, 105, 110–111, 120, 124–125; solution scope/gap analysis 127. Səhifələr çap kitabına aiddir. Cari CBAP exam qaydaları ayrıca mənbədir.
+
+- [IIBA — BABOK Guide and business analysis resources](https://www.iiba.org/career-resources/a-business-analysis-professionals-foundation-for-success/babok/)
+- [IIBA — certification information](https://www.iiba.org/business-analysis-certifications/)
+
+İzah və nümunələr orijinal tədris materialıdır. Yüklənmiş üzv PDF-i saytda yayılmır. Məşq sualları müstəqil hazırlanıb; rəsmi imtahan sualları deyil.

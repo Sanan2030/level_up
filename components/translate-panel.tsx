@@ -1,4 +1,5 @@
 'use client';
+import { useUIText } from '@/components/use-ui-text';
 
 import { Languages, Search, X, LoaderCircle, ExternalLink } from 'lucide-react';
 import { useEffect, useRef, useState, type FormEvent } from 'react';
@@ -13,6 +14,7 @@ import {
 } from '@/lib/dictionary';
 
 export function TranslateButton({ className = '' }: { className?: string }) {
+  const t = useUIText();
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const input = useRef<HTMLInputElement>(null);
@@ -116,7 +118,7 @@ export function TranslateButton({ className = '' }: { className?: string }) {
         onClick={open}
       >
         <Languages size={17} aria-hidden="true" />
-        Translate
+        <span className="translate-label">{t('Translate')}</span>
       </button>
       <dialog
         ref={dialog}
@@ -134,24 +136,24 @@ export function TranslateButton({ className = '' }: { className?: string }) {
       >
         <div className="translate-dialog-header">
           <div>
-            <h2 id="translate-title">Translate and understand</h2>
+            <h2 id="translate-title">{t('Translate and understand')}</h2>
           </div>
           <button
             type="button"
             className="icon-button"
             onClick={close}
-            aria-label="Close translator"
+            aria-label={t('Close translator')}
           >
             <X size={20} aria-hidden="true" />
           </button>
         </div>
         <p id="translate-description" className="muted">
-          Enter an English word or short phrase for its meaning, English explanation, Azerbaijani
-          explanation and a practical example. You can select text on the page before opening
-          Translate.
+          {t(
+            'Enter an English word or short phrase for its meaning, English explanation, Azerbaijani explanation and a practical example. You can select text on the page before opening Translate.',
+          )}
         </p>
         <form className="translate-search" onSubmit={lookup}>
-          <label htmlFor="translate-query">Word or phrase</label>
+          <label htmlFor="translate-query">{t('Word or phrase')}</label>
           <div className="translate-search-row">
             <input
               ref={input}
@@ -159,7 +161,7 @@ export function TranslateButton({ className = '' }: { className?: string }) {
               className="input"
               type="search"
               maxLength={MAX_DICTIONARY_QUERY_LENGTH}
-              placeholder="For example: onboarding, validation, Sprint Goal"
+              placeholder={t('For example: onboarding, validation, Sprint Goal')}
               value={query}
               onChange={(event) => {
                 setQuery(event.target.value);
@@ -175,67 +177,73 @@ export function TranslateButton({ className = '' }: { className?: string }) {
               ) : (
                 <Search size={17} aria-hidden="true" />
               )}
-              {loading ? 'Looking up…' : 'Look up'}
+              {loading ? t('Looking up…') : t('Look up')}
             </button>
           </div>
           <p id="translate-privacy" className="small muted">
-            Study terms work offline. Looking up other words sends only your entered phrase to
-            public dictionary and machine translation services.
+            {t(
+              'Study terms work offline. Looking up other words sends only your entered phrase to public dictionary and machine translation services.',
+            )}
           </p>
         </form>
         {loading && (
           <p role="status" className="translate-status">
-            Looking for a definition and Azerbaijani translation…
+            {t('Looking for a definition and Azerbaijani translation…')}
           </p>
         )}
         {error && (
           <p id="translate-error" className="notice" role="alert">
-            {error}
+            {t(error)}
           </p>
         )}
         {result?.kind === 'curated' && <CuratedMeaning entry={result.entry} />}
         {result?.kind === 'online' && (
-          <section className="translate-result" aria-label="Translation result" aria-live="polite">
+          <section
+            className="translate-result"
+            aria-label={t('Translation result')}
+            aria-live="polite"
+          >
             <div className="button-row">
               <h3>{result.term}</h3>
-              <span className="badge">Online · General English</span>
+              <span className="badge">{t('Online · General English')}</span>
               {result.partOfSpeech && <span className="small muted">{result.partOfSpeech}</span>}
             </div>
             <p className="small muted">
-              Machine translation may miss the subject-specific meaning. Check it against the lesson
-              context.
+              {t(
+                'Machine translation may miss the subject-specific meaning. Check it against the lesson context.',
+              )}
             </p>
             <div className="translate-language-block">
-              <h4>English explanation</h4>
+              <h4>{t('English explanation')}</h4>
               <p lang="en">
                 {result.definitionEn ?? 'An English definition is unavailable for this phrase.'}
               </p>
             </div>
             <div className="translate-language-block">
-              <h4>Azerbaijani meaning · machine translated</h4>
+              <h4>{t('Azerbaijani meaning · machine translated')}</h4>
               <p lang="az">
                 {result.meaningAz ?? 'Tərcümə xidməti bu ifadə üçün nəticə qaytarmadı.'}
               </p>
             </div>
             <div className="translate-language-block">
-              <h4>Azerbaijani explanation · machine translated</h4>
+              <h4>{t('Azerbaijani explanation · machine translated')}</h4>
               <p lang="az">
                 {result.explanationAz ?? 'Bu nəticə üçün Azərbaycan dilində izah mövcud deyil.'}
               </p>
             </div>
             {result.example ? (
               <div className="translate-examples">
-                <h4>Practical example</h4>
+                <h4>{t('Practical example')}</h4>
                 <p lang="en">{result.example.en}</p>
                 {result.example.az && <p lang="az">{result.example.az}</p>}
               </div>
             ) : (
               <p className="small muted">
-                The dictionary did not provide an example for this result.
+                {t('The dictionary did not provide an example for this result.')}
               </p>
             )}
             <p className="small muted">
-              Sources:{' '}
+              {t('Sources:')}{' '}
               {result.sources.map((source, index) => (
                 <span key={source.url}>
                   {index ? ' · ' : ''}
@@ -249,11 +257,11 @@ export function TranslateButton({ className = '' }: { className?: string }) {
         )}
         {result?.kind === 'not-found' && (
           <div className="notice" role="status">
-            <p>{result.message}</p>
+            <p>{t(result.message)}</p>
           </div>
         )}
         <div className="translate-suggestions">
-          <h3>{query.trim() ? 'Related study terms' : 'Try a study term'}</h3>
+          <h3>{query.trim() ? t('Related study terms') : t('Try a study term')}</h3>
           {suggestions.length ? (
             <div className="button-row">
               {suggestions.map((entry) => (
@@ -269,7 +277,7 @@ export function TranslateButton({ className = '' }: { className?: string }) {
             </div>
           ) : (
             <p className="small muted">
-              No matching study term. Try a shorter phrase or another spelling.
+              {t('No matching study term. Try a shorter phrase or another spelling.')}
             </p>
           )}
         </div>
@@ -281,7 +289,8 @@ export function TranslateButton({ className = '' }: { className?: string }) {
               target="_blank"
               rel="noreferrer"
             >
-              Open external dictionary <ExternalLink size={13} aria-hidden="true" />
+              {t('Open external dictionary')}
+              <ExternalLink size={13} aria-hidden="true" />
             </a>
             <a
               className="text-link"
@@ -289,7 +298,8 @@ export function TranslateButton({ className = '' }: { className?: string }) {
               target="_blank"
               rel="noreferrer"
             >
-              Open English → Azerbaijani translation <ExternalLink size={13} aria-hidden="true" />
+              {t('Open English → Azerbaijani translation')}
+              <ExternalLink size={13} aria-hidden="true" />
             </a>
           </div>
         )}
@@ -299,29 +309,30 @@ export function TranslateButton({ className = '' }: { className?: string }) {
 }
 
 function CuratedMeaning({ entry }: { entry: DictionaryEntry }) {
+  const t = useUIText();
   return (
-    <section className="translate-result" aria-label="Translation result" aria-live="polite">
+    <section className="translate-result" aria-label={t('Translation result')} aria-live="polite">
       <div className="button-row">
         <h3>{entry.term}</h3>
         <span className="badge">{entry.context}</span>
-        <span className="badge success">Study dictionary</span>
+        <span className="badge success">{t('Study dictionary')}</span>
       </div>
       <div className="translate-language-block">
-        <h4>English explanation</h4>
+        <h4>{t('English explanation')}</h4>
         <p lang="en">{entry.definitionEn}</p>
       </div>
       <div className="translate-language-block">
-        <h4>Azerbaijani meaning</h4>
+        <h4>{t('Azerbaijani meaning')}</h4>
         <p lang="az">
           <strong>{entry.meaningAz}</strong>
         </p>
       </div>
       <div className="translate-language-block">
-        <h4>Azerbaijani explanation</h4>
+        <h4>{t('Azerbaijani explanation')}</h4>
         <p lang="az">{entry.explanationAz}</p>
       </div>
       <div className="translate-examples">
-        <h4>Practical example</h4>
+        <h4>{t('Practical example')}</h4>
         <p lang="en">{entry.example.en}</p>
         <p lang="az">{entry.example.az}</p>
       </div>

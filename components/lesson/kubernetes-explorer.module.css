@@ -282,6 +282,11 @@
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
+@media (prefers-reduced-motion: reduce) {
+  .animationToggle {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   .header {
     padding: 18px;

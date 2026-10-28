@@ -149,7 +149,7 @@ export default async function LessonPage({
             <h3>{az ? 'Dərs üzrə suallar' : 'Lesson practice'}</h3>
             {hasLessonLab(id) && (
               <a className="button button-primary" href="#practice-lab">
-                Open practical lab
+                {az ? 'Praktik laboratoriyanı aç' : 'Open practical lab'}
               </a>
             )}
             <Link

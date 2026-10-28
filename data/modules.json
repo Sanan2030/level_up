@@ -46,7 +46,7 @@
       "en": "Make the system visible"
     },
     "description": {
-      "az": "Qeyri-müəyyənliyi diaqram və ya prototiplə aradan qaldır.",
+      "az": "Qeyri-müəyyənliyi diaqram və ya prototype ilə aradan qaldır.",
       "en": "Use a diagram or prototype to resolve ambiguity."
     },
     "lessonIds": ["bpmn-process", "uml-models", "wireframes"],
@@ -132,7 +132,7 @@
       "en": "Own an outcome"
     },
     "description": {
-      "az": "Scrum məsuliyyətlərini və məqsədli iş siyahısı qərarlarını öyrən.",
+      "az": "Scrum məsuliyyətlərini və məqsədli backlog qərarlarını öyrən.",
       "en": "Learn Scrum accountabilities and purposeful backlog decisions."
     },
     "lessonIds": ["product-goal", "scrum-framework", "product-backlog", "good-pbis"],
@@ -329,7 +329,7 @@
     },
     "description": {
       "en": "Trace credentials and trust boundaries through API and browser flows.",
-      "az": "Trace credentials and trust boundaries through API and browser flows."
+      "az": "Credential-ları və trust boundary-ləri API və brauzer axınlarında izlə."
     },
     "lessonIds": [
       "access-refresh-tokens",
@@ -351,7 +351,7 @@
     },
     "description": {
       "en": "Implement testable contracts, deduplication and concurrency rules.",
-      "az": "Implement testable contracts, deduplication and concurrency rules."
+      "az": "Test edilə bilən contract, deduplication və concurrency qaydaları tətbiq et."
     },
     "lessonIds": ["api-idempotency-concurrency", "api-contracts-evolution", "secure-api-coding"],
     "estimatedMinutes": 240,
@@ -368,7 +368,7 @@
     },
     "description": {
       "en": "Make data ownership, recovery and operational trade-offs explicit.",
-      "az": "Make data ownership, recovery and operational trade-offs explicit."
+      "az": "Data ownership, recovery və əməliyyat seçimlərinin təsirlərini aydın göstər."
     },
     "lessonIds": ["architecture-boundaries-sagas", "api-resilience-observability"],
     "estimatedMinutes": 160,
@@ -385,7 +385,7 @@
     },
     "description": {
       "en": "Diagnose services, package containers and design trusted delivery pipelines.",
-      "az": "Diagnose services, package containers and design trusted delivery pipelines."
+      "az": "Xidmətləri diaqnostika et, container-ləri paketlə və etibarlı delivery pipeline qur."
     },
     "lessonIds": [
       "devops-linux-git-networking",
@@ -407,7 +407,7 @@
     },
     "description": {
       "en": "Reason about Kubernetes delivery, infrastructure state, SLOs and recovery.",
-      "az": "Reason about Kubernetes delivery, infrastructure state, SLOs and recovery."
+      "az": "Kubernetes delivery, infrastruktur state-i, SLO və recovery-ni təhlil et."
     },
     "lessonIds": ["devops-kubernetes-delivery", "devops-terraform-iac", "devops-sre-incidents"],
     "estimatedMinutes": 230,
@@ -424,7 +424,7 @@
     },
     "description": {
       "en": "Define metrics, validate datasets and build reproducible Python and BI analysis.",
-      "az": "Define metrics, validate datasets and build reproducible Python and BI analysis."
+      "az": "Metrikaları müəyyən et, dataset-ləri yoxla və təkrarlana bilən Python və BI analizi qur."
     },
     "lessonIds": [
       "data-analysis-grain-quality",
@@ -446,7 +446,7 @@
     },
     "description": {
       "en": "Calculate observable retention cohorts and assess controlled experiments.",
-      "az": "Calculate observable retention cohorts and assess controlled experiments."
+      "az": "Müşahidə oluna bilən retention cohort-ları hesabla və nəzarətli eksperimentləri qiymətləndir."
     },
     "lessonIds": ["data-sql-windows-cohorts", "data-experiments-statistics"],
     "estimatedMinutes": 170,
@@ -459,11 +459,11 @@
     "level": "mid",
     "title": {
       "en": "Database query performance",
-      "az": "Database query performance"
+      "az": "DB sorğularının performansı"
     },
     "description": {
       "en": "Apply database query performance through worked cases, diagrams, exercises and explained checks.",
-      "az": "Apply database query performance through worked cases, diagrams, exercises and explained checks."
+      "az": "Query performance-i işlənmiş nümunə, diaqram, tapşırıq və izahlı yoxlamalarla öyrən."
     },
     "lessonIds": ["db-indexes-explain"],
     "estimatedMinutes": 75,
@@ -476,11 +476,11 @@
     "level": "lead",
     "title": {
       "en": "Database concurrency and evolution",
-      "az": "Database concurrency and evolution"
+      "az": "DB-də concurrency və schema dəyişiklikləri"
     },
     "description": {
       "en": "Apply database concurrency and evolution through worked cases, diagrams, exercises and explained checks.",
-      "az": "Apply database concurrency and evolution through worked cases, diagrams, exercises and explained checks."
+      "az": "DB concurrency və evolution mövzularını işlənmiş nümunə, diaqram, tapşırıq və izahlı yoxlamalarla tətbiq et."
     },
     "lessonIds": ["db-transactions-locks", "db-safe-migrations"],
     "estimatedMinutes": 155,
@@ -493,11 +493,11 @@
     "level": "mid",
     "title": {
       "en": "Cache design and freshness",
-      "az": "Cache design and freshness"
+      "az": "Cache dizaynı və freshness"
     },
     "description": {
       "en": "Apply cache design and freshness through worked cases, diagrams, exercises and explained checks.",
-      "az": "Apply cache design and freshness through worked cases, diagrams, exercises and explained checks."
+      "az": "Cache dizaynını və məlumatın aktuallığını nümunə, diaqram, tapşırıq və izahlı yoxlamalarla öyrən."
     },
     "lessonIds": ["caching-redis"],
     "estimatedMinutes": 70,
@@ -510,11 +510,11 @@
     "level": "lead",
     "title": {
       "en": "Message delivery and recovery",
-      "az": "Message delivery and recovery"
+      "az": "Message delivery və recovery"
     },
     "description": {
       "en": "Apply message delivery and recovery through worked cases, diagrams, exercises and explained checks.",
-      "az": "Apply message delivery and recovery through worked cases, diagrams, exercises and explained checks."
+      "az": "Message delivery və recovery-ni nümunə, diaqram, tapşırıq və izahlı yoxlamalarla tətbiq et."
     },
     "lessonIds": ["messaging-kafka", "messaging-rabbitmq"],
     "estimatedMinutes": 150,
@@ -527,11 +527,11 @@
     "level": "mid",
     "title": {
       "en": "Software testing and quality evidence",
-      "az": "Software testing and quality evidence"
+      "az": "Proqram təminatının sınağı və keyfiyyət sübutu"
     },
     "description": {
       "en": "Apply software testing and quality evidence through worked cases, diagrams, exercises and explained checks.",
-      "az": "Apply software testing and quality evidence through worked cases, diagrams, exercises and explained checks."
+      "az": "Test sərhədlərini və keyfiyyət sübutunu nümunə, diaqram, tapşırıq və izahlı yoxlamalarla qiymətləndir."
     },
     "lessonIds": ["testing-strategy-contracts", "testing-postman-apis", "testing-playwright"],
     "estimatedMinutes": 215,
@@ -544,11 +544,11 @@
     "level": "mid",
     "title": {
       "en": "Data pipeline foundations",
-      "az": "Data pipeline foundations"
+      "az": "Data pipeline əsasları"
     },
     "description": {
       "en": "Apply data pipeline foundations through worked cases, diagrams, exercises and explained checks.",
-      "az": "Apply data pipeline foundations through worked cases, diagrams, exercises and explained checks."
+      "az": "Data pipeline anlayışlarını nümunə, diaqram, tapşırıq və izahlı yoxlamalarla tətbiq et."
     },
     "lessonIds": ["data-etl-warehouse"],
     "estimatedMinutes": 75,
@@ -561,11 +561,11 @@
     "level": "lead",
     "title": {
       "en": "Data transformation and orchestration",
-      "az": "Data transformation and orchestration"
+      "az": "Data transformation və orchestration"
     },
     "description": {
       "en": "Apply data transformation and orchestration through worked cases, diagrams, exercises and explained checks.",
-      "az": "Apply data transformation and orchestration through worked cases, diagrams, exercises and explained checks."
+      "az": "Data transformation və orchestration-u nümunə, diaqram, tapşırıq və izahlı yoxlamalarla öyrən."
     },
     "lessonIds": ["data-dbt-quality-lineage", "data-airflow-orchestration"],
     "estimatedMinutes": 160,
@@ -578,11 +578,11 @@
     "level": "mid",
     "title": {
       "en": "Cloud identity and networking",
-      "az": "Cloud identity and networking"
+      "az": "Cloud identity və networking"
     },
     "description": {
       "en": "Apply cloud identity and networking through worked cases, diagrams, exercises and explained checks.",
-      "az": "Apply cloud identity and networking through worked cases, diagrams, exercises and explained checks."
+      "az": "Cloud identity və networking-i nümunə, diaqram, tapşırıq və izahlı yoxlamalarla tətbiq et."
     },
     "lessonIds": ["cloud-iam-vpc-balancing"],
     "estimatedMinutes": 80,
@@ -595,11 +595,11 @@
     "level": "lead",
     "title": {
       "en": "Cloud costs and security engineering",
-      "az": "Cloud costs and security engineering"
+      "az": "Cloud xərcləri və security engineering"
     },
     "description": {
       "en": "Apply cloud costs and security engineering through worked cases, diagrams, exercises and explained checks.",
-      "az": "Apply cloud costs and security engineering through worked cases, diagrams, exercises and explained checks."
+      "az": "Cloud xərcini və security engineering qərarlarını nümunə, diaqram, tapşırıq və izahlı yoxlamalarla qiymətləndir."
     },
     "lessonIds": [
       "cloud-cost-engineering",

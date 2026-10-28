@@ -7,7 +7,7 @@
     "difficulty": 1,
     "text": {
       "en": "A Junior Product Owner receives fifty unrelated ideas for a new service. What would provide direction before ordering them?",
-      "az": "Junior Məhsul Sahibi yeni xidmət üçün əlli əlaqəsiz ideya alır. Sıralamadan əvvəl istiqaməti nə verər?"
+      "az": "Junior Product Owner yeni xidmət üçün əlli əlaqəsiz ideya alır. Sıralamadan əvvəl istiqaməti nə verər?"
     },
     "options": [
       {
@@ -18,7 +18,7 @@
         },
         "explanation": {
           "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
-          "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+          "az": "Product Goal Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
         }
       },
       {
@@ -47,7 +47,7 @@
     "correct": ["a"],
     "explanation": {
       "en": "A Product Goal provides direction for the Product Backlog and subsequent planning.",
-      "az": "Məhsul Məqsədi Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
+      "az": "Product Goal Məhsul Bekloquna və sonrakı planlaşdırmaya istiqamət verir."
     },
     "lessonId": "product-goal",
     "practiceOnly": true
@@ -60,29 +60,29 @@
     "difficulty": 1,
     "text": {
       "en": "Developers ask the Product Owner for permission to change their implementation plan after learning something new. What is appropriate?",
-      "az": "Tərtibatçılar yeni məlumatdan sonra tətbiq planını dəyişmək üçün Məhsul Sahibindən icazə istəyirlər. Uyğun yanaşma nədir?"
+      "az": "Developers yeni məlumatdan sonra tətbiq planını dəyişmək üçün Product Owner-dən icazə istəyirlər. Uyğun yanaşma nədir?"
     },
     "options": [
       {
         "id": "a",
         "text": {
           "en": "Let Developers decide how to create the Increment.",
-          "az": "İnkrementin necə yaradılacağına Tərtibatçıların qərar verməsinə imkan yaratmaq."
+          "az": "Increment-in necə yaradılacağına Developers-in qərar verməsinə imkan yaratmaq."
         },
         "explanation": {
           "en": "Developers own the implementation plan and adapt it as they learn.",
-          "az": "Tərtibatçılar tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
+          "az": "Developers tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
         }
       },
       {
         "id": "b",
         "text": {
           "en": "Have the Product Owner assign individual technical tasks.",
-          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+          "az": "Fərdi texniki tapşırıqları Product Owner-in paylaması."
         },
         "explanation": {
           "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
-          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Developersdan alır."
         }
       },
       {
@@ -100,7 +100,7 @@
     "correct": ["a"],
     "explanation": {
       "en": "Developers own the implementation plan and adapt it as they learn.",
-      "az": "Tərtibatçılar tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
+      "az": "Developers tətbiq planına sahibdirlər və öyrəndikcə onu uyğunlaşdırırlar."
     },
     "lessonId": "scrum-accountabilities",
     "practiceOnly": true
@@ -113,7 +113,7 @@
     "difficulty": 1,
     "text": {
       "en": "A release includes all promised features but customers cannot complete the intended job. What should the Product Owner examine?",
-      "az": "Buraxılış bütün vəd edilən funksiyaları ehtiva edir, amma müştərilər nəzərdə tutulan işi görə bilmirlər. Məhsul Sahibi nəyi yoxlamalıdır?"
+      "az": "Buraxılış bütün vəd edilən funksiyaları ehtiva edir, amma müştərilər nəzərdə tutulan işi görə bilmirlər. Product Owner nəyi yoxlamalıdır?"
     },
     "options": [
       {
@@ -166,7 +166,7 @@
     "difficulty": 2,
     "text": {
       "en": "A Mid Product Owner has three solution ideas and little evidence about the customer problem. What is the most responsible next move?",
-      "az": "Mid Məhsul Sahibinin üç həll ideyası və müştəri problemi barədə az sübutu var. Ən məsuliyyətli növbəti addım nədir?"
+      "az": "Mid Product Owner-in üç həll ideyası və müştəri problemi barədə az sübutu var. Ən məsuliyyətli növbəti addım nədir?"
     },
     "options": [
       {
@@ -272,7 +272,7 @@
     "difficulty": 2,
     "text": {
       "en": "Two departments demand incompatible features for the next Sprint. How should the Product Owner frame the discussion?",
-      "az": "İki bölmə növbəti Sprint üçün bir-biri ilə uyğun olmayan funksiyalar tələb edir. Məhsul Sahibi müzakirəni necə qurmalıdır?"
+      "az": "İki bölmə növbəti Sprint üçün bir-biri ilə uyğun olmayan funksiyalar tələb edir. Product Owner müzakirəni necə qurmalıdır?"
     },
     "options": [
       {
@@ -301,11 +301,11 @@
         "id": "c",
         "text": {
           "en": "Make a committee collectively accountable as the Product Owner.",
-          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+          "az": "Komitəni kollektiv şəkildə Product Owner kimi hesabatlı etmək."
         },
         "explanation": {
           "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
-          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+          "az": "Komitə vahid Product Owner-in hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
         }
       }
     ],
@@ -325,7 +325,7 @@
     "difficulty": 3,
     "text": {
       "en": "A Lead Product Owner oversees a profitable service with declining retention and expensive maintenance. What should determine its future?",
-      "az": "Lead Məhsul Sahibi saxlanması zəifləyən və texniki saxlanması bahalaşan gəlirli xidmətə rəhbərlik edir. Onun gələcəyini nə müəyyən etməlidir?"
+      "az": "Lead Product Owner saxlanması zəifləyən və texniki saxlanması bahalaşan gəlirli xidmətə rəhbərlik edir. Onun gələcəyini nə müəyyən etməlidir?"
     },
     "options": [
       {
@@ -431,7 +431,7 @@
     "difficulty": 3,
     "text": {
       "en": "A major release date is being discussed while demand and scope remain uncertain. How should a Lead Product Owner support an informed commitment?",
-      "az": "Tələb və əhatə qeyri-müəyyən qalarkən böyük buraxılış tarixi müzakirə olunur. Lead Məhsul Sahibi məlumatlı öhdəliyi necə dəstəkləməlidir?"
+      "az": "Tələb və əhatə qeyri-müəyyən qalarkən böyük buraxılış tarixi müzakirə olunur. Lead Product Owner məlumatlı öhdəliyi necə dəstəkləməlidir?"
     },
     "options": [
       {

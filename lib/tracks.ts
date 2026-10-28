@@ -3,7 +3,7 @@ export const tracks: Track[] = [
   {
     id: 'ba',
     category: 'career',
-    name: { az: 'Biznes analitik', en: 'Business Analyst' },
+    name: { az: 'Business Analyst', en: 'Business Analyst' },
     description: {
       az: 'Problemləri anla. Düzgün həlli qur.',
       en: 'Understand problems. Shape better solutions.',
@@ -13,7 +13,7 @@ export const tracks: Track[] = [
   {
     id: 'po',
     category: 'career',
-    name: { az: 'Məhsul sahibi', en: 'Product Owner' },
+    name: { az: 'Product Owner', en: 'Product Owner' },
     description: {
       az: 'Dəyəri kəşf et. Məhsulunu irəli apar.',
       en: 'Discover value. Move your product forward.',

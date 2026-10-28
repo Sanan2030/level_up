@@ -12,7 +12,7 @@
       "en": "Own product decisions across discovery and delivery."
     },
     {
-      "az": "Strategiyanı məqsəd, göstərici və iş siyahısı seçiminə bağla.",
+      "az": "Strategiyanı məqsəd, göstərici və backlog seçiminə bağla.",
       "en": "Connect strategy to goals, metrics and backlog choices."
     },
     {
@@ -123,7 +123,7 @@
         "en": "A senior stakeholder demands an urgent feature. What do you do?"
       },
       "answer": {
-        "az": "Əsas nəticə və təcililiyi aydınlaşdıraram, Məhsul Məqsədi və sübutla müqayisə edərəm, seçim təsirini açıb cavabdeh sıralama qərarı verər və paylaşaram.",
+        "az": "Əsas nəticə və təcililiyi aydınlaşdıraram, Product Goal və sübutla müqayisə edərəm, seçim təsirini açıb cavabdeh sıralama qərarı verər və paylaşaram.",
         "en": "I clarify the underlying outcome and urgency, compare it with the Product Goal and current evidence, expose trade-offs, then make and communicate an accountable ordering decision."
       }
     },

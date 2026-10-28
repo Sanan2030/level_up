@@ -18,7 +18,7 @@
         },
         "explanation": {
           "en": "Cohort analysis can separate real customer value from aggregate growth that masks churn.",
-          "az": "Kohort təhlili real müştəri dəyərini müştəri itkisini gizlədən ümumi artımdan ayıra bilər."
+          "az": "Cohort təhlili real müştəri dəyərini müştəri itkisini gizlədən ümumi artımdan ayıra bilər."
         }
       },
       {
@@ -47,7 +47,7 @@
     "correct": ["a"],
     "explanation": {
       "en": "Cohort analysis can separate real customer value from aggregate growth that masks churn.",
-      "az": "Kohort təhlili real müştəri dəyərini müştəri itkisini gizlədən ümumi artımdan ayıra bilər."
+      "az": "Cohort təhlili real müştəri dəyərini müştəri itkisini gizlədən ümumi artımdan ayıra bilər."
     },
     "lessonId": "pspo2-value",
     "practiceOnly": true
@@ -301,7 +301,7 @@
         "id": "c",
         "text": {
           "en": "Use higher story-point velocity as the primary proof of product value.",
-          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək story point sürətini istifadə etmək."
         },
         "explanation": {
           "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
@@ -378,7 +378,7 @@
     "difficulty": 2,
     "text": {
       "en": "An average satisfaction score is stable, yet small businesses report growing frustration while enterprises are happier. What should the Product Owner do?",
-      "az": "Orta məmnuniyyət sabitdir, amma kiçik bizneslər narazıdır, iri müəssisələr isə daha razıdır. Məhsul Sahibi nə etməlidir?"
+      "az": "Orta məmnuniyyət sabitdir, amma kiçik bizneslər narazıdır, iri müəssisələr isə daha razıdır. Product Owner nə etməlidir?"
     },
     "options": [
       {
@@ -484,7 +484,7 @@
     "difficulty": 3,
     "text": {
       "en": "Sales wants customization for one prospect while support wants reliability work. How should the Product Owner lead the discussion?",
-      "az": "Satış bir potensial müştəri üçün fərdiləşdirmə, dəstək isə etibarlılıq işi istəyir. Məhsul Sahibi müzakirəni necə aparmalıdır?"
+      "az": "Satış bir potensial müştəri üçün fərdiləşdirmə, dəstək isə etibarlılıq işi istəyir. Product Owner müzakirəni necə aparmalıdır?"
     },
     "options": [
       {
@@ -714,7 +714,7 @@
         "id": "b",
         "text": {
           "en": "Use higher story-point velocity as the primary proof of product value.",
-          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək story point sürətini istifadə etmək."
         },
         "explanation": {
           "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
@@ -855,7 +855,7 @@
     "difficulty": 2,
     "text": {
       "en": "Developers report that brittle architecture makes every customer improvement slower. How should the Product Owner treat this information?",
-      "az": "Tərtibatçılar kövrək arxitekturanın hər müştəri təkmilləşdirməsini ləngitdiyini deyirlər. Məhsul Sahibi bu məlumatla necə davranmalıdır?"
+      "az": "Developers kövrək arxitekturanın hər müştəri təkmilləşdirməsini ləngitdiyini deyirlər. Product Owner bu məlumatla necə davranmalıdır?"
     },
     "options": [
       {
@@ -877,7 +877,7 @@
         },
         "explanation": {
           "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
-          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır Increment yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
         }
       },
       {
@@ -908,7 +908,7 @@
     "difficulty": 3,
     "text": {
       "en": "Two teams on one product have different quality standards and cannot produce a usable combined Increment. What should they establish?",
-      "az": "Bir məhsul üzərində iki komandanın keyfiyyət standartları fərqlidir və birlikdə istifadəyə hazır İnkrement yarada bilmirlər. Nə qurmalıdırlar?"
+      "az": "Bir məhsul üzərində iki komandanın keyfiyyət standartları fərqlidir və birlikdə istifadəyə hazır Increment yarada bilmirlər. Nə qurmalıdırlar?"
     },
     "options": [
       {
@@ -919,7 +919,7 @@
         },
         "explanation": {
           "en": "An integrated Increment requires compatible quality standards and attention to cross-team integration.",
-          "az": "İnteqrasiya olunmuş İnkrement uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
+          "az": "İnteqrasiya olunmuş Increment uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
         }
       },
       {
@@ -930,25 +930,25 @@
         },
         "explanation": {
           "en": "Lowering the quality bar hides unfinished work and adds risk rather than creating a usable Increment.",
-          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır İnkrement yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
+          "az": "Keyfiyyət həddini azaltmaq istifadəyə hazır Increment yaratmaq əvəzinə bitməmiş işi gizlədir və risk yaradır."
         }
       },
       {
         "id": "c",
         "text": {
           "en": "Make a committee collectively accountable as the Product Owner.",
-          "az": "Komitəni kollektiv şəkildə Məhsul Sahibi kimi hesabatlı etmək."
+          "az": "Komitəni kollektiv şəkildə Product Owner kimi hesabatlı etmək."
         },
         "explanation": {
           "en": "A committee obscures the single Product Owner accountability and makes product decisions ambiguous.",
-          "az": "Komitə vahid Məhsul Sahibinin hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
+          "az": "Komitə vahid Product Owner-in hesabatlılığını zəiflədir və məhsul qərarlarını qeyri-müəyyən edir."
         }
       }
     ],
     "correct": ["a"],
     "explanation": {
       "en": "An integrated Increment requires compatible quality standards and attention to cross-team integration.",
-      "az": "İnteqrasiya olunmuş İnkrement uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
+      "az": "İnteqrasiya olunmuş Increment uyğun keyfiyyət standartları və komandalararası inteqrasiyaya diqqət tələb edir."
     },
     "lessonId": "pspo2-facilitation",
     "practiceOnly": true
@@ -1067,7 +1067,7 @@
     "difficulty": 3,
     "text": {
       "en": "A mature product serves a shrinking segment and costs more to maintain each year. What should the Product Owner reassess?",
-      "az": "Yetkin məhsul kiçilən seqmentə xidmət edir və hər il daha çox saxlanma xərci tələb edir. Məhsul Sahibi nəyi yenidən qiymətləndirməlidir?"
+      "az": "Yetkin məhsul kiçilən seqmentə xidmət edir və hər il daha çox saxlanma xərci tələb edir. Product Owner nəyi yenidən qiymətləndirməlidir?"
     },
     "options": [
       {
@@ -1173,7 +1173,7 @@
     "difficulty": 3,
     "text": {
       "en": "Developers challenge a requested feature with customer evidence. The Product Owner sees this as disobedience. What is a stronger response?",
-      "az": "Tərtibatçılar müştəri sübutu ilə tələb olunan funksiyanı sorğulayırlar. Məhsul Sahibi bunu itaətsizlik sayır. Daha güclü reaksiya hansıdır?"
+      "az": "Developers müştəri sübutu ilə tələb olunan funksiyanı sorğulayırlar. Product Owner bunu itaətsizlik sayır. Daha güclü reaksiya hansıdır?"
     },
     "options": [
       {
@@ -1191,11 +1191,11 @@
         "id": "b",
         "text": {
           "en": "Have the Product Owner assign individual technical tasks.",
-          "az": "Fərdi texniki tapşırıqları Məhsul Sahibinin paylaması."
+          "az": "Fərdi texniki tapşırıqları Product Owner-in paylaması."
         },
         "explanation": {
           "en": "This removes the Developers’ ownership of the implementation plan and self-management.",
-          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Tərtibatçılardan alır."
+          "az": "Bu, tətbiq planına sahibliyi və özünüidarəetməni Developersdan alır."
         }
       },
       {
@@ -1332,7 +1332,7 @@
     "difficulty": 3,
     "text": {
       "en": "A product has high current revenue but cannot respond to new needs because releases take months. What broader view should the Product Owner seek?",
-      "az": "Məhsulun cari gəliri yüksəkdir, amma buraxılışlar aylarla çəkdiyi üçün yeni ehtiyaclara cavab verə bilmir. Məhsul Sahibi hansı geniş baxışı axtarmalıdır?"
+      "az": "Məhsulun cari gəliri yüksəkdir, amma buraxılışlar aylarla çəkdiyi üçün yeni ehtiyaclara cavab verə bilmir. Product Owner hansı geniş baxışı axtarmalıdır?"
     },
     "options": [
       {
@@ -1361,7 +1361,7 @@
         "id": "c",
         "text": {
           "en": "Use higher story-point velocity as the primary proof of product value.",
-          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək story point sürətini istifadə etmək."
         },
         "explanation": {
           "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
@@ -1573,7 +1573,7 @@
         "id": "c",
         "text": {
           "en": "Use higher story-point velocity as the primary proof of product value.",
-          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək hekayə balı sürətini istifadə etmək."
+          "az": "Məhsul dəyərinin əsas sübutu kimi yüksək story point sürətini istifadə etmək."
         },
         "explanation": {
           "en": "Velocity concerns a team’s work estimates and does not demonstrate customer or business outcomes.",
@@ -2753,7 +2753,7 @@
         },
         "explanation": {
           "en": "Empiricism supports limited experiments while learning; certainty is not a prerequisite.",
-          "az": "Empirizm öyrənərkən məhdud eksperimentləri dəstəkləyir; tam əminlik ilkin şərt deyil."
+          "az": "Empiricism öyrənərkən məhdud eksperimentləri dəstəkləyir; tam əminlik ilkin şərt deyil."
         }
       },
       {
@@ -3488,7 +3488,7 @@
         },
         "explanation": {
           "en": "The Sprint can contain multiple Increments and earlier delivery.",
-          "az": "Sprint bir neçə İnkrement və daha erkən çatdırılma əhatə edə bilər."
+          "az": "Sprint bir neçə Increment və daha erkən çatdırılma əhatə edə bilər."
         }
       }
     ],
@@ -4244,7 +4244,7 @@
     "difficulty": 2,
     "text": {
       "en": "A prototype earns praise in an internal demonstration. The investment case assumes paying customers will use it weekly. What is still needed?",
-      "az": "Prototip daxili nümayişdə bəyənilir. İnvestisiya əsaslandırması ödəniş edən müştərinin onu həftəlik istifadə edəcəyini düşünür. Nə hələ lazımdır?"
+      "az": "Prototype daxili nümayişdə bəyənilir. İnvestisiya əsaslandırması ödəniş edən müştərinin onu həftəlik istifadə edəcəyini düşünür. Nə hələ lazımdır?"
     },
     "options": [
       {
@@ -4515,7 +4515,7 @@
         },
         "explanation": {
           "en": "An Increment must work together with prior Increments; local labels are insufficient.",
-          "az": "İnkrement əvvəlkilərlə birlikdə işləməlidir; yerli adlandırma kifayət deyil."
+          "az": "Increment əvvəlkilərlə birlikdə işləməlidir; yerli adlandırma kifayət deyil."
         }
       },
       {
@@ -4569,7 +4569,7 @@
         },
         "explanation": {
           "en": "Work that does not meet Done is not a valid Increment.",
-          "az": "Done-a uyğun olmayan iş etibarlı İnkrement deyil."
+          "az": "Done-a uyğun olmayan iş etibarlı Increment deyil."
         }
       },
       {
@@ -4580,14 +4580,14 @@
         },
         "explanation": {
           "en": "An Increment is additive and thoroughly verified so that all Increments work together.",
-          "az": "İnkrement əlavə olunan və hamısının birlikdə işləməsi üçün tam yoxlanmış addımdır."
+          "az": "Increment əlavə olunan və hamısının birlikdə işləməsi üçün tam yoxlanmış addımdır."
         }
       }
     ],
     "correct": ["c"],
     "explanation": {
       "en": "An Increment is additive and thoroughly verified so that all Increments work together. Source: Scrum Guide 2020, Increment and Definition of Done.",
-      "az": "İnkrement əlavə olunan və hamısının birlikdə işləməsi üçün tam yoxlanmış addımdır. Mənbə: Scrum Guide 2020, Increment and Definition of Done."
+      "az": "Increment əlavə olunan və hamısının birlikdə işləməsi üçün tam yoxlanmış addımdır. Mənbə: Scrum Guide 2020, Increment and Definition of Done."
     },
     "lessonId": "pspo2-shared-quality",
     "sourceIds": ["scrum-2020"],
@@ -4619,7 +4619,7 @@
         "id": "b",
         "text": {
           "en": "Insufficient shared transparency about the state of the Increment.",
-          "az": "İnkrementin vəziyyəti barədə ortaq şəffaflığın azlığı."
+          "az": "Increment-in vəziyyəti barədə ortaq şəffaflığın azlığı."
         },
         "explanation": {
           "en": "A shared Definition of Done creates a common basis for inspection and decisions.",
@@ -4655,7 +4655,7 @@
     "difficulty": 2,
     "text": {
       "en": "A Done Increment could help customers now, but a stakeholder believes Scrum requires waiting for Review. Which response is accurate?",
-      "az": "Done İnkrement indi müştəriyə kömək edə bilər, amma maraqlı tərəf Scrum-un Review-a qədər gözləməyi tələb etdiyini düşünür. Hansı cavab dəqiqdir?"
+      "az": "Done Increment indi müştəriyə kömək edə bilər, amma maraqlı tərəf Scrum-un Review-a qədər gözləməyi tələb etdiyini düşünür. Hansı cavab dəqiqdir?"
     },
     "options": [
       {
@@ -4677,7 +4677,7 @@
         },
         "explanation": {
           "en": "The Guide explicitly allows multiple Increments and delivery before Sprint end.",
-          "az": "Bələdçi bir neçə İnkrementə və Sprint bitmədən çatdırılmaya açıq imkan verir."
+          "az": "Bələdçi bir neçə Increment-ə və Sprint bitmədən çatdırılmaya açıq imkan verir."
         }
       },
       {
@@ -4774,7 +4774,7 @@
     "difficulty": 2,
     "text": {
       "en": "A required external approval repeatedly blocks a team from producing a usable Increment. The manager suggests the Scrum Master should simply chase every individual task. What better response addresses the systemic issue?",
-      "az": "Məcburi xarici təsdiq komandanı dəfələrlə istifadə edilən İnkrement yaratmaqdan saxlayır. Rəhbər Scrum Master-in yalnız hər fərdi işi təqib etməsini təklif edir. Sistem problemini hansı cavab daha yaxşı həll edir?"
+      "az": "Məcburi xarici təsdiq komandanı dəfələrlə istifadə edilən Increment yaratmaqdan saxlayır. Rəhbər Scrum Master-in yalnız hər fərdi işi təqib etməsini təklif edir. Sistem problemini hansı cavab daha yaxşı həll edir?"
     },
     "options": [
       {
@@ -5163,7 +5163,7 @@
     "difficulty": 3,
     "text": {
       "en": "Leadership demands certainty about a year of features before authorizing any learning. Which proposal can preserve governance while supporting empiricism?",
-      "az": "Rəhbərlik öyrənməyə icazə verməzdən əvvəl bir illik funksiyalar barədə əminlik tələb edir. Hansı təklif idarəetməni saxlayıb empirizmi dəstəkləyə bilər?"
+      "az": "Rəhbərlik öyrənməyə icazə verməzdən əvvəl bir illik funksiyalar barədə əminlik tələb edir. Hansı təklif idarəetməni saxlayıb empiricism-i dəstəkləyə bilər?"
     },
     "options": [
       {
@@ -5196,7 +5196,7 @@
         },
         "explanation": {
           "en": "Empiricism depends on transparent goals, measures and bounded experiments, not absence of accountability.",
-          "az": "Empirizm hesabatlılığın yoxluğuna deyil, şəffaf məqsəd, ölçü və sərhədli eksperimentə əsaslanır."
+          "az": "Empiricism hesabatlılığın yoxluğuna deyil, şəffaf məqsəd, ölçü və sərhədli eksperimentə əsaslanır."
         }
       }
     ],
