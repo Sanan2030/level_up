@@ -298,9 +298,13 @@
       "pspo2-organization",
       "pspo2-outcome-experiments",
       "pspo2-release-feature-flags",
-      "pspo2-platform-value"
+      "pspo2-platform-value",
+      "pspo2-backlog-economics",
+      "pspo2-portfolio-decisions",
+      "pspo2-business-models",
+      "pspo2-evidence-uncertainty"
     ],
-    "estimatedMinutes": 400,
+    "estimatedMinutes": 590,
     "prerequisites": []
   },
   {

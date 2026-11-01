@@ -53,10 +53,10 @@
     "url": "https://www.scrum.org/open-assessments/product-owner-open",
     "kind": "assessment",
     "status": "challenge",
-    "checkedAt": "2026-10-21",
+    "checkedAt": "2026-11-01",
     "notes": {
-      "az": "2026-10-21: HTTP 202, WAF yoxlaması. Rəsmi testin sualları bu mühitdə görülməyib. Rəsmi məşq üçün keçidi aç.",
-      "en": "2026-10-21: HTTP 202 WAF challenge. Official test questions could not be viewed here. Follow the link for official practice."
+      "az": "2026-11-01 təkrar yoxlama: HTTP 202 və boş cavab (saytın giriş yoxlaması). Suallar və cari sual sayı oxunmayıb. PSPO II sınağı kimi deyil, rəsmi əsas bilik məşqi kimi əlaqələndirilib.",
+      "en": "2026-11-01 recheck: HTTP 202 with an empty response (website challenge). Questions and current count were not read. Linked as official foundational practice, not a PSPO II mock."
     }
   },
   {
@@ -1077,6 +1077,42 @@
     "notes": {
       "en": "Read official documentation source website/content/docs/platform/k8s/injector/index.mdx at raw.githubusercontent.com/hashicorp/vault/v1.19.0/ on 2026-10-27. Reviewed admission injection, Pod template annotations, ServiceAccount roles, init/sidecar containers and shared memory files. Examples are illustrative, not executed against a cluster.",
       "az": "Rəsmi website/content/docs/platform/k8s/injector/index.mdx documentation mənbəyi 2026-10-27 tarixində raw.githubusercontent.com/hashicorp/vault/v1.19.0/ ünvanında oxunub. Admission injection, Pod template annotation-ları, ServiceAccount rolları, init/sidecar container-lər və shared memory faylları yoxlanıb. Nümunələr izah üçündür, cluster-də icra edilməyib."
+    }
+  },
+  {
+    "id": "kwestio-pspo2",
+    "title": "Kwestio — PSPO II free practice and timed mock",
+    "url": "https://kwestio.jad2advisory.com/certifications/pspo-ii",
+    "kind": "assessment",
+    "status": "read",
+    "checkedAt": "2026-11-01",
+    "notes": {
+      "az": "Əsas, practice və course səhifələri, açıq sual bankı oxunub: altı mövzuda 160 sual. Platforma dörd tam sınaq göstərir. Mövzu boşluqlarını tapmaq üçün istifadə edilib; suallar yenidən paylaşılmır. Üçüncü tərəfin imtahan məlumatı rəsmi parametrləri təsdiqləmir.",
+      "en": "Landing/practice/course pages and the public practice-bank asset read: 160 questions across six topics. Provider advertises four full papers. Used for topic-gap analysis; questions are not redistributed. Third-party exam facts do not verify official settings."
+    }
+  },
+  {
+    "id": "scrumprep-pspo2",
+    "title": "ScrumPrep — PSPO II free quiz",
+    "url": "https://scrumprep.com/product/pspo-ii-free-quiz/",
+    "kind": "assessment",
+    "status": "read",
+    "checkedAt": "2026-11-01",
+    "notes": {
+      "az": "Açıq məhsul səhifəsi oxunub: dəyər, strategiya və maraqlı tərəflər üzrə 12 təsadüfi pulsuz sual; tam vaxtlı sınaqlar ödənişlidir. Start Free Quiz tələbə mağazasının səbətinə aparır. Test sualları oxunmayıb, hesab və alış yaradılmayıb.",
+      "en": "Public product page read: 12 random free questions on value, strategy and stakeholders; full timed mocks are paid. Start Free Quiz leads to the student storefront/cart. Quiz questions were not read and no account or purchase was created."
+    }
+  },
+  {
+    "id": "examdeck-pspo2",
+    "title": "ExamDeck — PSPO II public practice samples",
+    "url": "https://examdeck.pro/pspo2-practice-questions",
+    "kind": "assessment",
+    "status": "read",
+    "checkedAt": "2026-11-01",
+    "notes": {
+      "az": "Əsas səhifədə 10 açıq nümunə və yeddi mövzu səhifəsinin hər birində beş nümunə oxunub. Tətbiq altı başlanğıc sualını pulsuz, tam bankı ödənişli göstərir. Nümunələr mövzu seçiminə kömək edib; suallar köçürülməyib, keçid verilib. Göstərilən mövzu faizləri rəsmi çəki deyil. Nexus nümunəsi əlavə üçüncü tərəf materialıdır; rəsmi Nexus səhifəsi HTTP 202 qaytarıb.",
+      "en": "Main page (10 public examples) and all seven linked topic pages (five examples each) read. The app advertises six free starter questions and a paid full bank. Sample topics informed original teaching; vendor questions are linked, not copied. Claimed topic weights are not official weights. Nexus example is supplementary third-party material; the official Nexus page returned HTTP 202."
     }
   }
 ]

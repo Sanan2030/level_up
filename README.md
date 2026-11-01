@@ -45,6 +45,8 @@ The curriculum deliberately distinguishes **complete lessons** from **planned ou
 
 ## Certification accuracy
 
+The PSPO II update of 1 November 2026 adds four complete AZ/EN lessons and 24 original bilingual questions (119 total topics, 94 complete lessons and 706 questions). In **Practice → PSPO II**, open Kwestio, ScrumPrep, ExamDeck or Product Owner Open, with free/paid scope and matching lessons. Vendor tests run externally; local practice results remain in this app. The new lessons cover backlog economics, portfolio/retirement, business models and evidence uncertainty. See [the provider review and coverage map](docs/RESEARCH-PSPO-PRACTICE-2026-11-01.md) for actual reading scope and access limitations.
+
 All questions are independently written educational practice, **not official exam questions**. The app is not affiliated with IIBA or Scrum.org. It does not reproduce BABOK text, book text, official assessment questions, or exam dumps. Uploaded PDFs are not distributed with the app.
 
 Exam details live in `data/exams/`, with source links, verification status, and a verification date. Fields marked `TODO: VERIFY` or `needs-verification` must be checked against the linked official sources before being presented as current exam facts. A missing or unpublished pass threshold remains `null`; it is never guessed. Certification eligibility must be checked with the awarding organization.

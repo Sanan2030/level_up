@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { SourceLinks } from '@/components/source-links';
+import { ExternalAssessments } from '@/components/quiz/external-assessments';
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
@@ -735,7 +736,7 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
               </Link>
             </div>
           )}
-          {trackId.startsWith('pspo') && (
+          {trackId.startsWith('pspo') && trackId !== 'pspo2' && (
             <div className="notice official-practice">
               <p>
                 {locale === 'az'
@@ -780,6 +781,9 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
                 ))}
               </select>
             </label>
+          )}
+          {!independentPractice && !lessonFilter && (
+            <ExternalAssessments locale={locale} trackId={trackId} />
           )}
           <fieldset style={{ border: 0, padding: 0, margin: 0 }}>
             <legend style={{ fontWeight: 600, marginBottom: '.75rem' }}>{t.mode}</legend>

@@ -100,13 +100,17 @@
         "id": "forecasting-release",
         "title": "Forecasting & Release Planning",
         "description": "Communicate what historical evidence supports and where a forecast remains uncertain.",
-        "lessonIds": ["pspo2-forecasting", "pspo2-release-feature-flags"]
+        "lessonIds": [
+          "pspo2-forecasting",
+          "pspo2-release-feature-flags",
+          "pspo2-evidence-uncertainty"
+        ]
       },
       {
         "id": "product-vision",
         "title": "Product Vision",
         "description": "Explain the audience, need and direction before committing to a fixed feature list.",
-        "lessonIds": ["pspo1-product-value", "pspo2-strategy"]
+        "lessonIds": ["pspo1-product-value", "pspo2-strategy", "pspo2-business-models"]
       },
       {
         "id": "product-value",
@@ -116,20 +120,27 @@
           "pspo1-product-value",
           "pspo2-value",
           "pspo2-outcome-experiments",
-          "pspo2-platform-value"
+          "pspo2-platform-value",
+          "pspo2-portfolio-decisions"
         ]
       },
       {
         "id": "product-backlog",
         "title": "Product Backlog Management",
         "description": "Refine useful slices and compare value, risk, size and dependencies.",
-        "lessonIds": ["pspo1-refinement", "pspo1-product-value"]
+        "lessonIds": ["pspo1-refinement", "pspo1-product-value", "pspo2-backlog-economics"]
       },
       {
         "id": "business-strategy",
         "title": "Business Strategy",
         "description": "Use goals and experiments to guide investment under uncertainty.",
-        "lessonIds": ["pspo2-strategy", "pspo2-organization", "pspo2-outcome-experiments"]
+        "lessonIds": [
+          "pspo2-strategy",
+          "pspo2-organization",
+          "pspo2-outcome-experiments",
+          "pspo2-business-models",
+          "pspo2-portfolio-decisions"
+        ]
       },
       {
         "id": "stakeholders-customers",
@@ -197,7 +208,7 @@
         "id": "portfolio-planning",
         "title": "Portfolio Planning",
         "description": "Make competing investments and too much parallel work visible.",
-        "lessonIds": ["pspo2-organization"]
+        "lessonIds": ["pspo2-organization", "pspo2-portfolio-decisions"]
       },
       {
         "id": "evidence-based-management",
@@ -207,7 +218,8 @@
           "pspo2-value",
           "pspo2-strategy",
           "pspo3-reflection",
-          "pspo2-outcome-experiments"
+          "pspo2-outcome-experiments",
+          "pspo2-evidence-uncertainty"
         ]
       }
     ]

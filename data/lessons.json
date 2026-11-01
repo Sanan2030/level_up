@@ -1320,11 +1320,17 @@
       "az": "Done tarixçəsi ilə faydalı proqnoz qur, əhatə seçimlərini və məhdudiyyətləri şəffaf göstər.",
       "en": "Use Done history to forecast, making scope options and limitations transparent."
     },
-    "minutes": 25,
+    "minutes": 40,
     "status": "published",
     "topics": ["Forecasting, release and uncertainty", "Professional Scrum Competencies", "pspo2"],
     "prerequisites": [],
-    "sourceIds": ["professional-po-2018", "scrum-2020", "kanban-2021", "scrum-competencies-2026"]
+    "sourceIds": [
+      "professional-po-2018",
+      "scrum-2020",
+      "kanban-2021",
+      "scrum-competencies-2026",
+      "examdeck-pspo2"
+    ]
   },
   {
     "id": "pspo2-shared-quality",
@@ -1339,9 +1345,15 @@
       "az": "Bir neçə komandanın işini istifadə edilə bilən Increment-ə bağla və keyfiyyət sərhədini qoru.",
       "en": "Connect multiple teams’ work to a usable Increment and protect shared quality boundaries."
     },
-    "minutes": 25,
+    "minutes": 40,
     "status": "published",
-    "sourceIds": ["scrum-2020", "ebm-2024", "professional-po-2018", "scrum-competencies-2026"],
+    "sourceIds": [
+      "scrum-2020",
+      "ebm-2024",
+      "professional-po-2018",
+      "scrum-competencies-2026",
+      "examdeck-pspo2"
+    ],
     "topics": ["Shared quality and technical risk", "PSPO II"],
     "prerequisites": []
   },
@@ -2453,5 +2465,120 @@
     "prerequisites": ["jwt-validation-authorization"],
     "sourceIds": ["owasp-secrets", "aws-iam", "jwt-security-8725"],
     "placement": "library"
+  },
+  {
+    "id": "pspo2-backlog-economics",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Product Backlog iqtisadiyyatı və yenilənməsi",
+      "en": "Product Backlog economics and renewal"
+    },
+    "summary": {
+      "az": "Gecikmə xərci, öyrənmə və asılılıqlara görə sırala; köhnə istəkləri dəqiqləşdir, böl və çıxar.",
+      "en": "Order by delay cost, learning and dependencies; refine, split and retire stale requests."
+    },
+    "minutes": 40,
+    "status": "published",
+    "topics": [
+      "PSPO II",
+      "Cost of Delay",
+      "backlog aging",
+      "refinement",
+      "vertical slicing",
+      "delegation",
+      "product-backlog"
+    ],
+    "prerequisites": ["pspo2-strategy"],
+    "sourceIds": ["scrum-2020", "professional-po-2018", "kwestio-pspo2", "examdeck-pspo2"]
+  },
+  {
+    "id": "pspo2-portfolio-decisions",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Portfolio investisiyası və məhsulun dayandırılması",
+      "en": "Portfolio investment and product retirement"
+    },
+    "summary": {
+      "az": "Əlavə investisiyanı, cari və potensial dəyəri, alternativ dəyərini və təhlükəsiz dayandırmanı müqayisə et.",
+      "en": "Compare marginal investment, current and unrealized value, opportunity cost and safe retirement."
+    },
+    "minutes": 40,
+    "status": "published",
+    "topics": [
+      "PSPO II",
+      "portfolio planning",
+      "product lifecycle",
+      "sunsetting",
+      "opportunity cost",
+      "sunk cost",
+      "Current Value",
+      "Unrealized Value"
+    ],
+    "prerequisites": ["pspo2-value", "pspo2-organization"],
+    "sourceIds": [
+      "scrum-2020",
+      "ebm-2024",
+      "professional-po-2018",
+      "kwestio-pspo2",
+      "examdeck-pspo2"
+    ]
+  },
+  {
+    "id": "pspo2-business-models",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Vision, biznes modeli və strateji seçimlər",
+      "en": "Vision, business model and strategic trade-offs"
+    },
+    "summary": {
+      "az": "Müştəri seqmenti, qiymət və çatdırılma təşviqlərinin product vision-u dəstəkləyib-dəstəkləmədiyini yoxla.",
+      "en": "Test whether customer segments, pricing and delivery incentives support the product vision."
+    },
+    "minutes": 35,
+    "status": "published",
+    "topics": [
+      "PSPO II",
+      "business model",
+      "product vision",
+      "Product Goal",
+      "customer segments",
+      "pricing",
+      "competitor analysis"
+    ],
+    "prerequisites": ["pspo2-strategy"],
+    "sourceIds": ["scrum-2020", "ebm-2024", "professional-po-2018", "examdeck-pspo2"]
+  },
+  {
+    "id": "pspo2-evidence-uncertainty",
+    "trackId": "pspo2",
+    "level": "junior",
+    "moduleId": "pspo2-preparation",
+    "title": {
+      "az": "Ehtimal, eksperimentlər və sübutun keyfiyyəti",
+      "en": "Probability, experiments and evidence quality"
+    },
+    "summary": {
+      "az": "Monte Carlo percentilini, qeyri-müəyyən intervalı, fərziyyə testini və innovasiya imkanını şərh et.",
+      "en": "Interpret Monte Carlo percentiles, inconclusive intervals, assumption tests and innovation capacity."
+    },
+    "minutes": 45,
+    "status": "published",
+    "topics": [
+      "PSPO II",
+      "Monte Carlo",
+      "probabilistic forecasting",
+      "confidence interval",
+      "riskiest assumption test",
+      "on-product index",
+      "A2I"
+    ],
+    "prerequisites": ["pspo2-forecasting", "pspo2-discovery", "pspo2-value"],
+    "sourceIds": ["kanban-2021", "ebm-2024", "professional-po-2018", "kwestio-pspo2"]
   }
 ]

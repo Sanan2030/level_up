@@ -8,6 +8,7 @@ import { contentRoot, frontmatterSchema, walkFiles, parseMdxSource } from '../li
 import { scrumCompetencies } from '../lib/study-guide';
 import { sources } from '../lib/sources';
 import { tracks } from '../lib/tracks';
+import { externalAssessments } from '../lib/external-assessments';
 
 async function validate() {
   const errors: string[] = [];
@@ -23,6 +24,18 @@ async function validate() {
   unique(competencies, 'Competencies');
   unique(glossary, 'Glossary');
   const lessonIds = new Set(lessons.map((l) => l.id));
+  unique(externalAssessments, 'External assessments');
+  for (const assessment of externalAssessments) {
+    check(
+      sources.some((s) => s.id === assessment.sourceId),
+      `${assessment.id}: source missing`,
+    );
+    for (const id of assessment.lessonIds)
+      check(
+        lessons.some((lesson) => lesson.id === id && lesson.status === 'published'),
+        `${assessment.id}: related lesson ${id} is not complete`,
+      );
+  }
   check(
     scrumCompetencies.length === 5,
     'Professional Scrum framework requires five competency groups',
