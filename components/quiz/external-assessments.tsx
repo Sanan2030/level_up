@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowUpRight, BookOpen } from 'lucide-react';
 import { externalAssessments } from '@/lib/external-assessments';
 import { lessons } from '@/lib/catalog';
+import { getTrack } from '@/lib/tracks';
 import type { Locale, TrackId } from '@/lib/types';
 
 export function ExternalAssessments({ locale, trackId }: { locale: Locale; trackId: TrackId }) {
@@ -13,7 +14,7 @@ export function ExternalAssessments({ locale, trackId }: { locale: Locale; track
     <section className="stack external-assessments" aria-labelledby="external-assessments-title">
       <div>
         <h2 id="external-assessments-title">
-          {az ? 'PSPO II sınaq platformaları' : 'PSPO II practice platforms'}
+          {getTrack(trackId).name[locale]} {az ? 'sınaq platformaları' : 'practice platforms'}
         </h2>
         <p className="muted">
           {az

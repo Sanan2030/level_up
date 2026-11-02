@@ -53,10 +53,10 @@
     "url": "https://www.scrum.org/open-assessments/product-owner-open",
     "kind": "assessment",
     "status": "challenge",
-    "checkedAt": "2026-11-01",
+    "checkedAt": "2026-11-02",
     "notes": {
-      "az": "2026-11-01 təkrar yoxlama: HTTP 202 və boş cavab (saytın giriş yoxlaması). Suallar və cari sual sayı oxunmayıb. PSPO II sınağı kimi deyil, rəsmi əsas bilik məşqi kimi əlaqələndirilib.",
-      "en": "2026-11-01 recheck: HTTP 202 with an empty response (website challenge). Questions and current count were not read. Linked as official foundational practice, not a PSPO II mock."
+      "az": "2026-11-02 təkrar yoxlama: HTTP 202 və boş cavab (saytın giriş yoxlaması). Cari suallar və say oxunmayıb. Rəsmi əsas Product Ownership məşqi kimi əlaqələndirilib; ödənişli sertifikasiya imtahanı və ya PSPO II sınağı deyil.",
+      "en": "2026-11-02 recheck: HTTP 202 with an empty response (website challenge). Current questions and count not read. Linked as official foundational Product Ownership practice; not the paid certification exam or a PSPO II mock."
     }
   },
   {
@@ -1113,6 +1113,54 @@
     "notes": {
       "az": "Əsas səhifədə 10 açıq nümunə və yeddi mövzu səhifəsinin hər birində beş nümunə oxunub. Tətbiq altı başlanğıc sualını pulsuz, tam bankı ödənişli göstərir. Nümunələr mövzu seçiminə kömək edib; suallar köçürülməyib, keçid verilib. Göstərilən mövzu faizləri rəsmi çəki deyil. Nexus nümunəsi əlavə üçüncü tərəf materialıdır; rəsmi Nexus səhifəsi HTTP 202 qaytarıb.",
       "en": "Main page (10 public examples) and all seven linked topic pages (five examples each) read. The app advertises six free starter questions and a paid full bank. Sample topics informed original teaching; vendor questions are linked, not copied. Claimed topic weights are not official weights. Nexus example is supplementary third-party material; the official Nexus page returned HTTP 202."
+    }
+  },
+  {
+    "id": "kwestio-pspo1",
+    "title": "Kwestio — PSPO I Mock Exam",
+    "url": "https://kwestio.jad2advisory.com/en/certifications/pspo-i",
+    "kind": "assessment",
+    "status": "read",
+    "checkedAt": "2026-11-02",
+    "notes": {
+      "az": "2026-11-02 tarixində açıq ingilis dili səhifəsi oxunub: 361 pulsuz sual və dörd tam sınaq göstərilir. Bank və vaxtlı sınağın məzmunu təhlil edilməyib. Platformanın imtahan iddiaları rəsmi parametrləri təsdiqləmir.",
+      "en": "Public English certification page read on 2026-11-02: 361 free questions and four full mock papers advertised. The bank and timed-mock content were not reviewed. Provider exam claims do not verify official exam configuration."
+    }
+  },
+  {
+    "id": "scrumprep-pspo1",
+    "title": "ScrumPrep — PSPO I",
+    "url": "https://scrumprep.com/product/pspo-i-free-quiz/",
+    "kind": "assessment",
+    "status": "read",
+    "checkedAt": "2026-11-02",
+    "notes": {
+      "az": "2026-11-02 tarixində açıq məhsul səhifəsi oxunub: on dörd təsadüfi pulsuz sual; tam bank və vaxtlı sınaqlar ödənişlidir. Test sualları oxunmayıb, qeydiyyat və alış aparılmayıb.",
+      "en": "Public product page read on 2026-11-02: fourteen random free questions; full bank and timed mocks paid. Actual quiz questions not read; no registration or purchase performed."
+    }
+  },
+  {
+    "id": "mplaza-pspo1",
+    "title": "Management Plaza — PSPO I Exam Simulator",
+    "url": "https://mplaza.training/exam-simulators/pspo/",
+    "kind": "assessment",
+    "status": "read",
+    "checkedAt": "2026-11-02",
+    "notes": {
+      "az": "2026-11-02 tarixində açıq simulyator səhifəsi oxunub. Kiçik pulsuz demo, izah dəstəyi söndürülüb; tam simulyator ödənişlidir. Səhifədə 354 və 345 ilkin sual kimi fərqli saylar var; dəqiq bank sayı verilməyib. Demo məzmunu təhlil edilməyib, alış aparılmayıb.",
+      "en": "Public simulator page read on 2026-11-02. Small free demo, coaching disabled; full simulator paid. Page inconsistently states 354 and 345 root questions; exact bank total omitted. Demo content not reviewed; no purchase performed."
+    }
+  },
+  {
+    "id": "scrum-open",
+    "title": "Scrum.org — Scrum Open",
+    "url": "https://www.scrum.org/open-assessments/scrum-open",
+    "kind": "assessment",
+    "status": "challenge",
+    "checkedAt": "2026-11-02",
+    "notes": {
+      "az": "2026-11-02: HTTP 202 və boş cavab / saytın giriş yoxlaması. Test sualları və cari say açılmayıb. Əlavə rəsmi Scrum əsasları məşqi kimi əlaqələndirilib.",
+      "en": "2026-11-02: HTTP 202 and empty response / website challenge. Test questions and current count unavailable. Linked as supplementary official Scrum foundations practice."
     }
   }
 ]

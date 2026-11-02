@@ -736,7 +736,7 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
               </Link>
             </div>
           )}
-          {trackId.startsWith('pspo') && trackId !== 'pspo2' && (
+          {trackId === 'pspo3' && (
             <div className="notice official-practice">
               <p>
                 {locale === 'az'

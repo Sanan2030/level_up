@@ -3,51 +3,58 @@ import { expect, test } from '@playwright/test';
 import assessmentData from '../../data/external-assessments.json' with { type: 'json' };
 import questionData from '../../data/questions/pspo2-platforms.json' with { type: 'json' };
 
-for (const locale of ['az', 'en'] as const) {
-  test(`${locale}: PSPO II providers show access limits and usable lesson links on mobile`, async ({
-    page,
-  }) => {
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto(`/${locale}/practice?track=pspo2`);
-    const section = page.locator('.external-assessments');
-    await expect(section.locator('article')).toHaveCount(4);
-    for (const assessment of assessmentData) {
-      const card = section.getByRole('article').filter({
-        has: page.getByRole('heading', { name: assessment.name, exact: true }),
-      });
-      await expect(card).toContainText(assessment.offer[locale]);
-      await expect(card).toContainText(assessment.access[locale]);
-      await expect(card.locator('a[target="_blank"]').first()).toHaveAttribute(
-        'href',
-        assessment.url,
+for (const trackId of ['pspo1', 'pspo2'] as const) {
+  for (const locale of ['az', 'en'] as const) {
+    test(`${locale}: ${trackId} providers show access limits and usable lesson links on mobile`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width: 390, height: 844 });
+      await page.goto(`/${locale}/practice?track=${trackId}`);
+      const section = page.locator('.external-assessments');
+      const items = assessmentData.filter((item) => item.trackId === trackId);
+      await expect(section.locator('article')).toHaveCount(trackId === 'pspo1' ? 5 : 4);
+      await expect(section.getByRole('heading', { level: 2 })).toContainText(
+        trackId === 'pspo1' ? 'PSPO I ' : 'PSPO II ',
       );
-      await card.locator('summary').click();
-      for (const id of assessment.lessonIds)
-        await expect(card.locator(`a[href="/${locale}/lessons/${id}"]`)).toBeVisible();
-    }
-    await expect(
-      section.getByRole('link', {
-        name: locale === 'az' ? 'Vaxtlı sınağı aç ↗' : 'Open timed mock ↗',
-      }),
-    ).toHaveAttribute('href', /kwestio.*mock-exam$/);
-    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
-      390,
-    );
-    const accessibility = await new AxeBuilder({ page })
-      .include('.external-assessments')
-      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
-      .analyze();
-    expect(accessibility.violations.map((violation) => violation.id)).toEqual([]);
-    await page.screenshot({ path: `/tmp/pspo2-platforms-${locale}.png`, fullPage: true });
-    await page
-      .getByRole('combobox', {
-        name: locale === 'az' ? 'Öyrənmə istiqaməti' : 'Learning track',
-        exact: true,
-      })
-      .selectOption('pspo1');
-    await expect(section).toHaveCount(0);
-    await expect(page.getByRole('link', { name: 'Product Owner Open ↗' })).toBeVisible();
-  });
+      for (const assessment of items) {
+        const card = section.getByRole('article').filter({
+          has: page.getByRole('heading', { name: assessment.name, exact: true }),
+        });
+        await expect(card).toContainText(assessment.offer[locale]);
+        await expect(card).toContainText(assessment.access[locale]);
+        await expect(card.locator('a[target="_blank"]').first()).toHaveAttribute(
+          'href',
+          assessment.url,
+        );
+        await card.locator('summary').click();
+        for (const id of assessment.lessonIds)
+          await expect(card.locator(`a[href="/${locale}/lessons/${id}"]`)).toBeVisible();
+      }
+      if (trackId === 'pspo2')
+        await expect(
+          section.getByRole('link', {
+            name: locale === 'az' ? 'Vaxtlı sınağı aç ↗' : 'Open timed mock ↗',
+          }),
+        ).toHaveAttribute('href', /kwestio.*mock-exam$/);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+        390,
+      );
+      const accessibility = await new AxeBuilder({ page })
+        .include('.external-assessments')
+        .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+        .analyze();
+      expect(accessibility.violations.map((violation) => violation.id)).toEqual([]);
+      await page.screenshot({ path: `/tmp/${trackId}-platforms-${locale}.png`, fullPage: true });
+      await page
+        .getByRole('combobox', {
+          name: locale === 'az' ? 'Öyrənmə istiqaməti' : 'Learning track',
+          exact: true,
+        })
+        .selectOption('pspo3');
+      await expect(section).toHaveCount(0);
+      await expect(page.getByRole('link', { name: 'Product Owner Open ↗' })).toBeVisible();
+    });
+  }
 }
 
 test('new lessons render diagrams and original practice saves answers, results and existing progress', async ({
