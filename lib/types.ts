@@ -60,6 +60,8 @@ export const competencySchema = z.object({
 });
 export type Competency = z.infer<typeof competencySchema>;
 export const questionSchema = z.object({
+  providerId: z.string().min(1).optional(),
+  sourceQuestionId: z.string().min(1).optional(),
   sourceIds: z.array(z.string()).default([]),
   id: z.string(),
   trackId: trackIdSchema,
@@ -111,6 +113,7 @@ export interface QuizAttempt {
   id: string;
   trackId: TrackId;
   mode: string;
+  practiceSetId?: string;
   startedAt: string;
   completedAt: string;
   questionIds: string[];

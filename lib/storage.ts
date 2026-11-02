@@ -35,6 +35,7 @@ export const progressSchema = z
           id: z.string(),
           trackId: trackIdSchema,
           mode: z.string(),
+          practiceSetId: z.string().min(1).max(200).optional(),
           startedAt: date,
           completedAt: date,
           questionIds: z.array(z.string()),

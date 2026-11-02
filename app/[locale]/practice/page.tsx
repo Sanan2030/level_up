@@ -2,7 +2,7 @@ import { pageMetadata } from '@/lib/page-metadata';
 import { Suspense } from 'react';
 import { QuizWorkspace } from '@/components/quiz/quiz-workspace';
 import { getLocale } from '@/lib/i18n';
-import { getExams, getQuestions } from '@/lib/assessments';
+import { getExams, getQuestions, getImportedQuestions } from '@/lib/assessments';
 export const generateMetadata = pageMetadata(
   'Practice & certification exams',
   'Məşq və sertifikasiya imtahanları',
@@ -11,7 +11,11 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
   return (
     <Suspense fallback={<p>…</p>}>
-      <QuizWorkspace locale={getLocale(locale)} questions={getQuestions()} exams={getExams()} />
+      <QuizWorkspace
+        locale={getLocale(locale)}
+        questions={[...getQuestions(), ...getImportedQuestions()]}
+        exams={getExams()}
+      />
     </Suspense>
   );
 }

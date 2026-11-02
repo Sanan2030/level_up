@@ -21,3 +21,9 @@ export function getQuestions() {
     questionSchema.parse(value),
   );
 }
+
+export function getImportedQuestions() {
+  const folder = path.join(process.cwd(), 'data/imported-questions');
+  if (!fs.existsSync(folder)) return [];
+  return readJsonFiles(folder).map((value) => questionSchema.parse(value));
+}

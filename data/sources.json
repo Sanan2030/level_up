@@ -1085,10 +1085,10 @@
     "url": "https://kwestio.jad2advisory.com/certifications/pspo-ii",
     "kind": "assessment",
     "status": "read",
-    "checkedAt": "2026-11-01",
+    "checkedAt": "2026-11-02",
     "notes": {
-      "az": "Əsas, practice və course səhifələri, açıq sual bankı oxunub: altı mövzuda 160 sual. Platforma dörd tam sınaq göstərir. Mövzu boşluqlarını tapmaq üçün istifadə edilib; suallar yenidən paylaşılmır. Üçüncü tərəfin imtahan məlumatı rəsmi parametrləri təsdiqləmir.",
-      "en": "Landing/practice/course pages and the public practice-bank asset read: 160 questions across six topics. Provider advertises four full papers. Used for topic-gap analysis; questions are not redistributed. Third-party exam facts do not verify official settings."
+      "en": "160 accessible questions, answer keys and source explanations imported into a separate attributed collection. The user confirmed permission to use and republish in this chat on 2026-11-02. English wording is preserved; Azerbaijani translations are provided. This does not verify official exam facts. Public practice-bank asset read.",
+      "az": "160 əlçatan sual, cavab açarı və mənbə izahı ayrıca, mənbə adı göstərilən kolleksiyaya əlavə edilib. İstifadəçi 2026-11-02 tarixində bu çatda istifadə və yayımlama icazəsini təsdiqləyib. İngilis mətnləri saxlanılıb, AZ tərcümələri verilib. Bu, rəsmi imtahan faktlarını təsdiqləmir. Açıq practice-bank faylı oxunub."
     }
   },
   {
@@ -1099,8 +1099,8 @@
     "status": "read",
     "checkedAt": "2026-11-01",
     "notes": {
-      "az": "Açıq məhsul səhifəsi oxunub: dəyər, strategiya və maraqlı tərəflər üzrə 12 təsadüfi pulsuz sual; tam vaxtlı sınaqlar ödənişlidir. Start Free Quiz tələbə mağazasının səbətinə aparır. Test sualları oxunmayıb, hesab və alış yaradılmayıb.",
-      "en": "Public product page read: 12 random free questions on value, strategy and stakeholders; full timed mocks are paid. Start Free Quiz leads to the student storefront/cart. Quiz questions were not read and no account or purchase was created."
+      "az": "Açıq məhsul səhifəsi oxunub: dəyər, strategiya və maraqlı tərəflər üzrə 12 təsadüfi pulsuz sual; tam vaxtlı sınaqlar ödənişlidir. Start Free Quiz tələbə mağazasının səbətinə aparır. Test sualları oxunmayıb, hesab və alış yaradılmayıb. 2026-11-02 idxal yoxlaması: tələbə portalı giriş tələb edir. Test sualları əlavə edilməyib.",
+      "en": "Public product page read: 12 random free questions on value, strategy and stakeholders; full timed mocks are paid. Start Free Quiz leads to the student storefront/cart. Quiz questions were not read and no account or purchase was created. Import recheck on 2026-11-02: student portal requires login. No actual questions imported."
     }
   },
   {
@@ -1109,10 +1109,10 @@
     "url": "https://examdeck.pro/pspo2-practice-questions",
     "kind": "assessment",
     "status": "read",
-    "checkedAt": "2026-11-01",
+    "checkedAt": "2026-11-02",
     "notes": {
-      "az": "Əsas səhifədə 10 açıq nümunə və yeddi mövzu səhifəsinin hər birində beş nümunə oxunub. Tətbiq altı başlanğıc sualını pulsuz, tam bankı ödənişli göstərir. Nümunələr mövzu seçiminə kömək edib; suallar köçürülməyib, keçid verilib. Göstərilən mövzu faizləri rəsmi çəki deyil. Nexus nümunəsi əlavə üçüncü tərəf materialıdır; rəsmi Nexus səhifəsi HTTP 202 qaytarıb.",
-      "en": "Main page (10 public examples) and all seven linked topic pages (five examples each) read. The app advertises six free starter questions and a paid full bank. Sample topics informed original teaching; vendor questions are linked, not copied. Claimed topic weights are not official weights. Nexus example is supplementary third-party material; the official Nexus page returned HTTP 202."
+      "en": "45 accessible questions, answer keys and source explanations imported into a separate attributed collection. The user confirmed permission to use and republish in this chat on 2026-11-02. English wording is preserved; Azerbaijani translations are provided. This does not verify official exam facts. Only the public samples were imported.",
+      "az": "45 əlçatan sual, cavab açarı və mənbə izahı ayrıca, mənbə adı göstərilən kolleksiyaya əlavə edilib. İstifadəçi 2026-11-02 tarixində bu çatda istifadə və yayımlama icazəsini təsdiqləyib. İngilis mətnləri saxlanılıb, AZ tərcümələri verilib. Bu, rəsmi imtahan faktlarını təsdiqləmir. Yalnız açıq nümunələr əlavə edilib."
     }
   },
   {
@@ -1123,8 +1123,8 @@
     "status": "read",
     "checkedAt": "2026-11-02",
     "notes": {
-      "az": "2026-11-02 tarixində açıq ingilis dili səhifəsi oxunub: 361 pulsuz sual və dörd tam sınaq göstərilir. Bank və vaxtlı sınağın məzmunu təhlil edilməyib. Platformanın imtahan iddiaları rəsmi parametrləri təsdiqləmir.",
-      "en": "Public English certification page read on 2026-11-02: 361 free questions and four full mock papers advertised. The bank and timed-mock content were not reviewed. Provider exam claims do not verify official exam configuration."
+      "en": "361 accessible questions, answer keys and source explanations imported into a separate attributed collection. The user confirmed permission to use and republish in this chat on 2026-11-02. English wording is preserved; Azerbaijani translations are provided. This does not verify official exam facts. Public practice-bank asset read.",
+      "az": "361 əlçatan sual, cavab açarı və mənbə izahı ayrıca, mənbə adı göstərilən kolleksiyaya əlavə edilib. İstifadəçi 2026-11-02 tarixində bu çatda istifadə və yayımlama icazəsini təsdiqləyib. İngilis mətnləri saxlanılıb, AZ tərcümələri verilib. Bu, rəsmi imtahan faktlarını təsdiqləmir. Açıq practice-bank faylı oxunub."
     }
   },
   {
@@ -1135,8 +1135,8 @@
     "status": "read",
     "checkedAt": "2026-11-02",
     "notes": {
-      "az": "2026-11-02 tarixində açıq məhsul səhifəsi oxunub: on dörd təsadüfi pulsuz sual; tam bank və vaxtlı sınaqlar ödənişlidir. Test sualları oxunmayıb, qeydiyyat və alış aparılmayıb.",
-      "en": "Public product page read on 2026-11-02: fourteen random free questions; full bank and timed mocks paid. Actual quiz questions not read; no registration or purchase performed."
+      "az": "2026-11-02 tarixində açıq məhsul səhifəsi oxunub: on dörd təsadüfi pulsuz sual; tam bank və vaxtlı sınaqlar ödənişlidir. Test sualları oxunmayıb, qeydiyyat və alış aparılmayıb. 2026-11-02 idxal yoxlaması: tələbə portalı giriş tələb edir. Test sualları əlavə edilməyib.",
+      "en": "Public product page read on 2026-11-02: fourteen random free questions; full bank and timed mocks paid. Actual quiz questions not read; no registration or purchase performed. Import recheck on 2026-11-02: student portal requires login. No actual questions imported."
     }
   },
   {
@@ -1147,8 +1147,8 @@
     "status": "read",
     "checkedAt": "2026-11-02",
     "notes": {
-      "az": "2026-11-02 tarixində açıq simulyator səhifəsi oxunub. Kiçik pulsuz demo, izah dəstəyi söndürülüb; tam simulyator ödənişlidir. Səhifədə 354 və 345 ilkin sual kimi fərqli saylar var; dəqiq bank sayı verilməyib. Demo məzmunu təhlil edilməyib, alış aparılmayıb.",
-      "en": "Public simulator page read on 2026-11-02. Small free demo, coaching disabled; full simulator paid. Page inconsistently states 354 and 345 root questions; exact bank total omitted. Demo content not reviewed; no purchase performed."
+      "en": "12 accessible questions, answer keys and source explanations imported into a separate attributed collection. The user confirmed permission to use and republish in this chat on 2026-11-02. English wording is preserved; Azerbaijani translations are provided. This does not verify official exam facts. Only the free demo was imported; no paid bank was accessed.",
+      "az": "12 əlçatan sual, cavab açarı və mənbə izahı ayrıca, mənbə adı göstərilən kolleksiyaya əlavə edilib. İstifadəçi 2026-11-02 tarixində bu çatda istifadə və yayımlama icazəsini təsdiqləyib. İngilis mətnləri saxlanılıb, AZ tərcümələri verilib. Bu, rəsmi imtahan faktlarını təsdiqləmir. Yalnız pulsuz demo əlavə edilib; ödənişli bank açılmayıb."
     }
   },
   {
@@ -1156,11 +1156,11 @@
     "title": "Scrum.org — Scrum Open",
     "url": "https://www.scrum.org/open-assessments/scrum-open",
     "kind": "assessment",
-    "status": "challenge",
+    "status": "blocked",
     "checkedAt": "2026-11-02",
     "notes": {
-      "az": "2026-11-02: HTTP 202 və boş cavab / saytın giriş yoxlaması. Test sualları və cari say açılmayıb. Əlavə rəsmi Scrum əsasları məşqi kimi əlaqələndirilib.",
-      "en": "2026-11-02: HTTP 202 and empty response / website challenge. Test questions and current count unavailable. Linked as supplementary official Scrum foundations practice."
+      "az": "Son yoxlamada HTTP 403: giriş rədd edildi. Suallar köçürülməyib.",
+      "en": "Latest check returned HTTP 403: access denied. No questions imported."
     }
   }
 ]

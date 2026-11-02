@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { SourceLinks } from '@/components/source-links';
 import { ExternalAssessments } from '@/components/quiz/external-assessments';
+import { PracticeSets } from '@/components/quiz/practice-sets';
+import { practiceSets, selectPracticeSetQuestions, type PracticeSet } from '@/lib/practice-sets';
 import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
@@ -53,7 +55,8 @@ const AttemptChart = dynamic(
 const text = {
   az: {
     title: 'Məşq',
-    original: 'Bütün suallar orijinal məşq materialıdır. Bunlar rəsmi imtahan sualları deyil.',
+    original:
+      'Öz sual bankımız və mənbə adı ilə ayrılmış əlavə testlər. Bunlar rəsmi imtahan sualları deyil.',
     track: 'Öyrənmə istiqaməti',
     mode: 'Məşq rejimi',
     count: 'Sual sayı',
@@ -151,7 +154,7 @@ const text = {
   en: {
     title: 'Practice',
     original:
-      'All questions are original practice material. These are not official exam questions.',
+      'Our own question bank and separately attributed provider tests. These are not official exam questions.',
     track: 'Learning track',
     mode: 'Practice mode',
     count: 'Questions',
@@ -300,6 +303,7 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
       questions.filter(
         (q) =>
           q.trackId === trackId &&
+          !q.providerId &&
           (lessonFilter ? q.lessonId === lessonFilter : !independentIds.has(q.lessonId)),
       ),
     [questions, trackId, lessonFilter, independentIds],
@@ -351,6 +355,7 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
         id: active.id,
         trackId: active.trackId,
         mode: active.mode,
+        practiceSetId: active.practiceSetId,
         startedAt: active.startedAt,
         completedAt: finished.toISOString(),
         questionIds: active.questionIds,
@@ -420,6 +425,22 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
     saveSession(next);
   }
 
+  function startSet(set: PracticeSet, feedbackMode: 'immediate' | 'after-submit') {
+    const selected = selectPracticeSetQuestions(set, questions, feedbackMode === 'after-submit');
+    const next = {
+      ...createQuizSession(
+        selected,
+        'practice',
+        feedbackMode === 'after-submit' ? set.durationMinutes : null,
+      ),
+      practiceSetId: set.id,
+      feedbackMode,
+    };
+    setResultId(null);
+    setNow(next.resumedAt!);
+    saveSession(next);
+  }
+
   function setAnswer(answer: string[]) {
     if (!session || !current || session.checked.includes(current.id)) return;
     if (remainingTime(session) === 0) {
@@ -430,6 +451,7 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
   }
 
   function checkAnswer() {
+    if (session?.feedbackMode === 'after-submit') return;
     if (!session || !current) return;
     if (remainingTime(session) === 0) {
       finishSession(session);
@@ -518,6 +540,11 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
                   ? 'Independent lesson practice'
                   : tracks.find((track) => track.id === session.trackId)?.name[locale]}{' '}
                 · {t.question} {session.index + 1} {t.of} {session.questionIds.length}
+                {session.practiceSetId && (
+                  <span style={{ display: 'block' }}>
+                    {practiceSets.find((set) => set.id === session.practiceSetId)?.title[locale]}
+                  </span>
+                )}
               </span>
               <div style={{ display: 'flex', gap: '.75rem', alignItems: 'center' }}>
                 {remaining !== null ? (
@@ -615,7 +642,7 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
                 checked={session.checked.includes(current.id)}
                 onAnswer={setAnswer}
               />
-              {session.mode !== 'mock' ? (
+              {session.mode !== 'mock' && session.feedbackMode !== 'after-submit' ? (
                 <div>
                   {!session.checked.includes(current.id) ? (
                     <button
@@ -783,7 +810,26 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
             </label>
           )}
           {!independentPractice && !lessonFilter && (
-            <ExternalAssessments locale={locale} trackId={trackId} />
+            <>
+              <PracticeSets locale={locale} trackId={trackId} onStart={startSet} />
+              {['pspo1', 'pspo2'].includes(trackId) && (
+                <details>
+                  <summary>
+                    {locale === 'az'
+                      ? 'Əlavə sayt keçidləri və giriş qeydləri'
+                      : 'Supplementary website links and access notes'}
+                  </summary>
+                  <ExternalAssessments locale={locale} trackId={trackId} />
+                </details>
+              )}
+              {practiceSets.some((set) => set.trackId === trackId) && (
+                <h2>
+                  {locale === 'az'
+                    ? 'Öz sual bankımızla məşq'
+                    : 'Practice with our own question bank'}
+                </h2>
+              )}
+            </>
           )}
           <fieldset style={{ border: 0, padding: 0, margin: 0 }}>
             <legend style={{ fontWeight: 600, marginBottom: '.75rem' }}>{t.mode}</legend>
@@ -1062,6 +1108,8 @@ export function QuizWorkspace({ locale, questions, exams }: Props) {
                         )
                           ? 'Independent lesson practice'
                           : tracks.find((track) => track.id === attempt.trackId)?.name[locale]}
+                        {attempt.practiceSetId &&
+                          ` · ${practiceSets.find((set) => set.id === attempt.practiceSetId)?.title[locale] ?? attempt.practiceSetId}`}
                       </strong>
                       <p className="muted" style={{ fontSize: '.85rem' }}>
                         {new Date(attempt.completedAt).toLocaleDateString(
@@ -1253,9 +1301,11 @@ function QuestionInput({
                   )
                 }
               />
-              <span aria-hidden="true" className="muted" style={{ fontWeight: 600 }}>
-                {String.fromCharCode(65 + index)}.
-              </span>
+              {!(question.providerId && /^[A-Z]\)/.test(option.text.en)) && (
+                <span aria-hidden="true" className="muted" style={{ fontWeight: 600 }}>
+                  {String.fromCharCode(65 + index)}.
+                </span>
+              )}
               <span>{localize(option.text, locale)}</span>
             </label>
           ))}
@@ -1296,6 +1346,11 @@ function AnswerFeedback({
         {correct === null ? t.reflection : correct ? t.correct : t.incorrect}
       </strong>
       <p>{localize(question.explanation, locale)}</p>
+      {question.sourceQuestionId && (
+        <p className="small muted">
+          {locale === 'az' ? 'Mənbədəki sual' : 'Source question'}: {question.sourceQuestionId}
+        </p>
+      )}
       <SourceLinks ids={question.sourceIds} locale={locale} />
       {question.type === 'written' ? (
         <ul>
@@ -1311,25 +1366,27 @@ function AnswerFeedback({
               .map((id) => question.options.find((o) => o.id === id)?.text[locale])
               .join(question.type === 'ordering' || question.type === 'matching' ? ' → ' : '; ')}
           </p>
-          <details style={{ marginTop: '.75rem' }}>
-            <summary style={{ cursor: 'pointer', fontWeight: 600 }}>{t.explanation}</summary>
-            <ul
-              style={{
-                display: 'grid',
-                gap: '.75rem',
-                paddingLeft: '1.25rem',
-                marginTop: '.75rem',
-              }}
-            >
-              {question.options.map((option) => (
-                <li key={option.id}>
-                  <strong>{localize(option.text, locale)}</strong>
-                  <br />
-                  {localize(option.explanation, locale)}
-                </li>
-              ))}
-            </ul>
-          </details>
+          {!question.providerId && (
+            <details style={{ marginTop: '.75rem' }}>
+              <summary style={{ cursor: 'pointer', fontWeight: 600 }}>{t.explanation}</summary>
+              <ul
+                style={{
+                  display: 'grid',
+                  gap: '.75rem',
+                  paddingLeft: '1.25rem',
+                  marginTop: '.75rem',
+                }}
+              >
+                {question.options.map((option) => (
+                  <li key={option.id}>
+                    <strong>{localize(option.text, locale)}</strong>
+                    <br />
+                    {localize(option.explanation, locale)}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
         </div>
       )}
       <LessonRecommendation id={question.lessonId} locale={locale} />
@@ -1429,6 +1486,12 @@ function ResultPanel({
         <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>
           {percent === null ? t.writtenSaved : t.resultTitle}
         </h2>
+        {result.practiceSetId && (
+          <p>
+            {practiceSets.find((set) => set.id === result.practiceSetId)?.title[locale] ??
+              result.practiceSetId}
+          </p>
+        )}
         {percent !== null ? (
           <>
             <p style={{ fontSize: '3rem', fontWeight: 700, lineHeight: 1.2, marginTop: '1rem' }}>

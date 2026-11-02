@@ -3,12 +3,13 @@ import path from 'node:path';
 import { serialize } from 'next-mdx-remote/serialize';
 import remarkGfm from 'remark-gfm';
 import { competencies, glossary, lessons, modules } from '../lib/catalog';
-import { getExams, getQuestions } from '../lib/assessments';
+import { getExams, getQuestions, getImportedQuestions } from '../lib/assessments';
 import { contentRoot, frontmatterSchema, walkFiles, parseMdxSource } from '../lib/content';
 import { scrumCompetencies } from '../lib/study-guide';
 import { sources } from '../lib/sources';
 import { tracks } from '../lib/tracks';
 import { externalAssessments } from '../lib/external-assessments';
+import { practiceSets, selectPracticeSetQuestions } from '../lib/practice-sets';
 
 async function validate() {
   const errors: string[] = [];
@@ -141,6 +142,18 @@ async function validate() {
   const skillIds = competencies.flatMap((c) => c.checklist.map((s) => s.id));
   check(new Set(skillIds).size === skillIds.length, 'Skill IDs must be globally unique');
   const questions = getQuestions();
+  const imported = getImportedQuestions();
+  unique([...questions, ...imported], 'All question IDs');
+  unique(practiceSets, 'Provider practice sets');
+  const packedIds = new Set(practiceSets.flatMap((set) => set.questionIds));
+  for (const set of practiceSets) selectPracticeSetQuestions(set, imported);
+  for (const q of imported) {
+    check(q.providerId && q.sourceQuestionId, `${q.id}: imported question lacks provenance`);
+    check(packedIds.has(q.id), `${q.id}: imported question has no provider set`);
+    check(q.sourceIds.includes(q.providerId!), `${q.id}: provider attribution missing`);
+    check(q.text.az !== q.text.en, `${q.id}: imported question untranslated`);
+    check(q.explanation.az !== q.explanation.en, `${q.id}: imported explanation untranslated`);
+  }
   const exams = getExams();
   unique(questions, 'Questions');
   unique(exams, 'Exam configs');
@@ -171,7 +184,7 @@ async function validate() {
         `${exam.id}: domain weights must total 100`,
       );
   }
-  for (const q of questions) {
+  for (const q of [...questions, ...imported]) {
     check(q.text.az !== q.text.en, `${q.id}: Azerbaijani question duplicates English`);
     check(
       q.explanation.az !== q.explanation.en,
@@ -219,7 +232,7 @@ async function validate() {
   }
   if (errors.length) throw new Error(errors.join('\n'));
   console.log(
-    `Validated ${lessons.length} lessons (${lessons.filter((l) => l.status === 'published').length} complete), ${files.length} MDX source files, ${modules.length} modules, ${competencies.length} competency matrices, ${glossary.length} terms, ${questions.length} original questions, ${exams.length} exam configs.`,
+    `Validated ${lessons.length} lessons (${lessons.filter((l) => l.status === 'published').length} complete), ${files.length} MDX source files, ${modules.length} modules, ${competencies.length} competency matrices, ${glossary.length} terms, ${questions.length} original questions, ${imported.length} separately attributed imported questions, ${exams.length} exam configs.`,
   );
 }
 validate().catch((error) => {

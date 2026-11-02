@@ -10,6 +10,14 @@ for (const trackId of ['pspo1', 'pspo2'] as const) {
     }) => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`/${locale}/practice?track=${trackId}`);
+      await page
+        .getByText(
+          locale === 'az'
+            ? 'Əlavə sayt keçidləri və giriş qeydləri'
+            : 'Supplementary website links and access notes',
+          { exact: true },
+        )
+        .click();
       const section = page.locator('.external-assessments');
       const items = assessmentData.filter((item) => item.trackId === trackId);
       await expect(section.locator('article')).toHaveCount(trackId === 'pspo1' ? 5 : 4);

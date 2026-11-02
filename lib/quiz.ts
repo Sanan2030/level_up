@@ -170,6 +170,8 @@ export const quizSessionSchema = z
     id: z.string().min(1).max(200),
     trackId: trackIdSchema,
     mode: z.enum(quizModes),
+    practiceSetId: z.string().min(1).max(200).optional(),
+    feedbackMode: z.enum(['immediate', 'after-submit']).optional(),
     domain: z.string().nullable(),
     questionIds: z.array(z.string().min(1).max(200)).min(1).max(500),
     optionOrder: z.record(z.string(), z.array(z.string().min(1).max(200)).max(100)),
@@ -231,7 +233,10 @@ export function createQuizSession(
     domain,
     questionIds: questions.map((q) => q.id),
     optionOrder: Object.fromEntries(
-      questions.map((q) => [q.id, shuffle(q.options.map((o) => o.id))]),
+      questions.map((q) => [
+        q.id,
+        q.providerId ? q.options.map((o) => o.id) : shuffle(q.options.map((o) => o.id)),
+      ]),
     ),
     answers: {},
     flags: [],
