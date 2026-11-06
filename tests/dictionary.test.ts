@@ -11,8 +11,8 @@ import { GET } from '@/app/api/translate/route';
 afterEach(() => vi.unstubAllGlobals());
 
 describe('study dictionary', () => {
-  it('contains at least sixty complete bilingual contextual entries with unique IDs', () => {
-    expect(dictionary.length).toBeGreaterThanOrEqual(60);
+  it('contains complete bilingual contextual entries with unique IDs', () => {
+    expect(dictionary.length).toBeGreaterThanOrEqual(280);
     expect(new Set(dictionary.map((entry) => entry.id)).size).toBe(dictionary.length);
     for (const entry of dictionary) {
       expect(entry.definitionEn.length, entry.id).toBeGreaterThan(20);
@@ -43,6 +43,61 @@ describe('study dictionary', () => {
     expect(findDictionaryEntry('a phrase this dictionary does not define')).toBeUndefined();
   });
 
+  it('recognizes copied formatting and forecast names without confusing the method with its application', () => {
+    for (const query of [
+      'Monte Carlo forecast',
+      '**Monte Carlo forecast**',
+      '`MONTE—CARLO FORECAST`',
+      '“Monte Carlo forecasting”',
+      '__Monte Carlo forecasts__',
+      '"**Monte Carlo forecast**"',
+    ]) {
+      expect(findDictionaryEntry(query)?.id, query).toBe('monte-carlo-forecast');
+    }
+    expect(findDictionaryEntry('Monte Carlo')?.id).toBe('monte-carlo-simulation');
+    expect(findDictionaryEntry('Monte Carlo forecast')?.explanationAz).toContain('paylanması');
+    expect(findDictionaryEntry('Monte Carlo forecast')?.example.az).toContain('zəmanət deyil');
+    expect(findDictionaryEntry('Monte Carlo forecast for an unrelated phrase')).toBeUndefined();
+  });
+
+  it('resolves chart variants, diagram names and acronyms to their specific concepts', () => {
+    const cases = [
+      ['burndowns', 'burndown-chart'],
+      ['Sprint burn-down chart', 'burndown-chart'],
+      ['burn-up charts', 'burnup-chart'],
+      ['CFD', 'cumulative-flow-diagram'],
+      ['cumulative flows', 'cumulative-flow-diagram'],
+      ['cohort matrices', 'cohort-matrix'],
+      ['UML sequence diagram', 'sequence-diagram'],
+      ['state machine diagram', 'state-diagram'],
+      ['ER diagram', 'erd'],
+      ['RTM', 'traceability-matrix'],
+      ['WSJF', 'wsjf'],
+      ['Net Promoter Score', 'nps'],
+    ];
+    for (const [query, id] of cases) expect(findDictionaryEntry(query)?.id, query).toBe(id);
+    expect(suggestDictionaryEntries('cumulative').map((entry) => entry.id)).toContain(
+      'cumulative-flow-diagram',
+    );
+    const sprintSuggestions = suggestDictionaryEntries('sprint', 12).map((entry) => entry.id);
+    expect(sprintSuggestions).toContain('sprint');
+    expect(sprintSuggestions).toContain('burndown-chart');
+  });
+
+  it('supports technical punctuation while keeping statistical and engineering meanings distinct', () => {
+    expect(normalizeDictionaryTerm('A / B test')).toBe('a/b test');
+    expect(validateDictionaryQuery('A / B test').valid).toBe(true);
+    expect(findDictionaryEntry('A / B test')?.id).toBe('ab-test');
+    expect(findDictionaryEntry('95% confidence interval')?.id).toBe('confidence-interval');
+    expect(findDictionaryEntry('95% confidence level')?.id).toBe('confidence-level');
+    expect(findDictionaryEntry('P85')?.id).toBe('percentile');
+    expect(findDictionaryEntry('CI')?.id).toBe('continuous-integration');
+    expect(findDictionaryEntry('DoR')?.id).toBe('definition-of-ready');
+    expect(findDictionaryEntry('readiness')?.id).toBe('readiness');
+    expect(findDictionaryEntry('Use case')?.id).toBe('use-case');
+    expect(findDictionaryEntry('Use-case diagram')?.id).toBe('use-case-diagram');
+  });
+
   it('does not let a new contextual alias silently replace another term', () => {
     const seen = new Map<string, string>();
     for (const entry of dictionary) {
@@ -50,6 +105,7 @@ describe('study dictionary', () => {
         const normalized = normalizeDictionaryTerm(key);
         expect(seen.get(normalized) ?? entry.id, normalized).toBe(entry.id);
         seen.set(normalized, entry.id);
+        expect(findDictionaryEntry(key)?.id, key).toBe(entry.id);
       }
     }
     expect(findDictionaryEntry('readiness')?.id).toBe('readiness');
@@ -66,9 +122,6 @@ describe('study dictionary', () => {
     expect(verification?.definitionEn).not.toBe(validation?.definitionEn);
     expect(findDictionaryEntry('design')?.definitionEn).toContain('how');
     expect(findDictionaryEntry('requirement')?.definitionEn).toContain('need');
-    expect(suggestDictionaryEntries('sprint').every((entry) => entry.context === 'Scrum')).toBe(
-      true,
-    );
   });
 
   it('rejects URLs, control characters and oversized text while allowing a short English phrase', () => {
@@ -78,6 +131,11 @@ describe('study dictionary', () => {
       'https://example.com',
       'www.example.com',
       'example.org',
+      '**https://example.com**',
+      '`www.example.com/path`',
+      '**Monte Carlo forecast',
+      '[Monte Carlo](https://example.com)',
+      '**word\nother**',
       'word\nother',
       'word\u0000',
       '<script>',
@@ -97,6 +155,26 @@ describe('study dictionary', () => {
 });
 
 describe('dictionary route', () => {
+  it.each([
+    ['**Monte Carlo forecast**', 'monte-carlo-forecast'],
+    ['MONTE—CARLO SIMULATION', 'monte-carlo-simulation'],
+    ['CFD', 'cumulative-flow-diagram'],
+    ['burn-up chart', 'burnup-chart'],
+    ['A / B test', 'ab-test'],
+    ['95% confidence interval', 'confidence-interval'],
+  ])('serves the technical phrase %s without a provider request', async (query, id) => {
+    const fetcher = vi.fn().mockRejectedValue(new Error('Offline'));
+    vi.stubGlobal('fetch', fetcher);
+    const response = await GET(
+      new Request(`http://localhost/api/translate?q=${encodeURIComponent(query)}`),
+    );
+    expect(response.status).toBe(200);
+    const body = await response.json();
+    expect(body.kind).toBe('curated');
+    expect(body.entry.id).toBe(id);
+    expect(fetcher).not.toHaveBeenCalled();
+  });
+
   it('serves curated terms offline and rejects invalid input without contacting a provider', async () => {
     const fetcher = vi.fn();
     vi.stubGlobal('fetch', fetcher);

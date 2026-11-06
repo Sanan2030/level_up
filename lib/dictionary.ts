@@ -15,12 +15,40 @@ export type DictionaryEntry = z.infer<typeof dictionaryEntrySchema>;
 export const dictionary = z.array(dictionaryEntrySchema).parse(entries);
 export const MAX_DICTIONARY_QUERY_LENGTH = 100;
 
+// Lesson selections and copied Markdown may surround a term with emphasis or quotes.
+// Strip only balanced outer wrappers; punctuation inside technical names is meaningful.
+function unwrapDictionaryTerm(value: string): string {
+  let result = value.normalize('NFKC').trim();
+  const wrappers = [
+    ['**', '**'],
+    ['__', '__'],
+    ['`', '`'],
+    ['*', '*'],
+    ['_', '_'],
+    ['"', '"'],
+    ["'", "'"],
+    ['“', '”'],
+    ['‘', '’'],
+  ];
+  for (let depth = 0; depth < 4; depth++) {
+    const wrapper = wrappers.find(
+      ([start, end]) =>
+        result.length > start.length + end.length &&
+        result.startsWith(start) &&
+        result.endsWith(end),
+    );
+    if (!wrapper) break;
+    result = result.slice(wrapper[0].length, -wrapper[1].length).trim();
+  }
+  return result;
+}
+
 export function normalizeDictionaryTerm(value: string): string {
-  return value
-    .normalize('NFKC')
+  return unwrapDictionaryTerm(value)
     .toLocaleLowerCase('en')
     .replace(/[‐‑‒–—_-]/g, ' ')
     .replace(/’/g, "'")
+    .replace(/\s*\/\s*/g, '/')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -31,7 +59,7 @@ export function validateDictionaryQuery(
   if (typeof input !== 'string') return { valid: false, message: 'Enter a word or short phrase.' };
   if (/[\p{Cc}\p{Cf}]/u.test(input))
     return { valid: false, message: 'Enter a word or short phrase without control characters.' };
-  const query = input.normalize('NFKC').trim().replace(/\s+/g, ' ');
+  const query = unwrapDictionaryTerm(input).replace(/\s+/g, ' ');
   if (!query || query.length > MAX_DICTIONARY_QUERY_LENGTH)
     return {
       valid: false,
@@ -39,7 +67,7 @@ export function validateDictionaryQuery(
     };
   if (
     /https?:|www\.|\b[a-z0-9-]+\.(?:com|org|net|app|dev)\b/i.test(query) ||
-    !/^[\p{L}\p{N}][\p{L}\p{N}\s'’&()+.,‐‑‒–—_-]*$/u.test(query) ||
+    !/^[\p{L}\p{N}][\p{L}\p{N}\s'’&()+.,/%‐‑‒–—_-]*$/u.test(query) ||
     !/\p{L}/u.test(query)
   )
     return {

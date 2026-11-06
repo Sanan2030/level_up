@@ -35,10 +35,44 @@ test('explains onboarding and multiword terms in both languages without an onlin
   await expect(page.getByRole('button', { name: 'Translate', exact: true })).toBeFocused();
 });
 
+for (const locale of ['en', 'az'])
+  test(`explains Monte Carlo forecasts and chart aliases locally in the ${locale} interface`, async ({
+    page,
+  }) => {
+    const requests: string[] = [];
+    await page.route('**/api/translate?*', (route) => {
+      requests.push(route.request().url());
+      return route.abort();
+    });
+    await page.goto(`/${locale}`);
+    await page.locator('.translate-trigger').click();
+    const dialog = page.getByRole('dialog');
+    const result = dialog.locator('.translate-result');
+    for (const [query, term] of [
+      ['**Monte Carlo forecast**', 'Monte Carlo forecast'],
+      ['CFD', 'Cumulative flow diagram'],
+      ['burn-up chart', 'Burnup chart'],
+      ['A / B test', 'A/B test'],
+      ['95% confidence interval', 'Confidence interval'],
+    ]) {
+      await dialog.getByRole('searchbox').fill(query);
+      await dialog.locator('button[type="submit"]').click();
+      await expect(result.getByRole('heading', { name: term, exact: true })).toBeVisible();
+      await expect(result.locator('[lang="az"]')).toHaveCount(3);
+      await expect(result.locator('[lang="en"]')).toHaveCount(2);
+      if (term === 'Monte Carlo forecast') {
+        await expect(result).toContainText('distribution of possible completion dates');
+        await expect(result).toContainText('tarixlərin paylanmasıdır');
+        await expect(result).toContainText('zəmanət deyil');
+      }
+    }
+    expect(requests).toEqual([]);
+  });
+
 test('prefills a selected technical phrase and stays within a mobile viewport', async ({
   page,
 }) => {
-  await page.goto('/en/lessons/pspo1-artifacts');
+  await page.goto('/en/lessons/pspo2-evidence-uncertainty');
   await expect(page.getByRole('combobox', { name: 'Active learning track' })).toBeEnabled();
   const selectedText = await page.evaluate(() => {
     const walker = document.createTreeWalker(
@@ -46,11 +80,11 @@ test('prefills a selected technical phrase and stays within a mobile viewport', 
       NodeFilter.SHOW_TEXT,
     );
     for (let node = walker.nextNode(); node; node = walker.nextNode()) {
-      const index = node.textContent?.indexOf('Definition of Done') ?? -1;
+      const index = node.textContent?.indexOf('Monte Carlo') ?? -1;
       if (index < 0) continue;
       const range = document.createRange();
       range.setStart(node, index);
-      range.setEnd(node, index + 'Definition of Done'.length);
+      range.setEnd(node, index + 'Monte Carlo'.length);
       const selection = window.getSelection()!;
       selection.removeAllRanges();
       selection.addRange(range);
@@ -58,13 +92,16 @@ test('prefills a selected technical phrase and stays within a mobile viewport', 
     }
     return window.getSelection()?.toString();
   });
-  expect(selectedText).toBe('Definition of Done');
+  expect(selectedText).toBe('Monte Carlo');
   await page.getByRole('button', { name: 'Translate', exact: true }).click();
   const dialog = page.getByRole('dialog', { name: 'Translate and understand' });
   await expect(dialog.getByRole('searchbox', { name: 'Word or phrase' })).toHaveValue(
-    'Definition of Done',
+    'Monte Carlo',
   );
   await expect(dialog.getByRole('region', { name: 'Translation result' })).toBeVisible();
+  await expect(
+    dialog.getByRole('heading', { name: 'Monte Carlo simulation', exact: true }),
+  ).toBeVisible();
   await page.setViewportSize({ width: 390, height: 844 });
   await page.evaluate(() => document.fonts.ready);
   const sizes = await dialog.evaluate((el) => ({
